@@ -428,7 +428,7 @@ end
 GameTooltipModel:Hide();
 
 app.AlwaysShowUpdate = function(data) data.visible = true; return true; end
-app.AlwaysShowUpdateWithoutReturn = function(data) data.visible = true;  end
+app.AlwaysShowUpdateWithoutReturn = function(data) data.visible = true; end
 app.print = function(...)
 	print(L["TITLE"], ...);
 end
@@ -1976,7 +1976,9 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 				end
 			end
 			if #knownBy > 0 then
-				table.sort(knownBy);
+				table.sort(knownBy, function(a, b)
+					return a.text < b.text;
+				end);
 				local desc = "Known by ";
 				for i,character in ipairs(knownBy) do
 					if i > 1 then desc = desc .. ", "; end
@@ -2480,7 +2482,6 @@ local function RefreshSaves()
 	
 	-- Cache the lockouts across your account.
 	local serverTime = GetServerTime();
-	local myLockouts = app.CurrentCharacter.Lockouts;
 	
 	-- Check to make sure that the old instance data has expired
 	for guid,character in pairs(ATTCharacterData) do
@@ -2496,6 +2497,7 @@ local function RefreshSaves()
 	
 	-- Update Saved Instances
 	local converter = L["SAVED_TO_DJ_INSTANCES"];
+	local myLockouts = app.CurrentCharacter.Lockouts;
 	for instanceIter=1,GetNumSavedInstances() do
 		local name, id, reset, difficulty, locked, _, _, isRaid, _, _, numEncounters = GetSavedInstanceInfo(instanceIter);
 		if locked then
@@ -3672,7 +3674,7 @@ end)();
 -- Death Tracker Lib
 (function()
 local OnUpdateForDeathTrackerLib = function(t)
-	if t.collectible then
+	if app.Settings:Get("Thing:Deaths") then
 		t.visible = app.GroupVisibilityFilter(t);
 		t.parent.progress = t.parent.progress + t.progress;
 		t.parent.total = t.parent.total + t.total;
@@ -3696,9 +3698,6 @@ local fields = {
 	end,
 	["total"] = function(t)
 		return 1000;
-	end,
-	["collectible"] = function(t)
-		return app.Settings:Get("Thing:Deaths");
 	end,
 	["description"] = function(t)
 		return "The ATT Gods must be sated. Go forth and attempt to level, mortal!\n\n 'Live! Die! Live Again!'\n";
@@ -7089,9 +7088,6 @@ function app.QuestCompletionHelper(questID)
 				end
 			end
 		end
-		
-		-- Don't force a full refresh.
-		app:RefreshData(true, true);
 	end
 end
 
@@ -7191,9 +7187,49 @@ local function CreateMinimapButton()
 	button:UpdateStyle();
 	
 	-- Button Configuration
+	local radius = 78;
+	local rounding = 10;
+	local MinimapShapes = {
+		-- quadrant booleans (same order as SetTexCoord)
+		-- {bottom-right, bottom-left, top-right, top-left}
+		-- true = rounded, false = squared
+		["ROUND"] 			= {true,  true,  true,  true },
+		["SQUARE"] 			= {false, false, false, false},
+		["CORNER-TOPLEFT"] 		= {false, false, false, true },
+		["CORNER-TOPRIGHT"] 		= {false, false, true,  false},
+		["CORNER-BOTTOMLEFT"] 		= {false, true,  false, false},
+		["CORNER-BOTTOMRIGHT"]	 	= {true,  false, false, false},
+		["SIDE-LEFT"] 			= {false, true,  false, true },
+		["SIDE-RIGHT"] 			= {true,  false, true,  false},
+		["SIDE-TOP"] 			= {false, false, true,  true },
+		["SIDE-BOTTOM"] 		= {true,  true,  false, false},
+		["TRICORNER-TOPLEFT"] 		= {false, true,  true,  true },
+		["TRICORNER-TOPRIGHT"] 		= {true,  false, true,  true },
+		["TRICORNER-BOTTOMLEFT"] 	= {true,  true,  false, true },
+		["TRICORNER-BOTTOMRIGHT"] 	= {true,  true,  true,  false},
+	};
 	button.update = function(self)
 		local position = GetDataMember("Position", -10.31);
-		self:SetPoint("CENTER", "Minimap", "CENTER", -78 * cos(position), 78 * sin(position));
+		local angle = math.rad(position) -- determine position on your own
+		local x, y
+		local cos = math.cos(angle)
+		local sin = math.sin(angle)
+		local q = 1;
+		if cos < 0 then
+			q = q + 1;	-- lower
+		end
+		if sin > 0 then
+			q = q + 2;	-- right
+		end
+		if MinimapShapes[GetMinimapShape and GetMinimapShape() or "ROUND"][q] then
+			x = cos*radius;
+			y = sin*radius;
+		else
+			local diagRadius = math.sqrt(2*(radius)^2)-rounding
+			x = math.max(-radius, math.min(cos*diagRadius, radius))
+			y = math.max(-radius, math.min(sin*diagRadius, radius))
+		end
+		self:SetPoint("CENTER", "Minimap", "CENTER", -x, y);
 	end
 	local update = function(self)
 		local w, x = GetCursorPosition();
@@ -9566,7 +9602,7 @@ app:GetWindow("Debugger", UIParent, function(self)
 		-- Setup Event Handlers and register for events
 		self:SetScript("OnEvent", function(self, e, ...)
 			--print(e, ...);
-			if e == "PLAYER_LOGIN" then
+			if e == "VARIABLES_LOADED" then
 				if not ATTClassicDebugData then
 					ATTClassicDebugData = app.GetDataMember("Debugger", {});
 					app.SetDataMember("Debugger", nil);
@@ -9718,7 +9754,7 @@ app:GetWindow("Debugger", UIParent, function(self)
 				end
 			end
 		end);
-		self:RegisterEvent("PLAYER_LOGIN");
+		self:RegisterEvent("VARIABLES_LOADED");
 		self:RegisterEvent("GOSSIP_SHOW");
 		self:RegisterEvent("QUEST_DETAIL");
 		self:RegisterEvent("TRADE_SKILL_LIST_UPDATE");
@@ -10041,7 +10077,7 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 		self:SetScript("OnEvent", function(self, e, ...)
 			RefreshLocation();
 		end);
-		self:RegisterEvent("PLAYER_LOGIN");
+		self:RegisterEvent("VARIABLES_LOADED");
 		self:RegisterEvent("ZONE_CHANGED");
 		self:RegisterEvent("ZONE_CHANGED_NEW_AREA");
 	end
@@ -10099,6 +10135,13 @@ app:GetWindow("ItemFilter", UIParent, function(self)
 							ExpandGroupsRecursively(data, true);
 						end
 					end
+					
+					-- Update the groups without forcing Debug Mode.
+					local visibilityFilter = app.VisibilityFilter;
+					app.VisibilityFilter = app.ObjectVisibilityFilter;
+					BuildGroups(self.data, self.data.g);
+					UpdateWindow(self, true);
+					app.VisibilityFilter = visibilityFilter;
 				end,
 				['g'] = {},
 				['results'] = {},
@@ -10148,13 +10191,7 @@ app:GetWindow("ItemFilter", UIParent, function(self)
 		
 		-- Update the window and all of its row data
 		if self.data.OnUpdate then self.data.OnUpdate(self.data, self); end
-		
-		-- Update the groups without forcing Debug Mode.
-		local visibilityFilter = app.VisibilityFilter;
-		app.VisibilityFilter = app.ObjectVisibilityFilter;
-		BuildGroups(self.data, self.data.g);
 		UpdateWindow(self, true);
-		app.VisibilityFilter = visibilityFilter;
 	end
 end);
 app:GetWindow("ItemFinder", UIParent, function(self, ...)
@@ -11908,7 +11945,6 @@ app:RegisterEvent("BOSS_KILL");
 app:RegisterEvent("CHAT_MSG_ADDON");
 app:RegisterEvent("CHAT_MSG_WHISPER")
 app:RegisterEvent("PLAYER_DEAD");
-app:RegisterEvent("PLAYER_LOGIN");
 app:RegisterEvent("VARIABLES_LOADED");
 app:RegisterEvent("PARTY_LOOT_METHOD_CHANGED");
 
@@ -11921,6 +11957,13 @@ app.events.VARIABLES_LOADED = function()
 		_G["ATTClassicAD"] = ATTClassicAD;
 	end
 	app:UpdateWindowColors();
+	LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject(L["TITLE"], {
+		type = "launcher",
+		icon = app.asset("logo_32x32"),
+		OnClick = MinimapButtonOnClick,
+		OnEnter = MinimapButtonOnEnter,
+		OnLeave = MinimapButtonOnLeave,
+	});
 	
 	-- Cache information about the player.
 	local _, class, classIndex = UnitClass("player");
@@ -12187,9 +12230,6 @@ app.events.VARIABLES_LOADED = function()
 		end
 	end
 	
-end
-app.events.PLAYER_LOGIN = function()
-	app:UnregisterEvent("PLAYER_LOGIN");
 	app.CurrentMapID = app.GetCurrentMapID();
 	app:GetDataCache();
 	
@@ -12202,13 +12242,6 @@ app.events.PLAYER_LOGIN = function()
 	app:RegisterEvent("SKILL_LINES_CHANGED");
 	StartCoroutine("RefreshSaves", RefreshSaves);
 	app:RefreshData(false);
-	LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject(L["TITLE"], {
-		type = "launcher",
-		icon = app.asset("logo_32x32"),
-		OnClick = MinimapButtonOnClick,
-		OnEnter = MinimapButtonOnEnter,
-		OnLeave = MinimapButtonOnLeave,
-	});
 end
 app.events.PLAYER_DEAD = function()
 	ATTAccountWideData.Deaths = ATTAccountWideData.Deaths + 1;
@@ -12865,12 +12898,15 @@ app.events.QUEST_ACCEPTED = function(questID)
 	wipe(searchCache);
 end
 app.events.QUEST_TURNED_IN = function(questID)
-	CompletedQuests[questID] = true;
-	for questID,completed in pairs(DirtyQuests) do
-		app.QuestCompletionHelper(tonumber(questID));
+	if not fieldCache.questID[questID] and not fieldCache.questID[questID][1].repeatable then
+		CompletedQuests[questID] = true;
+		for questID,completed in pairs(DirtyQuests) do
+			app.QuestCompletionHelper(tonumber(questID));
+		end
+		wipe(DirtyQuests);
+		wipe(searchCache);
 	end
-	wipe(DirtyQuests);
-	wipe(searchCache);
+	app:RefreshData(true, true);
 end
 app.events.QUEST_LOG_UPDATE = function()
 	GetQuestsCompleted(CompletedQuests);
@@ -12879,5 +12915,6 @@ app.events.QUEST_LOG_UPDATE = function()
 	end
 	wipe(DirtyQuests);
 	wipe(searchCache);
+	app:RefreshData(true, true);
 	app:UnregisterEvent("QUEST_LOG_UPDATE");
 end
