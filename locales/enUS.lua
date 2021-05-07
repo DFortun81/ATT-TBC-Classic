@@ -221,7 +221,9 @@ app.L = {
 		[-2] = "Interface\\Icons\\INV_Misc_Coin_02", 										-- Vendors
 		[-4] = "Interface\\Icons\\INV_Misc_Food_62", 										-- Free Festival Food
 		[-5] = app.asset("Category_Holidays"), 												-- Holiday
+		[-6] = app.asset("Category_FlightPaths"),											-- Flight Paths
 		[-7] = "Interface\\Addons\\ATT-Classic\\assets\\Inv_offhand_1h_artifactskulloferedar_d_05",	-- World Bosses
+		[-8] = app.asset("Category_Factions"),												-- Factions
 		[-12] = "Interface\\Icons\\Spell_Shadow_SummonImp", 								-- East entrance demons
 		[-13] = "Interface\\Icons\\inv_axe_10", 											-- North entrance ogres
 		[-14] = "Interface\\Icons\\INV_Misc_Head_Elf_02", 									-- West entrace elves
@@ -290,7 +292,9 @@ app.L = {
 		[-2] = BATTLE_PET_SOURCE_3, 											-- Vendor
 		[-4] = "Free Festival Food", 											-- Free Festival Food
 		[-5] = "Holiday", 														-- Holiday
+		[-6] = "Flight Paths",													-- Flight Paths
 		[-7] = WORLD.." "..RAID_BOSSES, 										-- World Bosses
+		[-8] = "Factions",														-- Factions
 		[-12] = DUNGEON_FLOOR_DIREMAUL5.." (East)",								-- Warpwood Quarter
 		[-13] = DUNGEON_FLOOR_DIREMAUL1.." (North)",							-- Gordok Commons
 		[-14] = DUNGEON_FLOOR_DIREMAUL2.." (West)",								-- Capital Gardens
@@ -363,6 +367,7 @@ app.L = {
 		[-10066] = "Legendary",
 	},
 	["HEADER_DESCRIPTIONS"] = {
+		[-5] = "A specific holiday may need to be active for you to complete the referenced Things within this section.",
 	};
 	
 	["OBJECT_ID_ICONS"] = {
