@@ -1,6 +1,8 @@
 profession(MINING, {
 	tier(1, {	-- Classic
+		-- #if ANYCLASSIC
 		recipe(2580),	-- Find Minerals
+		-- #endif
 		{
 			["name"] = "Enchanted Thorium Bar",
 			["timeline"] = { "added 3.3.0.10000" },
