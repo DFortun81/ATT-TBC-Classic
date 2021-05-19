@@ -5463,6 +5463,23 @@ app.BaseQuestObjective = app.BaseObjectFields(fields);
 app.CreateQuestObjective = function(id, t)
 	return setmetatable(constructor(id, t, "objectiveID"), app.BaseQuestObjective);
 end
+app.CompareQuestieDB = function()
+	if QuestieLoader then
+		local QuestieDB,missingQuestIDs = QuestieLoader:ImportModule("QuestieDB"), {};
+		for id,_ in pairs(QuestieDB.QuestPointers) do
+			local s = app.SearchForField("questID", id);
+			if not s or #s == 0 then
+				table.insert(missingQuestIDs, id);
+			end
+		end
+		table.sort(missingQuestIDs);
+		for _,id in ipairs(missingQuestIDs) do
+			print("Missing Quest ", id);
+		end
+	else
+		print("Error: Questie not available. Please enable it!");
+	end
+end
 end)();
 
 -- Recipe & Spell Lib
