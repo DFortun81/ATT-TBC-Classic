@@ -205,7 +205,7 @@ _.Zones =
 							["cost"] = {
 								{ "i", 22889, 8 },	-- Vial of Moth Blood
 							},
-							["races"] = { ALLIANCE_ONLY },
+							["races"] = ALLIANCE_ONLY,
 							["groups"] = {
 								i(24129),	-- Salvaged Leather Belt
 								i(24131),	-- Slightly Rusted Bracers
@@ -354,7 +354,7 @@ _.Zones =
 						}),
 						q(9409,  {	-- Urgent Delivery!
 							["qg"] = 16477,	-- Proenitus
-							["sourceQuests"] = 9280,	-- Replenishing the Healing Crystals
+							["sourceQuest"] = 9280,	-- Replenishing the Healing Crystals
 							-- #if AFTER MOP
 							["coord"] = { 52.7, 35.9, AMMEN_VALE },
 							-- #else

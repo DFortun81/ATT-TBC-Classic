@@ -56,20 +56,21 @@ _.Zones =
 					["qg"] = 17311,	-- Cowlen
 					["sourceQuest"] = 10428,	-- The Missing Fisherman
 					["coord"] = { 16.6, 94.4, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23789, 1 },	-- Remains of Cowlen's Family
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(6, 1, 6),
 				}),
 				q(9473, {	-- An Alternative Alternative
 					["qg"] = 17215,	-- Daedal
 					["sourceQuest"] = 9463,	-- Medicinal Purpose
 					["coord"] = { 48.4, 51.4, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23692, 5 },	-- Azure Snapdragon Bulb
+					},
 					["races"] = { DRAENEI },
-				}),
-				q(27273, {	-- An Invitation from Moonglade
-					["qg"] = 16721,	-- Shalannius
-					["coord"] = { 24.4, 54.4, AZUREMYST_ISLE },
-					["classes"] = { DRUID },
-					["races"] = ALLIANCE_ONLY,
-					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(5, 1, 5),
 				}),
 				q(9616, {	-- Bandits!
 					["provider"] = { "i", 23910 },	-- Blood Elf Communications
@@ -86,14 +87,25 @@ _.Zones =
 				}),
 				q(9560, {	-- Beasts of the Apocalypse!
 					["qg"] = 17442,	-- Moordo
+					-- #if BEFORE MOP
 					["sourceQuest"] = 9544,	-- The Prophecy of Akida
+					-- #else
+					-- This needs to be checked for accuracy each expansion.
+					["sourceQuest"] = 9559,	-- Stillpine Hold
+					-- #endif
 					["coord"] = { 44.8, 23.8, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23845, 8 },	-- Ravager Hide
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(7, 1, 7),
 					["groups"] = {
 						i(24108),	-- Ravager Hide Leggings
 						i(24107),	-- Ravager Chitin Tunic
 						i(24109),	-- Thick Ravager Belt
+						-- #if AFTER LEGION
 						i(131257),	-- Ravager Scale Pants
+						-- #endif
 					},
 				}),
 				q(9675, {	-- Beast Training
@@ -153,6 +165,7 @@ _.Zones =
 					["coord"] = { 50.5, 11.6, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
 					["model"] = 191579,
+					["lvl"] = lvlsquish(9, 1, 9),
 				}),
 				q(9573, {	-- Chieftain Oomooroo
 					["qg"] = 17445,	-- Stillpine the Younger
@@ -162,6 +175,14 @@ _.Zones =
 					},
 					["coord"] = { 46.8, 21.2, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(7, 1, 7),
+					["groups"] = {
+						i(24446),	-- Sturdy Leather Belt
+						i(24445),	-- Fortified Wristguards
+						-- #if AFTER LEGION
+						i(131260),	-- Interlocked Chain Cinch
+						-- #endif
+					},
 				}),
 				q(9623, {	-- Coming of Age
 					["qg"] = 17116,	-- Exarch Menelaous
@@ -174,10 +195,15 @@ _.Zones =
 					["lvl"] = lvlsquish(10, 1, 10),
 				}),
 				q(9595, {	-- Control
+					-- TODO: verify, if possible?  i don't see any recent comments claiming to have picked this up, just questions about how to get it.
+					-- wowhead also doesn't have provider data for it, leading me to believe it has been culled/not seen in a long time
 					["qg"] = 17481,	-- Semid
+					["coord"] = { 49.9, 50.0, AZUREMYST_ISLE },
+					["timeline"] = { "removed 4.0.3.10000" },	-- NOTE: Possibly added back the same time as the Ghostlands Mage quest was.
 					["classes"] = { MAGE },
-					["u"] = REMOVED_FROM_GAME,	-- TODO: verify, if possible?  i don't see any recent comments claiming to have picked this up, just questions about how to get it.  wowhead also doesn't have provider data for it, leading me to believe it has been culled/not seen in a long time
-					["groups"] = {	-- horde version of this quest (#9404, "Recently Living" in Eversong Woods) is apparently still in-game
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(10, 1, 10),
+					["groups"] = {
 						i(9513),	-- Ley Staff
 						i(7508),	-- Ley Orb
 					},
@@ -185,7 +211,14 @@ _.Zones =
 				q(9512, {	-- Cookie's Jumbo Gumbo
 					["qg"] = 17246,	-- "Cookie" McWeaksauce
 					["coord"] = { 46.7, 70.5, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23757, 6 },	-- Skittering Crawler Meat
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(5, 1, 5),
+					["groups"] = {
+						i(23756),	-- Cookie's Jumbo Gumbo
+					},
 				}),
 				q(9602, {	-- Deliver Them From Evil...
 					["qg"] = 17240,	-- Admiral Odesyus
@@ -215,33 +248,37 @@ _.Zones =
 					["qg"] = 17101,	-- Diktynna
 					["sourceQuest"] = 9452,	-- Red Snapper - Very Tasty!
 					["coord"] = { 61.0, 54.2, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23672, 1 },	-- Crate of Red Snapper
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(4, 1, 4),
 				}),
 				q(9564, {	-- Gurf's Dignity
 					["provider"] = { "i", 23850 },	-- Gurf's Dignity
 					["sourceQuest"] = 9562,	-- Murlocs... Why Here?  Why Now?
-					["description"] = "It is not necessary to complete |cFFFFD700Murlocs...|r but you must at least be ON that quest to loot the item that starts Gurf's Dignity.",
-					["coords"] = {	-- Pats up and down
-						{ 34.6, 14.0, AZUREMYST_ISLE },
-						{ 35.2, 21.8, AZUREMYST_ISLE },
-						{ 33.6, 26.0, AZUREMYST_ISLE },
-					},
 					["races"] = ALLIANCE_ONLY,
-					["cr"] = 17475,	-- Murgurgula
+					["lvl"] = lvlsquish(7, 1, 7),
 					["groups"] = {
 						i(24440),	-- Heavy Plate Leggings
 						i(24439),	-- Savage Leggings
 						i(24438),	-- Fur Covered Robe
+						-- #if AFTER LEGION
 						i(131258),	-- Fierce Britches
+						-- #endif
 					},
 				}),
 				q(9586, {	-- Help Tavara
 					["qg"] = 17482,	-- Guvan
+					["coord"] = { 56.2, 48.4, AZUREMYST_ISLE },
+					["timeline"] = { "removed 4.0.3.10000" },
 					["classes"] = { PRIEST },
-					["races"] = { DRAENEI },
-					["u"] = REMOVED_FROM_GAME,
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(5, 1, 5),
 					["groups"] = {
-						un(REMOVED_FROM_GAME, i(23931)),	-- Azure Watch Robes
+						i(23931, {	-- Azure Watch Robes
+							["timeline"] = { "removed 4.0.3.10000" },
+						}),
 					},
 				}),
 				q(9530, {	-- I've Got a Plant
@@ -258,34 +295,50 @@ _.Zones =
 				q(9538, {	-- Learning the Language
 					["qg"] = 17232,	-- Cryptographer Aurren
 					["coord"] = { 49.4, 51.0, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23818, 1 },	-- Stillpine Furbolg Language Primer
+					},
 					["races"] = ALLIANCE_ONLY,
-				}),
-				q(14082, {	-- Learn to Ride at the Exodar (removed in Patch 4.0.1)
-					["races"] = { DRAENEI },
-					["u"] = REMOVED_FROM_GAME,
+					["lvl"] = lvlsquish(8, 1, 8),
 				}),
 				q(9463, {	-- Medicinal Purpose
 					["qg"] = 17214,	-- Anchorite Fateema
 					["coord"] = { 48.4, 51.8, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23685, 8 },	-- Root Trapper Vine
+					},
 					["races"] = { DRAENEI },
-				}),
-				q(28289, {	-- Moonglade Calls
-					["qg"] = 16721,	-- Shalannius
-					["coord"] = { 24.4, 54.5, AZUREMYST_ISLE },
-					["classes"] = { DRUID },
-					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(4, 1, 4),
 				}),
 				q(9562, {	-- Murlocs... Why Here? Why Now?
 					["qg"] = 17441,	-- Gurf
+					-- #if AFTER MOP
+					-- TODO: Confirm this is true or not.
 					["sourceQuest"] = 9544,	-- The Prophecy of Akida
+					-- #else
+					["sourceQuest"] = 9559,	-- Stillpine Hold
+					-- #endif
 					["coord"] = { 44.6, 23.4, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23849, 5 },	-- Stillpine Grain
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(7, 1, 7),
 				}),
 				q(9456, {	-- Nightstalker Clean Up, Isle 2...
 					["qg"] = 17116,	-- Exarch Menelaous
 					["sourceQuest"] = 9455,	-- Strange Findings
 					["coord"] = { 47.1, 50.6, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(5, 1, 5),
+					["groups"] = {
+						i(24436),	-- Huntsman's Bracers
+						i(24435),	-- Reinforced Plate Boots
+						i(24437),	-- Slightly Worn Bracer
+						-- #if LEGION
+						i(131254),	-- Huntsman's Chain Cuffs
+						-- #endif
+					},
 				}),
 				-- #if AFTER CATA
 				-- This quest was moved from Bloodmyst Isle after Cataclysm.
@@ -304,34 +357,37 @@ _.Zones =
 				q(9523, {	-- Precious and Fragile Things Need Special Handling
 					["qg"] = 17242,	-- Archaeologist Adamant Ironheart
 					["coord"] = { 47.2, 70.0, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23779, 8 },	-- Ancient Relic
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(6, 1, 6),
 				}),
 				q(9513, {	-- Reclaiming the Ruins
 					["qg"] = 17241,	-- Priestess Kyleen Il'dinare
 					["coord"] = { 47.0, 70.2, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(6, 1, 6),
 				}),
 				q(9452, {	-- Red Snapper - Very Tasty!
 					["qg"] = 17101,	-- Diktynna
 					["coord"] = { 61.1, 54.2, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23614, 10 },	-- Red Snapper
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(4, 1, 4),
+					["groups"] = {
+						objective(1, {	-- 0/10 Red Snapper
+							["provider"] = { "i", 23654 },	-- Draenei Fishing Net
+						}),
+					},
 				}),
 				q(9514, {	-- Rune Covered Tablet
 					["provider"] = { "i", 23759 },	-- Rune Covered Tablet
 					["sourceQuest"] = 9506,	-- A Small Start
-					["coords"] = {	-- Drops from multiple mobs in an area
-						{ 25.6, 70.2, AZUREMYST_ISLE },
-						{ 28.4, 78.0, AZUREMYST_ISLE },
-						{ 31.8, 77.6, AZUREMYST_ISLE },
-						{ 36.6, 78.4, AZUREMYST_ISLE },
-						{ 39.8, 78.4, AZUREMYST_ISLE },
-					},
 					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						17194,	-- Wrathscale Myrmidon
-						17193,	-- Wrathscale Naga
-						17195,	-- Wrathscale Siren
-					},
+					["lvl"] = lvlsquish(6, 1, 6),
 				}),
 				q(9565, {	-- Search Stillpine Hold
 					["qg"] = 17440,	-- High Chief Stillpine
@@ -341,6 +397,7 @@ _.Zones =
 					},
 					["coord"] = { 46.6, 20.6, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(9, 1, 9),
 				}),
 				q(9537, {	-- Show Gnomercy
 					["qg"] = 17240,	-- Admiral Odesyus
@@ -364,17 +421,12 @@ _.Zones =
 					["sourceQuest"] = 9544,	-- The Prophecy of Akida
 					["coord"] = { 49.4, 51.0, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(8, 1, 8),
 				}),
 				q(9455, {	-- Strange Findings
 					["provider"] = { "i", 23678 },	-- Faintly Glowing Crystal
-					["coords"] = {
-						{ 45.6, 45.0, AZUREMYST_ISLE },
-						{ 26.8, 48.0, AZUREMYST_ISLE },
-						{ 25.8, 59.2, AZUREMYST_ISLE },
-						{ 35.6, 58.8, AZUREMYST_ISLE },
-					},
 					["races"] = ALLIANCE_ONLY,
-					["cr"] = 17202,	-- Infected Nightstalker Runt
+					["lvl"] = lvlsquish(5, 1, 5),
 				}),
 				q(9582, {	-- Strength of One
 					["qg"] = 17480,	-- Ruada
@@ -392,19 +444,34 @@ _.Zones =
 						}),
 					},
 				}),
-				q(9454, {	-- The Great Moongraze Hunt
+				q(9454, {	-- The Great Moongraze Hunt (1/2)
 					["qg"] = 17110,	-- Acteon
 					["coord"] = { 49.8, 51.9, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23676, 6 },	-- Moongraze Stag Tenderloin
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(4, 1, 4),
 					["groups"] = {
 						i(27686),	-- Recipe: Roasted Moongraze Tenderloin
 					},
 				}),
-				q(10324, {	-- The Great Moongraze Hunt
+				q(10324, {	-- The Great Moongraze Hunt (2/2)
 					["qg"] = 17110,	-- Acteon
-					["sourceQuest"] = 9454,	-- The Great Moongraze Hunt
+					["sourceQuest"] = 9454,	-- The Great Moongraze Hunt (1/2)
 					["coord"] = { 49.8, 51.8, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23677, 6 },	-- Moongraze Buck Hide
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(4, 1, 4),
+					["groups"] = {
+						i(24104),	-- Moongraze Fur Cloak
+						i(24103),	-- Moongraze Hide Boots
+						-- #if AFTER LEGION
+						i(131274),	-- Moongraze Linked Boots
+						-- #endif
+					},
 				}),
 				q(9570, {	-- The Kurken is Lurkin'
 					["qg"] = 17443,	-- Kurz the Revelator
@@ -413,17 +480,33 @@ _.Zones =
 						9562,	-- Murlocs... Why Here? Why Now?
 					},
 					["coord"] = { 46.8, 22.2, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23860, 1 },	-- The Kurken's Hide
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(7, 1, 7),
+					["groups"] = {
+						i(23860, {	-- The Kurken's Hide
+							["cr"] = 17447,	-- The Kurken
+							["coord"] = { 50.0, 12.8, AZUREMYST_ISLE },
+						}),
+					},
 				}),
 				q(9571, {	-- The Kurken's Hide
 					["qg"] = 17443,	-- Kurz the Revelator
 					["sourceQuest"] = 9570,	-- The Kurken is Lurkin'
 					["coord"] = { 46.8, 22.2, AZUREMYST_ISLE },
+					["cost"] = {
+						{ "i", 23860, 1 },	-- The Kurken's Hide
+					},
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(7, 1, 7),
 					["groups"] = {
 						i(24112),	-- Kurkenstoks
 						i(24111),	-- Kurken Hide Jerkin
+						-- #if AFTER LEGION
 						i(131259),	-- Kurken Padded Chainmail
+						-- #endif
 					},
 				}),
 				q(10428, {	-- The Missing Fisherman
@@ -431,12 +514,14 @@ _.Zones =
 					["coord"] = { 49.0, 51.1, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(6, 1, 6),
 				}),
 				q(9544, {	-- The Prophecy of Akida
 					["qg"] = 17364,	-- Totem of Vark
 					["sourceQuest"] = 9542,	-- Totem of Vark
 					["coord"] = { 28.2, 62.4, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(8, 1, 8),
 					["groups"] = {
 						i(27399),	-- Stillpine Defender
 						i(27403),	-- Stillpine Stinger
@@ -449,33 +534,35 @@ _.Zones =
 					["coord"] = { 48.4, 51.4, AZUREMYST_ISLE },
 					["races"] = { DRAENEI },
 					["isBreadcrumb"] = true,
-				}),
-				q(9695, {	-- The Sun King's Command
-					["u"] = REMOVED_FROM_GAME,
+					["lvl"] = lvlsquish(5, 1, 5),
 				}),
 				q(9539, {	-- Totem of Coo
 					["qg"] = 17360,	-- Totem of Akida
 					["sourceQuest"] = 9538,	-- Learning the Language
 					["coord"] = { 49.4, 51.0, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(8, 1, 8),
 				}),
 				q(9540, {	-- Totem of Tikti
 					["qg"] = 17361,	-- Totem of Coo
 					["sourceQuest"] = 9539,	-- Totem of Coo
 					["coord"] = { 55.2, 41.6, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(8, 1, 8),
 				}),
 				q(9542, {	-- Totem of Vark
 					["qg"] = 17363,	-- Totem of Yor
 					["sourceQuest"] = 9541,	-- Totem of Yor
 					["coord"] = { 63.1, 67.9, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(8, 1, 8),
 				}),
 				q(9541, {	-- Totem of Yor
 					["qg"] = 17362,	-- Totem of Tikti
 					["sourceQuest"] = 9540,	-- Totem of Tikti
 					["coord"] = { 64.5, 39.8, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(8, 1, 8),
 				}),
 				q(9531, {	-- Tree's Company
 					["qg"] = 17240,	-- Admiral Odesyus
@@ -496,17 +583,31 @@ _.Zones =
 					["sourceQuest"] = 9514,	-- Rune Covered Tablet
 					["coord"] = { 47.0, 70.2, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(6, 1, 6),
+					["groups"] = {
+						objective(1, {	-- Warlord Sriss'tiz slain
+							["cr"] = 17298,	-- Warlord Sriss'tiz
+							["coord"] = { 25.2, 74.2, AZUREMYST_ISLE },
+						}),
+						i(24448),	-- Battle Tested Blade
+						i(24447),	-- Naga Plate Boots
+						-- #if AFTER LEGION
+						i(133691),	-- Battle Tested Dirk
+						-- #endif
+					},
 				}),
 				q(9622, {	-- Warn Your People
 					["qg"] = 17440,	-- High Chief Stillpine
 					["sourceQuest"] = 9570,	-- The Kurken is Lurkin'
 					["coord"] = { 46.6, 20.6, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(10, 1, 10),
 				}),
 				q(9314, {	-- Word from Azure Watch
 					["qg"] = 16554,	-- Aeun
 					["coord"] = { 64.5, 54.0, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = lvlsquish(3, 1, 3),
 				}),
 			}),
 		}),

@@ -807,6 +807,7 @@ _.NeverImplemented =
 	q(8478),	-- BETA Choose Your Weapon [Eversong Woods]
 	q(9357),	-- BETA Report to Aeldon Sunbrand [Eversong Woods]
 	q(8896),	-- BETA The Dwarven Spy [Eversong Woods]
+	q(9695),	-- The Sun King's Command [Bloodmyst Isle]
 	-- #endif
 };
 i = oldI;
