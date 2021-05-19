@@ -391,7 +391,14 @@ _.Zones =
 				}),
 				q(1699, {	-- The Rethban Gauntlet
 					["qg"] = 6166,	-- Yorus Barleybrew
+					-- #if AFTER TBC
+					["sourceQuests"] = {
+						1698,	-- Yorus Barleybrew
+						10371,	-- Yorus Barleybrew
+					},
+					-- #else
 					["sourceQuest"] = 1698,	-- Yorus Barleybrew
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
 					["lvl"] = 20,
@@ -483,6 +490,16 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
 					["isBreadcrumb"] = true,
+					["lvl"] = 20,
+				}),
+				q(10371, {	-- Yorus Barleybrew (Draenei)
+					["provider"] = { "n", 16771 },	-- Ahonan
+					["coord"] = { 55.0, 83.4, THE_EXODAR },
+					["timeline"] = { "removed 4.0.3.10000" },
+					["races"] = { DRAENEI },
+					["classes"] = { WARRIOR },
+					["isBreadcrumb"] = true,
+					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 20,
 				}),
 			}),
