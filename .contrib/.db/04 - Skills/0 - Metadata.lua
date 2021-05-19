@@ -20,6 +20,29 @@ _.Skills =
 		},
 		["groups"] = {
 			{
+				["itemID"] = 28071,	-- Grimoire of Anguish (Rank 1)
+				["spellID"] = 33698,	-- Anguish (Rank 1)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 1,
+			},
+			{
+				["itemID"] = 28072,	-- Grimoire of Anguish (Rank 2)
+				["spellID"] = 33699,	-- Anguish (Rank 2)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 2,
+			},
+			{
+				["itemID"] = 28073,	-- Grimoire of Anguish (Rank 3)
+				["spellID"] = 33700,	-- Anguish (Rank 3)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 3,
+			},
+			{
+				["itemID"] = 25469,	-- Grimoire of Avoidance
+				["spellID"] = 32233,	-- Avoidance
+				["u"] = TBC_PHASE_ONE,
+			},
+			{
 				["itemID"] = 16321,	-- Grimoire of Blood Pact (Rank 1)
 				["spellID"] = 6307,	-- Blood Pact (Rank 1)
 				["rank"] = 1,
@@ -43,6 +66,30 @@ _.Skills =
 				["itemID"] = 16325,	-- Grimoire of Blood Pact (Rank 5)
 				["spellID"] = 11767,	-- Blood Pact (Rank 5)
 				["rank"] = 5,
+			},
+			{
+				["itemID"] = 22180,	-- Grimoire of Blood Pact (Rank 6)
+				["spellID"] = 27268,	-- Blood Pact (Rank 6)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 6,
+			},
+			{
+				["itemID"] = 23734,	-- Grimoire of Cleave (Rank 1)
+				["spellID"] = 30213,	-- Cleave (Rank 1)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 1,
+			},
+			{
+				["itemID"] = 23745,	-- Grimoire of Cleave (Rank 2)
+				["spellID"] = 30219,	-- Cleave (Rank 2)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 2,
+			},
+			{
+				["itemID"] = 23755,	-- Grimoire of Cleave (Rank 3)
+				["spellID"] = 30223,	-- Cleave (Rank 3)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 3,
 			},
 			{
 				["itemID"] = 16357,	-- Grimoire of Consume Shadows (Rank 1)
@@ -75,6 +122,17 @@ _.Skills =
 				["rank"] = 6,
 			},
 			{
+				["itemID"] = 22184,	-- Grimoire of Consume Shadows (Rank 7)
+				["spellID"] = 27272,	-- Consume Shadows (Rank 7)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 7,
+			},
+			{
+				["itemID"] = 25900,	-- Grimoire of Demonic Frenzy
+				["spellID"] = 32850,	-- Demonic Frenzy
+				["u"] = TBC_PHASE_ONE,
+			},
+			{
 				["itemID"] = 16381,	-- Grimoire of Devour Magic (Rank 2)
 				["spellID"] = 19731,	-- Devour Magic (Rank 2)
 				["rank"] = 2,
@@ -88,6 +146,18 @@ _.Skills =
 				["itemID"] = 16383,	-- Grimoire of Devour Magic (Rank 4)
 				["spellID"] = 19736,	-- Devour Magic (Rank 4)
 				["rank"] = 4,
+			},
+			{
+				["itemID"] = 22188,	-- Grimoire of Devour Magic (Rank 5)
+				["spellID"] = 27276,	-- Devour Magic (Rank 5)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 5,
+			},
+			{
+				["itemID"] = 22189,	-- Grimoire of Devour Magic (Rank 6)
+				["spellID"] = 27277,	-- Devour Magic (Rank 6)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 6,
 			},
 			{
 				["itemID"] = 16326,	-- Grimoire of Fire Shield (Rank 1)
@@ -113,6 +183,12 @@ _.Skills =
 				["itemID"] = 16330,	-- Grimoire of Fire Shield (Rank 5)
 				["spellID"] = 11771,	-- Fire Shield (Rank 5)
 				["rank"] = 5,
+			},
+			{
+				["itemID"] = 22181,	-- Grimoire of Fire Shield (Rank 6)
+				["spellID"] = 27269,	-- Fire Shield (Rank 6)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 6,
 			},
 			{
 				["itemID"] = 16302,	-- Grimoire of Firebolt (Rank 2)
@@ -145,6 +221,30 @@ _.Skills =
 				["rank"] = 7,
 			},
 			{
+				["itemID"] = 22179,	-- Grimoire of Firebolt (Rank 8)
+				["spellID"] = 27267,	-- Firebolt (Rank 8)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 8,
+			},
+			{
+				["itemID"] = 23711,	-- Grimoire of Intercept (Rank 1)
+				["spellID"] = 30151,	-- Intercept (Rank 1)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 1,
+			},
+			{
+				["itemID"] = 23730,	-- Grimoire of Intercept (Rank 2)
+				["spellID"] = 30194,	-- Intercept (Rank 2)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 2,
+			},
+			{
+				["itemID"] = 23731,	-- Grimoire of Intercept (Rank 3)
+				["spellID"] = 30198,	-- Intercept (Rank 3)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 3,
+			},
+			{
 				["itemID"] = 16368,	-- Grimoire of Lash of Pain (Rank 2)
 				["spellID"] = 7815,	-- Lash of Pain (Rank 2)
 				["rank"] = 2,
@@ -168,6 +268,12 @@ _.Skills =
 				["itemID"] = 16374,	-- Grimoire of Lash of Pain (Rank 6)
 				["spellID"] = 11780,	-- Lash of Pain (Rank 6)
 				["rank"] = 6,
+			},
+			{
+				["itemID"] = 22186,	-- Grimoire of Lash of Pain (Rank 7)
+				["spellID"] = 27274,	-- Lash of Pain (Rank 7)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 7,
 			},
 			{
 				["itemID"] = 16380,	-- Grimoire of Lesser Invisibility
@@ -212,6 +318,12 @@ _.Skills =
 				["rank"] = 6,
 			},
 			{
+				["itemID"] = 22185,	-- Grimoire of Sacrifice (Rank 7)
+				["spellID"] = 27273,	-- Sacrifice (Rank 7)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 7,
+			},
+			{
 				["itemID"] = 16379,	-- Grimoire of Seduction
 				["spellID"] = 6358,	-- Seduction
 			},
@@ -234,6 +346,12 @@ _.Skills =
 				["itemID"] = 16378,	-- Grimoire of Soothing Kiss (Rank 4)
 				["spellID"] = 11785,	-- Soothing Kiss (Rank 4)
 				["rank"] = 4,
+			},
+			{
+				["itemID"] = 22187,	-- Grimoire of Soothing Kiss (Rank 5)
+				["spellID"] = 27275,	-- Soothing Kiss (Rank 5)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 5,
 			},
 			{
 				["itemID"] = 16388,	-- Grimoire of Spell Lock (Rank 1)
@@ -266,6 +384,18 @@ _.Skills =
 				["rank"] = 4,
 			},
 			{
+				["itemID"] = 22183,	-- Grimoire of Suffering (Rank 5)
+				["spellID"] = 27271,	-- Suffering (Rank 5)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 5,
+			},
+			{
+				["itemID"] = 28068,	-- Grimoire of Suffering (Rank 6)
+				["spellID"] = 33701,	-- Suffering (Rank 6)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 6,
+			},
+			{
 				["itemID"] = 16384,	-- Grimoire of Tainted Blood (Rank 1)
 				["spellID"] = 19478,	-- Tainted Blood (Rank 1)
 				["rank"] = 1,
@@ -284,6 +414,12 @@ _.Skills =
 				["itemID"] = 16387,	-- Grimoire of Tainted Blood (Rank 4)
 				["spellID"] = 19660,	-- Tainted Blood (Rank 4)
 				["rank"] = 4,
+			},
+			{
+				["itemID"] = 22190,	-- Grimoire of Tainted Blood (Rank 5)
+				["spellID"] = 27280,	-- Tainted Blood (Rank 5)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 5,
 			},
 			{
 				["itemID"] = 16346,	-- Grimoire of Torment (Rank 2)
@@ -309,6 +445,12 @@ _.Skills =
 				["itemID"] = 16350,	-- Grimoire of Torment (Rank 6)
 				["spellID"] = 11775,	-- Torment (Rank 6)
 				["rank"] = 6,
+			},
+			{
+				["itemID"] = 22182,	-- Grimoire of Torment (Rank 7)
+				["spellID"] = 27270,	-- Torment (Rank 7)
+				["u"] = TBC_PHASE_ONE,
+				["rank"] = 7,
 			},
 		},
 	}),
