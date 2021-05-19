@@ -186,6 +186,18 @@ profession(261, {	-- Beast Training
 				9696,	-- Bloodaxe Worg (Wolf, 56-57, Blackrock Spire)
 			},
 		},
+		{
+			["recipeID"] = 27050,	-- Bite [Rank 9]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 9,
+			["lvl"] = 64,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
 
 		{
 			["recipeID"] = 7371,	-- Charge [Rank 1]
@@ -366,6 +378,18 @@ profession(261, {	-- Beast Training
 				7445,	-- Elder Shardtooth (Bear, 57-58, Winterspring)
 			},
 		},
+		{
+			["recipeID"] = 27049,	-- Claw [Rank 9]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 9,
+			["lvl"] = 64,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
 		
 		{
 			["recipeID"] = 25076,	-- Cobra Reflexes [Rank 1]
@@ -445,6 +469,18 @@ profession(261, {	-- Beast Training
 				7430,	-- Frostsaber Cub (Cat, 55-56, Winterspring)
 				8602,	-- Monstrous Plaguebat (Bat, 56-58, Eastern Plaguelands)
 			},
+		},
+		{
+			["recipeID"] = 27048,	-- Cower [Rank 7]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 7,
+			["lvl"] = 65,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
 		},
 
 		{
@@ -549,6 +585,31 @@ profession(261, {	-- Beast Training
 				7456,	-- Winterspring Screecher (Owl, 57-59, Winterspring)
 			},
 		},
+		
+		{
+			["recipeID"] = 34889,	-- Fire Breath [Rank 1]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 1,
+			["lvl"] = 1,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35323,	-- Fire Breath [Rank 2]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 2,
+			["lvl"] = 60,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
 
 		{
 			["recipeID"] = 23992,	-- Fire Resistance [Rank 1]
@@ -646,6 +707,115 @@ profession(261, {	-- Beast Training
 			["crs"] = {
 				9696,	-- Bloodaxe Worg (Wolf, 56-57, Blackrock Spire)
 			},
+		},
+		
+		{
+			["recipeID"] = 35290,	-- Gore [Rank 1]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 1,
+			["lvl"] = 1,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35291,	-- Gore [Rank 2]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 2,
+			["lvl"] = 8,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35292,	-- Gore [Rank 3]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 3,
+			["lvl"] = 16,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35293,	-- Gore [Rank 4]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 4,
+			["lvl"] = 24,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35294,	-- Gore [Rank 5]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 5,
+			["lvl"] = 32,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35295,	-- Gore [Rank 6]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 6,
+			["lvl"] = 40,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35296,	-- Gore [Rank 7]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 7,
+			["lvl"] = 48,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35297,	-- Gore [Rank 8]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 8,
+			["lvl"] = 56,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35298,	-- Gore [Rank 9]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 9,
+			["lvl"] = 63,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
 		},
 
 		{
@@ -891,6 +1061,43 @@ profession(261, {	-- Beast Training
 		},
 		
 		{
+			["recipeID"] = 35387,	-- Poison Spit [Rank 1]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 1,
+			["lvl"] = 15,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35389,	-- Poison Spit [Rank 2]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 2,
+			["lvl"] = 45,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		{
+			["recipeID"] = 35392,	-- Poison Spit [Rank 3]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 3,
+			["lvl"] = 60,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
+		
+		{
 			["recipeID"] = 24450,	-- Prowl [Rank 1]
 			["rank"] = 1,
 			["lvl"] = 32,
@@ -972,6 +1179,18 @@ profession(261, {	-- Beast Training
 				11737,	-- Stonelash Flayer (Scorpid, 58-59, Silithus)
 			},
 		},
+		{
+			["recipeID"] = 27060,	-- Scorpid Poison [Rank 5]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 5,
+			["lvl"] = 64,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
+		},
 		
 		{
 			["recipeID"] = 24423,	-- Screech [Rank 1]
@@ -1009,6 +1228,18 @@ profession(261, {	-- Beast Training
 				8602,	-- Monstrous Plaguebat (Bat, 56-58, Eastern Plaguelands)
 				7456,	-- Winterspring Screecher (Owl, 57-59, Winterspring)
 			},
+		},
+		{
+			["recipeID"] = 27051,	-- Screech [Rank 5]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 5,
+			["lvl"] = 64,
+			--[[
+			-- Crieve hasn't a clue where to find this information.
+			["crs"] = {
+				,	-- 
+			},
+			]]--
 		},
 		
 		{
@@ -1077,6 +1308,18 @@ profession(261, {	-- Beast Training
 				6516,	-- Un'Goro Thunderer (Gorilla, 52-53, Un'Goro Crater)
 				9622,	-- U'cha (Gorilla, 55, Un'Goro Crater)
 			},
+		},
+		{
+			["recipeID"] = 27063,	-- Thunderstomp [Rank 4]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 4,
+			["lvl"] = 60,
+		},
+		
+		{
+			["recipeID"] = 35346,	-- Warp
+			["u"] = TBC_PHASE_ONE,
+			["lvl"] = 60,
 		},
 	},
 });
