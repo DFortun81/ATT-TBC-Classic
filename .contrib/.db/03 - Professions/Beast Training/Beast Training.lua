@@ -22,7 +22,26 @@ profession(261, {	-- Beast Training
 			["rank"] = 4,
 			["lvl"] = 50,
 		},
-
+		{
+			["recipeID"] = 27350,	-- Arcane Resistance [Rank 5]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 5,
+			["lvl"] = 60,
+		},
+		
+		{
+			["recipeID"] = 35699,	-- Avoidance [Rank 1]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 1,
+			["lvl"] = 30,
+		},
+		{
+			["recipeID"] = 35700,	-- Avoidance [Rank 2]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 2,
+			["lvl"] = 60,
+		},
+		
 		{
 			["recipeID"] = 17253,	-- Bite [Rank 1]
 			["rank"] = 1,
@@ -347,7 +366,13 @@ profession(261, {	-- Beast Training
 				7445,	-- Elder Shardtooth (Bear, 57-58, Winterspring)
 			},
 		},
-
+		
+		{
+			["recipeID"] = 25076,	-- Cobra Reflexes [Rank 1]
+			["u"] = TBC_PHASE_ONE,
+			["lvl"] = 30,
+		},
+		
 		{
 			["recipeID"] = 1742,	-- Cower [Rank 1]
 			["rank"] = 1,
@@ -545,6 +570,12 @@ profession(261, {	-- Beast Training
 			["rank"] = 4,
 			["lvl"] = 50,
 		},
+		{
+			["recipeID"] = 27351,	-- Fire Resistance [Rank 5]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 5,
+			["lvl"] = 60,
+		},
 		
 		{
 			["recipeID"] = 24446,	-- Frost Resistance [Rank 1]
@@ -565,6 +596,12 @@ profession(261, {	-- Beast Training
 			["recipeID"] = 24449,	-- Frost Resistance [Rank 4]
 			["rank"] = 4,
 			["lvl"] = 50,
+		},
+		{
+			["recipeID"] = 27352,	-- Frost Resistance [Rank 5]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 5,
+			["lvl"] = 60,
 		},
 
 		{
@@ -661,6 +698,12 @@ profession(261, {	-- Beast Training
 			["rank"] = 10,
 			["lvl"] = 60,
 		},
+		{
+			["recipeID"] = 27062,	-- Great Stamina [Rank 11]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 11,
+			["lvl"] = 70,
+		},
 		
 		{
 			["recipeID"] = 2649,	-- Growl [Rank 1]
@@ -697,6 +740,13 @@ profession(261, {	-- Beast Training
 			["rank"] = 7,
 			["lvl"] = 60,
 		},
+		{
+			["recipeID"] = 27047,	-- Growl [Rank 8]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 8,
+			["lvl"] = 70,
+		},
+		
 		un(NEVER_IMPLEMENTED, {
 			["recipeID"] = 24844,	-- Lightning Breath [Rank 1]
 			["rank"] = 1,
@@ -806,6 +856,12 @@ profession(261, {	-- Beast Training
 			["rank"] = 10,
 			["lvl"] = 60,
 		},
+		{
+			["recipeID"] = 27061,	-- Natural Armor [Rank 11]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 11,
+			["lvl"] = 70,
+		},
 		
 		{
 			["recipeID"] = 24492,	-- Nature Resistance [Rank 1]
@@ -826,6 +882,12 @@ profession(261, {	-- Beast Training
 			["recipeID"] = 24504,	-- Nature Resistance [Rank 4]
 			["rank"] = 4,
 			["lvl"] = 50,
+		},
+		{
+			["recipeID"] = 27354,	-- Nature Resistance [Rank 5]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 5,
+			["lvl"] = 60,
 		},
 		
 		{
@@ -968,6 +1030,12 @@ profession(261, {	-- Beast Training
 			["recipeID"] = 24507,	-- Shadow Resistance [Rank 4]
 			["rank"] = 4,
 			["lvl"] = 50,
+		},
+		{
+			["recipeID"] = 27353,	-- Shadow Resistance [Rank 5]
+			["u"] = TBC_PHASE_ONE,
+			["rank"] = 5,
+			["lvl"] = 60,
 		},
 		
 		{
