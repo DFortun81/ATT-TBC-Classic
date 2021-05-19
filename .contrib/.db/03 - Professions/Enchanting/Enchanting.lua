@@ -35,6 +35,7 @@ profession(ENCHANTING, {
 			},
 			{
 				["name"] = "Enchanted Thorium Bar",
+				["timeline"] = { "removed 3.3.0.10000" },
 				["recipeID"] = 17180
 			}
 		}
