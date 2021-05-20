@@ -101,8 +101,8 @@ _.Zones =
 							["coord"] = { 79.9, 49.7, AZUREMYST_ISLE },
 							-- #endif
 							["timeline"] = { "removed 4.0.3.10000" },
+							["races"] = { DRAENEI },
 							["classes"] = { HUNTER },
-							["races"] = ALLIANCE_ONLY,
 							["lvl"] = lvlsquish(3, 1, 3),
 						}),
 						q(9303,  {	-- Inoculation [Original]
@@ -153,8 +153,8 @@ _.Zones =
 							["coord"] = { 79.6, 48.8, AZUREMYST_ISLE },
 							-- #endif
 							["timeline"] = { "removed 4.0.3.10000" },
+							["races"] = { DRAENEI },
 							["classes"] = { MAGE },
-							["races"] = ALLIANCE_ONLY,
 							["lvl"] = lvlsquish(3, 1, 3),
 						}),
 						q(9287,  {	-- Paladin Training
@@ -165,8 +165,8 @@ _.Zones =
 							["coord"] = { 79.7, 48.2, AZUREMYST_ISLE },
 							-- #endif
 							["timeline"] = { "removed 4.0.3.10000" },
+							["races"] = { DRAENEI },
 							["classes"] = { PALADIN },
-							["races"] = ALLIANCE_ONLY,
 							["lvl"] = lvlsquish(3, 1, 3),
 						}),
 						q(9291,  {	-- Priest Training
@@ -177,8 +177,8 @@ _.Zones =
 							["coord"] = { 80.1, 48.9, AZUREMYST_ISLE },
 							-- #endif
 							["timeline"] = { "removed 4.0.3.10000" },
+							["races"] = { DRAENEI },
 							["classes"] = { PRIEST },
-							["races"] = ALLIANCE_ONLY,
 							["lvl"] = lvlsquish(3, 1, 3),
 						}),
 						q(26969, {	-- Primal Strike
@@ -239,8 +239,8 @@ _.Zones =
 							["coord"] = { 79.3, 49.1, AZUREMYST_ISLE },
 							-- #endif
 							["timeline"] = { "removed 4.0.3.10000" },
+							["races"] = { DRAENEI },
 							["classes"] = { SHAMAN },
-							["races"] = ALLIANCE_ONLY,
 							["lvl"] = lvlsquish(3, 1, 3),
 						}),
 						q(9305,  {	-- Spare Parts [Original]
@@ -399,8 +399,8 @@ _.Zones =
 							["coord"] = { 79.6, 49.5, AZUREMYST_ISLE },
 							-- #endif
 							["timeline"] = { "removed 4.0.3.10000" },
+							["races"] = { DRAENEI },
 							["classes"] = { WARRIOR },
-							["races"] = ALLIANCE_ONLY,
 							["lvl"] = lvlsquish(3, 1, 3),
 						}),
 						q(9293,  {	-- What Must Be Done...
