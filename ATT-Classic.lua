@@ -10881,6 +10881,7 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 					Skillet:RegisterUpdatePlugin("ATTC");
 					self.SkilletSupported = true;
 				end
+				self:SetParent(SkilletFrame);
 				self:SetPoint("TOPLEFT", SkilletFrame, "TOPRIGHT", 0, 0);
 				self:SetPoint("BOTTOMLEFT", SkilletFrame, "BOTTOMRIGHT", 0, 0);
 				self:SetMovable(false);
