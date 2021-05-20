@@ -82,6 +82,9 @@ _.Zones =
 						1684,	-- Elanaria
 						1679,	-- Muren Stormpike
 						1678,	-- Vejrek
+						-- #if AFTER TBC
+						9582,	-- Strength of One
+						-- #endif
 					},
 					["coords"] = {
 						{ 78.6, 45.6, STORMWIND_CITY },
@@ -170,20 +173,43 @@ _.Zones =
 					},
 				}),
 				q(1639, {	-- Bartleby the Drunk
-					["lvl"] = 10,
-					["races"] = ALLIANCE_ONLY,
-					["classes"] = { WARRIOR },
 					["qg"] = 6089,	-- Harry Burlguard
+					["sourceQuests"] = {
+						1638,	-- A Warrior's Training
+						1684,	-- Elanaria
+						1679,	-- Muren Stormpike
+						-- #if AFTER TBC
+						9582,	-- Strength of One
+						-- #endif
+					},
+					["classes"] = { WARRIOR },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 10,
 				}),
 				q(1665, {	-- Bartleby's Mug
 					["qg"] = 6090,	-- Bartleby
 					["sourceQuest"] = 1640,	-- Beat Bartleby
+					["altQuests"] = {
+						--1665,	-- Bartleby's Mug
+						-- #if AFTER TBC
+						10350,	-- Behomat
+						-- #endif
+						1678,	-- Vejrek
+						1683,	-- Vorlus Vilehoof
+					},
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
 					["cost"] = {
 						{ "i", 6781, 1 },	-- Bartleby's Mug
 					},
 					["lvl"] = 10,
+					["groups"] = {
+						-- #if BEFORE CATA
+						recipe(71),		-- Defensive Stance
+						--recipe(7386),	-- Sunder Armor	[TODO: Users are reporting they can't collect this.]
+						recipe(355),	-- Taunt
+						-- #endif
+					},
 				}),
 				q(389, {	-- Bazil Thredd
 					["qg"] = 1646,	-- Baros Alexston
@@ -493,11 +519,11 @@ _.Zones =
 					},
 				}),
 				q(1666, {	-- Marshal Haggard
-					["lvl"] = 10,
-					["races"] = ALLIANCE_ONLY,
-					["classes"] = { WARRIOR },
 					["qg"] = 6089,	-- Harry Burlguard
 					["sourceQuest"] = 1665,	-- Bartleby's Mug
+					["classes"] = { WARRIOR },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 10,
 				}),
 				q(2360, {	-- Mathias and the Defias
 					["qg"] = 332,	-- Master Mathias Shaw

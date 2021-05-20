@@ -176,6 +176,9 @@ _.Zones =
 						1638,	-- A Warrior's Training
 						1679,	-- Muren Stormpike
 						1678,	-- Vejrek
+						-- #if AFTER TBC
+						9582,	-- Strength of One
+						-- #endif
 					},
 					["coords"] = {
 						{ 39.0, 43.4, DARKSHORE },

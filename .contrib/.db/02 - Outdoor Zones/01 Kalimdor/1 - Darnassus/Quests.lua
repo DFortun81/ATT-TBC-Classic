@@ -292,6 +292,17 @@ _.Zones =
 						1638,	-- A Warrior's Training
 						1684,	-- Elanaria
 						1679,	-- Muren Stormpike
+						-- #if AFTER TBC
+						9582,	-- Strength of One
+						-- #endif
+					},
+					["altQuests"] = {
+						1665,	-- Bartleby's Mug
+						-- #if AFTER TBC
+						10350,	-- Behomat
+						-- #endif
+						1678,	-- Vejrek
+						--1683,	-- Vorlus Vilehoof
 					},
 					["coord"] = { 57.3, 34.6, DARNASSUS },
 					["classes"] = { WARRIOR },
@@ -300,6 +311,13 @@ _.Zones =
 						{ "i", 6805, 1 }, -- Horn of Vorlus
 					},
 					["lvl"] = 10,
+					["groups"] = {
+						-- #if BEFORE CATA
+						recipe(71),		-- Defensive Stance
+						--recipe(7386),	-- Sunder Armor	[TODO: Users are reporting they can't collect this.]
+						recipe(355),	-- Taunt
+						-- #endif
+					},
 				}),
 				q(1693, {	-- Weapons of Elunite
 					["lvl"] = 10,

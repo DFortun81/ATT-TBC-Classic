@@ -141,7 +141,20 @@ _.Zones =
 				-- #endif
 				q(10350, {	-- Behomat
 					["qg"] = 17480,	-- Ruada
-					["sourceQuest"] = 9582,	-- Strength of One
+					["sourceQuests"] = {
+						1638,	-- A Warrior's Training
+						1684,	-- Elanaria
+						1679,	-- Muren Stormpike
+						9582,	-- Strength of One
+					},
+					["altQuests"] = {
+						1665,	-- Bartleby's Mug
+						-- #if AFTER TBC
+						--10350,	-- Behomat
+						-- #endif
+						1678,	-- Vejrek
+						1683,	-- Vorlus Vilehoof
+					},
 					["coord"] = { 49.8, 50.4, AZUREMYST_ISLE },
 					["maps"] = { THE_EXODAR },
 					["classes"] = { WARRIOR },

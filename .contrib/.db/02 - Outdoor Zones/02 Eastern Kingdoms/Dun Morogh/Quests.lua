@@ -279,6 +279,9 @@ _.Zones =
 						1638,	-- A Warrior's Training
 						1684,	-- Elanaria
 						1678,	-- Vejrek
+						-- #if AFTER TBC
+						9582,	-- Strength of One
+						-- #endif
 					},
 					["coord"] = { 47.2, 52.6, DUN_MOROGH },
 					["classes"] = { WARRIOR },

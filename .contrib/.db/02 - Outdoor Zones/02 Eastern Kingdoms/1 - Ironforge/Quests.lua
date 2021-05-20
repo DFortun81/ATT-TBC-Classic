@@ -593,6 +593,17 @@ _.Zones =
 						1638,	-- A Warrior's Training
 						1684,	-- Elanaria
 						1679,	-- Muren Stormpike
+						-- #if AFTER TBC
+						9582,	-- Strength of One
+						-- #endif
+					},
+					["altQuests"] = {
+						1665,	-- Bartleby's Mug
+						-- #if AFTER TBC
+						10350,	-- Behomat
+						-- #endif
+						--1678,	-- Vejrek
+						1683,	-- Vorlus Vilehoof
 					},
 					["coord"] = { 70.6, 90.4, IRONFORGE },
 					["maps"] = { DUN_MOROGH },
@@ -607,6 +618,11 @@ _.Zones =
 							["cr"] = 6113,	-- Vejrek
 							["coord"] = { 27.8, 57.4, DUN_MOROGH },
 						}),
+						-- #if BEFORE CATA
+						recipe(71),		-- Defensive Stance
+						--recipe(7386),	-- Sunder Armor	[TODO: Users are reporting they can't collect this.]
+						recipe(355),	-- Taunt
+						-- #endif
 					},
 				}),
 			}),
