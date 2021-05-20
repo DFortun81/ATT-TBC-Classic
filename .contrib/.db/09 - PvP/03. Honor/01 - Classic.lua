@@ -11,20 +11,28 @@ _.PvP =
 				q(8371, {	-- Concerted Efforts
 					["qg"] = 15351,	-- Alliance Brigadier General
 					["coords"] = {
-						{ 39.4, 82.2, ALTERAC_MOUNTAINS },
-						{ 45.6, 45.8, ARATHI_HIGHLANDS },
-						{ 61.8, 83.8, ASHENVALE },
 						{ 57.8, 34.6, DARNASSUS },
 						{ 69.8, 90, IRONFORGE },
 						{ 79.4, 18, STORMWIND_CITY },
+						-- #if AFTER TBC
+						{ 67.4, 33.9, SHATTRATH_CITY },
+						-- #else
+						{ 39.4, 82.2, ALTERAC_MOUNTAINS },
+						{ 45.6, 45.8, ARATHI_HIGHLANDS },
+						{ 61.8, 83.8, ASHENVALE },
+						-- #endif
 					},
 					["maps"] = {
-						ALTERAC_MOUNTAINS,
-						ARATHI_HIGHLANDS,
-						ASHENVALE,
 						DARNASSUS,
 						IRONFORGE,
 						STORMWIND_CITY,
+						-- #if AFTER TBC
+						SHATTRATH_CITY,
+						-- #else
+						ALTERAC_MOUNTAINS,
+						ARATHI_HIGHLANDS,
+						ASHENVALE,
+						-- #endif
 					},
 					["races"] = ALLIANCE_ONLY,
 					-- #if AFTER TBC
