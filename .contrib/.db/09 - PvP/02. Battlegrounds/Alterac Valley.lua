@@ -87,11 +87,13 @@ _.PvP =
 						})),
 					},
 				}),
+				-- #if BEFORE TBC
 				n(EXPLORATION, {
 					exploration(2959, "270:240:348:13"),	-- Dun Baldar
 					exploration(3057, "300:300:335:172"),	-- Field of Strife
 					exploration(2978, "235:290:399:375"),	-- Frostwolf Keep
 				}),
+				-- #endif
 				n(FACTIONS, {
 					faction(729, {	-- Frostwolf Clan
 						["icon"] = "Interface\\Icons\\inv_jewelry_frostwolftrinket_05",
