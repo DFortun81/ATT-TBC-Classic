@@ -27,10 +27,6 @@ profession(ENGINEERING, {
 						["recipeID"] = 12717
 					},
 					{
-						["name"] = "Goblin Rocket Boots",
-						["recipeID"] = 8895
-					},
-					{
 						["name"] = "Goblin Rocket Helmet",
 						["recipeID"] = 12758
 					},

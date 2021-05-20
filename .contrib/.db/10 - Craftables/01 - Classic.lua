@@ -656,7 +656,6 @@ _.Craftables = { tier(1, {	-- Classic
 					i(10543),	-- Goblin Construction Helmet
 					i(18587),	-- Goblin Jumper Cables XL
 					i(10542),	-- Goblin Mining Helmet
-					i(7189),	-- Goblin Rocket Boots
 					i(10588),	-- Goblin Rocket Helmet
 					i(11825),	-- Pet Bombling
 				}),
@@ -693,6 +692,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(4397),	-- Gnomish Cloaking Device
 			i(7506),	-- Gnomish Universal Remote
 			i(7148),	-- Goblin Jumper Cables
+			i(7189),	-- Goblin Rocket Boots
 			i(18634),	-- Gyrofreeze Ice Reflector
 			i(18638),	-- Hyper-Radiant Flame Reflector
 			i(4386),	-- Ice Deflector

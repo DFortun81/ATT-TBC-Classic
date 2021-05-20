@@ -78,6 +78,11 @@ profession(ENGINEERING, {
 				["recipeID"] = 9273
 			},
 			{
+				["name"] = "Goblin Rocket Boots",
+				["description"] = "Can be learned from a recipe, but is taught naturally to Goblin Engineers.",
+				["recipeID"] = 8895
+			},
+			{
 				["name"] = "Gyrofreeze Ice Reflector",
 				["recipeID"] = 23077
 			},
