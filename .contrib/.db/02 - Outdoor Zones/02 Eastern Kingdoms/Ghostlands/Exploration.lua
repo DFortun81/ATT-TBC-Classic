@@ -15,6 +15,7 @@ _.Zones =
 				exploration(3496, "429:256:573:136"),	-- Farstrider Enclave [TBC]
 				exploration(3490, "512:512:44:0"),		-- Goldenmist Village [TBC]
 				exploration(3502, "256:449:340:219"),	-- Howling Ziggurat [TBC]
+				exploration(3823, "256:256:585:0"),		-- Isle of Tribulations [TBC]
 				exploration(3494, "256:256:210:126"),	-- Sanctum of the Moon [TBC]
 				exploration(3493, "256:512:448:150"),	-- Sanctum of the Sun [TBC]
 				exploration(3489, "512:256:460:0"),		-- Suncrown Village [TBC]
