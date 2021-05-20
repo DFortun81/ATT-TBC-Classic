@@ -9,7 +9,7 @@ _.Zones =
 			n(EXPLORATION, {
 				exploration(3508, "404:436:598:232"),	-- Amani Pass [TBC]
 				exploration(3501, "256:256:184:238"),	-- Bleeding Ziggurat [TBC]
-				exploration(3495, "429:256:573:136"),	-- Dawnstar Spire [TBC]
+				exploration(3495, "427:256:575:0"),		-- Dawnstar Spire [TBC]
 				exploration(3500, "512:293:95:375"),	-- Deatholme [TBC]
 				exploration(3856, "512:256:326:0"),		-- Elrendar Crossing [TBC]
 				exploration(3496, "429:256:573:136"),	-- Farstrider Enclave [TBC]
