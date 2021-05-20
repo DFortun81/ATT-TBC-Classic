@@ -90,15 +90,16 @@ _.Zones =
 					["sourceQuest"] = 5931,	-- Back to Darnassus
 					["coord"] = { 35.2, 8, DARNASSUS },
 					["maps"] = { DARKSHORE, DARNASSUS },
+					["cost"] = {
+						{ "i", 15208, 1 },	-- Cenarion Moondust
+					},
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { DRUID },
 					["lvl"] = 10,
 					["groups"] = {
-						{
-							["itemID"] = 15208,	-- Cenarion Moondust
-							["questID"] = 6001,	-- Body and Heart
+						i(15208, {	-- Cenarion Moondust
 							["coord"] = { 43, 45, DARKSHORE },
-						},
+						}),
 						{
 							["recipeID"] = 5487,	-- Bear Form // Dire Bear Form
 							["OnUpdate"] = [[function(t)
@@ -119,16 +120,25 @@ _.Zones =
 					["sourceQuest"] = 5932,	-- Back to Thunder Bluff
 					["coord"] = { 76.4, 27.6, THUNDER_BLUFF },
 					["maps"] = { THE_BARRENS, THUNDER_BLUFF },
+					["cost"] = {
+						{ "i", 15710, 1 },	-- Cenarion Lunardust
+					},
 					["races"] = HORDE_ONLY,
 					["classes"] = { DRUID },
 					["lvl"] = 10,
 					["groups"] = {
 						{
 							["itemID"] = 15710,	-- Cenarion Lunardust
-							["questID"] = 6002,	-- Body and Heart
 							["coord"] = { 42, 60, THE_BARRENS },
 						},
-						recipe(5487),	-- Bear Form
+						{
+							["recipeID"] = 5487,	-- Bear Form // Dire Bear Form
+							["OnUpdate"] = [[function(t)
+								if _.IsSpellKnown(9634) then
+									t.collected = 2;
+								end
+							end]],
+						},
 						recipe(6795),	-- Growl
 						{
 							["recipeID"] = 6807,	-- Maul (Rank 1)
