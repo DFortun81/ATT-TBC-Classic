@@ -7,7 +7,6 @@ _.Zones =
 		m(DUSTWALLOW_MARSH, {
 			n(ZONEDROPS, {
 				i(5959, {	-- Acidic Venom Sac
-					["questID"] = 1322,	-- The Black Shield (3/5)
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						4412,	-- Darkfang Creeper
@@ -17,8 +16,25 @@ _.Zones =
 						4415,	-- Giant Darkfang Spider
 					},
 				}),
+				i(33071, {	-- Blackhoof Armaments
+					["crs"] = {
+						4341,	-- Drywallow Crocolisk
+						23592,	-- Grimtotem Breaker
+						23714,	-- Grimtotem Elder
+						23593,	-- Grimtotem Spirit-Shifter
+						4382,	-- Withervine Creeper
+					},
+					["u"] = TBC_PHASE_ONE,
+				}),
+				i(33085, {	-- Bloodfen Feather
+					["crs"] = {
+						4356,	-- Bloodfen Razormaw
+						4357,	-- Bloodfen Lashtail
+						23873,	-- Goreclaw the Ravenous
+					},
+					["u"] = TBC_PHASE_ONE,
+				}),
 				un(PHASE_FIVE, i(22094, {	-- Bloodkelp
-					["questID"] = 8970,	-- I See Alcaz Island In Your Future...
 					["crs"] = {
 						4368,	-- Strashaz Myrmidon
 						4366,	-- Strashaz Serpent Guard
@@ -32,7 +48,6 @@ _.Zones =
 					["cr"] = 4324,	-- Searing Whelp
 				}),
 				i(5883, {	-- Forked Mudrock Tongue
-					["questID"] = 1204,	-- Mudrock Soup and Bugs
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						4399,	-- Mudrock Borer
@@ -42,8 +57,25 @@ _.Zones =
 						4396,	-- Mudrock Tortoise
 					},
 				}),
+				i(33051, {	-- Grimtotem Battle Plan
+					["cost"] = {
+						{ "i", 33050, 4 },	-- Grimtotem Note
+					},
+					["u"] = TBC_PHASE_ONE,
+				}),
+				i(33061, {	-- Grimtotem Key
+					["crs"] = {
+						23592,	-- Grimtotem Breaker
+						23714,	-- Grimtotem Elder
+						23593,	-- Grimtotem Spirit-Shifter
+					},
+					["u"] = TBC_PHASE_ONE,
+				}),
+				i(33050, {	-- Grimtotem Note
+					["cr"] = 23714,	-- Grimtotem Elder
+					["u"] = TBC_PHASE_ONE,
+				}),
 				i(5942, {	-- Jeweled Pendant
-					["questID"] = 1261,	-- Marg Speaks
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						14236,	-- Lord Angler
@@ -54,8 +86,11 @@ _.Zones =
 						4402,	-- Muckshell Snapclaw
 					},
 				}),
+				i(33202, {	-- Marsh Frog Leg
+					["cr"] = 23979,	-- Giant Marsh Frog
+					["u"] = TBC_PHASE_ONE,
+				}),
 				i(5847, {	-- Mirefin Head
-					["questID"] = 1177,	-- Hungry!
 					["crs"] = {
 						14230,	-- Burgle Eye
 						4362,	-- Mirefin Coastrunner
@@ -89,7 +124,6 @@ _.Zones =
 					},
 				}),
 				i(5841, {	-- Searing Heart
-					["questID"] = 1169,	-- Identifying the Brood
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						4323,	-- Searing Hatchling
@@ -97,12 +131,15 @@ _.Zones =
 					},
 				}),
 				i(5840, {	-- Searing Tongue
-					["questID"] = 1169,	-- Identifying the Brood
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						4323,	-- Searing Hatchling
 						4324,	-- Searing Whelp
 					},
+				}),
+				i(33086, {	-- Stonemaul Banner
+					["cr"] = 4328,	-- Firemane Scalebane
+					["u"] = TBC_PHASE_ONE,
 				}),
 				i(33126, {	-- Thresher Oil
 					["cr"] = 4388,	-- Young Murk Thresher
@@ -115,7 +152,6 @@ _.Zones =
 					["u"] = TBC_PHASE_ONE,
 				}),
 				i(5884, {	-- Unpopped Darkmist Eye
-					["questID"] = 1206,	-- Jarl Needs Eyes
 					["crs"] = {
 						4377,	-- Darkmist Lurker
 						4378,	-- Darkmist Recluse
@@ -123,6 +159,13 @@ _.Zones =
 						4376,	-- Darkmist Spider
 						4380,	-- Darkmist Widow
 					},
+				}),
+				i(33175, {	-- Wyrmtail
+					["crs"] = {
+						4345,	-- Drywallow Daggermaw
+						4324,	-- Searing Whelp
+					},
+					["u"] = TBC_PHASE_ONE,
 				}),
 			}),
 		}),

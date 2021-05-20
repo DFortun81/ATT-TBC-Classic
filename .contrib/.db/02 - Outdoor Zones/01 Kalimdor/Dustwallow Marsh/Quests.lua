@@ -20,15 +20,21 @@ _.Zones =
 						i(6801),	-- Baroque Apron
 					},
 				}),
-				q(11136, {	-- A Disturbing Development
+				applyclassicphase(TBC_PHASE_ONE, q(11136, {	-- A Disturbing Development
 					["qg"] = 23951,	-- Lieutenant Aden
 					["sourceQuest"] = 11134,	-- The End of the Deserters
 					["coord"] = { 65.1, 47.1, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 32,
-				}),
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11143, {	-- A Grim Connection
+					["qg"] = 4944,	-- Captain Garran Vimes
+					["sourceQuest"] = 1287,	-- The Deserters
+					["coord"] = { 68.2, 48.6, DUSTWALLOW_MARSH },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 33,
+				})),
 				q(1168, {	-- Army of the Black Dragon
 					["qg"] = 4502,	-- Tharg
 					["coord"] = { 37.2, 31.4, DUSTWALLOW_MARSH },
@@ -39,6 +45,38 @@ _.Zones =
 						i(9705),	-- Tharg's Shoelace
 					},
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(11148, {	-- Arms of the Grimtotems
+					["qg"] = 23568,	-- Captain Darill
+					["sourceQuest"] = 11143,	-- A Grim Connection
+					["coord"] = { 46.6, 24.6, DUSTWALLOW_MARSH },
+					["races"] = ALLIANCE_ONLY,
+					["cost"] = {
+						{ "i", 33071, 7 },	-- Blackhoof Armaments
+					},
+					["lvl"] = 33,
+					["groups"] = {
+						i(33272),	-- Biting Axe
+						i(33268),	-- Bone Dirk
+						i(33264),	-- Glowing Tourmaline Ring
+					},
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11160, {	-- Banner of the Stonemaul
+					["qg"] = 23579,	-- Brogg <Stonemaul Survivor>
+					["sourceQuest"] = 11158,	-- Bloodfen Feathers
+					["coord"] = { 41.9, 74.0, DUSTWALLOW_MARSH },
+					["cost"] = {
+						{ "i", 33086, 1 },	-- Stonemaul Banner
+					},
+					["lvl"] = 35,
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11158, {	-- Bloodfen Feathers
+					["qg"] = 23579,	-- Brogg <Stonemaul Survivor>
+					["coord"] = { 41.9, 74.0, DUSTWALLOW_MARSH },
+					["cost"] = {
+						{ "i", 33085, 5 },	-- Bloodfen Feather
+					},
+					["lvl"] = 35,
+				})),
 				q(1220, {	-- Captain Vimes
 					["qg"] = 4947,	-- Theramore Lieutenant
 					["sourceQuest"] = 1219,	-- The Orc Report
@@ -53,6 +91,20 @@ _.Zones =
 					},
 					["lvl"] = 30,
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(11217, {	-- Catch a Dragon by the Tail
+					["qg"] = 23570,	-- Gizzix Grimegurgle
+					["coord"] = { 41.6, 73.0, DUSTWALLOW_MARSH },
+					["cost"] = {
+						{ "i", 33175, 8 },	-- Wyrmtail
+					},
+					["u"] = TBC_PHASE_ONE,
+					["lvl"] = 37,
+					["groups"] = {
+						i(33271),	-- Battlecaster's Edge
+						i(33235),	-- Journeyman's Epaulets
+						i(33241),	-- Oiled Leather Leggings
+					},
+				})),
 				q(1958, {	-- Celestial Power
 					["qg"] = 6546,	-- Tabetha
 					["sourceQuest"] = 1957,	-- Mana Surges
@@ -75,6 +127,21 @@ _.Zones =
 						i(10704),	-- Chillnail Splinter
 					},
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(11162, {	-- Challenge to the Black Flight
+					["qg"] = 23579,	-- Brogg <Stonemaul Survivor>
+					["sourceQuest"] = 11159,	-- Spirits of Stonemaul Hold
+					["coord"] = { 41.9, 74.0, DUSTWALLOW_MARSH },
+					["lvl"] = 35,
+					["groups"] = {
+						objective(1, {	-- Stonemaul Clan Avenged
+							["provider"] = { "i", 33095 },	-- Stonemaul Banner
+							["cr"] = 23789,	-- Smolderwing
+						}),
+						i(33231),	-- Oversized Stonemaul Hood
+						i(33237),	-- Brogg's Battle Harness
+						i(33256),	-- Refitted Bruiser Gauntlets
+					},
+				})),
 				q(4961, {	-- Cleansing of the Orb of Orahil
 					["qg"] = 6546,	-- Tabetha
 					["sourceQuest"] = 1799,	-- Fragments of the Orb of Orahil
@@ -86,6 +153,16 @@ _.Zones =
 					},
 					["lvl"] = 40,
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(11144, {	-- Confirming the Suspicion
+					["qg"] = 23568,	-- Captain Darill
+					["sourceQuest"] = 11143,	-- A Grim Connection
+					["coord"] = { 46.6, 24.6, DUSTWALLOW_MARSH },
+					["cost"] = {
+						{ "i", 33051, 1 },	-- Grimtotem Battle Plan
+					},
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 33,
+				})),
 				q(1285, {	-- Daelin's Men
 					["qg"] = 4948,	-- Adjutant Tesoran
 					["sourceQuest"] = 1259,	-- Lieutenant Paval Reethe (2/2)
@@ -93,7 +170,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
-				q(11193, {	-- Dastardly Denizens of the Deep
+				applyclassicphase(TBC_PHASE_ONE, q(11193, {	-- Dastardly Denizens of the Deep
 					["qg"] = 23892,	-- Babs Fizzletorque
 					["sourceQuest"] = 11192,	-- Thresher Oil
 					["coord"] = { 72.1, 47.0, DUSTWALLOW_MARSH },
@@ -101,9 +178,8 @@ _.Zones =
 					["cost"] = {
 						{ "i", 33127, 1 },	-- Dastardly Denizens of the Deep
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 30,
-				}),
+				})),
 				q(1205, {	-- Deadmire
 					["qg"] = 3441,	-- Melor Stonehoof
 					["coord"] = { 61.52, 80.88, THUNDER_BLUFF },
@@ -122,7 +198,7 @@ _.Zones =
 						},
 					},
 				}),
-				q(11137, {	-- Defias in Dustwallow?
+				applyclassicphase(TBC_PHASE_ONE, q(11137, {	-- Defias in Dustwallow?
 					["qg"] = 5086,	-- Captain Wymor
 					["sourceQuest"] = 11136,	-- A Disturbing Development
 					["coord"] = { 59.7, 41.0, DUSTWALLOW_MARSH },
@@ -130,17 +206,15 @@ _.Zones =
 					["cost"] = {
 						{ "i", 33037, 1 },	-- Defias Orders
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 32,
 					["groups"] = {
 						i(23679, {	-- Defias Orders
 							["cr"] = 23679,	-- Garn Mathers
 							["coord"] = { 64.9, 27.3, DUSTWALLOW_MARSH },
-							["u"] = TBC_PHASE_ONE,
 						}),
 					},
-				}),
-				q(11133, {	-- Discrediting the Deserters
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11133, {	-- Discrediting the Deserters
 					["qg"] = 23566,	-- Calia Hastings <SI:7>
 					["sourceQuest"] = 11128,	-- Propaganda War
 					["coord"] = { 68.3, 51.0, DUSTWALLOW_MARSH },
@@ -148,9 +222,8 @@ _.Zones =
 					["cost"] = {
 						{ "i", 33015, 1 },	-- Altered Leaflets
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 32,
-				}),
+				})),
 				q(1271, {	-- Feast at the Blue Recluse
 					["qg"] = 1141,	-- Angus Stern
 					["sourceQuests"] = {
@@ -212,6 +285,13 @@ _.Zones =
 						i(9704),	-- Rustler Gloves
 					},
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(11123, {	-- Inspecting the Ruins
+					["qg"] = 4944,	-- Captain Garran Vimes
+					["sourceQuest"] = 1287,	-- The Deserters
+					["coord"] = { 68.2, 48.6, DUSTWALLOW_MARSH },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 30,
+				})),
 				q(1169, {	-- Items of Power
 					["qg"] = 6546,	-- Tabetha
 					["sourceQuest"] = 1951,	-- Rituals of Power
@@ -250,42 +330,57 @@ _.Zones =
 						}),
 					},
 				}),
-				q(11194, {	-- Is it Real?
+				applyclassicphase(TBC_PHASE_ONE, q(11194, {	-- Is it Real?
 					["qg"] = 23896,	-- "Dirty" Michael Crowe <Fish Merchant>
 					["sourceQuest"] = 11193,	-- Dastardly Denizens of the Deep
 					["coord"] = { 69.2, 51.9, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 30,
-				}),
-				q(11141, {	-- Jaina Must Know
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11141, {	-- Jaina Must Know
 					["qg"] = 23569,	-- Renn McGill <SI:7 Salvage Diver>
 					["sourceQuest"] = 11140,	-- Recover the Cargo!
 					["coord"] = { 63.7, 17.0, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 33,
-				}),
+				})),
 				q(1203, {	-- Jarl Needs a Blade
 					["qg"] = 4792,	-- "Swamp Eye" Jarl
 					["sourceQuest"] = 1206,	-- Jarl Needs Eyes
 					["coord"] = { 55.4, 26.2, DUSTWALLOW_MARSH },
+					-- #if BEFORE TBC
 					["cost"] = {
 						{ "i", 3853, 1 },	-- Moonsteel Broadsword
 					},
+					-- #else
+					["cost"] = {
+						{ "i", 33110, 1 },	-- Razorspine's Sword
+					},
+					-- #endif
 					["lvl"] = 30,
 					["groups"] = {
+						-- #if AFTER TBC
+						i(33110, {	-- Razorspine's Sword
+							["cr"] = 23841,	-- Razorspine
+						}),
+						-- #endif
 						i(9622),	-- Reedknot Ring
 						i(5016),	-- Artisan's Trousers
 					},
 				}),
 				q(1206, {	-- Jarl Needs Eyes
 					["qg"] = 4792,	-- "Swamp Eye" Jarl
-					["sourceQuest"] = 1218,	-- Soothing Spices
+					["sourceQuest"] = 1218,	-- Marsh Frog Legs (TBC+) / Soothing Spices (Classic)
 					["coord"] = { 55.4, 26.2, DUSTWALLOW_MARSH },
+					-- #if BEFORE TBC
 					["cost"] = {
 						{ "i", 5884, 40 },	-- Unpopped Darkmist Eye
 					},
+					-- #else
+					["cost"] = {
+						{ "i", 5884, 20 },	-- Unpopped Darkmist Eye
+					},
+					-- #endif
 					["lvl"] = 30,
 				}),
 				q(1133, {	-- Journey to Astranaar
@@ -372,13 +467,40 @@ _.Zones =
 					},
 					["lvl"] = 30,
 				}),
-				q(11214, {	-- Mission to Mudsprocket
+				-- #if AFTER TBC
+				q(1218, {	-- Marsh Frog Legs (TBC+) / Soothing Spices (Classic)
+					["qg"] = 4792,	-- "Swamp Eye" Jarl
+					["coord"] = { 55.4, 26.2, DUSTWALLOW_MARSH },
+					["cost"] = {
+						{ "i", 33202, 10 },	-- Marsh Frog Leg
+					},
+					["lvl"] = 30,
+					["groups"] = {
+						i(6807),	-- Frog Leg Stew
+					},
+				}),
+				-- #endif
+				applyclassicphase(TBC_PHASE_ONE, q(11214, {	-- Mission to Mudsprocket
 					["qg"] = 23951,	-- Lieutenant Aden
 					["coord"] = { 65.1, 47.1, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 39,
-				}),
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11200, {	-- More than Coincidence
+					["qg"] = 4926,	-- Krog
+					["sourceQuest"] = 11204,	-- Return to Krog
+					["coord"] = { 36.4, 31.9, DUSTWALLOW_MARSH },
+					["races"] = HORDE_ONLY,
+					["cost"] = {
+						{ "i", 33071, 7 },	-- Blackhoof Armaments
+					},
+					["lvl"] = 33,
+					["groups"] = {
+						i(33272),	-- Biting Axe
+						i(33268),	-- Bone Dirk
+						i(33264),	-- Glowing Tourmaline Ring
+					},
+				})),
 				q(1260, {	-- Morgan Stern
 					["qg"] = 1141,	-- Angus Stern
 					["coord"] = { 41.4, 89.2, STORMWIND_CITY },
@@ -397,7 +519,7 @@ _.Zones =
 					},
 					["lvl"] = 33,
 				}),
-				q(11209, {	-- Nat's Bargain
+				applyclassicphase(TBC_PHASE_ONE, q(11209, {	-- Nat's Bargain
 					["qg"] = 12919,	-- Nat Pagle
 					["sourceQuest"] = 11194,	-- Is it Real?
 					["coord"] = { 58.8, 60.2, DUSTWALLOW_MARSH },
@@ -405,20 +527,19 @@ _.Zones =
 					["cost"] = {
 						{ "i", 33166, 1 },	-- Pagle's Fish Paste, Extra Strength
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 30,
 					["groups"] = {
 						i(19221),	-- Darkmoon Special Reserve
 					},
-				}),
-				q(11210, {	-- Oh, It's Real
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11210, {	-- Oh, It's Real
 					["qg"] = 12919,	-- Nat Pagle
 					["sourceQuest"] = 11209,	-- Nat's Bargain
 					["coord"] = { 58.8, 60.2, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
 					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 30,
-				}),
+				})),
 				q(1166, {	-- Overlord Mok'Morokk's Concern
 					["qg"] = 4500,	-- Overlord Mok'Morokk
 					["coord"] = { 36.2, 31.4, DUSTWALLOW_MARSH },
@@ -448,7 +569,7 @@ _.Zones =
 						i(10702),	-- Enormous Ogre Boots
 					},
 				}),
-				q(11128, {	-- Propaganda War
+				applyclassicphase(TBC_PHASE_ONE, q(11128, {	-- Propaganda War
 					["qg"] = 23566,	-- Calia Hastings <SI:7>
 					["sourceQuest"] = 11126,	-- Traitors Among Us
 					["coord"] = { 68.3, 51.0, DUSTWALLOW_MARSH },
@@ -456,15 +577,13 @@ _.Zones =
 					["cost"] = {
 						{ "i", 33008, 1 },	-- Deserter Propaganda
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 32,
 					["groups"] = {
 						i(33008, {	-- Deserter Propaganda
 							["coord"] = { 67.9, 58.7, DUSTWALLOW_MARSH },
-							["u"] = TBC_PHASE_ONE,
 						}),
 					},
-				}),
+				})),
 				q(1273, {	-- Questioning Reethe
 					["qg"] = 4983,	-- Ogron
 					["sourceQuest"] = 1269,	-- Lieutenant Paval Reethe
@@ -476,7 +595,7 @@ _.Zones =
 						i(6798),	-- Blasting Hackbut
 					},
 				}),
-				q(11140, applyclassicphase(TBC_PHASE_ONE, {	-- Recover the Cargo!
+				applyclassicphase(TBC_PHASE_ONE, q(11140, {	-- Recover the Cargo!
 					["qg"] = 23569,	-- Renn McGill <SI:7 Salvage Diver>
 					["sourceQuest"] = 11139,	-- Secondhand Diving Gear
 					["coord"] = { 63.7, 17.0, DUSTWALLOW_MARSH },
@@ -518,7 +637,7 @@ _.Zones =
 					},
 					["lvl"] = 30,
 				}),
-				q(11223, applyclassicphase(TBC_PHASE_ONE, {	-- Return to Jaina
+				applyclassicphase(TBC_PHASE_ONE, q(11223, {	-- Return to Jaina
 					["qg"] = 1748,	-- Highlord Bolvar Fordragon
 					["sourceQuest"] = 11222,	-- Warn Bolvar!
 					["coord"] = { 78.2, 18.1, STORMWIND_CITY },
@@ -561,7 +680,7 @@ _.Zones =
 					},
 					["lvl"] = 40,
 				}),
-				q(11139, {	-- Secondhand Diving Gear
+				applyclassicphase(TBC_PHASE_ONE, q(11139, {	-- Secondhand Diving Gear
 					["qg"] = 23569,	-- Renn McGill <SI:7 Salvage Diver>
 					["sourceQuest"] = 11138,	-- Renn McGill
 					["coord"] = { 63.7, 17.0, DUSTWALLOW_MARSH },
@@ -570,15 +689,13 @@ _.Zones =
 						{ "i", 33038, 1 },	-- Damaged Diving Gear
 						{ "i", 33039, 1 },	-- Tool Kit
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 32,
 					["groups"] = {
 						i(33038, {	-- Damaged Diving Gear
 							["coord"] = { 62.6, 18.2, DUSTWALLOW_MARSH },
-							["u"] = TBC_PHASE_ONE,
 						}),
 					},
-				}),
+				})),
 				q(7541, {	-- Service to the Horde
 					["qg"] = 4047,	-- Zor Lonetree
 					["sourceQuest"] = 1262,	-- Report to Zor
@@ -591,7 +708,21 @@ _.Zones =
 						i(18586),	-- Lonetree's Circle
 					},
 				}),
-				q(1218, {	-- Soothing Spices
+				q(11159, {	-- Spirits of Stonemaul Hold
+					["qg"] = 23579,	-- Brogg <Stonemaul Survivor>
+					["sourceQuest"] = 11161,	-- The Essence of Enmity
+					["coord"] = { 41.9, 74.0, DUSTWALLOW_MARSH },
+					["u"] = TBC_PHASE_ONE,
+					["lvl"] = 35,
+					["groups"] = {
+						objective(1, {	-- Stonemaul Spirits laid to rest
+							["provider"] = { "i", 33091 },	-- Energized Totem
+							["cr"] = 23786,	-- Stonemaul Spirit
+						}),
+					},
+				}),
+				-- #if BEFORE TBC
+				q(1218, {	-- Soothing Spices (Classic) / Marsh Frog Legs (TBC+)
 					["qg"] = 4792,	-- "Swamp Eye" Jarl
 					["coord"] = { 55.4, 26.2, DUSTWALLOW_MARSH },
 					["cost"] = {
@@ -602,6 +733,7 @@ _.Zones =
 						i(6807),	-- Frog Leg Stew
 					},
 				}),
+				-- #endif
 				q(1270, {	-- Stinky's Escape
 					["qg"] = 4880,	-- "Stinky" Ignatz
 					["coord"] = { 46.9, 17.5, DUSTWALLOW_MARSH },
@@ -646,32 +778,31 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
-				q(11212, {	-- Tabetha's Farm
+				applyclassicphase(TBC_PHASE_ONE, q(11149, {	-- Tabetha's Assistance
+					["qg"] = 23568,	-- Captain Darill
+					["sourceQuest"] = 11144,	-- Confirming the Suspicion
+					["coord"] = { 46.6, 24.6, DUSTWALLOW_MARSH },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 35,
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11212, {	-- Tabetha's Farm
 					["qg"] = 4921,	-- Guard Byron
 					["coord"] = { 66.2, 46.1, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 37,
-				}),
-				q(11198, {	-- Take Down Tethyr!
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11198, {	-- Take Down Tethyr!
 					["qg"] = 23905,	-- Major Mills
 					["sourceQuest"] = 11210,	-- Oh, It's Real
 					["coord"] = { 69.7, 51.2, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 30,
 					["groups"] = {
-						i(33228, {	-- Crimson Tunic
-							["u"] = TBC_PHASE_ONE,
-						}),
-						i(33253, {	-- Golden Helm
-							["u"] = TBC_PHASE_ONE,
-						}),
-						i(33247, {	-- Swift Wind Spaulders
-							["u"] = TBC_PHASE_ONE,
-						}),
+						i(33228),	-- Crimson Tunic
+						i(33253),	-- Golden Helm
+						i(33247),	-- Swift Wind Spaulders
 					},
-				}),
+				})),
 				q(1253, {	-- The Black Shield (1/3)
 					["provider"] = { "o", 20992 },	-- Black Shield
 					["coord"] = { 29.6, 48.5, DUSTWALLOW_MARSH },
@@ -783,25 +914,38 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
-				q(11134, {	-- The End of the Deserters
+				applyclassicphase(TBC_PHASE_ONE, q(11134, {	-- The End of the Deserters
 					["qg"] = 23566,	-- Calia Hastings <SI:7>
 					["sourceQuest"] = 11133,	-- Discrediting the Deserters
 					["coord"] = { 68.3, 51.0, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 32,
 					["groups"] = {
-						i(33232, {	-- Journeyman's Cowl
-							["u"] = TBC_PHASE_ONE,
-						}),
-						i(33249, {	-- Boots of the Skirmisher
-							["u"] = TBC_PHASE_ONE,
-						}),
-						i(33274, {	-- Mercenary's Crossbow
-							["u"] = TBC_PHASE_ONE,
+						i(33232),	-- Journeyman's Cowl
+						i(33249),	-- Boots of the Skirmisher
+						i(33274),	-- Mercenary's Crossbow
+					},
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11161, {	-- The Essence of Enmity
+					["qg"] = 23579,	-- Brogg <Stonemaul Survivor>
+					["coord"] = { 41.9, 74.0, DUSTWALLOW_MARSH },
+					["cost"] = {
+						{ "i", 33087, 10 },	-- Black Dragonkin Essence
+					},
+					["lvl"] = 35,
+					["groups"] = {
+						i(33087, {	-- Black Dragonkin Essence
+							["cost"] = {
+								{ "i", 33088, 1 },	-- Brogg's Totem
+							},
+							["crs"] = {
+								4331,	-- Firemane Ash Tail
+								4329,	-- Firemane Scout
+								4328,	-- Firemane Scalebane
+							},
 						}),
 					},
-				}),
+				})),
 				q(1955, {	-- The Exorcism
 					["qg"] = 6546,	-- Tabetha
 					["sourceQuest"] = 1954,	-- The Infernal Orb
@@ -810,14 +954,21 @@ _.Zones =
 					["cr"] = 6549,	-- Demon of the Orb
 					["lvl"] = 35,
 				}),
-				q(11177, {	-- The Hermit of Swamplight Manor
+				applyclassicphase(TBC_PHASE_ONE, q(11177, {	-- The Hermit of Swamplight Manor
 					["qg"] = 23835,	-- Sergeant Amelyn
 					["sourceQuest"] = 11134,	-- The End of the Deserters
 					["coord"] = { 68.3, 51.8, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
+					["isBreadcrumb"] = true,
 					["lvl"] = 30,
-				}),
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11225, {	-- The Hermit of Witch Hill
+					["qg"] = 4501,	-- Draz'Zilb
+					["coord"] = { 37.1, 33.1, DUSTWALLOW_MARSH },
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 30,
+				})),
 				q(1954, {	-- The Infernal Orb
 					["qg"] = 6546,	-- Tabetha
 					["sourceQuest"] = 1953,	-- Return to the Marsh
@@ -930,21 +1081,19 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
-				q(11191, {	-- This Old Lighthouse
+				applyclassicphase(TBC_PHASE_ONE, q(11191, {	-- This Old Lighthouse
 					["qg"] = 23835,	-- Sergeant Amelyn
 					["coord"] = { 68.3, 51.8, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 30,
-				}),
-				q(11126, {	-- Traitors Among Us
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11126, {	-- Traitors Among Us
 					["qg"] = 23566,	-- Calia Hastings <SI:7>
 					["coord"] = { 68.3, 51.0, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 32,
-				}),
-				q(11192, {	-- Thresher Oil
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11192, {	-- Thresher Oil
 					["qg"] = 23892,	-- Babs Fizzletorque
 					["sourceQuest"] = 11191,	-- This Old Lighthouse
 					["coord"] = { 72.1, 47.0, DUSTWALLOW_MARSH },
@@ -952,17 +1101,15 @@ _.Zones =
 					["cost"] = {
 						{ "i", 33126, 4 },	-- Thresher Oil
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 30,
-				}),
-				q(11222, {	-- Warn Bolvar!
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11222, {	-- Warn Bolvar!
 					["qg"] = 4968,	-- Lady Jaina Proudmoore <Ruler of Theramore>
 					["sourceQuest"] = 11142,	-- Survey Alcaz Island
 					["coord"] = { 66.3, 49.0, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 33,
-				}),
+				})),
 			}),
 		}),
 	}),
