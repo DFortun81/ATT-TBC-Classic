@@ -493,8 +493,9 @@ _.Zones =
 					["lvl"] = 20,
 				}),
 				q(10371, {	-- Yorus Barleybrew (Draenei)
-					["provider"] = { "n", 16771 },	-- Ahonan
+					["qg"] = 16771,	-- Ahonan
 					["coord"] = { 55.0, 83.4, THE_EXODAR },
+					["maps"] = { THE_EXODAR },
 					["timeline"] = { "removed 4.0.3.10000" },
 					["races"] = { DRAENEI },
 					["classes"] = { WARRIOR },
