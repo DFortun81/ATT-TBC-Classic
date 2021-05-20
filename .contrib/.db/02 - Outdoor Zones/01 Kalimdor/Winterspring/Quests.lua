@@ -155,7 +155,7 @@ _.Zones =
 						{ "i", 12623, 5 },	-- Chillwind Meat
 						{ "i", 12622, 5 },	-- Shardtooth Meat
 					},
-					["races"] - ALLIANCE_ONLY,
+					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 58,
 				}),

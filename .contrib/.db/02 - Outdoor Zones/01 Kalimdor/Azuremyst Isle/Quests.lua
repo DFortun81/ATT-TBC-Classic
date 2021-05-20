@@ -154,7 +154,7 @@ _.Zones =
 						i(23430),	-- Mercenary Sword
 						-- #if BEFORE CATA
 						recipe(71),		-- Defensive Stance
-						recipe(7386),	-- Sunder Armor
+						--recipe(7386),	-- Sunder Armor	[TODO: Users are reporting they can't collect this.]
 						recipe(355),	-- Taunt
 						-- #endif
 					},
