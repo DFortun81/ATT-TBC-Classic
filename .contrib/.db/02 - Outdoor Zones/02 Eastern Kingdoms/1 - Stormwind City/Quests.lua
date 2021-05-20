@@ -81,9 +81,7 @@ _.Zones =
 					["altQuests"] = {
 						1684,	-- Elanaria
 						1679,	-- Muren Stormpike
-						-- #if AFTER TBC
-						9289,	-- Warrior Training
-						-- #endif
+						1678,	-- Vejrek
 					},
 					["coords"] = {
 						{ 78.6, 45.6, STORMWIND_CITY },

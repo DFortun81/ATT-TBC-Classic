@@ -175,6 +175,7 @@ _.Zones =
 					["altQuests"] = {
 						1638,	-- A Warrior's Training
 						1679,	-- Muren Stormpike
+						1678,	-- Vejrek
 					},
 					["coords"] = {
 						{ 39.0, 43.4, DARKSHORE },

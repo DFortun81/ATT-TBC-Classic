@@ -276,8 +276,9 @@ _.Zones =
 				q(1679, {	-- Muren Stormpike
 					["qg"] = 1229,	-- Granis Swiftaxe <Warrior Trainer>
 					["altQuests"] = {
-						1684,	-- Elanaria
 						1638,	-- A Warrior's Training
+						1684,	-- Elanaria
+						1678,	-- Vejrek
 					},
 					["coord"] = { 47.2, 52.6, DUN_MOROGH },
 					["classes"] = { WARRIOR },

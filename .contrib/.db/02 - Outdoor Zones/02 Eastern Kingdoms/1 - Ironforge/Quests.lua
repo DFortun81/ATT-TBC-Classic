@@ -590,8 +590,8 @@ _.Zones =
 				q(1678, {	-- Vejrek
 					["qg"] = 6114,	-- Muren Stormpike
 					["sourceQuests"] = {
-						1684,	-- Elanaria
 						1638,	-- A Warrior's Training
+						1684,	-- Elanaria
 						1679,	-- Muren Stormpike
 					},
 					["coord"] = { 70.6, 90.4, IRONFORGE },
@@ -603,11 +603,10 @@ _.Zones =
 					},
 					["lvl"] = 10,
 					["groups"] = {
-						{
-							["itemID"] = 6799,	-- Vejrek
-							["cr"] = 6113,	-- Vejrek's Head
+						i(6799, {	-- Vejrek's Head
+							["cr"] = 6113,	-- Vejrek
 							["coord"] = { 27.8, 57.4, DUN_MOROGH },
-						},
+						}),
 					},
 				}),
 			}),

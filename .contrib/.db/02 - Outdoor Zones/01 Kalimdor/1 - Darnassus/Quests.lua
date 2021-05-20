@@ -287,13 +287,19 @@ _.Zones =
 					},
 				}),
 				q(1683, {	-- Vorlus Vilehoof
-					["lvl"] = 10,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 4088,	-- Elanaria
-					["classes"] = { WARRIOR },
-					["cost"] = {
-						{ "i", 6805, 1 } -- Horn of Vorlus
+					["sourceQuests"] = {
+						1638,	-- A Warrior's Training
+						1684,	-- Elanaria
+						1679,	-- Muren Stormpike
 					},
+					["coord"] = { 57.3, 34.6, DARNASSUS },
+					["classes"] = { WARRIOR },
+					["races"] = ALLIANCE_ONLY,
+					["cost"] = {
+						{ "i", 6805, 1 }, -- Horn of Vorlus
+					},
+					["lvl"] = 10,
 				}),
 				q(1693, {	-- Weapons of Elunite
 					["lvl"] = 10,

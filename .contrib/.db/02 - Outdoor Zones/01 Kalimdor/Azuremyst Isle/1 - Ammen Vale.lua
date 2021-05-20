@@ -393,10 +393,6 @@ _.Zones =
 						}),
 						q(9289,  {	-- Warrior Training
 							["qg"] = 16503,	-- Kore
-							["altQuests"] = {
-								1684,	-- Elanaria
-								1679,	-- Muren Stormpike
-							},
 							-- #if AFTER MOP
 							["coord"] = { 51.0, 43.8, AMMEN_VALE },
 							-- #else
