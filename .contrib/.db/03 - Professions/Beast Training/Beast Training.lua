@@ -1,3 +1,4 @@
+-- See Reference: https://www.wow-petopia.com/classic_bc/abilities.php
 profession(261, {	-- Beast Training
 	["classes"] = { HUNTER },
 	["lvl"] = 10,
@@ -69,6 +70,9 @@ profession(261, {	-- Beast Training
 				1133,	-- Starving Winter Wolf (Wolf, 8-9, Dun Morogh)
 				2000,	-- Webwood Silkspinner (Spider, 8-9, Teldrassil)
 				118,	-- Prowler (Wolf, 9-10, Elwynn Forest)
+				-- #if AFTER TBC
+				17199,	-- Ravager Specimen (Ravager, 9-10, Azuremyst Isle)
+				-- #endif
 				1555,	-- Vicious Night Web Spider (Spider, 9-10, Tirisfal Glades)
 				2960,	-- Prairie Wolf Alpha (Wolf, 9-10, Mulgore)
 				1195,	-- Forest Lurker (Spider, 10-11, Loch Modan)
@@ -90,6 +94,9 @@ profession(261, {	-- Beast Training
 			["crs"] = {
 				1923,	-- Bloodsnout Worg (Wolf, 16-17, Silverpine Forest)
 				4005,	-- Deepmoss Creeper (Spider, 16-17, Stonetalon Mountains)
+				-- #if AFTER TBC
+				16349,	-- Ghostclaw Ravager (Cat, 16-17, Ghostlands)
+				-- #endif
 				1185,	-- Wood Lurker (Spider, 17-18, Loch Modan)
 				8393,	-- Deviate Crocolisk (Crocolisk, 18-19, The Wailing Caverns)
 				14266,	-- Shanda the Spinner (Spider, 19, Loch Modan)
@@ -124,6 +131,7 @@ profession(261, {	-- Beast Training
 				3825,	-- Ghostpaw Alpha (Wolf, 27-28, Ashenvale)
 				3821,	-- Wildthorn Lurker (Spider, 28-29, Ashenvale)
 				2408,	-- Snapjaw (Turtle, 30-31, Hillsbrad Foothills)
+				14223,	-- Cranky Benj (Turtle, 32, Alterac Mountains)
 			},
 		},
 		{
@@ -133,14 +141,24 @@ profession(261, {	-- Beast Training
 			["crs"] = {
 				2563,	-- Plains Creeper (Spider, 32-33, Arathi Highlands)
 				4143,	-- Sparkleshell Snapper (Turtle, 34-35, Thousand Needles)
+				-- #if BEFORE TBC
 				4413,	-- Darkfang Spider (Spider, 35-36, Dustwallow Marsh)
+				-- #endif
 				2727,	-- Crag Coyote (Wolf, 35-36, Badlands)
 				4341,	-- Drywallow Crocolisk (Crocolisk, 35-36, Dustwallow Marsh)
+				-- #if AFTER TBC
+				4343,	-- Drywallow Snapper (Crocolisk, 37-38, Dustwallow Marsh)
+				-- #endif
 				2565,	-- Giant Plains Creeper (Spider, 35-36, Arathi Highlands)
+				-- #if BEFORE TBC
 				4396,	-- Mudrock Tortoise (Turtle, 36-37, Dustwallow Marsh)
 				4411,	-- Darkfang Lurker (Spider, 36-37, Dustwallow Marsh)
+				-- #endif
 				4344,	-- Mottled Drywallow Crocolisk (Crocolisk, 38-39, Dustwallow Marsh)
 				4412,	-- Darkfang Creeper (Spider, 38-39, Dustwallow Marsh)
+				-- #if AFTER TBC
+				2753,	-- Barnabus (Wolf, 38, Badlands)
+				-- #endif
 			},
 		},
 		{
@@ -148,7 +166,9 @@ profession(261, {	-- Beast Training
 			["rank"] = 6,
 			["lvl"] = 38,
 			["crs"] = {
+				-- #if BEFORE TBC
 				2753,	-- Barnabus (Wolf, 38, Badlands)
+				-- #endif
 				14233,	-- Ripscale (Crocolisk, 39, Dustwallow Marsh)
 				4345,	-- Drywallow Daggermaw (Crocolisk, 40-41, Dustwallow Marsh)
 				5286,	-- Longtooth Runner (Wolf, 40-41, Feralas)
@@ -176,6 +196,10 @@ profession(261, {	-- Beast Training
 				6585,	-- Uhk'loc (Gorilla, 52, Un'Goro Crater)
 				1817,	-- Diseased Wolf (Wolf, 53-54, Western Plaguelands)
 				1824,	-- Plague Lurker (Spider, 54-55, Western Plaguelands)
+				-- #if AFTER TBC
+				3581,	-- Sewer Beast (Crocolisk, 50, Stormwind City)
+				8213,	-- Ironback (Turtle, 51, The Hinterlands)
+				-- #endif
 			},
 		},
 		{
@@ -184,6 +208,12 @@ profession(261, {	-- Beast Training
 			["lvl"] = 56,
 			["crs"] = {
 				9696,	-- Bloodaxe Worg (Wolf, 56-57, Blackrock Spire)
+				-- #if AFTER TBC
+				11370,	-- Razzashi Broodwidow (Spider, 61, Zul'Gurub (Raid))
+				16934,	-- Quillfang Ravager (Ravager, 62-63, Hellfire Peninsula)
+				19350,	-- Thornfang Venomspitter (Ravager, 62-63, Hellfire Peninsula)
+				18466,	-- Dreadfang Lurker (Spider, 63-64, Terokkar Forest)
+				-- #endif
 			},
 		},
 		{
@@ -191,12 +221,11 @@ profession(261, {	-- Beast Training
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 9,
 			["lvl"] = 64,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				18467,	-- Dreadfang Widow (Spider, 64-65, Terokkar Forest)
+				21956,	-- Rema (Wolf, 66, Blade's Edge Mountains)
+				20634,	-- Scythetooth Raptor (Raptor, 68-69, Netherstorm)
 			},
-			]]--
 		},
 
 		{
@@ -288,6 +317,9 @@ profession(261, {	-- Beast Training
 			["rank"] = 2,
 			["lvl"] = 10,
 			["crs"] = {
+				-- #if AFTER TBC
+				15652,	-- Elder Springpaw (Cat, 8-9, Eversong Woods)
+				-- #endif
 				822,	-- Young Forest Bear (Bear, 8-9, Elwynn Forest)
 				1997,	-- Strigid Hunter (Owl, 8-9, Teldrassil)
 				3108,	-- Encrusted Surf Crawler (Crab, 9-10, Durotar)
@@ -298,6 +330,9 @@ profession(261, {	-- Beast Training
 				1778,	-- Ferocious Grizzled Bear (Bear, 11-12, Silverpine Forest)
 				1130,	-- Bjarn (Bear, 12, Dun Morogh)
 				2232,	-- Tide Crawler (Crab, 12-14, Darkshore)
+				-- #if AFTER TBC
+				16348,	-- Ghostclaw Lynx (Cat, 13-14, Ghostlands)
+				-- #endif
 			},
 		},
 		{
@@ -305,6 +340,9 @@ profession(261, {	-- Beast Training
 			["rank"] = 3,
 			["lvl"] = 16,
 			["crs"] = {
+				-- #if AFTER TBC
+				16349,	-- Ghostclaw Ravager (Cat, 16-17, Ghostlands)
+				-- #endif
 				1189,	-- Black Bear Patriarch (Bear, 16-17, Loch Modan)
 				1216,	-- Shore Crawler (Crab, 17-18, Westfall)
 				6788,	-- Den Mother (Bear, 18-19, Darkshore)
@@ -335,7 +373,6 @@ profession(261, {	-- Beast Training
 			["crs"] = {
 				4697,	-- Scorpashi Lasher (Scorpid, 34-35, Desolace)
 				5937,	-- Vile Sting (Scorpid, 35, Thousand Needles)
-				4343,	-- Drywallow Snapper (Crocolisk, 37-38, Dustwallow Marsh)
 				7022,	-- Venomlash Scorpid (Scorpid, 39-40, Uldaman)
 			},
 		},
@@ -376,6 +413,10 @@ profession(261, {	-- Beast Training
 			["crs"] = {
 				7456,	-- Winterspring Screecher (Owl, 57-59, Winterspring)
 				7445,	-- Elder Shardtooth (Bear, 57-58, Winterspring)
+				-- #if AFTER TBC
+				17039,	-- Male Kaliri Hatchling (Owl, 61, Hellfire Peninsula)
+				17034,	-- Female Kaliri Hatchling (Owl, 62, Hellfire Peninsula)
+				-- #endif
 			},
 		},
 		{
@@ -383,18 +424,21 @@ profession(261, {	-- Beast Training
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 9,
 			["lvl"] = 64,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				22100,	-- Scorpid Bonecrawler (Scorpid, 64-65, Terokkar Forest)
+				18220,	-- Ravenous Windroc (Owl, 65-66, Nagrand)
+				22265,	-- Shadowwing Owl (Owl, 66-67, Shadowmoon Valley)
+				17129,	-- Greater Windroc (Owl, 66-67, Nagrand)
+				18257,	-- Gutripper (Owl, 67, Nagrand)
+				20671,	-- Ripfang Lynx (Cat, 68-69, Netherstorm)
 			},
-			]]--
 		},
 		
 		{
 			["recipeID"] = 25076,	-- Cobra Reflexes [Rank 1]
 			["u"] = TBC_PHASE_ONE,
 			["lvl"] = 30,
+			["cr"] = 731,	-- King Bangalash (Cat, 43, Stranglethorn Vale)
 		},
 		
 		{
@@ -457,6 +501,9 @@ profession(261, {	-- Beast Training
 			["lvl"] = 50,
 			["crs"] = {
 				2522,	-- Jaguero Stalker (Cat, 50, Stranglethorn Vale)
+				-- #if AFTER TBC
+				8927,	-- Dark Screecher (Bat, 50-52, Blackrock Depths (Dungeon))
+				-- #endif
 				8600,	-- Plaguebat (Bat, 53-55, Eastern Plaguelands)
 				8601,	-- Noxious Plaguebat (Bat, 54-56, Eastern Plaguelands)
 			},
@@ -475,12 +522,11 @@ profession(261, {	-- Beast Training
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 7,
 			["lvl"] = 65,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				21022,	-- Grovestalker Lynx (Cat, 65-66, Blade's Edge Mountains)
+				20671,	-- Ripfang Lynx (Cat, 68-69, Netherstorm)
+				22807,	-- Lost Torranche (Tallstrider, 70, Terokkar Forest)
 			},
-			]]--
 		},
 
 		{
@@ -514,6 +560,9 @@ profession(261, {	-- Beast Training
 				2730,	-- Rabid Crag Coyote (Wolf, 42-43, Badlands)
 				8211,	-- Old Cliff Jumper (Wolf, 42, The Hinterlands)
 				1713,	-- Elder Shadowmaw Panther (Cat, 42-43, Stranglethorn Vale)
+				-- #if AFTER TBC
+				8208,	-- Murderous Blisterpaw (Hyena, 43, Tanaris)
+				-- #endif
 				731,	-- King Bangalash (Cat, 43, Stranglethorn Vale)
 				5426,	-- Blisterpaw Hyena (Hyena, 44-45, Tanaris)
 				5427,	-- Rabid Blisterpaw (Hyena, 47-48, Tanaris)
@@ -535,6 +584,12 @@ profession(261, {	-- Beast Training
 				7433,	-- Frostsaber Huntress (Cat, 58-59, Winterspring)
 				7432,	-- Frostsaber Stalker (Cat, 59-60, Winterspring)
 				11365,	-- Zulian Panther (Cat, 60, Zul'Gurub)
+				-- #if AFTER TBC
+				15067,	-- Zulian Stalker (Cat, 61, Zul'Gurub (Raid))
+				16932,	-- Razorfang Hatchling (Ravager, 59-60, Hellfire Peninsula)
+				22123,	-- Rip-Blade Ravager (Ravager, 63, Blade's Edge Mountains)
+				20634,	-- Scythetooth Raptor (Raptor, 68-69, Netherstorm)
+				-- #endif
 			},
 		},
 
@@ -543,7 +598,14 @@ profession(261, {	-- Beast Training
 			["rank"] = 1,
 			["lvl"] = 30,
 			["crs"] = {
+				-- #if AFTER TBC
+				4425,	-- Blind Hunter (Bat, 27, Razorfen Kraul (Dungeon))
+				4346,	-- Noxious Flayer (Wind Serpent, 35-36, Dustwallow Marsh)
+				4347,	-- Noxious Reaver (Wind Serpent, 37-38, Dustwallow Marsh)
+				4348,	-- Noxious Shredder (Wind Serpent, 38-39, Dustwallow Marsh)
+				-- #else
 				4538,	-- Kraul Bat (Bat, 30-31, Razorfen Kraul)
+				-- #endif
 				2578,	-- Young Mesa Buzzard (Carrion Bird, 31-32, Arathi Highlands)
 				4539,	-- Greater Kraul Bat (Bat, 32, Razorfen Kraul)
 				2579,	-- Mesa Buzzard (Carrion Bird, 34-35, Arathi Highlands)
@@ -583,6 +645,14 @@ profession(261, {	-- Beast Training
 				7455,	-- Winterspring Owl (Owl, 54-56, Winterspring)
 				2931,	-- Zaricotl (Carrion Bird, 55, Badlands)
 				7456,	-- Winterspring Screecher (Owl, 57-59, Winterspring)
+				-- #if AFTER TBC
+				17053,	-- Kaliri Swooper (Owl, 60, Hellfire Peninsula)
+				17128,	-- Windroc (Owl, 64-65, Nagrand)
+				19055,	-- Windroc Matriarch (Owl, 66, Nagrand)
+				22265,	-- Shadowwing Owl (Owl, 66-67, Shadowmoon Valley)
+				21042,	-- Dire Raven (Carrion Bird, 67-68, Blade's Edge Mountains)
+				21804,	-- Skettis Kaliri (Owl, 70, Terokkar Forest)
+				-- #endif
 			},
 		},
 		
@@ -591,24 +661,22 @@ profession(261, {	-- Beast Training
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 1,
 			["lvl"] = 1,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				15649,	-- Feral Dragonhawk Hatchling (Dragonhawk, 5-6, Eversong Woods)
+				15650,	-- Crazed Dragonhawk (Dragonhawk, 7-8, Eversong Woods)
 			},
-			]]--
 		},
 		{
 			["recipeID"] = 35323,	-- Fire Breath [Rank 2]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 2,
 			["lvl"] = 60,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				27946,	-- Silvermoon Dragonhawk (Dragonhawk, 65, Eversong Woods; Ghostlands)
+				20502,	-- Eclipsion Dragonhawk (Dragonhawk, 67-68, Shadowmoon Valley)
+				18155,	-- Bloodfalcon (Dragonhawk, 69-70, The Botanica (Dungeon))
+				20038,	-- Phoenix-Hawk Hatchling (Dragonhawk, 70, Tempest Keep: The Eye (Raid))
 			},
-			]]--
 		},
 
 		{
@@ -634,6 +702,7 @@ profession(261, {	-- Beast Training
 		{
 			["recipeID"] = 27351,	-- Fire Resistance [Rank 5]
 			["u"] = TBC_PHASE_ONE,
+			["cr"] = 21864,	-- Scorchshell Pincer (Scorpid, 68-69, Shadowmoon Valley)
 			["rank"] = 5,
 			["lvl"] = 60,
 		},
@@ -670,7 +739,9 @@ profession(261, {	-- Beast Training
 			["rank"] = 1,
 			["lvl"] = 10,
 			["crs"] = {
+				-- #if BEFORE TBC
 				2960,	-- Prairie Wolf Alpha (Wolf, 9-10, Mulgore)
+				-- #endif
 				1765,	-- Worg (Wolf, 10-11, Silverpine Forest)
 				833,	-- Coyote Packleader (Wolf, 11-12, Westfall)
 				10644,	-- Mist Howler (Wolf, 22, Ashenvale)
@@ -684,7 +755,9 @@ profession(261, {	-- Beast Training
 				1258,	-- Black Ravager Mastiff (Wolf, 25-26, Duskwood)
 				3825,	-- Ghostpaw Alpha (Wolf, 27-28, Ashenvale)
 				2729,	-- Elder Crag Coyote (Wolf, 39-40, Badlands)
+				-- #if BEFORE TBC
 				5287,	-- Longtooth Howler (Wolf, 43-44, Feralas)
+				-- #endif
 				2925,	-- Silvermane Howler (Wolf, 45-46, The Hinterlands)
 			},
 		},
@@ -695,6 +768,9 @@ profession(261, {	-- Beast Training
 			["crs"] = {
 				5286,	-- Longtooth Runner (Wolf, 40-41, Feralas)
 				5356,	-- Snarler (Wolf, 42, Feralas)
+				-- #if AFTER TBC
+				5287,	-- Longtooth Howler (Wolf, 43-44, Feralas)
+				-- #endif
 				2924,	-- Silvermane Wolf (Wolf, 43-44, The Hinterlands)
 				8959,	-- Felpaw Wolf (Wolf, 47-48, Felwood)
 				14339,	-- Death Howl (Wolf, 49, Felwood)
@@ -706,6 +782,13 @@ profession(261, {	-- Beast Training
 			["lvl"] = 56,
 			["crs"] = {
 				9696,	-- Bloodaxe Worg (Wolf, 56-57, Blackrock Spire)
+				-- #if AFTER TBC
+				18476,	-- Timber Worg (Wolf, 62-63, Terokkar Forest)
+				18033,	-- Dark Worg (Wolf, 64-65, Nagrand)
+				20058,	-- Bloodmaul Dire Wolf (Wolf, 65, Blade's Edge Mountains)
+				20330,	-- Bloodmaul Battle Worg (Wolf, 66-67, Blade's Edge Mountains)
+				21956,	-- Rema (Wolf, 66, Blade's Edge Mountains)
+				-- #endif
 			},
 		},
 		
@@ -714,108 +797,91 @@ profession(261, {	-- Beast Training
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 1,
 			["lvl"] = 1,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				1985,	-- Thistle Boar (Boar, 2-3, Teldrassil)
+				2966,	-- Battleboar (Boar, 3-4, Mulgore)
+				2954,	-- Bristleback Battleboar (Boar, 4-5, Mulgore)
+				3099,	-- Dire Mottled Boar (Boar, 6-7, Durotar)
+				1126,	-- Large Crag Boar (Boar, 6-7, Dun Morogh)
+				524,	-- Rockhide Boar (Boar, 7-8, Elwynn Forest)
 			},
-			]]--
 		},
 		{
 			["recipeID"] = 35291,	-- Gore [Rank 2]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 2,
 			["lvl"] = 8,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				3100,	-- Elder Mottled Boar (Boar, 8-9, Durotar)
+				17199,	-- Ravager Specimen (Ravager, 9-10, Azuremyst Isle)
+				3225,	-- Corrupted Mottled Boar (Boar, 10-11, Durotar)
+				1190,	-- Mountain Boar (Boar, 10-11, Loch Modan)
+				157,	-- Goretusk (Boar, 14-15, Westfall)
 			},
-			]]--
 		},
 		{
 			["recipeID"] = 35292,	-- Gore [Rank 3]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 3,
 			["lvl"] = 16,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				17527,	-- Enraged Ravager (Ravager, 16-17, Bloodmyst Isle)
+				1192,	-- Elder Mountain Boar (Boar, 16-17, Loch Modan)
+				547,	-- Great Goretusk (Boar, 16-17, Redridge Mountains; Westfall)
 			},
-			]]--
 		},
 		{
 			["recipeID"] = 35293,	-- Gore [Rank 4]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 4,
 			["lvl"] = 24,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				345,	-- Bellygrub (Boar, 24, Redridge Mountains)
 			},
-			]]--
 		},
-		{
+		-- #if AFTER TBC
+		un(NEVER_IMPLEMENTED, {	-- No known training sources.
 			["recipeID"] = 35294,	-- Gore [Rank 5]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 5,
 			["lvl"] = 32,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
-			["crs"] = {
-				,	-- 
-			},
-			]]--
-		},
-		{
+		}),
+		un(NEVER_IMPLEMENTED, {	-- No known training sources.
 			["recipeID"] = 35295,	-- Gore [Rank 6]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 6,
 			["lvl"] = 40,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
-			["crs"] = {
-				,	-- 
-			},
-			]]--
-		},
+		}),
+		-- #endif
 		{
 			["recipeID"] = 35296,	-- Gore [Rank 7]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 7,
 			["lvl"] = 48,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				5992,	-- Ashmane Boar (Boar, 48-49, Blasted Lands)
 			},
-			]]--
 		},
 		{
 			["recipeID"] = 35297,	-- Gore [Rank 8]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 8,
 			["lvl"] = 56,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				16117,	-- Plagued Swine (Boar, 60, Eastern Plaguelands)
+				19189,	-- Quillfang Skitterer (Ravager, 61-62, Hellfire Peninsula)
+				19349,	-- Thornfang Ravager (Ravager, 62-63, Hellfire Peninsula)
+				16934,	-- Quillfang Ravager (Ravager, 62-63, Hellfire Peninsula)
 			},
-			]]--
 		},
 		{
 			["recipeID"] = 35298,	-- Gore [Rank 9]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 9,
 			["lvl"] = 63,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				22123,	-- Rip-Blade Ravager (Ravager, 63, Blade's Edge Mountains)
 			},
-			]]--
 		},
 
 		{
@@ -917,11 +983,19 @@ profession(261, {	-- Beast Training
 			["lvl"] = 70,
 		},
 		
-		un(NEVER_IMPLEMENTED, {
+		{
 			["recipeID"] = 24844,	-- Lightning Breath [Rank 1]
+			-- #if AFTER TBC
+			["crs"] = {
+				20797,	-- Deviate Coiler Hatchling (Wind Serpent, 11, The Barrens)
+			},
+			-- #else
+			-- No known training sources. :(
+			["u"] = NEVER_IMPLEMENTED,
+			-- #endif
 			["rank"] = 1,
 			["lvl"] = 10,
-		}),
+		},
 		{
 			["recipeID"] = 25008,	-- Lightning Breath [Rank 2]
 			["rank"] = 2,
@@ -952,6 +1026,10 @@ profession(261, {	-- Beast Training
 			["rank"] = 4,
 			["lvl"] = 41,
 			["crs"] = {
+				-- #if AFTER TBC
+				4347,	-- Noxious Reaver (Wind Serpent, 37-38, Dustwallow Marsh)
+				4348,	-- Noxious Shredder (Wind Serpent, 38-39, Dustwallow Marsh)
+				-- #endif
 				5307,	-- Vale Screecher (Wind Serpent, 41-43, Feralas)
 				5308,	-- Rogue Vale Screecher (Wind Serpent, 44-46, Feralas)
 			},
@@ -973,6 +1051,13 @@ profession(261, {	-- Beast Training
 			["lvl"] = 60,
 			["crs"] = {
 				11357,	-- Son of Hakkar (Wind Serpent, 60, Zul'Gurub)
+				-- #if AFTER TBC
+				11359,	-- Soulflayer (Wind Serpent, 61, Zul'Gurub (Raid))
+				20749,	-- Scalewing Serpent (Wind Serpent, 66-67, Blade's Edge Mountains)
+				21123,	-- Felsworn Scalewing (Wind Serpent, 66-67, Blade's Edge Mountains)
+				19428,	-- Cobalt Serpent (Wind Serpent, 68-71, Sethekk Halls (Dungeon))
+				20673,	-- Swiftwing Shredder (Wind Serpent, 68-69, Netherstorm)
+				-- #endif
 			},
 		}),
 
@@ -1023,6 +1108,11 @@ profession(261, {	-- Beast Training
 		},
 		{
 			["recipeID"] = 24630,	-- Natural Armor [Rank 10]
+			-- #if AFTER TBC
+			["crs"] = {
+				22100,	-- Scorpid Bonecrawler (Scorpid, 64-65, Terokkar Forest)
+			},
+			-- #endif
 			["rank"] = 10,
 			["lvl"] = 60,
 		},
@@ -1065,36 +1155,33 @@ profession(261, {	-- Beast Training
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 1,
 			["lvl"] = 15,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				5048,	-- Deviate Adder (Serpent, 18-19, Wailing Caverns (Dungeon))
+				5755,	-- Deviate Viper (Serpent, 19-20, Wailing Caverns (Dungeon))
+				5762,	-- Deviate Moccasin (Serpent, 20-21, Wailing Caverns (Dungeon))
 			},
-			]]--
 		},
 		{
 			["recipeID"] = 35389,	-- Poison Spit [Rank 2]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 2,
 			["lvl"] = 45,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				7268,	-- Sandfury Guardian (Serpent, 45-46, Zul'Farrak (Dungeon))
+				5224,	-- Murk Slitherer (Serpent, 45-46, Swamp of Sorrows)
+				5225,	-- Murk Spitter (Serpent, 46-47, Swamp of Sorrows)
 			},
-			]]--
 		},
 		{
 			["recipeID"] = 35392,	-- Poison Spit [Rank 3]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 3,
 			["lvl"] = 60,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				11373,	-- Razzashi Cobra (Serpent, 60, Zul'Gurub (Raid))
+				11372,	-- Razzashi Adder (Serpent, 60, Zul'Gurub (Raid))
+				19784,	-- Coilskar Cobra (Serpent, 68, Shadowmoon Valley)
 			},
-			]]--
 		},
 		
 		{
@@ -1124,6 +1211,9 @@ profession(261, {	-- Beast Training
 			["crs"] = {
 				2522,	-- Jaguero Stalker (Cat, 50, Stranglethorn Vale)
 				7432,	-- Frostsaber Stalker (Cat, 59-60, Winterspring)
+				-- #if AFTER TBC
+				15067,	-- Zulian Stalker (Cat, 61, Zul'Gurub (Raid))
+				-- #endif
 			},
 		},
 		
@@ -1147,6 +1237,9 @@ profession(261, {	-- Beast Training
 				4696,	-- Scorpashi Snapper (Scorpid, 30-31, Desolace)
 				4140,	-- Scorpid Reaver (Scorpid, 31-32, Thousand Needles)
 				4139,	-- Scorpid Terror (Scorpid, 33-34, Thousand Needles)
+				-- #if AFTER TBC
+				4697,	-- Scorpashi Lasher (Scorpid, 34-35, Desolace)
+				-- #endif
 				7078,	-- Cleft Scorpid (Scorpid, 35-36, Uldaman)
 				5937,	-- Vile Sting (Scorpid, 35, Thousand Needles)
 				4699,	-- Scorpashi Venomlash (Scorpid, 38-39, Desolace)
@@ -1162,6 +1255,9 @@ profession(261, {	-- Beast Training
 				5423,	-- Scorpid Tail Lasher (Scorpid, 43-44, Tanaris)
 				7803,	-- Scorpid Duneburrower (Scorpid, 46-47, Tanaris)
 				5424,	-- Scorpid Dunestalker (Scorpid, 46-47, Tanaris)
+				-- #if AFTER TBC
+				5988,	-- Scorpok Stinger (Scorpid, 46-47, Blasted Lands)
+				-- #endif
 				8926,	-- Deep Stinger (Scorpid, 50-52, Blackrock Depths)
 				9691,	-- Venomtip Scorpid (Scorpid, 52-53, Burning Steppes)
 				9695,	-- Deathlash Scorpid (Scorpid, 54-55, Burning Steppes)
@@ -1184,12 +1280,10 @@ profession(261, {	-- Beast Training
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 5,
 			["lvl"] = 64,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				22100,	-- Scorpid Bonecrawler (Scorpid, 64-65, Terokkar Forest)
+				21864,	-- Scorchshell Pincer (Scorpid, 68-69, Shadowmoon Valley)
 			},
-			]]--
 		},
 		
 		{
@@ -1227,6 +1321,9 @@ profession(261, {	-- Beast Training
 			["crs"] = {
 				8602,	-- Monstrous Plaguebat (Bat, 56-58, Eastern Plaguelands)
 				7456,	-- Winterspring Screecher (Owl, 57-59, Winterspring)
+				-- #if AFTER TBC
+				17035,	-- Kaliri Matriarch (Owl, 63, Hellfire Peninsula)
+				-- #endif
 			},
 		},
 		{
@@ -1234,12 +1331,12 @@ profession(261, {	-- Beast Training
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 5,
 			["lvl"] = 64,
-			--[[
-			-- Crieve hasn't a clue where to find this information.
 			["crs"] = {
-				,	-- 
+				17129,	-- Greater Windroc (Owl, 66-67, Nagrand)
+				19055,	-- Windroc Matriarch (Owl, 66, Nagrand)
+				18257,	-- Gutripper (Owl, 67, Nagrand)
+				21042,	-- Dire Raven (Carrion Bird, 67-68, Blade's Edge Mountains)
 			},
-			]]--
 		},
 		
 		{
@@ -1279,6 +1376,10 @@ profession(261, {	-- Beast Training
 				4887,	-- Ghamoo-ra (Turtle, 25, Blackfathom Deeps)
 				4825,	-- Aku'mai Snapjaw (Turtle, 26-27, Blackfathom Deeps)
 				2408,	-- Snapjaw (Turtle, 30-31, Hillsbrad Foothills)
+				-- #if AFTER TBC
+				14223,	-- Cranky Benj (Turtle, 32, Alterac Mountains)
+				8213,	-- Ironback (Turtle, 51, The Hinterlands)
+				-- #endif
 			},
 		},
 		
@@ -1309,16 +1410,23 @@ profession(261, {	-- Beast Training
 				9622,	-- U'cha (Gorilla, 55, Un'Goro Crater)
 			},
 		},
-		{
+		un(NEVER_IMPLEMENTED, {
 			["recipeID"] = 27063,	-- Thunderstomp [Rank 4]
+			["description"] = "No known sources, contact Crieve if you find one!",
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 4,
 			["lvl"] = 60,
-		},
+		}),
 		
 		{
 			["recipeID"] = 35346,	-- Warp
 			["u"] = TBC_PHASE_ONE,
+			["crs"] = {
+				18464,	-- Warp Stalker (Warp Stalker, 63-64, Terokkar Forest)
+				18465,	-- Warp Hunter (Warp Stalker, 64-65, Terokkar Forest)
+				18884,	-- Warp Chaser (Warp Stalker, 67-68, Netherstorm)
+				23219,	-- Blackwind Warp Chaser (Warp Stalker, 69-70, Terokkar Forest)
+			},
 			["lvl"] = 60,
 		},
 	},
