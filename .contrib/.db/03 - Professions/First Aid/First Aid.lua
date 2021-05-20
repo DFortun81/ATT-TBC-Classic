@@ -22,31 +22,31 @@ profession(FIRST_AID, {
 		recipe(18630),	-- Heavy Runecloth Bandage
 		recipe(23787),	-- Powerful Anti-Venom
 	}),
-	tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
+	applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		recipe(27032),	-- Nethercloth Bandage
 		recipe(27033),	-- Heavy Nethercloth Bandage
 	})),
-	tier(3, applyclassicphase(WRATH_PHASE_ONE, {	-- Wrath of the Lich King
+	applyclassicphase(WRATH_PHASE_ONE, tier(3, {	-- Wrath of the Lich King
 		recipe(45545),	-- Frostweave Bandage
 		recipe(45546),	-- Heavy Frostweave Bandage
 	})),
-	tier(4, applyclassicphase(CATA_PHASE_ONE, {	-- Cataclysm
+	applyclassicphase(CATA_PHASE_ONE, tier(4, {	-- Cataclysm
 		recipe(74556),	-- Embersilk Bandage
 		recipe(74557),	-- Heavy Embersilk Bandage
 		recipe(74558),	-- Field Bandage: Dense Embersilk
 		recipe(88893),	-- Dense Embersilk Bandage
 	})),
-	tier(5, applyclassicphase(MOP_PHASE_ONE, {	-- Mists of Pandaria
+	applyclassicphase(MOP_PHASE_ONE, tier(5, {	-- Mists of Pandaria
 		recipe(102697),	-- Windwool Bandage
 		recipe(102698),	-- Heavy Windwool Bandage
 	})),
-	tier(6, applyclassicphase(WOD_PHASE_ONE, {	-- Warlords of Draenor
+	applyclassicphase(WOD_PHASE_ONE, tier(6, {	-- Warlords of Draenor
 		recipe(172539),	-- Antiseptic Bandage
 		recipe(172541),	-- Blackwater Anti-Venom
 		recipe(172542),	-- Fire Ammonite Oil
 		recipe(172540),	-- Healing Tonic
 	})),
-	tier(7, applyclassicphase(LEGION_PHASE_ONE, {	-- Legion
+	applyclassicphase(LEGION_PHASE_ONE, tier(7, {	-- Legion
 		recipe(202853),	-- Silkweave Bandage
 		recipe(202854),	-- Silkweave Splint
 		recipe(230047),	-- Feathered Luffa

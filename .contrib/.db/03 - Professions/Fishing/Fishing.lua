@@ -153,19 +153,6 @@ profession(FISHING, {
 				i(19972),	-- Lucky Fishing Hat
 			},
 		}),
-		un(NEVER_IMPLEMENTED, q(8226, {	-- Rare Fish - Pale Ghoulfish
-			["qg"] = 15079,	-- Fishbot 5000
-			["requireSkill"] = FISHING,
-			["coord"] = { 27.4, 76.9, STRANGLETHORN_VALE },
-			["maps"] = { STRANGLETHORN_VALE },
-			["repeatable"] = true,
-			["cost"] = {
-				{ "i", 19804, 1 },	-- Pale Ghoulfish
-			},
-			["g"] = {
-				un(NEVER_IMPLEMENTED, i(7996)),	-- Worn Fishing Hat
-			},
-		})),
 		q(1141, {	-- The Family and the Fishing Pole
 			["qg"] = 10216,	-- Gubber Blump
 			["description"] = "Talk to Gubber Blump after accepting the quest to learn Fishing. Buy a Fishing Pole for 23c and a Shiny Bauble for 50c from Gubber Blump. Start fishing next to Gubber Blump to catch the fish required for the quest.",

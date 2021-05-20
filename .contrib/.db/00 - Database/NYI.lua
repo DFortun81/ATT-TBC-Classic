@@ -92,6 +92,20 @@ _.NeverImplemented =
 	i(22729),	-- Schematic: Steam Tonk Controller [This doesn't get added until TBC]
 	-- #endif
 	
+	un(NEVER_IMPLEMENTED, q(8226, {	-- Rare Fish - Pale Ghoulfish
+		--["qg"] = 15079,	-- Fishbot 5000
+		["requireSkill"] = FISHING,
+		--["coord"] = { 27.4, 76.9, STRANGLETHORN_VALE },
+		--["maps"] = { STRANGLETHORN_VALE },
+		["repeatable"] = true,
+		["cost"] = {
+			{ "i", 19804, 1 },	-- Pale Ghoulfish
+		},
+		["g"] = {
+			un(NEVER_IMPLEMENTED, i(7996)),	-- Worn Fishing Hat
+		},
+	})),
+	
 	un(NEVER_IMPLEMENTED, {	-- Greater Holy Protection Potion
 		["recipeID"] = 17579,
 	}),

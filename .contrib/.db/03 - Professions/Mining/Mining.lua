@@ -57,7 +57,7 @@ profession(MINING, {
 			["recipeID"] = 10098
 		},
 	}),
-	tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
+	applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		{
 			["name"] = "Earth Shatter",
 			["recipeID"] = 35750,
@@ -96,7 +96,7 @@ profession(MINING, {
 			["recipeID"] = 29361,
 		}
 	})),
-	tier(3, applyclassicphase(WRATH_PHASE_ONE, {	-- Wrath of the Lich King
+	applyclassicphase(WRATH_PHASE_ONE, tier(3, {	-- Wrath of the Lich King
 		{
 			["name"] = "Smelt Cobalt",
 			["recipeID"] = 49252
@@ -114,7 +114,7 @@ profession(MINING, {
 			["recipeID"] = 55208
 		}
 	})),
-	tier(4, applyclassicphase(CATA_PHASE_ONE, {	-- Cataclysm
+	applyclassicphase(CATA_PHASE_ONE, tier(4, {	-- Cataclysm
 		{
 			["name"] = "Smelt Elementium",
 			["recipeID"] = 74530
@@ -132,7 +132,7 @@ profession(MINING, {
 			["recipeID"] = 74529
 		}
 	})),
-	tier(5, applyclassicphase(MOP_PHASE_ONE, {	-- Mists of Pandaria
+	applyclassicphase(MOP_PHASE_ONE, tier(5, {	-- Mists of Pandaria
 		{
 			["name"] = "Smelt Ghost Iron",
 			["recipeID"] = 102165
@@ -144,11 +144,11 @@ profession(MINING, {
 	})),
 	--[[
 	-- There were no new mining skills in WoD.
-	tier(6, applyclassicphase(WOD_PHASE_ONE, {	-- Warlords of Draenor
+	applyclassicphase(WOD_PHASE_ONE, tier(6, {	-- Warlords of Draenor
 		
 	})),
 	]]--
-	tier(7, applyclassicphase(LEGION_PHASE_ONE, {	-- Legion
+	applyclassicphase(LEGION_PHASE_ONE, tier(7, {	-- Legion
 		{
 			["name"] = "Empyrium Deposit",
 			["nextRecipeID"] = 247849,
@@ -294,7 +294,7 @@ profession(MINING, {
 			["recipeID"] = 184490
 		}
 	})),
-	tier(8, applyclassicphase(BFA_PHASE_ONE, {	-- Battle for Azeroth
+	applyclassicphase(BFA_PHASE_ONE, tier(8, {	-- Battle for Azeroth
 		{
 			["name"] = "Monelite Deposit",
 			["nextRecipeID"] = 253334,
