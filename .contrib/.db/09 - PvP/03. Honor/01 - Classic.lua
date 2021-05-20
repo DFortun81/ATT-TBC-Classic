@@ -27,40 +27,78 @@ _.PvP =
 						STORMWIND_CITY,
 					},
 					["races"] = ALLIANCE_ONLY,
+					-- #if AFTER TBC
+					["cost"] = {
+						{ "i", 20560, 1 },	-- Alterac Valley Mark of Honor
+						{ "i", 20559, 1 },	-- Arathi Basin Mark of Honor
+						{ "i", 29024, 1 },	-- Eye of the Storm Mark of Honor
+						{ "i", 20558, 1 },	-- Warsong Gulch Mark of Honor
+					},
+					-- #else
 					["cost"] = {
 						{ "i", 20560, 3 },	-- Alterac Valley Mark of Honor
 						{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
 						{ "i", 20558, 3 },	-- Warsong Gulch Mark of Honor
 					},
+					-- #endif
+					-- #if AFTER WRATH
+					["lvl"] = 61,
+					-- #elseif AFTER TBC
+					["lvl"] = 60,
+					-- #else
 					["lvl"] = 51,
+					-- #endif
 				}),
 				q(8385, {	-- Concerted Efforts
 					["qg"] = 15351,	-- Alliance Brigadier General
 					["sourceQuest"] = 8371,	-- Concerted Efforts
 					["coords"] = {
-						{ 39.4, 82.2, ALTERAC_MOUNTAINS },
-						{ 45.6, 45.8, ARATHI_HIGHLANDS },
-						{ 61.8, 83.8, ASHENVALE },
 						{ 57.8, 34.6, DARNASSUS },
 						{ 69.8, 90, IRONFORGE },
 						{ 79.4, 18, STORMWIND_CITY },
+						-- #if AFTER TBC
+						{ 67.4, 33.9, SHATTRATH_CITY },
+						-- #else
+						{ 39.4, 82.2, ALTERAC_MOUNTAINS },
+						{ 45.6, 45.8, ARATHI_HIGHLANDS },
+						{ 61.8, 83.8, ASHENVALE },
+						-- #endif
 					},
 					["maps"] = {
-						ALTERAC_MOUNTAINS,
-						ARATHI_HIGHLANDS,
-						ASHENVALE,
 						DARNASSUS,
 						IRONFORGE,
 						STORMWIND_CITY,
+						-- #if AFTER TBC
+						SHATTRATH_CITY,
+						-- #else
+						ALTERAC_MOUNTAINS,
+						ARATHI_HIGHLANDS,
+						ASHENVALE,
+						-- #endif
 					},
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
+					-- #if AFTER TBC
+					["cost"] = {
+						{ "i", 20560, 1 },	-- Alterac Valley Mark of Honor
+						{ "i", 20559, 1 },	-- Arathi Basin Mark of Honor
+						{ "i", 29024, 1 },	-- Eye of the Storm Mark of Honor
+						{ "i", 20558, 1 },	-- Warsong Gulch Mark of Honor
+					},
+					-- #else
 					["cost"] = {
 						{ "i", 20560, 3 },	-- Alterac Valley Mark of Honor
 						{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
 						{ "i", 20558, 3 },	-- Warsong Gulch Mark of Honor
 					},
+					-- #endif
+					-- #if AFTER WRATH
+					["lvl"] = 61,
+					-- #elseif AFTER TBC
+					["lvl"] = 60,
+					-- #else
 					["lvl"] = 51,
+					-- #endif
 				}),
 			}),
 			n(VENDORS, {
@@ -623,6 +661,108 @@ _.PvP =
 	n(-31, {	-- Horde
 		["races"] = HORDE_ONLY,
 		["groups"] = {
+			n(QUESTS, {
+				q(8367, {	-- For Great Honor
+					["qg"] = 15350,	-- Horde Warbringer
+					["coords"] = {
+						{ 79.8, 30.4, ORGRIMMAR },
+						{ 56.0, 76.7, THUNDER_BLUFF },
+						{ 60.7, 87.7, UNDERCITY },
+						-- #if AFTER TBC
+						{ 67.0, 56.6, SHATTRATH_CITY },
+						-- #else
+						{ 62.6, 59.1, ALTERAC_MOUNTAINS },
+						{ 73.5, 29.7, ARATHI_HIGHLANDS },
+						{ 46.7, 8.4, THE_BARRENS },
+						-- #endif
+					},
+					["maps"] = {
+						ORGRIMMAR,
+						THUNDER_BLUFF,
+						UNDERCITY,
+						-- #if AFTER TBC
+						SHATTRATH_CITY,
+						-- #else
+						ALTERAC_MOUNTAINS,
+						ARATHI_HIGHLANDS,
+						THE_BARRENS,
+						-- #endif
+					},
+					["races"] = HORDE_ONLY,
+					-- #if AFTER TBC
+					["cost"] = {
+						{ "i", 20560, 1 },	-- Alterac Valley Mark of Honor
+						{ "i", 20559, 1 },	-- Arathi Basin Mark of Honor
+						{ "i", 29024, 1 },	-- Eye of the Storm Mark of Honor
+						{ "i", 20558, 1 },	-- Warsong Gulch Mark of Honor
+					},
+					-- #else
+					["cost"] = {
+						{ "i", 20560, 3 },	-- Alterac Valley Mark of Honor
+						{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
+						{ "i", 20558, 3 },	-- Warsong Gulch Mark of Honor
+					},
+					-- #endif
+					-- #if AFTER WRATH
+					["lvl"] = 61,
+					-- #elseif AFTER TBC
+					["lvl"] = 60,
+					-- #else
+					["lvl"] = 51,
+					-- #endif
+				}),
+				q(8388, {	-- For Great Honor
+					["qg"] = 15350,	-- Horde Warbringer
+					["sourceQuest"] = 8367,	-- For Great Honor
+					["coords"] = {
+						{ 79.8, 30.4, ORGRIMMAR },
+						{ 56.0, 76.7, THUNDER_BLUFF },
+						{ 60.7, 87.7, UNDERCITY },
+						-- #if AFTER TBC
+						{ 67.0, 56.6, SHATTRATH_CITY },
+						-- #else
+						{ 62.6, 59.1, ALTERAC_MOUNTAINS },
+						{ 73.5, 29.7, ARATHI_HIGHLANDS },
+						{ 46.7, 8.4, THE_BARRENS },
+						-- #endif
+					},
+					["maps"] = {
+						ORGRIMMAR,
+						THUNDER_BLUFF,
+						UNDERCITY,
+						-- #if AFTER TBC
+						SHATTRATH_CITY,
+						-- #else
+						ALTERAC_MOUNTAINS,
+						ARATHI_HIGHLANDS,
+						THE_BARRENS,
+						-- #endif
+					},
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					-- #if AFTER TBC
+					["cost"] = {
+						{ "i", 20560, 1 },	-- Alterac Valley Mark of Honor
+						{ "i", 20559, 1 },	-- Arathi Basin Mark of Honor
+						{ "i", 29024, 1 },	-- Eye of the Storm Mark of Honor
+						{ "i", 20558, 1 },	-- Warsong Gulch Mark of Honor
+					},
+					-- #else
+					["cost"] = {
+						{ "i", 20560, 3 },	-- Alterac Valley Mark of Honor
+						{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
+						{ "i", 20558, 3 },	-- Warsong Gulch Mark of Honor
+					},
+					-- #endif
+					-- #if AFTER WRATH
+					["lvl"] = 61,
+					-- #elseif AFTER TBC
+					["lvl"] = 60,
+					-- #else
+					["lvl"] = 51,
+					-- #endif
+				}),
+			}),
 			n(VENDORS, {
 				n(12793, {	-- Brave Stonehide <Officer Accessories Quartermaster>
 					["description"] = "Found within the Champion's Hall in Orgrimmar.",
