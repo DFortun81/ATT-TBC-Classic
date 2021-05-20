@@ -50,6 +50,18 @@ _.Zones =
 					["coord"] = { 66.4, 51.4, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
+						applyclassicphase(TBC_PHASE_ONE, i(21941, {	-- Design: Black Pearl Panther
+							["timeline"] = { "added 2.5.1.38043" },
+							["spellID"] = 26875,	-- Black Pearl Panther
+							["requireSkill"] = JEWELCRAFTING,
+							["f"] = 200,
+						})),
+						applyclassicphase(TBC_PHASE_ONE, i(21943, {	-- Design: Truesilver Crab
+							["timeline"] = { "added 2.5.1.38043" },
+							["spellID"] = 26881,	-- Truesilver Crab
+							["requireSkill"] = JEWELCRAFTING,
+							["f"] = 200,
+						})),
 						i(5789),	-- Pattern: Murloc Scale Bracers
 						i(12233),	-- Recipe: Mystery Stew
 						i(12228),	-- Recipe: Roast Raptor

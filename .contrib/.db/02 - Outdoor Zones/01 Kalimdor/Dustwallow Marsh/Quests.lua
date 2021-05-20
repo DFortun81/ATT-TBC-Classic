@@ -153,6 +153,21 @@ _.Zones =
 					},
 					["lvl"] = 40,
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(11183, {	-- Cleansing Witch Hill
+					["qg"] = 23843,	-- Mordant Grimsby
+					["sourceQuest"] = 11181,	-- The Witch's Bane
+					["coord"] = { 55.6, 26.1, DUSTWALLOW_MARSH },
+					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- Witch Hill Cleansed
+							["provider"] = { "i", 33113 },	-- Witchbane Torch
+							["cr"] = 23864,	-- Zelfrax
+						}),
+						i(33229),	-- Mordant's Travel Tunic
+						i(33257),	-- Scaled Marshwalkers
+						i(33245),	-- Grimsby's Gaudy Girdle
+					},
+				})),
 				applyclassicphase(TBC_PHASE_ONE, q(11144, {	-- Confirming the Suspicion
 					["qg"] = 23568,	-- Captain Darill
 					["sourceQuest"] = 11143,	-- A Grim Connection
@@ -1068,6 +1083,15 @@ _.Zones =
 					},
 					["lvl"] = 30,
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(11181, {	-- The Witch's Bane
+					["qg"] = 23843,	-- Mordant Grimsby
+					["sourceQuest"] = 11180,	-- What's Haunting Witch Hill?
+					["coord"] = { 55.6, 26.1, DUSTWALLOW_MARSH },
+					["cost"] = {
+						{ "i", 33112, 9 },	-- Witchbane
+					},
+					["lvl"] = 30,
+				})),
 				q(1201, {	-- Theramore Spies
 					["qg"] = 4791,	-- Nazeer Bloodpike
 					["coord"] = { 35.2, 30.6, DUSTWALLOW_MARSH },
@@ -1109,6 +1133,16 @@ _.Zones =
 					["coord"] = { 66.3, 49.0, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 33,
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11180, {	-- What's Haunting Witch Hill?
+					["qg"] = 23843,	-- Mordant Grimsby
+					["coord"] = { 55.6, 26.1, DUSTWALLOW_MARSH },
+					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- Information Gathered
+							["cr"] = 23861,	-- Restless Apparition
+						}),
+					},
 				})),
 			}),
 		}),

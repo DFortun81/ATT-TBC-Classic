@@ -147,7 +147,6 @@ _.Zones =
 					["u"] = TBC_PHASE_ONE,
 				}),
 				i(33039, {	-- Tool Kit
-					["cr"] = 23589,	-- Defias Rummager
 					["coord"] = { 64.9, 26.9, DUSTWALLOW_MARSH },
 					["u"] = TBC_PHASE_ONE,
 				}),

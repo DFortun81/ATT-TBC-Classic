@@ -10,6 +10,12 @@ _.Zones =
 					["coord"] = { 44.6, 56.8, SWAMP_OF_SORROWS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
+						applyclassicphase(TBC_PHASE_ONE, i(21941, {	-- Design: Black Pearl Panther
+							["timeline"] = { "added 2.5.1.38043" },
+							["spellID"] = 26875,	-- Black Pearl Panther
+							["requireSkill"] = JEWELCRAFTING,
+							["f"] = 200,
+						})),
 						i(11223),	-- Formula: Enchant Bracer - Deflection
 						i(12232),	-- Recipe: Carrion Surprise
 						i(16111),	-- Recipe: Spiced Chili Crab
