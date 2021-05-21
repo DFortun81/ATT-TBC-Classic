@@ -170,22 +170,6 @@ _.Zones =
 					},
 					["lvl"] = 21,
 				}),
-				q(1301, {	-- James Hyal
-					["qg"] = 5081,	-- Connor Rivers
-					["coord"] = { 40.4, 91.6, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
-					["races"] = ALLIANCE_ONLY,
-					["isBreadcrumb"] = true,
-					["lvl"] = 30,
-				}),
-				q(1302, {	-- James Hyal
-					["qg"] = 5082,	-- Vincent Hyal
-					["sourceQuest"] = 1301,	-- James Hyal
-					["altQuests"] = { 1282 },	-- They Call Him Smiling Jim
-					["coord"] = { 10.8, 60.4, WETLANDS },
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = 30,
-				}),
 				q(290, {	-- Lifting the Curse
 					["qg"] = 1239,	-- First Mate Fitzsimmons
 					["sourceQuest"] = 289,	-- The Cursed Crew

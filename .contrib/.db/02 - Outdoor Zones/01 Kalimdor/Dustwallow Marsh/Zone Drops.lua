@@ -16,16 +16,6 @@ _.Zones =
 						4415,	-- Giant Darkfang Spider
 					},
 				}),
-				i(33071, {	-- Blackhoof Armaments
-					["crs"] = {
-						4341,	-- Drywallow Crocolisk
-						23592,	-- Grimtotem Breaker
-						23714,	-- Grimtotem Elder
-						23593,	-- Grimtotem Spirit-Shifter
-						4382,	-- Withervine Creeper
-					},
-					["u"] = TBC_PHASE_ONE,
-				}),
 				i(33085, {	-- Bloodfen Feather
 					["crs"] = {
 						4356,	-- Bloodfen Razormaw
@@ -90,6 +80,13 @@ _.Zones =
 					["cr"] = 23979,	-- Giant Marsh Frog
 					["u"] = TBC_PHASE_ONE,
 				}),
+				i(33103, {	-- Marsh Venom
+					["crs"] = {
+						4412,	-- Darkfang Creeper
+						4348,	-- Noxious Shredder
+					},
+					["u"] = TBC_PHASE_ONE,
+				}),
 				i(5847, {	-- Mirefin Head
 					["crs"] = {
 						14230,	-- Burgle Eye
@@ -123,6 +120,16 @@ _.Zones =
 						4391,	-- Swamp Ooze
 					},
 				}),
+				i(33114, {	-- Sealed Letter
+					["cr"] = 23881,	-- Apothecary Cylla
+					["races"] = ALLIANCE_ONLY,
+					["u"] = TBC_PHASE_ONE,
+				}),
+				i(33115, {	-- Sealed Letter
+					["cr"] = 23881,	-- Apothecary Cylla
+					["races"] = HORDE_ONLY,
+					["u"] = TBC_PHASE_ONE,
+				}),
 				i(5841, {	-- Searing Heart
 					["races"] = HORDE_ONLY,
 					["crs"] = {
@@ -136,10 +143,6 @@ _.Zones =
 						4323,	-- Searing Hatchling
 						4324,	-- Searing Whelp
 					},
-				}),
-				i(33086, {	-- Stonemaul Banner
-					["cr"] = 4328,	-- Firemane Scalebane
-					["u"] = TBC_PHASE_ONE,
 				}),
 				i(33126, {	-- Thresher Oil
 					["cr"] = 4388,	-- Young Murk Thresher
@@ -158,13 +161,6 @@ _.Zones =
 						4376,	-- Darkmist Spider
 						4380,	-- Darkmist Widow
 					},
-				}),
-				i(33175, {	-- Wyrmtail
-					["crs"] = {
-						4345,	-- Drywallow Daggermaw
-						4324,	-- Searing Whelp
-					},
-					["u"] = TBC_PHASE_ONE,
 				}),
 			}),
 		}),

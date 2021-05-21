@@ -9,6 +9,14 @@ _.Zones =
 				i(1493, {	-- Heavy Marauder Scimitar
 					["cr"] = 4099,	-- Galak Marauder
 				}),
+				i(5809, {	-- Highperch Venom Sac
+					["crs"] = {
+						5934,	-- Heartrazor
+						4109,	-- Highperch Consort
+						4110,	-- Highperch Patriarch
+						4107,	-- Highperch Wyvern
+					},
+				}),
 			}),
 		}),
 	}),

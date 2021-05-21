@@ -888,6 +888,8 @@ local IgnoreErrorQuests = {
 	[9522]=1,	-- Never Again! [Alliance]
 	[9536]=1,	-- Never Again! [Horde]
 	[10371]=1,	-- Yorus Barleybrew (Draenei)
+	[11185]=1,	-- The Apothecary's Letter
+	[11186]=1,	-- Signs of Treachery?
 };
 local CompletedQuests = setmetatable({}, {__newindex = function (t, key, value)
 	if value then
@@ -5464,7 +5466,7 @@ local fields = {
 		return t.parent.repeatable;
 	end,
 	["collectible"] = function(t)
-		return false;
+		return C_QuestLog.IsOnQuest(t.questID);
 	end,
 	["trackable"] = function(t)
 		return true;
@@ -5524,6 +5526,15 @@ app.CompareQuestieDB = function()
 	else
 		print("Error: Questie not available. Please enable it!");
 	end
+end
+
+app:RegisterEvent("QUEST_WATCH_UPDATE");
+app:RegisterEvent("BAG_NEW_ITEMS_UPDATED");
+app.events.QUEST_WATCH_UPDATE = function(questID)
+	wipe(searchCache);
+end
+app.events.BAG_NEW_ITEMS_UPDATED = function(questID)
+	wipe(searchCache);
 end
 end)();
 

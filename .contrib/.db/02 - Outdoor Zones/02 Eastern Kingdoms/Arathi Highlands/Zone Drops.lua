@@ -20,6 +20,13 @@ _.Zones =
 						2587,	-- Syndicate Pathstalker
 					},
 				}),
+				i(7272, {	-- Bolt Charged Bramble
+					["coord"] = { 52, 51, ARATHI_HIGHLANDS },
+					["classes"] = { MAGE },
+					["cost"] = {
+						{ "i", 7273, 10 },	-- Witherbark Totem Stick
+					},
+				}),
 				i(4479, {	-- Burning Charm
 					["questID"] = 1714,	-- Essence of the Exile
 					["classes"] = { WARRIOR },
@@ -171,7 +178,19 @@ _.Zones =
 					["cr"] = 2555,	-- Witherbark Witch Doctor
 					["races"] = ALLIANCE_ONLY,
 				}),
-
+				i(7273, {	-- Witherbark Totem Stick
+					["classes"] = { MAGE },
+					["crs"] = {
+						2554,	-- Witherbark Axe Thrower
+						2558,	-- Witherbark Berserker
+						2556,	-- Witherbark Headhunter
+						2557,	-- Witherbark Shadow Hunter
+						2553,	-- Witherbark Shadowcaster
+						2552,	-- Witherbark Troll
+						2555,	-- Witherbark Witch Doctor
+						2605,	-- Zalas Witherbark <Warband Leader>
+					},
+				}),
 				i(4503, {	-- Witherbark Tusk
 					["questID"] = 691,	-- Worth Its Weight in Gold
 					["races"] = ALLIANCE_ONLY,

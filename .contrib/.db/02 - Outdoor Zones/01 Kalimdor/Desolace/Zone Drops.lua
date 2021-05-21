@@ -11,15 +11,6 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["cr"] = 4700,	-- Aged Kodo
 				}),
-				i(6248, {	-- Scorpashi Venom
-					["questID"] = 1459,	-- Reagents for Reclaimers Inc. (2/4)
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						4697,	-- Scorpashi Lasher
-						4696,	-- Scorpashi Snapper
-						4699,	-- Scorpashi Venomlash
-					},
-				}),
 				i(2620, {	-- Augural Shroud
 					["cr"] = 4684,	-- Nether Sorceress
 				}),
@@ -103,6 +94,10 @@ _.Zones =
 						14225,	-- Prince Kellen
 					},
 				}),
+				i(7291, {	-- Infernal Orb
+					["cr"] = 4668,	-- Burning Blade Summoner
+					["coord"] = { 55.0, 77.8, DESOLACE },
+				}),
 				i(6245, {	-- Karnitol's Satchel
 					["questID"] = 1456,	-- The Karnitol Shipwreck (3/4)
 					["races"] = ALLIANCE_ONLY,
@@ -144,6 +139,15 @@ _.Zones =
 					["crs"] = {
 						11562,	-- Drysnap Crawler
 						11563,	-- Drysnap Pincer
+					},
+				}),
+				i(6248, {	-- Scorpashi Venom
+					["questID"] = 1459,	-- Reagents for Reclaimers Inc. (2/4)
+					["races"] = ALLIANCE_ONLY,
+					["crs"] = {
+						4697,	-- Scorpashi Lasher
+						4696,	-- Scorpashi Snapper
+						4699,	-- Scorpashi Venomlash
 					},
 				}),
 				o(176582, {	-- Shellfish Trap

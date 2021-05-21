@@ -479,12 +479,6 @@ _.Zones =
 						{ "i", 7291, 1 },	-- 	Infernal Orb
 					},
 					["lvl"] = 35,
-					["groups"] = {
-						i(7291, {	-- Infernal Orb
-							["cr"] = 4668,	-- Burning Blade Summoner
-							["coord"] = { 55.0, 77.8, DESOLACE },
-						}),
-					},
 				}),
 				q(898, {	-- Free From the Hold
 					["qg"] = 3465,	-- Gilthares Firebough

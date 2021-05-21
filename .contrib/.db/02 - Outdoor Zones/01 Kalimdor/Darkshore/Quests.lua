@@ -385,6 +385,22 @@ _.Zones =
 						i(5996),	-- Elixir of Water Breathing
 					},
 				}),
+				-- #if AFTER TBC
+				q(1135, {	-- Highperch Venom
+					-- This quest was moved to Darkshore after TBC Prepatch.
+					["qg"] = 4456,	-- Fiora Longears
+					["coord"] = { 33.8, 42.4, DARKSHORE },
+					["maps"] = { THOUSAND_NEEDLES },
+					["races"] = ALLIANCE_ONLY,
+					["cost"] = {
+						{ "i", 5809, 10 },	-- Highperch Venom Sac
+					},
+					["lvl"] = 25,
+					["groups"] = {
+						i(6719),	-- Windborne Belt
+					},
+				}),
+				-- #endif
 				q(984, {	-- How Big a Threat? (1/2)
 					["qg"] = 3693,	-- Terenthis
 					["coord"] = { 39.4, 43.5, DARKSHORE },
@@ -398,6 +414,17 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 10,
 				}),
+				-- #if BEFORE TBC
+				q(1133, {	-- Journey to Astranaar
+					-- This quest was moved to Darkshore after TBC Prepatch.
+					["qg"] = 4456,	-- Fiora Longears
+					["sourceQuest"] = 1132,	-- Fiora Longears
+					["coord"] = { 33.8, 42.4, DARKSHORE },
+					["maps"] = { ASHENVALE },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 18,
+				}),
+				-- #endif
 				q(951, {	-- Mathystra Relics
 					["qg"] = 3616,	-- Onu
 					["sourceQuest"] = 950,	-- Return to Onu

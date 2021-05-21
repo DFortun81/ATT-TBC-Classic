@@ -750,6 +750,18 @@ _.Zones =
 					},
 					["lvl"] = 30,
 				}),
+				q(7541, {	-- Service to the Horde
+					["qg"] = 4047,	-- Zor Lonetree
+					["sourceQuest"] = 1262,	-- Report to Zor
+					["coord"] = { 39, 38, ORGRIMMAR },
+					["maps"] = { ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 30,
+					["groups"] = {
+						i(18585),	-- Band of Allegiance
+						i(18586),	-- Lonetree's Circle
+					},
+				}),
 				q(605, {	-- Singing Blue Shards
 					["qg"] = 2498,	-- Crank Fizzlebub
 					["coord"] = { 27.12, 77.22, STRANGLETHORN_VALE },

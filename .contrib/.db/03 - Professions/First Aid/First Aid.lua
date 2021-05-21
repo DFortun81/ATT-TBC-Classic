@@ -100,7 +100,7 @@ profession(FIRST_AID, {
 			["lvl"] = lvlsquish(35, 15, 35),
 			["groups"] = {
 				i(49193, {	-- Alliance Trauma Certification
-					["timeline"] = { "timeline 3.2.0.10192" },
+					["timeline"] = { "added 3.2.0.10192" },
 				}),
 			},
 		}),
@@ -123,7 +123,7 @@ profession(FIRST_AID, {
 			["lvl"] = lvlsquish(35, 15, 35),
 			["groups"] = {
 				i(49192, {	-- Horde Trauma Certification
-					["timeline"] = { "timeline 3.2.0.10192" },
+					["timeline"] = { "added 3.2.0.10192" },
 				}),
 			},
 		}),
