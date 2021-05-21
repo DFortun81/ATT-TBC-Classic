@@ -890,6 +890,12 @@ local IgnoreErrorQuests = {
 	[10371]=1,	-- Yorus Barleybrew (Draenei)
 	[11185]=1,	-- The Apothecary's Letter
 	[11186]=1,	-- Signs of Treachery?
+	[11201]=1,	-- The Grimtotem Plot
+	[11123]=1,	-- Inspecting the Ruins [Alliance]
+	[11124]=1,	-- Inspecting the Ruins [Horde]
+	[11150]=1,	-- Raze Direhorn Post! [Alliance]
+	[11205]=1,	-- Raze Direhorn Post! [Horde]
+	[11215]=1,	-- Help Mudsprocket
 };
 local CompletedQuests = setmetatable({}, {__newindex = function (t, key, value)
 	if value then

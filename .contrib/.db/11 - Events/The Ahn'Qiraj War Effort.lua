@@ -753,6 +753,15 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 10,
 					}),
+					-- #if AFTER TBC
+					-- They added this War Effort Quest after the TBC Prepatch... long after the event was over. Why though?
+					applyclassicphase(TBC_PHASE_ONE, q(10501, {	-- The Alliance Needs Your Help! [The Exodar]
+						["qg"] = 21156,	-- Master Sergeant Thelaana <War Effort Recruiter>
+						["isBreadcrumb"] = true,
+						["races"] = ALLIANCE_ONLY,
+						["lvl"] = 10,
+					})),
+					-- #endif
 				},
 			}),
 			n(-31, {	-- Horde
@@ -1498,6 +1507,15 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 10,
 					}),
+					-- #if AFTER TBC
+					-- They added this War Effort Quest after the TBC Prepatch... long after the event was over. Why though?
+					applyclassicphase(TBC_PHASE_ONE, q(10500, {	-- The Horde Needs Your Help! [Silvermoon City]
+						["qg"] = 21155,	-- Senior Sergeant Eveningshade <War Effort Recruiter>
+						["isBreadcrumb"] = true,
+						["races"] = HORDE_ONLY,
+						["lvl"] = 10,
+					})),
+					-- #endif
 				},
 			}),
 			n(REWARDS, {

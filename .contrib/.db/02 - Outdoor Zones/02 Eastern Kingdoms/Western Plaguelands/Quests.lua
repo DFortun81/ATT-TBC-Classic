@@ -6,7 +6,7 @@ _.Zones =
 	m(EASTERN_KINGDOMS, {
 		m(WESTERN_PLAGUELANDS, {
 			n(QUESTS, {
-				q(5066, {	-- A Call to Arms: The Plaguelands!
+				q(5066, {	-- A Call to Arms: The Plaguelands! [Stormwind City]
 					["qg"] = 2198,	-- Crier Goodman
 					["coord"] = { 54.8, 62.6, STORMWIND_CITY },
 					["maps"] = { STORMWIND_CITY },
@@ -14,7 +14,7 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
 				}),
-				q(5090, {	-- A Call to Arms: The Plaguelands!
+				q(5090, {	-- A Call to Arms: The Plaguelands! [Ironforge]
 					["qg"] = 10877,	-- Courier Hammerfall
 					["coord"] = { 31.6, 67, IRONFORGE },
 					["maps"] = { IRONFORGE },
@@ -22,7 +22,7 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
 				}),
-				q(5091, {	-- A Call to Arms: The Plaguelands!
+				q(5091, {	-- A Call to Arms: The Plaguelands! [Darnassus]
 					["qg"] = 10878,	-- Herald Moonstalker
 					["coord"] = { 36.4, 39.8, DARNASSUS },
 					["maps"] = { DARNASSUS },
@@ -30,7 +30,15 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
 				}),
-				q(5093, {	-- A Call to Arms: The Plaguelands!
+				applyclassicphase(TBC_PHASE_ONE, q(10373, {	-- A Call to Arms: The Plaguelands! [The Exodar]
+					["qg"] = 20722,	-- Herald Bran'daan
+					["coord"] = { 55.4, 47.2, THE_EXODAR },
+					["maps"] = { THE_EXODAR },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 50,
+				})),
+				q(5093, {	-- A Call to Arms: The Plaguelands! [Orgrimmar]
 					["qg"] = 10880,	-- Warcaller Gorlach
 					["coord"] = { 46.6, 64.6, ORGRIMMAR },
 					["maps"] = { ORGRIMMAR },
@@ -38,7 +46,7 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
 				}),
-				q(5094, {	-- A Call to Arms: The Plaguelands!
+				q(5094, {	-- A Call to Arms: The Plaguelands! [Undercity]
 					["qg"] = 10879,	-- Harbinger Balthazad
 					["coord"] = { 64, 44, UNDERCITY },
 					["maps"] = { UNDERCITY },
@@ -46,7 +54,7 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
 				}),
-				q(5095, {	-- A Call to Arms: The Plaguelands!
+				q(5095, {	-- A Call to Arms: The Plaguelands! [Thunder Bluff]
 					["qg"] = 10881,	-- Bluff Runner Windstrider
 					["coord"] = { 41.4, 54.2, THUNDER_BLUFF },
 					["maps"] = { THUNDER_BLUFF },
@@ -54,6 +62,14 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(10374, {	-- A Call to Arms: The Plaguelands! [Silvermoon City]
+					["qg"] = 20724,	-- Herald Amorlin
+					["coord"] = { 59.3, 64.7, SILVERMOON_CITY },
+					["maps"] = { SILVERMOON_CITY },
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 50,
+				})),
 				q(4971, {	-- A Matter of Time
 					["qg"] = 10667,	-- Chromie
 					["coord"] = { 39.4, 66.8, WESTERN_PLAGUELANDS },
@@ -293,9 +309,12 @@ _.Zones =
 				q(5092, {	-- Clear the Way
 					["qg"] = 10838,	-- Commander Ashlam Valorfist
 					["sourceQuests"] = {
-						5066,	-- A Call to Arms: The Plaguelands!
-						5090,	-- A Call to Arms: The Plaguelands!
-						5091,	-- A Call to Arms: The Plaguelands!
+						5066,	-- A Call to Arms: The Plaguelands! [Stormwind City]
+						5090,	-- A Call to Arms: The Plaguelands! [Ironforge]
+						5091,	-- A Call to Arms: The Plaguelands! [Darnassus]
+						-- #if AFTER TBC
+						10373,	-- A Call to Arms: The Plaguelands! [The Exodar]
+						-- #endif
 					},
 					["coord"] = { 42.7, 84.1, WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
@@ -709,9 +728,12 @@ _.Zones =
 				q(5096, {	-- Scarlet Diversions
 					["qg"] = 10837,	-- High Executor Derrington
 					["sourceQuests"] = {
-						5093,	-- A Call to Arms: The Plaguelands!
-						5094,	-- A Call to Arms: The Plaguelands!
-						5095,	-- A Call to Arms: The Plaguelands!
+						5093,	-- A Call to Arms: The Plaguelands! [Orgrimmar]
+						5094,	-- A Call to Arms: The Plaguelands! [Undercity]
+						5095,	-- A Call to Arms: The Plaguelands! [Thunder Bluff]
+						-- #if AFTER TBC
+						10374,	-- A Call to Arms: The Plaguelands! [Silvermoon City]
+						-- #endif
 					},
 					["coord"] = { 83.0, 69.0, TIRISFAL_GLADES },
 					["maps"] = { TIRISFAL_GLADES },

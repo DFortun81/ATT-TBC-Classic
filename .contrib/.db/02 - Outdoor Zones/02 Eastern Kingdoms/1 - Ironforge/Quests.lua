@@ -281,17 +281,6 @@ _.Zones =
 						i(18042),	-- Thorium Headed Arrow
 					},
 				}),
-				q(3790, {	-- Assisting Arch Druid Staghelm
-					["qg"] = 5111,	-- Innkeeper Firebrew
-					["coord"] = { 18.1, 51.5, IRONFORGE },
-					["races"] = ALLIANCE_ONLY,
-					["isBreadcrumb"] = true,
-					["altQuests"] = {
-						3763, -- Assisting Arch Druid Staghelm (Darnassus)
-						3789, -- Assisting Arch Druid Staghelm (Stormwind)
-					},
-					["lvl"] = 47,
-				}),
 				q(3201, {	-- At Last!
 					["qg"] = 8256,	-- Curator Thorius
 					["sourceQuest"] = 3182,	-- Proof of Deed

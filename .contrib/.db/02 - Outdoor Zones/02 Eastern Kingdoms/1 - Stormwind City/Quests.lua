@@ -150,16 +150,6 @@ _.Zones =
 						},
 					},
 				}),
-				q(3789, {	-- Assisting Arch Druid Staghelm
-					["qg"] = 6740,	-- Innkeeper Allison
-					["races"] = ALLIANCE_ONLY,
-					["isBreadcrumb"] = true,
-					["altQuests"] = {
-						3790,	-- Assisting Arch Druid Staghelm (Ironforge)
-						3763,	-- Assisting Arch Druid Staghelm (Darnassus)
-					},
-					["lvl"] = 47,
-				}),
 				q(1942, {	-- Astral Knot Garment
 					["qg"] = 1309,	-- Wynne Larson <Robe Merchant>
 					["sourceQuest"] = 1940,	-- Pristine Spider Silk

@@ -414,7 +414,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 10,
 				}),
-				-- #if BEFORE TBC
+				-- #if AFTER TBC
 				q(1133, {	-- Journey to Astranaar
 					-- This quest was moved to Darkshore after TBC Prepatch.
 					["qg"] = 4456,	-- Fiora Longears
