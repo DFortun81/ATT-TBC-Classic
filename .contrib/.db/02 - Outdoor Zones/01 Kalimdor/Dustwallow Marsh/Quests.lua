@@ -142,17 +142,6 @@ _.Zones =
 						i(33256),	-- Refitted Bruiser Gauntlets
 					},
 				})),
-				q(4961, {	-- Cleansing of the Orb of Orahil
-					["qg"] = 6546,	-- Tabetha
-					["sourceQuest"] = 1799,	-- Fragments of the Orb of Orahil
-					["coord"] = { 46, 57, DUSTWALLOW_MARSH },
-					["classes"] = { WARLOCK },
-					["cr"] = 6549,	-- Demon of the Orb
-					["cost"] = {
-						{ "i", 12642, 1 },	-- Cleansed Infernal Orb
-					},
-					["lvl"] = 40,
-				}),
 				applyclassicphase(TBC_PHASE_ONE, q(11183, {	-- Cleansing Witch Hill
 					["qg"] = 23843,	-- Mordant Grimsby
 					["sourceQuest"] = 11181,	-- The Witch's Bane
@@ -177,6 +166,24 @@ _.Zones =
 					},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 33,
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11174, {	-- Corrosion Prevention
+					["qg"] = 23797,	-- Moxie Steelgrille
+					["sourceQuest"] = 11172,	-- The Zeppelin Crash
+					["coord"] = { 53.6, 56.9, DUSTWALLOW_MARSH },
+					["lvl"] = 35,
+					["groups"] = {
+						objective(1, {	-- 0/10 Oozes Dissolved
+							["provider"] = { "i", 33108 },	-- Ooze Buster
+							["crs"] = {
+								4393,	-- Acidic Swamp Ooze
+								4394,	-- Bubbling Swamp Ooze
+							},
+						}),
+						i(33233),	-- Cobalt-threaded Gloves
+						i(33239),	-- Marshwarden's Tunic
+						i(33255),	-- Rustproof Waistguard
+					},
 				})),
 				q(1285, {	-- Daelin's Men
 					["qg"] = 4948,	-- Adjutant Tesoran
@@ -205,12 +212,10 @@ _.Zones =
 					},
 					["lvl"] = 35,
 					["groups"] = {
-						{
-							["itemID"] = 5945,	-- Deadmire's Tooth
-							["questID"] = 1205,	-- Deadmire
+						i(5945, {	-- Deadmire's Tooth
 							["cr"] = 4841,	-- Deadmire
 							["coord"] = { 47.6, 56.6, DUSTWALLOW_MARSH },
-						},
+						}),
 					},
 				}),
 				applyclassicphase(TBC_PHASE_ONE, q(11137, {	-- Defias in Dustwallow?
@@ -227,6 +232,16 @@ _.Zones =
 							["cr"] = 23679,	-- Garn Mathers
 							["coord"] = { 64.9, 27.3, DUSTWALLOW_MARSH },
 						}),
+					},
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11156, {	-- Direhorn Raiders
+					["qg"] = 23600,	-- Apprentice Morlann <Tabetha's Apprentice>
+					["coord"] = { 46.1, 57.4, DUSTWALLOW_MARSH },
+					["lvl"] = 35,
+					["groups"] = {
+						i(33240),	-- Grimtotem Earthbinder's Tunic
+						i(33262),	-- Morlann's Seal
+						i(33261),	-- Destroyer's Cloak
 					},
 				})),
 				applyclassicphase(TBC_PHASE_ONE, q(11133, {	-- Discrediting the Deserters
@@ -685,16 +700,6 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 35,
 				}),
-				q(4976, {	-- Returning the Cleansed Orb
-					["qg"] = 6546,	-- Tabetha
-					["sourceQuest"] = 4961,	-- Cleansing of the Orb of Orahil
-					["coord"] = { 46, 57, DUSTWALLOW_MARSH },
-					["classes"] = { WARLOCK },
-					["cost"] = {
-						{ "i", 12642, 1 },	-- Cleansed Infernal Orb
-					},
-					["lvl"] = 40,
-				}),
 				applyclassicphase(TBC_PHASE_ONE, q(11139, {	-- Secondhand Diving Gear
 					["qg"] = 23569,	-- Renn McGill <SI:7 Salvage Diver>
 					["sourceQuest"] = 11138,	-- Renn McGill
@@ -1091,6 +1096,11 @@ _.Zones =
 						{ "i", 33112, 9 },	-- Witchbane
 					},
 					["lvl"] = 30,
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(11172, {	-- The Zeppelin Crash
+					["qg"] = 23600,	-- Apprentice Morlann <Tabetha's Apprentice>
+					["coord"] = { 46.1, 57.4, DUSTWALLOW_MARSH },
+					["lvl"] = 35,
 				})),
 				q(1201, {	-- Theramore Spies
 					["qg"] = 4791,	-- Nazeer Bloodpike

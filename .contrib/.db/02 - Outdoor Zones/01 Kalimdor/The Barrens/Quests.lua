@@ -263,6 +263,18 @@ _.Zones =
 						i(4953),	-- Trogg Brew
 					},
 				}),
+				q(4961, {	-- Cleansing of the Orb of Orahil
+					["qg"] = 6546,	-- Tabetha
+					["sourceQuest"] = 1799,	-- Fragments of the Orb of Orahil
+					["coord"] = { 46, 57, DUSTWALLOW_MARSH },
+					["maps"] = { DUSTWALLOW_MARSH },
+					["classes"] = { WARLOCK },
+					["cr"] = 6549,	-- Demon of the Orb
+					["cost"] = {
+						{ "i", 12642, 1 },	-- Cleansed Infernal Orb
+					},
+					["lvl"] = 35,
+				}),
 				q(1796, {	-- Components for the Enchanted Gold Bloodrobe (1/5)
 					["qg"] = 6266,	-- Menara Voidrender
 					["sourceQuests"] = {
@@ -463,11 +475,16 @@ _.Zones =
 					["coord"] = { 62.4, 35.4, THE_BARRENS },
 					["maps"] = { DESOLACE, DUSTWALLOW_MARSH },
 					["classes"] = { WARLOCK },
-					["cr"] = 4668,	-- Burning Blade Summoner
 					["cost"] = {
 						{ "i", 7291, 1 },	-- 	Infernal Orb
 					},
 					["lvl"] = 35,
+					["groups"] = {
+						i(7291, {	-- Infernal Orb
+							["cr"] = 4668,	-- Burning Blade Summoner
+							["coord"] = { 55.0, 77.8, DESOLACE },
+						}),
+					},
 				}),
 				q(898, {	-- Free From the Hold
 					["qg"] = 3465,	-- Gilthares Firebough
@@ -636,39 +653,39 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 9,
 				}),
-				q(4967, {	-- Knowledge of the Orb of Orahil
+				q(4967, {	-- Knowledge of the Orb of Orahil [Orgrimmar]
 					["qg"] = 3326,	-- Zevrost
 					["coord"] = { 48.4, 45.6, ORGRIMMAR },
 					["maps"] = { ORGRIMMAR },
-					["races"] = HORDE_ONLY,
 					["classes"] = { WARLOCK },
+					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 35,
 				}),
-				q(4965, {	-- Knowledge of the Orb of Orahil
+				q(4965, {	-- Knowledge of the Orb of Orahil [Ironforge]
 					["qg"] = 5172,	-- Briarthorn
 					["coord"] = { 50.2, 6, IRONFORGE },
 					["maps"] = { IRONFORGE },
-					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARLOCK },
+					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 35,
 				}),
-				q(4968, {	-- Knowledge of the Orb of Orahil
+				q(4968, {	-- Knowledge of the Orb of Orahil [Stormwind]
 					["qg"] = 461,	-- Demisette Cloyce
 					["coord"] = { 25.4, 78.2, STORMWIND_CITY },
 					["maps"] = { STORMWIND_CITY },
-					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARLOCK },
+					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 35,
 				}),
-				q(4969, {	-- Knowledge of the Orb of Orahil
+				q(4969, {	-- Knowledge of the Orb of Orahil [Undercity]
 					["qg"] = 4563,	-- Kaal Soulreaper
 					["coord"] = { 86, 15.6, UNDERCITY },
 					["maps"] = { UNDERCITY },
-					["races"] = HORDE_ONLY,
 					["classes"] = { WARLOCK },
+					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 35,
 				}),
@@ -904,6 +921,17 @@ _.Zones =
 					["races"] = { ORC, TROLL },
 					["lvl"] = 10,
 				}),
+				q(4976, {	-- Returning the Cleansed Orb
+					["qg"] = 6546,	-- Tabetha
+					["sourceQuest"] = 4961,	-- Cleansing of the Orb of Orahil
+					["coord"] = { 46, 57, DUSTWALLOW_MARSH },
+					["maps"] = { DUSTWALLOW_MARSH },
+					["classes"] = { WARLOCK },
+					["cost"] = {
+						{ "i", 12642, 1 },	-- Cleansed Infernal Orb
+					},
+					["lvl"] = 35,
+				}),
 				q(849, {	-- Revenge of Gann
 					["qg"] = 3341,	-- Gann Stonespire
 					["sourceQuest"] = 846,	-- Revenge of Gann
@@ -1030,20 +1058,50 @@ _.Zones =
 					},
 				}),
 				q(4962, {	-- Shard of a Felhound
-					["lvl"] = 35,
-					["classes"] = { WARLOCK },
-					["altQuests"] = {
-						4963 -- Shard of an Infernal
-					},
 					["qg"] = 6254,	-- Acolyte Wytula
+					["altQuests"] = { 4963 }, -- Shard of an Infernal
+					["coord"] = { 62.5, 35.5, THE_BARRENS },
+					["maps"] = { DESOLACE },
+					["cost"] = {
+						{ "i", 12648, 1 },	-- Imprisoned Felhound Spirit
+					},
+					["classes"] = { WARLOCK },
+					["lvl"] = 35,
+					["groups"] = {
+						i(12648, {	-- Imprisoned Felhound Spirit
+							["coords"] = {
+								{ 56.6, 75.6, DESOLACE },
+								{ 50.6, 81.6, DESOLACE },
+							},
+							["cost"] = {
+								{ "i", 12647, 1 },	-- Felhas Ruby
+							},
+							["crs"] = {
+								4685,	-- Ley Hunter
+								4681,	-- Mage Hunter
+							},
+						}),
+					},
 				}),
 				q(4963, {   -- Shard of an Infernal
-					["lvl"] = 35,
-					["classes"] = { WARLOCK },
-					["altQuests"] = {
-						4962 -- Shard of a Felhound
-					},
 					["qg"] = 6252, -- Acolyte Magaz
+					["altQuests"] = { 4962 }, -- Shard of a Felhound
+					["coord"] = { 62.6, 35.2, THE_BARRENS },
+					["maps"] = { DESOLACE },
+					["cost"] = {
+						{ "i", 12649, 1 },	-- Imprisoned Infernal Spirit
+					},
+					["classes"] = { WARLOCK },
+					["lvl"] = 35,
+					["groups"] = {
+						i(12649, {	-- Imprisoned Infernal Spirit
+							["coord"] = { 50, 73, DESOLACE },
+							["cost"] = {
+								{ "i", 12646, 1 },	-- Infus Emerald
+							},
+							["cr"] = 4676,	-- Lesser Infernal
+						}),
+					},
 				}),
 				q(887, {	-- Southsea Freebooters
 					["qg"] = 3391,	-- Gazlowe
@@ -1220,7 +1278,10 @@ _.Zones =
 				q(4964, {	-- The Completed Orb of Dar'Orahil
 					["qg"] = 6266,	-- Menara Voidrender
 					["altQuests"] = { 4975 },	-- The Completed Orb of Noh'Orahil
-					["sourceQuest"] = 4976,	-- Returning the Cleansed Orb
+					["sourceQuests"] = {
+						4976,	-- Returning the Cleansed Orb
+						4962,	-- Shard of a Felhound
+					},
 					["coord"] = { 62.4, 35.4, THE_BARRENS },
 					["classes"] = { WARLOCK },
 					["lvl"] = 35,
@@ -1232,7 +1293,10 @@ _.Zones =
 				q(4975, {	-- The Completed Orb of Noh'Orahil
 					["qg"] = 6266,	-- Menara Voidrender
 					["altQuests"] = { 4964 },	-- The Completed Orb of Dar'Orahil
-					["sourceQuest"] = 4976,	-- Returning the Cleansed Orb
+					["sourceQuests"] = {
+						4976,	-- Returning the Cleansed Orb
+						4963,	-- Shard of an Infernal
+					},
 					["coord"] = { 62.4, 35.4, THE_BARRENS },
 					["classes"] = { WARLOCK },
 					["lvl"] = 35,
