@@ -882,13 +882,13 @@ _.Instances = { tier(1, {	-- Classic
 				i(11623), 	-- Spritecaster Cap
 				i(11627), 	-- Fleetfoot Greaves
 			}),
-			un(PHASE_FIVE, n(16059, { 	-- Theldren
+			applyclassicphase(PHASE_FIVE, n(16059, { 	-- Theldren
 				["provider"] = { "o", 181074 },	-- Arena Spoils
 				["description"] = "Requires Banner of Provocation (Dungeon Set 2 Questline) to summon this boss. Loot grey chest on grey grate after killing the mobs.",
 				["cost"] = {
 					{ "i", 21986, 1 },	-- Banner of Provocation
 				},
-				["groups"] = bubbleDown({ ["u"] = PHASE_FIVE }, {
+				["groups"] = {
 					{
 						["itemID"] = 22047,	-- Top Piece of Lord Valthalak's Amulet
 						["questID"] = 9015,	-- The Challenge
@@ -897,7 +897,7 @@ _.Instances = { tier(1, {	-- Classic
 					i(22317), 	-- Lefty's Brass Knuckle
 					i(22318), 	-- Malgen's Long Bow
 					i(22330), 	-- Shroud of Arcane Mastery
-				}),
+				},
 			})),
 			n(10096, {	-- Ring of Law
 				["description"] = "Approaching the center of the ring will start an event, and the High Justice will appear and approach one of the gates and release three waves of non-elite enemies, followed by one of six possible mini-bosses.",
@@ -1229,6 +1229,14 @@ _.Instances = { tier(1, {	-- Classic
 					["minReputation"] = { 59, FRIENDLY },	-- The Thorium Brotherhood, Friendly.
 				}),
 			}),
+			-- #if AFTER TBC
+			applyclassicphase(TBC_PHASE_ONE, n(28067, {	-- Dark Iron Brewer
+				["description"] = "Speak to him until he passes out, a Mug will appear on the ground",
+				["groups"] = {
+					i(38320),	-- Dire Brew
+				},
+			})),
+			-- #endif
 			n(9156, {	-- Ambassador Flamelash
 				i(11809), 	-- Flame Wrath
 				i(11808), 	-- Circle of Flame
