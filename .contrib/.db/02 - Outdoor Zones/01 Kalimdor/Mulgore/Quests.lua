@@ -74,11 +74,12 @@ _.Zones =
 				q(1519, {	-- Call of Earth (1/3)
 					["qg"] = 5888,	-- Seer Ravenfeather
 					["coord"] = { 44.8, 76.2, MULGORE },
+					["timeline"] = { "removed 4.0.3.10000" },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["altQuests"] = {
-							1516, -- Call of Earth (1/3 Durotar)
-							},
+						1516, -- Call of Earth (1/3 Durotar)
+					},
 					["cost"] = {
 						{ "i", 6634, 2 },	-- Ritual Salve
 					},
@@ -88,6 +89,7 @@ _.Zones =
 					["qg"] = 5888,	-- Seer Ravenfeather
 					["sourceQuest"] = 1519,	-- Call of Earth (1/3)
 					["coord"] = { 44.8, 76.2, MULGORE },
+					["timeline"] = { "removed 4.0.3.10000" },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["altQuests"] = {
@@ -102,11 +104,12 @@ _.Zones =
 					["qg"] = 5891,	-- Minor Manifestation of Earth
 					["sourceQuest"] = 1520,	-- Call of Earth (2/3)
 					["coord"] = { 53.8, 80.4, MULGORE },
+					["timeline"] = { "removed 4.0.3.10000" },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["altQuests"] = {
-							1518, -- Call of Earth (3/3 Durotar)
-							},
+						1518, -- Call of Earth (3/3 Durotar)
+					},
 					["cost"] = {
 						{ "i", 6656, 1 },	-- Rough Quartz
 					},

@@ -131,7 +131,6 @@ _.Zones =
 				q(9603, {	-- Beds, Bandages, and Beyond
 					["qg"] = 16553,	-- Caregiver Chellan
 					["coord"] = { 48.3, 49.1, AZUREMYST_ISLE },
-					["timeline"] = { "added 3.3.0.10772" },
 					["cost"] = {
 						{ "i", 23902, 1 },	-- Chellan's List
 					},
@@ -171,6 +170,101 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["model"] = 191579,
 					["lvl"] = lvlsquish(9, 1, 9),
+				}),
+				q(9462, {	-- Call of Fire (1/4)
+					["qg"] = 17219,	-- Sulaa <Shaman Trainer>
+					["coord"] = { 32.3, 23.9, THE_EXODAR },
+					["timeline"] = { "removed 4.0.3.10000" },
+					["maps"] = { THE_EXODAR },
+					["classes"] = { SHAMAN },
+					["races"] = { DRAENEI },
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(10, 1, 10),
+				}),
+				q(9464, {	-- Call of Fire (2/4)
+					["qg"] = 17212,	-- Tuluun <Shaman Trainer>
+					["sourceQuest"] = 9462,	-- Call of Fire (1/4)
+					["coord"] = { 48.0, 50.4, AZUREMYST_ISLE },
+					["timeline"] = { "removed 4.0.3.10000" },
+					["classes"] = { SHAMAN },
+					["races"] = { DRAENEI },
+					["lvl"] = lvlsquish(10, 1, 10),
+				}),
+				q(9465, {	-- Call of Fire (3/4)
+					["qg"] = 17205,	-- Temper
+					["sourceQuest"] = 9464,	-- Call of Fire (2/4)
+					["coord"] = { 59.5, 18.1, AZUREMYST_ISLE },
+					["timeline"] = { "removed 4.0.3.10000" },
+					["cost"] = {
+						{ "i", 23733, 1 },	-- Ritual Torch
+					},
+					["classes"] = { SHAMAN },
+					["races"] = { DRAENEI },
+					["lvl"] = lvlsquish(10, 1, 10),
+				}),
+				q(9467, {	-- Call of Fire (4/4)
+					["qg"] = 17205,	-- Temper
+					["sourceQuest"] = 9465,	-- Call of Fire (3/4)
+					["coord"] = { 59.5, 18.1, AZUREMYST_ISLE },
+					["timeline"] = { "removed 4.0.3.10000" },
+					["cost"] = {
+						{ "i", 23688, 1 },	-- Hauteur's Ashes
+						{ "i", 23682, 1 },	-- Ritual Torch
+					},
+					["classes"] = { SHAMAN },
+					["races"] = { DRAENEI },
+					["lvl"] = lvlsquish(10, 1, 10),
+					["groups"] = {
+						objective(1, {	-- 0/1 Hauteur's Ashes
+							["provider"] = { "i", 23688 },	-- Hauteur's Ashes
+							["coord"] = { 11.4, 82.2, AZUREMYST_ISLE },
+							["cr"] = 17206,	-- Hauteur
+							["cost"] = {
+								{ "i", 23682, 1 },	-- Ritual Torch
+							},
+						}),
+						i(24336, {	-- Fireproof Satchel
+							i(24335),	-- Orb of Returning
+							i(23682),	-- Ritual Torch
+						}),
+					},
+				}),
+				q(9468, {	-- Call of Fire (5/4)
+					["qg"] = 17205,	-- Temper
+					["sourceQuest"] = 9467,	-- Call of Fire (4/4)
+					["coord"] = { 59.5, 18.1, AZUREMYST_ISLE },
+					["timeline"] = { "removed 4.0.3.10000" },
+					["cost"] = {
+						{ "i", 23688, 1 },	-- Hauteur's Ashes
+					},
+					["classes"] = { SHAMAN },
+					["races"] = { DRAENEI },
+					["lvl"] = lvlsquish(10, 1, 10),
+				}),
+				q(9461, {	-- Call of Fire (6/4)
+					["qg"] = 17212,	-- Tuluun <Shaman Trainer>
+					["sourceQuest"] = 9468,	-- Call of Fire (5/4)
+					["coord"] = { 48.0, 50.4, AZUREMYST_ISLE },
+					["timeline"] = { "removed 4.0.3.10000" },
+					["classes"] = { SHAMAN },
+					["races"] = { DRAENEI },
+					["lvl"] = lvlsquish(10, 1, 10),
+				}),
+				q(9555, {	-- Call of Fire (7/4)
+					["qg"] = 17468,	-- Prophet Velen
+					["sourceQuest"] = 9461,	-- Call of Fire (6/4)
+					["coord"] = { 32.9, 54.5, THE_EXODAR },
+					["maps"] = { THE_EXODAR },
+					["timeline"] = { "removed 4.0.3.10000" },
+					["classes"] = { SHAMAN },
+					["races"] = { DRAENEI },
+					["lvl"] = lvlsquish(10, 1, 10),
+					["groups"] = {
+						recipe(3599),	-- Searing Totem
+						i(5176, {	-- Fire Totem
+							["description"] = "You must keep this in your bags forever.",
+						}),
+					},
 				}),
 				q(9573, {	-- Chieftain Oomooroo
 					["qg"] = 17445,	-- Stillpine the Younger
@@ -348,7 +442,6 @@ _.Zones =
 					["qg"] = 43991,	-- Zaldaan
 					["sourceQuest"] = 9603,	-- Beds, Bandages, and Beyond
 					["coord"] = { 49.7, 49.1, AZUREMYST_ISLE },
-					["timeline"] = { "added 3.3.0.10772" },
 					["cost"] = {
 						{ "i", 23902, 1 },	-- Chellan's List
 					},

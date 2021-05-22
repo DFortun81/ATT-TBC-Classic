@@ -52,7 +52,6 @@ _.Zones =
 					["qg"] = 16768,	-- Nurguni
 					["sourceQuest"] = 9604,	-- On the Wings of a Hippogryph
 					["coord"] = { 56.8, 49.8, THE_EXODAR },
-					["timeline"] = { "added 3.3.0.10772" },
 					-- #if AFTER CATA
 					["maps"] = { AZUREMYST_ISLE },
 					-- #else
@@ -92,7 +91,6 @@ _.Zones =
 					["qg"] = 17555,	-- Stephanos
 					["sourceQuest"] = 9605,	-- Hippogryph Master Stephanos
 					["coord"] = { 54.8, 35.8, THE_EXODAR },
-					["timeline"] = { "added 3.3.0.10772" },
 					-- #if AFTER CATA
 					["maps"] = { AZUREMYST_ISLE },
 					-- #else

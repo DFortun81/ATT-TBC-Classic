@@ -87,7 +87,6 @@ _.Zones =
 				q(9603, {	-- Beds, Bandages, and Beyond
 					["qg"] = 17553,	-- Caregiver Topher Loaal
 					["coord"] = { 55.8, 59.8, BLOODMYST_ISLE },
-					["timeline"] = { "added 3.3.0.10772" },
 					["cost"] = {
 						{ "i", 23902, 1 },	-- Topher's List
 					},
@@ -554,7 +553,6 @@ _.Zones =
 					["qg"] = 17554,	-- Laando
 					["sourceQuest"] = 9603,	-- Beds, Bandages, and Beyond
 					["coord"] = { 57.7, 53.9, BLOODMYST_ISLE },
-					["timeline"] = { "added 3.3.0.10772" },
 					["cost"] = {
 						{ "i", 23902, 1 },	-- Topher's List
 					},

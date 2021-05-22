@@ -97,11 +97,12 @@ _.Zones =
 				q(1516, {	-- Call of Earth (1/3)
 					["qg"] = 5887,	-- Canaga Earthcaller
 					["coord"] = { 42.4, 69.0, DUROTAR },
+					["timeline"] = { "removed 4.0.3.10000" },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["altQuests"] = {
-							1519, -- Call to Earth (1/3 Mulgore)
-							},
+						1519, -- Call to Earth (1/3 Mulgore)
+					},
 					["cost"] = {
 						{ "i", 6640, 2 },	-- Felstalker Hoof
 					},
@@ -111,11 +112,12 @@ _.Zones =
 					["qg"] = 5887,	-- Canaga Earthcaller
 					["sourceQuest"] = 1516,	-- Call of Earth (1/3)
 					["coord"] = { 42.4, 69.0, DUROTAR },
+					["timeline"] = { "removed 4.0.3.10000" },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["altQuests"] = {
-							1520, -- Call to Earth (2/3 Mulgore)
-							},
+						1520, -- Call to Earth (2/3 Mulgore)
+					},
 					["cost"] = {
 						{ "i", 6635, 1 },	-- Earth Sapta
 					},
@@ -125,11 +127,12 @@ _.Zones =
 					["qg"] = 5891,	-- Minor Manifestation of Earth
 					["sourceQuest"] = 1517,	-- Call of Earth (2/3)
 					["coord"] = { 44.0, 76.0, DUROTAR },
+					["timeline"] = { "removed 4.0.3.10000" },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["altQuests"] = {
-							1521, -- Call to Earth (3/3 Mulgore)
-							},
+						1521, -- Call to Earth (3/3 Mulgore)
+					},
 					["cost"] = {
 						{ "i", 6656, 1 },	-- Rough Quartz
 					},

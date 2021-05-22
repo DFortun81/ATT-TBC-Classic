@@ -1125,6 +1125,7 @@ app.L = {
 		[C_Map.GetAreaInfo(3528)] = 468,	-- Ammen Vale (Silverline Lake)
 		[C_Map.GetAreaInfo(3559)] = 468,	-- Ammen Vale (Nestlewood Hills)
 		[C_Map.GetAreaInfo(3529)] = 468,	-- Ammen Vale (Nestlewood Thicket)
+		[C_Map.GetAreaInfo(3561)] = 468,	-- Ammen Vale (The Sacred Grove)
 	};
 	
 	-- This is necessary because sometimes the names of spells do not match for different languages.
