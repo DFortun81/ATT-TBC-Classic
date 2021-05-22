@@ -174,10 +174,7 @@ _.Zones =
 				}),
 				q(9573, {	-- Chieftain Oomooroo
 					["qg"] = 17445,	-- Stillpine the Younger
-					["sourceQuests"] = {
-						9560,	-- Beasts of the Apocalypse
-						9562,	-- Murlocs... Why Here? Why Now?
-					},
+					["sourceQuest"] = 9562,	-- Murlocs... Why Here? Why Now?
 					["coord"] = { 46.8, 21.2, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = lvlsquish(7, 1, 7),
@@ -396,10 +393,7 @@ _.Zones =
 				}),
 				q(9565, {	-- Search Stillpine Hold
 					["qg"] = 17440,	-- High Chief Stillpine
-					["sourceQuests"] = {
-						9560,	-- Beasts of the Apocalypse
-						9562,	-- Murlocs... Why Here? Why Now?
-					},
+					["sourceQuest"] = 9562,	-- Murlocs... Why Here? Why Now?
 					["coord"] = { 46.6, 20.6, AZUREMYST_ISLE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = lvlsquish(9, 1, 9),
@@ -496,10 +490,15 @@ _.Zones =
 				}),
 				q(9570, {	-- The Kurken is Lurkin'
 					["qg"] = 17443,	-- Kurz the Revelator
+					-- #if AFTER MOP
+					-- TODO: Double check this when MOP comes out.
 					["sourceQuests"] = {
 						9560,	-- Beasts of the Apocalypse
 						9562,	-- Murlocs... Why Here? Why Now?
 					},
+					-- #else
+					["sourceQuest"] = 9565,	-- Search Stillpine Hold
+					-- #endif
 					["coord"] = { 46.8, 22.2, AZUREMYST_ISLE },
 					["cost"] = {
 						{ "i", 23860, 1 },	-- The Kurken's Hide
@@ -544,6 +543,10 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = lvlsquish(8, 1, 8),
 					["groups"] = {
+						objective(1, {	-- 0/8 Stillpine Captive Freed
+							["provider"] = { "i", 23801 },	-- Bristlelimb Key
+							["cr"] = 17375,	-- Stillpine Captive
+						}),
 						i(27399),	-- Stillpine Defender
 						i(27403),	-- Stillpine Stinger
 						i(27401),	-- Arugoo's Crossbow of Destruction
