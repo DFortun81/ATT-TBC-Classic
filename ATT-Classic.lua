@@ -4876,13 +4876,10 @@ local fields = {
 	["coords"] = function(t)
 		local maphash = t.maphash;
 		if maphash then
-			local layers = C_Map.GetMapArtLayers(t.mapID);
-			if layers and layers[1] then
-				local coords = {};
-				local width, height, offsetX, offsetY = strsplit(":", maphash);
-				tinsert(coords, {((offsetX + (width * 0.5)) * 100) / layers[1].layerWidth, ((offsetY + (height * 0.5)) * 100) / layers[1].layerHeight, t.mapID});
-				return coords;
-			end
+			local coords = {};
+			local width, height, offsetX, offsetY = strsplit(":", maphash);
+			tinsert(coords, {((offsetX + (width * 0.5)) * 100) / WorldMapFrame:GetWidth(), ((offsetY + (height * 0.5)) * 100) / WorldMapFrame:GetHeight(), t.mapID});
+			return coords;
 		end
 	end,
 };
