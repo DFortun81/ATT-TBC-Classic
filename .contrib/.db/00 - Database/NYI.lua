@@ -150,6 +150,9 @@ _.NeverImplemented =
 	
 	un(NEVER_IMPLEMENTED, i(24315)),	-- Pattern: Heavy Netherweave Net
 	
+	-- Arathi Highlands
+	q(636),	-- Legends of the Earth <NYI>
+	
 	-- Argent Dawn Quests
 	q(5530, {	-- <NYI> <TXT> Necklace of the Dawn
 		i(13811),	-- Necklace of the Dawn

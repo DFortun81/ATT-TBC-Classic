@@ -61,6 +61,58 @@ _.Zones =
 							["races"] = ALLIANCE_ONLY,
 							["isBreadcrumb"] = true,
 						}),
+						q(9449,  {	-- Call of Earth (1/3)
+							["qg"] = 17089,	-- Firmanvaar
+							-- #if AFTER MOP
+							["coord"] = { 50.2, 43.0, AMMEN_VALE },
+							-- #else
+							["coord"] = { 79.3, 49.1, AZUREMYST_ISLE },
+							-- #endif
+							["timeline"] = { "removed 4.0.3.10000" },
+							["races"] = { DRAENEI },
+							["classes"] = { SHAMAN },
+							["lvl"] = lvlsquish(4, 1, 4),
+						}),
+						q(9450,  {	-- Call of Earth (2/3)
+							["qg"] = 17087,	-- Spirit of the Vale
+							["sourceQuest"] = 9449,	-- Call of Earth (1/3)
+							-- #if AFTER MOP
+							["coord"] = { 33.6, 23.8, AMMEN_VALE },
+							-- #else
+							["coord"] = { 71.3, 39.1, AZUREMYST_ISLE },
+							-- #endif
+							["timeline"] = { "removed 4.0.3.10000" },
+							["races"] = { DRAENEI },
+							["classes"] = { SHAMAN },
+							["lvl"] = lvlsquish(4, 1, 4),
+							["groups"] = {
+								objective(1, {	-- 0/4 Restless Spirit of Earth slain
+									["cr"] = 17179,	-- Restless Spirit of Earth
+								}),
+							},
+						}),
+						q(9451,  {	-- Call of Earth (3/3)
+							["qg"] = 17087,	-- Spirit of the Vale
+							["sourceQuest"] = 9450,	-- Call of Earth (2/3)
+							-- #if AFTER MOP
+							["coord"] = { 33.6, 23.8, AMMEN_VALE },
+							-- #else
+							["coord"] = { 71.3, 39.1, AZUREMYST_ISLE },
+							-- #endif
+							["timeline"] = { "removed 4.0.3.10000" },
+							["cost"] = {
+								{ "i", 23671, 1 },	-- Earth Crystal
+							},
+							["races"] = { DRAENEI },
+							["classes"] = { SHAMAN },
+							["lvl"] = lvlsquish(4, 1, 4),
+							["groups"] = {
+								recipe(8071),	-- Stoneskin Totem
+								i(5175, {	-- Earth Totem
+									["description"] = "You must keep this in your bags forever.",
+								}),
+							},
+						}),
 						q(26968, {	-- Frost Nova
 							["qg"] = 16500,	-- Valaatu
 							-- #if AFTER MOP
@@ -375,11 +427,15 @@ _.Zones =
 						}),
 						q(10302, {	-- Volatile Mutations
 							["qg"] = 16514,	-- Botanist Taerix
+							-- #if BEFORE MOP
+							["sourceQuest"] = 9279,	-- You Survived! [NOTE: On new Draenei, it was offered at the same time as Replenishing the Healing Crystal]
+							-- #else
 							["sourceQuests"] = {	-- TODO: Test this source quest list.
 								9369,	-- Replenishing the Healing Crystal (All other ally races)
 								9280,	-- Replenishing the Healing Crystal (Draenei)
 								9371,	-- Botanist Taerix (breadcrumb)
 							},
+							-- #endif
 							-- #if AFTER MOP
 							["coord"] = { 49.9, 37.3, AMMEN_VALE },
 							-- #else
