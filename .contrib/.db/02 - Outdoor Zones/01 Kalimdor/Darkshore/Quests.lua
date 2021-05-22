@@ -485,6 +485,12 @@ _.Zones =
 						i(5251),	-- Phial of Scrying
 					},
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(10752, {	-- Onward to Ashenvale
+					["qg"] = 3649,	-- Thundris Windweaver
+					["coord"] = { 37.4, 40.2, DARKSHORE },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 18,
+				})),
 				q(2118, {	-- Plagued Lands
 					["qg"] = 3701,	-- Tharnariun Treetender
 					["coord"] = { 38.8, 43.4, DARKSHORE },

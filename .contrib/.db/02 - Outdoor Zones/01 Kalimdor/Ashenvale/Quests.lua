@@ -359,6 +359,9 @@ _.Zones =
 				}),
 				q(991, {	-- Raene's Cleansing (1)
 					["qg"] = 3691,	-- Raene Wolfrunner
+					-- #if AFTER TBC
+					["sourceQuest"] = 10752,	-- Onward to Ashenvale
+					-- #endif
 					["coord"] = { 36.6, 49.6, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 18,

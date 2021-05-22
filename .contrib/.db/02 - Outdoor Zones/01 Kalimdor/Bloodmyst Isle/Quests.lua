@@ -844,7 +844,7 @@ _.Zones =
 					["sourceQuest"] = 9632,	-- Newfound Allies
 					["coord"] = { 54.6, 53.9, AZUREMYST_ISLE },
 					["timeline"] = { "removed 4.0.3.10000" },
-					["maps"] = { AZUREMYST_ISLE },
+					["maps"] = { AZUREMYST_ISLE, DARKSHORE },
 					["cost"] = {
 						{ "i", 23937, 1 },	-- Letter of Introduction
 					},
