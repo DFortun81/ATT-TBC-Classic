@@ -152,27 +152,6 @@ _.Instances = { tier(1, {	-- Classic
 						i(11123),	-- Rainstrider Leggings
 					},
 				}),
-				q(1424, {	-- Pool of Tears
-					["qg"] = 1443,	-- Fel'zerul
-					["coord"] = { 64.2, 20.8, SWAMP_OF_SORROWS },
-					["maps"] = { SWAMP_OF_SORROWS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 38,
-					["groups"] = {
-						{
-							["itemID"] = 6175,	-- Atal'ai Artifact
-							["questID"] = 1424,	-- Pool of Tears
-						},
-					},
-				}),
-				q(1444, {	-- Return to Fel'Zerul
-					["qg"] = 5598,	-- Atal'ai Exile
-					["sourceQuest"] = 1429,	-- The Atal'ai Exile
-					["coord"] = { 33.6, 75.2, THE_HINTERLANDS },
-					["maps"] = { THE_HINTERLANDS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 38,
-				}),
 				q(3447, {	-- Secret of the Circle
 					["qg"] = 7771,	-- Marvon Rivetseeker
 					["sourceQuest"] = 3444,	-- The Stone Circle
@@ -201,21 +180,6 @@ _.Instances = { tier(1, {	-- Classic
 							["itemID"] = 12402,	-- Ancient Egg
 							["questID"] = 4787,	-- The Ancient Egg
 							["coord"] = { 57.5, 86.7, THE_HINTERLANDS },
-						},
-					},
-				}),
-				q(1429, {	-- The Atal'ai Exile
-					["qg"] = 1443,	-- Fel'zerul
-					["sourceQuest"] = 1424,	-- Pool of Tears
-					["coord"] = { 64.2, 20.8, SWAMP_OF_SORROWS },
-					["maps"] = { SWAMP_OF_SORROWS, THE_HINTERLANDS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 38,
-					["groups"] = {
-						{
-							["itemID"] = 6193,	-- Bundle of Atal'ai Artifacts
-							["questID"] = 1429,	-- The Atal'ai Exile
-							["coord"] = { 33.6, 75.2, THE_HINTERLANDS },
 						},
 					},
 				}),
@@ -331,6 +295,9 @@ _.Instances = { tier(1, {	-- Classic
 					["sourceQuest"] = 1424,	-- Pool of Tears
 					["coord"] = { 64.2, 20.8, SWAMP_OF_SORROWS },
 					["maps"] = { SWAMP_OF_SORROWS },
+					["cost"] = {
+						{ "i", 6181, 20 },	-- Fetish of Hakkar
+					},
 					["races"] = HORDE_ONLY,
 					["lvl"] = 38,
 					["groups"] = {
@@ -385,8 +352,6 @@ _.Instances = { tier(1, {	-- Classic
 			n(ZONEDROPS, {
 				{
 					["itemID"] = 11318,	-- Atal'ai Haze
-					["allianceQuestID"] = 4143,	-- Haze of Evil
-					["hordeQuestID"] = 4146,	-- Zapper Fuel
 					["crs"] = {
 						8384,	-- Deep Lurker
 						5226,	-- Murk Worm
@@ -395,13 +360,11 @@ _.Instances = { tier(1, {	-- Classic
 				},
 				{
 					["itemID"] = 6288,	-- Atal'ai Tablet
-					["questID"] = 1475,	-- Into The Temple of Atal'Hakkar
 					["provider"] = { "o", 37099 },	-- Atal'ai Tablet
 					["races"] = ALLIANCE_ONLY,
 				},
 				{
 					["itemID"] = 6181,	-- Fetish of Hakkar
-					["questID"] = 1445,	-- The Temple of Atal'Hakkar
 					["races"] = HORDE_ONLY,
 				},
 				i(16216, {	-- Formula: Enchant Cloak - Greater Resistance

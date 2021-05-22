@@ -320,6 +320,12 @@ _.Zones =
 				},
 				q(1420, {	-- Report to Helgrum
 					["qg"] = 5394,	-- Neeka Bloodscar
+					["sourceQuest"] = 1418,	-- Neeka Bloodscar
+					["coord"] = { 6.5, 47.2, BADLANDS },
+					["maps"] = { SWAMP_OF_SORROWS },
+					["cost"] = {
+						{ "i", 6167, 1 },	-- Neeka's Report
+					},
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 				}),
