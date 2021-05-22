@@ -219,11 +219,9 @@ _.Zones =
 					["lvl"] = 10,
 					["g"] = {
 						recipe(3599),	-- Searing Totem
-						{
-							["itemID"] = 5176,	-- Fire Totem
-							["questID"] = 1527,	-- Call of Fire
+						i(5176, {	-- Fire Totem
 							["description"] = "You must keep this in your bags forever.",
-						},
+						}),
 					},
 				}),
 				q(2985, {	-- Call of Water (1/9) [Durotar]
@@ -381,7 +379,9 @@ _.Zones =
 					["lvl"] = 20,
 					["groups"] = {
 						recipe(5394),	-- Healing Stream Totem
-						i(5177),	-- Water Totem
+						i(5177, {	-- Water Totem
+							["description"] = "You must keep this in your bags forever.",
+						}),
 					},
 				}),
 				q(1103, {	-- Call of Water (Water Sapta) [Silverpine Forest]

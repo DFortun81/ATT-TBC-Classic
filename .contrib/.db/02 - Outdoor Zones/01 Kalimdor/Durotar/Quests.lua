@@ -136,11 +136,9 @@ _.Zones =
 					["lvl"] = 4,
 					["groups"] = {
 						recipe(8071),	-- Stoneskin Totem
-						{
-							["itemID"] = 5175,	-- Earth Totem
-							["questID"] = 1518,	-- Call of Earth (3/3)
+						i(5175, {	-- Earth Totem
 							["description"] = "You must keep this in your bags forever.",
-						},
+						}),
 					},
 				}),
 				q(791, {	-- Carry Your Weight
