@@ -12,6 +12,9 @@ _.Zones =
 					n(QUESTS, {
 						q(9798,  {	-- Blood Elf Plans
 							["provider"] = { "i", 24414 },	-- Blood Elf Plans
+							["cost"] = {
+								{ "i", 23003, 1 },	-- Blood Elf Plans
+							},
 							["races"] = ALLIANCE_ONLY,
 							["lvl"] = lvlsquish(2, 1, 2),
 						}),
@@ -82,14 +85,12 @@ _.Zones =
 							["lvl"] = lvlsquish(2, 1, 2),
 							["groups"] = {
 								objective(1, {	-- Disperse the Neutralizing Agent
+									["provider"] = { "i", 22955 },	-- Neutralizing Agent
 									-- #if AFTER MOP
 									["coord"] = { 45.2, 64.9, AMMEN_VALE },
 									-- #else
 									["coord"] = { 77.2, 59.0, AZUREMYST_ISLE },
 									-- #endif
-									["cost"] = {
-										{ "i", 22955, 1 },	-- Neutralizing Agent
-									},
 								}),
 							},
 						}),
@@ -123,10 +124,8 @@ _.Zones =
 							["lvl"] = lvlsquish(2, 1, 2),
 							["groups"] = {
 								objective(1, {	-- 	Nestlewood Owlkin inoculated
+									["provider"] = { "i", 22962 },	-- Inoculating Crystal
 									["cr"] = 16518,	-- Nestlewood Owlkin
-									["cost"] = {
-										{ "i", 22962, 1 },	-- Inoculating Crystal
-									},
 								}),
 							},
 						}),
