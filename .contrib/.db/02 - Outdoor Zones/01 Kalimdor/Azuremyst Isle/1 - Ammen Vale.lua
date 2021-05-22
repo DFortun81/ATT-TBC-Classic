@@ -110,10 +110,7 @@ _.Zones =
 							-- There was absolutely nothing different about the quest other than the quest text, so rather than duplicate the entry, using altQuests instead.
 							-- The extra information doesn't help a new player and you get credit for both anywayson turn in, so it's whatever.
 							["qg"] = 16535,	-- Vindicator Aldar
-							["sourceQuests"] = {
-								10302,	-- Volatile Mutations
-								10304,	-- Vindicator Aldar
-							},
+							["sourceQuest"] = 10304,	-- Vindicator Aldar
 							-- #if AFTER WOD
 							["altQuests"] = { 37444 },	-- Inoculation [Skipped Breadcrumb]
 							-- #endif
