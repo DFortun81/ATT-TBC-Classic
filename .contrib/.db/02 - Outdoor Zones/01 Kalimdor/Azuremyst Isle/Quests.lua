@@ -147,14 +147,6 @@ _.Zones =
 						1679,	-- Muren Stormpike
 						9582,	-- Strength of One
 					},
-					["altQuests"] = {
-						1665,	-- Bartleby's Mug
-						-- #if AFTER TBC
-						--10350,	-- Behomat
-						-- #endif
-						1678,	-- Vejrek
-						1683,	-- Vorlus Vilehoof
-					},
 					["coord"] = { 49.8, 50.4, AZUREMYST_ISLE },
 					["maps"] = { THE_EXODAR },
 					["classes"] = { WARRIOR },
@@ -444,6 +436,14 @@ _.Zones =
 				q(9582, {	-- Strength of One
 					["qg"] = 17480,	-- Ruada
 					["coord"] = { 49.8, 50.4, AZUREMYST_ISLE },
+					["altQuests"] = {
+						1665,	-- Bartleby's Mug
+						-- #if AFTER TBC
+						--9582,	-- Strength of One
+						-- #endif
+						1678,	-- Vejrek
+						1683,	-- Vorlus Vilehoof
+					},
 					["classes"] = { WARRIOR },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = lvlsquish(10, 1, 10),
@@ -455,6 +455,11 @@ _.Zones =
 								{ "i", 23925, 1 },	-- Ravager Cage Key
 							},
 						}),
+						-- #if BEFORE CATA
+						recipe(71),		-- Defensive Stance
+						--recipe(7386),	-- Sunder Armor	[TODO: Users are reporting they can't collect this.]
+						recipe(355),	-- Taunt
+						-- #endif
 					},
 				}),
 				q(9454, {	-- The Great Moongraze Hunt (1/2)

@@ -182,7 +182,7 @@ _.Zones =
 					["altQuests"] = {
 						--1665,	-- Bartleby's Mug
 						-- #if AFTER TBC
-						10350,	-- Behomat
+						9582,	-- Strength of One
 						-- #endif
 						1678,	-- Vejrek
 						1683,	-- Vorlus Vilehoof
