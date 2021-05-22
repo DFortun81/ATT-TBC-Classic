@@ -342,7 +342,7 @@ _.Zones =
 				q(9706, {	-- Galaen's Journal - The Fate of Vindicator Saruan
 					["provider"] = { "o", 182032 },	-- Galaen's Journal
 					-- #if BEFORE CATA
-					["sourceQuest"] = 9578,	-- Searching for Galaen
+					["sourceQuest"] = 9694,	-- Blood Watch
 					-- #else
 					["sourceQuest"] = 9779,	-- Intercepting the Message
 					-- #endif
@@ -509,6 +509,7 @@ _.Zones =
 				q(9632, {	-- Newfound Allies
 					["qg"] = 17424,	-- Anchorite Paetheus
 					["coord"] = { 54.6, 53.9, BLOODMYST_ISLE },
+					["maps"] = { AZUREMYST_ISLE },
 					["cost"] = {
 						{ "i", 23937, 1 },	-- Letter of Introduction
 					},
