@@ -88,8 +88,8 @@ _.Zones =
 					["sourceQuest"] = 1825,	-- Speak with Thun'grim
 					["coord"] = { 57.23, 30.34, THE_BARRENS },
 					["maps"] = { HILLSBRAD_FOOTHILLS, RAZORFEN_KRAUL, STONETALON_MOUNTAINS },
-					["races"] = HORDE_ONLY,
 					["classes"] = { WARRIOR },
+					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 7587, 1 },	-- Thun'grim's Instructions
 						{ "i", 3575, 10 },	-- Iron Bar
@@ -103,41 +103,41 @@ _.Zones =
 					["qg"] = 5878,	-- Thun'grim Firegaze
 					["sourceQuest"] = 1838,	-- Brutal Armor
 					["coord"] = { 57.23, 30.34, THE_BARRENS },
-					["races"] = HORDE_ONLY,
 					["classes"] = { WARRIOR },
+					["races"] = HORDE_ONLY,
 					["lvl"] = 20,
 					["groups"] = {
 						i(7133),	-- Brutal Hauberk
 					},
 				}),
-				q(1522, {	-- Call of Fire (1/5) (Orgrimmar)
+				q(1522, {	-- Call of Fire (1/5) [Orgrimmar]
 					["qg"] = 5892,	-- Searn Firewarder
 					["coord"] = { 37.8, 37.4, ORGRIMMAR },
 					["maps"] = { ORGRIMMAR },
-					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 10,
 				}),
-				q(1523, {	-- Call of Fire (1/5) (Thunder Bluff)
+				q(1523, {	-- Call of Fire (1/5) [Thunder Bluff]
 					["qg"] = 5906,	-- Xanis Flameweaver
 					["coord"] = { 25.2, 21, THUNDER_BLUFF },
 					["maps"] = { THUNDER_BLUFF },
-					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 10,
 				}),
-				q(2983, {	-- Call of Fire (1/5) (Durotar)
+				q(2983, {	-- Call of Fire (1/5) [Durotar]
 					["qg"] = 3173,	-- Swart <Shaman Trainer>
 					["coord"] = { 54.4, 42.6, DUROTAR },
+					["classes"] = { SHAMAN },
 					["maps"] = { DUROTAR },
 					["races"] = HORDE_ONLY,
-					["classes"] = { SHAMAN },
 					["isBreadcrumb"] = true,
 					["lvl"] = 10,
 				}),
-				q(2984, {	-- Call of Fire (1/5) (Mulgore)
+				q(2984, {	-- Call of Fire (1/5) [Mulgore]
 					["qg"] = 3066,	-- Narm Skychaser <Shaman Trainer>
 					["coord"] = { 48.4, 59.2, MULGORE },
 					["maps"] = { MULGORE },
@@ -149,10 +149,10 @@ _.Zones =
 				q(1524, {	-- Call of Fire (2/5)
 					["qg"] = 5907,	-- Kranal Fiss
 					["sourceQuests"] = {
-						1522,	-- Call of Fire (1/5) (Orgrimmar)
-						1523,	-- Call of Fire (1/5) (Thunder Bluff)
-						2983,	-- Call of Fire (1/5) (Durotar)
-						2984,	-- Call of Fire (1/5) (Mulgore)
+						1522,	-- Call of Fire (1/5) [Orgrimmar]
+						1523,	-- Call of Fire (1/5) [Thunder Bluff]
+						2983,	-- Call of Fire (1/5) [Durotar]
+						2984,	-- Call of Fire (1/5) [Mulgore]
 					},
 					["coord"] = { 55.8, 20, THE_BARRENS },
 					["races"] = HORDE_ONLY,
@@ -224,6 +224,177 @@ _.Zones =
 							["questID"] = 1527,	-- Call of Fire
 							["description"] = "You must keep this in your bags forever.",
 						},
+					},
+				}),
+				q(2985, {	-- Call of Water (1/9) [Durotar]
+					["qg"] = 3173,	-- Swart <Shaman Trainer>
+					["coord"] = { 54.4, 42.6, DUROTAR },
+					["maps"] = { DUROTAR },
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 20,
+				}),
+				q(1528, {	-- Call of Water (1/9) [Orgrimmar]
+					["qg"] = 5892,	-- Searn Firewarder
+					["coord"] = { 38.0, 37.7, ORGRIMMAR },
+					["maps"] = { ORGRIMMAR },
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 20,
+				}),
+				q(1529, {	-- Call of Water (1/9) [Thunder Bluff]
+					["qg"] = 5906,	-- Xanis Flameweaver
+					["coord"] = { 25.2, 20.5, THUNDER_BLUFF },
+					["maps"] = { THUNDER_BLUFF },
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 20,
+				}),
+				q(1530, {	-- Call of Water (2/9)
+					["qg"] = 5901,	-- Islen Waterseer
+					["sourceQuests"] = {
+						2985,	-- Call of Water (1/9) [Durotar]
+						1528,	-- Call of Water (1/9) [Orgrimmar]
+						1529,	-- Call of Water (1/9) [Thunder Bluff]
+					},
+					["coord"] = { 65.8, 43.8, THE_BARRENS },
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+				}),
+				q(1535, {	-- Call of Water (3/9)
+					["qg"] = 5899,	-- Brine
+					["sourceQuest"] = 1530,	-- Call of Water (2/9)
+					["coord"] = { 43.4, 77.4, THE_BARRENS },
+					["cost"] = {
+						{ "i", 7769, 1 },	-- Filled Brown Waterskin
+					},
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						i(7766, {	-- Empty Brown Waterskin
+							["coord"] = { 44, 77, THE_BARRENS },
+							["groups"] = {
+								i(7766),	-- Filled Brown Waterskin
+							},
+						}),
+					},
+				}),
+				q(1536, {	-- Call of Water (4/9)
+					["qg"] = 5899,	-- Brine
+					["sourceQuest"] = 1535,	-- Call of Water (3/9)
+					["coord"] = { 43.4, 77.4, THE_BARRENS },
+					["maps"] = { HILLSBRAD_FOOTHILLS },
+					["cost"] = {
+						{ "i", 7771, 1 },	-- Filled Red Waterskin
+					},
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						i(7768, {	-- Empty Red Waterskin
+							["coord"] = { 62, 20, HILLSBRAD_FOOTHILLS },
+							["groups"] = {
+								i(7771),	-- Filled Red Waterskin
+							},
+						}),
+					},
+				}),
+				q(1534, {	-- Call of Water (5/9)
+					["qg"] = 5899,	-- Brine
+					["sourceQuest"] = 1536,	-- Call of Water (4/9)
+					["coord"] = { 43.4, 77.4, THE_BARRENS },
+					["maps"] = { ASHENVALE },
+					["cost"] = {
+						{ "i", 7770, 1 },	-- Filled Blue Waterskin
+					},
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						i(7767, {	-- Empty Blue Waterskin
+							["coord"] = { 33, 67, ASHENVALE },
+							["groups"] = {
+								i(7770),	-- Filled Blue Waterskin
+							},
+						}),
+					},
+				}),
+				q(220, {	-- Call of Water (6/9)
+					["qg"] = 5899,	-- Brine
+					["sourceQuest"] = 1534,	-- Call of Water (5/9)
+					["coord"] = { 43.4, 77.4, THE_BARRENS },
+					["cost"] = {
+						{ "i", 7810, 1 },	-- Vial of Purest Water
+					},
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						i(6637),	-- Water Sapta
+					},
+				}),
+				q(63, {		-- Call of Water (7/9)
+					["qg"] = 5901,	-- Islen Waterseer
+					["sourceQuest"] = 1534,	-- Call of Water (6/9)
+					["coord"] = { 65.8, 43.8, THE_BARRENS },
+					["maps"] = { SILVERPINE_FOREST },
+					["cost"] = {
+						{ "i", 7812, 1 },	-- Corrupt Manifestation's Bracers
+					},
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						i(7811, {	-- Remaining Drops of Purest Water
+							["coord"] = { 38.8, 44.3, SILVERPINE_FOREST },
+							["cr"] = 5894,	-- Corrupt Minor Manifestation of Water
+							["groups"] = {
+								i(7812),	-- Corrupt Manifestation's Bracers
+							},
+						}),
+					},
+				}),
+				q(100, {	-- Call of Water (8/9)
+					["provider"] = { "o", 113791 },	-- Brazier of Everfount
+					["sourceQuest"] = 1534,	-- Call of Water (7/9)
+					["coord"] = { 38.3, 44.6, SILVERPINE_FOREST },
+					["maps"] = { SILVERPINE_FOREST },
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+				}),
+				q(96, {	-- Call of Water (9/9)
+					["qg"] = 5895,	-- Minor Manifestation of Water
+					["sourceQuest"] = 100,	-- Call of Water (8/9)
+					["coord"] = { 38.6, 44.6, SILVERPINE_FOREST },
+					["maps"] = { SILVERPINE_FOREST },
+					["cost"] = {
+						{ "i", 7813, 1 },	-- Shard of Water
+					},
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						recipe(5394),	-- Healing Stream Totem
+						i(5177),	-- Water Totem
+					},
+				}),
+				q(1103, {	-- Call of Water (Water Sapta) [Silverpine Forest]
+					["qg"] = 7007,	-- Tiev Mordune
+					["sourceQuest"] = 100,	-- Call of Water (8/9)
+					["coord"] = { 37.3, 44.1, SILVERPINE_FOREST },
+					["maps"] = { SILVERPINE_FOREST },
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["lvl"] = 20,
+					["groups"] = {
+						i(6637),	-- Water Sapta
 					},
 				}),
 				q(855, {	-- Centaur Bracers
@@ -1537,6 +1708,18 @@ _.Zones =
 					["provider"] = { "i", 5103 },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
+				}),
+				q(972, {	-- Water Sapta [The Barrens]
+					["qg"] = 5901,	-- Islen Waterseer
+					["sourceQuest"] = 220,	-- Call of Water (6/9)
+					["coord"] = { 65.8, 43.8, THE_BARRENS },
+					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["lvl"] = 20,
+					["groups"] = {
+						i(6637),	-- Water Sapta
+					},
 				}),
 				q(893, {	-- Weapons of Choice
 					["qg"] = 3433,	-- Tatternack Steelforge

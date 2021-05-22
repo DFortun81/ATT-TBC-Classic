@@ -7,7 +7,6 @@ _.Zones =
 		m(SILVERPINE_FOREST, {
 			n(ZONEDROPS, {
 				i(3317, {	-- A Talking Head
-					["questID"] = 460,	-- Resting in Pieces
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						1943,	-- Raging Rot Hide
@@ -17,23 +16,20 @@ _.Zones =
 						1942,	-- Rot Hide Savage
 					},
 				}),
-				i(7231, {	-- Astor's Letter of Introduction [TODO: Move this to Class Quests Section]
-					["questID"] = 1898,	-- The Deathstalkers
-					["races"] = { UNDEAD },
+				i(7231, {	-- Astor's Letter of Introduction
 					["classes"] = { ROGUE },
+					["races"] = { UNDEAD },
 					["cr"] = 6497,	-- Astor Hadren
 				}),
 				i(4767, {	-- Coppercloth Gloves
 					["cr"] = 3578,	-- Dalaran Miner
 				}),
-				i(7812, {	-- Corrupt Manifestation's Bracers [TODO: Move this to Class Quests Section]
-					["questID"] = 63,	-- Call of Water
-					["races"] = HORDE_ONLY,
+				i(7812, {	-- Corrupt Manifestation's Bracers
 					["classes"] = { SHAMAN },
+					["races"] = HORDE_ONLY,
 					["cr"] = 5894,	-- Corrupt Minor Manifestation of Water
 				}),
 				i(3354, {	-- Dalaran Pendant
-					["questID"] = 479,	-- Ambermill Investigations
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						1915,	-- Dalaran Conjuror
@@ -42,7 +38,6 @@ _.Zones =
 					},
 				}),
 				i(7293, {	-- Dalaran Mana Gem
-					["questID"] = 1961,	-- Gathering Materials
 					["races"] = HORDE_ONLY,
 					["classes"] = { MAGE },
 					["crs"] = {
@@ -72,19 +67,16 @@ _.Zones =
 						1889,	-- Dalaran Wizard
 					},
 				}),
-				i(6312, {	-- Dalin's Heart [TODO: Move this to Class Quests Section]
-					["questID"] = 1476,	-- Hearts of the Pure
+				i(6312, {	-- Dalin's Heart
 					["races"] = HORDE_ONLY,
 					["classes"] = { WARLOCK },
 					["cr"] = 5682,	-- Dalin Forgewright
 				}),
 				i(3157, {	-- Darksoul Shackle
-					["questID"] = 423,	-- Arugal's Folly
 					["cr"] = 1782,	-- Moonrage Darksoul
 					["races"] = HORDE_ONLY,
 				}),
 				i(3164, {	-- Discolored Worg Heart
-					["questID"] = 429,	-- Wild Hearts
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						1923,	-- Bloodsnout Worg
@@ -94,12 +86,10 @@ _.Zones =
 					},
 				}),
 				i(3156, {	-- Glutton Shackle
-					["questID"] = 423,	-- Arugal's Folly
 					["cr"] = 1779,	-- Moonrage Glutton
 					["races"] = HORDE_ONLY,
 				}),
 				i(3253, {	-- Grizzled Bear Heart
-					["questID"] = 447,	-- A Recipe For Death
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						1778,	-- Ferocious Grizzled Bear
@@ -108,7 +98,6 @@ _.Zones =
 					},
 				}),
 				i(3258, {	-- Hardened Tumor
-					["questID"] = 451,	-- A Recipe For Death
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						1909,	-- Vile Fin Lakestalker
@@ -120,7 +109,6 @@ _.Zones =
 					},
 				}),
 				i(3257, {	-- Lake Creeper Moss
-					["questID"] = 451,	-- A Recipe For Death
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						1956,	-- Elder Lake Creeper
@@ -128,7 +116,6 @@ _.Zones =
 					},
 				}),
 				i(3256, {	-- Lake Skulker Moss
-					["questID"] = 451,	-- A Recipe For Death
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						1954,	-- Elder Lake Skulker
@@ -142,7 +129,6 @@ _.Zones =
 					},
 				}),
 				i(3218, {	-- Pyrewood Shackle
-					["questID"] = 99,	-- Arugal's Folly
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						3529,	-- Moonrage Armorer
@@ -160,7 +146,6 @@ _.Zones =
 					},
 				}),
 				i(3236, {	-- Rot Hide Ichor
-					["questID"] = 443,	-- Rot Hide Ichor
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						1943,	-- Raging Rot Hide
@@ -171,7 +156,6 @@ _.Zones =
 					},
 				}),
 				i(3254, {	-- Skittering Blood
-					["questID"] = 447,	-- A Recipe For Death
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						12433,	-- Krethis Shadowspinner

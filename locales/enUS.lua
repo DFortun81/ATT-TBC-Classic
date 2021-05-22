@@ -614,6 +614,7 @@ app.L = {
 		[112948] = "Intrepid's Locked Strongbox",
 		[113757] = "Shadowforge Cache",
 		[113768] = GetSpellInfo(61820),
+		[113791] = "Brazier of Everfount",
 		[123329] = "Baelog's Chest",
 		[124388] = "Garrett Family Chest",
 		[124389] = "Krom Stoutarm's Chest",

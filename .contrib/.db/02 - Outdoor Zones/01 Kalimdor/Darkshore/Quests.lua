@@ -488,6 +488,7 @@ _.Zones =
 				applyclassicphase(TBC_PHASE_ONE, q(10752, {	-- Onward to Ashenvale
 					["qg"] = 3649,	-- Thundris Windweaver
 					["coord"] = { 37.4, 40.2, DARKSHORE },
+					["maps"] = { ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 18,
 				})),
