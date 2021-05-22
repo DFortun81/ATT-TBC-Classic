@@ -1073,6 +1073,7 @@ app.L = {
 		["Stratholme"] = 317,
 		[C_Map.GetAreaInfo(3431)] = 467,	-- Sunstrider Isle
 		[C_Map.GetAreaInfo(3526)] = 468,	-- Ammen Vale
+		[C_Map.GetAreaInfo(3527)] = 468,	-- Ammen Vale (Crash Site)
 		["Temple of Ahn'Qiraj"] = 320,
 		["The Deadmines"] = 291,
 		["The Temple of Atal'hakkar"] = 220,
