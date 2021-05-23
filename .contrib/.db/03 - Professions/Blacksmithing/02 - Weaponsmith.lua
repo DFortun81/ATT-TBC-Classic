@@ -114,7 +114,7 @@ profession(BLACKSMITHING, {
 			{
 				["name"] = "Weapons",
 				["description"] = "These can be crafted by any Weaponsmith.",
-				["categoryID"] = 32,
+				["categoryID"] = 227,
 				["g"] = {
 					un(PHASE_THREE, {
 						["name"] = "Black Amnesty",

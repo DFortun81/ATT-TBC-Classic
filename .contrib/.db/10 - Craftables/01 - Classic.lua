@@ -625,7 +625,7 @@ _.Craftables = { tier(1, {	-- Classic
 		prof(20219, {	-- Gnomish Engineering
 			["description"] = "These items can only be crafted by Engineers who have completed the Gnomish Engineering quest chain.",
 			["groups"] = {
-				category(2, {	-- Devices
+				category(188, {	-- Devices
 					i(18645),	-- Gnomish Alarm-o-Bot
 					i(10725),	-- Gnomish Battle Chicken
 					i(10645),	-- Gnomish Death Ray
@@ -638,10 +638,10 @@ _.Craftables = { tier(1, {	-- Classic
 					i(18986),	-- Ultrasafe Transporter: Gadgetzan
 					i(18660),	-- World Enlarger
 				}),
-				category(5, {	-- Goggles
+				category(185, {	-- Goggles
 					i(10545),	-- Gnomish Goggles
 				}),
-				category(7, {	-- Parts
+				category(183, {	-- Parts
 					i(10713, {	-- Plans: Inlaid Mithril Cylinder
 						["description"] = "This recipe is crafted by Gnomish Engineers and given to Blacksmiths to learn so that the Blacksmith can craft the item needed by the Engineer.\n\nIf you are missing this recipe, ask a Gnomish Engineer to craft it for you.",
 					}),
@@ -651,7 +651,7 @@ _.Craftables = { tier(1, {	-- Classic
 		prof(20222, {	-- Goblin Engineering
 			["description"] = "These items can only be crafted by Engineers who have completed the Goblin Engineering quest chain.",
 			["groups"] = {
-				category(2, {	-- Devices
+				category(188, {	-- Devices
 					i(18984),	-- Dimensional Ripper - Everlook
 					i(10543),	-- Goblin Construction Helmet
 					i(18587),	-- Goblin Jumper Cables XL
@@ -659,14 +659,14 @@ _.Craftables = { tier(1, {	-- Classic
 					i(10588),	-- Goblin Rocket Helmet
 					i(11825),	-- Pet Bombling
 				}),
-				category(3, {	-- Explosives
+				category(184, {	-- Explosives
 					i(10587),	-- Goblin Bomb Dispenser
 					i(10727),	-- Goblin Dragon Gun
 					i(10577),	-- Goblin Mortar
 					i(10646),	-- Goblin Sapper Charge
 					i(10586),	-- The Big One
 				}),
-				category(7, {	-- Parts
+				category(183, {	-- Parts
 					i(10644, {	-- Recipe: Goblin Rocket Fuel (Engineers make the recipe for alchemists)
 						["description"] = "This recipe is crafted by Goblin Engineers and given to Alchemists to learn so that the Alchemist can craft the item needed by the Engineer.\n\nIf you are missing this recipe, ask a Goblin Engineer to craft it for you.",
 					}),
@@ -681,7 +681,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10513),	-- Mithril Gyro-Shot
 			i(15997),	-- Thorium Shells
 		}),
-		category(2, {	-- Devices
+		category(188, {	-- Devices
 			i(4392),	-- Advanced Target Dummy
 			i(6533),	-- Aquadynamic Fish Attractor
 			i(16022),	-- Arcanite Dragonling
@@ -715,7 +715,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(18639),	-- Ultra-Flash Shadow Reflector
 			i(16009),	-- Voice Amplification Modulator
 		}),
-		category(3, {	-- Explosives
+		category(184, {	-- Explosives
 			i(16040),	-- Arcane Bomb
 			i(4380),	-- Big Bronze Bomb
 			i(4394),	-- Big Iron Bomb
@@ -742,7 +742,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10507),	-- Solid Dynamite
 			i(15993),	-- Thorium Grenade
 		}),
-		category(4, {	-- Fireworks
+		category(194, {	-- Fireworks
 			i(9312),	-- Blue Firework
 			i(21571),	-- Blue Rocket Cluster
 			i(21570),	-- Cluster Launcher
@@ -762,7 +762,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(21557),	-- Small Red Rocket
 			i(19026),	-- Snake Burst Firework
 		}),
-		category(5, {	-- Goggles
+		category(185, {	-- Goggles
 			un(PHASE_FOUR, i(19999)),	-- Bloodvine Goggles
 			un(PHASE_FOUR, i(19998)),	-- Bloodvine Lens
 			i(10499),	-- Bright-Eye Goggles
@@ -779,7 +779,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10502),	-- Spellpower Goggles Xtreme
 			i(15999),	-- Spellpower Goggles Xtreme Plus
 		}),
-		category(6, {	-- Guns
+		category(189, {	-- Guns
 			i(18282),	-- Core Marksman Rifle
 			i(16004),	-- Dark Iron Rifle
 			i(4369),	-- Deadly Blunderbuss
@@ -792,7 +792,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(4379),	-- Silver-Plated Shotgun
 			i(15995),	-- Thorium Rifle
 		}),
-		category(7, {	-- Parts
+		category(183, {	-- Parts
 			i(4382),	-- Bronze Framework
 			i(4371),	-- Bronze Tube
 			i(4364),	-- Coarse Blasting Powder
@@ -816,7 +816,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10560),	-- Unstable Trigger
 			i(4375),	-- Whirring Bronze Gizmo
 		}),
-		category(8, {	-- Scopes
+		category(190, {	-- Scopes
 			i(4407),	-- Accurate Scope
 			i(18283),	-- Biznicks 247x128 Accurascope
 			i(4405),	-- Crude Scope
@@ -827,7 +827,7 @@ _.Craftables = { tier(1, {	-- Classic
 		filter(8, {		-- Shields
 			i(18168),	-- Force Reactive Disk*
 		}),
-		category(9, {	-- Tools
+		category(191, {	-- Tools
 			i(6219),	-- Arclight Spanner
 			i(10498),	-- Gyromatic Micro-Adjustor
 		}),
@@ -1096,7 +1096,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(7279),	-- Small Leather Ammo Pouch
 			i(8218),	-- Thick Leather Ammo Pouch
 		}),
-		category(2, {	-- Devices
+		category(188, {	-- Devices
 			i(18662),	-- Heavy Leather Ball
 		}),
 		category(259, {	-- Cloaks

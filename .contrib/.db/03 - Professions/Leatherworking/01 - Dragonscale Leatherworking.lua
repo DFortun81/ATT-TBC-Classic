@@ -8,7 +8,7 @@ profession(LEATHERWORKING, {
 		["groups"] = {
 			{
 				["name"] = "Shoulders",
-				["categoryID"] = 50,
+				["categoryID"] = 252,
 				["g"] = {
 					{
 						["name"] = "Black Dragonscale Shoulders",
@@ -24,7 +24,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Chest",
-				["categoryID"] = 51,
+				["categoryID"] = 253,
 				["g"] = {
 					{
 						["name"] = "Black Dragonscale Breastplate",
@@ -60,7 +60,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Gloves",
-				["categoryID"] = 53,
+				["categoryID"] = 255,
 				["g"] = {
 					un(PHASE_THREE, {
 						["name"] = "Chromatic Gauntlets",
@@ -81,7 +81,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Pants",
-				["categoryID"] = 55,
+				["categoryID"] = 257,
 				["g"] = {
 					{
 						["name"] = "Black Dragonscale Leggings",
@@ -102,7 +102,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Boots",
-				["categoryID"] = 56,
+				["categoryID"] = 258,
 				["g"] = {
 					{
 						["name"] = "Black Dragonscale Boots",
@@ -113,7 +113,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Cloaks",
-				["categoryID"] = 57,
+				["categoryID"] = 259,
 				["g"] = {
 					un(PHASE_ONE_DIRE_MAUL, {
 						["name"] = "Chromatic Cloak",

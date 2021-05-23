@@ -115,7 +115,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Devices",
-		["categoryID"] = 2,
+		["categoryID"] = 188,
 		["g"] = {
 			{
 				["name"] = "Heavy Leather Ball",

@@ -8,7 +8,7 @@ profession(LEATHERWORKING, {
 		["groups"] = {
 			{
 				["name"] = "Helms",
-				["categoryID"] = 49,
+				["categoryID"] = 251,
 				["g"] = {
 					{
 						["name"] = "Helm of Fire",
@@ -24,7 +24,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Shoulders",
-				["categoryID"] = 50,
+				["categoryID"] = 252,
 				["g"] = {
 					{
 						["name"] = "Living Shoulders",
@@ -45,7 +45,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Chest",
-				["categoryID"] = 51,
+				["categoryID"] = 253,
 				["g"] = {
 					{
 						["name"] = "Living Breastplate",
@@ -66,7 +66,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Gloves",
-				["categoryID"] = 53,
+				["categoryID"] = 255,
 				["g"] = {
 					{
 						["name"] = "Gauntlets of the Sea",
@@ -82,7 +82,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Belts",
-				["categoryID"] = 54,
+				["categoryID"] = 256,
 				["g"] = {
 					un(PHASE_THREE, {
 						["name"] = "Molten Belt",
@@ -93,7 +93,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Pants",
-				["categoryID"] = 55,
+				["categoryID"] = 257,
 				["g"] = {
 					{
 						["name"] = "Living Leggings",
@@ -114,7 +114,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Cloaks",
-				["categoryID"] = 57,
+				["categoryID"] = 259,
 				["g"] = {
 					un(PHASE_ONE_DIRE_MAUL, {
 						["name"] = "Shifting Cloak",

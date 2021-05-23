@@ -5,7 +5,7 @@ profession(ENGINEERING, {
 		["groups"] = {
 			{
 				["name"] = "Devices",
-				["categoryID"] = 2,
+				["categoryID"] = 188,
 				["g"] = {
 					{
 						["name"] = "Dimensional Ripper - Everlook",
@@ -39,7 +39,7 @@ profession(ENGINEERING, {
 			},
 			{
 				["name"] = "Explosives",
-				["categoryID"] = 3,
+				["categoryID"] = 184,
 				["g"] = {
 					{
 						["name"] = "Goblin Bomb Dispenser",
@@ -69,7 +69,7 @@ profession(ENGINEERING, {
 			},
 			{
 				["name"] = "Parts",
-				["categoryID"] = 7,
+				["categoryID"] = 183,
 				["g"] = {
 					{
 						["name"] = "Goblin Rocket Fuel Recipe",

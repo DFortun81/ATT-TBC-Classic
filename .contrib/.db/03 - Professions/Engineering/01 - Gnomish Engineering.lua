@@ -8,7 +8,7 @@ profession(ENGINEERING, {
 		["groups"] = {
 			{
 				["name"] = "Devices",
-				["categoryID"] = 2,
+				["categoryID"] = 188,
 				["g"] = {
 					{
 						["name"] = "Gnomish Alarm-o-Bot",
@@ -60,7 +60,7 @@ profession(ENGINEERING, {
 			},
 			{
 				["name"] = "Goggles",
-				["categoryID"] = 5,
+				["categoryID"] = 185,
 				["g"] = {
 					{
 						["name"] = "Gnomish Goggles",
@@ -70,7 +70,7 @@ profession(ENGINEERING, {
 			},
 			{
 				["name"] = "Parts",
-				["categoryID"] = 7,
+				["categoryID"] = 183,
 				["g"] = {
 					{
 						["name"] = "Inlaid Mithril Cylinder Plans",

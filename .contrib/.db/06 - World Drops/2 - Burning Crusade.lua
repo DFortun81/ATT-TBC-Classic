@@ -2,7 +2,7 @@
 --       W O R L D   D R O P S   M O D U L E       --
 -----------------------------------------------------
 _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
-	category(23, {	-- Helms
+	category(251, {	-- Helms
 		i(31145),	-- Headdress of the Sleeper
 		i(31222),	-- Headdress of Inner Rage
 		i(31272),	-- Crown of Endless Knowledge
@@ -32,18 +32,18 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		i(25065),	-- Turquoise Brooch
 		i(25062),	-- Zircon Amulet
 	}),
-	category(24, {	-- Shoulders
+	category(252, {	-- Shoulders
 		i(24820),	-- Felstone Spaulders
 		i(31148),	-- Demon Hide Spaulders
 		i(31190),	-- The Dreamer's Shoulderpads
 		i(31294),	-- Pauldrons of Surging Mana
 	}),
-	category(27, {	-- Bracers
+	category(254, {	-- Bracers
 		i(24901),	-- Tortured Bracer
 		i(31175),	-- Blade Dancer's Wristguards
 		i(31284),	-- Bracers of Recklessness
 	}),
-	category(26, {	-- Gauntlets
+	category(255, {	-- Gauntlets
 		i(31137),	-- Gauntlets of Purification
 		i(31126),	-- Gloves of Ferocity
 		i(31149),	-- Gloves of Pandemonium
@@ -51,7 +51,7 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		i(31180),	-- Gauntlets of the Skullsplitter
 		i(31280),	-- Thundercaller's Gauntlets
 	}),
-	category(25, {	-- Chest
+	category(253, {	-- Chest
 		i(24808),	-- Unyielding Chain Vest
 		i(31127),	-- Hauberk of Totemic Rage
 		i(31136),	-- Breastplate of Blade Turning
@@ -64,7 +64,7 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		i(31320),	-- Chestguard of Exile
 		i(31340),	-- Will of Edward the Odd
 	}),
-	category(28, {	-- Belts
+	category(256, {	-- Belts
 		i(31131),	-- Sash of Silent Blades
 		i(31138),	-- Storm Lord's Girdle
 		i(31151),	-- Girdle of Siege
@@ -73,7 +73,7 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		i(31293),	-- Girdle of Gale Force
 		i(24886),	-- Skettis Belt
 	}),
-	category(29, {	-- Legs
+	category(257, {	-- Legs
 		i(31133),	-- Leggings of Concentrated Darkness
 		i(31226),	-- Leggings of the Sly
 		i(31237),	-- Elekk Hide Leggings
@@ -84,7 +84,7 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		i(31335),	-- Kilt of Living Growth
 		i(31343),	-- Kamaei's Cerulean Skirt
 	}),
-	category(67, {	-- Boots
+	category(258, {	-- Boots
 		i(31125),	-- Boots of the Decimator
 		i(31173),	-- Boots of Savagery
 		i(31187),	-- Boots of the Pathfinder
@@ -92,7 +92,7 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		i(31276),	-- Boots of Zealotry
 		i(31288),	-- The Master's Treads
 	}),
-	category(68, {	-- Cloaks
+	category(259, {	-- Cloaks
 		i(25030),	-- Silky Velvet Cloak
 		i(25031),	-- Silvermoon Royal Cloak
 		i(25032),	-- Hellfire Cloak
@@ -134,7 +134,7 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		i(25047),	-- Tourmaline Loop
 		i(31326),	-- Truestrike Ring
 	}),
-	category(47, {	-- Armor Kits
+	category(249, {	-- Armor Kits
 		["description"] = "Not armor kits as in item enhancement, but rather sets of random armor pieces that complete a set.",
 		["groups"] = {
 			i(24575),	-- Outlander's Girdle
@@ -583,7 +583,7 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(25029),	-- Warlord's Iron-Vambraces
 		},
 	}),
-	n(-319, {	-- Weapons
+	category(227, {	-- Weapons
 		filter(21, {	-- 1H Axes
 			i(25198),	-- Karaborian Battle Axe
 			i(25199),	-- Knight's War Axe

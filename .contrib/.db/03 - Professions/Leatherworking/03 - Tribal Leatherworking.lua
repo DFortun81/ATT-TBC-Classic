@@ -8,7 +8,7 @@ profession(LEATHERWORKING, {
 		["groups"] = {
 			{
 				["name"] = "Helms",
-				["categoryID"] = 49,
+				["categoryID"] = 251,
 				["g"] = {
 					{
 						["name"] = "Wolfshead Helm",
@@ -19,7 +19,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Shoulders",
-				["categoryID"] = 50,
+				["categoryID"] = 252,
 				["g"] = {
 					{
 						["name"] = "Ironfeather Shoulders",
@@ -30,7 +30,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Chest",
-				["categoryID"] = 51,
+				["categoryID"] = 253,
 				["g"] = {
 					{
 						["name"] = "Chimeric Vest",
@@ -61,7 +61,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Gloves",
-				["categoryID"] = 53,
+				["categoryID"] = 255,
 				["g"] = {
 					{
 						["name"] = "Chimeric Gloves",
@@ -82,7 +82,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Belts",
-				["categoryID"] = 54,
+				["categoryID"] = 256,
 				["g"] = {
 					un(PHASE_THREE, {
 						["name"] = "Corehound Belt",
@@ -93,7 +93,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Pants",
-				["categoryID"] = 55,
+				["categoryID"] = 257,
 				["g"] = {
 					{
 						["name"] = "Chimeric Leggings",
@@ -119,7 +119,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Boots",
-				["categoryID"] = 56,
+				["categoryID"] = 258,
 				["g"] = {
 					{
 						["name"] = "Chimeric Boots",
@@ -140,7 +140,7 @@ profession(LEATHERWORKING, {
 			},
 			{
 				["name"] = "Cloaks",
-				["categoryID"] = 57,
+				["categoryID"] = 259,
 				["g"] = {
 					un(PHASE_ONE_DIRE_MAUL, {
 						["name"] = "Hide of the Wild",

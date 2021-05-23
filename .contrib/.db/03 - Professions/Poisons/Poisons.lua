@@ -2,7 +2,7 @@ profession(40, {	-- Poisons
 	{
 		["classes"] = { ROGUE },
 		["name"] = "Consumable",
-		["categoryID"] = 70,
+		["categoryID"] = 2,
 		["g"] = {
 			-- #if CLASSIC
 			{

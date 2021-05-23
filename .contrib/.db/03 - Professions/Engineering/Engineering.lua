@@ -31,7 +31,7 @@ profession(ENGINEERING, {
 	},
 	{
 		["name"] = "Devices",
-		["categoryID"] = 2,
+		["categoryID"] = 188,
 		["g"] = {
 			{
 				["name"] = "Advanced Target Dummy",
@@ -175,7 +175,7 @@ profession(ENGINEERING, {
 	},
 	{
 		["name"] = "Explosives",
-		["categoryID"] = 3,
+		["categoryID"] = 184,
 		["g"] = {
 			{
 				["name"] = "Arcane Bomb",
@@ -281,7 +281,7 @@ profession(ENGINEERING, {
 	},
 	{
 		["name"] = "Fireworks",
-		["categoryID"] = 4,
+		["categoryID"] = 194,
 		["g"] = {
 			{
 				["name"] = "Blue Firework",
@@ -359,7 +359,7 @@ profession(ENGINEERING, {
 	},
 	{
 		["name"] = "Goggles",
-		["categoryID"] = 5,
+		["categoryID"] = 185,
 		["g"] = {
 			un(PHASE_FOUR, {
 				["name"] = "Bloodvine Goggles",
@@ -425,7 +425,7 @@ profession(ENGINEERING, {
 	},
 	{
 		["name"] = "Guns",
-		["categoryID"] = 6,
+		["categoryID"] = 189,
 		["g"] = {
 			{
 				["name"] = "Core Marksman Rifle",
@@ -475,7 +475,7 @@ profession(ENGINEERING, {
 	},
 	{
 		["name"] = "Parts",
-		["categoryID"] = 7,
+		["categoryID"] = 183,
 		["g"] = {
 			{
 				["name"] = "Bronze Framework",
@@ -569,7 +569,7 @@ profession(ENGINEERING, {
 	},
 	{
 		["name"] = "Scopes",
-		["categoryID"] = 8,
+		["categoryID"] = 190,
 		["g"] = {
 			{
 				["name"] = "Accurate Scope",
@@ -599,7 +599,7 @@ profession(ENGINEERING, {
 	},
 	{
 		["name"] = "Tools",
-		["categoryID"] = 9,
+		["categoryID"] = 191,
 		["g"] = {
 			{
 				["name"] = "Arclight Spanner",

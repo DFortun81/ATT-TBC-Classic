@@ -8,7 +8,7 @@ profession(BLACKSMITHING, {
 		["groups"] = {
 			{
 				["name"] = "Helms",
-				["categoryID"] = 23,
+				["categoryID"] = 218,
 				["g"] = {
 					un(PHASE_THREE, {
 						["name"] = "Dark Iron Helm",
@@ -39,7 +39,7 @@ profession(BLACKSMITHING, {
 			},
 			{
 				["name"] = "Shoulders",
-				["categoryID"] = 24,
+				["categoryID"] = 219,
 				["g"] = {
 					un(TBC_PHASE_ONE, {
 						["name"] = "Dawnbringer Shoulders",
@@ -55,7 +55,7 @@ profession(BLACKSMITHING, {
 			},
 			{
 				["name"] = "Bracers",
-				["categoryID"] = 27,
+				["categoryID"] = 222,
 				["g"] = {
 					{
 						["name"] = "Dark Iron Bracers",
@@ -66,7 +66,7 @@ profession(BLACKSMITHING, {
 			},
 			{
 				["name"] = "Gauntlets",
-				["categoryID"] = 26,
+				["categoryID"] = 221,
 				["g"] = {
 					un(PHASE_THREE, {
 						["name"] = "Dark Iron Gauntlets",
@@ -97,7 +97,7 @@ profession(BLACKSMITHING, {
 			},
 			{
 				["name"] = "Chest",
-				["categoryID"] = 25,
+				["categoryID"] = 220,
 				["g"] = {
 					{
 						["name"] = "Dark Iron Plate",
@@ -133,7 +133,7 @@ profession(BLACKSMITHING, {
 			},
 			{
 				["name"] = "Belts",
-				["categoryID"] = 28,
+				["categoryID"] = 223,
 				["g"] = {
 					{
 						["name"] = "Fiery Chain Girdle",
@@ -144,7 +144,7 @@ profession(BLACKSMITHING, {
 			},
 			{
 				["name"] = "Legs",
-				["categoryID"] = 29,
+				["categoryID"] = 224,
 				["g"] = {
 					{
 						["name"] = "Dark Iron Leggings",
@@ -165,7 +165,7 @@ profession(BLACKSMITHING, {
 			},
 			{
 				["name"] = "Boots",
-				["categoryID"] = 30,
+				["categoryID"] = 225,
 				["g"] = {
 					un(PHASE_FOUR, {
 						["name"] = "Dark Iron Boots",

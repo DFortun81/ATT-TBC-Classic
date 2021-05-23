@@ -1970,7 +1970,7 @@ _.WorldDrops = { tier(1, {	-- Classic
 		i(14868),	-- Warleader's Shoulders
 		i(13066),	-- Wyrmslayer Spaulders
 	}),
-	n(-319, {	-- Weapons
+	category(227, {	-- Weapons
 		filter(21, {	-- 1H Axes
 			i(13014),	-- Axe of Rin'ji
 			i(811),		-- Axe of the Deep Woods
