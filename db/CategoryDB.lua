@@ -101,6 +101,19 @@ select(2, ...).CategoryNames = {
 	[867] = "Prisms & Statues",
 	[868] = "Reagents",
 	[869] = "Crowns",
+	[1000] = "Materials",
+	[1001] = "Spellthreads",
+	[1002] = "Bags",
+	[1003] = "Hats & Hoods",
+	[1004] = "Shoulders",
+	[1005] = "Robes & Tunics",
+	[1006] = "Bracers",
+	[1007] = "Belts",
+	[1008] = "Gloves",
+	[1009] = "Pants",
+	[1010] = "Boots",
+	[1011] = "Cloaks",
+	[1012] = "Nets",
 };
 select(2, ...).CategoryIcons = {
 	[1] = "Interface/Icons/INV_Ammo_Bullet_01",
@@ -201,4 +214,6 @@ select(2, ...).CategoryIcons = {
 	[867] = "Interface/Icons/inv_misc_gem_diamond_03",
 	[868] = "Interface/Icons/spell_arcane_arcanepotency",
 	[869] = "Interface/Icons/inv_crown_01",
+	[1002] = "Interface/Icons/inv_misc_bag_13",
+	[1011] = "Interface/Icons/INV_Misc_Cape_18",
 };
