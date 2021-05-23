@@ -823,6 +823,9 @@ end
 -- Quest Completion Lib
 local DirtyQuests = {};
 local IgnoreErrorQuests = {
+	[1516]=1, 	-- Call of Earth (1/3 Durotar)
+	[1519]=1, 	-- Call of Earth (1/3 Mulgore)
+	[9449]=1, 	-- Call of Earth (1/3 Ammen Vale)
 	[555]=1,	-- Soothing Turtle Bisque (A)
 	[7321]=1,	-- Soothing Turtle Bisque (H)
 	[3630]=1,	-- Gnome Engineering [A]
