@@ -2922,10 +2922,10 @@ local fields = {
 		return "categoryID";
 	end,
 	["text"] = function(t)
-		return L.TRADESKILL_CATEGORY_NAMES[t.categoryID] or ("Unknown Category #" .. t.categoryID);
+		return ATTClassicAD.LocalizedCategoryNames[t.categoryID] or ("Unknown Category #" .. t.categoryID);
 	end,
 	["icon"] = function(t)
-		return L.TRADESKILL_CATEGORY_ICONS[t.categoryID] or "Interface/ICONS/INV_Misc_Gear_02";
+		return ATTC.CategoryIcons[t.categoryID] or "Interface/ICONS/INV_Misc_Gear_02";
 	end,
 };
 app.BaseCategory = app.BaseObjectFields(fields);
@@ -11222,6 +11222,10 @@ app.events.VARIABLES_LOADED = function()
 		OnLeave = MinimapButtonOnLeave,
 	});
 	
+	-- Cache the Localized Category Data
+	ATTClassicAD.LocalizedCategoryNames = setmetatable(ATTClassicAD.LocalizedCategoryNames or {}, { __index = app.CategoryNames });
+	app.CategoryNames = nil;
+	
 	-- Cache the Localized Flight Path Data
 	ATTClassicAD.LocalizedFlightPathDB = setmetatable(ATTClassicAD.LocalizedFlightPathDB or {}, { __index = app.FlightPathDB });
 	app.FlightPathDB = nil;
@@ -11455,6 +11459,7 @@ app.events.VARIABLES_LOADED = function()
 	for i,key in ipairs({
 		"AddonMessageProcessor",
 		"GroupQuestsByGUID",
+		"LocalizedCategoryNames",
 		"LocalizedFlightPathDB",
 		"Position",
 		"RandomSearchFilter",

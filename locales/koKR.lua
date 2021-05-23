@@ -101,7 +101,7 @@ for key,value in pairs({
 })
 do a[key] = value; end
 
-local a = L.TRADESKILL_CATEGORY_NAMES;
+local a = app.CategoryNames;
 for key,value in pairs({
 	-- Engineering
 	[1] = "투사체",	-- Bullets

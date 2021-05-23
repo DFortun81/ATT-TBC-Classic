@@ -5376,9 +5376,27 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 }));
 
 -- Jewelcrafting Item Database
+local REMOVED_WITH_CATA = "removed 4.0.1.10000";
 _.ItemDB = {};
 _.NeverImplemented = {};
-local REMOVED_WITH_CATA = "removed 4.0.1.10000";
+
+-- Recipe Cache (for Validation)
+local recipeCache = {
+	[25614]=1,	-- Design: Silver Rose Pendant
+	[32810]=1,	-- Design: Primal Stone Statue
+};
+local function cacheRecipes(g)
+	if g and type(g) == "table" then
+		if g.groups then cacheRecipes(g.groups); end
+		if g.g then cacheRecipes(g.g); end
+		if g.recipeID then recipeCache[g.recipeID] = true; end
+		if g.spellID then recipeCache[g.spellID] = true; end
+		for i,o in ipairs(g) do
+			cacheRecipes(o);
+		end
+	end
+end
+cacheRecipes(_.Professions);
 
 -- Jewelcrafting Item Recipe Database
 local itemrecipe = function(name, itemID, spellID, spellIDAfterCata, timeline)
@@ -5411,6 +5429,9 @@ local itemrecipe = function(name, itemID, spellID, spellIDAfterCata, timeline)
 		o.name = name;
 	end
 	_.ItemDB[itemID] = applyclassicphase(TBC_PHASE_ONE, o);
+	
+	-- Ensure that this recipe's spellID exists in the profession database.
+	if not recipeCache[o.spellID] then print("MISSING RECIPE", name, o.spellID); end
 	return o;
 end
 local neverimplemented = function(thing)
