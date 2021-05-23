@@ -1049,29 +1049,39 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(25887),	-- Schematic: Purple Smoke Flare
 		}),
 		prof(JEWELCRAFTING, {
+			i(24165),	-- Design: Blazing Eternium Band
 			i(24193),	-- Design: Bold Living Ruby
 			i(24168),	-- Design: Braided Eternium Chain
-			i(24196),	-- Design: Brilliant Living Ruby
-			i(24203, {	-- Design: Brilliant Living Ruby
-				["spellID"] = 0,	-- This is now available via 24196, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
+			-- #if BEFORE CATA
+			i(24192),	-- Design: Bright Living Ruby [TBC] / Design: Delicate Living Ruby [CATA+]
+			-- #endif
+			-- #if BEFORE CATA
+			i(35306),	-- Design: Bright Living Ruby [TBC] / Design: Delicate Living Ruby [CATA+]
+			-- #endif
+			-- #if BEFORE CATA
+			i(24203),	-- Design: Brilliant Dawnstone [TBC] / Design: Brilliant Living Ruby [CATA+]
+			-- #endif
+			-- #if AFTER CATA
+			i(24196),	-- Design: Brilliant Living Ruby [CATA+] / Design: Runed Living Ruby [TBC]
+			-- #endif
+			-- #if AFTER CATA
+			i(24203),	-- Design: Brilliant Dawnstone [TBC] / Design: Brilliant Living Ruby [CATA+]
+			-- #endif
 			i(25906),	-- Design: Brutal Earthstorm Diamond
 			i(24171),	-- Design: Chain of the Twilight Owl
-			i(31879),	-- Design: Deadly Noble Topaz
+			-- #if AFTER CATA
+			i(31879),	-- Design: Deadly Noble Topaz [CATA+] / Design: Wicked Noble Topaz [TBC]
+			-- #endif
 			i(24164),	-- Design: Delicate Eternium Ring
 			i(24194),	-- Design: Delicate Living Ruby
-			i(24192, {	-- Design: Delicate Living Ruby
-				["spellID"] = 0,	-- This is now available via 24194, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
-			i(35306, {	-- Design: Delicate Living Ruby
-				["spellID"] = 0,	-- This is now available via 24194, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
+			-- #if AFTER CATA
+			i(24192),	-- Design: Delicate Living Ruby [CATA+] / Design: Bright Living Ruby [TBC]
+			-- #endif
+			-- #if AFTER CATA
+			i(35306),	-- Design: Delicate Living Ruby [CATA+] / Design: Bright Living Ruby [TBC]
+			-- #endif
 			i(25907),	-- Design: Destructive Skyfire Diamond
 			i(24170),	-- Design: Embrace of the Dawn
-			i(24165),	-- Design: Blazing Eternium Band
 			i(24169),	-- Design: Eye of the Night
 			i(24198),	-- Design: Flashing Living Ruby
 			i(24216),	-- Design: Glinting Nightseye
@@ -1098,6 +1108,9 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 				["spellID"] = 0,	-- This is now available via 24205, need to delink the old plans from the recipe
 				["u"] = REMOVED_FROM_GAME,
 			}),
+			-- #if BEFORE CATA
+			i(24196),	-- Design: Runed Living Ruby [TBC] / Design: Brilliant Living Ruby [CATA+]
+			-- #endif
 			i(24210),	-- Design: Shifting Nightseye
 			i(31876, {	-- Design: Shifting Nightseye
 				["spellID"] = 0,	-- This is now available via 24210, need to delink the old plans from the recipe
@@ -1127,6 +1140,9 @@ _.WorldDrops = { un(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(32411),	-- Design: Thundering Skyfire Diamond
 			i(24211),	-- Design: Timeless Nightseye
 			i(31878),	-- Design: Veiled Nightseye
+			-- #if BEFORE CATA
+			i(31879),	-- Design: Wicked Noble Topaz [TBC] / Design: Deadly Noble Topaz [CATA+]
+			-- #endif
 		}),
 		prof(LEATHERWORKING, {
 			i(29724),	-- Pattern: Cobrascale Gloves (BoE version)
