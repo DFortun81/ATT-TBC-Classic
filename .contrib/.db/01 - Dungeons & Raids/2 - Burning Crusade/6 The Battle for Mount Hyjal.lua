@@ -847,65 +847,19 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_THREE, {	-- Burning Crusade
 					17968,	-- Archimonde
 				},
 				["groups"] = {
-					i(32285, {	-- Design: Flashing Crimson Spinel
-						["spellID"] = 39714,	-- Flashing Crimson Spinel
-						["requireSkill"] = JEWELCRAFTING,
-						["f"] = 200,
-					}),
+					i(32285),	-- Design: Flashing Crimson Spinel
 					-- #if BEFORE CATA
-					i(32296, {	-- Design: Great Lionseye [TBC] / Design: Rigid Empyrean Sapphire [CATA+]
-						-- #if BEFORE CATA
-						["spellID"] = 39725,	-- Great Lionseye [TBC]
-						-- #else
-						["spellID"] = 39721,	-- Rigid Empyrean Sapphire [CATA+]
-						["timeline"] = { "removed 4.0.1.10000" },
-						-- #endif
-						["requireSkill"] = JEWELCRAFTING,
-						["f"] = 200,
-					}),
+					i(32296),	-- Design: Great Lionseye [TBC] / Design: Rigid Empyrean Sapphire [CATA+]
 					-- #endif
-					i(32303, {	-- Design: Inscribed Pyrestone
-						["spellID"] = 39733,	-- Inscribed Pyrestone
-						["requireSkill"] = JEWELCRAFTING,
-						["f"] = 200,
-					}),
-					i(32295, {	-- Design: Mystic Lionseye
-						["spellID"] = 39724,	-- Mystic Lionseye
-						["requireSkill"] = JEWELCRAFTING,
-						["f"] = 200,
-					}),
+					i(32303),	-- Design: Inscribed Pyrestone
+					i(32295),	-- Design: Mystic Lionseye
 					-- #if AFTER CATA
-					i(32296, {	-- Design: Great Lionseye [TBC] / Design: Rigid Empyrean Sapphire [CATA+]
-						-- #if BEFORE CATA
-						["spellID"] = 39725,	-- Great Lionseye [TBC]
-						-- #else
-						["spellID"] = 39721,	-- Rigid Empyrean Sapphire [CATA+]
-						["timeline"] = { "removed 4.0.1.10000" },
-						-- #endif
-						["requireSkill"] = JEWELCRAFTING,
-						["f"] = 200,
-					}),
+					i(32296),	-- Design: Rigid Empyrean Sapphire [CATA+] / Design: Great Lionseye [TBC]
 					-- #endif
-					i(32298, {	-- Design: Shifting Shadowsong Amethyst
-						["spellID"] = 39728,	-- Shifting Shadowsong Amethyst
-						["requireSkill"] = JEWELCRAFTING,
-						["f"] = 200,
-					}),
-					i(32297, {	-- Design: Sovereign Shadowsong Amethyst
-						["spellID"] = 39727,	-- Sovereign Shadowsong Amethyst
-						["requireSkill"] = JEWELCRAFTING,
-						["f"] = 200,
-					}),
-					i(32289, {	-- Design: Stormy Empyrean Sapphire
-						["spellID"] = 39718,	-- Stormy Empyrean Sapphire
-						["requireSkill"] = JEWELCRAFTING,
-						["f"] = 200,
-					}),
-					i(32307, {	-- Design: Veiled Shadowsong Amethyst
-						["spellID"] = 39737,	-- Veiled Shadowsong Amethyst
-						["requireSkill"] = JEWELCRAFTING,
-						["f"] = 200,
-					}),
+					i(32298),	-- Design: Shifting Shadowsong Amethyst
+					i(32297),	-- Design: Sovereign Shadowsong Amethyst
+					i(32289),	-- Design: Stormy Empyrean Sapphire
+					i(32307),	-- Design: Veiled Shadowsong Amethyst
 				},
 			}),
 			n(ZONEDROPS, {

@@ -143,10 +143,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				["name"] = "Amulet of the Moon",
 				["recipeID"] = 25339
 			},
-			{
+			applyclassicphase(WRATH_PHASE_ONE, {
 				["name"] = "Amulet of Truesight",
+				["timeline"] = { "added 3.1.0.9614" },
 				["recipeID"] = 63743
-			},
+			}),
 			{
 				["name"] = "Aquamarine Pendant of the Warrior",
 				["recipeID"] = 26876
@@ -207,10 +208,13 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				["name"] = "Sapphire Pendant of Winter Night",
 				["recipeID"] = 26908
 			},
+			--[[
+			-- This has been moved to Never Implemented.
 			{
 				["name"] = "Silver Rose Pendant",
 				["recipeID"] = 25614
 			},
+			]]--
 			{
 				["name"] = "Thick Bronze Necklace",
 				["recipeID"] = 26927
@@ -343,6 +347,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 
 -- Jewelcrafting Item Database
 _.ItemDB = {};
+_.NeverImplemented = {};
 local REMOVED_WITH_CATA = "removed 4.0.1.10000";
 
 -- Jewelcrafting Item Recipe Database
@@ -382,21 +387,38 @@ end
 -- #if AFTER TBC
 -- Recipes introduced with Burning Crusade
 -- itemrecipe("", ITEMID, SPELLID);
-itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867);
-itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866);
+itemrecipe("Design: Amulet of Flowing Life", 35202, 46126);
 itemrecipe("Design: Bold Crimson Spinel", 32274, 39705);
+itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867);
 itemrecipe("Design: Delicate Crimson Spinel", 32277, 39706);
+itemrecipe("Design: Flashing Crimson Spinel", 32285, 39714);
 itemrecipe("Design: Forceful Seaspray Emerald", 35765, 47053);
+itemrecipe("Design: Hard Khorium Band", 35200, 46124);
+itemrecipe("Design: Hard Khorium Choker", 35203, 46127);
+itemrecipe("Design: Inscribed Pyrestone", 32303, 39733);
 itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742);
+itemrecipe("Design: Loop of Forged Power", 35198, 46122);
+itemrecipe("Design: Mystic Lionseye", 32295, 39724);
+itemrecipe("Design: Pendant of Sunfire", 35201, 46125);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734);
+itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866);
 itemrecipe("Design: Quick Lionseye", 35763, 47056);
 itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740);
 itemrecipe("Design: Reckless Pyrestone", 35762, 47055);
+itemrecipe("Design: Ring of Flowing Life", 35199, 46123);
+itemrecipe("Design: Shifting Shadowsong Amethyst", 32298, 39728);
 itemrecipe("Design: Smooth Lionseye", 32291, 39720);
 itemrecipe("Design: Solid Empyrean Sapphire", 32286, 39715);
+itemrecipe("Design: Sovereign Shadowsong Amethyst", 32297, 39727);
 itemrecipe("Design: Sparkling Empyrean Sapphire", 32287, 39716);
 itemrecipe("Design: Steady Seaspray Emerald", 35764, 47054);
+itemrecipe("Design: Stormy Empyrean Sapphire", 32289, 39718);
 itemrecipe("Design: Subtle Lionseye", 32284, 39713);
+itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737);
+
+-- Recipes created with Burning Crusade, but never implemented. :(
+table.insert(_.NeverImplemented, itemrecipe("Design: Silver Rose Pendant", 20972, 25614));
+table.insert(_.NeverImplemented, recipe(25614));	-- Silver Rose Pendant
 
 -- Recipes Renamed with Cata
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
@@ -414,6 +436,7 @@ itemrecipe({"Design: Bright Crimson Spinel [TBC]", "Design: Delicate Crimson Spi
 itemrecipe({"Design: Brilliant Lionseye [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32290, 39719, 39711, REMOVED_WITH_CATA);
 itemrecipe({"Design: Gleaming Lionseye [TBC]", "Design: Smooth Lionseye [CATA+]"}, 32293, 39722, 39720, REMOVED_WITH_CATA);
 itemrecipe({"Design: Glowing Shadowsong Amethyst [TBC]", "Design: Timeless Shadowsong Amethyst [CATA+]"}, 32301, 39731, 39731, REMOVED_WITH_CATA);
+itemrecipe({"Design: Great Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CATA+]"}, 32296, 39725, 39721, REMOVED_WITH_CATA);
 itemrecipe({"Design: Infused Shadowsong Amethyst [TBC]", "Design: Glinting Shadowsong Amethyst [CATA+]"}, 32300, 39730, 39736, REMOVED_WITH_CATA);
 itemrecipe({"Design: Luminous Pyrestone [TBC]", "Design: Reckless Pyrestone [CATA+]"}, 32305, 39735, 47055, REMOVED_WITH_CATA);
 itemrecipe({"Design: Lustrous Empyrean Sapphire [TBC]", "Design: Sparkling Empyrean Sapphire [CATA+]"}, 32288, 39717, 39716, REMOVED_WITH_CATA);
@@ -426,4 +449,5 @@ itemrecipe({"Design: Thick Lionseye [TBC]", "Design: Subtle Lionseye [CATA+]"}, 
 
 -- #endif
 
-
+-- Apply the Never Implemented flag to the Never Implemented things.
+bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, _.NeverImplemented);
