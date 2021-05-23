@@ -4577,7 +4577,19 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 225902
 				}
 			}
-		}
+		},
+		n(DISCOVERY, {
+			i(141312, {	-- Design: Mass Prospect Felslate
+				["cost"] = {
+					{ "i", 123919, 5 },	-- Felslate
+				},
+			}),
+			i(141311, {	-- Design: Mass Prospect Leystone
+				["cost"] = {
+					{ "i", 123918, 5 },	-- Leystone Ore
+				},
+			}),
+		}),
 	})),
 	applyclassicphase(BFA_PHASE_ONE, tier(8, {	-- BFA
 		{
@@ -4979,7 +4991,33 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 256703
 				}
 			}
-		}
+		},
+		n(DISCOVERY, {
+			{	-- Imbued Kraken's Eye Loop
+				["spellID"] = 289174,	-- Imbued Kraken's Eye Loop
+				["groups"] = {
+					i(166541),	-- Recipe: Emblazoned Kraken's Eye Loop
+				},
+			},
+			{	-- Kraken's Eye Loop
+				["spellID"] = 289105,	-- Kraken's Eye Loop
+				["groups"] = {
+					i(166540),	-- Recipe: Imbued Kraken's Eye Loop
+				},
+			},
+			{	-- Spirited Kraken's Eye Loop
+				["spellID"] = 289180,	-- Spirited Kraken's Eye Loop
+				["groups"] = {
+					i(166543),	-- Recipe: Eternal Kraken's Eye Loop
+				},
+			},
+			{	-- Tidal Kraken's Eye Loop
+				["spellID"] = 289179,	-- Tidal Kraken's Eye Loop
+				["groups"] = {
+					i(166542),	-- Recipe: Spirited Kraken's Eye Loop
+				},
+			},
+		}),
 	})),
 	applyclassicphase(SHADOWLANDS_PHASE_ONE, tier(8, {	-- Shadowlands
 		{
@@ -5291,6 +5329,50 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			}
 		}
 	})),
+	-- #if AFTER CATA
+	n(QUESTS, applyclassicphase(CATA_PHASE_ONE, {
+		q(28778,  {	-- Broken Boar Figurine
+			["provider"] = { "i", 65895 },	-- Figurine - King of Boars
+			["classes"] = { DEATHKNIGHT, PALADIN, WARRIOR },
+			["timeline"] = { "added 4.0.3.13277" },
+			["groups"] = {
+				i(52351),	-- Figurine - King of Boars
+			},
+		}),
+		q(28776,  {	-- Broken Earthen Figurine
+			["provider"] = { "i", 65897 },	-- Figurine - Earthen Guardian
+			["classes"] = { DEATHKNIGHT, PALADIN, WARRIOR, DRUID, DEMONHUNTER, MONK },
+			["timeline"] = { "added 4.0.3.13277" },
+			["groups"] = {
+				i(52352),	-- Figurine - Earthen Guardian
+			},
+		}),
+		q(28777,  {	-- Broken Owl Figurine
+			["provider"] = { "i", 65894 },	-- Figurine - Dream Owl
+			["classes"] = { PALADIN, SHAMAN, DRUID, MONK, PRIEST },
+			["timeline"] = { "added 4.0.3.13277" },
+			["groups"] = {
+				i(52354),	-- Figurine - Dream Owl
+			},
+		}),
+		q(25047,  {	-- Broken Panther Figurine
+			["provider"] = { "i", 52197 },	-- Figurine - Demon Panther
+			["classes"] = { HUNTER, SHAMAN, MONK, DEMONHUNTER, DRUID, ROGUE },
+			["timeline"] = { "added 4.0.3.13277" },
+			["groups"] = {
+				i(52199),	-- Figurine - Demon Panther
+			},
+		}),
+		q(28775,  {	-- Broken Serpent Figurine
+			["provider"] = { "i", 65896 },	-- Figurine - Jeweled Serpent
+			["classes"] = { SHAMAN, DRUID, MONK, PRIEST, MAGE, WARLOCK },
+			["timeline"] = { "added 4.0.3.13277" },
+			["groups"] = {
+				i(52353),	-- Figurine - Jeweled Serpent
+			},
+		}),
+	})),
+	-- #endif
 }));
 
 -- Jewelcrafting Item Database
