@@ -1,7 +1,7 @@
 profession(BLACKSMITHING, {
 	{
 		["name"] = "Materials",
-		["categoryID"] = 20,
+		["categoryID"] = 215,
 		["g"] = {
 			{
 				["name"] = "Arcanite Rod",
@@ -51,7 +51,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Weapon Mods",
-		["categoryID"] = 21,
+		["categoryID"] = 216,
 		["g"] = {
 			{
 				["name"] = "Coarse Sharpening Stone",
@@ -109,7 +109,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Armor Mods",
-		["categoryID"] = 22,
+		["categoryID"] = 217,
 		["g"] = {
 			{
 				["name"] = "Iron Shield Spike",
@@ -131,7 +131,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Helms",
-		["categoryID"] = 23,
+		["categoryID"] = 218,
 		["g"] = {
 			{
 				["name"] = "Barbaric Iron Helm",
@@ -185,7 +185,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Shoulders",
-		["categoryID"] = 24,
+		["categoryID"] = 219,
 		["g"] = {
 			{
 				["name"] = "Barbaric Iron Shoulders",
@@ -243,7 +243,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Bracers",
-		["categoryID"] = 27,
+		["categoryID"] = 222,
 		["g"] = {
 			{
 				["name"] = "Copper Bracers",
@@ -289,7 +289,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Gauntlets",
-		["categoryID"] = 26,
+		["categoryID"] = 221,
 		["g"] = {
 			{
 				["name"] = "Barbaric Iron Gloves",
@@ -363,7 +363,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Chest",
-		["categoryID"] = 25,
+		["categoryID"] = 220,
 		["g"] = {
 			{
 				["name"] = "Barbaric Iron Breastplate",
@@ -473,7 +473,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Belts",
-		["categoryID"] = 28,
+		["categoryID"] = 223,
 		["g"] = {
 			{
 				["name"] = "Copper Chain Belt",
@@ -519,7 +519,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Legs",
-		["categoryID"] = 29,
+		["categoryID"] = 224,
 		["g"] = {
 			{
 				["name"] = "Copper Chain Pants",
@@ -586,7 +586,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Boots",
-		["categoryID"] = 30,
+		["categoryID"] = 225,
 		["g"] = {
 			{
 				["name"] = "Barbaric Iron Boots",
@@ -648,7 +648,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Shields",
-		["categoryID"] = 31,
+		["categoryID"] = 226,
 		["g"] = {
 			un(PHASE_FIVE, {
 				["name"] = "Jagged Obsidian Shield",
@@ -658,7 +658,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Weapons",
-		["categoryID"] = 32,
+		["categoryID"] = 227,
 		["g"] = {
 			{
 				["name"] = "Big Black Mace",
@@ -875,7 +875,7 @@ profession(BLACKSMITHING, {
 	},
 	{
 		["name"] = "Skeleton Keys",
-		["categoryID"] = 33,
+		["categoryID"] = 228,
 		["g"] = {
 			{
 				["name"] = "Arcanite Skeleton Key",

@@ -220,7 +220,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				["recipeID"] = 26927
 			}
 		}),
-		category(20, {	-- Materials
+		category(168, {	-- Materials
 			{
 				["name"] = "Bronze Setting",
 				["recipeID"] = 25278
@@ -238,7 +238,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				["recipeID"] = 26880
 			}
 		}),
-		category(23, {	-- Helms
+		category(167, {	-- Crowns
 			{
 				["name"] = "Emerald Crown of Destruction",
 				["recipeID"] = 26906
@@ -5533,6 +5533,7 @@ itemrecipe({"Design: Thick Lionseye [TBC]", "Design: Subtle Lionseye [CATA+]"}, 
 -- #endif
 
 -- #if AFTER WRATH
+--[[
 i(24169),	-- Design: Eye of the Night
 i(24198),	-- Design: Flashing Living Ruby
 i(24216),	-- Design: Glinting Nightseye
@@ -5588,6 +5589,7 @@ i(24166),	-- Design: Thick Felsteel Necklace
 i(32411),	-- Design: Thundering Skyfire Diamond
 i(24211),	-- Design: Timeless Nightseye
 i(31878),	-- Design: Veiled Nightseye
+]]--
 -- #endif
 
 -- #if AFTER CATA

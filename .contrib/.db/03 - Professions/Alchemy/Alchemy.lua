@@ -1,7 +1,7 @@
 profession(ALCHEMY, {
 	{
 		["name"] = "Materials",
-		["categoryID"] = 13,
+		["categoryID"] = 644,
 		["g"] = {
 			{
 				["name"] = "Ghost Dye",
@@ -19,7 +19,7 @@ profession(ALCHEMY, {
 	},
 	{
 		["name"] = "Potions",
-		["categoryID"] = 14,
+		["categoryID"] = 638,
 		["g"] = {
 			{
 				["name"] = "Discolored Healing Potion",
@@ -228,7 +228,7 @@ profession(ALCHEMY, {
 	},
 	{
 		["name"] = "Elixirs",
-		["categoryID"] = 15,
+		["categoryID"] = 639,
 		["g"] = {
 			{
 				["name"] = "Arcane Elixir",
@@ -370,7 +370,7 @@ profession(ALCHEMY, {
 	},
 	{
 		["name"] = "Flasks",
-		["categoryID"] = 16,
+		["categoryID"] = 640,
 		["g"] = {
 			{
 				["name"] = "Flask of Chromatic Resistance",
@@ -396,7 +396,7 @@ profession(ALCHEMY, {
 	},
 	{
 		["name"] = "Transmutes",
-		["categoryID"] = 17,
+		["categoryID"] = 641,
 		["g"] = {
 			{
 				["name"] = "Transmute: Air to Fire",
@@ -450,7 +450,7 @@ profession(ALCHEMY, {
 	},
 	{
 		["name"] = "Trinkets",
-		["categoryID"] = 18,
+		["categoryID"] = 642,
 		["g"] = {
 			{
 				["name"] = "Philosopher's Stone",
@@ -460,7 +460,7 @@ profession(ALCHEMY, {
 	},
 	{
 		["name"] = "Oils",
-		["categoryID"] = 19,
+		["categoryID"] = 643,
 		["g"] = {
 			{
 				["name"] = "Blackmouth Oil",

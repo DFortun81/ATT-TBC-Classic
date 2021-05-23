@@ -1,7 +1,7 @@
 profession(LEATHERWORKING, {
 	{
 		["name"] = "Materials",
-		["categoryID"] = 46,
+		["categoryID"] = 247,
 		["g"] = {
 			{
 				["name"] = "Cured Heavy Hide",
@@ -51,7 +51,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Armor Kits",
-		["categoryID"] = 47,
+		["categoryID"] = 249,
 		["g"] = {
 			{
 				["name"] = "Core Armor Kit",
@@ -81,7 +81,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Bags",
-		["categoryID"] = 48,
+		["categoryID"] = 250,
 		["g"] = {
 			{
 				["name"] = "Heavy Leather Ammo Pouch",
@@ -125,7 +125,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Helms",
-		["categoryID"] = 49,
+		["categoryID"] = 251,
 		["g"] = {
 			{
 				["name"] = "Big Voodoo Mask",
@@ -171,7 +171,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Shoulders",
-		["categoryID"] = 50,
+		["categoryID"] = 252,
 		["g"] = {
 			{
 				["name"] = "Barbaric Shoulders",
@@ -221,7 +221,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Chest",
-		["categoryID"] = 51,
+		["categoryID"] = 253,
 		["g"] = {
 			{
 				["name"] = "Barbaric Harness",
@@ -352,7 +352,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Bracers",
-		["categoryID"] = 52,
+		["categoryID"] = 254,
 		["g"] = {
 			{
 				["name"] = "Barbaric Bracers",
@@ -434,7 +434,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Gloves",
-		["categoryID"] = 53,
+		["categoryID"] = 255,
 		["g"] = {
 			{
 				["name"] = "Barbaric Gloves",
@@ -548,7 +548,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Belts",
-		["categoryID"] = 54,
+		["categoryID"] = 256,
 		["g"] = {
 			{
 				["name"] = "Barbaric Belt",
@@ -631,7 +631,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Pants",
-		["categoryID"] = 55,
+		["categoryID"] = 257,
 		["g"] = {
 			{
 				["name"] = "Barbaric Leggings",
@@ -705,7 +705,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Boots",
-		["categoryID"] = 56,
+		["categoryID"] = 258,
 		["g"] = {
 			un(PHASE_FIVE_CATCH_UP, {
 				["name"] = "Bramblewood Boots",
@@ -759,7 +759,7 @@ profession(LEATHERWORKING, {
 	},
 	{
 		["name"] = "Cloaks",
-		["categoryID"] = 57,
+		["categoryID"] = 259,
 		["g"] = {
 			{
 				["name"] = "Big Voodoo Cloak",

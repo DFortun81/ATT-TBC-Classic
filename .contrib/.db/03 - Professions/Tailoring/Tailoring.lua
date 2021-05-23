@@ -1,7 +1,7 @@
 profession(TAILORING, {
 	{
 		["name"] = "Materials",
-		["categoryID"] = 58,
+		["categoryID"] = 230,
 		["g"] = {
 			{
 				["name"] = "Bolt of Linen Cloth",
@@ -35,7 +35,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Bags",
-		["categoryID"] = 59,
+		["categoryID"] = 233,
 		["g"] = {
 			un(PHASE_FIVE, {
 				["name"] = "Big Bag of Enchantment",
@@ -125,7 +125,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Hats & Hoods",
-		["categoryID"] = 60,
+		["categoryID"] = 234,
 		["g"] = {
 			{
 				["name"] = "Admiral's Hat",
@@ -191,7 +191,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Shoulders",
-		["categoryID"] = 61,
+		["categoryID"] = 235,
 		["g"] = {
 			un(PHASE_THREE, {
 				["name"] = "Argent Shoulders",
@@ -257,7 +257,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Robes & Tunics",
-		["categoryID"] = 62,
+		["categoryID"] = 236,
 		["g"] = {
 			{
 				["name"] = "Azure Silk Vest",
@@ -471,7 +471,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Bracers",
-		["categoryID"] = 63,
+		["categoryID"] = 237,
 		["g"] = {
 			{
 				["name"] = "Flarecore Wraps",
@@ -489,7 +489,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Belts",
-		["categoryID"] = 64,
+		["categoryID"] = 238,
 		["g"] = {
 			{
 				["name"] = "Azure Silk Belt",
@@ -539,7 +539,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Gloves",
-		["categoryID"] = 65,
+		["categoryID"] = 239,
 		["g"] = {
 			{
 				["name"] = "Azure Silk Gloves",
@@ -637,7 +637,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Pants",
-		["categoryID"] = 66,
+		["categoryID"] = 240,
 		["g"] = {
 			{
 				["name"] = "Azure Silk Pants",
@@ -739,7 +739,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Boots",
-		["categoryID"] = 67,
+		["categoryID"] = 241,
 		["g"] = {
 			un(PHASE_THREE, {
 				["name"] = "Argent Boots",
@@ -813,7 +813,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Cloaks",
-		["categoryID"] = 68,
+		["categoryID"] = 242,
 		["g"] = {
 			{
 				["name"] = "Azure Silk Cloak",
@@ -883,7 +883,7 @@ profession(TAILORING, {
 	},
 	{
 		["name"] = "Shirts",
-		["categoryID"] = 69,
+		["categoryID"] = 243,
 		["g"] = {
 			{
 				["name"] = "Black Swashbuckler's Shirt",

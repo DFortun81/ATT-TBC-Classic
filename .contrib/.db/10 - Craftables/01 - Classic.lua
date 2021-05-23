@@ -1,11 +1,11 @@
 _.Craftables = { tier(1, {	-- Classic
 	prof(ALCHEMY, {
-		category(20, {	-- Materials
+		category(644, {	-- Materials
 			i(9210),	-- Ghost Dye
 			i(9061),	-- Goblin Rocket Fuel
 			un(PHASE_FOUR, i(19931)),	-- Gurubashi Mojo Madness
 		}),
-		category(14, {	-- Potions
+		category(638, {	-- Potions
 			i(4596),	-- Discolored Healing Potion
 			i(12190),	-- Dreamless Sleep Potion
 			i(6049),	-- Fire Protection Potion
@@ -57,7 +57,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(3382),	-- Weak Troll's Blood Potion
 			i(9144),	-- Wildvine Potion
 		}),
-		category(15, {	-- Elixirs
+		category(639, {	-- Elixirs
 			i(9155),	-- Arcane Elixir
 			i(10592),	-- Catseye Elixir
 			i(8949),	-- Elixir of Agility
@@ -93,20 +93,20 @@ _.Craftables = { tier(1, {	-- Classic
 			i(9088),	-- Gift of Arthas
 			i(13454),	-- Greater Arcane Elixir
 		}),
-		category(16, {	-- Flasks
+		category(640, {	-- Flasks
 			i(13513),	-- Flask of Chromatic Resistance
 			i(13511),	-- Flask of Distilled Wisdom
 			i(13506),	-- Flask of Petrification
 			i(13512),	-- Flask of Supreme Power
 			i(13510),	-- Flask of the Titans
 		}),
-		category(17, {	-- Transmutes
+		category(641, {	-- Transmutes
 			i(12360),	-- Arcanite Bar
 		}),
-		category(18, {	-- Trinkets
+		category(642, {	-- Trinkets
 			i(9149),	-- Philosopher's Stone
 		}),
-		category(19, {	-- Oils
+		category(643, {	-- Oils
 			i(6370),	-- Blackmouth Oil
 			i(6371),	-- Fire Oil
 			i(3829),	-- Frost Oil
@@ -119,28 +119,28 @@ _.Craftables = { tier(1, {	-- Classic
 		prof(9788, {	-- Armorsmith
 			["description"] = "These items can only be crafted by Blacksmiths who have completed the Art of the Armorsmith quest chain.",
 			["groups"] = {
-				category(23, {	-- Helms
+				category(218, {	-- Helms
 					un(PHASE_THREE, i(19148)),	-- Dark Iron Helm
 					un(PHASE_THREE, i(12620)),	-- Enchanted Thorium Helm
 					i(12636),	-- Helm of the Great Chief
 					i(12640),	-- Lionheart Helm
 					i(12633),	-- Whitesoul Helm
 				}),
-				category(24, {	-- Shoulders
+				category(219, {	-- Shoulders
 					un(TBC_PHASE_ONE, i(12625)),	-- Dawnbringer Shoulders
 					i(16988),	-- Fiery Chain Shoulders
 				}),
-				category(27, {	-- Bracers
+				category(222, {	-- Bracers
 					i(17014),	-- Dark Iron Bracers
 				}),
-				category(26, {	-- Gauntlets
+				category(221, {	-- Gauntlets
 					un(PHASE_THREE, i(19164)),	-- Dark Iron Gauntlets
 					i(12631),	-- Fiery Plate Gauntlets
 					i(12632),	-- Storm Gauntlets
 					i(12639),	-- Stronghold Gauntlets
 					i(7938),	-- Truesilver Gauntlets
 				}),
-				category(25, {	-- Chest
+				category(220, {	-- Chest
 					i(11604),	-- Dark Iron Plate
 					i(12628),	-- Demon Forged Breastplate
 					un(PHASE_THREE, i(12618)),	-- Enchanted Thorium Breastplate
@@ -148,15 +148,15 @@ _.Craftables = { tier(1, {	-- Classic
 					i(7939),	-- Truesilver Breastplate
 					i(12624),	-- Wildthorn Mail
 				}),
-				category(28, {	-- Belts
+				category(223, {	-- Belts
 					i(16989),	-- Fiery Chain Girdle
 				}),
-				category(29, {	-- Legs
+				category(224, {	-- Legs
 					i(17013),	-- Dark Iron Leggings
 					un(PHASE_THREE, i(12619)),	-- Enchanted Thorium Leggings
 					un(PHASE_FIVE, i(22385)),	-- Titanic Leggings
 				}),
-				category(30, {	-- Boots
+				category(225, {	-- Boots
 					un(PHASE_FOUR, i(20039)),	-- Dark Iron Boots
 				}),
 			},
@@ -209,7 +209,7 @@ _.Craftables = { tier(1, {	-- Classic
 						un(PHASE_FIVE, i(22383)),	-- Sageblade
 					},
 				}),
-				category(32, {	-- Weapons
+				category(227, {	-- Weapons
 					["description"] = "These can be crafted by any Weaponsmith.",
 					["groups"] = {
 						un(PHASE_THREE, i(19166)),	-- Black Amnesty
@@ -249,7 +249,7 @@ _.Craftables = { tier(1, {	-- Classic
 				}),
 			},
 		}),
-		category(20, {	-- Materials
+		category(215, {	-- Materials
 			i(16206),	-- Arcanite Rod
 			i(3478),	-- Coarse Grinding Stone
 			i(12644),	-- Dense Grinding Stone
@@ -262,7 +262,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(7966),	-- Solid Grinding Stone
 			i(11144),	-- Truesilver Rod
 		}),
-		category(21, {	-- Weapon Mods
+		category(216, {	-- Weapon Mods
 			i(2863),	-- Coarse Sharpening Stone
 			i(3240),	-- Coarse Weightstone
 			i(12404),	-- Dense Sharpening Stone
@@ -277,7 +277,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(7965),	-- Solid Weightstone
 			i(6041),	-- Steel Weapon Chain
 		}),
-		category(22, {	-- Armor Mods
+		category(217, {	-- Armor Mods
 			i(6042),	-- Iron Shield Spike
 			i(7967),	-- Mithril Shield Spike
 			i(7969),	-- Mithril Spurs
@@ -344,7 +344,7 @@ _.Craftables = { tier(1, {	-- Classic
 		filter(8, {		-- Shields
 			un(PHASE_FIVE, i(22198)),	-- Jagged Obsidian Shield (AQ)
 		}),
-		category(23, {	-- Helms
+		category(218, {	-- Helms
 			i(7915),	-- Barbaric Iron Helm
 			un(PHASE_FOUR, i(20551)),	-- Darkrune Helm
 			i(3837),	-- Golden Scale Coif
@@ -358,7 +358,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(7922),	-- Steel Plate Helm
 			i(12410),	-- Thorium Helm
 		}),
-		category(24, {	-- Shoulders
+		category(219, {	-- Shoulders
 			i(7913),	-- Barbaric Iron Shoulders
 			un(PHASE_FOUR, i(19691)),	-- Bloodsoul Shoulders
 			i(11605),	-- Dark Iron Shoulders
@@ -373,7 +373,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(12610),	-- Runic Plate Shoulders
 			i(3481),	-- Silvered Bronze Shoulders
 		}),
-		category(27, {	-- Bracers
+		category(222, {	-- Bracers
 			i(2853),	-- Copper Bracers
 			i(6040),	-- Golden Scale Bracers
 			i(3835),	-- Green Iron Bracers
@@ -384,7 +384,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(2854),	-- Runed Copper Bracers
 			i(12408),	-- Thorium Bracers
 		}),
-		category(26, {	-- Gauntlets
+		category(221, {	-- Gauntlets
 			i(7917),	-- Barbaric Iron Gloves
 			un(PHASE_FIVE, i(22194)),	-- Black Grasp of the Destroyer
 			un(PHASE_FOUR, i(19692)),	-- Bloodsoul Gauntlets
@@ -401,7 +401,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(3472),	-- Runed Copper Gauntlets
 			i(3483),	-- Silvered Bronze Gauntlets
 		}),
-		category(25, {	-- Chest
+		category(220, {	-- Chest
 			i(7914),	-- Barbaric Iron Breastplate
 			un(PHASE_FOUR, i(19690)),	-- Bloodsoul Breastplate
 			i(3471),	-- Copper Chain Vest
@@ -428,7 +428,7 @@ _.Craftables = { tier(1, {	-- Classic
 			un(PHASE_FIVE, i(22196)),	-- Thick Obsidian Breastplate
 			i(12405),	-- Thorium Armor
 		}),
-		category(28, {	-- Belts
+		category(223, {	-- Belts
 			i(2851),	-- Copper Chain Belt
 			un(PHASE_THREE, i(19051)),	-- Girdle of the Dawn
 			un(PHASE_FIVE, i(22197)),	-- Heavy Obsidian Belt
@@ -440,7 +440,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(2857),	-- Runed Copper Belt
 			i(12406),	-- Thorium Belt
 		}),
-		category(29, {	-- Legs
+		category(224, {	-- Legs
 			i(2852),	-- Copper Chain Pants
 			un(PHASE_FOUR, i(19694)),	-- Darksoul Leggings
 			i(3843),	-- Golden Scale Leggings
@@ -457,7 +457,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10423),	-- Silvered Bronze Leggings
 			i(12414),	-- Thorium Leggings
 		}),
-		category(30, {	-- Boots
+		category(225, {	-- Boots
 			i(7916),	-- Barbaric Iron Boots
 			i(3469),	-- Copper Chain Boots
 			i(3847),	-- Golden Scale Boots
@@ -473,7 +473,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(3482),	-- Silvered Bronze Boots
 			i(12409),	-- Thorium Boots
 		}),
-		category(33, {	-- Skeleton Keys
+		category(228, {	-- Skeleton Keys
 			i(15872),	-- Arcanite Skeleton Key
 			i(15870),	-- Golden Skeleton Key
 			i(15869),	-- Silver Skeleton Key
@@ -501,7 +501,7 @@ _.Craftables = { tier(1, {	-- Classic
 		-- #endif
 	}),
 	prof(COOKING, {
-		category(10, {	-- Everyday Cooking
+		category(63, {	-- Everyday Cooking
 			i(13935),	-- Baked Salmon
 			i(4457),	-- Barbecued Buzzard Wing
 			i(2888),	-- Beer Basted Boar Ribs
@@ -579,11 +579,11 @@ _.Craftables = { tier(1, {	-- Classic
 			i(16766),	-- Undermine Clam Chowder
 			i(733),		-- Westfall Stew
 		}),
-		category(11, {	-- Holiday Cooking
+		category(58, {	-- Holiday Cooking
 			i(17197),	-- Gingerbread Cookie
 			i(17198),	-- Egg Nog
 		}),
-		category(12, {	-- Unusual Delights
+		category(70, {	-- Unusual Delights
 			un(PHASE_FIVE, i(21023)),	-- Dirge's Kickin' Chimaerok Chops
 			i(12217),	-- Dragonbreath Chili
 			i(6657),	-- Savory Deviate Delight
@@ -591,14 +591,14 @@ _.Craftables = { tier(1, {	-- Classic
 		}),
 	}),
 	prof(ENCHANTING, {
-		category(34, {	-- Rods
+		category(697, {	-- Rods
 			i(16207),	-- Runed Arcanite Rod
 			i(6218),	-- Runed Copper Rod
 			i(11130),	-- Runed Golden Rod
 			i(6339),	-- Runed Silver Rod
 			i(11145),	-- Runed Truesilver Rod
 		}),
-		category(35, {	-- Reagents
+		category(701, {	-- Reagents
 			i(12810),	-- Enchanted Leather
 			i(12655),	-- Enchanted Thorium Bar
 		}),
@@ -611,7 +611,7 @@ _.Craftables = { tier(1, {	-- Classic
 		filter(53, {	-- Trinkets
 			i(11811),	-- Smoking Heart of the Mountain
 		}),
-		un(PHASE_FIVE, category(44, {	-- Oils
+		un(PHASE_FIVE, category(699, {	-- Oils
 			un(PHASE_FIVE, i(20748)),	-- Brilliant Mana Oil
 			un(PHASE_FIVE, i(20749)),	-- Brilliant Wizard Oil
 			un(PHASE_FIVE, i(20747)),	-- Lesser Mana Oil
@@ -962,11 +962,11 @@ _.Craftables = { tier(1, {	-- Classic
 		prof(10656, {	-- Dragonscale Leatherworking
 			["description"] = "These items can only be crafted by Leatherworkers who have completed the associated quest.",
 			["groups"] = {
-				category(50, {	-- Shoulders
+				category(252, {	-- Shoulders
 					i(15051),	-- Black Dragonscale Shoulders
 					i(15049),	-- Blue Dragonscale Shoulders
 				}),
-				category(51, {	-- Chest
+				category(253, {	-- Chest
 					i(15050),	-- Black Dragonscale Breastplate
 					i(15048),	-- Blue Dragonscale Breastplate
 					i(8367),	-- Dragonscale Breastplate
@@ -974,20 +974,20 @@ _.Craftables = { tier(1, {	-- Classic
 					i(15045),	-- Green Dragonscale Breastplate
 					i(15047),	-- Red Dragonscale Breastplate
 				}),
-				category(53, {	-- Gloves
+				category(255, {	-- Gloves
 					un(PHASE_THREE, i(19157)),	-- Chromatic Gauntlets
 					i(8347),	-- Dragonscale Gauntlets
 					i(20296),	-- Green Dragonscale Gauntlets
 				}),
-				category(55, {	-- Pants
+				category(257, {	-- Pants
 					i(15052),	-- Black Dragonscale Leggings
 					i(20295),	-- Blue Dragonscale Leggings
 					i(15046),	-- Green Dragonscale Leggings
 				}),
-				category(56, {	-- Boots
+				category(258, {	-- Boots
 					i(16984),	-- Black Dragonscale Boots
 				}),
-				category(57, {	-- Cloaks
+				category(259, {	-- Cloaks
 					un(PHASE_ONE_DIRE_MAUL, i(18509)),	-- Chromatic Cloak
 				}),
 			},
@@ -995,33 +995,33 @@ _.Craftables = { tier(1, {	-- Classic
 		prof(10658, {	-- Elemental Leatherworking
 			["description"] = "These items can only be crafted by Leatherworkers who have completed the associated quest.",
 			["groups"] = {
-				category(49, {	-- Helms
+				category(251, {	-- Helms
 					i(8348),	-- Helm of Fire
 					i(16983),	-- Molten Helm
 				}),
-				category(50, {	-- Shoulders
+				category(252, {	-- Shoulders
 					i(15061),	-- Living Shoulders
 					i(15058),	-- Stormshroud Shoulders
 					i(15055),	-- Volcanic Shoulders
 				}),
-				category(51, {	-- Chest
+				category(253, {	-- Chest
 					i(15059),	-- Living Breastplate
 					i(15056),	-- Stormshroud Armor
 					i(15053),	-- Volcanic Breastplate
 				}),
-				category(53, {	-- Gloves
+				category(255, {	-- Gloves
 					i(8346),	-- Gauntlets of the Sea
 					i(21278),	-- Stormshroud Gloves
 				}),
-				category(54, {	-- Belts
+				category(256, {	-- Belts
 					un(PHASE_THREE, i(19163)),	-- Molten Belt
 				}),
-				category(55, {	-- Pants
+				category(257, {	-- Pants
 					i(15060),	-- Living Leggings
 					i(15057),	-- Stormshroud Pants
 					i(15054),	-- Volcanic Leggings
 				}),
-				category(57, {	-- Cloaks
+				category(259, {	-- Cloaks
 					un(PHASE_ONE_DIRE_MAUL, i(18511)),	-- Shifting Cloak
 				}),
 			},
@@ -1029,44 +1029,44 @@ _.Craftables = { tier(1, {	-- Classic
 		prof(10660, {	-- Tribal Leatherworking
 			["description"] = "These items can only be crafted by Leatherworkers who have completed the associated quest.",
 			["groups"] = {
-				category(49, {	-- Helms
+				category(251, {	-- Helms
 					i(8345),	-- Wolfshead Helm
 				}),
-				category(50, {	-- Shoulders
+				category(252, {	-- Shoulders
 					i(15067),	-- Ironfeather Shoulders
 				}),
-				category(51, {	-- Chest
+				category(253, {	-- Chest
 					i(15075),	-- Chimeric Vest
 					i(8349),	-- Feathered Breastplate
 					i(15068),	-- Frostsaber Tunic
 					i(15066),	-- Ironfeather Breastplate
 					i(15064),	-- Warbear Harness
 				}),
-				category(53, {	-- Gloves
+				category(255, {	-- Gloves
 					i(15074),	-- Chimeric Gloves
 					i(15063),	-- Devilsaur Gauntlets
 					i(15070),	-- Frostsaber Gloves
 				}),
-				category(54, {	-- Belts
+				category(256, {	-- Belts
 					un(PHASE_THREE, i(19162)),	-- Corehound Belt
 				}),
-				category(55, {	-- Pants
+				category(257, {	-- Pants
 					i(15072),	-- Chimeric Leggings
 					i(15062),	-- Devilsaur Leggings
 					i(15069),	-- Frostsaber Leggings
 					i(15065),	-- Warbear Woolies
 				}),
-				category(56, {	-- Boots
+				category(258, {	-- Boots
 					i(15073),	-- Chimeric Boots
 					i(16982),	-- Corehound Boots
 					i(15071),	-- Frostsaber Boots
 				}),
-				category(57, {	-- Cloaks
+				category(259, {	-- Cloaks
 					un(PHASE_ONE_DIRE_MAUL, i(18510)),	-- Hide of the Wild
 				}),
 			},
 		}),
-		category(58, {	-- Materials
+		category(247, {	-- Materials
 			i(4236),	-- Cured Heavy Hide
 			i(4231),	-- Cured Light Hide
 			i(4233),	-- Cured Medium Hide
@@ -1079,7 +1079,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(8170),	-- Rugged Leather
 			i(4304),	-- Thick Leather
 		}),
-		category(47, {	-- Armor Kits
+		category(249, {	-- Armor Kits
 			i(18251),	-- Core Armor Kit
 			i(4265),	-- Heavy Armor Kit
 			i(2304),	-- Light Armor Kit
@@ -1087,7 +1087,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(15564),	-- Rugged Armor Kit
 			i(8173),	-- Thick Armor Kit
 		}),
-		category(48, {	-- Bags
+		category(250, {	-- Bags
 			i(7372),	-- Heavy Leather Ammo Pouch
 			i(7371),	-- Heavy Quiver
 			i(5081),	-- Kodo Hide Bag
@@ -1099,7 +1099,7 @@ _.Craftables = { tier(1, {	-- Classic
 		category(2, {	-- Devices
 			i(18662),	-- Heavy Leather Ball
 		}),
-		category(57, {	-- Cloaks
+		category(259, {	-- Cloaks
 			i(8216),	-- Big Voodoo Cloak
 			i(7283),	-- Black Whelp Cloak
 			i(2316),	-- Dark Leather Cloak
@@ -1114,7 +1114,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(8215),	-- Wild Leather Cloak
 		}),
 		filter(5, {	-- Leather
-			category(49, {	-- Helms
+			category(251, {	-- Helms
 				i(8201),	-- Big Voodoo Mask
 				un(PHASE_FIVE_CATCH_UP, i(22759)),	-- Bramblewood Helm
 				i(8174),	-- Comfortable Leather Hat
@@ -1123,7 +1123,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(15086),	-- Wicked Leather Headband (Trainable now, old Pattern id 15744 used to teach this.)
 				i(8214),	-- Wild Leather Helmet
 			}),
-			category(50, {	-- Shoulder
+			category(252, {	-- Shoulder
 				i(5964),	-- Barbaric Shoulders
 				un(PHASE_FOUR, i(19689)),	-- Blood Tiger Shoulders
 				i(4252),	-- Dark Leather Shoulders
@@ -1134,7 +1134,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(15096),	-- Runic Leather Shoulders (Trainable now, old Pattern id 15777 used to teach this.)
 				i(8210),	-- Wild Leather Shoulders
 			}),
-			category(51, {	-- Chest
+			category(253, {	-- Chest
 				i(5739),	-- Barbaric Harness
 				i(8200),	-- Big Voodoo Robe
 				i(20575),	-- Black Whelp Tunic
@@ -1164,7 +1164,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(15085),	-- Wicked Leather Armor (Trainable now, old Pattern id 15773 used to teach this.)
 				i(8211),	-- Wild Leather Vest
 			}),
-			category(52, {	-- Bracers
+			category(254, {	-- Bracers
 				i(18948),	-- Barbaric Bracers
 				i(7378),	-- Dusky Bracers
 				i(4259),	-- Green Leather Bracers
@@ -1178,7 +1178,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(15092),	-- Runic Leather Bracers (Trainable now, old Pattern id 15739 used to teach this.)
 				i(15084),	-- Wicked Leather Bracers (Trainable now, old Pattern id 15728 used to teach this.)
 			}),
-			category(53, {	-- Gloves
+			category(255, {	-- Gloves
 				i(4254),	-- Barbaric Gloves
 				i(4248),	-- Dark Leather Gloves
 				i(6467),	-- Deviate Scale Gloves
@@ -1200,7 +1200,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(4253),	-- Toughened Leather Gloves
 				i(15083),	-- Wicked Leather Gauntlets (Trainable now, old Pattern id 15725 used to teach this.)
 			}),
-			category(54, {	-- Belts
+			category(256, {	-- Belts
 				i(4264),	-- Barbaric Belt
 				un(PHASE_FIVE_CATCH_UP, i(22761)),	-- Bramblewood Belt
 				i(4249),	-- Dark Leather Belt
@@ -1223,7 +1223,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(15093),	-- Runic Leather Belt (Trainable now, old Pattern id 15745 used to teach this.)
 				i(15088),	-- Wicked Leather Belt (Trainable now, old Pattern id 15768 used to teach this.)
 			}),
-			category(55, {	-- Pants
+			category(257, {	-- Pants
 				i(5963),	-- Barbaric Leggings
 				i(8202),	-- Big Voodoo Pants
 				i(5961),	-- Dark Leather Pants
@@ -1239,7 +1239,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(15087),	-- Wicked Leather Pants (Trainable now, old Pattern id 15757 used to teach this.)
 				i(8212),	-- Wild Leather Leggings
 			}),
-			category(56, {	-- Boots
+			category(258, {	-- Boots
 				un(PHASE_FIVE_CATCH_UP, i(22760)),	-- Bramblewood Boots
 				i(2315),	-- Dark Leather Boots
 				un(PHASE_THREE, i(19052)),	-- Dawn Treaders
@@ -1254,16 +1254,16 @@ _.Craftables = { tier(1, {	-- Classic
 			}),
 		}),
 		filter(6, {	-- Mail
-			category(49, {	-- Helms
+			category(251, {	-- Helms
 				i(15080),	-- Heavy Scorpid Helm
 				i(8208),	-- Tough Scorpid Helm
 				i(8191),	-- Turtle Scale Helm
 			}),
-			category(50, {	-- Shoulder
+			category(252, {	-- Shoulder
 				i(15081),	-- Heavy Scorpid Shoulders
 				i(8207),	-- Tough Scorpid Shoulders
 			}),
-			category(51, {	-- Chest
+			category(253, {	-- Chest
 				i(15076),	-- Heavy Scorpid Vest
 				un(PHASE_SIX, i(22664)),	-- Icy Scale Breastplate
 				un(PHASE_FOUR, i(20478)),	-- Sandstalker Breastplate
@@ -1271,7 +1271,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(8203),	-- Tough Scorpid Breastplate
 				i(8189),	-- Turtle Scale Breastplate
 			}),
-			category(52, {	-- Bracers
+			category(254, {	-- Bracers
 				i(15077),	-- Heavy Scorpid Bracers
 				un(PHASE_SIX, i(22665)),	-- Icy Scale Bracers
 				un(PHASE_FOUR, i(20476)),	-- Sandstalker Bracers
@@ -1280,7 +1280,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(8205),	-- Tough Scorpid Bracers
 				i(8198),	-- Turtle Scale Bracers
 			}),
-			category(53, {	-- Gloves
+			category(255, {	-- Gloves
 				i(7348),	-- Fletcher's Gloves
 				i(15078),	-- Heavy Scorpid Gauntlets
 				un(PHASE_SIX, i(22666)),	-- Icy Scale Gauntlets
@@ -1289,15 +1289,15 @@ _.Craftables = { tier(1, {	-- Classic
 				i(8204),	-- Tough Scorpid Gloves
 				i(8187),	-- Turtle Scale Gloves
 			}),
-			category(54, {	-- Belts
+			category(256, {	-- Belts
 				i(15082),	-- Heavy Scorpid Belt
 			}),
-			category(55, {	-- Pants
+			category(257, {	-- Pants
 				i(15079),	-- Heavy Scorpid Leggings
 				i(8206),	-- Tough Scorpid Leggings
 				i(8185),	-- Turtle Scale Leggings
 			}),
-			category(56, {	-- Boots
+			category(258, {	-- Boots
 				i(8209),	-- Tough Scorpid Boots
 			}),
 		}),
@@ -1387,7 +1387,7 @@ _.Craftables = { tier(1, {	-- Classic
 		},
 	}),
 	prof(TAILORING, {
-		category(58, {	-- Materials
+		category(230, {	-- Materials
 			i(2996),	-- Bolt of Linen Cloth
 			i(4339),	-- Bolt of Mageweave
 			i(14048),	-- Bolt of Runecloth
@@ -1396,7 +1396,7 @@ _.Craftables = { tier(1, {	-- Classic
 			un(PHASE_ONE_DIRE_MAUL, i(18258)),	-- Gordok Ogre Suit
 			i(14342),	-- Mooncloth
 		}),
-		category(59, {	-- Bags
+		category(233, {	-- Bags
 			un(PHASE_FIVE, i(22249)),	-- Big Bag of Enchantment
 			i(5765),	-- Black Silk Pack
 			i(14156),	-- Bottomless Bag
@@ -1419,7 +1419,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(21340),	-- Soul Pouch
 			i(4240),	-- Woolen Bag
 		}),
-		category(60, {	-- Hats & Hoods
+		category(234, {	-- Hats & Hoods
 			i(10030),	-- Admiral's Hat
 			i(7048),	-- Azure Silk Hood
 			i(10024),	-- Black Mageweave Headband
@@ -1436,7 +1436,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10008),	-- White Bandit Mask
 			i(14130),	-- Wizardweave Turban
 		}),
-		category(61, {	-- Shoulders
+		category(235, {	-- Shoulders
 			un(PHASE_THREE, i(19059)),	-- Argent Shoulders
 			i(7060),	-- Azure Shoulders
 			i(10027),	-- Black Mageweave Shoulders
@@ -1453,7 +1453,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10028),	-- Shadoweave Shoulders
 			un(PHASE_FIVE_CATCH_UP, i(22758)),	-- Sylvan Shoulders
 		}),
-		category(62, {	-- Robes & Tunics
+		category(236, {	-- Robes & Tunics
 			i(4324),	-- Azure Silk Vest
 			i(2578),	-- Barbaric Linen Vest
 			i(10001),	-- Black Mageweave Robe
@@ -1506,12 +1506,12 @@ _.Craftables = { tier(1, {	-- Classic
 			i(6787),	-- White Woolen Dress
 			i(14128),	-- Wizardweave Robe
 		}),
-		category(63, {	-- Bracers
+		category(237, {	-- Bracers
 			i(18263),	-- Flarecore Wraps
 			un(PHASE_SIX, i(22655)),	-- Glacial Wrists
 			i(4308),	-- Green Linen Bracers
 		}),
-		category(64, {	-- Belts
+		category(238, {	-- Belts
 			i(7052),	-- Azure Silk Belt
 			un(PHASE_ONE_DIRE_MAUL, i(18405)),	-- Belt of the Archmage
 			i(7055),	-- Crimson Silk Belt
@@ -1524,7 +1524,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(4329),	-- Star Belt
 			un(PHASE_THREE, i(19047)),	-- Wisdom of the Timbermaw
 		}),
-		category(65, {	-- Gloves
+		category(239, {	-- Gloves
 			i(4319),	-- Azure Silk Gloves
 			i(10003),	-- Black Mageweave Gloves
 			i(14101),	-- Brightcloth Gloves
@@ -1549,7 +1549,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10023),	-- Shadoweave Gloves
 			i(7049),	-- Truefaith Gloves
 		}),
-		category(66, {	-- Pants
+		category(240, {	-- Pants
 			i(7046),	-- Azure Silk Pants
 			i(9999),	-- Black Mageweave Leggings
 			un(PHASE_FOUR, i(19683)),	-- Bloodvine Leggings
@@ -1575,7 +1575,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10035),	-- Tuxedo Pants
 			i(14132),	-- Wizardweave Leggings
 		}),
-		category(67, {	-- Boots
+		category(241, {	-- Boots
 			un(PHASE_THREE, i(19056)),	-- Argent Boots
 			i(10026),	-- Black Mageweave Boots
 			un(PHASE_FOUR, i(19684)),	-- Bloodvine Boots
@@ -1594,7 +1594,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(4320),	-- Spidersilk Boots
 			i(2583),	-- Woolen Boots
 		}),
-		category(68, {	-- Cloaks
+		category(242, {	-- Cloaks
 			i(7053),	-- Azure Silk Cloak
 			i(14103),	-- Brightcloth Cloak
 			i(14044),	-- Cindercloth Cloak
@@ -1612,7 +1612,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(13860),	-- Runecloth Cloak
 			i(2584),	-- Woolen Cape
 		}),
-		category(69, {	-- Shirts
+		category(243, {	-- Shirts
 			i(4336),	-- Black Swashbuckler's Shirt
 			i(2577),	-- Blue Linen Shirt
 			i(4332),	-- Bright Yellow Shirt
