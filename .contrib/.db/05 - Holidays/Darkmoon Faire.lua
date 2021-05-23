@@ -796,7 +796,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					},
 				}),
 			}),
-			category(73, {	-- Tarot Decks
+			category(3, {	-- Tarot Decks
 				i(19228, {	-- Beasts Deck
 					["cost"] = {
 						{ "i", 19227, 1 },	-- Ace of Beasts

@@ -2645,7 +2645,7 @@ _.WorldDrops = { tier(1, {	-- Classic
 		un(PHASE_FIVE, i(23199)),	-- Totem of the Storm [Phase 5/6]
 		i(4500),	-- Traveler's Backpack
 	}),
-	category(72, {	-- Tarot Cards
+	category(106, {	-- Tarot Cards
 		un(PHASE_THREE, i(19230)),	-- Two of Beasts
 		un(PHASE_THREE, i(19231)),	-- Three of Beasts
 		un(PHASE_THREE, i(19232)),	-- Four of Beasts
