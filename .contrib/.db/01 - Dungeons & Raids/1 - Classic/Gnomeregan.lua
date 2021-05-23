@@ -205,7 +205,6 @@ _.Instances = { tier(1, {	-- Classic
 				}),
 				o(142487, {	-- The Sparklematic 5200
 					["description"] = "Bring any Grime-Encrusted items that you find here to be cleaned.\n\nGrime-Encrusted Objects become Sparklematic-Wrapped Boxes.",
-					["model"] = "World\\Goober\\G_Gnomesparklematic.m2",
 					["groups"] = {
 						i(9363, {	-- Sparklematic-Wrapped Box
 							["description"] = "Kill mobs for [Grime-Encrusted Object], clean them at the Sparklematic 5200.",
@@ -241,7 +240,6 @@ _.Instances = { tier(1, {	-- Classic
 				}),
 				o(15084, {	-- The Sparklematic 5200
 					["description"] = "Bring any Grime-Encrusted items that you find here to be cleaned.\n\nGrime-Encrusted Objects become Sparklematic-Wrapped Boxes.",
-					["model"] = "World\\Goober\\G_Gnomesparklematic.m2",
 					["groups"] = {
 						i(9363, {	-- Sparklematic-Wrapped Box
 							["description"] = "Kill mobs for [Grime-Encrusted Object], clean them at the Sparklematic 5200.",
@@ -274,7 +272,6 @@ _.Instances = { tier(1, {	-- Classic
 				}),
 				o(15085, {	-- The Sparklematic 5200
 					["description"] = "Bring any Grime-Encrusted items that you find here to be cleaned.\n\nGrime-Encrusted Objects become Sparklematic-Wrapped Boxes.",
-					["model"] = "World\\Goober\\G_Gnomesparklematic.m2",
 					["groups"] = {
 						i(9363, {	-- Sparklematic-Wrapped Box
 							["description"] = "Kill mobs for [Grime-Encrusted Object], clean them at the Sparklematic 5200.",

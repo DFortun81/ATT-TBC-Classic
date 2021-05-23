@@ -13,6 +13,7 @@ lib\LibDataBroker-1.1\LibDataBroker-1.1.lua
 db\Presets.lua
 db\CategoryDB.lua
 db\FlightPathDB.lua
+db\ObjectDB.lua
 db\RaceDB.lua
 src\base.lua
 locales\enUS.lua
