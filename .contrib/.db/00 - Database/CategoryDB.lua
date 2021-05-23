@@ -37,16 +37,7 @@ _.CategoryNames = {
 	[33] = "Skeleton Keys",
 	[34] = "Rods",
 	[35] = "Reagents",
-	[36] = "Boot Enchantments",
-	[37] = "Bracer Enchantments",
-	[38] = "Chest Enchantments",
-	[39] = "Cloak Enchantments",
-	[40] = "Glove Enchantments",
-	[41] = "Weapon Enchantments",
-	[42] = "Shield Enchantments",
-	[43] = "Wands",
 	[44] = "Oils",
-	[45] = "Trinket",
 	[46] = "Materials",
 	[47] = "Armor Kits",
 	[48] = "Bags",
@@ -83,6 +74,19 @@ _.CategoryNames = {
 	[687] = "Shield Enchantments",
 	[688] = "Oils",
 	[689] = "Other",
+	[690] = "Boot Enchantments",
+	[691] = "Bracer Enchantments",
+	[692] = "Chest Enchantments",
+	[693] = "Cloak Enchantments",
+	[694] = "Glove Enchantments",
+	[695] = "Weapon Enchantments",
+	[696] = "Shield Enchantments",
+	[697] = "Rods",
+	[698] = "Wands",
+	[699] = "Oils",
+	[700] = "Trinket",
+	[701] = "Reagents",
+	[702] = "Illusions",
 	[705] = "Illusions",
 	[857] = "Blue Gems",
 	[858] = "Green Gems",
@@ -141,16 +145,7 @@ _.CategoryIcons = {
 	-- Enchanting
 	[34] = "Interface/Icons/INV_Staff_01",    -- Rods
 	[35] = "Interface/Icons/Inv_ingot_eternium",    -- Reagents
-	[36] = "Interface/Icons/INV_Boots_01",    -- Boot Enchantments
-	[37] = "Interface/Icons/INV_Bracer_17",    -- Bracer Enchantments
-	[38] = "Interface/Icons/INV_Chest_Chain",    -- Chest Enchantments
-	[39] = "Interface/Icons/INV_Misc_Cape_18",    -- Cloak Enchantments
-	[40] = "Interface/Icons/INV_Gauntlets_04",    -- Glove Enchantments
-	[41] = "Interface/Icons/Spell_Fire_EnchantWeapon",    -- Weapon Enchantments
-	[42] = "Interface/Icons/INV_Shield_05",    -- Shield Enchantments
-	[43] = "Interface/Icons/INV_Wand_06",    -- Wands
 	[44] = "Interface/Icons/Inv_poison_mindnumbing",    -- Oils
-	[45] = "Interface/Icons/inv_misc_gem_bloodstone_01",    -- Trinket
 
 	-- Leatherworking
 	[46] = "Interface/Icons/INV_Misc_LeatherScrap_03",    -- Materials
@@ -189,4 +184,29 @@ _.CategoryIcons = {
 	-- Inscription
 	[72] = "Interface/Icons/Inv_misc_ticket_tarot_portal_01",    -- Tarot Cards
 	[73] = "Interface/Icons/inv_misc_ticket_tarot_stack_01",    -- Tarot Decks
+	
+	-- Enchanting
+	[697] = "Interface/Icons/INV_Staff_01",    -- Rods
+	[701] = "Interface/Icons/Inv_ingot_eternium",    -- Reagents
+	[690] = "Interface/Icons/INV_Boots_01",    -- Boot Enchantments
+	[691] = "Interface/Icons/INV_Bracer_17",    -- Bracer Enchantments
+	[692] = "Interface/Icons/INV_Chest_Chain",    -- Chest Enchantments
+	[693] = "Interface/Icons/INV_Misc_Cape_18",    -- Cloak Enchantments
+	[694] = "Interface/Icons/INV_Gauntlets_04",    -- Glove Enchantments
+	[695] = "Interface/Icons/Spell_Fire_EnchantWeapon",    -- Weapon Enchantments
+	[696] = "Interface/Icons/INV_Shield_05",    -- Shield Enchantments
+	[698] = "Interface/Icons/INV_Wand_06",    -- Wands
+	[699] = "Interface/Icons/Inv_poison_mindnumbing",    -- Oils
+	[700] = "Interface/Icons/inv_misc_gem_bloodstone_01",    -- Trinket
+	
+	[680] = "Interface/Icons/inv_enchant_shardprismaticlarge",	    -- Reagents
+	[681] = "Interface/Icons/INV_Boots_01",	-- Boot Enchantments
+	[682] = "Interface/Icons/INV_Bracer_17",	-- Bracer Enchantments
+	[683] = "Interface/Icons/INV_Chest_Chain",	-- Chest Enchantments
+	[684] = "Interface/Icons/INV_Misc_Cape_18",	-- Cloak Enchantments
+	[685] = "Interface/Icons/INV_Gauntlets_04",	-- Glove Enchantments
+	[686] = "Interface/Icons/Spell_Fire_EnchantWeapon",	-- Weapon Enchantments
+	[687] = "Interface/Icons/INV_Shield_05",    -- Shield Enchantments
+	[688] = "Interface/Icons/inv_potion_101",    -- Oils
+	[689] = "Interface/Icons/inv_enchant_voidsphere",	-- Other
 };
