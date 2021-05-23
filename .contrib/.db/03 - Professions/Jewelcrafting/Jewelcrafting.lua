@@ -383,6 +383,9 @@ local itemrecipe = function(name, itemID, spellID, spellIDAfterCata, timeline)
 	_.ItemDB[itemID] = applyclassicphase(TBC_PHASE_ONE, o);
 	return o;
 end
+local neverimplemented = function(thing)
+	table.insert(_.NeverImplemented, prof(JEWELCRAFTING, { thing }));
+end
 
 -- #if AFTER TBC
 -- Recipes introduced with Burning Crusade
@@ -417,8 +420,18 @@ itemrecipe("Design: Subtle Lionseye", 32284, 39713);
 itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737);
 
 -- Recipes created with Burning Crusade, but never implemented. :(
-table.insert(_.NeverImplemented, itemrecipe("Design: Silver Rose Pendant", 20972, 25614));
-table.insert(_.NeverImplemented, recipe(25614));	-- Silver Rose Pendant
+neverimplemented(itemrecipe("Design: Arcanite Sword Pendant", 21793, 26918));
+neverimplemented(recipe(26918));	-- Arcanite Sword Pendant
+neverimplemented(i(21793));	-- Arcanite Sword Pendant
+neverimplemented(itemrecipe("Design: Blood Crown", 21959, 26920));
+neverimplemented(recipe(26920));	-- Blood Crown
+neverimplemented(i(21780));	-- Blood Crown
+neverimplemented(itemrecipe("Design: Primal Stone Statue", 25888, 32810));
+neverimplemented(recipe(32810));	-- Primal Stone Statue
+neverimplemented(i(25884));	-- Primal Stone Statue
+neverimplemented(itemrecipe("Design: Silver Rose Pendant", 20972, 25614));
+neverimplemented(recipe(25614));	-- Silver Rose Pendant
+neverimplemented(i(20956));	-- Silver Rose Pendant
 
 -- Recipes Renamed with Cata
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
