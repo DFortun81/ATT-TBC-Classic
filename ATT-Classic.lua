@@ -116,6 +116,20 @@ local containsValue = function(dict, value)
 		if value2 == value then return true; end
 	end
 end
+local defaultComparison = function(a,b)
+	return a > b;
+end
+local insertionSort = function(t, compare)
+	if not compare then compare = defaultComparison; end
+	local j;
+	for i=2,#t,1 do
+		j = i;
+		while j > 1 and compare(t[j], t[j - 1]) do
+			t[j],t[j - 1] = t[j - 1],t[j];
+			j = j - 1;
+		end
+	end
+end
 
 -- Data Lib
 local attData;
@@ -1553,7 +1567,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 							end
 						end
 					end
-					table.sort(regroup, function(a, b)
+					insertionSort(regroup, function(a, b)
 						return not (a.headerID and a.headerID == -1) and b.headerID and b.headerID == -1;
 					end);
 				end
@@ -1709,7 +1723,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 			if #temp > 0 then
 				local listing = {};
 				local maximum = app.Settings:GetTooltipSetting("Locations");
-				table.sort(temp);
+				insertionSort(temp);
 				for i,j in ipairs(temp) do
 					if not contains(listing, j) then
 						tinsert(listing, 1, j);
@@ -1904,7 +1918,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 						local left, right;
 						tinsert(info, { left = "Used to Craft:" });
 						if #entries < 25 then
-							table.sort(entries, function(a, b)
+							insertionSort(entries, function(a, b)
 								if a.group.name then
 									if b.group.name then
 										return a.group.name <= b.group.name;
@@ -1942,7 +1956,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 					if #entries > 0 then
 						tinsert(info, { left = "Used in Recipes:" });
 						if #entries < 25 then
-							table.sort(entries, function(a, b)
+							insertionSort(entries, function(a, b)
 								if a and a.group.name then
 									if b and b.group.name then
 										return a.group.name <= b.group.name;
@@ -1988,7 +2002,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 						if #entries > 0 then
 							tinsert(info, { left = "Available Skill Ups:" });
 							if #entries < 25 then
-								table.sort(entries, function(a, b)
+								insertionSort(entries, function(a, b)
 									if a.group.craftTypeID == b.group.craftTypeID then
 										if a.group.name then
 											if b.group.name then
@@ -2032,7 +2046,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 				end
 			end
 			if #knownBy > 0 then
-				table.sort(knownBy, function(a, b)
+				insertionSort(knownBy, function(a, b)
 					return a.text < b.text;
 				end);
 				local desc = "Known by ";
@@ -3768,7 +3782,7 @@ local fields = {
 		if #c > 0 then
 			GameTooltip:AddLine(" ");
 			GameTooltip:AddLine("Deaths Per Character:");
-			table.sort(c, function(a, b)
+			insertionSort(c, function(a, b)
 				return a.Deaths > b.Deaths;
 			end);
 			for i,character in ipairs(c) do
@@ -4824,7 +4838,7 @@ local fields = {
 		return "explorationID";
 	end,
 	["text"] = function(t)
-		return C_Map.GetAreaInfo(t.explorationID) or t.maphash;
+		return C_Map.GetAreaInfo(t.explorationID) or t.maphash or "";
 	end,
 	["title"] = function(t)
 		return t.maphash;
@@ -4973,7 +4987,7 @@ app.CreateMap = function(id, t)
 			end
 		end
 		if explorationHeader and explorationHeader.g then
-			table.sort(explorationHeader.g, function(a, b)
+			insertionSort(explorationHeader.g, function(a, b)
 				if a and a.text then
 					if b and b.text then
 						return a.text <= b.text;
@@ -5550,7 +5564,7 @@ app.CompareQuestieDB = function()
 				table.insert(missingQuestIDs, id);
 			end
 		end
-		table.sort(missingQuestIDs);
+		insertionSort(missingQuestIDs);
 		for _,id in ipairs(missingQuestIDs) do
 			print("Missing Quest ", id);
 		end
@@ -7276,7 +7290,7 @@ local function RowOnEnter(self)
 					end
 				end
 				if #knownBy > 0 then
-					table.sort(knownBy, function(a, b)
+					insertionSort(knownBy, function(a, b)
 						return a[2] > b[2];
 					end);
 					GameTooltip:AddLine("|cff66ccffKnown by:|r");
@@ -8121,7 +8135,7 @@ function app:GetDataCache()
 					end
 				end
 			end
-			table.sort(self.g, function(a, b)
+			insertionSort(self.g, function(a, b)
 				return a.text < b.text;
 			end);
 		end
@@ -8157,7 +8171,7 @@ function app:GetDataCache()
 					end
 				end
 			end
-			table.sort(self.g, function(a, b)
+			insertionSort(self.g, function(a, b)
 				return a.text < b.text;
 			end);
 		end;
@@ -8179,7 +8193,7 @@ function app:GetDataCache()
 					end
 				end
 			end
-			table.sort(missingCoordinates);
+			insertionSort(missingCoordinates);
 			for i,npcID in ipairs(missingCoordinates) do
 				print("NPC ID " .. npcID .. " is missing coordinates.");
 			end
@@ -8574,7 +8588,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 					end
 					
 					-- Sort Member List
-					table.sort(groupMembers, data.Sort);
+					insertionSort(groupMembers, data.Sort);
 					for i,unit in ipairs(groupMembers) do
 						table.insert(data.g, unit);
 					end
@@ -8621,7 +8635,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 								local any = false;
 								for rankIndex = 1, numRanks, 1 do
 									if #guildRanks[rankIndex].g > 0 then
-										table.sort(guildRanks[rankIndex].g, data.Sort);
+										insertionSort(guildRanks[rankIndex].g, data.Sort);
 										any = true;
 									end
 								end
@@ -10170,7 +10184,7 @@ app:GetWindow("SoftReserves", UIParent, function(self)
 					end
 					
 					-- Sort Member List
-					table.sort(g, data.Sort);
+					insertionSort(g, data.Sort);
 					
 					-- Insert Control Methods
 					table.insert(g, 1, app.CreateSoftReserveUnit(app.GUID));
@@ -10229,7 +10243,7 @@ app:GetWindow("SoftReserves", UIParent, function(self)
 								local any = false;
 								for rankIndex = 1, numRanks, 1 do
 									if #guildRanks[rankIndex].g > 0 then
-										table.sort(guildRanks[rankIndex].g, data.Sort);
+										insertionSort(guildRanks[rankIndex].g, data.Sort);
 										any = true;
 									end
 								end
@@ -11875,7 +11889,7 @@ app.events.ADDON_LOADED = function(addonName)
 				end
 				table.insert(window.data.g, subdata);
 			end
-			table.sort(window.data.g, function(a, b)
+			insertionSort(window.data.g, function(a, b)
 				return (b.priority or 0) > (a.priority or 0);
 			end);
 			BuildGroups(window.data, window.data.g);
