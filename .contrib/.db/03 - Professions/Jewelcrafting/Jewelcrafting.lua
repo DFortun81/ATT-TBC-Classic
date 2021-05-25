@@ -5523,7 +5523,7 @@ itemrecipe({"Design: Balanced Nightseye [TBC]", "Design: Shifting Nightseye [CAT
 itemrecipe({"Design: Balanced Shadowsong Amethyst [TBC]", "Design: Shifting Shadowsong Amethyst [CATA+]"}, 32299, 39729, 39728, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bright Crimson Spinel [TBC]", "Design: Delicate Crimson Spinel [CATA+]"}, 32283, 39712, 39706, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bright Living Ruby [TBC]", "Design: Delicate Living Ruby [CATA+]"}, 24192, 31089, 31085, REMOVED_WITH_CATA);
-itemrecipe({"Design: Bright Living Ruby [TBC]", "Design: Delicate Living Ruby [CATA+]"}, 35306, 31085, 31089, REMOVED_WITH_CATA);
+itemrecipe({"Design: Bright Living Ruby [TBC]", "Design: Delicate Living Ruby [CATA+]"}, 35306, 31089, 31085, REMOVED_WITH_CATA);
 itemrecipe({"Design: Brilliant Dawnstone [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24203, 31088, 31096, REMOVED_WITH_CATA);
 itemrecipe({"Design: Brilliant Lionseye [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32290, 39719, 39711, REMOVED_WITH_CATA);
 itemrecipe({"Design: Gleaming Dawnstone [TBC]", "Design: Smooth Dawnstone [CATA+]"}, 24206, 31099, 31097, REMOVED_WITH_CATA);
