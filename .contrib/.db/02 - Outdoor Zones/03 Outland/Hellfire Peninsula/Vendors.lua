@@ -277,14 +277,8 @@ _.Zones =
 						i(29153),	-- Blade of the Archmage
 						i(35476),	-- Crusader's Ornamented Spaulders
 						i(35477),	-- Crusader's Scaled Gauntlets
-						i(24180, {	-- Design: Dawnstone Crab
-							["spellID"] = 31080,	-- Figurine - Dawnstone Crab
-							["requireSkill"] = JEWELCRAFTING,
-						}),
-						i(23142, {	-- Design: Regal Deep Peridot (Cata+) / Design: Enduring Deep Peridot (TBC)
-							["spellID"] = 28918,	-- Regal Deep Peridot (Cata+) / Enduring Deep Peridot (TBC)
-							["requireSkill"] = JEWELCRAFTING,
-						}),
+						i(24180),	-- Design: Dawnstone Crab
+						i(23142),	-- Design: Regal Deep Peridot (Cata+) / Design: Enduring Deep Peridot (TBC)
 						i(35469),	-- Dragonhide Robe
 						i(35464),	-- Dreadweave Robe
 						i(35465),	-- Evoker's Silk Amice
@@ -398,14 +392,8 @@ _.Zones =
 						i(29167),	-- Blackened Spear
 						i(35406),	-- Crusader's Ornamented Spaulders
 						i(35413),	-- Crusader's Scaled Gauntlets
-						i(31358, {	-- Design: Dawnstone Crab
-							["spellID"] = 31080,	-- Figurine - Dawnstone Crab
-							["requireSkill"] = JEWELCRAFTING,
-						}),
-						i(31359, {	-- Design: Regal Deep Peridot (Cata+) / Design: Enduring Deep Peridot (TBC)
-							["spellID"] = 28918,	-- Regal Deep Peridot (Cata+) / Enduring Deep Peridot (TBC)
-							["requireSkill"] = JEWELCRAFTING,
-						}),
+						i(31358),	-- Design: Dawnstone Crab
+						i(31359),	-- Design: Regal Deep Peridot (Cata+) / Design: Enduring Deep Peridot (TBC)
 						i(35360),	-- Dragonhide Robe
 						i(35332),	-- Dreadweave Robe
 						i(35343),	-- Evoker's Silk Amice

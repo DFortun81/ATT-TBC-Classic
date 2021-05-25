@@ -5434,6 +5434,8 @@ itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867);
 itemrecipe("Design: Braided Eternium Chain", 24168, 31070);
 itemrecipe("Design: Brutal Earthstorm Diamond", 25906, 32869);
 itemrecipe("Design: Chain of the Twilight Owl", 24171, 31076);
+itemrecipe("Design: Dawnstone Crab - Alliance", 24180, 31080);
+itemrecipe("Design: Dawnstone Crab - Horde", 31358, 31080);
 itemrecipe("Design: Delicate Crimson Spinel", 32277, 39706);
 itemrecipe("Design: Delicate Eternium Ring", 24164, 31060);
 itemrecipe("Design: Delicate Living Ruby", 24194, 31085);
@@ -5494,6 +5496,8 @@ itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737);
 -- Recipes Renamed with Cata
 itemrecipe({"Design: Dazzling Seaspray Emerald [TBC]", "Design: Purified Shadowsong Amethyst [CATA+]"}, 32311, 39741);
 itemrecipe({"Design: Dazzling Talasite [TBC]", "Design: Purified Nightseye [CATA+]"}, 24219, 31112);
+itemrecipe({"Design: Enduring Deep Peridot [TBC - Alliance]", "Design: Regal Deep Peridot [CATA+ - Alliance]"}, 23142, 28918);
+itemrecipe({"Design: Enduring Deep Peridot [TBC - Horde]", "Design: Regal Deep Peridot [CATA+ - Horde]"}, 31359, 28918);
 itemrecipe({"Design: Enduring Seaspray Emerald [TBC]", "Design: Regal Seaspray Emerald [CATA+]"}, 32309, 39739);
 itemrecipe({"Design: Glinting Noble Topaz [TBC]", "Design: Glinting Nightseye [CATA+]"}, 24216, 31109);
 itemrecipe({"Design: Glinting Pyrestone [TBC]", "Design: Glinting Shadowsong Amethyst [CATA+]"}, 32306, 39736);
