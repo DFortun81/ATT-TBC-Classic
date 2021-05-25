@@ -54,17 +54,8 @@ _.NeverImplemented =
 	}),
 	q(63769),	-- Holiday Reset Yearly Quest
 	
-	i(7093),	-- Pattern: Boots of Darkness
-	i(21369),	-- Pattern: Felcloth Bag (item is not in game; you learn the pattern from Jandice Barov's Journal)
-	i(6273),	-- Pattern: Green Woolen Robe
 	i(8388),	-- Pattern: Nightscape Cloak
 	i(15780),	-- Pattern: Onyxia Scale Breastplate
-	i(10324),	-- Pattern: Stormcloth Boots
-	i(10304),	-- Pattern: Stormcloth Gloves
-	i(10319),	-- Pattern: Stormcloth Headband
-	i(10303),	-- Pattern: Stormcloth Pants
-	i(10322),	-- Pattern: Stormcloth Shoulders
-	i(10313),	-- Pattern: Stormcloth Vest
 	i(12817),	-- Plans: Bleakwood Hew
 	i(12831),	-- Plans: Blood Talon
 	i(12832),	-- Plans: Darkspear
@@ -117,35 +108,6 @@ _.NeverImplemented =
 	un(NEVER_IMPLEMENTED, {
 		["name"] = "Nightscape Cloak",
 		["recipeID"] = 10550,
-	}),
-	un(NEVER_IMPLEMENTED, {
-		["name"] = "Stormcloth Headband",
-		["recipeID"] = 12083,
-	}),
-	un(NEVER_IMPLEMENTED, {
-		["name"] = "Stormcloth Shoulders",
-		["recipeID"] = 12087,
-	}),
-	un(NEVER_IMPLEMENTED, {
-		["name"] = "Green Woolen Robe",
-		["recipeID"] = 7636,
-	}),
-	un(NEVER_IMPLEMENTED, {
-		["name"] = "Stormcloth Vest",
-		["recipeID"] = 12068,
-	}),
-	un(NEVER_IMPLEMENTED, {
-		["name"] = "Stormcloth Gloves",
-		["recipeID"] = 12063,
-	}),
-	un(NEVER_IMPLEMENTED, {
-		["name"] = "Stormcloth Pants",
-		["recipeID"] = 12062,
-	}),
-	un(NEVER_IMPLEMENTED, i(7027)),		-- Boots of Darkness
-	un(NEVER_IMPLEMENTED, {
-		["name"] = "Boots of Darkness",
-		["recipeID"] = 8778,
 	}),
 	
 	un(NEVER_IMPLEMENTED, i(24315)),	-- Pattern: Heavy Netherweave Net
@@ -763,14 +725,7 @@ _.NeverImplemented =
 	
 	-- Cloth
 	i(1216),	-- Frost Bracers
-	i(6243),	-- Green Woolen Robe
 	i(18341),	-- Quel'dorai Sash
-	i(10039),	-- Stormcloth Boots
-	i(10011),	-- Stormcloth Gloves
-	i(10032),	-- Stormcloth Headband
-	i(10010),	-- Stormcloth Pants
-	i(10038),	-- Stormcloth Shoulders
-	i(10020),	-- Stormcloth Vest
 	
 	-- One Handed Axes
 	i(5255),	-- Quilboar Tomahawk
