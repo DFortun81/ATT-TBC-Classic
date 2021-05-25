@@ -10,7 +10,9 @@ _.Zones =
 					["coord"] = { 44.6, 56.8, SWAMP_OF_SORROWS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
+						-- #if AFTER TBC
 						i(21941),	-- Design: Black Pearl Panther
+						-- #endif
 						i(11223),	-- Formula: Enchant Bracer - Deflection
 						i(12232),	-- Recipe: Carrion Surprise
 						i(16111),	-- Recipe: Spiced Chili Crab

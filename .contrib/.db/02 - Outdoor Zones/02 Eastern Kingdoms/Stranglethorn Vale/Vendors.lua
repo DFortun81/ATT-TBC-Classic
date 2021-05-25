@@ -117,7 +117,9 @@ _.Zones =
 					["coord"] = { 32.6, 29.2, STRANGLETHORN_VALE },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
+						-- #if AFTER TBC
 						i(21943),	-- Design: Truesilver Crab
+						-- #endif
 						i(3682),	-- Recipe: Curiously Tasty Omelet
 						i(12228),	-- Recipe: Roast Raptor
 						i(12231),	-- Recipe: Jungle Stew
