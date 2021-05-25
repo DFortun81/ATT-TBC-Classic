@@ -45,9 +45,11 @@ _.Zones =
 					["coord"] = { 46.5, 47.4, ARATHI_HIGHLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
+						-- #if AFTER TBC
 						i(21942, {	-- Design: Ruby Crown of Restoration
-							["u"] = TBC_PHASE_ONE,
+							["isLimited"] = true,
 						}),
+						-- #endif
 						i(5973),	-- Pattern: Barbaric Leggings
 						i(12228),	-- Recipe: Roast Raptor
 					},
@@ -70,9 +72,11 @@ _.Zones =
 					["coord"] = { 74.0, 32.6, ARATHI_HIGHLANDS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
+						-- #if AFTER TBC
 						i(21942, {	-- Design: Ruby Crown of Restoration
-							["u"] = TBC_PHASE_ONE,
+							["isLimited"] = true,
 						}),
+						-- #endif
 						i(3682),	-- Recipe: Curiously Tasty Omelet
 						i(5973),	-- Pattern: Barbaric Leggings
 						i(11163),	-- Formula: Enchant Bracer - Lesser Deflection

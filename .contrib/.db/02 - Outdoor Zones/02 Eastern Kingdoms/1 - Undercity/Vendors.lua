@@ -30,6 +30,17 @@ _.Zones =
 						i(16217),   -- Formula: Enchant Shield - Greater Stamina
 					},
 				}),
+				n(4775,  {	-- Felicia Doan <Trade Supplies>
+					["coord"] = { 64.1, 50.6, UNDERCITY },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						-- #if AFTER TBC
+						i(20975, {	-- Design: The Jade Eye
+							["isLimited"] = true,
+						}),
+						-- #endif
+					},
+				}),
 				n(8403, {	-- Jeremiah Payson <Cockroach Vendor>
 					["coord"] = { 67.8, 42.8, UNDERCITY },
 					["races"] = HORDE_ONLY,

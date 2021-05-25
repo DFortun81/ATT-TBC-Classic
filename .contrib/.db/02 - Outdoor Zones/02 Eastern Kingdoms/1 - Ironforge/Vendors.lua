@@ -19,14 +19,14 @@ _.Zones =
 					["coord"] = { 46.6, 27.2, IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
+						-- #if AFTER TBC
 						i(21948, {	-- Design: Opal Necklace of Impact
 							["isLimited"] = true,
-							["u"] = TBC_PHASE_ONE,
 						}),
 						i(20975, {	-- Design: The Jade Eye
 							["isLimited"] = true,
-							["u"] = TBC_PHASE_ONE,
 						}),
+						-- #endif
 					},
 				}),
 				n(5160, {	-- Emrul Riknussun <Cooking Supplier>

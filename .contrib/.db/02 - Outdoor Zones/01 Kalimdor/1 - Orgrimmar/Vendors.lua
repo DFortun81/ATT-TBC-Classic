@@ -17,6 +17,20 @@ _.Zones =
 						i(10314),	-- Pattern: Lavender Mageweave Shirt
 					},
 				}),
+				n(3367,   {	-- Felika <Trade Supplies>
+					["coords"] = {
+						{ 46.5, 36.6, ORGRIMMAR },
+						{ 50.8, 58.7, ORGRIMMAR },
+					},
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						-- #if AFTER TBC
+						i(20856, {	-- Design: Heavy Golden Necklace of Battle
+							["isLimited"] = true,
+						}),
+						-- #endif
+					},
+				}),
 				n(3316, {	-- Handor <Cloth & Leather Armor Merchant>
 					["coord"] = { 62.8, 44.8, ORGRIMMAR },
 					["races"] = HORDE_ONLY,

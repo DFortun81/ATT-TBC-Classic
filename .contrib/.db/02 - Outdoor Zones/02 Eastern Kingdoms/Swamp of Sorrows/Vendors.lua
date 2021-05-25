@@ -11,7 +11,9 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						-- #if AFTER TBC
-						i(21941),	-- Design: Black Pearl Panther
+						i(21941, {	-- Design: Black Pearl Panther
+							["isLimited"] = true,
+						}),
 						-- #endif
 						i(11223),	-- Formula: Enchant Bracer - Deflection
 						i(12232),	-- Recipe: Carrion Surprise

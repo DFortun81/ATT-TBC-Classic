@@ -26,9 +26,11 @@ _.Zones =
 					["coord"] = { 51.0, 53.5, DESOLACE },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
+						-- #if AFTER TBC
 						i(20973, {	-- Design: Blazing Citrine Ring
-							["u"] = TBC_PHASE_ONE,
+							["isLimited"] = true,
 						}),
+						-- #endif
 						i(7114),	-- Pattern: Azure Silk Gloves
 						i(12232),	-- Recipe: Carrion Surprise
 						i(12240),	-- Recipe: Heavy Kodo Stew

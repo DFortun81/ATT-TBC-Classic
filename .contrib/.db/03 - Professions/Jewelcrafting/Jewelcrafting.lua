@@ -5427,6 +5427,7 @@ end
 itemrecipe("Design: Amulet of Flowing Life", 35202, 46126);
 itemrecipe("Design: Amulet of the Moon", 20854, 25339);
 itemrecipe("Design: Black Pearl Panther", 21941, 26875);
+itemrecipe("Design: Blazing Citrine Ring", 20973, 25617);
 itemrecipe("Design: Blazing Eternium Band", 24165, 31061);
 itemrecipe("Design: Bold Crimson Spinel", 32274, 39705);
 itemrecipe("Design: Bold Living Ruby", 24193, 31084);
@@ -5448,6 +5449,7 @@ itemrecipe("Design: Forceful Seaspray Emerald", 35765, 47053);
 itemrecipe("Design: Hard Khorium Band", 35200, 46124);
 itemrecipe("Design: Hard Khorium Choker", 35203, 46127);
 itemrecipe("Design: Heavy Felsteel Ring", 24163, 31058);
+itemrecipe("Design: Heavy Iron Knuckles", 20971, 25612);
 itemrecipe("Design: Heavy Golden Necklace of Battle", 20856, 25320);
 itemrecipe("Design: Inscribed Noble Topaz", 24213, 31106);
 itemrecipe("Design: Inscribed Pyrestone", 32303, 39733);
@@ -5467,6 +5469,7 @@ itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740);
 itemrecipe("Design: Radiant Talasite", 24218, 31111);
 itemrecipe("Design: Reckless Pyrestone", 35762, 47055);
 itemrecipe("Design: Ring of Flowing Life", 35199, 46123);
+itemrecipe("Design: Ruby Crown of Restoration", 21942, 26878);
 itemrecipe("Design: Shifting Nightseye", 24210, 31103);
 itemrecipe("Design: Shifting Shadowsong Amethyst", 32298, 39728);
 itemrecipe("Design: Smooth Dawnstone", 24204, 31097);
@@ -5561,6 +5564,619 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID, AFTERCATA, REMOVED_WITH_CATA);
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID, AFTERCATA, REMOVED_WITH_CATA);
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID, AFTERCATA, REMOVED_WITH_CATA);
+
+
+--[[
+i(24162, {	-- Design: Arcane Khorium Band
+	["cr"] = 18866,  -- Mageslayer
+}),
+i(34689, {	-- Design: Chaotic Skyfire Diamond
+	["crs"] = { 19768 },  -- Coilskar Siren
+}),
+i(24158, {  -- Design: Khorium Band of Shadows
+	["crs"] = { 19826 },  -- Dark Conclave Shadowmancer
+}),
+i(24183),	-- Design: Nightseye Panther
+i(31402),	-- Design: The Natural Ward
+i(24208, {	-- Design: Mystic Dawnstone
+	["isLimited"] = true,
+}),
+i(33783, {	-- Design: Steady Talasite
+	["cost"] = { { "i", 26044, 4 }, },	-- 4x Halaa Research Token
+}),
+i(33156),	-- Design: Crimson Sun
+i(23134),	-- Design: Delicate Blood Garnet
+i(33305),	-- Design: Don Julio's Heart
+i(24178),	-- Design: Pendant of the Null Rune
+i(23136),	-- Design: Reckless Flame Spessarite
+i(33622),	-- Design: Relentless Earthstorm Diamond
+i(32412, {	-- Design: Relentless Earthstorm Diamond
+	["spellID"] = 0,	-- This is now available via 33622, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(23146),	-- Design: Shifting Shadow Draenite
+i(31871, {	-- Design: Shifting Shadow Draenite
+	["spellID"] = 0,	-- This is now available via 23146, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(31872, {	-- Design: Shifting Shadow Draenite
+	["spellID"] = 0,	-- This is now available via 23146, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(23155),	-- Design: Sparkling Azure Moonstone
+i(23150),	-- Design: Subtle Golden Draenite
+i(25908),	-- Design: Swift Skyfire Diamond
+
+
+i(31874, {	-- Design: Deadly Flame Spessarite
+
+}),
+i(24161, {	-- Design: Khorium Band of Leaves
+	["cr"] = 19984,	-- Vekh'nir Dreadhawk
+}),
+i(31870, {	-- Design: Great Golden Draenite [Before 4.0.1] / Design: Rigid Azure Moonstone [After 4.0.1]
+	-- #if TBC
+	["recipeID"] = 39451,	-- Great Golden Draenite
+	-- #else
+	["recipeID"] = 28948,	-- Rigid Azure Moonstone
+	-- #endif
+	["timeline"] = {
+		"added 2.2.0.7272",
+	},
+}),
+i(31873, {	-- Design: Veiled Shadow Draenite
+	
+}),
+
+i(24165),	-- Design: Blazing Eternium Band
+i(24193),	-- Design: Bold Living Ruby
+i(24168),	-- Design: Braided Eternium Chain
+-- #if BEFORE CATA
+i(24192),	-- Design: Bright Living Ruby [TBC] / Design: Delicate Living Ruby [CATA+]
+-- #endif
+-- #if BEFORE CATA
+i(35306),	-- Design: Bright Living Ruby [TBC] / Design: Delicate Living Ruby [CATA+]
+-- #endif
+-- #if BEFORE CATA
+i(24203),	-- Design: Brilliant Dawnstone [TBC] / Design: Brilliant Living Ruby [CATA+]
+-- #endif
+-- #if AFTER CATA
+i(24196),	-- Design: Brilliant Living Ruby [CATA+] / Design: Runed Living Ruby [TBC]
+-- #endif
+-- #if AFTER CATA
+i(24203),	-- Design: Brilliant Dawnstone [TBC] / Design: Brilliant Living Ruby [CATA+]
+-- #endif
+i(25906),	-- Design: Brutal Earthstorm Diamond
+i(24171),	-- Design: Chain of the Twilight Owl
+-- #if AFTER CATA
+i(31879),	-- Design: Deadly Noble Topaz [CATA+] / Design: Wicked Noble Topaz [TBC]
+-- #endif
+i(24164),	-- Design: Delicate Eternium Ring
+i(24194),	-- Design: Delicate Living Ruby
+-- #if AFTER CATA
+i(24192),	-- Design: Delicate Living Ruby [CATA+] / Design: Bright Living Ruby [TBC]
+-- #endif
+-- #if AFTER CATA
+i(35306),	-- Design: Delicate Living Ruby [CATA+] / Design: Bright Living Ruby [TBC]
+-- #endif
+i(25907),	-- Design: Destructive Skyfire Diamond
+i(24170),	-- Design: Embrace of the Dawn
+i(24169),	-- Design: Eye of the Night
+i(24198),	-- Design: Flashing Living Ruby
+i(24216),	-- Design: Glinting Nightseye
+i(31877, {	-- Design: Glinting Nightseye
+	["spellID"] = 0,	-- This is now available via 24216, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(24163),	-- Design: Heavy Felsteel Ring
+i(24213),	-- Design: Inscribed Noble Topaz
+i(24220),	-- Design: Jagged Talasite
+i(24167),	-- Design: Living Ruby Pendant
+i(25909),	-- Design: Mystical Skyfire Diamond
+i(24214),	-- Design: Potent Noble Topaz
+i(24219),	-- Design: Purified Nightseye
+i(24212, {	-- Design: Purified Nightseye
+	["spellID"] = 0,	-- This is now available via 24219, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(24218),	-- Design: Radiant Talasite
+i(24215),	-- Design: Reckless Noble Topaz
+i(24217),	-- Design: Regal Talasite
+i(24205),	-- Design: Rigid Star of Elune (BoE version)
+i(31875, {	-- Design: Rigid Star of Elune
+	["spellID"] = 0,	-- This is now available via 24205, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+-- #if BEFORE CATA
+i(24196),	-- Design: Runed Living Ruby [TBC] / Design: Brilliant Living Ruby [CATA+]
+-- #endif
+i(24210),	-- Design: Shifting Nightseye
+i(31876, {	-- Design: Shifting Nightseye
+	["spellID"] = 0,	-- This is now available via 24210, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(24204),	-- Design: Smooth Dawnstone
+i(24206, {	-- Design: Smooth Dawnstone
+	["spellID"] = 0,	-- This is now available via 24204, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(24199),	-- Design: Solid Star of Elune (BoE version)
+i(24209),	-- Design: Sovereign Nightseye
+i(24200),	-- Design: Sparkling Star of Elune
+i(24201, {	-- Design: Sparkling Star of Elune
+	["spellID"] = 0,	-- This is now available via 24200, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(24202),	-- Design: Stormy Star of Elune
+i(23154),	-- Design: Stormy Azure Moonstone
+i(24197),	-- Design: Subtle Dawnstone
+i(24207, {	-- Design: Subtle Dawnstone
+	["spellID"] = 0,	-- This is now available via 24197, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(25905),	-- Design: Tenacious Earthstorm Diamond
+i(24166),	-- Design: Thick Felsteel Necklace
+i(32411),	-- Design: Thundering Skyfire Diamond
+i(24211),	-- Design: Timeless Nightseye
+i(31878),	-- Design: Veiled Nightseye
+-- #if BEFORE CATA
+i(31879),	-- Design: Wicked Noble Topaz [TBC] / Design: Deadly Noble Topaz [CATA+]
+-- #endif
+
+
+-- From the Isle of QD:
+i(34667),	-- Archmage's Guile
+i(34665),	-- Bombardier's Blade
+i(34676),	-- Dawnforged Defender
+i(35505),	-- Design: Ember Skyfire Diamond
+i(35502),	-- Design: Eternal Earthstorm Diamond
+i(35697),	-- Design: Figurine - Crimson Serpent
+i(35695),	-- Design: Figurine - Empyrean Tortoise
+i(35696),	-- Design: Figurine - Khorium Boar
+i(35699),	-- Design: Figurine - Seaspray Albatross
+i(35698),	-- Design: Figurine - Shadowsong Panther
+i(35769),	-- Design: Forceful Seaspray Emerald
+i(35768),	-- Design: Quick Lionseye
+i(35767),	-- Design: Reckless Pyrestone
+i(35268, {	-- Design: Reckless Pyrestone
+	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35708),	-- Design: Regal Talasite
+i(35766),	-- Design: Steady Seaspray Emerald
+i(35244),	-- Design: Bold Crimson Spinel
+
+
+i(35248),	-- Design: Brilliant Crimson Spinel
+i(35250, {	-- Design: Brilliant Crimson Spinel
+	["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35255, {	-- Design: Brilliant Crimson Spinel
+	["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35271),	-- Design: Deadly Pyrestone
+i(35246),	-- Design: Delicate Crimson Spinel
+i(35245, {	-- Design: Delicate Crimson Spinel
+	["spellID"] = 0,	-- This is now available via 35246, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35247),	-- Design: Flashing Crimson Spinel
+i(35769),	-- Design: Forceful Seaspray Emerald
+i(35325),	-- Design: Forceful Talasite
+i(35266),	-- Design: Glinting Shadowsong Amethyst
+i(35240, {	-- Design: Glinting Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35267),	-- Design: Inscribed Pyrestone
+i(35253),	-- Design: Jagged Seaspray Emerald
+i(35258),	-- Design: Mystic Lionseye
+i(35269),	-- Design: Potent Pyrestone
+i(35251),	-- Design: Purified Shadowsong Amethyst
+i(35241, {	-- Design: Purified Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(37504, {	-- Design: Purified Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35322),	-- Design: Quick Dawnstone
+i(35768),	-- Design: Quick Lionseye
+i(35254),	-- Design: Radiant Seaspray Emerald
+i(35323),	-- Design: Reckless Noble Topaz
+i(35767),	-- Design: Reckless Pyrestone
+i(35268, {	-- Design: Reckless Pyrestone
+	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35252),	-- Design: Regal Seaspray Emerald
+i(35259),	-- Design: Rigid Empyrean Sapphire
+i(35257, {	-- Design: Rigid Empyrean Sapphire
+	["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35242),	-- Design: Shifting Shadowsong Amethyst
+i(35238, {	-- Design: Shifting Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35242, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35260),	-- Design: Smooth Lionseye
+i(35256, {	-- Design: Smooth Lionseye
+	["spellID"] = 0,	-- This is now available via 35260, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35263),	-- Design: Solid Empyrean Sapphire
+i(35243),	-- Design: Sovereign Shadowsong Amethyst
+i(35264),	-- Design: Sparkling Empyrean Sapphire
+i(35262, {	-- Design: Sparkling Empyrean Sapphire
+	["spellID"] = 0,	-- This is now available via 35262, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35766),	-- Design: Steady Seaspray Emerald
+i(35265),	-- Design: Stormy Empyrean Sapphire
+i(35249),	-- Design: Subtle Lionseye
+i(35261, {	-- Design: Subtle Lionseye
+	["spellID"] = 0,	-- This is now available via 35261, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(35239),	-- Design: Timeless Shadowsong Amethyst
+i(35270),	-- Design: Veiled Shadowsong Amethyst
+
+
+
+
+-- From Shattrath... Oh god please why
+i(47010, {	-- Design: Accurate Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46917, {	-- Design: Bold Cardinal Ruby
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46916, {	-- Design: Brilliant Cardinal Ruby
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46930, {	-- Design: Brilliant Cardinal Ruby
+	["spellID"] = 0,	-- This is now available via 46916, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(47015, {	-- Design: Champion's Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46949, {	-- Design: Deadly Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(47011, {	-- Design: Deadly Ametrine
+	["spellID"] = 0,	-- This is now available via 46949, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46941, {	-- Design: Defender's Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(47020, {	-- Design: Deft Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(47023, {	-- Design: Deft Ametrine
+	["spellID"] = 0,	-- This is now available via 47020, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46918, {	-- Design: Delicate Cardinal Ruby
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46919, {	-- Design: Delicate Cardinal Ruby
+	["spellID"] = 0,	-- This is now available via 46918, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46912, {	-- Design: Energized Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46910, {	-- Design: Energized Eye of Zul
+	["spellID"] = 0,	-- This is now available via 46912, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46953, {	-- Design: Etched Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(47019, {	-- Design: Fierce Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46923, {	-- Design: Flashing Cardinal Ruby
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46904, {	-- Design: Forceful Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46956, {	-- Design: Glinting Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46945, {	-- Design: Glinting Dreadstone
+	["spellID"] = 0,	-- This is now available via 46956, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46946, {	-- Design: Glinting Dreadstone
+	["spellID"] = 0,	-- This is now available via 46956, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(47008, {	-- Design: Glinting Dreadstone
+	["spellID"] = 0,	-- This is now available via 46956, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46942, {	-- Design: Guardian's Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46948, {	-- Design: Inscribed Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46901, {	-- Design: Jagged Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46944, {	-- Design: Jagged Eye of Zul
+	["spellID"] = 0,	-- This is now available via 46901, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46909, {	-- Design: Lightning Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46907, {	-- Design: Lightning Eye of Zul
+	["spellID"] = 0,	-- This is now available via 46909, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(47021, {	-- Design: Lucent Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(47016, {	-- Design: Lucent Ametrine
+	["spellID"] = 0,	-- This is now available via 47021, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46905, {	-- Design: Misty Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46906, {	-- Design: Misty Eye of Zul
+	["spellID"] = 0,	-- This is now available via 46905, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46943, {	-- Design: Mysterious Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46932, {	-- Design: Mystic King's Amber
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(49112, {	-- Design: Nightmare Tear
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46899, {	-- Design: Nimble Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46950, {	-- Design: Potent Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46920, {	-- Design: Precise Cardinal Ruby
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46937, {	-- Design: Purified Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46900, {	-- Design: Purified Dreadstone
+	["spellID"] = 0,	-- This is now available via 46937, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46903, {	-- Design: Purified Dreadstone
+	["spellID"] = 0,	-- This is now available via 46937, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46947, {	-- Design: Purified Dreadstone
+	["spellID"] = 0,	-- This is now available via 46937, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46939, {	-- Design: Purified Dreadstone
+	["spellID"] = 0,	-- This is now available via 46937, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46933, {	-- Design: Quick King's Amber
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46911, {	-- Design: Radiant Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46908, {	-- Design: Radiant Eye of Zul
+	["spellID"] = 0,	-- This is now available via 46911, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(47007, {	-- Design: Reckless Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46897, {	-- Design: Regal Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46940, {	-- Design: Regal Eye of Zul
+	["spellID"] = 0,	-- This is now available via 46897, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(47022, {	-- Design: Resolute Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(47018, {	-- Design: Resplendent Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46928, {	-- Design: Rigid Majestic Zircon
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46913, {	-- Design: Shattered Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46938, {	-- Design: Shifting Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46934, {	-- Design: Shifting Dreadstone
+	["spellID"] = 0,	-- This is now available via 46938, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46929, {	-- Design: Smooth King's Amber
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46921, {	-- Design: Smooth King's Amber
+	["spellID"] = 0,	-- This is now available via 46929, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46924, {	-- Design: Solid Majestic Zircon
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46935, {	-- Design: Sovereign Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46925, {	-- Design: Sparkling Majestic Zircon
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46927, {	-- Design: Sparkling Majestic Zircon
+	["spellID"] = 0,	-- This is now available via 46925, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(47017, {	-- Design: Stalwart Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(47012, {	-- Design: Stalwart Ametrine
+	["spellID"] = 0,	-- This is now available via 47017, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46898, {	-- Design: Steady Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46926, {	-- Design: Stormy Majestic Zircon
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46922, {	-- Design: Subtle King's Amber
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46931, {	-- Design: Subtle King's Amber
+	["spellID"] = 0,	-- This is now available via 46922, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46902, {	-- Design: Timeless Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46936, {	-- Design: Timeless Dreadstone
+	["spellID"] = 0,	-- This is now available via 46902, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46915, {	-- Design: Turbid Eye of Zul
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46914, {	-- Design: Turbid Eye of Zul
+	["spellID"] = 0,	-- This is now available via 46915, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+}),
+i(46951, {	-- Design: Veiled Dreadstone
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+i(46952, {	-- Design: Willful Ametrine
+	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
+}),
+
+i(33157),	-- Design: Falling Star
+i(24179),	-- Design: Felsteel Boar
+i(24175),	-- Design: Pendant of Thawing
+i(23138),	-- Design: Potent Flame Spessarite
+
+i(35244),	-- Design: Bold Crimson Spinel
+i(35248),	-- Design: Brilliant Crimson Spinel
+i(35250, {	-- Design: Brilliant Crimson Spinel
+	["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35255, {	-- Design: Brilliant Crimson Spinel
+	["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35271),	-- Design: Deadly Pyrestone
+i(35246),	-- Design: Delicate Crimson Spinel
+i(35245, {	-- Design: Delicate Crimson Spinel
+	["spellID"] = 0,	-- This is now available via 35246, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35247),	-- Design: Flashing Crimson Spinel
+i(35769),	-- Design: Forceful Seaspray Emerald
+i(35325),	-- Design: Forceful Talasite
+i(35266),	-- Design: Glinting Shadowsong Amethyst
+i(35240, {	-- Design: Glinting Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35267),	-- Design: Inscribed Pyrestone
+i(35253),	-- Design: Jagged Seaspray Emerald
+i(35258),	-- Design: Mystic Lionseye
+i(35269),	-- Design: Potent Pyrestone
+i(35251),	-- Design: Purified Shadowsong Amethyst
+i(35241, {	-- Design: Purified Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(37504, {	-- Design: Purified Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35322),	-- Design: Quick Dawnstone
+i(35768),	-- Design: Quick Lionseye
+i(35254),	-- Design: Radiant Seaspray Emerald
+i(35323),	-- Design: Reckless Noble Topaz
+i(35767),	-- Design: Reckless Pyrestone
+i(35268, {	-- Design: Reckless Pyrestone
+	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35252),	-- Design: Regal Seaspray Emerald
+i(35259),	-- Design: Rigid Empyrean Sapphire
+i(35257, {	-- Design: Rigid Empyrean Sapphire
+	["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35242),	-- Design: Shifting Shadowsong Amethyst
+i(35238, {	-- Design: Shifting Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35242, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35260),	-- Design: Smooth Lionseye
+i(35256, {	-- Design: Smooth Lionseye
+	["spellID"] = 0,	-- This is now available via 35260, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35263),	-- Design: Solid Empyrean Sapphire
+i(35243),	-- Design: Sovereign Shadowsong Amethyst
+i(35264),	-- Design: Sparkling Empyrean Sapphire
+i(35262, {	-- Design: Sparkling Empyrean Sapphire
+	["spellID"] = 0,	-- This is now available via 35264, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35766),	-- Design: Steady Seaspray Emerald
+i(35265),	-- Design: Stormy Empyrean Sapphire
+i(35249),	-- Design: Subtle Lionseye
+i(35261, {	-- Design: Subtle Lionseye
+	["spellID"] = 0,	-- This is now available via 35249, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35239),	-- Design: Timeless Shadowsong Amethyst
+i(35270),	-- Design: Veiled Shadowsong Amethyst
+
+
+i(24177),	-- Design: Pendant of Shadow's End
+i(23145),	-- Design: Purified Shadow Draenite
+i(23143, {	-- Design: Purified Shadow Draenite
+	["spellID"] = 0,	-- This is now available via 23145, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(23149),	-- Design: Smooth Golden Draenite
+
+i(33159),	-- Design: Blood of Amber
+i(25904),	-- Design: Insightful Earthstorm Diamond
+i(33155),	-- Design: Kailee's Rose
+i(30826),	-- Design: Ring of Arcane Shielding
+i(24182),	-- Design: Talasite Owl
+i(23133),	-- Design: Brilliant Blood Garnet
+i(24176),	-- Design: Pendant of Withering
+]]--
+
+
 -- #endif
 
 -- #if AFTER WRATH

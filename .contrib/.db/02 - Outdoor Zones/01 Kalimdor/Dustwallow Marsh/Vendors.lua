@@ -51,8 +51,12 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						-- #if AFTER TBC
-						i(21941),	-- Design: Black Pearl Panther
-						i(21943),	-- Design: Truesilver Crab
+						i(21941, {	-- Design: Black Pearl Panther
+							["isLimited"] = true,
+						}),
+						i(21943, {	-- Design: Truesilver Crab
+							["isLimited"] = true,
+						}),
 						-- #endif
 						i(5789),	-- Pattern: Murloc Scale Bracers
 						i(12233),	-- Recipe: Mystery Stew

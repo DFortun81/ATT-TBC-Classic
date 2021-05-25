@@ -64,10 +64,11 @@ _.Zones =
 					["coord"] = { 58.2, 60.5, STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
+						-- #if AFTER TBC
 						i(20856, {	-- Design: Heavy Golden Necklace of Battle
 							["isLimited"] = true,
-							["u"] = TBC_PHASE_ONE,
 						}),
+						-- #endif
 					},
 				}),
 				n(5483, {	-- Erika Tate <Cooking Supplier>

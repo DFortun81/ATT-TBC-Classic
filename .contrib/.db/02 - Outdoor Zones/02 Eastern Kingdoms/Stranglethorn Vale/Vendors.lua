@@ -118,7 +118,9 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						-- #if AFTER TBC
-						i(21943),	-- Design: Truesilver Crab
+						i(21943, {	-- Design: Truesilver Crab
+							["isLimited"] = true,
+						}),
 						-- #endif
 						i(3682),	-- Recipe: Curiously Tasty Omelet
 						i(12228),	-- Recipe: Roast Raptor

@@ -54,6 +54,17 @@ _.Zones =
 						i(22307),	-- Pattern: Enchanted Mageweave Pouch
 					},
 				}),
+				n(8363, {	-- Shadi Mistrunner <Trade Supplies>
+					["coord"] = { 40.6, 64.0, THUNDER_BLUFF },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						-- #if AFTER TBC
+						i(21948, {	-- Design: Opal Necklace of Impact
+							["isLimited"] = true,
+						}),
+						-- #endif
+					},
+				}),
 				n(3029, {	-- Sewa Mistrunner <Fishing Supplier>
 					["coord"] = { 55.8, 47.6, THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
