@@ -1887,10 +1887,6 @@ _.Zones =
 								["u"] = REMOVED_FROM_GAME,
 						}),
 						i(23149),	-- Design: Smooth Golden Draenite
-						i(28291, {	-- Design: Smooth Golden Draenite
-							["spellID"] = 0,	-- This is now available via 23149, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
 						i(29128),	-- Lightwarden's Band
 						i(29123),	-- Medallion of the Lightbearer
 						i(29704),	-- Pattern: Blastguard Belt
