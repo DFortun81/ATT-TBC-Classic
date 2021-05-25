@@ -255,6 +255,7 @@ select(2, ...).ObjectNames = {
 	[185126] = "Crystal Prison",
 	[185165] = "Legion Communicator",
 	[185166] = "Wanted Poster",
+	[185168] = "Reinforced Fel Iron Chest",
 	[186426] = "Wanted Poster",
 	[240622] = "Warden's Scroll Case",
 };
@@ -422,6 +423,7 @@ select(2, ...).ObjectModels = {
 	[185035] = 199473,
 	[185126] = 192011,
 	[185165] = 192342,
+	[185168] = 196989,
 	[186426] = 192468,
 	[240622] = 521201,
 };
