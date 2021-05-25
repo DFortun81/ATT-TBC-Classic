@@ -5541,6 +5541,23 @@ itemrecipe({"Design: Royal Shadowsong Amethyst [TBC]", "Design: Purified Shadows
 itemrecipe({"Design: Teardrop Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32281, 39710, 39711, REMOVED_WITH_CATA);
 itemrecipe({"Design: Thick Dawnstone [TBC]", "Design: Subtle Dawnstone [CATA+]"}, 24207, 31100, 31090, REMOVED_WITH_CATA);
 itemrecipe({"Design: Thick Lionseye [TBC]", "Design: Subtle Lionseye [CATA+]"}, 32294, 39723, 39713, REMOVED_WITH_CATA);
+
+-- Recipes that were only removed as a Recipe Item in Cata, but still available from a trainer? Cata was a god damned mystery.
+itemrecipe({"Design: Bright Blood Garnet [TBC]", "Design: Delicate Blood Garnet [CATA+]"}, 28596, 34590, 34590, REMOVED_WITH_CATA);
+itemrecipe({"Design: Bold Blood Garnet [TBC]", "Design: Bold Blood Garnet [CATA+]"}, 23131, 28905, 28905, REMOVED_WITH_CATA);
+itemrecipe({"Design: Brilliant Golden Draenite [TBC]", "Design: Brilliant Blood Garnet [CATA+]"}, 23148, 28938, 28903, REMOVED_WITH_CATA);
+itemrecipe({"Design: Glinting Flame Spessarite [TBC]", "Design: Glinting Shadow Draenite [CATA+]"}, 23137, 28914, 28914, REMOVED_WITH_CATA);
+itemrecipe({"Design: Inscribed Flame Spessarite [TBC]", "Design: Inscribed Flame Spessarite [CATA+]"}, 23135, 28910, 28910, REMOVED_WITH_CATA);
+itemrecipe({"Design: Jagged Deep Peridot [TBC]", "Design: Jagged Deep Peridot [CATA+]"}, 23141, 28917, 28917, REMOVED_WITH_CATA);
+itemrecipe({"Design: Radiant Deep Peridot [TBC]", "Design: Radiant Deep Peridot [CATA+]"}, 23140, 28916, 28916, REMOVED_WITH_CATA);
+itemrecipe({"Design: Rigid Golden Draenite [TBC]", "Design: Rigid Azure Moonstone [CATA+]"}, 23151, 28948, 28948, REMOVED_WITH_CATA);
+itemrecipe({"Design: Smooth Golden Draenite [TBC]", "Design: Smooth Golden Draenite [CATA+]"}, 28291, 34069, 28944, REMOVED_WITH_CATA);
+itemrecipe({"Design: Solid Azure Moonstone [TBC]", "Design: Solid Azure Moonstone [CATA+]"}, 23152, 28950, 28950, REMOVED_WITH_CATA);
+itemrecipe({"Design: Sovereign Shadow Draenite [TBC]", "Design: Sovereign Shadow Draenite [CATA+]"}, 23147, 28936, 28936, REMOVED_WITH_CATA);
+itemrecipe({"Design: Sparkling Azure Moonstone [TBC]", "Design: Sparkling Azure Moonstone [CATA+]"}, 23153, 28953, 28953, REMOVED_WITH_CATA);
+itemrecipe({"Design: Teardrop Blood Garnet [TBC]", "Design: Brilliant Blood Garnet [CATA+]"}, 23130, 28903, 28903, REMOVED_WITH_CATA);
+itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Draenite [CATA+]"}, 23144, 28925, 28925, REMOVED_WITH_CATA);
+
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID, AFTERCATA, REMOVED_WITH_CATA);
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID, AFTERCATA, REMOVED_WITH_CATA);
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID, AFTERCATA, REMOVED_WITH_CATA);
