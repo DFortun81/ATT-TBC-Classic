@@ -5829,6 +5829,115 @@ i(35270),	-- Design: Veiled Shadowsong Amethyst
 
 
 -- From Shattrath... Oh god please why
+
+
+i(33157),	-- Design: Falling Star
+i(24179),	-- Design: Felsteel Boar
+i(24175),	-- Design: Pendant of Thawing
+i(23138),	-- Design: Potent Flame Spessarite
+
+i(35244),	-- Design: Bold Crimson Spinel
+i(35248),	-- Design: Brilliant Crimson Spinel
+i(35250, {	-- Design: Brilliant Crimson Spinel
+	["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35255, {	-- Design: Brilliant Crimson Spinel
+	["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35271),	-- Design: Deadly Pyrestone
+i(35246),	-- Design: Delicate Crimson Spinel
+i(35245, {	-- Design: Delicate Crimson Spinel
+	["spellID"] = 0,	-- This is now available via 35246, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35247),	-- Design: Flashing Crimson Spinel
+i(35769),	-- Design: Forceful Seaspray Emerald
+i(35325),	-- Design: Forceful Talasite
+i(35266),	-- Design: Glinting Shadowsong Amethyst
+i(35240, {	-- Design: Glinting Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35267),	-- Design: Inscribed Pyrestone
+i(35253),	-- Design: Jagged Seaspray Emerald
+i(35258),	-- Design: Mystic Lionseye
+i(35269),	-- Design: Potent Pyrestone
+i(35251),	-- Design: Purified Shadowsong Amethyst
+i(35241, {	-- Design: Purified Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(37504, {	-- Design: Purified Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35322),	-- Design: Quick Dawnstone
+i(35768),	-- Design: Quick Lionseye
+i(35254),	-- Design: Radiant Seaspray Emerald
+i(35323),	-- Design: Reckless Noble Topaz
+i(35767),	-- Design: Reckless Pyrestone
+i(35268, {	-- Design: Reckless Pyrestone
+	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35252),	-- Design: Regal Seaspray Emerald
+i(35259),	-- Design: Rigid Empyrean Sapphire
+i(35257, {	-- Design: Rigid Empyrean Sapphire
+	["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35242),	-- Design: Shifting Shadowsong Amethyst
+i(35238, {	-- Design: Shifting Shadowsong Amethyst
+	["spellID"] = 0,	-- This is now available via 35242, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35260),	-- Design: Smooth Lionseye
+i(35256, {	-- Design: Smooth Lionseye
+	["spellID"] = 0,	-- This is now available via 35260, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35263),	-- Design: Solid Empyrean Sapphire
+i(35243),	-- Design: Sovereign Shadowsong Amethyst
+i(35264),	-- Design: Sparkling Empyrean Sapphire
+i(35262, {	-- Design: Sparkling Empyrean Sapphire
+	["spellID"] = 0,	-- This is now available via 35264, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35766),	-- Design: Steady Seaspray Emerald
+i(35265),	-- Design: Stormy Empyrean Sapphire
+i(35249),	-- Design: Subtle Lionseye
+i(35261, {	-- Design: Subtle Lionseye
+	["spellID"] = 0,	-- This is now available via 35249, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(35239),	-- Design: Timeless Shadowsong Amethyst
+i(35270),	-- Design: Veiled Shadowsong Amethyst
+
+
+i(24177),	-- Design: Pendant of Shadow's End
+i(23145),	-- Design: Purified Shadow Draenite
+i(23143, {	-- Design: Purified Shadow Draenite
+	["spellID"] = 0,	-- This is now available via 23145, need to delink the old plans from the recipe
+		["u"] = REMOVED_FROM_GAME,
+}),
+i(23149),	-- Design: Smooth Golden Draenite
+
+i(33159),	-- Design: Blood of Amber
+i(25904),	-- Design: Insightful Earthstorm Diamond
+i(33155),	-- Design: Kailee's Rose
+i(30826),	-- Design: Ring of Arcane Shielding
+i(24182),	-- Design: Talasite Owl
+i(23133),	-- Design: Brilliant Blood Garnet
+i(24176),	-- Design: Pendant of Withering
+]]--
+
+
+-- #endif
+
+-- #if AFTER WRATH
+--[[
 i(47010, {	-- Design: Accurate Dreadstone
 	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
 }),
@@ -6073,114 +6182,7 @@ i(46951, {	-- Design: Veiled Dreadstone
 i(46952, {	-- Design: Willful Ametrine
 	["cost"] = { { "c", 61, 4 }, },	-- 4x Dalaran Jewelcrafter's Token
 }),
-
-i(33157),	-- Design: Falling Star
-i(24179),	-- Design: Felsteel Boar
-i(24175),	-- Design: Pendant of Thawing
-i(23138),	-- Design: Potent Flame Spessarite
-
-i(35244),	-- Design: Bold Crimson Spinel
-i(35248),	-- Design: Brilliant Crimson Spinel
-i(35250, {	-- Design: Brilliant Crimson Spinel
-	["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35255, {	-- Design: Brilliant Crimson Spinel
-	["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35271),	-- Design: Deadly Pyrestone
-i(35246),	-- Design: Delicate Crimson Spinel
-i(35245, {	-- Design: Delicate Crimson Spinel
-	["spellID"] = 0,	-- This is now available via 35246, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35247),	-- Design: Flashing Crimson Spinel
-i(35769),	-- Design: Forceful Seaspray Emerald
-i(35325),	-- Design: Forceful Talasite
-i(35266),	-- Design: Glinting Shadowsong Amethyst
-i(35240, {	-- Design: Glinting Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35267),	-- Design: Inscribed Pyrestone
-i(35253),	-- Design: Jagged Seaspray Emerald
-i(35258),	-- Design: Mystic Lionseye
-i(35269),	-- Design: Potent Pyrestone
-i(35251),	-- Design: Purified Shadowsong Amethyst
-i(35241, {	-- Design: Purified Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(37504, {	-- Design: Purified Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35322),	-- Design: Quick Dawnstone
-i(35768),	-- Design: Quick Lionseye
-i(35254),	-- Design: Radiant Seaspray Emerald
-i(35323),	-- Design: Reckless Noble Topaz
-i(35767),	-- Design: Reckless Pyrestone
-i(35268, {	-- Design: Reckless Pyrestone
-	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35252),	-- Design: Regal Seaspray Emerald
-i(35259),	-- Design: Rigid Empyrean Sapphire
-i(35257, {	-- Design: Rigid Empyrean Sapphire
-	["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35242),	-- Design: Shifting Shadowsong Amethyst
-i(35238, {	-- Design: Shifting Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35242, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35260),	-- Design: Smooth Lionseye
-i(35256, {	-- Design: Smooth Lionseye
-	["spellID"] = 0,	-- This is now available via 35260, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35263),	-- Design: Solid Empyrean Sapphire
-i(35243),	-- Design: Sovereign Shadowsong Amethyst
-i(35264),	-- Design: Sparkling Empyrean Sapphire
-i(35262, {	-- Design: Sparkling Empyrean Sapphire
-	["spellID"] = 0,	-- This is now available via 35264, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35766),	-- Design: Steady Seaspray Emerald
-i(35265),	-- Design: Stormy Empyrean Sapphire
-i(35249),	-- Design: Subtle Lionseye
-i(35261, {	-- Design: Subtle Lionseye
-	["spellID"] = 0,	-- This is now available via 35249, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35239),	-- Design: Timeless Shadowsong Amethyst
-i(35270),	-- Design: Veiled Shadowsong Amethyst
-
-
-i(24177),	-- Design: Pendant of Shadow's End
-i(23145),	-- Design: Purified Shadow Draenite
-i(23143, {	-- Design: Purified Shadow Draenite
-	["spellID"] = 0,	-- This is now available via 23145, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(23149),	-- Design: Smooth Golden Draenite
-
-i(33159),	-- Design: Blood of Amber
-i(25904),	-- Design: Insightful Earthstorm Diamond
-i(33155),	-- Design: Kailee's Rose
-i(30826),	-- Design: Ring of Arcane Shielding
-i(24182),	-- Design: Talasite Owl
-i(23133),	-- Design: Brilliant Blood Garnet
-i(24176),	-- Design: Pendant of Withering
-]]--
-
-
--- #endif
-
--- #if AFTER WRATH
-
+]]
 -- #endif
 
 -- #if AFTER CATA
