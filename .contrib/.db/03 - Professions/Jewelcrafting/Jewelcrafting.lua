@@ -316,7 +316,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Reagents",
 			["categoryID"] = 868,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Mercurial Adamantite",
 					["recipeID"] = 38068
@@ -326,7 +326,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Blue Gems",
 			["categoryID"] = 857,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Falling Star",
 					["recipeID"] = 42590
@@ -384,7 +384,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Green Gems",
 			["categoryID"] = 858,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Forceful Seaspray Emerald",
 					["recipeID"] = 47053
@@ -442,7 +442,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Orange Gems",
 			["categoryID"] = 859,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Deadly Flame Spessarite",
 					["recipeID"] = 39467
@@ -496,7 +496,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Purple Gems",
 			["categoryID"] = 860,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Glinting Nightseye",
 					["recipeID"] = 31109
@@ -582,7 +582,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Red Gems",
 			["categoryID"] = 861,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Bold Blood Garnet",
 					["recipeID"] = 28905
@@ -644,7 +644,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Yellow Gems",
 			["categoryID"] = 862,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Blood of Amber",
 					["recipeID"] = 42592
@@ -702,7 +702,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Meta Gems",
 			["categoryID"] = 863,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Bracing Earthstorm Diamond",
 					["recipeID"] = 32867
@@ -764,7 +764,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Necklaces",
 			["categoryID"] = 864,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Amulet of Flowing Life",
 					["recipeID"] = 46126
@@ -830,7 +830,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Rings",
 			["categoryID"] = 865,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Arcane Khorium Band",
 					["recipeID"] = 31057
@@ -924,7 +924,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Crowns",
 			["categoryID"] = 869,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Circlet of Arcane Might",
 					["recipeID"] = 31078
@@ -942,7 +942,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Trinkets",
 			["categoryID"] = 866,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Figurine - Crimson Serpent",
 					["recipeID"] = 46777
@@ -988,7 +988,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Prisms & Statues",
 			["categoryID"] = 867,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Brilliant Glass",
 					["recipeID"] = 47280
@@ -1005,7 +1005,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Blue Gems",
 			["categoryID"] = 846,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Rigid Chalcedony",
 					["recipeID"] = 53854
@@ -1075,7 +1075,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Green Gems",
 			["categoryID"] = 847,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Energized Dark Jade",
 					["recipeID"] = 53925
@@ -1213,7 +1213,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Orange Gems",
 			["categoryID"] = 848,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Champion's Ametrine",
 					["recipeID"] = 66579
@@ -1363,7 +1363,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Purple Gems",
 			["categoryID"] = 849,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Accurate Dreadstone",
 					["recipeID"] = 66576
@@ -1501,7 +1501,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Red Gems",
 			["categoryID"] = 850,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Bold Bloodstone",
 					["recipeID"] = 53831
@@ -1587,7 +1587,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Yellow Gems",
 			["categoryID"] = 851,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Mystic Autumn's Glow",
 					["recipeID"] = 53960
@@ -1657,7 +1657,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Meta Gems",
 			["categoryID"] = 852,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Austere Earthsiege Diamond",
 					["recipeID"] = 55401
@@ -1743,7 +1743,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Prismatic Gems",
 			["categoryID"] = 855,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Enchanted Pearl",
 					["recipeID"] = 56530
@@ -1761,7 +1761,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Necklaces",
 			["categoryID"] = 853,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Blood Sun Necklace",
 					["recipeID"] = 56196
@@ -1803,7 +1803,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Rings",
 			["categoryID"] = 854,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Bloodstone Band",
 					["recipeID"] = 56193
@@ -1889,7 +1889,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Pets and Projects",
 			["categoryID"] = 856,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Dark Jade Focusing Lens",
 					["recipeID"] = 56205
@@ -1933,7 +1933,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Blue Gems",
 			["categoryID"] = 834,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Rigid Chimera's Eye",
 					["recipeID"] = 73404
@@ -2003,7 +2003,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Green Gems",
 			["categoryID"] = 835,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Balanced Elven Peridot",
 					["recipeID"] = 101749
@@ -2165,7 +2165,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Orange Gems",
 			["categoryID"] = 836,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adept Ember Topaz",
 					["recipeID"] = 73371
@@ -2375,7 +2375,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Purple Gems",
 			["categoryID"] = 837,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Accurate Demonseye",
 					["recipeID"] = 73360
@@ -2517,7 +2517,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Red Gems",
 			["categoryID"] = 838,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Bold Carnelian",
 					["recipeID"] = 73222
@@ -2603,7 +2603,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Yellow Gems",
 			["categoryID"] = 839,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Fractured Alicite",
 					["recipeID"] = 73239
@@ -2689,7 +2689,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Meta Gems",
 			["categoryID"] = 840,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Agile Shadowspirit Diamond",
 					["recipeID"] = 96255
@@ -2759,7 +2759,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Necklaces",
 			["categoryID"] = 841,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Alicite Pendant",
 					["recipeID"] = 73496
@@ -2801,7 +2801,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Rings",
 			["categoryID"] = 842,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Band of Blades",
 					["recipeID"] = 73498
@@ -2847,7 +2847,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Crowns",
 			["categoryID"] = 843,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Jeweler's Amber Monocle",
 					["recipeID"] = 73627
@@ -2869,7 +2869,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Fist Weapons",
 			["categoryID"] = 844,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Carnelian Spikes",
 					["recipeID"] = 73620
@@ -2883,7 +2883,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Toys & Prisms",
 			["categoryID"] = 845,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Fire Prism",
 					["recipeID"] = 73478
@@ -2899,7 +2899,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Research",
 			["categoryID"] = 831,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Imperial Amethyst",
 					["recipeID"] = 131691
@@ -2937,7 +2937,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Blue Gems",
 			["categoryID"] = 821,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Rigid Lapis Lazuli",
 					["recipeID"] = 107617
@@ -2987,7 +2987,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Green Gems",
 			["categoryID"] = 822,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Balanced Alexandrite",
 					["recipeID"] = 107598
@@ -3137,7 +3137,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Orange Gems",
 			["categoryID"] = 823,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adept Tiger Opal",
 					["recipeID"] = 107645
@@ -3331,7 +3331,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Purple Gems",
 			["categoryID"] = 824,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Accurate Imperial Amethyst",
 					["recipeID"] = 107693
@@ -3461,7 +3461,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Red Gems",
 			["categoryID"] = 825,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Bold Pandarian Garnet",
 					["recipeID"] = 107622
@@ -3527,7 +3527,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Yellow Gems",
 			["categoryID"] = 833,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Fractured Serpent's Eye",
 					["recipeID"] = 122684
@@ -3589,7 +3589,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Meta Gems",
 			["categoryID"] = 827,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Agile Primal Diamond",
 					["recipeID"] = 107753
@@ -3655,7 +3655,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Necklaces",
 			["categoryID"] = 828,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Golembreaker Amulet",
 					["recipeID"] = 122670
@@ -3685,7 +3685,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Rings",
 			["categoryID"] = 829,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Band of Blood",
 					["recipeID"] = 122668
@@ -3715,7 +3715,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Mounts",
 			["categoryID"] = 830,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Jade Panther",
 					["recipeID"] = 121844
@@ -3741,7 +3741,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Toys & Pets",
 			["categoryID"] = 832,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Jade Owl",
 					["recipeID"] = 131897
@@ -3761,7 +3761,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Reagents and Research",
 			["categoryID"] = 374,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Primal Gemcutting",
 					["recipeID"] = 182127
@@ -3787,7 +3787,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Jewelry Enhancers",
 			["categoryID"] = 375,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Mighty Taladite Amplifier",
 					["timeline"] = { "removed 9.0.1.10000" },
@@ -3812,7 +3812,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Jewelry",
 			["categoryID"] = 376,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Glowing Blackrock Band",
 					["recipeID"] = 170710
@@ -3878,7 +3878,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Gems",
 			["categoryID"] = 377,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Critical Strike Taladite",
 					["recipeID"] = 170719
@@ -3944,7 +3944,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Other",
 			["categoryID"] = 378,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Prismatic Focusing Lens",
 					["recipeID"] = 170732
@@ -3960,7 +3960,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Training",
 			["categoryID"] = 536,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Empyrial Circlet",
 					["recipeID"] = 248937,
@@ -3994,7 +3994,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Rings",
 			["categoryID"] = 465,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Azsunite Loop",
 					["nextRecipeID"] = 195904,
@@ -4128,7 +4128,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Necklaces",
 			["categoryID"] = 507,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Ancient Maelstrom Amulet",
 					["nextRecipeID"] = 195919,
@@ -4390,7 +4390,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Gems",
 			["categoryID"] = 466,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Deadly Deep Amber",
 					["recipeID"] = 195848
@@ -4460,7 +4460,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Crowns",
 			["categoryID"] = 535,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Empyrial Cosmic Crown",
 					["nextRecipeID"] = 247754,
@@ -4530,7 +4530,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Other",
 			["categoryID"] = 467,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Chatterstone",
 					["recipeID"] = 195883
@@ -4548,7 +4548,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Mass Prospecting",
 			["categoryID"] = 505,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Mass Prospect Empyrium",
 					["recipeID"] = 247761
@@ -4580,7 +4580,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Gems",
 			["categoryID"] = 817,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Deadly Amberblaze",
 					["recipeID"] = 256696
@@ -4670,7 +4670,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Mass Prospecting",
 			["categoryID"] = 818,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Mass Prospect Monelite",
 					["recipeID"] = 256611
@@ -4692,7 +4692,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Rings",
 			["categoryID"] = 819,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Amberblaze Loop",
 					["nextRecipeID"] = 256514,
@@ -4826,7 +4826,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Weapons",
 			["categoryID"] = 820,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Honorable Combatant's Intuitive Staff",
 					["nextRecipeID"] = 269735,
@@ -4936,7 +4936,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Conversions",
 			["categoryID"] = 1243,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Aqueous Recalibration",
 					["recipeID"] = 287272
@@ -4950,7 +4950,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Focus",
 			["categoryID"] = 1307,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Void Focus",
 					["recipeID"] = 307219
@@ -4960,7 +4960,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Follower Equipment",
 			["categoryID"] = 1233,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Kaleidoscopic Lens",
 					["recipeID"] = 278419
@@ -4970,7 +4970,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Tool of the Trade",
 			["categoryID"] = 1278,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Jewelhammer's Focus",
 					["recipeID"] = 256703
@@ -5008,7 +5008,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Quest Recipes",
 			["categoryID"] = 1530,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Brilliant Bauble",
 					["recipeID"] = 338248,
@@ -5098,7 +5098,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Gems",
 			["categoryID"] = 1419,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Deadly Jewel Cluster",
 					["recipeID"] = 311863
@@ -5144,7 +5144,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Mass Prospecting",
 			["categoryID"] = 1420,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Mass Prospect Elethium",
 					["recipeID"] = 311953
@@ -5174,7 +5174,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Optional Reagents",
 			["categoryID"] = 1421,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Crafter's Mark I",
 					["recipeID"] = 343697
@@ -5192,7 +5192,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Necklaces",
 			["categoryID"] = 1422,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Deadly Laestrite Choker",
 					["recipeID"] = 311902
@@ -5230,7 +5230,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Rings",
 			["categoryID"] = 1424,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Deadly Laestrite Band",
 					["recipeID"] = 311880
@@ -5268,7 +5268,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Specialized Jewelry",
 			["categoryID"] = 1484,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Shadowghast Necklace",
 					["recipeID"] = 332040
@@ -5306,7 +5306,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 		{
 			["name"] = "Hats",
 			["categoryID"] = 1520,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Crown of the Righteous",
 					["recipeID"] = 334548
@@ -5425,6 +5425,8 @@ end
 -- #if AFTER TBC
 -- Recipes introduced with Burning Crusade
 itemrecipe("Design: Amulet of Flowing Life", 35202, 46126);
+itemrecipe("Design: Amulet of the Moon", 20854, 25339);
+itemrecipe("Design: Black Pearl Panther", 21941, 26875);
 itemrecipe("Design: Blazing Eternium Band", 24165, 31061);
 itemrecipe("Design: Bold Crimson Spinel", 32274, 39705);
 itemrecipe("Design: Bold Living Ruby", 24193, 31084);
@@ -5444,6 +5446,7 @@ itemrecipe("Design: Forceful Seaspray Emerald", 35765, 47053);
 itemrecipe("Design: Hard Khorium Band", 35200, 46124);
 itemrecipe("Design: Hard Khorium Choker", 35203, 46127);
 itemrecipe("Design: Heavy Felsteel Ring", 24163, 31058);
+itemrecipe("Design: Heavy Golden Necklace of Battle", 20856, 25320);
 itemrecipe("Design: Inscribed Noble Topaz", 24213, 31106);
 itemrecipe("Design: Inscribed Pyrestone", 32303, 39733);
 itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742);
@@ -5452,6 +5455,7 @@ itemrecipe("Design: Living Ruby Pendant", 24167, 31068);
 itemrecipe("Design: Loop of Forged Power", 35198, 46122);
 itemrecipe("Design: Mystic Lionseye", 32295, 39724);
 itemrecipe("Design: Mystical Skyfire Diamond", 25909, 32872);
+itemrecipe("Design: Opal Necklace of Impact", 21948, 26897);
 itemrecipe("Design: Pendant of Sunfire", 35201, 46125);
 itemrecipe("Design: Potent Noble Topaz", 24214, 31107);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734);
@@ -5477,8 +5481,11 @@ itemrecipe("Design: Stormy Empyrean Sapphire", 32289, 39718);
 itemrecipe("Design: Stormy Star of Elune", 24202, 31095);
 itemrecipe("Design: Subtle Lionseye", 32284, 39713);
 itemrecipe("Design: Tenacious Earthstorm Diamond", 25905, 32868);
+itemrecipe("Design: The Frozen Eye", 31401, 38503);
+itemrecipe("Design: The Jade Eye", 20975, 25619);
 itemrecipe("Design: Thick Felsteel Necklace", 24166, 31067);
 itemrecipe("Design: Thundering Skyfire Diamond", 32411, 39963);
+itemrecipe("Design: Truesilver Crab", 21943, 26881);
 itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737);
 -- itemrecipe("", ITEMID, SPELLID);
 -- itemrecipe("", ITEMID, SPELLID);
@@ -5500,6 +5507,7 @@ itemrecipe({"Design: Subtle Living Ruby [TBC]", "Design: Subtle Dawnstone [CATA+
 itemrecipe({"Design: Veiled Noble Topaz [TBC]", "Design: Veiled Nightseye [CATA+]"}, 31878, 39470);
 itemrecipe({"Design: Wicked Noble Topaz [TBC]", "Design: Deadly Noble Topaz [CATA+]"}, 31879, 39471);
 itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"}, 32308, 39738);
+-- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
 

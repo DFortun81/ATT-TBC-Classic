@@ -117,12 +117,7 @@ _.Zones =
 					["coord"] = { 32.6, 29.2, STRANGLETHORN_VALE },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						applyclassicphase(TBC_PHASE_ONE, i(21943, {	-- Design: Truesilver Crab
-							["timeline"] = { "added 2.5.1.38043" },
-							["spellID"] = 26881,	-- Truesilver Crab
-							["requireSkill"] = JEWELCRAFTING,
-							["f"] = 200,
-						})),
+						i(21943),	-- Design: Truesilver Crab
 						i(3682),	-- Recipe: Curiously Tasty Omelet
 						i(12228),	-- Recipe: Roast Raptor
 						i(12231),	-- Recipe: Jungle Stew
