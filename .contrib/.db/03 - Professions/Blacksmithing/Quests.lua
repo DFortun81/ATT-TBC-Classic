@@ -75,13 +75,8 @@ profession(BLACKSMITHING, {
 			["qg"] = 11193,	-- Seril Scourgebane
 			["coord"] = { 61.2, 37.2, WINTERSPRING },
 			["maps"] = { WINTERSPRING, STRATHOLME },
-			["requireSkill"] = 9787,	-- Weaponsmith
 			["cost"] = {
 				{ "i", 13350, 1 },	-- Insignia of the Black Guard
-			},
-			["altQuests"] = {
-				5306,	-- Snakestone of the Shadow Huntress [Master Axesmith]
-				5305,	-- Sweet Serenity [Master Hammersmith]
 			},
 			["lvl"] = 50,
 			["g"] = {
@@ -105,7 +100,6 @@ profession(BLACKSMITHING, {
 		}),
 		un(PHASE_THREE, q(7649, {	-- Enchanted Thorium Platemail: Volume I
 			["provider"] = { "i", 18769 },	-- Enchanted Thorium Platemail (Volume I)
-			["requireSkill"] = 9788,	-- Armorsmith
 			["maps"] = { DIRE_MAUL, BLACKROCK_SPIRE },
 			["cost"] = {
 				{ "i", 18779, 1 },	-- Bottom Half of Advanced Armorsmithing: Volume I
@@ -117,7 +111,6 @@ profession(BLACKSMITHING, {
 		})),
 		un(PHASE_THREE, q(7650, {	-- Enchanted Thorium Platemail: Volume II
 			["provider"] = { "i", 18770 },	-- Enchanted Thorium Platemail (Volume II)
-			["requireSkill"] = 9788,	-- Armorsmith
 			["maps"] = { DIRE_MAUL, STRATHOLME, SCHOLOMANCE },
 			["cost"] = {
 				{ "i", 18781, 1 },	-- Bottom Half of Advanced Armorsmithing: Volume II
@@ -130,7 +123,6 @@ profession(BLACKSMITHING, {
 		})),
 		un(PHASE_THREE, q(7651, {	-- Enchanted Thorium Platemail: Volume III
 			["provider"] = { "i", 18771 },	-- Enchanted Thorium Platemail (Volume III)
-			["requireSkill"] = 9788,	-- Armorsmith
 			["maps"] = { DIRE_MAUL, BLACKROCK_SPIRE, STRATHOLME },
 			["cost"] = {
 				{ "i", 18783, 1 },	-- Bottom Half of Advanced Armorsmithing: Volume III
@@ -161,7 +153,6 @@ profession(BLACKSMITHING, {
 		q(5124, {	-- Fiery Plate Gauntlets
 			["qg"] = 10637,	-- Malyfous Darkhammer <The Thorium Brotherhood>
 			["sourceQuest"] = 5103,	-- Hot Fiery Death
-			["requireSkill"] = 9788,	-- Armorsmith
 			["coord"] = { 61.0, 38.8, WINTERSPRING },
 			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
 			["cost"] = {
@@ -225,7 +216,6 @@ profession(BLACKSMITHING, {
 		}),
 		q(5103, {	-- Hot Fiery Death
 			["provider"] = { "o", 176090 },	-- Human Remains
-			["requireSkill"] = 9788,	-- Armorsmith
 			["description"] = "At the bottom floor of Lower Blackrock Spire near the lava.",
 			["maps"] = { BLACKROCK_SPIRE },
 			["lvl"] = 55,
@@ -410,16 +400,11 @@ profession(BLACKSMITHING, {
 		}),
 		q(5306, {	-- Snakestone of the Shadow Huntress
 			["qg"] = 11192,	-- Kilram
-			["requireSkill"] = 9787,	-- Weaponsmith
 			["description"] = "Upon finishing this quest, you will become a Master Axesmith and be locked out of becoming a Master Hammersmith and Master Swordsmith.",
 			["coord"] = { 61.2, 37, WINTERSPRING },
 			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
 			["cost"] = {
 				{ "i", 13352, 1 },	-- Vosh'gajin's Snakestone
-			},
-			["altQuests"] = {
-				5307,	-- Corruption [Master Swordsmith]
-				5305,	-- Sweet Serenity [Master Hammersmith]
 			},
 			["lvl"] = 50,
 			["g"] = {
@@ -438,19 +423,14 @@ profession(BLACKSMITHING, {
 			},
 			["g"] = {
 				i(3609),	-- Plans: Copper Chain Vest
+				i(33792),   -- Plans: Heavy Copper Longsword
 			},
 		}),
 		q(5305, {	-- Sweet Serenity
 			["qg"] = 11191,	-- Lilith the Lithe
-			["requireSkill"] = 9787,	-- Weaponsmith
 			["description"] = "Upon finishing this quest, you will become a Master Hammersmith and be locked out of becoming a Master Axesmith and Master Swordsmith.",
 			["coord"] = { 61.2, 37.2, WINTERSPRING },
 			["maps"] = { WINTERSPRING, STRATHOLME },
-			["altQuests"] = {
-				5306,	-- Snakestone of the Shadow Huntress [Master Axesmith]
-				5307,	-- Corruption [Master Swordsmith]
-				8869,	-- Sweet Serenity (Deprecated?)
-			},
 			["cost"] = {
 				{ "i", 13351, 1 },	-- Crimson Hammersmith's Apron
 			},
@@ -515,7 +495,6 @@ profession(BLACKSMITHING, {
 		q(5127, {	-- The Demon Forge
 			["qg"] = 10918,	-- Lorax
 			["sourceQuest"] = 5126,	-- Lorax's Tale
-			["requireSkill"] = 9788,	-- Armorsmith
 			["coord"] = { 63.8, 73.8, WINTERSPRING },
 			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
 			["cost"] = {

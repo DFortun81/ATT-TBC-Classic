@@ -10,47 +10,14 @@ profession(BLACKSMITHING, {
 				["name"] = "Helms",
 				["categoryID"] = 218,
 				["g"] = {
-					un(PHASE_THREE, {
-						["name"] = "Dark Iron Helm",
-						["recipeID"] = 23636,
-						["requireSkill"] = 9788,
-					}),
-					un(PHASE_THREE, {
-						["name"] = "Enchanted Thorium Helm",
-						["recipeID"] = 16742,
-						["requireSkill"] = 9788,
-					}),
-					{
-						["name"] = "Helm of the Great Chief",
-						["recipeID"] = 16728,
-						["requireSkill"] = 9788,
-					},
-					{
-						["name"] = "Lionheart Helm",
-						["recipeID"] = 16729,
-						["requireSkill"] = 9788,
-					},
-					{
-						["name"] = "Whitesoul Helm",
-						["recipeID"] = 16724,
-						["requireSkill"] = 9788,
-					},
+					
 				},
 			},
 			{
 				["name"] = "Shoulders",
 				["categoryID"] = 219,
 				["g"] = {
-					un(TBC_PHASE_ONE, {
-						["name"] = "Dawnbringer Shoulders",
-						["recipeID"] = 16660,
-						["requireSkill"] = 9788,
-					}),
-					{
-						["name"] = "Fiery Chain Shoulders",
-						["recipeID"] = 20873,
-						["requireSkill"] = 9788,
-					},
+					
 				},
 			},
 			{
@@ -58,9 +25,7 @@ profession(BLACKSMITHING, {
 				["categoryID"] = 222,
 				["g"] = {
 					{
-						["name"] = "Dark Iron Bracers",
-						["recipeID"] = 20874,
-						["requireSkill"] = 9788,
+						
 					},
 				},
 			},
@@ -68,31 +33,7 @@ profession(BLACKSMITHING, {
 				["name"] = "Gauntlets",
 				["categoryID"] = 221,
 				["g"] = {
-					un(PHASE_THREE, {
-						["name"] = "Dark Iron Gauntlets",
-						["recipeID"] = 23637,
-						["requireSkill"] = 9788,
-					}),
-					{
-						["name"] = "Fiery Plate Gauntlets",
-						["recipeID"] = 16655,
-						["requireSkill"] = 9788,
-					},
-					{
-						["name"] = "Storm Gauntlets",
-						["recipeID"] = 16661,
-						["requireSkill"] = 9788,
-					},
-					{
-						["name"] = "Stronghold Gauntlets",
-						["recipeID"] = 16741,
-						["requireSkill"] = 9788,
-					},
-					{
-						["name"] = "Truesilver Gauntlets",
-						["recipeID"] = 9954,
-						["requireSkill"] = 9788,
-					},
+					
 				},
 			},
 			{
@@ -100,46 +41,47 @@ profession(BLACKSMITHING, {
 				["categoryID"] = 220,
 				["g"] = {
 					{
-						["name"] = "Dark Iron Plate",
-						["recipeID"] = 15296,
+						["name"] = "Bulwark of Ancient Kings",
+						["recipeID"] = 36257,
 						["requireSkill"] = 9788,
 					},
 					{
-						["name"] = "Demon Forged Breastplate",
-						["recipeID"] = 16667,
-						["requireSkill"] = 9788,
-					},
-					un(PHASE_THREE, {
-						["name"] = "Enchanted Thorium Breastplate",
-						["recipeID"] = 16745,
-						["requireSkill"] = 9788,
-					}),
-					{
-						["name"] = "Invulnerable Mail",
-						["recipeID"] = 16746,
+						["name"] = "Bulwark of Kings",
+						["recipeID"] = 34534,
 						["requireSkill"] = 9788,
 					},
 					{
-						["name"] = "Truesilver Breastplate",
-						["recipeID"] = 9974,
+						["name"] = "Embrace of the Twisting Nether",
+						["recipeID"] = 36256,
 						["requireSkill"] = 9788,
 					},
 					{
-						["name"] = "Wildthorn Mail",
-						["recipeID"] = 16650,
+						["name"] = "Heavy Earthforged Breastplate",
+						["recipeID"] = 36129,
 						["requireSkill"] = 9788,
-					}
+					},
+					{
+						["name"] = "Nether Chain Shirt",
+						["recipeID"] = 34529,
+						["requireSkill"] = 9788,
+					},
+					{
+						["name"] = "Stormforged Hauberk",
+						["recipeID"] = 36130,
+						["requireSkill"] = 9788,
+					},
+					{
+						["name"] = "Twisting Nether Chain Shirt",
+						["recipeID"] = 34530,
+						["requireSkill"] = 9788,
+					},
 				},
 			},
 			{
 				["name"] = "Belts",
 				["categoryID"] = 223,
 				["g"] = {
-					{
-						["name"] = "Fiery Chain Girdle",
-						["recipeID"] = 20872,
-						["requireSkill"] = 9788,
-					},
+					
 				},
 			},
 			{
@@ -147,31 +89,22 @@ profession(BLACKSMITHING, {
 				["categoryID"] = 224,
 				["g"] = {
 					{
-						["name"] = "Dark Iron Leggings",
-						["recipeID"] = 20876,
+						["name"] = "Earthforged Leggings",
+						["recipeID"] = 36122,
 						["requireSkill"] = 9788,
 					},
-					un(PHASE_THREE, {
-						["name"] = "Enchanted Thorium Leggings",
-						["recipeID"] = 16744,
+					{	
+						["name"] = "Windforged Leggings",
+						["recipeID"] = 36124,
 						["requireSkill"] = 9788,
-					}),
-					un(PHASE_FIVE, {
-						["name"] = "Titanic Leggings",
-						["recipeID"] = 27829,
-						["requireSkill"] = 9788,
-					}),
+					},	
 				},
 			},
 			{
 				["name"] = "Boots",
 				["categoryID"] = 225,
 				["g"] = {
-					un(PHASE_FOUR, {
-						["name"] = "Dark Iron Boots",
-						["recipeID"] = 24399,
-						["requireSkill"] = 9788,
-					}),
+					
 				}
 			},
 		},
