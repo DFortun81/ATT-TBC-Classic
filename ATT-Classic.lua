@@ -4513,7 +4513,7 @@ local itemFields = {
 		if results and #results > 0 then
 			for _,ref in pairs(results) do
 				if ref.itemID ~= id and app.RecursiveGroupRequirementsFilter(ref) then
-					if ref.collectible or (ref.total and ref.total > 0) then
+					if (ref.collectible and not ref.collected) or (ref.total and ref.total > 0 and ref.progress < ref.total) then
 						return true;
 					end
 				end
