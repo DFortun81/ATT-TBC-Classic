@@ -1009,9 +1009,7 @@ end
 local function CreateHash(t)
 	local key = t.key or GetKey(t);
 	if key then
-		local hash = key .. (rawget(t, key) or t[key]);
-		rawset(t, "hash", hash);
-		return hash;
+		return key .. t[key];
 	end
 end
 local function GetHash(t)
@@ -1431,6 +1429,8 @@ local function BuildContainsInfo(groups, entries, paramA, paramB, indent, layer)
 						else
 							right = L["NOT_COLLECTED_ICON"];
 						end
+					elseif group.visible then
+						right = group.count and (group.count .. "x") or "---";
 					end
 				elseif group.visible then
 					right = group.count and (group.count .. "x") or "---";
@@ -1672,6 +1672,22 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 			end
 		end
 		
+		if paramA == "currencyID" then
+			local costResults = app.SearchForField("currencyIDAsCost", paramB);
+			if costResults and #costResults > 0 then
+				for i,o in ipairs(costResults) do
+					MergeObject(group, o);
+				end
+			end
+		elseif paramA == "itemID" then
+			local costResults = app.SearchForField("itemIDAsCost", paramB);
+			if costResults and #costResults > 0 then
+				for i,o in ipairs(costResults) do
+					MergeObject(group, o);
+				end
+			end
+		end
+		
 		-- Create a list of sources
 		if app.Settings:GetTooltipSetting("SourceLocations") and (not paramA or (app.Settings:GetTooltipSetting(paramA == "creatureID" and "SourceLocations:Creatures" or "SourceLocations:Things"))) then
 			local temp = {};
@@ -1817,7 +1833,32 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 				group = CreateObject({ [paramA] = paramB });
 				group.g = merged;
 			end
-			
+		end
+		
+		
+		
+		-- Resolve Cost
+		--[[
+		if paramA == "currencyID" then
+			local costResults = app.SearchForField("currencyIDAsCost", paramB);
+			if costResults and #costResults > 0 then
+				if not group.g then group.g = {} end
+				for i,o in ipairs(costResults) do
+					MergeObject(group.g, o);
+				end
+			end
+		elseif paramA == "itemID" or (paramA == "s" and group.itemID) then
+			local costResults = app.SearchForField("itemIDAsCost", group.itemID or paramB);
+			if costResults and #costResults > 0 then
+				if not group.g then group.g = {} end
+				for i,o in ipairs(costResults) do
+					MergeObject(group.g, o);
+				end
+			end
+		end
+		]]
+		
+		if group.g then
 			group.total = 0;
 			group.progress = 0;
 			app.UpdateGroups(group, group.g);
@@ -2248,7 +2289,6 @@ fieldConverters = {
 					CacheField(group, "creatureID", v[2]);
 				elseif v[1] == "i" then
 					CacheField(group, "itemIDAsCost", v[2]);
-					CacheField(group, "itemID", v[2]);
 				elseif v[1] == "o" then
 					-- WARNING: DEV ONLY START
 					if not app.ObjectNames[v[2]] then
@@ -2273,7 +2313,6 @@ fieldConverters = {
 		else
 			for k,v in pairs(value) do
 				if v[1] == "i" and v[2] > 0 then
-					CacheField(group, "itemID", v[2]);
 					CacheField(group, "itemIDAsCost", v[2]);
 				elseif v[1] == "o" and v[2] > 0 then
 					CacheField(group, "objectID", v[2]);
@@ -4451,17 +4490,9 @@ local itemFields = {
 	end,
 	["f"] = function(t)
 		if t.questID then return 104; end
-		local results = SearchForField("itemID", t.itemID);
-		if results then
-			for i,o in ipairs(results) do
-				if o.questID then return 104; end
-			end
-		end
 		local results = SearchForField("itemIDAsCost", t.itemID);
-		if results then
-			for i,o in ipairs(results) do
-				if o.questID then return 104; end
-			end
+		if results and #results > 0 then
+			return 104;
 		end
 	end,
 	["tsm"] = function(t)
@@ -6694,6 +6725,10 @@ local function CreateMiniListForGroup(group)
 		else
 			-- This is a standalone item
 			group.visible = true;
+			if not group.g and (group.itemID or group.currencyID) then
+				local cmd = group.link or group.key .. ":" .. group[group.key];
+				group = GetCachedSearchResults(cmd, SearchForLink, cmd);
+			end
 			popout.data = group;
 		end
 		
