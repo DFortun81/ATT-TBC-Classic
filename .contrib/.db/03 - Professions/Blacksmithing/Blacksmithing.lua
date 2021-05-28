@@ -944,447 +944,453 @@ profession(BLACKSMITHING, {
 		},
 	}),
 	applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
-	{
-		["name"] = "Materials",
-		["categoryID"] = 215,
-		["g"] = {
-			{
-				["name"] = "Adamantite Rod",
-				["recipeID"] = 32656,
-			},
-			{
-				["name"] = "Eternium Rod",
-				["recipeID"] = 32657,
-			},
-			{
-				["name"] = "Fel Iron Rod",
-				["recipeID"] = 32655,
+		{
+			["name"] = "Materials",
+			["categoryID"] = 215,
+			["g"] = {
+				{
+					["name"] = "Adamantite Rod",
+					["recipeID"] = 32656,
+				},
+				{
+					["name"] = "Eternium Rod",
+					["recipeID"] = 32657,
+				},
+				{
+					["name"] = "Fel Iron Rod",
+					["recipeID"] = 32655,
+				},
 			},
 		},
-	},
-	{
-		["name"] = "Weapon Mods",
-		["categoryID"] = 216,
-		["g"] = {
-			{
-				["name"] = "Adamantite Weapon Chain",
-				["recipeID"] = 42688,
-			},
-			{
-				["name"] = "Adamantite Sharpening Stone",
-				["recipeID"] = 29656,
-			},
-			{
-				["name"] = "Adamantite Weightstone",
-				["recipeID"] = 34608,
-			},
-			{
-				["name"] = "Fel Sharpening Stone",
-				["recipeID"] = 29654,
-			},
-			{
-				["name"] = "Fel Weightstone",
-				["recipeID"] = 34607,
-			},
+		{
+			["name"] = "Weapon Mods",
+			["categoryID"] = 216,
+			["g"] = {
+				{
+					["name"] = "Adamantite Weapon Chain",
+					["recipeID"] = 42688,
+				},
+				{
+					["name"] = "Adamantite Sharpening Stone",
+					["recipeID"] = 29656,
+				},
+				{
+					["name"] = "Adamantite Weightstone",
+					["recipeID"] = 34608,
+				},
+				{
+					["name"] = "Fel Sharpening Stone",
+					["recipeID"] = 29654,
+				},
+				{
+					["name"] = "Fel Weightstone",
+					["recipeID"] = 34607,
+				},
 
-		},
-	},
-	{
-		["name"] = "Armor Mods",
-		["categoryID"] = 217,
-		["g"] = {
-			{
-				["name"] = "Felsteel Shield Spike",
-				["recipeID"] = 29657,
-			},
-			{
-				["name"] = "Greater Rune of Warding",
-				["recipeID"] = 32285,
-			},
-			{
-				["name"] = "Greater Ward of Shielding",
-				["recipeID"] = 29729,
-			},
-			{
-				["name"] = "Lesser Rune of Warding",
-				["recipeID"] = 32284,
-			},
-			{
-				["name"] = "Lesser Ward of Shielding",
-				["recipeID"] = 29728,
 			},
 		},
-	},
-	{
-		["name"] = "Helms",
-		["categoryID"] = 218,
-		["g"] = {
-			{
-				["name"] = "Fel Iron Chain Coif",
-				["recipeID"] = 29551,
-			},
-			{
-				["name"] = "Felsteel Helm",
-				["recipeID"] = 29621,
-			},
-			{
-				["name"] = "Flamebane Helm",
-				["recipeID"] = 29615,
-			},
-			{
-				["name"] = "Helm of the Stalwart Defender",
-				["recipeID"] = 29664,
-			},
-			{
-				["name"] = "Iceguard Helm",
-				["recipeID"] = 38479,
-			},
-			{
-				["name"] = "Ragesteel Helm",
-				["recipeID"] = 29643,
-			},
-			{
-				["name"] = "Oathkeepers Helm",
-				["recipeID"] = 29668,
-			},
-			{
-				["name"] = "Storm Helm",
-				["recipeID"] = 29663,
-			},
-			{
-				["name"] = "Wildguard Helm",
-				["recipeID"] = 38476,
+		{
+			["name"] = "Armor Mods",
+			["categoryID"] = 217,
+			["g"] = {
+				{
+					["name"] = "Felsteel Shield Spike",
+					["recipeID"] = 29657,
+				},
+				{
+					["name"] = "Greater Rune of Warding",
+					["recipeID"] = 32285,
+				},
+				{
+					["name"] = "Greater Ward of Shielding",
+					["recipeID"] = 29729,
+				},
+				{
+					["name"] = "Lesser Rune of Warding",
+					["recipeID"] = 32284,
+				},
+				{
+					["name"] = "Lesser Ward of Shielding",
+					["recipeID"] = 29728,
+				},
 			},
 		},
-	},
-	{
-		["name"] = "Shoulders",
-		["categoryID"] = 219,
-		["g"] = {
-			applyclassicphase(TBC_PHASE_FIVE,{
-				["name"] = "Dawnsteel Shoulders",
-				["recipeID"] = 41135,
-			}),
-			{
-				["name"] = "Ragesteel Shoulders",
-				["recipeID"] = 42662,
-			},
-			{
-				["name"] = "Swiftsteel Shoulders",
-				["recipeID"] = 41133,
-			},
-		},
-	},
-	{
-		["name"] = "Bracers",
-		["categoryID"] = 222,
-		["g"] = {
-			{
-				["name"] = "Adamantite Plate Bracers",
-				["recipeID"] = 29603,
-			},
-			{
-				["name"] = "Black Felsteel Bracers",
-				["recipeID"] = 29669,
-			},
-			{
-				["name"] = "Blessed Bracers",
-				["recipeID"] = 29672,
-			},
-			{
-				["name"] = "Bracers of the Green Fortress",
-				["recipeID"] = 29671,
-			},
-			applyclassicphase(TBC_PHASE_FIVE,{
-				["name"] = "Dawnsteel Bracers",
-				["recipeID"] = 41134,
-			}),
-			{
-				["name"] = "Fel Iron Chain Bracers",
-				["recipeID"] = 29553,
-			},
-			{
-				["name"] = "Flamebane Bracers",
-				["recipeID"] = 29614,
-			},
-			applyclassicphase(TBC_PHASE_FIVE, {
-				["name"] = "Shadesteel Bracers",
-				["recipeID"] = 40034,
-			}),
-			{
-				["name"] = "Swiftsteel Bracers",
-				["recipeID"] = 41132,
+		{
+			["name"] = "Helms",
+			["categoryID"] = 218,
+			["g"] = {
+				{
+					["name"] = "Fel Iron Chain Coif",
+					["recipeID"] = 29551,
+				},
+				{
+					["name"] = "Felsteel Helm",
+					["recipeID"] = 29621,
+				},
+				{
+					["name"] = "Flamebane Helm",
+					["recipeID"] = 29615,
+				},
+				{
+					["name"] = "Helm of the Stalwart Defender",
+					["recipeID"] = 29664,
+				},
+				{
+					["name"] = "Iceguard Helm",
+					["recipeID"] = 38479,
+				},
+				{
+					["name"] = "Ragesteel Helm",
+					["recipeID"] = 29643,
+				},
+				{
+					["name"] = "Oathkeepers Helm",
+					["recipeID"] = 29668,
+				},
+				{
+					["name"] = "Storm Helm",
+					["recipeID"] = 29663,
+				},
+				{
+					["name"] = "Wildguard Helm",
+					["recipeID"] = 38476,
+				},
 			},
 		},
-	},
-	{
-		["name"] = "Gauntlets",
-		["categoryID"] = 221,
-		["g"] = {
-			{
-				["name"] = "Adamantite Plate Gloves",
-				["recipeID"] = 29605,
-			},
-			{
-				["name"] = "Felfury Gauntlets",
-				["recipeID"] = 29658,
-			},
-			{
-				["name"] = "Fel Iron Chain Gloves",
-				["recipeID"] = 29552,
-			},
-			{
-				["name"] = "Fel Iron Plate Gloves",
-				["recipeID"] = 29545,
-			},
-			{
-				["name"] = "Felsteel Gloves",
-				["recipeID"] = 29619,
-			},
-			{
-				["name"] = "Flamebane Gloves",
-				["recipeID"] = 29616,
-			},
-			{
-				["name"] = "Gauntlets of the Iron Tower",
-				["recipeID"] = 29622,
-			},
-			{
-				["name"] = "Hard Khorium Battlefists",
-				["recipeID"] = 46141,
-			},
-			{
-				["name"] = "Ragesteel Gloves",
-				["recipeID"] = 29642,
-			},
-			{
-				["name"] = "Steelgrip Gauntlets",
-				["recipeID"] = 29662,
-			},
-			applyclassicphase(TBC_PHASE_SIX,{
-				["name"] = "Sunblessed Gauntlets",
-				["recipeID"] = 46140,
-			}),
-			{
-				["name"] = "Swiftsteel Gloves",
-				["recipeID"] = 29648,
+		{
+			["name"] = "Shoulders",
+			["categoryID"] = 219,
+			["g"] = {
+				applyclassicphase(TBC_PHASE_FIVE,{
+					["name"] = "Dawnsteel Shoulders",
+					["recipeID"] = 41135,
+				}),
+				{
+					["name"] = "Ragesteel Shoulders",
+					["recipeID"] = 42662,
+				},
+				{
+					["name"] = "Swiftsteel Shoulders",
+					["recipeID"] = 41133,
+				},
 			},
 		},
-	},
-	{
-		["name"] = "Chest",
-		["categoryID"] = 220,
-		["g"] = {
-			{
-				["name"] = "Adamantite Breastplate",
-				["recipeID"] = 29606,
-			},
-			{
-				["name"] = "Earthpeace Breastplate",
-				["recipeID"] = 29649,
-			},
-			{
-				["name"] = "Enchanted Adamantite Breastplate",
-				["recipeID"] = 29610,
-			},
-			{
-				["name"] = "Fel Iron Breastplate",
-				["recipeID"] = 29550,
-			},
-			{
-				["name"] = "Fel Iron Chain Tunic",
-				["recipeID"] = 29556,
-			},
-			{
-				["name"] = "Flamebane Breastplate",
-				["recipeID"] = 29617,
-			},
-			{
-				["name"] = "Hard Khorium Battleplate",
-				["recipeID"] = 46144,
-			},
-			{
-				["name"] = "Iceguard Breastplate",
-				["recipeID"] = 38477,
-			},
-			{
-				["name"] = "Ragesteel Breastplate",
-				["recipeID"] = 29645,
-			},
-			applyclassicphase(TBC_PHASE_SIX,{
-				["name"] = "Sunblessed Breastplate",
-				["recipeID"] = 46142,
-			}),
-			{
-				["name"] = "Wildguard Breastplate",
-				["recipeID"] = 38473,
-			},
-		},
-	},
-	{
-		["name"] = "Belts",
-		["categoryID"] = 223,
-		["g"] = {
-			{
-				["name"] = "Belt of the Guardian",
-				["recipeID"] = 36389,
-			},
-			{
-				["name"] = "Enchanted Adamantite Belt",
-				["recipeID"] = 29608,
-			},
-			{
-				["name"] = "Fel Iron Plate Belt",
-				["recipeID"] = 29547,
-			},
-			{
-				["name"] = "Khorium Belt",
-				["recipeID"] = 29628,
-			},
-			{
-				["name"] = "Red Belt of Battle",
-				["recipeID"] = 36390,
-			},
-			applyclassicphase(TBC_PHASE_FIVE, {
-				["name"] = "Shadesteel Girdle",
-				["recipeID"] = 40036,
-			}),
-		},
-	},
-		["name"] = "Legs",
-		["categoryID"] = 224,
-		["g"] = {
-			{
-			["name"] = "Enchanted Adamantite Leggings",
-			["recipeID"] = 29613,
-			},
-			{
-				["name"] = "Fel Iron Plate Pants",
-				["recipeID"] = 29549,
-			},
-			{
-				["name"] = "Felsteel Leggings",
-				["recipeID"] = 29620,
-			},
-			{
-				["name"] = "Iceguard Leggings",
-				["recipeID"] = 38478,
-			},
-			{
-				["name"] = "Khorium Pants",
-				["recipeID"] = 29629,
-			},
-			applyclassicphase(TBC_PHASE_FIVE, {
-				["name"] = "Shadesteel Greaves",
-				["recipeID"] = 40035,
-			}),
-			{
-				["name"] = "Wildguard Leggings",
-				["recipeID"] = 38475,
-			},
-		},
-		["name"] = "Boots",
-		["categoryID"] = 225,
-		["g"] = {
-			{
-				["name"] = "Boots of the Protector",
-				["recipeID"] = 36391,
-			},
-			{
-				["name"] = "Enchanted Adamantite Boots",
-				["recipeID"] = 29611,
-			},
-			{
-				["name"] = "Fel Iron Plate Boots",
-				["recipeID"] = 29548,
-			},
-			{
-				["name"] = "Khorium Boots",
-				["recipeID"] = 29630,
-			},
-			{
-				["name"] = "Red Havoc Boots",
-				["recipeID"] = 36392,
-			},				
+		{
+			["name"] = "Bracers",
+			["categoryID"] = 222,
+			["g"] = {
+				{
+					["name"] = "Adamantite Plate Bracers",
+					["recipeID"] = 29603,
+				},
+				{
+					["name"] = "Black Felsteel Bracers",
+					["recipeID"] = 29669,
+				},
+				{
+					["name"] = "Blessed Bracers",
+					["recipeID"] = 29672,
+				},
+				{
+					["name"] = "Bracers of the Green Fortress",
+					["recipeID"] = 29671,
+				},
+				applyclassicphase(TBC_PHASE_FIVE,{
+					["name"] = "Dawnsteel Bracers",
+					["recipeID"] = 41134,
+				}),
+				{
+					["name"] = "Fel Iron Chain Bracers",
+					["recipeID"] = 29553,
+				},
+				{
+					["name"] = "Flamebane Bracers",
+					["recipeID"] = 29614,
+				},
 				applyclassicphase(TBC_PHASE_FIVE, {
-				["name"] = "Shadesteel Sabots",
-				["recipeID"] = 40033,
-			}),
+					["name"] = "Shadesteel Bracers",
+					["recipeID"] = 40034,
+				}),
+				{
+					["name"] = "Swiftsteel Bracers",
+					["recipeID"] = 41132,
+				},
+			},
 		},
-		["name"] = "Weapons",
-		["categoryID"] = 227,
-		["g"] = {
-			{
-				["name"] = "Adamantite Cleaver",
-				["recipeID"] = 29568,
+		{
+			["name"] = "Gauntlets",
+			["categoryID"] = 221,
+			["g"] = {
+				{
+					["name"] = "Adamantite Plate Gloves",
+					["recipeID"] = 29605,
+				},
+				{
+					["name"] = "Felfury Gauntlets",
+					["recipeID"] = 29658,
+				},
+				{
+					["name"] = "Fel Iron Chain Gloves",
+					["recipeID"] = 29552,
+				},
+				{
+					["name"] = "Fel Iron Plate Gloves",
+					["recipeID"] = 29545,
+				},
+				{
+					["name"] = "Felsteel Gloves",
+					["recipeID"] = 29619,
+				},
+				{
+					["name"] = "Flamebane Gloves",
+					["recipeID"] = 29616,
+				},
+				{
+					["name"] = "Gauntlets of the Iron Tower",
+					["recipeID"] = 29622,
+				},
+				{
+					["name"] = "Hard Khorium Battlefists",
+					["recipeID"] = 46141,
+				},
+				{
+					["name"] = "Ragesteel Gloves",
+					["recipeID"] = 29642,
+				},
+				{
+					["name"] = "Steelgrip Gauntlets",
+					["recipeID"] = 29662,
+				},
+				applyclassicphase(TBC_PHASE_SIX,{
+					["name"] = "Sunblessed Gauntlets",
+					["recipeID"] = 46140,
+				}),
+				{
+					["name"] = "Swiftsteel Gloves",
+					["recipeID"] = 29648,
+				},
 			},
-			{
-				["name"] = "Adamantite Dagger",
-				["recipeID"] = 29569,
+		},
+		{
+			["name"] = "Chest",
+			["categoryID"] = 220,
+			["g"] = {
+				{
+					["name"] = "Adamantite Breastplate",
+					["recipeID"] = 29606,
+				},
+				{
+					["name"] = "Earthpeace Breastplate",
+					["recipeID"] = 29649,
+				},
+				{
+					["name"] = "Enchanted Adamantite Breastplate",
+					["recipeID"] = 29610,
+				},
+				{
+					["name"] = "Fel Iron Breastplate",
+					["recipeID"] = 29550,
+				},
+				{
+					["name"] = "Fel Iron Chain Tunic",
+					["recipeID"] = 29556,
+				},
+				{
+					["name"] = "Flamebane Breastplate",
+					["recipeID"] = 29617,
+				},
+				{
+					["name"] = "Hard Khorium Battleplate",
+					["recipeID"] = 46144,
+				},
+				{
+					["name"] = "Iceguard Breastplate",
+					["recipeID"] = 38477,
+				},
+				{
+					["name"] = "Ragesteel Breastplate",
+					["recipeID"] = 29645,
+				},
+				applyclassicphase(TBC_PHASE_SIX,{
+					["name"] = "Sunblessed Breastplate",
+					["recipeID"] = 46142,
+				}),
+				{
+					["name"] = "Wildguard Breastplate",
+					["recipeID"] = 38473,
+				},
 			},
-			{
-				["name"] = "Adamantite Maul",
-				["recipeID"] = 29566,
+		},
+		{
+			["name"] = "Belts",
+			["categoryID"] = 223,
+			["g"] = {
+				{
+					["name"] = "Belt of the Guardian",
+					["recipeID"] = 36389,
+				},
+				{
+					["name"] = "Enchanted Adamantite Belt",
+					["recipeID"] = 29608,
+				},
+				{
+					["name"] = "Fel Iron Plate Belt",
+					["recipeID"] = 29547,
+				},
+				{
+					["name"] = "Khorium Belt",
+					["recipeID"] = 29628,
+				},
+				{
+					["name"] = "Red Belt of Battle",
+					["recipeID"] = 36390,
+				},
+				applyclassicphase(TBC_PHASE_FIVE, {
+					["name"] = "Shadesteel Girdle",
+					["recipeID"] = 40036,
+				}),
 			},
-			{
-				["name"] = "Adamantite Rapier",
-				["recipeID"] = 29571,
+		},
+		{
+			["name"] = "Legs",
+			["categoryID"] = 224,
+			["g"] = {
+				{
+				["name"] = "Enchanted Adamantite Leggings",
+				["recipeID"] = 29613,
+				},
+				{
+					["name"] = "Fel Iron Plate Pants",
+					["recipeID"] = 29549,
+				},
+				{
+					["name"] = "Felsteel Leggings",
+					["recipeID"] = 29620,
+				},
+				{
+					["name"] = "Iceguard Leggings",
+					["recipeID"] = 38478,
+				},
+				{
+					["name"] = "Khorium Pants",
+					["recipeID"] = 29629,
+				},
+				applyclassicphase(TBC_PHASE_FIVE, {
+					["name"] = "Shadesteel Greaves",
+					["recipeID"] = 40035,
+				}),
+				{
+					["name"] = "Wildguard Leggings",
+					["recipeID"] = 38475,
+				},
 			},
-			{
-				["name"] = "Dirge",
-				["recipeID"] = 29699,
+		},
+		{
+			["name"] = "Boots",
+			["categoryID"] = 225,
+			["g"] = {
+				{
+					["name"] = "Boots of the Protector",
+					["recipeID"] = 36391,
+				},
+				{
+					["name"] = "Enchanted Adamantite Boots",
+					["recipeID"] = 29611,
+				},
+				{
+					["name"] = "Fel Iron Plate Boots",
+					["recipeID"] = 29548,
+				},
+				{
+					["name"] = "Khorium Boots",
+					["recipeID"] = 29630,
+				},
+				{
+					["name"] = "Red Havoc Boots",
+					["recipeID"] = 36392,
+				},				
+				applyclassicphase(TBC_PHASE_FIVE, {
+					["name"] = "Shadesteel Sabots",
+					["recipeID"] = 40033,
+				}),
 			},
-			{
-				["name"] = "Eternium Runed Blade",
-				["recipeID"] = 29698,
-			},
-			{
-				["name"] = "Fel Edged Battleaxe",
-				["recipeID"] = 29694,
-			},
-			{
-				["name"] = "Fel Hardened Maul",
-				["recipeID"] = 29697,
-			},
-			{
-				["name"] = "Fel Iron Greatsword",
-				["recipeID"] = 29565,
-			},
-			{
-				["name"] = "Fel Iron Hammer",
-				["recipeID"] = 29558,
-			},
-			{
-				["name"] = "Fel Iron Hatchet",
-				["recipeID"] = 29557,
-			},
-			{
-				["name"] = "Felsteel Longblade",
-				["recipeID"] = 29692,
-			},
-			{
-				["name"] = "Felsteel Reaper",
-				["recipeID"] = 29695,
-			},
-			{
-				["name"] = "Felsteel Whisper Knives",
-				["recipeID"] = 34983,
-			},
-			{
-				["name"] = "Hammer of Righteous Might",
-				["recipeID"] = 43846,
-			},
-			{
-				["name"] = "Hand of Eternity",
-				["recipeID"] = 29700,
-			},
-			{
-				["name"] = "Khorium Champion",
-				["recipeID"] = 29693,
-			},
-			{
-				["name"] = "Runic Hammer",
-				["recipeID"] = 29696,
+		},
+		{
+			["name"] = "Weapons",
+			["categoryID"] = 227,
+			["g"] = {
+				{
+					["name"] = "Adamantite Cleaver",
+					["recipeID"] = 29568,
+				},
+				{
+					["name"] = "Adamantite Dagger",
+					["recipeID"] = 29569,
+				},
+				{
+					["name"] = "Adamantite Maul",
+					["recipeID"] = 29566,
+				},
+				{
+					["name"] = "Adamantite Rapier",
+					["recipeID"] = 29571,
+				},
+				{
+					["name"] = "Dirge",
+					["recipeID"] = 29699,
+				},
+				{
+					["name"] = "Eternium Runed Blade",
+					["recipeID"] = 29698,
+				},
+				{
+					["name"] = "Fel Edged Battleaxe",
+					["recipeID"] = 29694,
+				},
+				{
+					["name"] = "Fel Hardened Maul",
+					["recipeID"] = 29697,
+				},
+				{
+					["name"] = "Fel Iron Greatsword",
+					["recipeID"] = 29565,
+				},
+				{
+					["name"] = "Fel Iron Hammer",
+					["recipeID"] = 29558,
+				},
+				{
+					["name"] = "Fel Iron Hatchet",
+					["recipeID"] = 29557,
+				},
+				{
+					["name"] = "Felsteel Longblade",
+					["recipeID"] = 29692,
+				},
+				{
+					["name"] = "Felsteel Reaper",
+					["recipeID"] = 29695,
+				},
+				{
+					["name"] = "Felsteel Whisper Knives",
+					["recipeID"] = 34983,
+				},
+				{
+					["name"] = "Hammer of Righteous Might",
+					["recipeID"] = 43846,
+				},
+				{
+					["name"] = "Hand of Eternity",
+					["recipeID"] = 29700,
+				},
+				{
+					["name"] = "Khorium Champion",
+					["recipeID"] = 29693,
+				},
+				{
+					["name"] = "Runic Hammer",
+					["recipeID"] = 29696,
+				},
 			},
 		},
 	})),
