@@ -9,6 +9,7 @@ profession(BLACKSMITHING, {
 			prof(17041, {	-- Master Axesmith
 				["description"] = "These items can only be crafted by Master Axesmith specialized Weaponsmiths.",
 				["groups"] = {
+					-- #if BEFORE TBC
 					{
 						["name"] = "Annihilator",
 						["recipeID"] = 16991,
@@ -34,11 +35,53 @@ profession(BLACKSMITHING, {
 						["recipeID"] = 23653,
 						["requireSkill"] = 17041,
 					},
+					-- #endif
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Black Planar Edge",
+						["recipeID"] = 34542,
+						["requireSkill"] = 17041,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Bloodmoon",
+						["recipeID"] = 36261,
+						["requireSkill"] = 17041,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Lunar Crescent",
+						["recipeID"] = 34543,
+						["requireSkill"] = 17041,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Mooncleaver",
+						["recipeID"] = 34544,
+						["requireSkill"] = 17041,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Skyforged Great Axe",
+						["recipeID"] = 36135,
+						["requireSkill"] = 17041,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Stormforged Axe",
+						["recipeID"] = 36134,
+						["requireSkill"] = 17041,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "The Planar Edge",
+						["recipeID"] = 34541,
+						["requireSkill"] = 17041,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Wicked Edge of the Planes",
+						["recipeID"] = 36260,
+						["requireSkill"] = 17041,
+					}),
 				},
 			}),
 			prof(17040, {	-- Master Hammersmith
 				["description"] = "These items can only be crafted by Master Hammersmith specialized Weaponsmiths.",
 				["groups"] = {
+					-- #if BEFORE TBC
 					un(PHASE_THREE, {
 						["name"] = "Ebon Hand",
 						["recipeID"] = 23650,
@@ -69,11 +112,53 @@ profession(BLACKSMITHING, {
 						["recipeID"] = 16983,
 						["requireSkill"] = 17040,
 					},
+					-- #endif
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Deepthunder",
+						["recipeID"] = 34548,
+						["requireSkill"] = 17040,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Drakefist Hammer",
+						["recipeID"] = 34545,
+						["requireSkill"] = 17040,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Dragonmaw",
+						["recipeID"] = 34546,
+						["requireSkill"] = 17040,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Dragonstrike",
+						["recipeID"] = 36262,
+						["requireSkill"] = 17040,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Great Earthforged Hammer",
+						["recipeID"] = 36137,
+						["requireSkill"] = 17040,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Lavaforged Warhammer",
+						["recipeID"] = 36136,
+						["requireSkill"] = 17040,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Stormherald",
+						["recipeID"] = 36263,
+						["requireSkill"] = 17040,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Thunder",
+						["recipeID"] = 34547,
+						["requireSkill"] = 17040,
+					}),
 				},
 			}),
 			prof(17039, {	-- Master Swordsmith
 				["description"] = "These items can only be crafted by Master Swordsmith specialized Weaponsmiths.",
 				["groups"] = {
+					-- #if BEFORE TBC
 					{
 						["name"] = "Arcanite Champion",
 						["recipeID"] = 16990,
@@ -109,6 +194,47 @@ profession(BLACKSMITHING, {
 						["recipeID"] = 27832,
 						["requireSkill"] = 17039,
 					}),
+					-- #endif
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Blazefury",
+						["recipeID"] = 36258,
+						["requireSkill"] = 17039
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Blazeguard",
+						["recipeID"] = 34537,
+						["requireSkill"] = 17039
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Fireguard",
+						["recipeID"] = 34535,
+						["requireSkill"] = 17039
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Lionheart Blade",
+						["recipeID"] = 34538,
+						["requireSkill"] = 17039
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Lionheart Champion",
+						["recipeID"] = 34540,
+						["requireSkill"] = 17039
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Lionheart Executioner",
+						["recipeID"] = 36259,
+						["requireSkill"] = 17039
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Stoneforged Claymore",
+						["recipeID"] = 36133,
+						["requireSkill"] = 17039
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Windforged Rapier",
+						["recipeID"] = 36131,
+						["requireSkill"] = 17039
+					}),
 				},
 			}),
 			{
@@ -116,6 +242,7 @@ profession(BLACKSMITHING, {
 				["description"] = "These can be crafted by any Weaponsmith.",
 				["categoryID"] = 227,
 				["g"] = {
+					-- #if BEFORE TBC
 					un(PHASE_THREE, {
 						["name"] = "Black Amnesty",
 						["recipeID"] = 23638,
@@ -176,6 +303,22 @@ profession(BLACKSMITHING, {
 						["recipeID"] = 10015,
 						["requireSkill"] = 9787,
 					},
+					-- endif
+					applyclassicphase(TBC_PHASE_ONE,{					
+						["name"] = "Light Earthforged Blade", 
+						["recipeID"] = 36125,
+						["requireSkill"] = 9787,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{					
+						["name"] = "Light Emberforged Hammer", 
+						["recipeID"] = 36128,
+						["requireSkill"] = 9787,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{					
+						["name"] = "Light Skyforged Axe", 
+						["recipeID"] = 36126,
+						["requireSkill"] = 9787,
+					}),
 				}
 			},
 		},
