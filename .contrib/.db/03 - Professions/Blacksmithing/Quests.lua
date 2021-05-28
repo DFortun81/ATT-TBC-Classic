@@ -75,14 +75,18 @@ profession(BLACKSMITHING, {
 			["qg"] = 11193,	-- Seril Scourgebane
 			["coord"] = { 61.2, 37.2, WINTERSPRING },
 			["maps"] = { WINTERSPRING, STRATHOLME },
+			-- #if BEFORE TBC
 			["requireSkill"] = 9787,	-- Weaponsmith
+			-- #endif
 			["cost"] = {
 				{ "i", 13350, 1 },	-- Insignia of the Black Guard
 			},
+			-- #if BEFORE TBC
 			["altQuests"] = {
 				5306,	-- Snakestone of the Shadow Huntress [Master Axesmith]
 				5305,	-- Sweet Serenity [Master Hammersmith]
 			},
+			-- #endif
 			["lvl"] = 50,
 			["g"] = {
 				i(12825),	-- Plans: Blazing Rapier
@@ -103,21 +107,25 @@ profession(BLACKSMITHING, {
 				i(10418),	-- Glimmering Mithril Insignia
 			},
 		}),
-		un(PHASE_THREE, q(7649, {	-- Enchanted Thorium Platemail: Volume I
+		applyclassicphase(PHASE_THREE, q(7649, {	-- Enchanted Thorium Platemail: Volume I
 			["provider"] = { "i", 18769 },	-- Enchanted Thorium Platemail (Volume I)
+			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #endif
 			["maps"] = { DIRE_MAUL, BLACKROCK_SPIRE },
 			["cost"] = {
 				{ "i", 18779, 1 },	-- Bottom Half of Advanced Armorsmithing: Volume I
 				{ "i", 18780, 1 },	-- Top Half of Advanced Armorsmithing: Volume I
 			},
 			["g"] = {
-				un(PHASE_THREE, i(12727)),	-- Plans: Enchanted Thorium Breastplate
+				applyclassicphase(PHASE_THREE, i(12727)),	-- Plans: Enchanted Thorium Breastplate
 			},
 		})),
-		un(PHASE_THREE, q(7650, {	-- Enchanted Thorium Platemail: Volume II
+		applyclassicphase(PHASE_THREE, q(7650, {	-- Enchanted Thorium Platemail: Volume II
 			["provider"] = { "i", 18770 },	-- Enchanted Thorium Platemail (Volume II)
+			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #endif
 			["maps"] = { DIRE_MAUL, STRATHOLME, SCHOLOMANCE },
 			["cost"] = {
 				{ "i", 18781, 1 },	-- Bottom Half of Advanced Armorsmithing: Volume II
@@ -125,12 +133,14 @@ profession(BLACKSMITHING, {
 			},
 			["lvl"] = 50,
 			["g"] = {
-				un(PHASE_THREE, i(12726)),	-- Plans: Enchanted Thorium Leggings
+				applyclassicphase(PHASE_THREE, i(12726)),	-- Plans: Enchanted Thorium Leggings
 			},
 		})),
-		un(PHASE_THREE, q(7651, {	-- Enchanted Thorium Platemail: Volume III
+		applyclassicphase(PHASE_THREE, q(7651, {	-- Enchanted Thorium Platemail: Volume III
 			["provider"] = { "i", 18771 },	-- Enchanted Thorium Platemail (Volume III)
+			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #endif
 			["maps"] = { DIRE_MAUL, BLACKROCK_SPIRE, STRATHOLME },
 			["cost"] = {
 				{ "i", 18783, 1 },	-- Bottom Half of Advanced Armorsmithing: Volume III
@@ -138,7 +148,7 @@ profession(BLACKSMITHING, {
 			},
 			["lvl"] = 50,
 			["g"] = {
-				un(PHASE_THREE, i(12725)),	-- Plans: Enchanted Thorium Helm
+				applyclassicphase(PHASE_THREE, i(12725)),	-- Plans: Enchanted Thorium Helm
 			},
 		})),
 		q(2765, {	-- Expert Blacksmith!
@@ -161,7 +171,9 @@ profession(BLACKSMITHING, {
 		q(5124, {	-- Fiery Plate Gauntlets
 			["qg"] = 10637,	-- Malyfous Darkhammer <The Thorium Brotherhood>
 			["sourceQuest"] = 5103,	-- Hot Fiery Death
+			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #endif
 			["coord"] = { 61.0, 38.8, WINTERSPRING },
 			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
 			["cost"] = {
@@ -225,7 +237,9 @@ profession(BLACKSMITHING, {
 		}),
 		q(5103, {	-- Hot Fiery Death
 			["provider"] = { "o", 176090 },	-- Human Remains
+			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #endif
 			["description"] = "At the bottom floor of Lower Blackrock Spire near the lava.",
 			["maps"] = { BLACKROCK_SPIRE },
 			["lvl"] = 55,
@@ -410,17 +424,21 @@ profession(BLACKSMITHING, {
 		}),
 		q(5306, {	-- Snakestone of the Shadow Huntress
 			["qg"] = 11192,	-- Kilram
+			-- #if BEFORE TBC
 			["requireSkill"] = 9787,	-- Weaponsmith
+			-- #endif
 			["description"] = "Upon finishing this quest, you will become a Master Axesmith and be locked out of becoming a Master Hammersmith and Master Swordsmith.",
 			["coord"] = { 61.2, 37, WINTERSPRING },
 			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
 			["cost"] = {
 				{ "i", 13352, 1 },	-- Vosh'gajin's Snakestone
 			},
+			-- #if BEFORE TBC
 			["altQuests"] = {
 				5307,	-- Corruption [Master Swordsmith]
 				5305,	-- Sweet Serenity [Master Hammersmith]
 			},
+			-- #endif
 			["lvl"] = 50,
 			["g"] = {
 				i(12821),	-- Plans: Dawn's Edge
@@ -438,19 +456,26 @@ profession(BLACKSMITHING, {
 			},
 			["g"] = {
 				i(3609),	-- Plans: Copper Chain Vest
+				-- #if AFTER TBC
+				i(33792), 	-- Plans: Heavy Copper Longsword
+				-- #endif
 			},
 		}),
 		q(5305, {	-- Sweet Serenity
 			["qg"] = 11191,	-- Lilith the Lithe
+			-- #if BEFORE TBC
 			["requireSkill"] = 9787,	-- Weaponsmith
+			-- #endif
 			["description"] = "Upon finishing this quest, you will become a Master Hammersmith and be locked out of becoming a Master Axesmith and Master Swordsmith.",
 			["coord"] = { 61.2, 37.2, WINTERSPRING },
 			["maps"] = { WINTERSPRING, STRATHOLME },
+			-- #if BEFORE TBC
 			["altQuests"] = {
 				5306,	-- Snakestone of the Shadow Huntress [Master Axesmith]
 				5307,	-- Corruption [Master Swordsmith]
 				8869,	-- Sweet Serenity (Deprecated?)
 			},
+			-- #endif
 			["cost"] = {
 				{ "i", 13351, 1 },	-- Crimson Hammersmith's Apron
 			},
@@ -515,7 +540,9 @@ profession(BLACKSMITHING, {
 		q(5127, {	-- The Demon Forge
 			["qg"] = 10918,	-- Lorax
 			["sourceQuest"] = 5126,	-- Lorax's Tale
+			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #endif
 			["coord"] = { 63.8, 73.8, WINTERSPRING },
 			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
 			["cost"] = {
