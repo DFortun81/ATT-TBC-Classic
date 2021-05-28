@@ -138,10 +138,22 @@ profession(BLACKSMITHING, {
 					["name"] = "Barbaric Iron Helm",
 					["recipeID"] = 9814
 				},
-				un(PHASE_FOUR, {
+				-- #if AFTER TBC
+				applyclassicphase(PHASE_THREE, {
+					["name"] = "Dark Iron Helm",
+					["recipeID"] = 23636,
+				}),
+				-- #endif
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Darkrune Helm",
 					["recipeID"] = 24913,
 				}),
+				-- #if AFTER TBC
+				applyclassicphase(PHASE_THREE, {
+					["name"] = "Enchanted Thorium Helm",
+					["recipeID"] = 16742,
+				}),
+				-- #endif
 				{
 					["name"] = "Golden Scale Coif",
 					["recipeID"] = 3503
@@ -150,6 +162,16 @@ profession(BLACKSMITHING, {
 					["name"] = "Green Iron Helm",
 					["recipeID"] = 3502
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Helm of the Great Chief",
+					["recipeID"] = 16728,
+				},
+				-- #endif
+				applyclassicphase(TBC_PHASE_ONE, {
+					["name"] = "Lionheart Helm",
+					["recipeID"] = 16729,
+				}),
 				{
 					["name"] = "Heavy Mithril Helm",
 					["recipeID"] = 9970
@@ -182,6 +204,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Thorium Helm",
 					["recipeID"] = 16653
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Whitesoul Helm",
+					["recipeID"] = 16724,
+				},
+				-- #endif
 			}
 		},
 		{
@@ -192,7 +220,7 @@ profession(BLACKSMITHING, {
 					["name"] = "Barbaric Iron Shoulders",
 					["recipeID"] = 9811
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Bloodsoul Shoulders",
 					["recipeID"] = 24137,
 				}),
@@ -200,10 +228,22 @@ profession(BLACKSMITHING, {
 					["name"] = "Dark Iron Shoulders",
 					["recipeID"] = 15295
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Darksoul Shoulders",
 					["recipeID"] = 24141,
 				}),
+				-- #if AFTER TBC
+				applyclassicphase(TBC_PHASE_ONE, {
+					["name"] = "Dawnbringer Shoulders",
+					["recipeID"] = 16660,
+				}),
+				-- #endif
+				-- #if AFTER TBC
+				{
+					["name"] = "Fiery Chain Shoulders",
+					["recipeID"] = 20873,
+				},
+				-- #endif
 				{
 					["name"] = "Golden Scale Shoulders",
 					["recipeID"] = 3505
@@ -250,6 +290,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Copper Bracers",
 					["recipeID"] = 2663
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Dark Iron Bracers",
+					["recipeID"] = 20874,
+				},
+				-- #endif
 				{
 					["name"] = "Golden Scale Bracers",
 					["recipeID"] = 7223
@@ -258,7 +304,7 @@ profession(BLACKSMITHING, {
 					["name"] = "Green Iron Bracers",
 					["recipeID"] = 3501
 				},
-				un(PHASE_SIX, {
+				applyclassicphase(PHASE_SIX, {
 					["name"] = "Icebane Bracers",
 					["recipeID"] = 28244,
 				}),
