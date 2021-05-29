@@ -20,14 +20,14 @@ _.Zones =
 						{ 25.64, 75.25, HELLFIRE_PENINSULA },
 					},
 				}),
-				i(30327, {	-- Bonechewer Blood
-					["crs"] = {
-						19701,	-- Bonechewer Evoker
-						16876,	-- Bonechewer Mutant
-						16925,	-- Bonechewer Raider
-						18952,	-- Bonechewer Scavenger
+				i(31347, {	-- Bleeding Hollow Torch
+					["cr"] = 16907,	-- Bleeding Hollow Peon
+				}),
+				i(31346, {	-- Burning Bleeding Hollow Torch
+					["coord"] = { 69, 69, HELLFIRE_PENINSULA },
+					["cost"] = {
+						{ "i", 31347, 1 },	-- Bleeding Hollow Torch
 					},
-					["races"] = HORDE_ONLY,
 				}),
 				i(29588, {	-- Burning Legion Missive [Alliance]
 					["cr"] = 19298,	-- Warbringer Arix'Amal
@@ -41,28 +41,10 @@ _.Zones =
 				i(29476, {	-- Crimson Crystal Shard
 					["cr"] = 19188,	-- Raging Colossus
 				}),
-				i(30157, {	-- Cursed Talisman
-					["crs"] = {
-						16873,	-- Bleeding Hollow Dark Shaman
-						16871,	-- Bleeding Hollow Grunt
-						19422,	-- Bleeding Hollow Necrolyte
-						16907,	-- Bleeding Hollow Peon
-						19424,	-- Bleeding Hollow Tormentor
-						19457,	-- Grillok "Darkeye"
-						19442,	-- Worg Master Kruush
-					},
-					["races"] = ALLIANCE_ONLY,
-				}),
 				i(23338, {	-- Eroded Leather Case
 					["crs"] = {
 						16857,	-- Marauding Crust Burster
 						16968,	-- Tunneler
-					},
-				}),
-				i(23336, {	-- Helboar Blood Sample
-					["crs"] = {
-						16992,	-- Dreadtusk
-						16880,	-- Hulking Helboar
 					},
 				}),
 			}),
