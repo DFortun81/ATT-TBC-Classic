@@ -478,6 +478,18 @@ _.Zones =
 					["coord"] = { 85.3, 54.8, ZANGARMARSH },
 					["races"] = HORDE_ONLY,
 				}),
+				q(9732, {	-- Return to the Marsh
+					["qg"] = 16885,	-- Amythiel Mistwalker
+					["sourceQuest"] = 9724,	-- Warning the Cenarion Circle
+					["coord"] = { 16.0, 52.1, HELLFIRE_PENINSULA },
+					["maps"] = { HELLFIRE_PENINSULA },
+					["lvl"] = lvlsquish(60, 10, 60),
+					["groups"] = {
+						i(25524),	-- Cenarion Expedition Boots
+						i(25522),	-- Marshstrider's Spaulders
+						i(25523),	-- Windcaller's Gauntlets
+					},
+				}),
 				q(9894,  {	-- Safeguarding the Watchers
 					["provider"] = { "n", 18070 },	-- Windcaller Blackhoof
 					["coord"] = { 80.4, 64.7, ZANGARMARSH },

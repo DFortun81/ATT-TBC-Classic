@@ -65,13 +65,6 @@ _.Zones =
 						16880,	-- Hulking Helboar
 					},
 				}),
-				i(23589, {	-- Mag'har Ancestral Beads
-					["crs"] = {
-						16847,	-- Debilitated Mag'har Grunt
-						16846,	-- Mag'har Grunt
-					},
-					["races"] = ALLIANCE_ONLY,
-				}),
 			}),
 		}),
 	})),
