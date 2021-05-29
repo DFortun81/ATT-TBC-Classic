@@ -3986,6 +3986,9 @@ end
 app.GetFactionStandingText = function(standingID)
 	return app.ColorizeStandingText(standingID, _G["FACTION_STANDING_LABEL" .. standingID] or UNKNOWN);
 end
+app.IsFactionExclusive = function(factionID)
+	return factionID == 934 or factionID == 932;
+end
 local fields = {
 	["key"] = function(t)
 		return "factionID";
@@ -6050,7 +6053,8 @@ function app.FilterItemClass(item)
 			and app.RequireBindingFilter(item)
 			and app.RequiredSkillFilter(item)
 			and app.ClassRequirementFilter(item)
-			and app.RaceRequirementFilter(item);
+			and app.RaceRequirementFilter(item)
+			and app.RequireFactionFilter(item);
 	end
 end
 function app.FilterItemClass_RequireClasses(item)
@@ -6120,6 +6124,18 @@ function app.FilterItemClass_RequiredSkill(item)
 		return true;
 	end
 end
+function app.FilterItemClass_RequireFaction(item)
+	if item.minReputation and app.IsFactionExclusive(item.minReputation[1]) then
+		if item.minReputation[2] >= (select(6, GetFactionInfoByID(item.minReputation[1])) or 0) then
+			--print("Filtering Out", item.key, item[item.key], item.text, item.minReputation[1], app.CreateFaction(item.minReputation[1]).text);
+			return false;
+		else
+			return true;
+		end
+	else
+		return true;
+	end
+end
 function app.FilterItemClass_UnobtainableItem(item)
 	if item.u and not ATTClassicSettings.Unobtainables[item.u] then
 		return false;
@@ -6146,6 +6162,7 @@ app.ClassRequirementFilter = app.NoFilter;
 app.RaceRequirementFilter = app.NoFilter;
 app.RequireBindingFilter = app.NoFilter;
 app.RequiredSkillFilter = app.NoFilter;
+app.RequireFactionFilter = app.FilterItemClass_RequireFaction;
 app.UnobtainableItemFilter = app.FilterItemClass_UnobtainableItem;
 app.ShowIncompleteThings = app.Filter;
 
