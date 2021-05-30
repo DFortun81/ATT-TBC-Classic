@@ -4005,7 +4005,7 @@ local StandingByID = {
 	},
 };
 app.FactionNameByID = setmetatable({}, { __index = function(t, id)
-	local name = select(1, GetFactionInfo(id));
+	local name = select(1, GetFactionInfoByID(id));
 	if name then
 		rawset(t, id, name);
 		rawset(app.FactionIDByName, name, id);
