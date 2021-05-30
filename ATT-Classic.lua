@@ -1672,6 +1672,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 			end
 		end
 		
+		--[[
 		if paramA == "currencyID" then
 			local costResults = app.SearchForField("currencyIDAsCost", paramB);
 			if costResults and #costResults > 0 then
@@ -1683,10 +1684,14 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 			local costResults = app.SearchForField("itemIDAsCost", paramB);
 			if costResults and #costResults > 0 then
 				for i,o in ipairs(costResults) do
-					MergeObject(group, o);
+					if o.itemID ~= paramB then
+						print(o.key, o[o.key], o.text);
+						MergeObject(group, o);
+					end
 				end
 			end
 		end
+		]]
 		
 		-- Create a list of sources
 		if app.Settings:GetTooltipSetting("SourceLocations") and (not paramA or (app.Settings:GetTooltipSetting(paramA == "creatureID" and "SourceLocations:Creatures" or "SourceLocations:Things"))) then
@@ -1852,11 +1857,39 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 			if costResults and #costResults > 0 then
 				if not group.g then group.g = {} end
 				for i,o in ipairs(costResults) do
-					MergeObject(group.g, o);
+					if o.itemID ~= paramB then
+						MergeObject(group.g, o);
+					end
 				end
 			end
 		end
 		]]
+		-- Resolve Cost
+		if paramA == "currencyID" then
+			local costResults = app.SearchForField("currencyIDAsCost", paramB);
+			if costResults and #costResults > 0 then
+				if not group.g then group.g = {} end
+				local usedToBuy = app.CreateNPC(-2);
+				usedToBuy.text = "Currency For";
+				if not usedToBuy.g then usedToBuy.g = {}; end
+				for i,o in ipairs(costResults) do
+					MergeObject(usedToBuy.g, CreateObject(o));
+				end
+				MergeObject(group.g, usedToBuy);
+			end
+		elseif paramA == "itemID" then
+			local costResults = app.SearchForField("itemIDAsCost", paramB);
+			if costResults and #costResults > 0 then
+				if not group.g then group.g = {} end
+				local usedToBuy = app.CreateNPC(-2);
+				usedToBuy.text = "Currency For";
+				if not usedToBuy.g then usedToBuy.g = {}; end
+				for i,o in ipairs(costResults) do
+					MergeObject(usedToBuy.g, CreateObject(o));
+				end
+				MergeObject(group.g, usedToBuy);
+			end
+		end
 		
 		if group.g then
 			group.total = 0;
