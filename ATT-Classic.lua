@@ -4004,6 +4004,21 @@ local StandingByID = {
 		["threshold"] = 42000,
 	},
 };
+app.FactionNameByID = setmetatable({}, { __index = function(t, id)
+	local name = select(1, GetFactionInfo(id));
+	if name then
+		rawset(t, id, name);
+		rawset(app.FactionIDByName, name, id);
+		return name;
+	end
+end });
+app.FactionIDByName = setmetatable({}, { __index = function(t, name)
+	for i=1,3000,1 do
+		if app.FactionNameByID[i] == name then
+			return i;
+		end
+	end
+end });
 app.ColorizeStandingText = function(standingID, text)
 	local standing = StandingByID[standingID];
 	if standing then
@@ -4012,6 +4027,10 @@ app.ColorizeStandingText = function(standingID, text)
 		local rgb = FACTION_BAR_COLORS[standingID];
 		return Colorize(text, RGBToHex(rgb.r * 255, rgb.g * 255, rgb.b * 255));
 	end
+end
+app.GetFactionIDByName = function(name)
+	name = strtrim(name);
+	return app.FactionIDByName[name] or name;
 end
 app.GetFactionStanding = function(reputation)
 	-- Total earned rep from GetFactionInfoByID is a value AWAY FROM ZERO, not a value within the standing bracket.
@@ -4028,6 +4047,14 @@ end
 app.GetFactionStandingText = function(standingID)
 	return app.ColorizeStandingText(standingID, _G["FACTION_STANDING_LABEL" .. standingID] or UNKNOWN);
 end
+app.GetFactionStandingThresholdFromString = function(replevel)
+	replevel = strtrim(replevel);
+	for standing=1,8,1 do
+		if _G["FACTION_STANDING_LABEL" .. standing] == replevel then
+			return StandingByID[standing].threshold;
+		end
+	end
+end
 app.IsFactionExclusive = function(factionID)
 	return factionID == 934 or factionID == 932;
 end
@@ -4039,7 +4066,7 @@ local fields = {
 		return app.ColorizeStandingText((t.saved and 8) or (t.standing + (t.isFriend and 2 or 0)), t.name);
 	end,
 	["name"] = function(t)
-		return select(1, GetFactionInfoByID(t.factionID)) or (t.creatureID and NPCNameFromID[t.creatureID]) or (FACTION .. " #" .. t.factionID);
+		return app.FactionNameByID[t.factionID] or (t.creatureID and NPCNameFromID[t.creatureID]) or (FACTION .. " #" .. t.factionID);
 	end,
 	["icon"] = function(t)
 		return app.asset("Category_Factions");
@@ -4728,10 +4755,20 @@ itemHarvesterFields.text = function(t)
 				["b"] = bindType,
 				["q"] = itemQuality,
 				["iLvl"] = itemLevel,
-				["lvl"] = itemMinLevel,
-				["expansion"] = expacID,
 				["spellID"] = spellID,
 			};
+			if itemMinLevel and itemMinLevel > 0 then
+				info.lvl = itemMinLevel;
+			end
+			if info.inventoryType == 0 then
+				info.inventoryType = nil;
+			end
+			if info.b and info.b < 1 then
+				info.b = nil;
+			end
+			if info.iLvl and info.iLvl < 2 then
+				info.iLvl = nil;
+			end
 			t.itemType = itemType;
 			t.itemSubType = itemSubType;
 			t.info = info;
@@ -4782,13 +4819,49 @@ itemTooltipHarvesterFields.text = function(t)
 							if #races > 0 then
 								t.info.races = races;
 							end
-						elseif string.find(text, "Requires") and not string.find(text, "Level") then
+						elseif string.find(text, "Requires") and not string.find(text, "Level") and not string.find(text, "Riding") then
 							local c = strsub(text, 1, 1);
 							if c ~= " " and c ~= "\t" and c ~= "\n" and c ~= "\r" then
-								if string.find(text, t.itemSubType) then
-									-- It's a profession recipe, skip it.
+								text = strsub(strtrim(text), 9);
+								if string.find(text, "-") then
+									local faction,replevel = strsplit("-", text);
+									t.info.minReputation = { app.GetFactionIDByName(faction), app.GetFactionStandingThresholdFromString(replevel) };
 								else
-									table.insert(requirements, strtrim(text));
+									text = strtrim(text);
+									if string.find(text, "%(") then
+										local spellName = strsplit("(", text);
+										spellName = strtrim(spellName);
+										if spellName == "Herbalism" then spellName = "Herb Gathering"; end
+										local spellID = app.SpellNameToSpellID[spellName];
+										if spellID then
+											local skillID = app.SpellIDToSkillID[spellID];
+											if skillID then
+												t.info.requireSkill = skillID;
+											else
+												print("Unknown Skill::()", text);
+												table.insert(requirements, text);
+											end
+										else
+											print("Unknown Spell::()", text);
+											table.insert(requirements, text);
+										end
+									else
+										local spellName = strtrim(text);
+										if spellName == "Herbalism" then spellName = "Herb Gathering"; end
+										local spellID = app.SpellNameToSpellID[spellName];
+										if spellID then
+											local skillID = app.SpellIDToSkillID[spellID];
+											if skillID then
+												t.info.requireSkill = skillID;
+											else
+												print("Unknown Skill", text);
+												table.insert(requirements, text);
+											end
+										else
+											print("Unknown Spell", text);
+											table.insert(requirements, text);
+										end
+									end
 								end
 							end
 						end
