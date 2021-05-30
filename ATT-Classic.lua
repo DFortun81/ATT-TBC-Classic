@@ -4709,6 +4709,11 @@ fields.metaAfterFailure = function(t) return newMeta; end;
 end)();
 app.CreateItem = function(id, t)
 	if t then
+		--[[
+		if t.requireSkill and t.f == 200 then
+			print("Missing SpellID for ItemID ", id);
+		end
+		]]--
 		if rawget(t, "factionID") then
 			if rawget(t, "questID") then
 				return setmetatable(constructor(id, t, "itemID"), app.BaseItemWithQuestIDAndFactionID);
