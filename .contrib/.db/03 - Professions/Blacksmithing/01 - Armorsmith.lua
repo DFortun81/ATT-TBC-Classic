@@ -6,7 +6,7 @@ profession(BLACKSMITHING, {
 			5301,	-- The Art of the Armorsmith [Horde]
 		},
 		["groups"] = {
-				-- #if BEFORE TBC
+			-- #if BEFORE TBC
 			{
 				["name"] = "Helms",
 				["categoryID"] = 218,
@@ -39,8 +39,8 @@ profession(BLACKSMITHING, {
 					
 				},
 			},
-				-- #endif
-				-- #if BEFORE TBC
+			-- #endif
+			-- #if BEFORE TBC
 			{
 				["name"] = "Shoulders",
 				["categoryID"] = 219,
@@ -57,8 +57,8 @@ profession(BLACKSMITHING, {
 					},
 				},
 			},
-				-- #endif
-				-- #if BEFORE TBC
+			-- #endif
+			-- #if BEFORE TBC
 			{
 				["name"] = "Bracers",
 				["categoryID"] = 222,
@@ -71,8 +71,8 @@ profession(BLACKSMITHING, {
 					
 				},
 			},
-				-- #endif
-				-- #if BEFORE TBC
+			-- #endif
+			-- #if BEFORE TBC
 			{
 				["name"] = "Gauntlets",
 				["categoryID"] = 221,
@@ -140,7 +140,7 @@ profession(BLACKSMITHING, {
 						["name"] = "Wildthorn Mail",
 						["recipeID"] = 16650,
 						["requireSkill"] = 9788,
-					}
+					},
 					-- #endif
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Bulwark of Ancient Kings",
