@@ -3047,6 +3047,15 @@ local GetClassIDFromClassFile = function(classFile)
 		end
 	end
 end
+app.ClassDB = setmetatable({}, { __index = function(t, className)
+	for i,_ in pairs(classIcons) do
+		local info = C_CreatureInfo.GetClassInfo(i);
+		if info and info.className == className then
+			rawset(t, className, i);
+			return i;
+		end
+	end
+end });
 local SoftReserveUnitOnClick = function(self, button)
 	local guid = self.ref.guid or self.ref.unit;
 	if guid then
@@ -4684,6 +4693,121 @@ app.CreateItem = function(id, t)
 		end
 	end
 	return setmetatable(constructor(id, t, "itemID"), app.BaseItem);
+end
+
+local HarvestedItemDatabase = {};
+local itemHarvesterFields = RawCloneData(itemFields);
+itemHarvesterFields.collectible = function(t)
+	return true;
+end
+itemHarvesterFields.collected = function(t)
+	return false;
+end
+itemHarvesterFields.text = function(t)
+	local link = t.link;
+	if link then
+		local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount,
+		itemEquipLoc, itemTexture, sellPrice, classID, subclassID, bindType, expacID, setID, isCraftingReagent
+			= GetItemInfo(link);
+		if itemName then
+			local spellName, spellID;
+			if class == "Recipe" or class == "Mount" then
+				spellName, spellID = GetItemSpell(t.itemID);
+				if spellName == "Learning" then spellID = nil; end	-- RIP.
+				setmetatable(t, app.BaseItemTooltipHarvester);
+			else
+				setmetatable(t, app.BaseItemTooltipHarvester);
+			end
+			local info = {
+				["name"] = itemName,
+				["itemID"] = t.itemID,
+				["equippable"] = itemEquipLoc and itemEquipLoc ~= "" and true or false,
+				["class"] = classID,
+				["subclass"] = subclassID,
+				["inventoryType"] = C_Item.GetItemInventoryTypeByID(t.itemID),
+				["b"] = bindType,
+				["q"] = itemQuality,
+				["iLvl"] = itemLevel,
+				["lvl"] = itemMinLevel,
+				["expansion"] = expacID,
+				["spellID"] = spellID,
+			};
+			t.itemType = itemType;
+			t.itemSubType = itemSubType;
+			t.info = info;
+			t.retries = nil;
+			HarvestedItemDatabase[t.itemID] = info;
+			ATTClassicAD.HarvestedItemDatabase = HarvestedItemDatabase;
+			return link;
+		end
+	end
+	
+	t.retries = (t.retries or 0) + 1;
+	if t.retries > 30 then
+		rawset(t, "collected", true);
+	end
+end
+app.BaseItemHarvester = app.BaseObjectFields(itemHarvesterFields);
+
+local ItemHarvester = CreateFrame("GameTooltip", "ATTCItemHarvester", UIParent, "GameTooltipTemplate");
+local itemTooltipHarvesterFields = RawCloneData(itemHarvesterFields);
+itemTooltipHarvesterFields.text = function(t)
+	local link = t.link;
+	if link then
+		ItemHarvester:SetOwner(UIParent,"ANCHOR_NONE")
+		ItemHarvester:SetHyperlink(link);
+		local lineCount = ItemHarvester:NumLines();
+		if ATTCItemHarvesterTextLeft1:GetText() and ATTCItemHarvesterTextLeft1:GetText() ~= RETRIEVING_DATA and lineCount > 0 then
+			local requirements = {};
+			for index=2,lineCount,1 do
+				local line = _G["ATTCItemHarvesterTextLeft" .. index] or _G["ATTCItemHarvesterText" .. index];
+				if line then
+					local text = line:GetText();
+					if text then
+						if string.find(text, "Classes: ") then
+							local classes = {};
+							local _,list = strsplit(":", text);
+							for i,s in ipairs({strsplit(",", list)}) do
+								table.insert(classes, app.ClassDB[strtrim(s)]);
+							end
+							if #classes > 0 then
+								t.info.classes = classes;
+							end
+						elseif string.find(text, "Races: ") then
+							local races = {};
+							local _,list = strsplit(":", text);
+							for i,s in ipairs({strsplit(",", list)}) do
+								table.insert(races, app.RaceDB[strtrim(s)]);
+							end
+							if #races > 0 then
+								t.info.races = races;
+							end
+						elseif string.find(text, "Requires") and not string.find(text, "Level") then
+							local c = strsub(text, 1, 1);
+							if c ~= " " and c ~= "\t" and c ~= "\n" and c ~= "\r" then
+								if string.find(text, t.itemSubType) then
+									-- It's a profession recipe, skip it.
+								else
+									table.insert(requirements, strtrim(text));
+								end
+							end
+						end
+					end
+				end
+			end
+			if #requirements > 0 then
+				t.info.otherRequirements = requirements;
+			end
+			rawset(t, "text", link);
+			rawset(t, "collected", true);
+		end
+		ItemHarvester:Hide();
+		return link;
+	end
+end
+app.BaseItemTooltipHarvester = app.BaseObjectFields(itemTooltipHarvesterFields);
+app.CreateItemHarvester = function(id, t)
+	return setmetatable(constructor(id, t, "itemID"), app.BaseItemHarvester);
 end
 end)();
 
@@ -8408,7 +8532,10 @@ function app:GetWindow(suffix, parent, onUpdate)
 		end
 		window.DelayedUpdate = function(self)
 			window.delayRemaining = 180;
-			StartCoroutine(window:GetName() .. ":DelayedUpdate", DelayedUpdateCoroutine);
+			StartCoroutine(window:GetName() .. ":DelayedUpdatePreWarm", function()
+				coroutine.yield();
+				StartCoroutine(window:GetName() .. ":DelayedUpdate", DelayedUpdateCoroutine);
+			end);
 		end
 		
 		-- The Close Button. It's assigned as a local variable so you can change how it behaves.
@@ -9556,71 +9683,32 @@ app:GetWindow("ItemFinder", UIParent, function(self, ...)
 					['OnUpdate'] = app.AlwaysShowUpdate,
 				},
 			};
-			db.blacklist = {
-				[25]=1,
-				[35]=1,
-				[36]=1,
-				[37]=1,
-				[39]=1,
-				[40]=1,
-				[41]=1,
-				[42]=1,
-				[43]=1,
-				[44]=1,
-				[46]=1,
-				[47]=1,
-				[48]=1,
-				[50]=1,
-				[51]=1,
-				[52]=1,
-				[54]=1,
-				[55]=1,
-				[56]=1,
-				[57]=1,
-				[58]=1,
-				[59]=1,
-				[77]=1,
-				[85]=1,
-				[86]=1,
-				[87]=1,
-				[88]=1,
-			};
-			db.OnUpdate = function(db)
-				if self:IsVisible() then
-					local iCache = fieldCache["itemID"];
-					for i=761,23720 do
-						if not iCache[i] then
-							local t = app.CreateItem(i);
-							t.parent = db;
-							t.fails = 0;
-							t.OnUpdate = function(source)
-								local text = source.text;
-								if text and text ~= RETRIEVING_DATA then
-									source.OnUpdate = nil;
-								else
-									source.fails = source.fails + 1;
-									self.shouldFullRefresh = true;
-								end
+			db.OnUpdate = function(t)
+				local g = t.g;
+				if g then
+					local count = #g;
+					if count > 0 then
+						for i=count,1,-1 do
+							if g[i].collected then
+								table.remove(g, i);
+								self.shouldFullRefresh = true;
 							end
-							tinsert(db.g, t);
 						end
 					end
-					db.OnUpdate = function(self)
-						local g = self.g;
-						if g then
-							local count = #g;
-							if count > 0 then
-								for i=count,1,-1 do
-									if g[i].fails > 2 then
-										table.remove(g, i);
-									end
-								end
-							end
+					for count=#g,100 do
+						local i = db.currentItemID - 1;
+						if i > 0 then
+							db.currentItemID = i;
+							local t = app.CreateItemHarvester(i);
+							t.parent = db;
+							tinsert(g, t);
+							self.shouldFullRefresh = true;
 						end
-					end;
-					
+					end
+					self:DelayedUpdate(true);
+					self.delayRemaining = 1;
 				end
-			end
+			end;
 			db.text = "Item Finder";
 			db.icon = app.asset("Achievement_Dungeon_GloryoftheRaider");
 			db.description = "This is a contribution debug tool. NOT intended to be used by the majority of the player base.\n\nUsing this tool will lag your WoW every 5 seconds. Not sure why - likely a bad Blizzard Database thing.";
@@ -9629,6 +9717,7 @@ app:GetWindow("ItemFinder", UIParent, function(self, ...)
 			db.progress = 0;
 			db.total = 0;
 			db.back = 1;
+			db.currentItemID = 40001;
 			self.data = db;
 		end
 		self.data.progress = 0;
