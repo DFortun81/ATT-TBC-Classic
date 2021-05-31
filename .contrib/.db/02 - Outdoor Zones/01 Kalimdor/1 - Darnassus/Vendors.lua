@@ -67,6 +67,14 @@ _.Zones =
 						i(18949),	-- Pattern: Barbaric Bracers
 					},
 				}),
+				n(8665, {	-- Shylenai <Owl Trainer>
+					["coord"] = { 69.8, 45.4, DARNASSUS },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(8500),	-- Great Horned Owl
+						i(8501),	-- Hawk Owl
+					},
+				}),
 				n(4235, {	-- Turian <Thrown Weapons Merchant>
 					["coord"] = { 62.7, 65.6, DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
