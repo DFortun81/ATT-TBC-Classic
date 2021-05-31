@@ -983,6 +983,13 @@ _.Craftables = { tier(1, {	-- Classic
 			i(6357),	-- Sealed Crate
 			i(6352),	-- Waterlogged Crate
 		}),
+		-- #if AFTER TBC
+		filter(200, {	-- Recipes
+			i(34109, {	-- Weather-Beaten Journal
+				["description"] = "Can be fished from schools.",
+			}),
+		}),
+		-- #endif
 	}),
 	prof(HERBALISM, {
 		["description"] = "The following items can be gathered by Herbalists out in the world.",

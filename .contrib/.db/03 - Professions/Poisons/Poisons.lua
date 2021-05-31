@@ -137,3 +137,10 @@ profession(40, {	-- Poisons
 		},
 	},
 });
+
+-- These items never made it in.
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	filter(200, {	-- Recipe
+		i(5657),	-- Recipe: Instant Toxin
+	}),
+});

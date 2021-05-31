@@ -179,3 +179,43 @@ profession(FISHING, {
 		}),
 	}),
 });
+
+-- Fishing Recipes
+_.ItemDB = {};
+local itemrecipe = function(itemID, spellID, timeline, classicphase)
+	local o = { ["itemID"] = itemID };
+	if spellID and spellID > 0 then
+		o.spellID = spellID;
+	end
+	if timeline then
+		-- Ensure that the timeline is in a table format.
+		if type(timeline) == "string" then timeline = { timeline }; end
+		o.timeline = timeline;
+	end
+	if classicphase then applyclassicphase(classicphase, o); end
+	_.ItemDB[itemID] = o;
+	return o;
+end
+
+-- Classic Recipes
+itemrecipe(16083, 0--[[7732]], "removed 3.1.0.9767");	-- Expert Fishing - The Bass and You
+itemrecipe(27532, 0--[[7732]], "removed 3.1.0.9767");	-- Master Fishing - The Art of Angling
+
+-- TBC Recipes
+-- #if ANYCLASSIC
+itemrecipe(34109, 43308, "added 2.3.0.7382", TBC_PHASE_ONE);	-- Weather-Beaten Journal
+-- #else
+-- NOTE: This will need to be checked, on Retail it doesn't show as collected.
+itemrecipe(34109, 0--[[43308]], "added 2.3.0.7382", TBC_PHASE_ONE);	-- Weather-Beaten Journal
+-- #endif
+
+-- These items never made it in.
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	filter(200, {	-- Recipes
+		i(16082),	-- Artisan Fishing - The Way of the Lure
+		-- #if AFTER CATA
+		i(46054),	-- Journeyman Fishing - Fishing for Dummies
+		i(46055),	-- Grand Master Fishing - Deep Sea Adventures
+		-- #endif
+	}),
+});
