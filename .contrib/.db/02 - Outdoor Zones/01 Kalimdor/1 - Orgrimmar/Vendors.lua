@@ -128,6 +128,15 @@ _.Zones =
 						i(12255),	-- Pale Leggings
 					},
 				}),
+				n(8404, {	-- Xan'tish <Snake Vendor>
+					["coord"] = { 37.6, 75.8, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(10360),	-- Black Kingsnake
+						i(10361),	-- Brown Snake
+						i(10392),	-- Crimson Snake
+					},
+				}),
 				n(3400, {	-- Xen'to <Cooking Supplier>
 					["coord"] = { 57.6, 53.2, ORGRIMMAR },
 					["races"] = HORDE_ONLY,
