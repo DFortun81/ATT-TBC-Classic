@@ -144,7 +144,7 @@ _.Craftables = { tier(1, {	-- Classic
 					i(12633),	-- Whitesoul Helm
 				}),
 				category(219, {	-- Shoulders
-					un(TBC_PHASE_ONE, i(12625)),	-- Dawnbringer Shoulders
+					applyclassicphase(TBC_PHASE_ONE, i(12625)),	-- Dawnbringer Shoulders
 					i(16988),	-- Fiery Chain Shoulders
 				}),
 				category(222, {	-- Bracers
@@ -361,6 +361,28 @@ _.Craftables = { tier(1, {	-- Classic
 		filter(8, {		-- Shields
 			applyclassicphase(PHASE_FIVE, i(22198)),	-- Jagged Obsidian Shield (AQ)
 		}),
+		-- #if BEFORE MOP
+		filter(26, {	-- Thrown
+			applyclassicphase(TBC_PHASE_ONE, i(29203, {	-- Enchanted Thorium Blades
+				["timeline"] = {
+					"added 2.0.1.10000",
+					"removed 5.0.4.10000"
+				},
+			})),
+			applyclassicphase(TBC_PHASE_ONE, i(29201, {	-- Thick Bronze Darts
+				["timeline"] = {
+					"added 2.0.1.10000",
+					"removed 5.0.4.10000"
+				},
+			})),
+			applyclassicphase(TBC_PHASE_ONE, i(29202, {	-- Whirling Steel Axes
+				["timeline"] = {
+					"added 2.0.1.10000",
+					"removed 5.0.4.10000"
+				},
+			})),
+		}),
+		-- #endif
 		category(218, {	-- Helms
 			i(7915),	-- Barbaric Iron Helm
 			applyclassicphase(PHASE_FOUR, i(20551)),	-- Darkrune Helm
@@ -496,31 +518,12 @@ _.Craftables = { tier(1, {	-- Classic
 			i(15869),	-- Silver Skeleton Key
 			i(15871),	-- Truesilver Skeleton Key
 		}),
-		-- #if BEFORE MOP
-		un(TBC_PHASE_ONE, i(29203, {	-- Enchanted Thorium Blades
-			["timeline"] = {
-				"added 2.0.1.10000",
-				"removed 5.0.4.10000"
-			},
-		})),
-		un(TBC_PHASE_ONE, i(29201, {	-- Thick Bronze Darts
-			["timeline"] = {
-				"added 2.0.1.10000",
-				"removed 5.0.4.10000"
-			},
-		})),
-		un(TBC_PHASE_ONE, i(29202, {	-- Whirling Steel Axes
-			["timeline"] = {
-				"added 2.0.1.10000",
-				"removed 5.0.4.10000"
-			},
-		})),
-		-- #endif
 	}),
 	prof(COOKING, {
 		category(63, {	-- Everyday Cooking
 			i(13935),	-- Baked Salmon
 			i(4457),	-- Barbecued Buzzard Wing
+			applyclassicphase(TBC_PHASE_ONE, i(27636)),	-- Bat Bites
 			i(2888),	-- Beer Basted Boar Ribs
 			i(3726),	-- Big Bear Steak
 			i(3220),	-- Blood Sausage
@@ -528,8 +531,10 @@ _.Craftables = { tier(1, {	-- Classic
 			i(6290),	-- Brilliant Smallfish
 			i(4593),	-- Bristle Whisker Catfish
 			i(12213),	-- Carrion Surprise
+			applyclassicphase(TBC_PHASE_ONE, i(35563)),	-- Charred Bear Kabobs
 			i(2679),	-- Charred Wolf Meat
 			i(5526),	-- Clam Chowder
+			applyclassicphase(WRATH_PHASE_ONE, i(33004)),	-- Clamlette Magnifique
 			i(2682),	-- Cooked Crab Claw
 			i(13927),	-- Cooked Glossy Mightfish
 			i(2684),	-- Coyote Steak
@@ -538,14 +543,26 @@ _.Craftables = { tier(1, {	-- Classic
 			i(5479),	-- Crispy Lizard Tail
 			i(3664),	-- Crocolisk Gumbo
 			i(3662),	-- Crocolisk Steak
+			applyclassicphase(TBC_PHASE_ONE, i(22645)),	-- Crunchy Spider Surprise
 			i(3665),	-- Curiously Tasty Omelet
+			applyclassicphase(TBC_PHASE_ONE, i(33924)),	-- Delicious Chocolate Cake
 			i(5478),	-- Dig Rat Stew
 			i(2687),	-- Dry Pork Ribs
+			-- #if AFTER LEGION
+			applyclassicphase(LEGION_PHASE_ONE, i(184690)),	-- Extra Fancy Darkmoon Feast
+			applyclassicphase(LEGION_PHASE_ONE, i(184682)),	-- Extra Lemony Herb Filet
+			applyclassicphase(LEGION_PHASE_ONE, i(184624)),	-- Extra Sugary Fish Feast
+			-- #endif
+			-- #if AFTER WOD
+			applyclassicphase(WOD_PHASE_ONE, i(126935)),	-- Fancy Darkmoon Feast
+			-- #endif
 			i(13930),	-- Filet of Redgill
 			i(5476),	-- Fillet of Frenzy
 			i(6038),	-- Giant Clam Scorcho
 			i(5527),	-- Goblin Deviled Clams
-			i(10841),	-- Goldthorn Tea
+			i(10841, {	-- Goldthorn Tea
+				["timeline"] = { "removed 6.0.1.10000" },
+			}),
 			i(3666),	-- Gooey Spider Cake
 			i(724),		-- Goretusk Liver Pie
 			i(13928),	-- Grilled Squid
@@ -555,13 +572,22 @@ _.Craftables = { tier(1, {	-- Classic
 			i(3727),	-- Hot Lion Chops
 			i(13929),	-- Hot Smoked Bass
 			i(13851),	-- Hot Wolf Ribs
+			applyclassicphase(TBC_PHASE_ONE, i(35565)),	-- Juicy Bear Burger
 			i(12212),	-- Jungle Stew
 			i(5472),	-- Kaldorei Spider Kabob
-			i(5480),	-- Lean Venison
-			i(12209),	-- Lean Wolf Steak
+			i(5480, {	-- Lean Venison
+				["timeline"] = { "removed 4.0.3.10000" },
+			}),
+			i(12209, {	-- Lean Wolf Steak
+				["timeline"] = { "removed 5.0.4.10000" },
+			}),
+			-- #if AFTER WOD
+			applyclassicphase(WOD_PHASE_ONE, i(126934)),	-- Lemon Herb Filet
+			-- #endif
 			i(13933),	-- Lobster Stew
 			i(6316),	-- Loch Frenzy Delight
 			i(4592),	-- Longjaw Mud Snapper
+			applyclassicphase(TBC_PHASE_ONE, i(27635)),	-- Lynx Steak
 			i(13934),	-- Mightfish Steak
 			i(8364),	-- Mithril Head Trout
 			i(12218),	-- Monster Omelet
@@ -574,6 +600,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(12210),	-- Roast Raptor
 			i(2681),	-- Roasted Boar Meat
 			i(5474),	-- Roasted Kodo Meat
+			applyclassicphase(TBC_PHASE_ONE, i(24105)),	-- Roasted Moongraze Tenderloin
 			i(4594),	-- Rockscale Cod
 			applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18254)),	-- Runn Tum Tuber Surprise
 			i(21217),	-- Sagefish Delight
@@ -584,23 +611,48 @@ _.Craftables = { tier(1, {	-- Classic
 			applyclassicphase(PHASE_FOUR, i(20452)),	-- Smoked Desert Dumplings
 			i(21072),	-- Smoked Sagefish
 			i(3729),	-- Soothing Turtle Bisque
-			un(TBC_PHASE_ONE, i(30816)),	-- Spice Bread
+			applyclassicphase(TBC_PHASE_ONE, i(30816)),	-- Spice Bread
 			i(12216),	-- Spiced Chili Crab
 			i(2680),	-- Spiced Wolf Meat
 			i(17222),	-- Spider Sausage
 			i(6887),	-- Spotted Yellowtail
 			i(5477),	-- Strider Stew
 			i(2685),	-- Succulent Pork Ribs
+			-- #if AFTER WOD
+			applyclassicphase(WOD_PHASE_ONE, i(126936)),	-- Sugar-Crusted Fish Feast
+			-- #endif
 			i(3728),	-- Tasty Lion Steak
 			i(18045),	-- Tender Wolf Steak
 			i(16766),	-- Undermine Clam Chowder
+			-- #if AFTER CATA
+			applyclassicphase(CATA_PHASE_ONE, i(67230)),	-- Venison Jerky
+			-- #endif
 			i(733),		-- Westfall Stew
 		}),
 		category(58, {	-- Holiday Cooking
+			-- #if AFTER WRATH
+			applyclassicphase(WRATH_PHASE_ONE, i(46691)),	-- Bread of the Dead [Day of the Dead]
+			applyclassicphase(WRATH_PHASE_ONE, i(44839)),	-- Candied Sweet Potato [Pilgrim's Bounty]
+			applyclassicphase(WRATH_PHASE_ONE, i(44840)),	-- Cranberry Chutney [Pilgrim's Bounty]
+			-- #endif
+			-- #if BEFORE MOP
+			i(17198),	-- Egg Nog (name changed)
+			-- #endif
 			i(17197),	-- Gingerbread Cookie
-			i(17198),	-- Egg Nog
+			-- #if AFTER TBC
+			applyclassicphase(TBC_PHASE_ONE, i(34411)),	-- Hot Apple Cider
+			-- #endif
+			-- #if AFTER WRATH
+			applyclassicphase(WRATH_PHASE_ONE, i(44836)),	-- Pumpkin Pie [Pilgrim's Bounty]
+			applyclassicphase(WRATH_PHASE_ONE, i(44838)),	-- Slow-Roasted Turkey [Pilgrim's Bounty]
+			applyclassicphase(WRATH_PHASE_ONE, i(44837)),	-- Spice Bread Stuffing [Pilgrim's Bounty]
+			-- #endif
+			-- #if AFTER MOP
+			i(17198),	-- Winter Veil Egg Nog (name changed)
+			-- #endif
 		}),
 		category(70, {	-- Unusual Delights
+			applyclassicphase(TBC_PHASE_ONE, i(34832)),	-- Captain Rumsey's Lager
 			applyclassicphase(PHASE_FIVE, i(21023)),	-- Dirge's Kickin' Chimaerok Chops
 			i(12217),	-- Dragonbreath Chili
 			i(6657),	-- Savory Deviate Delight
@@ -726,7 +778,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(6712),	-- Practice Lock
 			i(15846),	-- Salt Shaker
 			i(17716),	-- Snowmaster 9000
-			un(TBC_PHASE_ONE, i(22728)),	-- Steam Tonk Controller
+			applyclassicphase(TBC_PHASE_ONE, i(22728)),	-- Steam Tonk Controller
 			i(4366),	-- Target Dummy
 			i(21277),	-- Tranquil Mechanical Yeti
 			i(18639),	-- Ultra-Flash Shadow Reflector
@@ -1327,7 +1379,7 @@ _.Craftables = { tier(1, {	-- Classic
 		["description"] = "The following items can be gathered by Miners out in the world.",
 		["groups"] = {
 			spell(2656, {	-- Smelting
-				["description"] = "The following items can be smelted by Miners in a city at the Black Forge in BRD.",
+				["description"] = "The following items can be smelted by Miners in a city or at the Black Forge in BRD.",
 				["groups"] = {
 					i(2841),	-- Bronze Bar
 					i(2840),	-- Copper Bar
