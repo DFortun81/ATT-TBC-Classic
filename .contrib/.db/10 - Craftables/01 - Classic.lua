@@ -909,6 +909,10 @@ _.Craftables = { tier(1, {	-- Classic
 			i(13891),	-- Bloated Salmon
 			i(6643),	-- Bloated Smallfish
 			i(8366),	-- Bloated Trout
+			i(6351),	-- Dented Crate
+			i(13874),	-- Heavy Crate
+			i(6357),	-- Sealed Crate
+			i(6352),	-- Waterlogged Crate
 		}),
 	}),
 	prof(HERBALISM, {
