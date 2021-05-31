@@ -408,3 +408,30 @@ profession(MINING, {
 		}
 	})),
 });
+
+-- Mining Recipes
+_.ItemDB = {};
+local itemrecipe = function(itemID, spellID, timeline, classicphase)
+	local o = { ["itemID"] = itemID };
+	if spellID and spellID > 0 then
+		o.spellID = spellID;
+	end
+	if timeline then
+		-- Ensure that the timeline is in a table format.
+		if type(timeline) == "string" then timeline = { timeline }; end
+		o.timeline = timeline;
+	end
+	if classicphase then applyclassicphase(classicphase, o); end
+	_.ItemDB[itemID] = o;
+	return o;
+end
+
+-- #if AFTER TBC
+-- TBC Recipes
+itemrecipe(35273, 46353, "added 2.4.0.7897", TBC_PHASE_FIVE);	-- Study of Advanced Smelting
+-- #endif
+
+-- #if AFTER WRATH
+-- Wrath Recipes
+itemrecipe(44956, 22967, "added 3.0.8.9464", WRATH_PHASE_ONE);	-- Goblin's Guide to Elementium
+-- #endif
