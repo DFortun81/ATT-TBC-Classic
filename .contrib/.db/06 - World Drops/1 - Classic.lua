@@ -2728,6 +2728,9 @@ _.WorldDrops = { tier(1, {	-- Classic
 			}),
 		}),
 		prof(ALCHEMY, {
+			-- #if AFTER 8.0.1.10000
+			i(6454),	-- Manual: Strong Anti-Venom
+			-- #endif
 			i(3832),	-- Recipe: Elixir of Detect Lesser Invisibility
 			i(9297),	-- Recipe: Elixir of Dream Vision
 			i(3830),	-- Recipe: Elixir of Fortitude
@@ -2847,13 +2850,11 @@ _.WorldDrops = { tier(1, {	-- Classic
 			i(16043),	-- Schematic: Thorium Rifle
 			i(16051),	-- Schematic: Thorium Shells
 		}),
+		-- #if BEFORE 8.0.1.10000
 		prof(FIRST_AID, {
-			{
-				["itemID"] = 6454,	-- Manual: Strong Anti-Venom
-				["spellID"] = 7935,	-- Strong Anti-Venom
-				["requireSkill"] = FIRST_AID,
-			},
+			i(6454),	-- Manual: Strong Anti-Venom
 		}),
+		-- #endif
 		prof(LEATHERWORKING, {
 			i(4301),	-- Pattern: Barbaric Belt
 			i(4297),	-- Pattern: Barbaric Gloves

@@ -129,7 +129,191 @@ profession(FIRST_AID, {
 		}),
 	}),
 	-- #endif
+	-- #if AFTER LEGION
+	un(REMOVED_FROM_GAME, ach(10599, {	-- Legion Medic (800) *
+		["groups"] = {
+			un(REMOVED_FROM_GAME, ach(131)),	-- Journeyman Medic (150)
+			un(REMOVED_FROM_GAME, ach(132)),	-- Expert Medic (225)
+			un(REMOVED_FROM_GAME, ach(133)),	-- Artisan Medic (300)
+			un(REMOVED_FROM_GAME, ach(134)),	-- Master Medic (375)
+			un(REMOVED_FROM_GAME, ach(135)),	-- Grand Master Medic (450)
+			un(REMOVED_FROM_GAME, ach(4918)),	-- Illustrious Grand Master Medic (525)
+			un(REMOVED_FROM_GAME, ach(6838)),	-- Zen Master Medic (600)
+			un(REMOVED_FROM_GAME, ach(9505)),	-- Draenor Medic (700)
+		},
+	})),
+	un(REMOVED_FROM_GAME, ach(11139, {	-- Field Medic! SOON TO BE REMOVED FROM GAME!!
+		["description"] = "WARNING! This achievement will be removed with the release of Battle For Azeroth. MAKE SURE TO FINISH IT BEFORE THEN!",
+		["groups"] = {
+			title(340),	-- TITLE: Field Medic!
+			ach(11138),	-- Is There a Medic in the Zone? (10 of 16)
+			i(139534, {	-- Bloody Letter
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 1, 		-- Bloody Letter
+				--["questID"] = 42350,		-- Bloody Letter
+				["description"] = "Northwest Suramar.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139522, {	-- Bloody Note
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 2, 		-- Bloody Note
+				--["questID"] = 42255,		-- Bloody Note
+				["description"] = "Pirates in southern-east Azsuna.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139527, {	-- Bloody Plea
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 3, 		-- Bloody Plea
+				--["questID"] = 42308,		-- Bloody Plea
+				["description"] = "Furbolgs in southern Val'sharah",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139535, {	-- Bloody Prayer
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 4, 		-- Bloody Prayer
+				--["questID"] = 42351,		-- Bloody Prayer
+				["description"] = "Southwest Suramar City.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139528, {	-- Bloody Request
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 5, 		-- Bloody Request
+				--["questID"] = 42309,		-- Bloody Request
+				["description"] = "Grizzleweald (68, 73) in Val'sharah",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139524, {	-- Crumpled Letter
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 6, 		-- Crumpled Letter
+				--["questID"] = 42333,		-- Crumpled Letter
+				["description"] = "Western Highmountain next to Skyhorn.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139525, {	-- Crumpled Note
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 7, 		-- Crumpled Note
+				--["questID"] = 42334,		-- Crumpled Note
+				["description"] = "Northern Highmountain.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139531, {	-- Crumpled Request
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 8, 		-- Crumpled Request
+				--["questID"] = 42058,		-- Crumpled Request
+				["description"] = "Vampirates. (Stormheim)",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139523, {	-- Fevered Letter
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 9, 		-- Fevered Letter
+				--["questID"] = 42323,		-- Fevered Letter
+				["description"] = "Southern Highmountain.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139526, {	-- Fevered Note
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 10, 		-- Fevered Note
+				--["questID"] = 42303,		-- Fevered Note
+				["description"] = "Southern Val'sharah",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139520, {	-- Fevered Plea
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 11, 		-- Fevered Plea
+				--["questID"] = 42250,		-- Fevered Plea
+				["description"] = "Murlocs at the southern tip in Azsuna.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139532, {	-- Fevered Prayer
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 12, 		-- Fevered Prayer
+				--["questID"] = 42345,		-- Fevered Prayer
+				["description"] = "Northwest Suramar.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139529, {	-- Fevered Request
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 13, 		-- Fevered Request
+				--["questID"] = 41985,		-- Fevered Request
+				["description"] = "Murlocs at Morheim (eastern Stormheim).",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139530, {	-- Singed Letter
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 14, 		-- Singed Letter
+				--["questID"] = 42215,		-- Singed Letter
+				["description"] = "Southern Stormheim.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139521, {	-- Singed Note
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 15, 		-- Singed Note
+				--["questID"] = 42245,		-- Singed Note
+				["description"] = "Murlocs on the left coast of the lake surrounding Nar'thalos Academy.",
+				["u"] = REMOVED_FROM_GAME,
+			}),
+			i(139533, {	-- Singed Plea
+				["achievementID"] = 11139,	-- Field Medic
+				["criteriaID"] = 16, 		-- Singed Plea
+				--["questID"] = 42340,		-- Singed Plea
+				["description"] = "Fal'dorei Tunnels.",
+				["u"] = REMOVED_FROM_GAME,
+			})
+		},
+	})),
+	-- #endif
+	-- #if NOT ANYCLASSIC
+	n(VENDORS, {
+		-- TODO: Add the associated vendors.
+		i(16084),	-- Expert First Aid - Under Wraps
+		i(16112),	-- Manual: Heavy Silk Bandage
+		i(16113)	-- Manual: Mageweave Bandage
+	}),
+	-- #endif
 });
 
 -- Reset the pointer to the recipe function.
 recipe = oldRecipe;
+
+-- First Aid Recipes
+_.ItemDB = {};
+local itemrecipe = function(itemID, spellID, timeline)
+	local o = { ["itemID"] = itemID };
+	if spellID and spellID > 0 then
+		o.spellID = spellID;
+	end
+	if timeline then
+		-- Ensure that the timeline is in a table format.
+		if type(timeline) == "string" then timeline = { timeline }; end
+		o.timeline = timeline;
+	end
+	_.ItemDB[itemID] = o;
+	return o;
+end
+
+-- Classic Recipes
+itemrecipe(16084, 0--[[7924]], "removed 3.1.0.9767");	-- Expert First Aid - Under Wraps
+itemrecipe(16112, 7929, "removed 3.1.0.9767");	-- Manual: Heavy Silk Bandage
+itemrecipe(16113, 10840, "removed 3.1.0.9767");	-- Manual: Mageweave Bandage
+itemrecipe(6454, 7935);	-- Manual: Strong Anti-Venom
+
+-- #if AFTER TBC
+-- TBC Recipes
+applyclassicphase(TBC_PHASE_ONE, itemrecipe(21993, 27033, "removed 3.1.0.9767"));	-- Manual: Heavy Netherweave Bandage
+applyclassicphase(TBC_PHASE_ONE, itemrecipe(21992, 27032, "removed 3.1.0.9767"));	-- Manual: Netherweave Bandage
+applyclassicphase(TBC_PHASE_ONE, itemrecipe(22012, 0--[[27029]], "removed 3.1.0.9767"));	-- Master First Aid - Doctor in the House
+-- #endif
+
+-- #if AFTER WRATH
+-- Wrath Recipes
+applyclassicphase(WRATH_PHASE_ONE, itemrecipe(39152, 45546));	-- Manual: Heavy Frostweave Bandage
+-- #endif
+
+-- These items never made it in.
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	filter(200, {	-- Recipes
+		i(16085),	-- Artisan First Aid - Heal Thyself
+		i(23689),	-- Manual: Crystal Infused Bandage
+		i(23690),	-- Recipe: Crystal Flake Throat Lozenge
+	}),
+});

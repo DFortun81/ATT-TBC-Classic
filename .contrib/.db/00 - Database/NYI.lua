@@ -684,15 +684,12 @@ _.NeverImplemented =
 	
 	-- Recipe
 	i(16073),	-- Artisan Cookbook
-	i(16085),	-- Artisan First Aid - Heal Thyself
 	i(16082),	-- Artisan Fishing - The Way of the Lure
 	i(5130),	-- Knowledge: Dalaran Wizard Disguise
 	i(5129),	-- Knowledge: Dark Iron Dwarf Disguise
 	i(5126),	-- Knowledge: Defias Disguise
 	i(5127),	-- Knowledge: South Seas Pirate Disguise
 	i(5132),	-- Knowledge: Syndicate Disguise
-	i(23689),	-- Manual: Crystal Infused Bandage
-	i(23690),	-- Recipe: Crystal Flake Throat Lozenge
 	i(5657),	-- Recipe: Instant Toxin
 	i(1164),	-- Sam's Tome
 	i(4144),	-- Tome of Polymorph: Cow
