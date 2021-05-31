@@ -6,6 +6,10 @@ _.Zones =
 	m(KALIMDOR, {
 		m(WINTERSPRING, {
 			n(ZONEDROPS, {
+				-- #if AFTER CATA
+				-- Originally a zone drop of Azshara, was moved to Winterspring after.
+				applyclassicphase(TBC_PHASE_ONE, i(34535)),	-- Azure Whelpling
+				-- #endif
 				i(12524, {	-- Blue-feathered Amulet
 					["questID"] = 4864,	-- Enraged Wildkin (4/4)
 					["races"] = ALLIANCE_ONLY,
