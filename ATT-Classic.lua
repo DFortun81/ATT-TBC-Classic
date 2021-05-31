@@ -5493,6 +5493,12 @@ app.SkillIDToSpellID = setmetatable({
 	[26801] = 26801,	-- Shadoweave Tailoring
 	[26797] = 26797,	-- Spellfire Tailoring
 	[26798] = 26798,	-- Mooncloth Tailoring
+	[125589] = 125589,	-- Way of the Brew
+	[124694] = 124694,	-- Way of the Grill
+	[125588] = 125588,	-- Way of the Oven
+	[125586] = 125586,	-- Way of the Pot
+	[125587] = 125587,	-- Way of the Steamer
+	[125584] = 125584,	-- Way of the Wok
 }, {__index = function(t,k) return k; end});
 app.SpellIDToSkillID = {};
 for skillID,spellID in pairs(app.SkillIDToSpellID) do
@@ -5512,6 +5518,12 @@ app.SpecializationSpellIDs = setmetatable({
 	[26801] = 3908,	-- Shadoweave Tailoring
 	[26797] = 3908,	-- Spellfire Tailoring
 	[26798] = 3908,	-- Mooncloth Tailoring
+	[125589] = 2550,-- Way of the Brew
+	[124694] = 2550,-- Way of the Grill
+	[125588] = 2550,-- Way of the Oven
+	[125586] = 2550,-- Way of the Pot
+	[125587] = 2550,-- Way of the Steamer
+	[125584] = 2550,-- Way of the Wok
 }, {__index = function(t,k) return k; end})
 
 local BLACKSMITHING = ATTC.SkillIDToSpellID[164];
