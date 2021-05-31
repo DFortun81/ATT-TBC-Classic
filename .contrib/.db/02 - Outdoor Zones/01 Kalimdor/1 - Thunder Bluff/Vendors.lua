@@ -13,6 +13,13 @@ _.Zones =
 						i(12249),	-- Merciless Axe
 					},
 				}),
+				n(8401, {	-- Halpa <Prairie Dog Vendor>
+					["coord"] = { 62.2, 58.6, THUNDER_BLUFF },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(10394),	-- Prairie Dog Whistle
+					},
+				}),
 				n(3015, {	-- Kuna Thunderhorn <Bowyer & Fletching Goods>
 					["coord"] = { 46.8, 45.8, THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
