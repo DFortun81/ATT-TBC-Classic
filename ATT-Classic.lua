@@ -4762,7 +4762,7 @@ itemHarvesterFields.text = function(t)
 				["iLvl"] = itemLevel,
 				["spellID"] = spellID,
 			};
-			if itemMinLevel and itemMinLevel > 0 then
+			if itemMinLevel and itemMinLevel > 1 then
 				info.lvl = itemMinLevel;
 			end
 			if info.inventoryType == 0 then
@@ -4835,40 +4835,24 @@ itemTooltipHarvesterFields.text = function(t)
 									local faction,replevel = strsplit("-", text);
 									t.info.minReputation = { app.GetFactionIDByName(faction), app.GetFactionStandingThresholdFromString(replevel) };
 								else
-									text = strtrim(text);
 									if string.find(text, "%(") then
-										local spellName = strsplit("(", text);
-										spellName = strtrim(spellName);
-										if spellName == "Herbalism" then spellName = "Herb Gathering"; end
-										local spellID = app.SpellNameToSpellID[spellName];
-										if spellID then
-											local skillID = app.SpellIDToSkillID[spellID];
-											if skillID then
-												t.info.requireSkill = skillID;
-											else
-												print("Unknown Skill::()", text);
-												table.insert(requirements, text);
-											end
+										text = strsplit("(", text);
+									end
+									
+									local spellName = strtrim(text);
+									if spellName == "Herbalism" then spellName = "Herb Gathering"; end
+									local spellID = app.SpellNameToSpellID[spellName];
+									if spellID then
+										local skillID = app.SpellIDToSkillID[spellID];
+										if skillID then
+											t.info.requireSkill = skillID;
 										else
-											print("Unknown Spell::()", text);
+											print("Unknown Skill", text);
 											table.insert(requirements, text);
 										end
 									else
-										local spellName = strtrim(text);
-										if spellName == "Herbalism" then spellName = "Herb Gathering"; end
-										local spellID = app.SpellNameToSpellID[spellName];
-										if spellID then
-											local skillID = app.SpellIDToSkillID[spellID];
-											if skillID then
-												t.info.requireSkill = skillID;
-											else
-												print("Unknown Skill", text);
-												table.insert(requirements, text);
-											end
-										else
-											print("Unknown Spell", text);
-											table.insert(requirements, text);
-										end
+										print("Unknown Spell", text);
+										table.insert(requirements, text);
 									end
 								end
 							end
