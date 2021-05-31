@@ -385,7 +385,7 @@ _.Zones =
 				}),
 				q(1000, {	-- The New Frontier
 					["qg"] = 10881,	-- Bluff Runner Windstrider
-					["coords"] = { 41.4, 54.2, THUNDER_BLUFF },
+					["coord"] = { 41.4, 54.2, THUNDER_BLUFF },
 					["maps"] = { THUNDER_BLUFF },
 					["sourceQuests"] = {
 						1018,	-- The New Frontier [Orgrimmar]
@@ -396,7 +396,7 @@ _.Zones =
 				}),
 				q(1004, {	-- The New Frontier
 					["qg"] = 10879,	-- Harbinger Balthazad
-					["coords"] = { 68.8, 48.4, UNDERCITY },
+					["coord"] = { 68.8, 48.4, UNDERCITY },
 					["maps"] = { UNDERCITY },
 					["sourceQuests"] = {
 						1018,	-- The New Frontier [Orgrimmar]
@@ -407,7 +407,7 @@ _.Zones =
 				}),
 				q(1018, {	-- The New Frontier
 					["qg"] = 10880,	-- Warcaller Gorlach
-					["coords"] = { 46.6, 64.6, ORGRIMMAR },
+					["coord"] = { 46.6, 64.6, ORGRIMMAR },
 					["maps"] = { ORGRIMMAR },
 					["sourceQuests"] = {
 						1000,   -- The New Frontier [Thunder Bluff]

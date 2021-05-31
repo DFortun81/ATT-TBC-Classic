@@ -42,7 +42,7 @@ _.Instances = { tier(1, {	-- Classic
 				q(8413, {	-- Da Voodoo
 					["qg"] = 6176,	-- Bath'rah the Windwatcher
 					["sourceQuest"] = 8412,	-- Spirit Totem
-					["coords"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
+					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
 					["maps"] = { ALTERAC_MOUNTAINS },
 					["classes"] = { SHAMAN },
 					["cost"] = {

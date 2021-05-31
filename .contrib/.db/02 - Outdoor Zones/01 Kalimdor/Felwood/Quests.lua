@@ -1145,7 +1145,7 @@ _.Zones =
 				q(7624, {	-- Ulathek the Traitor
 					["qg"] = 9516,	-- Lord Banehollow
 					["sourceQuest"] = 7623,	-- Lord Banehollow
-					["coords"] = { 36.0, 44.6, FELWOOD },
+					["coord"] = { 36.0, 44.6, FELWOOD },
 					["classes"] = { WARLOCK },
 					["cost"] = {
 						{ "i", 18802, 1 },	-- Shadowy Potion
@@ -1220,7 +1220,7 @@ _.Zones =
 				q(7625, {	-- Xorothian Stardust
 					["qg"] = 9516,	-- Lord Banehollow
 					["sourceQuest"] = 7624,	-- Ulathek the Traitor
-					["coords"] = { 36.0, 44.6, FELWOOD },
+					["coord"] = { 36.0, 44.6, FELWOOD },
 					["classes"] = { WARLOCK },
 					["cost"] = {
 						{ "i", 18802, 1 },	-- Shadowy Potion

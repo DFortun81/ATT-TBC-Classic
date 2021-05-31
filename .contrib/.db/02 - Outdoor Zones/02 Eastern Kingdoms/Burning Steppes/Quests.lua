@@ -13,7 +13,7 @@ _.Zones =
 						7627,	-- Wheel of the Black March
 						7628,	-- Doomsday Candle
 					},
-					["coords"] = { 12.4, 31.6, BURNING_STEPPES },
+					["coord"] = { 12.4, 31.6, BURNING_STEPPES },
 					["classes"] = { WARLOCK },
 					["cost"] = {
 						{ "i", 12360, 3 },	-- Arcanite Bar
@@ -23,7 +23,7 @@ _.Zones =
 				q(7626, {	-- Bell of Dethmoora
 					["qg"] = 14436,	-- Mor'zul Bloodbringer
 					["sourceQuest"] = 7564,	-- Wildeyes
-					["coords"] = { 12.6, 31.6, BURNING_STEPPES },
+					["coord"] = { 12.6, 31.6, BURNING_STEPPES },
 					["classes"] = { WARLOCK },
 					["cost"] = {
 						{ "i", 9264, 10 },	-- Elixir of Shadow Power
@@ -32,7 +32,7 @@ _.Zones =
 				}),
 				q(4726, {	-- Broodling Essence
 					["qg"] = 10267,	-- Tinkee Steamboil
-					["coords"] = { 65.2, 23.8, BURNING_STEPPES },
+					["coord"] = { 65.2, 23.8, BURNING_STEPPES },
 					["cost"] = {
 						{ "i", 12284, 1 },	-- Draco-Incarcinatrix 900
 						{ "i", 12283, 8 },	-- Broodling Essence
@@ -45,7 +45,7 @@ _.Zones =
 				q(7628, {	-- Doomsday Candle
 					["qg"] = 14436,	-- Mor'zul Bloodbringer
 					["sourceQuest"] = 7564,	-- Wildeyes
-					["coords"] = { 12.6, 31.6, BURNING_STEPPES },
+					["coord"] = { 12.6, 31.6, BURNING_STEPPES },
 					["classes"] = { WARLOCK },
 					["cost"] = {
 						{ "i", 15416, 35 },	-- Black Dragonscale
@@ -54,7 +54,7 @@ _.Zones =
 				}),
 				q(3823, {	-- Extinguish the Firegut
 					["qg"] = 9177,	-- Oralius
-					["coords"] = { 84.6, 68.8, BURNING_STEPPES },
+					["coord"] = { 84.6, 68.8, BURNING_STEPPES },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 48,
 				}),
@@ -69,7 +69,7 @@ _.Zones =
 				}),
 				q(4283, {	-- FIFTY! YEP!
 					["qg"] = 9177,	-- Oralius
-					["coords"] = { 84.6, 68.8, BURNING_STEPPES },
+					["coord"] = { 84.6, 68.8, BURNING_STEPPES },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 11467, 50 },	-- Blackrock Medallion
@@ -99,7 +99,7 @@ _.Zones =
 						7625,	-- Xorothian Stardust
 						7630,	-- Arcanite
 					},
-					["coords"] = { 12.4, 31.6, BURNING_STEPPES },
+					["coord"] = { 12.4, 31.6, BURNING_STEPPES },
 					["maps"] = { SCHOLOMANCE },
 					["classes"] = { WARLOCK },
 					["cost"] = {
@@ -208,7 +208,7 @@ _.Zones =
 					["qg"] = 14437,	-- Gorzeeki Wildeyes
 					["sourceQuest"] = 7564,	-- Wildeyes
 					["description"] = "Do not leave the Blasted Lands without purchasing a Shadowy Potion or two.",
-					["coords"] = { 12.4, 31.6, BURNING_STEPPES },
+					["coord"] = { 12.4, 31.6, BURNING_STEPPES },
 					["maps"] = { FELWOOD },
 					["classes"] = { WARLOCK },
 					["cost"] = {
@@ -242,7 +242,7 @@ _.Zones =
 				q(3825, {	-- Ogre Head On A Stick = Party
 					["qg"] = 9177,	-- Oralius
 					["sourceQuest"] = 3824,	-- Gor'tesh the Brute Lord
-					["coords"] = { 84.6, 68.8, BURNING_STEPPES },
+					["coord"] = { 84.6, 68.8, BURNING_STEPPES },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 11079, 1 },	-- Gor'tesh's Lopped Off Head
@@ -283,7 +283,7 @@ _.Zones =
 				q(7564, {	-- Wildeyes
 					["qg"] = 14436,	-- Mor'zul Bloodbringer
 					["sourceQuest"] = 7563,	-- Rage of Blood
-					["coords"] = { 12.6, 31.6, BURNING_STEPPES },
+					["coord"] = { 12.6, 31.6, BURNING_STEPPES },
 					["classes"] = { WARLOCK },
 					["cost"] = {
 						{ "i", 18591, 1 },	-- Case of Blood

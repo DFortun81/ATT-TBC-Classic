@@ -108,7 +108,7 @@ _.Zones =
 						{ "o", 1738 },	-- Syndicate Documents
 						{ "o", 1740 },	-- Syndicate Documents
 					},
-					["coords"] = { 58.3, 68.0, ALTERAC_MOUNTAINS },
+					["coord"] = { 58.3, 68.0, ALTERAC_MOUNTAINS },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
@@ -140,7 +140,7 @@ _.Zones =
 						{ "o", 1738 },	-- Syndicate Documents
 						{ "o", 1740 },	-- Syndicate Documents
 					},
-					["coords"] = { 58.3, 68.0, ALTERAC_MOUNTAINS },
+					["coord"] = { 58.3, 68.0, ALTERAC_MOUNTAINS },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
@@ -230,7 +230,7 @@ _.Zones =
 				}),
 				q(8412, {	-- Spirit Totem
 					["qg"] = 6176,	-- Bath'rah the Windwatcher
-					["coords"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
+					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["sourceQuest"] = 8410,	-- Elemental Mastery
