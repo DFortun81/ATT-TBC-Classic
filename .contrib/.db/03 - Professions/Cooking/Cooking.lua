@@ -3,7 +3,7 @@ profession(COOKING, {
 		{
 			["name"] = "Everyday Cooking",
 			["categoryID"] = 63,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Baked Salmon",
 					["recipeID"] = 18247
@@ -295,7 +295,10 @@ profession(COOKING, {
 				applyclassicphase(TBC_PHASE_ONE, {
 					["name"] = "Roasted Moongraze Tenderloin",
 					["timeline"] = { "added 2.0.1.6180" },
-					["recipeID"] = 33277
+					["recipeID"] = 33277,
+					-- #if AFTER 7.0.3
+					["races"] = ALLIANCE_ONLY,
+					-- #endif
 				}),
 				{
 					["name"] = "Rockscale Cod",
@@ -398,7 +401,7 @@ profession(COOKING, {
 		{
 			["name"] = "Holiday Cooking",
 			["categoryID"] = 58,
-			["g"] = {
+			["groups"] = {
 				-- #if AFTER WRATH
 				applyclassicphase(WRATH_PHASE_ONE, {	-- Bread of the Dead [Day of the Dead]
 					["name"] = "Bread of the Dead",
@@ -498,7 +501,7 @@ profession(COOKING, {
 		{
 			["name"] = "Unusual Delights",
 			["categoryID"] = 70,
-			["g"] = {
+			["groups"] = {
 				applyclassicphase(TBC_PHASE_ONE, {
 					["name"] = "Captain Rumsey's Lager",
 					["timeline"] = { "added 2.4.0.10000" },
@@ -950,7 +953,7 @@ profession(COOKING, {
 		{
 			["name"] = "Way of the Grill",
 			["categoryID"] = 64,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Banquet of the Grill",
 					["recipeID"] = 125141
@@ -980,7 +983,7 @@ profession(COOKING, {
 		{
 			["name"] = "Way of the Wok",
 			["categoryID"] = 65,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Banquet of the Wok",
 					["recipeID"] = 125594
@@ -1010,7 +1013,7 @@ profession(COOKING, {
 		{
 			["name"] = "Way of the Pot",
 			["categoryID"] = 66,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Banquet of the Pot",
 					["recipeID"] = 125596
@@ -1040,7 +1043,7 @@ profession(COOKING, {
 		{
 			["name"] = "Way of the Steamer",
 			["categoryID"] = 67,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Banquet of the Steamer",
 					["recipeID"] = 125598
@@ -1070,7 +1073,7 @@ profession(COOKING, {
 		{
 			["name"] = "Way of the Oven",
 			["categoryID"] = 68,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Banquet of the Oven",
 					["recipeID"] = 125600
@@ -1100,7 +1103,7 @@ profession(COOKING, {
 		{
 			["name"] = "Way of the Brew",
 			["categoryID"] = 69,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Banana Infused Rum",
 					["recipeID"] = 126655
@@ -1134,7 +1137,7 @@ profession(COOKING, {
 		{
 			["name"] = "Everyday Cooking",
 			["categoryID"] = 63,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Blanched Needle Mushrooms",
 					["recipeID"] = 124233
@@ -1262,7 +1265,7 @@ profession(COOKING, {
 		{
 			["name"] = "Feasts",
 			["categoryID"] = 345,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Feast of Blood",
 					["recipeID"] = 173978
@@ -1276,7 +1279,7 @@ profession(COOKING, {
 		{
 			["name"] = "Delicacies",
 			["categoryID"] = 346,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Blackrock Barbecue",
 					["recipeID"] = 160986
@@ -1306,7 +1309,7 @@ profession(COOKING, {
 		{
 			["name"] = "Meat Dishes",
 			["categoryID"] = 343,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Blackrock Ham",
 					["recipeID"] = 160962
@@ -1340,7 +1343,7 @@ profession(COOKING, {
 		{
 			["name"] = "Fish Dishes",
 			["categoryID"] = 344,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Buttered Sturgeon",
 					["recipeID"] = 180761
@@ -1404,7 +1407,7 @@ profession(COOKING, {
 		{
 			["name"] = "Snacks",
 			["categoryID"] = 476,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Bear Tartare",
 					["nextRecipeID"] = 201540,
@@ -1478,7 +1481,7 @@ profession(COOKING, {
 		{
 			["name"] = "Light Meals",
 			["categoryID"] = 477,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Deep-Fried Mossgill",
 					["nextRecipeID"] = 201525,
@@ -1564,7 +1567,7 @@ profession(COOKING, {
 		{
 			["name"] = "Large Meals",
 			["categoryID"] = 478,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barracuda Mrglgagh",
 					["nextRecipeID"] = 201531,
@@ -1650,7 +1653,7 @@ profession(COOKING, {
 		{
 			["name"] = "Delicacies",
 			["categoryID"] = 479,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Azshari Salad",
 					["nextRecipeID"] = 201535,
@@ -1736,7 +1739,7 @@ profession(COOKING, {
 		{
 			["name"] = "Feasts",
 			["categoryID"] = 480,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Feast of the Fishes",
 					["recipeID"] = 251258
@@ -1780,7 +1783,7 @@ profession(COOKING, {
 		{
 			["name"] = "Delicacies",
 			["categoryID"] = 1449,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Baked Voidfin",
 					["recipeID"] = 314959
@@ -1806,7 +1809,7 @@ profession(COOKING, {
 		{
 			["name"] = "Light Meals",
 			["categoryID"] = 1120,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Grilled Catfish",
 					["nextRecipeID"] = 259431,
@@ -1856,7 +1859,7 @@ profession(COOKING, {
 		{
 			["name"] = "Desserts",
 			["categoryID"] = 1119,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Kul Tiramisu",
 					["nextRecipeID"] = 259412,
@@ -1942,7 +1945,7 @@ profession(COOKING, {
 		{
 			["name"] = "Large Meals",
 			["categoryID"] = 1121,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Abyssal-Fried Rissole",
 					["nextRecipeID"] = 297085,
@@ -2128,7 +2131,7 @@ profession(COOKING, {
 		{
 			["name"] = "Feasts",
 			["categoryID"] = 1122,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Bountiful Captain's Feast",
 					["nextRecipeID"] = 259422,
@@ -2200,7 +2203,7 @@ profession(COOKING, {
 		{
 			["name"] = "Quest Recipes",
 			["categoryID"] = 1526,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Arden Apple Pie",
 					["recipeID"] = 338100,
@@ -2261,7 +2264,7 @@ profession(COOKING, {
 		{
 			["name"] = "Feasts",
 			["categoryID"] = 1326,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Feast of Gluttonous Hedonism",
 					["recipeID"] = 308403
@@ -2275,7 +2278,7 @@ profession(COOKING, {
 		{
 			["name"] = "Soul Food",
 			["categoryID"] = 1327,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Fried Bonefish",
 					["recipeID"] = 308420
@@ -2293,7 +2296,7 @@ profession(COOKING, {
 		{
 			["name"] = "Large Meals",
 			["categoryID"] = 1325,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Banana Beef Pudding",
 					["recipeID"] = 308415
@@ -2323,7 +2326,7 @@ profession(COOKING, {
 		{
 			["name"] = "Light Meals",
 			["categoryID"] = 1324,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Biscuits and Caviar",
 					["recipeID"] = 308410
@@ -2351,4 +2354,789 @@ profession(COOKING, {
 			}
 		}
 	})),
+	
+	-- #if AFTER WOD
+	n(DISCOVERY, {
+		["description"] = "These items have a chance to appear in your bag after cooking any recipe from Warlords of Draenor.",
+		["groups"] = {
+			i(118311),	-- Recipe Idea: Blackrock Ham
+			i(118313),	-- Recipe Idea: Braised Riverbeast
+			i(118315),	-- Recipe Idea: Clefthoof Sausages
+			i(118319),	-- Recipe Idea: Fat Sleeper Cakes
+			i(118320),	-- Recipe Idea: Fiery Calamari
+			i(118317),	-- Recipe Idea: Grilled Gulper
+			i(118310),	-- Recipe Idea: Hearty Elekk Steak
+			i(118312),	-- Recipe Idea: Pan-Seared Talbuk
+			i(118314),	-- Recipe Idea: Rylak Crepes
+			i(118321),	-- Recipe Idea: Skulker Chowder
+			i(118316),	-- Recipe Idea: Steamed Scorpion
+			i(118318),	-- Recipe Idea: Sturgeon Stew
+			i(118323),	-- Recipe Idea: Blackrock Barbecue
+			i(118326),	-- Recipe Idea: Calamari Crepes
+			i(118324),	-- Recipe Idea: Frosty Stew
+			i(118327),	-- Recipe Idea: Gorgrond Chowder
+			i(118325),	-- Recipe Idea: Sleeper Surprise
+			i(118322),	-- Recipe Idea: Talador Surf and Turf
+			i(118328),	-- Recipe Idea: Feast of Blood
+			i(118329),	-- Recipe Idea: Feast of the Waters
+			i(110684),	-- Leftovers [Pet!]
+		},
+	}),
+	-- #endif
+	-- #if AFTER MOP
+	i(86425, {	-- Cooking School Bell
+		faction(1357, {		-- Nomi (Faction)
+			["description"] = "Summon Nomi once per day, complete the daily he gives and you'll soon (42+ days later), earn your Apron.\n\nThen this little bastard will learn nothing and burn all of your food in Dalaran.",
+			["creatureID"] = 64337,	-- Nomi (Child)
+			["groups"] = {
+				ach(7325),	-- Now I Am the Master
+				q(31820, {	-- A Present for Teacher
+					i(86468),	-- Apron
+				}),
+			},
+		}),
+	}),
+	-- #endif
+	-- #if AFTER LEGION
+	n(101846, {	-- Nomi
+		["description"] = "Takes various meat, fish, and animal byproducts for Work Orders (similar to the Draenor garrison), 5 at a time. He can maintain a maximum of 24 work orders at one time.\n\nEach Work Order takes 4 hours to complete. After a Work Order (or multiple Work Orders) complete, you will receive a recipe, meat/fish, Badly Burnt Food (often), or some combination of these when you collect them from the Test Kitchen Results table.\n\nThe Work Order options that Nomi gives you are based on the materials you have in your inventory (your bags, bank, and reagent bank). You can queue up all work orders with one material, or you can use multiple different materials for any number of Work Orders, as long as the total Work Orders active is maximum 24.",
+		["maps"] = { -- Do not include 626 as that is Rogue Class Hall
+			627,	-- Dalaran (Broken Isles)
+			628,	-- The Underbelly,
+			629,	-- Aegwynn's Gallery [May separate out later]
+		},
+		["groups"] = {
+			i(124119, {	-- Big Gamy Ribs
+				i(133835),	-- Recipe: Spiced Rib Roast [Rank 2]
+				i(133855),	-- Recipe: Spiced Rib Roast [Rank 3]
+				i(133829),	-- Recipe: Hearty Feast [Rank 1]
+				i(133849),	-- Recipe: Hearty Feast [Rank 2]
+				i(133869),	-- Recipe: Hearty Feast [Rank 3]
+				i(133836), 	-- Recipe: Leybeque Ribs [Rank 2]
+				i(133856), 	-- Recipe: Leybeque Ribs [Rank 3]
+				i(133821),	-- Recipe: The Hungry Magister [Rank 1]
+				i(133841),	-- Recipe: The Hungry Magister [Rank 2]
+				i(133861),	-- Recipe: The Hungry Magister [Rank 3]
+				i(133830),	-- Recipe: Lavish Suramar Feast [Rank 1]
+				i(133850),	-- Recipe: Lavish Suramar Feast [Rank 2]
+				i(133870),	-- Recipe: Lavish Suramar Feast [Rank 3]
+			}),
+			i(124112, {	-- Black Barracuda
+				i(133838),	-- Recipe: Barracuda Mrglgagh [Rank 2]
+				i(133858),	-- Recipe: Barracuda Mrglgagh [Rank 3]
+				i(133825),	-- Recipe: Fishbrul Special [Rank 1]
+				i(133845),	-- Recipe: Fishbrul Special [Rank 2]
+				i(133865),	-- Recipe: Fishbrul Special [Rank 3]
+				i(133830),	-- Recipe: Lavish Suramar Feast [Rank 1]
+				i(133850),	-- Recipe: Lavish Suramar Feast [Rank 2]
+				i(133870),	-- Recipe: Lavish Suramar Feast [Rank 3]
+				i(133823),	-- Recipe: Nightborne Delicacy Platter [Rank 1]
+				i(133843),	-- Recipe: Nightborne Delicacy Platter [Rank 2]
+				i(133863),	-- Recipe: Nightborne Delicacy Platter [Rank 3]
+			}),
+			i(124107, {	-- Cursed Queenfish
+				i(133848),	-- Recipe: Fighter Chow [Rank 2]
+				i(133868),	-- Recipe: Fighter Chow [Rank 3]
+				i(133825),	-- Recipe: Fishbrul Special [Rank 1]
+				i(133845),	-- Recipe: Fishbrul Special [Rank 2]
+				i(133865),	-- Recipe: Fishbrul Special [Rank 3]
+			}),
+			i(124118, {	-- Fatty Bearsteak
+				i(133847),	-- Recipe: Bear Tartare [Rank 2]
+				i(133867),	-- Recipe: Bear Tartare [Rank 3]
+			}),
+			i(124109, {	-- Highmountain Salmon
+				i(133840),	-- Recipe: Drogbar-Style Salmon [Rank 2]
+				i(133860),	-- Recipe: Drogbar-Style Salmon [Rank 3]
+				i(133825),	-- Recipe: Fishbrul Special [Rank 1]
+				i(133845),	-- Recipe: Fishbrul Special [Rank 2]
+				i(133865),	-- Recipe: Fishbrul Special [Rank 3]
+				i(133821),	-- Recipe: The Hungry Magister [Rank 1]
+				i(133841),	-- Recipe: The Hungry Magister [Rank 2]
+				i(133861),	-- Recipe: The Hungry Magister [Rank 3]
+				i(133830),	-- Recipe: Lavish Suramar Feast [Rank 1]
+				i(133850),	-- Recipe: Lavish Suramar Feast [Rank 2]
+				i(133870),	-- Recipe: Lavish Suramar Feast [Rank 3]
+			}),
+			i(124117, {	-- Lean Steak
+				i(133831),	-- Recipe: Salt and Pepper Shank [Rank 2]
+				i(133851),	-- Recipe: Salt and Pepper Shank [Rank 3]
+				i(133829),	-- Recipe: Hearty Feast [Rank 1]
+				i(133849),	-- Recipe: Hearty Feast [Rank 2]
+				i(133869),	-- Recipe: Hearty Feast [Rank 3]
+				i(133837),	-- Recipe: Suramar Surf and Turf [Rank 2]
+				i(133857),	-- Recipe: Suramar Surf and Turf [Rank 3]
+				i(133822),	-- Recipe: Azshari Salad [Rank 1]
+				i(133842),	-- Recipe: Azshari Salad [Rank 2]
+				i(133862),	-- Recipe: Azshari Salad [Rank 3]
+				i(133836), 	-- Recipe: Leybeque Ribs [Rank 2]
+				i(133856), 	-- Recipe: Leybeque Ribs [Rank 3]
+				i(133821),	-- Recipe: The Hungry Magister [Rank 1]
+				i(133841),	-- Recipe: The Hungry Magister [Rank 2]
+				i(133861),	-- Recipe: The Hungry Magister [Rank 3]
+				i(133830),	-- Recipe: Lavish Suramar Feast [Rank 1]
+				i(133850),	-- Recipe: Lavish Suramar Feast [Rank 2]
+				i(133870),	-- Recipe: Lavish Suramar Feast [Rank 3]
+			}),
+			i(124120, {	-- Leyblood
+				i(133838),	-- Recipe: Barracuda Mrglgagh [Rank 2]
+				i(133858),	-- Recipe: Barracuda Mrglgagh [Rank 3]
+				i(133830),	-- Recipe: Lavish Suramar Feast [Rank 1]
+				i(133850),	-- Recipe: Lavish Suramar Feast [Rank 2]
+				i(133870),	-- Recipe: Lavish Suramar Feast [Rank 3]
+			}),
+			i(124108, {	-- Mossgill Perch
+				i(133832),	-- Recipe: Deep-Fried Mossgill [Rank 2]
+				i(133852),	-- Recipe: Deep-Fried Mossgill [Rank 3]
+				i(133829),	-- Recipe: Hearty Feast [Rank 1]
+				i(133849),	-- Recipe: Hearty Feast [Rank 2]
+				i(133869),	-- Recipe: Hearty Feast [Rank 3]
+				i(133825),	-- Recipe: Fishbrul Special [Rank 1]
+				i(133845),	-- Recipe: Fishbrul Special [Rank 2]
+				i(133865),	-- Recipe: Fishbrul Special [Rank 3]
+			}),
+			i(124111, {	-- Runescale Koi
+				i(133839),	-- Recipe: Koi-Scented Stormray [Rank 2]
+				i(133859),	-- Recipe: Koi-Scented Stormray [Rank 3]
+				i(133837),	-- Recipe: Suramar Surf and Turf [Rank 2]
+				i(133857),	-- Recipe: Suramar Surf and Turf [Rank 3]
+				i(133822),	-- Recipe: Azshari Salad [Rank 1]
+				i(133842),	-- Recipe: Azshari Salad [Rank 2]
+				i(133862),	-- Recipe: Azshari Salad [Rank 3]
+				i(133824),	-- Recipe: Seed-Battered Fish Plate [Rank 1]
+				i(133844),	-- Recipe: Seed-Battered Fish Plate [Rank 2]
+				i(133864),	-- Recipe: Seed-Battered Fish Plate [Rank 3]
+				i(133830),	-- Recipe: Lavish Suramar Feast [Rank 1]
+				i(133850),	-- Recipe: Lavish Suramar Feast [Rank 2]
+				i(133870),	-- Recipe: Lavish Suramar Feast [Rank 3]
+			}),
+			i(133607, {	-- Silver Mackerel
+				i(133846),	-- Recipe: Dried Mackerel Strips [Rank 2]
+				i(133866),	-- Recipe: Dried Mackerel Strips [Rank 3]
+			}),
+			i(133680, {	-- Slice of Bacon
+				i(133871),	-- Recipe: Crispy Bacon [Rank 1]
+				i(133872),	-- Recipe: Crispy Bacon [Rank 2]
+				i(133873),	-- Recipe: Crispy Bacon [Rank 3]
+				i(133829),	-- Recipe: Hearty Feast [Rank 1]
+				i(133849),	-- Recipe: Hearty Feast [Rank 2]
+				i(133869),	-- Recipe: Hearty Feast [Rank 3]
+			}),
+			i(124110, {	-- Stormray
+				i(133833),	-- Recipe: Pickled Stormray [Rank 2]
+				i(133853),	-- Recipe: Pickled Stormray [Rank 3]
+				i(133829),	-- Recipe: Hearty Feast [Rank 1]
+				i(133849),	-- Recipe: Hearty Feast [Rank 2]
+				i(133869),	-- Recipe: Hearty Feast [Rank 3]
+				i(133839),	-- Recipe: Koi-Scented Stormray [Rank 2]
+				i(133859),	-- Recipe: Koi-Scented Stormray [Rank 3]
+				i(133824),	-- Recipe: Seed-Battered Fish Plate [Rank 1]
+				i(133844),	-- Recipe: Seed-Battered Fish Plate [Rank 2]
+				i(133864),	-- Recipe: Seed-Battered Fish Plate [Rank 3]
+				i(133830),	-- Recipe: Lavish Suramar Feast [Rank 1]
+				i(133850),	-- Recipe: Lavish Suramar Feast [Rank 2]
+				i(133870),	-- Recipe: Lavish Suramar Feast [Rank 3]
+			}),
+			i(124121, {	-- Wildfowl Egg
+				i(133834),	-- Recipe: Faronaar Fizz [Rank 2]
+				i(133854),	-- Recipe: Faronaar Fizz [Rank 3]
+				i(133829),	-- Recipe: Hearty Feast [Rank 1]
+				i(133849),	-- Recipe: Hearty Feast [Rank 2]
+				i(133869),	-- Recipe: Hearty Feast [Rank 3]
+				i(133823),	-- Recipe: Nightborne Delicacy Platter [Rank 1]
+				i(133843),	-- Recipe: Nightborne Delicacy Platter [Rank 2]
+				i(133863),	-- Recipe: Nightborne Delicacy Platter [Rank 3]
+			}),
+			{
+				["itemID"] = 151653,	-- Broken Isles Recipe Scrap
+				["description"] = "Use 10 of these to create an unlearned recipe. It appears as though you can only get Rank 2+ recipes from this item.",
+				["sym"] = {
+					{ "select", "itemID", 133842 },	-- Recipe: Azshari Salad [Rank 2]
+					{ "select", "itemID", 133862 },	-- Recipe: Azshari Salad [Rank 3]
+					{ "select", "itemID", 133838 },	-- Recipe: Barracuda Mrglgagh [Rank 2]
+					{ "select", "itemID", 133858 },	-- Recipe: Barracuda Mrglgagh [Rank 3]
+					{ "select", "itemID", 133847 },	-- Recipe: Bear Tartare [Rank 2]
+					{ "select", "itemID", 133867 },	-- Recipe: Bear Tartare [Rank 3]
+					{ "select", "itemID", 133872 },	-- Recipe: Crispy Bacon [Rank 2]
+					{ "select", "itemID", 133873 },	-- Recipe: Crispy Bacon [Rank 3]
+					{ "select", "itemID", 133832 },	-- Recipe: Deep-Fried Mossgill [Rank 2]
+					{ "select", "itemID", 133852 },	-- Recipe: Deep-Fried Mossgill [Rank 3]
+					{ "select", "itemID", 133846 },	-- Recipe: Dried Mackerel Strips [Rank 2]
+					{ "select", "itemID", 133866 },	-- Recipe: Dried Mackerel Strips [Rank 3]
+					{ "select", "itemID", 133840 },	-- Recipe: Drogbar-Style Salmon [Rank 2]
+					{ "select", "itemID", 133860 },	-- Recipe: Drogbar-Style Salmon [Rank 3]
+					{ "select", "itemID", 133834 },	-- Recipe: Faronaar Fizz [Rank 2]
+					{ "select", "itemID", 133854 },	-- Recipe: Faronaar Fizz [Rank 3]
+					{ "select", "itemID", 133848 },	-- Recipe: Fighter Chow [Rank 2]
+					{ "select", "itemID", 133868 },	-- Recipe: Fighter Chow [Rank 3]
+					{ "select", "itemID", 133845 },	-- Recipe: Fishbrul Special [Rank 2]
+					{ "select", "itemID", 133865 },	-- Recipe: Fishbrul Special [Rank 3]
+					{ "select", "itemID", 133849 },	-- Recipe: Hearty Feast [Rank 2]
+					{ "select", "itemID", 133869 },	-- Recipe: Hearty Feast [Rank 3]
+					{ "select", "itemID", 133839 },	-- Recipe: Koi-Scented Stormray [Rank 2]
+					{ "select", "itemID", 133859 },	-- Recipe: Koi-Scented Stormray [Rank 3]
+					{ "select", "itemID", 133850 },	-- Recipe: Lavish Suramar Feast [Rank 2]
+					{ "select", "itemID", 133870 },	-- Recipe: Lavish Suramar Feast [Rank 3]
+					{ "select", "itemID", 133836 }, -- Recipe: Leybeque Ribs [Rank 2]
+					{ "select", "itemID", 133856 }, -- Recipe: Leybeque Ribs [Rank 3]
+					{ "select", "itemID", 133843 },	-- Recipe: Nightborne Delicacy Platter [Rank 2]
+					{ "select", "itemID", 133863 },	-- Recipe: Nightborne Delicacy Platter [Rank 3]
+					{ "select", "itemID", 133833 },	-- Recipe: Pickled Stormray [Rank 2]
+					{ "select", "itemID", 133853 },	-- Recipe: Pickled Stormray [Rank 3]
+					{ "select", "itemID", 133831 },	-- Recipe: Salt and Pepper Shank [Rank 2]
+					{ "select", "itemID", 133851 },	-- Recipe: Salt and Pepper Shank [Rank 3]
+					{ "select", "itemID", 133844 },	-- Recipe: Seed-Battered Fish Plate [Rank 2]
+					{ "select", "itemID", 133864 },	-- Recipe: Seed-Battered Fish Plate [Rank 3]
+					{ "select", "itemID", 133835 },	-- Recipe: Spiced Rib Roast [Rank 2]
+					{ "select", "itemID", 133855 },	-- Recipe: Spiced Rib Roast [Rank 3]
+					{ "select", "itemID", 133837 },	-- Recipe: Suramar Surf and Turf [Rank 2]
+					{ "select", "itemID", 133857 },	-- Recipe: Suramar Surf and Turf [Rank 3]
+					{ "select", "itemID", 133841 },	-- Recipe: The Hungry Magister [Rank 2]
+					{ "select", "itemID", 133861 },	-- Recipe: The Hungry Magister [Rank 3]
+					{ "postprocess" },
+				},
+			},
+			{
+				["itemID"] = 146757,	-- Prepared Ingredients
+				["description"] = "Use 10 of these to create food or unlearned recipes. It appears as though you can only get Rank 2+ recipes from this item.",
+				["sym"] = {
+					{ "select", "itemID", 133842 },	-- Recipe: Azshari Salad [Rank 2]
+					{ "select", "itemID", 133862 },	-- Recipe: Azshari Salad [Rank 3]
+					{ "select", "itemID", 133838 },	-- Recipe: Barracuda Mrglgagh [Rank 2]
+					{ "select", "itemID", 133858 },	-- Recipe: Barracuda Mrglgagh [Rank 3]
+					{ "select", "itemID", 133847 },	-- Recipe: Bear Tartare [Rank 2]
+					{ "select", "itemID", 133867 },	-- Recipe: Bear Tartare [Rank 3]
+					{ "select", "itemID", 133872 },	-- Recipe: Crispy Bacon [Rank 2]
+					{ "select", "itemID", 133873 },	-- Recipe: Crispy Bacon [Rank 3]
+					{ "select", "itemID", 133832 },	-- Recipe: Deep-Fried Mossgill [Rank 2]
+					{ "select", "itemID", 133852 },	-- Recipe: Deep-Fried Mossgill [Rank 3]
+					{ "select", "itemID", 133846 },	-- Recipe: Dried Mackerel Strips [Rank 2]
+					{ "select", "itemID", 133866 },	-- Recipe: Dried Mackerel Strips [Rank 3]
+					{ "select", "itemID", 133840 },	-- Recipe: Drogbar-Style Salmon [Rank 2]
+					{ "select", "itemID", 133860 },	-- Recipe: Drogbar-Style Salmon [Rank 3]
+					{ "select", "itemID", 133834 },	-- Recipe: Faronaar Fizz [Rank 2]
+					{ "select", "itemID", 133854 },	-- Recipe: Faronaar Fizz [Rank 3]
+					{ "select", "itemID", 133848 },	-- Recipe: Fighter Chow [Rank 2]
+					{ "select", "itemID", 133868 },	-- Recipe: Fighter Chow [Rank 3]
+					{ "select", "itemID", 133845 },	-- Recipe: Fishbrul Special [Rank 2]
+					{ "select", "itemID", 133865 },	-- Recipe: Fishbrul Special [Rank 3]
+					{ "select", "itemID", 133849 },	-- Recipe: Hearty Feast [Rank 2]
+					{ "select", "itemID", 133869 },	-- Recipe: Hearty Feast [Rank 3]
+					{ "select", "itemID", 133839 },	-- Recipe: Koi-Scented Stormray [Rank 2]
+					{ "select", "itemID", 133859 },	-- Recipe: Koi-Scented Stormray [Rank 3]
+					{ "select", "itemID", 133850 },	-- Recipe: Lavish Suramar Feast [Rank 2]
+					{ "select", "itemID", 133870 },	-- Recipe: Lavish Suramar Feast [Rank 3]
+					{ "select", "itemID", 133836 }, -- Recipe: Leybeque Ribs [Rank 2]
+					{ "select", "itemID", 133856 }, -- Recipe: Leybeque Ribs [Rank 3]
+					{ "select", "itemID", 133843 },	-- Recipe: Nightborne Delicacy Platter [Rank 2]
+					{ "select", "itemID", 133863 },	-- Recipe: Nightborne Delicacy Platter [Rank 3]
+					{ "select", "itemID", 133833 },	-- Recipe: Pickled Stormray [Rank 2]
+					{ "select", "itemID", 133853 },	-- Recipe: Pickled Stormray [Rank 3]
+					{ "select", "itemID", 133831 },	-- Recipe: Salt and Pepper Shank [Rank 2]
+					{ "select", "itemID", 133851 },	-- Recipe: Salt and Pepper Shank [Rank 3]
+					{ "select", "itemID", 133844 },	-- Recipe: Seed-Battered Fish Plate [Rank 2]
+					{ "select", "itemID", 133864 },	-- Recipe: Seed-Battered Fish Plate [Rank 3]
+					{ "select", "itemID", 133835 },	-- Recipe: Spiced Rib Roast [Rank 2]
+					{ "select", "itemID", 133855 },	-- Recipe: Spiced Rib Roast [Rank 3]
+					{ "select", "itemID", 133837 },	-- Recipe: Suramar Surf and Turf [Rank 2]
+					{ "select", "itemID", 133857 },	-- Recipe: Suramar Surf and Turf [Rank 3]
+					{ "select", "itemID", 133841 },	-- Recipe: The Hungry Magister [Rank 2]
+					{ "select", "itemID", 133861 },	-- Recipe: The Hungry Magister [Rank 3]
+					{ "postprocess" },
+				},
+			},
+			n(QUESTS, {
+				q(40989, {	-- The Prodigal Sous Chef
+					["description"] = "If you cooked with Nomi while questing in Pandaria, you will receive this quest instead of 'Too Many Chefs'.",
+					["groups"] = {
+						i(133826),	-- Recipe: Dried Mackerel Strips [Rank 1]
+					},
+				}),
+				q(40988, {	-- Too Many Chefs
+					["description"] = "If you did not cook with Nomi while questing in Pandaria, you will receive this quest instead of 'The Prodigal Sous Chef'.",
+					["groups"] = {
+						i(133826),	-- Recipe: Dried Mackerel Strips [Rank 1]
+					},
+				}),
+				q(40991, {	-- Opening the Test Kitchen
+					ach(10591),	-- All Grown Up
+				}),
+			}),
+			n(VENDORS, {
+				["description"] = "Before Nomi will sell you any of these, you need to complete the quest that awards them.\n\nUse the ATT Source Text in the tooltip for more information on where you can find them.",
+				["groups"] = {
+					i(133818),	-- Recipe: Barracuda Mrglgagh [Rank 1]
+					i(133812),	-- Recipe: Deep-Fried Mossgill [Rank 1]
+					i(133826),	-- Recipe: Dried Mackerel Strips [Rank 1]
+					i(133814),	-- Recipe: Faronaar Fizz [Rank 1]
+					i(133828),	-- Recipe: Fighter Chow [Rank 1]
+					i(133813),	-- Recipe: Pickled Stormray [Rank 1]
+					i(133810),	-- Recipe: Salt and Pepper Shank [Rank 1]
+					i(133815),	-- Recipe: Spiced Rib Roast [Rank 1]
+				},
+			}),
+		},
+	}),
+	-- #endif
+	n(QUESTS, {
+		q(384, {	-- Beer Basted Boar Ribs
+			["qg"] = 1267,	-- Ragnar Thunderbrew
+			["requireSkill"] = COOKING,
+			["maps"] = { DUN_MOROGH },
+			["races"] = ALLIANCE_ONLY,
+			-- #if AFTER CATA
+			["coord"] = { 53.9, 50.6, DUN_MOROGH },
+			["cost"] = {
+				{ "i", 2894, 1 },	-- Rhapsody Malt
+				{ "i", 60496, 4 },	-- Tender Boar Ribs
+			},
+			-- #else
+			["coord"] = { 46.8, 52.4, DUN_MOROGH },
+			["cost"] = {
+				{ "i", 2894, 1 },	-- Rhapsody Malt
+				{ "i", 2886, 6 },	-- Crag Boar Rib
+			},
+			-- #endif
+			["lvl"] = 5,
+			["groups"] = {
+				i(2888),	-- Beer Basted Boar Ribs
+				i(2889),	-- Recipe: Beer Basted Boar Ribs
+			},
+		}),
+		q(6610, {	-- Clamlette Surprise
+			-- #if AFTER CATA
+			["qg"] = 40589,	-- Dirge Quikcleave
+			["coord"] = { 52.4, 29.0, TANARIS },
+			-- #else
+			["qg"] = 8125,	-- Dirge Quikcleave
+			["coord"] = { 52.63, 28.12, TANARIS },
+			-- #endif
+			["requireSkill"] = COOKING,
+			["altQuests"] = { 13825 },	-- Clamlette Surprise
+			["maps"] = { TANARIS },
+			["cost"] = {
+				{ "i", 12207, 12 },	-- Giant Egg
+				{ "i", 7974, 10 },	-- Zesty Clam Meat
+				{ "i", 8932, 20 },	-- Alterac Swiss
+			},
+			["lvl"] = 35,
+			["groups"] = {
+				i(16971),	-- Clamlette Surprise
+				-- #if AFTER WRATH
+				recipe(64054),	-- Clamlette Magnifique
+				-- #endif
+			},
+		}),
+		q(8307, {	-- Desert Recipe
+			["qg"] = 15174,	-- Calandrath <Innkeeper>
+			["requireSkill"] = COOKING,
+			-- #if AFTER CATA
+			["coord"] = { 55.4, 36.6, SILITHUS },
+			-- #else
+			["coord"] = { 51.8, 39, SILITHUS },
+			-- #endif
+			["maps"] = { SILITHUS },
+			["lvl"] = 40,
+		}),
+		q(862, {	-- Dig Rat Stew
+			["qg"] = 3443,	-- Grub
+			["requireSkill"] = COOKING,
+			["coord"] = { 55.31, 31.79, THE_BARRENS },
+			["maps"] = { THE_BARRENS },
+			["races"] = HORDE_ONLY,
+			["cost"] = {
+				{ "i", 5051, 8 },	-- Dig Rat
+			},
+			["timeline"] = { "removed 4.0.3.2000" },
+			["lvl"] = 15,
+			["groups"] = {
+				i(10919, {	-- Apothecary Gloves
+					["timeline"] = { "removed 4.0.3.2000" },
+				}),
+				i(5478),	-- Dig Rat Stew
+				i(5487, {	-- Recipe: Dig Rat Stew
+					["timeline"] = { "removed 4.3.0.2000" },
+				}),
+			},
+		}),
+		q(2178, {	-- Easy Strider Living
+			["qg"] = 3702,	-- Alanndarian Nightsong
+			["requireSkill"] = COOKING,
+			["coord"] = { 37.7, 40.7, DARKSHORE },
+			["maps"] = { DARKSHORE },
+			["races"] = ALLIANCE_ONLY,
+			["timeline"] = { "removed 4.0.3.2000" },
+			["cost"] = {
+				{ "i", 5469, 5 },	-- Strider Meat
+			},
+			["lvl"] = 9,
+			["groups"] = {
+				i(5486),	-- Recipe: Strider Stew
+				i(5477),	-- Strider Stew
+			},
+		}),
+		q(6612, {	-- I Know A Guy...
+			["qg"] = 5159,	-- Daryl Riknussun
+			["requireSkill"] = COOKING,
+			["coord"] = { 60.1, 36.5, IRONFORGE },
+			["maps"] = { IRONFORGE },
+			["timeline"] = { "removed 4.0.3.2000" },
+			["races"] = ALLIANCE_ONLY,
+			["isBreadcrumb"] = true,
+			["lvl"] = 35,
+		}),
+		q(8317, {	-- Kitchen Assistance
+			["qg"] = 15174,	-- Calandrath <Innkeeper>
+			["sourceQuest"] = 8313,	-- Sharing the Knowledge
+			["requireSkill"] = COOKING,
+			-- #if AFTER CATA
+			["coord"] = { 55.4, 36.6, SILITHUS },
+			-- #else
+			["coord"] = { 51.8, 39, SILITHUS },
+			-- #endif
+			["maps"] = { SILITHUS },
+			["cost"] = {
+				{ "i", 20452, 10 },	-- Smoked Desert Dumplings
+			},
+			["lvl"] = 40,
+		}),
+		q(11380, {	-- Manalicious
+			["qg"] = 24393,	-- The Rokk <Master of Cooking>
+			["coords"] = {
+				{ 61.6, 16.6, SHATTRATH_CITY },
+				{ 48, 54, NETHERSTORM },
+			},
+			["maps"] = { SHATTRATH_CITY, NETHERSTORM },
+			["cost"] = {
+				{ "i", 33849, 15 },	-- Mana Berry
+			},
+			["isDaily"] = true,
+			-- #if ANYCLASSIC
+			["u"] = TBC_PHASE_ONE,
+			-- #endif
+			["lvl"] = 70,
+			["groups"] = {
+				crit(3, {	-- Manalicious
+					["achievementID"] = 906,	-- Kickin' It Up a Notch
+				}),
+				i(33844),	-- Barrel of Fish
+				i(33857),	-- Crate of Meat
+			},
+		}),
+		q(4161, {	-- Recipe of the Kaldorei
+			["qg"] = 6286,	-- Zarrin
+			["requireSkill"] = COOKING,
+			["coord"] = { 57, 61.2, TELDRASSIL },
+			["timeline"] = { "removed 4.0.3.2000" },
+			["maps"] = { TELDRASSIL },
+			["races"] = ALLIANCE_ONLY,
+			["cost"] = {
+				{ "i", 5465, 7 },	-- Small Spider Leg
+			},
+			["groups"] = {
+				i(5482, {	-- Recipe: Kaldorei Spider Kabob
+					["timeline"] = { "removed 4.0.3.2000" },
+				}),
+			},
+		}),
+		q(11377, {	-- Revenge is Tasty
+			["qg"] = 24393,	-- The Rokk <Master of Cooking>
+			["coord"] = { 61.6, 16.6, SHATTRATH_CITY },
+			["maps"] = { SHATTRATH_CITY, TEROKKAR_FOREST },
+			["cost"] = {
+				{ "i", 33839, 1 },	-- Kaliri Stew
+			},
+			["isDaily"] = true,
+			-- #if ANYCLASSIC
+			["u"] = TBC_PHASE_ONE,
+			-- #endif
+			["lvl"] = 70,
+			["groups"] = {
+				crit(1, {	-- Revenge is Tasty
+					["achievementID"] = 906,	-- Kickin' It Up a Notch
+				}),
+				i(33837, {	-- Cooking Pot
+					["coord"] = { 68.4, 79.0, TEROKKAR_FOREST },
+					["cr"] = 23051,	-- Monstrous Kaliri
+					["cost"] = {
+						{ "i", 27659, 3 },	-- Warp Burger
+						{ "i", 33838, 1 },	-- Giant Kaliri Wing
+					},
+					["groups"] = {
+						i(33839),	-- Kaliri Stew
+					},
+				}),
+				i(33844),	-- Barrel of Fish
+				i(33857),	-- Crate of Meat
+			},
+		}),
+		q(8313, {	-- Sharing the Knowledge
+			["provider"] = { "o", 180503 },	-- Sandy Cookbook
+			["sourceQuest"] = 8307,	-- Desert Recipe
+			["requireSkill"] = COOKING,
+			-- #if AFTER CATA
+			["coord"] = { 43.6, 42.0, SILITHUS },
+			-- #else
+			["coord"] = { 37.9, 45.3, SILITHUS },
+			-- #endif
+			["maps"] = { SILITHUS },
+			["cost"] = {
+				{ "i", 20467, 1 },	-- Torn Recipe Page
+			},
+			["lvl"] = 40,
+			["groups"] = {
+				recipe(24801),	-- Smoked Desert Dumplings
+			},
+		}),
+		q(555, {	-- Soothing Turtle Bisque (A)
+			["qg"] = 2430,	-- Chef Jessen
+			["coord"] = { 51.8, 58.7, HILLSBRAD_FOOTHILLS },
+			["timeline"] = { "removed 4.0.3.2000" },
+			["maps"] = { HILLSBRAD_FOOTHILLS },
+			["requireSkill"] = COOKING,
+			["races"] = ALLIANCE_ONLY,
+			["cost"] = {
+				{ "i", 3712, 10 },	-- Turtle Meat
+				{ "i", 3713, 1 },	-- Soothing Spices
+			},
+			["lvl"] = 28,
+			["groups"] = {
+				i(3737, {	-- Recipe: Soothing Turtle Bisque
+					["timeline"] = { "removed 4.0.3.2000" },
+				}),
+				i(3729),	-- Soothing Turtle Bisque
+			},
+		}),
+		q(7321, {	-- Soothing Turtle Bisque (H)
+			["qg"] = 2393,	-- Christoph Jeffcoat
+			["coord"] = { 62.30, 19.05, HILLSBRAD_FOOTHILLS },
+			["timeline"] = { "removed 4.0.3.2000" },
+			["maps"] = { HILLSBRAD_FOOTHILLS },
+			["requireSkill"] = COOKING,
+			["races"] = HORDE_ONLY,
+			["cost"] = {
+				{ "i", 3712, 10 },	-- Turtle Meat
+				{ "i", 3713, 1 },	-- Soothing Spices
+			},
+			["lvl"] = 28,
+			["groups"] = {
+				i(3737, {	-- Recipe: Soothing Turtle Bisque
+					["timeline"] = { "removed 4.0.3.2000" },
+				}),
+				i(3729),	-- Soothing Turtle Bisque
+			},
+		}),
+		q(11381, {	-- Soup for the Soul
+			["qg"] = 24393,	-- The Rokk <Master of Cooking>
+			["coord"] = { 61.6, 16.6, SHATTRATH_CITY },
+			["maps"] = { SHATTRATH_CITY, NAGRAND },
+			["cost"] = {
+				{ "i", 33850, 1 },	-- Spiritual Soup
+			},
+			["isDaily"] = true,
+			-- #if ANYCLASSIC
+			["u"] = TBC_PHASE_ONE,
+			-- #endif
+			["lvl"] = 70,
+			["groups"] = {
+				crit(4, {	-- Soup for the Soul
+					["achievementID"] = 906,	-- Kickin' It Up a Notch
+				}),
+				i(33851, {	-- Cooking Pot
+					["coord"] = { 26, 58, NAGRAND },
+					["cost"] = {
+						{ "i", 27658, 4 },	-- Roasted Clefthoof
+					},
+					["groups"] = {
+						i(33850),	-- Spiritual Soup
+					},
+				}),
+				i(33844),	-- Barrel of Fish
+				i(33857),	-- Crate of Meat
+			},
+		}),
+		q(11379, {	-- Super Hot Stew
+			["qg"] = 24393,	-- The Rokk <Master of Cooking>
+			["coord"] = { 61.6, 16.6, SHATTRATH_CITY },
+			["maps"] = { SHATTRATH_CITY, BLADES_EDGE_MOUNTAINS },
+			["cost"] = {
+				{ "i", 33848, 1 },	-- Demon Broiled Surprise
+			},
+			["isDaily"] = true,
+			-- #if ANYCLASSIC
+			["u"] = TBC_PHASE_ONE,
+			-- #endif
+			["lvl"] = 70,
+			["groups"] = {
+				crit(2, {	-- Super Hot Stew
+					["achievementID"] = 906,	-- Kickin' It Up a Notch
+				}),
+				i(33852, {	-- Cooking Pot
+					["coord"] = { 28.0, 82.2, BLADES_EDGE_MOUNTAINS },
+					["cr"] = 19973,	-- Abyssal Flamebringer
+					["cost"] = {
+						{ "i", 31672, 2 },	-- Mok'Nathal Shortribs
+						{ "i", 31673, 1 },	-- Crunchy Serpent
+					},
+					["groups"] = {
+						i(33848),	-- Demon Broiled Surprise
+					},
+				}),
+				i(33844),	-- Barrel of Fish
+				i(33857),	-- Crate of Meat
+			},
+		}),
+		q(6611, {	-- To Gadgetzan You Go!
+			["qg"] = 3399,	-- Zamja
+			-- #if AFTER CATA
+			["coord"] = { 32.2, 69.4, ORGRIMMAR },
+			-- #else
+			["coord"] = { 57.4, 53.6, ORGRIMMAR },
+			-- #endif
+			["requireSkill"] = COOKING,
+			["maps"] = { ORGRIMMAR },
+			["races"] = HORDE_ONLY,
+			["isBreadcrumb"] = true,
+			["lvl"] = 35,
+		}),
+	}),
+	-- #if AFTER TBC
+	n(REWARDS, {
+		i(33844, {	-- Barrel of Fish
+			i(33869),	-- Recipe: Broiled Bloodfin
+			-- #if AFTER WRATH
+			i(34834),	-- Recipe: Captain Rumsey's Lager
+			-- #endif
+			i(33925),	-- Recipe: Delicious Chocolate Cake
+			i(33875),	-- Recipe: Kibler's Bits
+			i(33870),	-- Recipe: Skullfish Soup
+			i(33871),	-- Recipe: Stormchops
+		}),
+		i(33857, {	-- Crate of Meat
+			-- #if AFTER WRATH
+			i(34834),	-- Recipe: Captain Rumsey's Lager
+			-- #endif
+			i(33925),	-- Recipe: Delicious Chocolate Cake
+			i(33875),	-- Recipe: Kibler's Bits
+			i(33873),	-- Recipe: Spicy Hot Talbuk
+			i(33871),	-- Recipe: Stormchops
+		}),
+	}),
+	-- #endif
+	-- #if NOT ANYCLASSIC
+	filter(200, { 	-- Recipes
+		tier(1, {	-- Classic
+			un(REMOVED_FROM_GAME, i(16072, {	-- Expert Cookbook
+				["spellID"] = 0,	-- replacing the spellID that is automatically pulled from the itemDB, which shows this item as "unknown" when it's not collectible
+			})),
+			un(REMOVED_FROM_GAME, i(16073, {	-- Artisan Cookbook
+				["spellID"] = 0,	-- replacing the spellID that is automatically pulled from the itemDB, which shows this item as "unknown" when it's not collectible
+			})),
+			un(REMOVED_FROM_GAME, i(27736, {	-- Master Cookbook
+				["spellID"] = 0,	-- replacing the spellID that is automatically pulled from the itemDB, which shows this item as "unknown" when it's not collectible
+			})),
+			un(REMOVED_FROM_GAME, i(6891)),	-- Recipe: Herb Baked Egg
+			un(REMOVED_FROM_GAME, i(5485)),	-- Recipe: Fillet of Frenzy
+			{
+				["itemID"] = 7678,	-- Recipe: Thistle Tea (Removed from Game!)
+				["spellID"] = 9513,	-- Thistle Tea
+				["u"] = REMOVED_FROM_GAME,
+			},
+			un(REMOVED_FROM_GAME, i(5489)),	-- Recipe: Lean Venison
+			un(REMOVED_FROM_GAME, i(12227)),	-- Recipe: Lean Wolf Steak
+			un(REMOVED_FROM_GAME, i(3736)),	-- Recipe: Tasty Lion Steak
+			un(REMOVED_FROM_GAME, i(13939)),	-- Recipe: Spotted Yellowtail
+			un(REMOVED_FROM_GAME, i(13942)),	-- Recipe: Grilled Squid
+			un(REMOVED_FROM_GAME, i(35564)),	-- Recipe: Charred Bear Kabobs
+			un(REMOVED_FROM_GAME, i(35566)),	-- Recipe: Juicy Bear Burger
+			un(REMOVED_FROM_GAME, i(13945)),	-- Recipe: Nightfin Soup
+			un(REMOVED_FROM_GAME, i(13946)),	-- Recipe: Poached Sunscale Salmon
+			un(REMOVED_FROM_GAME, i(21025)),	-- Recipe: Dirge's Kickin' Chimaerok Chops
+		}),
+	}),
+	-- #endif
+});
+
+-- Cooking Recipes
+_.ItemDB = {};
+local itemrecipe = function(itemID, spellID, timeline, classicphase)
+	local o = { ["itemID"] = itemID };
+	if spellID and spellID > 0 then
+		o.spellID = spellID;
+	end
+	if timeline then
+		-- Ensure that the timeline is in a table format.
+		if type(timeline) == "string" then timeline = { timeline }; end
+		o.timeline = timeline;
+	end
+	if classicphase then applyclassicphase(classicphase, o); end
+	_.ItemDB[itemID] = o;
+	return o;
+end
+
+-- Classic Recipes
+--itemrecipe(, );	-- 
+--[[
+itemrecipe(3734, );	-- Recipe: Big Bear Steak
+itemrecipe(6325, );	-- Recipe: Brilliant Smallfish
+itemrecipe(6330, );	-- Recipe: Bristle Whisker Catfish
+itemrecipe(5489, );,	-- Recipe: Lean Venison
+itemrecipe(6328, );	-- Recipe: Longjaw Mud Snapper
+itemrecipe(17062, );	-- Recipe: Mithril Head Trout
+itemrecipe(6368, );	-- Recipe: Rainbow Fin Albacore
+itemrecipe(6369, );	-- Recipe: Rockscale Cod
+itemrecipe(18267, );	-- Recipe: Runn Tum Tuber Surprise
+itemrecipe(21219, );	-- Recipe: Sagefish Delight
+itemrecipe(21099, );	-- Recipe: Smoked Sagefish
+]]
+
+-- #if AFTER TBC
+-- TBC Recipes
+itemrecipe(27687, 33278, "added 2.0.1.6180", TBC_PHASE_ONE);	-- Recipe: Bat Bites
+itemrecipe(22647, 28267, "added 2.0.1.6180", TBC_PHASE_ONE);	-- Recipe: Crunchy Spider Surprise
+itemrecipe(27686, 33277, "added 2.0.1.6180", TBC_PHASE_ONE);	-- Recipe: Roasted Moongraze Tenderloin
+
+--[[
+
+]]--
+-- #endif
+
+-- #if AFTER WRATH
+-- Wrath Recipes
+
+-- #endif
+
+-- These items never made it in.
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	filter(200, {	-- Recipe
+		-- #if AFTER WRATH
+		i(34126),	-- Recipe: Shoveltusk Soup
+		i(39692),	-- Recipe: Succulent Orca Stew
+		i(39644),	-- Recipe: Kungaloosh [Learned from the quest directly]
+		-- #endif
+		-- #if AFTER MOP
+		i(101631),	-- Recipe: Noodle Cart Kit [Learned from the quest directly]
+		i(101664),	-- Recipe: Deluxe Noodle Cart Kit [Learned from the quest directly]
+		
+		recipe(145170),	-- Grand Deluxe Noodle Cart Kit
+		i(101739),	-- Recipe: Grand Deluxe Noodle Cart Kit
+		i(101729),	-- Grand Deluxe Noodle Cart Kit
+		
+		recipe(145167),	-- Grand Noodle Cart Kit
+		i(101728),	-- Recipe: Grand Noodle Cart Kit
+		i(101727),	-- Grand Noodle Cart Kit
+		
+		recipe(145197),	-- Grand Pandaren Treasure Noodle Cart Kit
+		i(101741),	-- Recipe: Grand Pandaren Treasure Noodle Cart Kit
+		i(101740),	-- Grand Pandaren Treasure Noodle Cart Kit
+		-- #endif
+		-- #if AFTER WOD
+		recipe(169696),	-- Marinated Elekk Steak (Never made it to Live)
+		i(115300),		-- Marinated Elekk Steak
+		recipe(169699),	-- Seasoned Elekk Ribeye (Never made it to Live)
+		recipe(169701),	-- Seasoned Elekk Ribeye (Never made it to Live)
+		recipe(169693),	-- Whole Pot-Roasted Elekk (Never made it to Live)
+		i(115291),		-- Whole Pot-Roasted Elekk
+		-- #endif
+	}),
 });
