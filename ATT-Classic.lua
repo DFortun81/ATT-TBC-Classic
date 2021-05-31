@@ -4836,23 +4836,29 @@ itemTooltipHarvesterFields.text = function(t)
 									t.info.minReputation = { app.GetFactionIDByName(faction), app.GetFactionStandingThresholdFromString(replevel) };
 								else
 									if string.find(text, "%(") then
-										text = strsplit("(", text);
-									end
-									
-									local spellName = strtrim(text);
-									if spellName == "Herbalism" then spellName = "Herb Gathering"; end
-									local spellID = app.SpellNameToSpellID[spellName];
-									if spellID then
-										local skillID = app.SpellIDToSkillID[spellID];
-										if skillID then
-											t.info.requireSkill = skillID;
+										if t.info.requireSkill then
+											-- If non-specialization skill is already assigned, skip this part.
+											text = nil;
 										else
-											print("Unknown Skill", text);
+											text = strsplit("(", text);
+										end
+									end
+									if text then
+										local spellName = strtrim(text);
+										if spellName == "Herbalism" then spellName = "Herb Gathering"; end
+										local spellID = app.SpellNameToSpellID[spellName];
+										if spellID then
+											local skillID = app.SpellIDToSkillID[spellID];
+											if skillID then
+												t.info.requireSkill = skillID;
+											else
+												print("Unknown Skill", text);
+												table.insert(requirements, text);
+											end
+										else
+											print("Unknown Spell", text);
 											table.insert(requirements, text);
 										end
-									else
-										print("Unknown Spell", text);
-										table.insert(requirements, text);
 									end
 								end
 							end
