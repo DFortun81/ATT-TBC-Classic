@@ -675,7 +675,9 @@ _.NeverImplemented =
 	i(17108),	-- Mark of Deflection
 	
 	-- Trinket
+	-- #if BEFORE TBC
 	i(13503),	-- Alchemists' Stone
+	-- #endif
 	i(20525),	-- Earthen Sigil
 	i(18355),	-- Ferra's Collar
 	i(20084),	-- Hunting Net
@@ -684,7 +686,6 @@ _.NeverImplemented =
 	
 	-- Recipe
 	i(16073),	-- Artisan Cookbook
-	i(16082),	-- Artisan Fishing - The Way of the Lure
 	i(5130),	-- Knowledge: Dalaran Wizard Disguise
 	i(5129),	-- Knowledge: Dark Iron Dwarf Disguise
 	i(5126),	-- Knowledge: Defias Disguise
