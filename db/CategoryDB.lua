@@ -9,7 +9,6 @@ select(2, ...).CategoryNames = {
 	[63] = "Everyday Cooking",
 	[70] = "Unusual Delights",
 	[71] = "Weapon Skills",
-	[72] = "Old World Recipes",
 	[106] = "Card",
 	[167] = "Crowns",
 	[168] = "Materials",

@@ -2949,3 +2949,195 @@ _.WorldDrops = { tier(1, {	-- Classic
 		}),
 	}),
 })};
+
+-- These items never made it in.
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	filter(1, {	-- Held in Off-hand
+	
+	}),
+	filter(2, {	-- Cosmetic [TODO: Move to Hallow's End?]
+		
+	}),
+	filter(3, {	-- Cloak
+		
+	}),
+	filter(4, {	-- Cloth
+		i(20351),	-- 63 Green Frost Belt
+		i(20352),	-- 63 Green Frost Bindings
+		i(20355),	-- 63 Green Frost Gloves
+		i(20324),	-- 90 Epic Frost Belt
+		i(20325),	-- 90 Epic Frost Bindings
+		i(20328),	-- 90 Epic Frost Gloves
+		i(20338),	-- 90 Green Frost Belt
+		i(20339),	-- 90 Green Frost Bindings
+		i(20342),	-- 90 Green Frost Gloves
+	}),
+	filter(5, {	-- Leather
+		i(20311),	-- 63 Green Rogue Belt
+		i(20314),	-- 63 Green Rogue Bracers
+		i(20267),	-- 90 Epic Rogue Belt
+		i(20269),	-- 90 Epic Rogue Bracers
+		i(20297),	-- 90 Green Rogue Belt
+		i(20300),	-- 90 Green Rogue Bracers
+	}),
+	filter(6, {	-- Mail
+		
+	}),
+	filter(7, {	-- Plate
+		
+	}),
+	filter(8, {	-- Shield
+		i(14609),	-- Deprecated Ceremonial Buckler
+		i(9888),	-- Deprecated Elven Protector
+		i(15888),	-- Deprecated Glorious Shield
+		i(15889),	-- Deprecated Jademir Scale Shield
+		i(14597),	-- Deprecated Warden's Buckler
+	}),
+	filter(9, {	-- Tabard
+	
+	}),
+	filter(10, {	-- Shirt
+		i(105),	-- Deprecated Dwarven Recruit's Shirt
+		i(101),	-- Deprecated Dwarven Squire's Shirt
+		i(133),	-- Deprecated Orc Acolyte's Shirt
+		i(123),	-- Deprecated Orc Apprentice Shirt
+		i(964),	-- Deprecated Red Linen Shirt
+		i(3149),	-- Deprecated Ripped Vest
+		i(134),	-- Deprecated Stiff Leather Shirt
+		i(3147),	-- Deprecated Tattered Shirt
+		i(151),	-- Deprecated Tauren Apprentice Shirt
+		i(157),	-- Deprecated Tauren Recruit's Shirt
+		i(5090),	-- Deprecated Torn Shirt
+		i(93),	-- OLDDwarven Initiate's Shirt
+		i(89),	-- OLDThick Trapper's Shirt
+		i(5091),	-- test Eric Shirt
+	}),
+	filter(20, {	-- Dagger
+		i(19810),	-- 1000 Test dagger 60 blue
+		i(19313),	-- 1300 Test Dagger 63 blue
+		i(19622),	-- 1800 Test Dagger 63 blue
+		i(19314),	-- 2000 Test Dagger 63 blue
+	}),
+	filter(21, {	-- One Handed Axe
+		
+	}),
+	filter(22, {	-- Two Handed Axe
+		i(19185),	-- 2100 Test 2h Axe 63 blue
+		i(19188),	-- 2200 Test 2h Axe 63 blue
+		i(19189),	-- 2300 Test 2h Axe 63 blue
+		i(19190),	-- 2400 Test 2h Axe 63 blue
+		i(19809),	-- 2500 Test 2h Axe 60 blue
+		i(19811),	-- 2500 Test 2h Axe 60 blue (bear)
+		i(19191),	-- 2500 Test 2h Axe 63 blue
+		i(19192),	-- 2600 Test 2h Axe 63 blue
+		i(19186),	-- 2700 Test 2h Axe 63 blue
+		i(19193),	-- 2800 Test 2h Axe 63 blue
+		i(19194),	-- 2900 Test 2h Axe 63 blue
+		i(19195),	-- 3000 Test 2h Axe 63 blue
+		i(19196),	-- 3100 Test 2h Axe 63 blue
+		i(19187),	-- 3200 Test 2h Axe 63 blue
+		i(19197),	-- 3300 Test 2h Axe 63 blue
+		i(19198),	-- 3400 Test 2h Axe 63 blue
+		i(19199),	-- 3500 Test 2h Axe 63 blue
+		i(19455),	-- 3500 Test 2h Axe 70 purple
+		i(19662),	-- 3500 Test 2h Axe 80 purple
+		i(19200),	-- 3600 Test 2h Axe 63 blue
+		i(19201),	-- 3700 Test 2h Axe 63 blue
+		i(19184),	-- 3800 Test 2h Axe 63 blue
+		i(20280),	-- 63 Green Warrior Axe
+		i(20149),	-- 90 Epic Warrior Axe
+		i(20238),	-- 90 Green Warrior Axe
+	}),
+	filter(23, {	-- One Handed Mace
+		i(2189),	-- Tigole's Boomstick (TEST)
+	}),
+	filter(24, {	-- Two Handed Mace
+	
+	}),
+	filter(25, {	-- One Handed Sword
+		i(19427),	-- 1500 Test sword 63 blue
+		i(19457),	-- 1500 Test sword 80 purple
+		i(21782),	-- 2000 Test sword 63 blue
+		i(19502),	-- 2200 Test sword 63 blue
+		i(19504),	-- 2200 Test sword 70 purple
+		i(19503),	-- 2200 Test sword 80 purple
+		i(19428),	-- 2900 Test sword 63 blue
+		i(19456),	-- 2900 Test sword 80 purple
+		i(3933),	-- Deprecated Moon Glaive
+	}),
+	filter(26, {	-- Two Handed Sword
+		i(3687),	-- Deprecated Unholy Avenger
+		i(3934),	-- Deprecated Warden Blade
+	}),
+	filter(27, {	-- Wand
+		
+	}),
+	filter(28, {	-- Staff
+		
+	}),
+	filter(29, {	-- Polearm
+		
+	}),
+	filter(31, {	-- Gun
+		i(20285),	-- 63 Green Warrior Gun
+		i(20146),	-- 90 Epic Warrior Gun
+		i(20245),	-- 90 Green Warrior Gun
+	}),
+	filter(32, {	-- Bow
+		i(4763),	-- Blackwood Recurve Bow
+	}),
+	filter(33, {	-- Crossbow
+	
+	}),
+	filter(34, {	-- Fist Weapon
+		
+	}),
+	filter(36, {	-- Thrown
+		
+	}),
+	filter(37, {	-- Ammo
+		i(10579),	-- Explosive Arrow
+	}),
+	filter(50, {	-- Miscellaneous
+		
+	}),
+	filter(52, {	-- Ring
+		i(12947),	-- Alex's Ring of Audacity
+		i(5828),	-- Ring of Uber Resists (TEST)
+	}),
+	filter(53, {	-- Trinket
+		
+	}),
+	filter(55, {	-- Consumable
+		
+	}),
+	filter(100, {	-- Mount
+		i(875),	-- Brown Horse Summoning
+		i(901),	-- Deptecated White Stallion Summoning (Mount)
+		i(5874),	-- Harness: Black Ram
+		i(5875),	-- Harness: Blue Ram
+		i(1041),	-- Horn of the Black Wolf
+		i(1134),	-- Horn of the Gray Wolf
+		i(5663),	-- Horn of the Red Wolf
+		i(8583),	-- Horn of the Skeletal Mount
+		i(1133),	-- Horn of the Winter Wolf
+		i(14062),	-- Kodo Mount
+		i(8589),	-- Old Whistle of the Ivory Raptor
+		i(8590),	-- Old Whistle of the Obsidian Raptor
+		i(2413),	-- Palomino
+		i(8633),	-- Reins of the Leopard
+		i(8627),	-- Reins of the Night saber
+		i(8628),	-- Reins of the Spotted Nightsaber
+		i(2415),	-- White Stallion
+	}),
+	filter(101, {	-- Battle Pet
+		i(21168),	-- Baby Shark
+		i(11903),	-- Cat Carrier (Corrupted Kitten)
+	}),
+	filter(113, {	-- Bag
+		
+	}),
+	filter(200, {	-- Recipe
+		
+	}),
+});
