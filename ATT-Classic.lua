@@ -4768,8 +4768,11 @@ itemHarvesterFields.text = function(t)
 			if info.inventoryType == 0 then
 				info.inventoryType = nil;
 			end
-			if info.b and info.b < 1 then
+			if info.b and info.b ~= 1 then
 				info.b = nil;
+			end
+			if info.q and info.q < 1 then
+				info.q = nil;
 			end
 			if info.iLvl and info.iLvl < 2 then
 				info.iLvl = nil;
