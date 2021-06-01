@@ -865,6 +865,11 @@ profession(LEATHERWORKING, {
 			["categoryID"] = 928,
 			["groups"] = {
 				{
+					["name"] = "Arcane Armor Kit",
+					["timeline"] = { "removed 5.0.4.10000" },
+					["recipeID"] = 35524,
+				},
+				{
 					["name"] = "Clefthide Leg Armor",
 					["recipeID"] = 35555
 				},
@@ -875,6 +880,16 @@ profession(LEATHERWORKING, {
 				{
 					["name"] = "Comfortable Insoles",
 					["recipeID"] = 32482
+				},
+				{
+					["name"] = "Flame Armor Kit",
+					["timeline"] = { "removed 5.0.4.10000" },
+					["recipeID"] = 35521,
+				},
+				{
+					["name"] = "Frost Armor Kit",
+					["timeline"] = { "removed 5.0.4.10000" },
+					["recipeID"] = 35522,
 				},
 				{
 					["name"] = "Glove Reinforcements",
@@ -893,6 +908,11 @@ profession(LEATHERWORKING, {
 					["recipeID"] = 32458
 				},
 				{
+					["name"] = "Nature Armor Kit",
+					["timeline"] = { "removed 5.0.4.10000" },
+					["recipeID"] = 35523,
+				},
+				{
 					["name"] = "Nethercleft Leg Armor",
 					["recipeID"] = 35557
 				},
@@ -901,10 +921,15 @@ profession(LEATHERWORKING, {
 					["recipeID"] = 35554
 				},
 				{
+					["name"] = "Shadow Armor Kit",
+					["timeline"] = { "removed 5.0.4.10000" },
+					["recipeID"] = 35520,
+				},
+				{
 					["name"] = "Vindicator's Armor Kit",
 					["recipeID"] = 32457
-				}
-			}
+				},
+			},
 		},
 		{
 			["name"] = "Bags",
@@ -974,40 +999,40 @@ profession(LEATHERWORKING, {
 			["name"] = "Shoulders",
 			["categoryID"] = 931,
 			["groups"] = {
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Living Earth Shoulders",
 					["recipeID"] = 41164
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Shoulderpads of Renewed Life",
 					["recipeID"] = 41157
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Shoulders of Lightning Reflexes",
 					["recipeID"] = 41162
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Swiftstrike Shoulders",
 					["recipeID"] = 41160
-				}
-			}
+				}),
+			},
 		},
 		{
 			["name"] = "Chest",
 			["categoryID"] = 932,
 			["groups"] = {
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Carapace of Sun and Shadow",
 					["recipeID"] = 46138
-				},
+				}),
 				{
 					["name"] = "Ebon Netherscale Breastplate",
 					["recipeID"] = 35575
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Embrace of the Phoenix",
 					["recipeID"] = 46137
-				},
+				}),
 				{
 					["name"] = "Felscale Breastplate",
 					["recipeID"] = 32465
@@ -1024,10 +1049,10 @@ profession(LEATHERWORKING, {
 					["name"] = "Heavy Clefthoof Vest",
 					["recipeID"] = 32495
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Leather Chestguard of the Sun",
 					["recipeID"] = 46136
-				},
+				}),
 				{
 					["name"] = "Living Crystal Breastplate",
 					["recipeID"] = 36078
@@ -1052,10 +1077,10 @@ profession(LEATHERWORKING, {
 					["name"] = "Shadowprowler's Chestguard",
 					["recipeID"] = 42731
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Sun-Drenched Scale Chestguard",
 					["recipeID"] = 46139
-				},
+				}),
 				{
 					["name"] = "Thick Draenic Vest",
 					["recipeID"] = 32473
@@ -1078,18 +1103,18 @@ profession(LEATHERWORKING, {
 			["name"] = "Bracers",
 			["categoryID"] = 933,
 			["groups"] = {
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Bindings of Lightning Reflexes",
 					["recipeID"] = 41161
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Bracers of Renewed Life",
 					["recipeID"] = 41156
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Bracers of Shackled Souls",
 					["recipeID"] = 52733
-				},
+				}),
 				{
 					["name"] = "Ebon Netherscale Bracers",
 					["recipeID"] = 35577
@@ -1098,10 +1123,10 @@ profession(LEATHERWORKING, {
 					["name"] = "Felstalker Bracers",
 					["recipeID"] = 32499
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Living Earth Bindings",
 					["recipeID"] = 41163
-				},
+				}),
 				{
 					["name"] = "Netherstrike Bracers",
 					["recipeID"] = 35584
@@ -1110,14 +1135,14 @@ profession(LEATHERWORKING, {
 					["name"] = "Primalstrike Bracers",
 					["recipeID"] = 35591
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Redeemed Soul Wristguards",
 					["recipeID"] = 40004
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Swiftstrike Bracers",
 					["recipeID"] = 41158
-				},
+				}),
 				{
 					["name"] = "Windhawk Bracers",
 					["recipeID"] = 35588
@@ -1148,22 +1173,22 @@ profession(LEATHERWORKING, {
 					["name"] = "Felscale Gloves",
 					["recipeID"] = 32462
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Fletcher's Gloves of the Phoenix",
 					["recipeID"] = 46133
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Gloves of Immortal Dusk",
 					["recipeID"] = 46134
-				},
+				}),
 				{
 					["name"] = "Gloves of the Living Touch",
 					["recipeID"] = 35562
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Leather Gauntlets of the Sun",
 					["recipeID"] = 46132
-				},
+				}),
 				{
 					["name"] = "Netherdrake Gloves",
 					["recipeID"] = 35573
@@ -1172,10 +1197,10 @@ profession(LEATHERWORKING, {
 					["name"] = "Scaled Draenic Gloves",
 					["recipeID"] = 32467
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Sun-Drenched Scale Gloves",
 					["recipeID"] = 46135
-				},
+				}),
 				{
 					["name"] = "Thick Draenic Gloves",
 					["recipeID"] = 32470
@@ -1198,18 +1223,18 @@ profession(LEATHERWORKING, {
 			["name"] = "Belts",
 			["categoryID"] = 935,
 			["groups"] = {
-				{
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Belt of Deep Shadow",
 					["recipeID"] = 36351
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Belt of Natural Power",
 					["recipeID"] = 36349
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Belt of the Black Eagle",
 					["recipeID"] = 36352
-				},
+				}),
 				{
 					["name"] = "Blastguard Belt",
 					["recipeID"] = 35537
@@ -1226,10 +1251,10 @@ profession(LEATHERWORKING, {
 					["name"] = "Flamescale Belt",
 					["recipeID"] = 35531
 				},
-				{
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Monsoon Belt",
 					["recipeID"] = 36353
-				},
+				}),
 				{
 					["name"] = "Netherfury Belt",
 					["recipeID"] = 32501
@@ -1242,14 +1267,14 @@ profession(LEATHERWORKING, {
 					["name"] = "Primalstrike Belt",
 					["recipeID"] = 35590
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Redeemed Soul Cinch",
 					["recipeID"] = 40006
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Waistguard of Shackled Souls",
 					["recipeID"] = 40002
-				},
+				}),
 				{
 					["name"] = "Windhawk Belt",
 					["recipeID"] = 35587
@@ -1284,10 +1309,10 @@ profession(LEATHERWORKING, {
 					["name"] = "Flamescale Leggings",
 					["recipeID"] = 35529
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Greaves of Shackled Souls",
 					["recipeID"] = 40001
-				},
+				}),
 				{
 					["name"] = "Heavy Clefthoof Leggings",
 					["recipeID"] = 32496
@@ -1296,10 +1321,10 @@ profession(LEATHERWORKING, {
 					["name"] = "Netherfury Leggings",
 					["recipeID"] = 32502
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Redeemed Soul Legguards",
 					["recipeID"] = 40005
-				},
+				}),
 				{
 					["name"] = "Scaled Draenic Pants",
 					["recipeID"] = 32466
@@ -1322,22 +1347,22 @@ profession(LEATHERWORKING, {
 					["name"] = "Blastguard Boots",
 					["recipeID"] = 35536
 				},
-				{
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Boots of Natural Grace",
 					["recipeID"] = 36355
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Boots of Shackled Souls",
 					["recipeID"] = 39997
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Boots of the Crimson Hawk",
 					["recipeID"] = 36358
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Boots of Utter Darkness",
 					["recipeID"] = 36357
-				},
+				}),
 				{
 					["name"] = "Earthen Netherscale Boots",
 					["recipeID"] = 35567
@@ -1366,18 +1391,18 @@ profession(LEATHERWORKING, {
 					["name"] = "Heavy Clefthoof Boots",
 					["recipeID"] = 32497
 				},
-				{
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Hurricane Boots",
 					["recipeID"] = 36359
-				},
+				}),
 				{
 					["name"] = "Netherfury Boots",
 					["recipeID"] = 32503
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Redeemed Soul Moccasins",
 					["recipeID"] = 40003
-				},
+				}),
 				{
 					["name"] = "Scaled Draenic Boots",
 					["recipeID"] = 32469
@@ -1800,7 +1825,6 @@ itemrecipe("Pattern: Bindings of Lightning Reflexes", 32748, 41161, TBC_PHASE_TH
 itemrecipe("Pattern: Shoulders of Lightning Reflexes", 32749, 41162, TBC_PHASE_THREE);
 itemrecipe("Pattern: Living Earth Bindings", 32750, 41163, TBC_PHASE_THREE);
 itemrecipe("Pattern: Living Earth Shoulders", 32751, 41164, TBC_PHASE_THREE);
-
 
 itemrecipe("Pattern: Leather Gauntlets of the Sun", 35212, 46132, TBC_PHASE_FIVE);
 itemrecipe("Pattern: Fletcher's Gloves of the Phoenix", 35213, 46133, TBC_PHASE_FIVE);
