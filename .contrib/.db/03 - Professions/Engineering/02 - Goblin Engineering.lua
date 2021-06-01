@@ -123,3 +123,14 @@ profession(ENGINEERING, {
 		},
 	});
 });
+
+-- Goblin Engineering Recipes
+_.ItemDB = {};
+local itemrecipe = function(itemID, spellID)
+	local o = { ["itemID"] = itemID, ["spellID"] = spellID };
+	_.ItemDB[itemID] = o;
+	return o;
+end
+
+-- Classic Recipes
+itemrecipe(18653, 23078);	-- Schematic: Goblin Jumper Cables XL
