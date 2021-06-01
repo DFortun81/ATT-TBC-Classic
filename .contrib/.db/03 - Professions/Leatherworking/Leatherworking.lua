@@ -1548,9 +1548,29 @@ profession(LEATHERWORKING, {
 				{
 					["name"] = "Drums of War",
 					["recipeID"] = 35540
-				}
-			}
-		}
+				},
+				applyclassicphase(TBC_PHASE_FIVE, {
+					["name"] = "Greater Drums of Battle",
+					["recipeID"] = 351771
+				}),
+				applyclassicphase(TBC_PHASE_FIVE, {
+					["name"] = "Greater Drums of Panic",
+					["recipeID"] = 351770
+				}),
+				applyclassicphase(TBC_PHASE_FIVE, {
+					["name"] = "Greater Drums of Restoration",
+					["recipeID"] = 351769
+				}),
+				applyclassicphase(TBC_PHASE_FIVE, {
+					["name"] = "Greater Drums of Speed",
+					["recipeID"] = 351768
+				}),
+				applyclassicphase(TBC_PHASE_FIVE, {
+					["name"] = "Greater Drums of War",
+					["recipeID"] = 351766
+				}),
+			},
+		},
 	})),
 	applyclassicphase(WRATH_PHASE_ONE, tier(3, {	-- Wrath of the Lich King
 		
@@ -1927,6 +1947,15 @@ itemrecipe("Pattern: Windstrike Gloves", 35300, 35568, TBC_PHASE_FIVE, true);
 itemrecipe("Pattern: Netherdrake Gloves", 35301, 35573, TBC_PHASE_FIVE, true);
 itemrecipe("Pattern: Cobrascale Gloves", 35302, 35559, TBC_PHASE_FIVE, true);
 itemrecipe("Pattern: Gloves of the Living Touch", 35303, 35562, TBC_PHASE_FIVE, true);
+
+-- New Drum Recipes with Classic
+itemrecipe("Pattern: Greater Drums of Battle", 185926, 351771, TBC_PHASE_FIVE);	-- Sha'tar
+itemrecipe("Pattern: Greater Drums of Panic", 185925, 351770, TBC_PHASE_FIVE);	-- Keepers of Time
+itemrecipe("Pattern: Greater Drums of Speed", 185923, 351768, TBC_PHASE_FIVE);	-- Horde, Mag'har
+itemrecipe("Pattern: Greater Drums of Speed", 187049, 351768, TBC_PHASE_FIVE);	-- Alliance, Kurenai
+itemrecipe("Pattern: Greater Drums of Restoration", 185924, 351769, TBC_PHASE_FIVE);	-- Horde, Mag'har
+itemrecipe("Pattern: Greater Drums of Restoration", 187048, 351769, TBC_PHASE_FIVE);	-- Alliance, Kurenai
+itemrecipe("Pattern: Greater Drums of War", 185922, 351766, TBC_PHASE_FIVE);	-- Unknown Location, might be a world drop?
 -- #endif
 
 --[[

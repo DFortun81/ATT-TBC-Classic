@@ -192,6 +192,8 @@ _.Zones =
 						i(31773),	-- Mag'har Tabard
 						i(34174),	-- Pattern: Drums of Restoration
 						i(34172),	-- Pattern: Drums of Speed
+						i(185924),	-- Pattern: Greater Drums of Restoration
+						i(185923),	-- Pattern: Greater Drums of Speed
 						i(25741),	-- Pattern: Netherfury Belt
 						i(25743),	-- Pattern: Netherfury Boots
 						i(25742),	-- Pattern: Netherfury Leggings
@@ -422,6 +424,8 @@ _.Zones =
 						i(31774),	-- Kurenai Tabard
 						i(34175),	-- Pattern: Drums of Restoration
 						i(34173),	-- Pattern: Drums of Speed
+						i(187048),	-- Pattern: Greater Drums of Restoration
+						i(187049),	-- Pattern: Greater Drums of Speed
 						i(29217),	-- Pattern: Netherfury Belt
 						i(29218),	-- Pattern: Netherfury Boots
 						i(29219),	-- Pattern: Netherfury Leggings

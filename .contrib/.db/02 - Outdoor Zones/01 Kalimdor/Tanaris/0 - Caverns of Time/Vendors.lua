@@ -43,6 +43,7 @@ _.Zones =
 							i(33152),	-- Formula: Enchant Gloves - Superior Agility
 							i(22536),	-- Formula: Enchant Ring - Spellpower
 							i(29713),	-- Pattern: Drums of Panic
+							i(185925),	-- Pattern: Greater Drums of Panic
 							i(31355),	-- Recipe: Flask of Supreme Power
 						},
 					}),
