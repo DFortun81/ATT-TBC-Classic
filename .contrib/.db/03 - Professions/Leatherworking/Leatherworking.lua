@@ -144,6 +144,16 @@ profession(LEATHERWORKING, {
 					["name"] = "Heavy Scorpid Helm",
 					["recipeID"] = 19088
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Helm of Fire",
+					["recipeID"] = 10632,
+				},
+				{
+					["name"] = "Molten Helm",
+					["recipeID"] = 20854,
+				},
+				-- #endif
 				{
 					["name"] = "Nightscape Headband",
 					["recipeID"] = 10507
@@ -202,6 +212,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Hillman's Shoulders",
 					["recipeID"] = 3768
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Living Shoulders",
+					["recipeID"] = 19061,
+				},
+				-- #endif
 				{
 					["name"] = "Nightscape Shoulders",
 					["recipeID"] = 10516
@@ -210,10 +226,22 @@ profession(LEATHERWORKING, {
 					["name"] = "Runic Leather Shoulders",
 					["recipeID"] = 19103
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Stormshroud Shoulders",
+					["recipeID"] = 19090,
+				},
+				-- #endif
 				{
 					["name"] = "Tough Scorpid Shoulders",
 					["recipeID"] = 10564
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Volcanic Shoulders",
+					["recipeID"] = 19101,
+				},
+				-- #endif
 				{
 					["name"] = "Wild Leather Shoulders",
 					["recipeID"] = 10529
@@ -284,6 +312,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Icy Scale Breastplate",
 					["recipeID"] = 28222,
 				}),
+				-- #if AFTER TBC
+				{
+					["name"] = "Living Breastplate",
+					["recipeID"] = 19095,
+				},
+				-- #endif
 				{
 					["name"] = "Moonglow Vest",
 					["recipeID"] = 8322
@@ -321,6 +355,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Spitfire Breastplate",
 					["recipeID"] = 24848,
 				}),
+				-- #if AFTER TBC
+				{
+					["name"] = "Stormshroud Armor",
+					["recipeID"] = 19079,
+				},
+				-- #endif
 				{
 					["name"] = "Thick Murloc Armor",
 					["recipeID"] = 6704
@@ -337,6 +377,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Turtle Scale Breastplate",
 					["recipeID"] = 10511
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Volcanic Breastplate",
+					["recipeID"] = 19076,
+				},
+				-- #endif
 				{
 					["name"] = "White Leather Jerkin",
 					["recipeID"] = 2163
@@ -461,6 +507,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Fletcher's Gloves",
 					["recipeID"] = 9145
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Gauntlets of the Sea",
+					["recipeID"] = 10630,
+				},
+				-- #endif
 				{
 					["name"] = "Gloves of the Greatfather",
 					["recipeID"] = 21943
@@ -525,6 +577,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Spitfire Gauntlets",
 					["recipeID"] = 24847,
 				}),
+				-- #if AFTER TBC
+				{
+					["name"] = "Stormshroud Gloves",
+					["recipeID"] = 26279,
+				},
+				-- #endif
 				un(PHASE_THREE, {
 					["name"] = "Timbermaw Brawlers",
 					["recipeID"] = 23704,
@@ -611,6 +669,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Might of the Timbermaw",
 					["recipeID"] = 23703,
 				}),
+				-- #if AFTER TBC
+				un(PHASE_THREE, {
+					["name"] = "Molten Belt",
+					["recipeID"] = 23710,
+				}),
+				-- #endif
 				{
 					["name"] = "Murloc Scale Belt",
 					["recipeID"] = 6702
@@ -674,6 +738,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Light Leather Pants",
 					["recipeID"] = 9068
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Living Leggings",
+					["recipeID"] = 19078,
+				},
+				-- #endif
 				{
 					["name"] = "Nightscape Pants",
 					["recipeID"] = 10548
@@ -686,6 +756,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Runic Leather Pants",
 					["recipeID"] = 19091
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Stormshroud Pants",
+					["recipeID"] = 19067,
+				},
+				-- #endif
 				{
 					["name"] = "Tough Scorpid Leggings",
 					["recipeID"] = 10568
@@ -694,6 +770,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Turtle Scale Leggings",
 					["recipeID"] = 10556
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Volcanic Leggings",
+					["recipeID"] = 19059,
+				},
+				-- #endif
 				{
 					["name"] = "Wicked Leather Pants",
 					["recipeID"] = 19083
@@ -806,6 +888,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Onyxia Scale Cloak",
 					["recipeID"] = 19093
 				},
+				-- #if AFTER TBC
+				un(PHASE_ONE_DIREMAUL, {
+					["name"] = "Shifting Cloak",
+					["recipeID"] = 22928,
+				}),
+				-- #endif
 				{
 					["name"] = "Wild Leather Cloak",
 					["recipeID"] = 10574

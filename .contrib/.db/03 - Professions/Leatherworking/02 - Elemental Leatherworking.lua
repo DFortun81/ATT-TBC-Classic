@@ -6,6 +6,9 @@ profession(LEATHERWORKING, {
 			5146,	-- Elemental Leatherworking [Horde]
 		},
 		["groups"] = {
+			-- #if AFTER TBC
+			-- TODO: Move new Elemental Leatherworking recipes here.
+			-- #else
 			{
 				["name"] = "Helms",
 				["categoryID"] = 251,
@@ -123,6 +126,7 @@ profession(LEATHERWORKING, {
 					}),
 				}
 			},
+			-- #endif
 		},
 	}),
 });
