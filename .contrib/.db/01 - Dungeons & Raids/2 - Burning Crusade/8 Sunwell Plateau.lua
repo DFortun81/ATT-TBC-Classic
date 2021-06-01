@@ -84,72 +84,17 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_FIVE, {	-- Burning Crusade
 				i(35211),	-- Plans: Hard Khorium Battleplate
 				i(35210),	-- Plans: Sunblessed Breastplate
 				i(35208),	-- Plans: Sunblessed Gauntlets
-				i(35186, {	-- Schematic: Annihilator Holo-Gogs
-					["spellID"] = 46111,	-- Annihilator Holo-Gogs
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { PRIEST, MAGE, WARLOCK },
-					["f"] = 200,
-				}),
-				i(35196, {	-- Schematic: Hard Khorium Goggles
-					["spellID"] = 46115,	-- Hard Khorium Goggles
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { WARRIOR, PALADIN, DEATHKNIGHT },
-					["f"] = 200,
-				}),
-				i(35190, {	-- Schematic: Hyper-Magnified Moon Specs
-					["spellID"] = 46109,	-- Hyper-Magnified Moon Specs
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { DRUID },
-					["f"] = 200,
-				}),
-				i(35187, {	-- Schematic: Justicebringer 3000 Specs
-					["spellID"] = 46107,	-- Justicebringer 3000 Specs
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { PALADIN },
-					["f"] = 200,
-				}),
-				i(35193, {	-- Schematic: Lightning Etched Specs
-					["spellID"] = 46112,	-- Lightning Etched Specs
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { SHAMAN },
-					["f"] = 200,
-				}),
-				i(35195, {	-- Schematic: Mayhem Projection Goggles
-					["spellID"] = 46114,	-- Mayhem Projection Goggles
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { WARRIOR, PALADIN, DEATHKNIGHT },
-					["f"] = 200,
-				}),
-				i(35189, {	-- Schematic: Powerheal 9000 Lens
-					["spellID"] = 46108,	-- Powerheal 9000 Lens
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { PRIEST },
-					["f"] = 200,
-				}),
-				i(35192, {	-- Schematic: Primal-Attuned Goggles
-					["spellID"] = 46110,	-- Primal-Attuned Goggles
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { SHAMAN },
-					["f"] = 200,
-				}),
-				i(35197, {	-- Schematic: Quad Deathblow X44 Goggles
-					["spellID"] = 46116,	-- Quad Deathblow X44 Goggles
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { ROGUE, DRUID, MONK },
-					["f"] = 200,
-				}),
-				i(35194, {	-- Schematic: Surestrike Goggles v3.0
-					["spellID"] = 46113,	-- Surestrike Goggles v3.0
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { HUNTER, SHAMAN },
-					["f"] = 200,
-				}),
-				i(35191, {	-- Schematic: Wonderheal XT68 Shades
-					["spellID"] = 46106,	-- Wonderheal XT68 Shades
-					["requireSkill"] = ENGINEERING,
-					["classes"] = { DRUID },
-					["f"] = 200,
-				}),
+				i(35186),	-- Schematic: Annihilator Holo-Gogs
+				i(35196),	-- Schematic: Hard Khorium Goggles
+				i(35190),	-- Schematic: Hyper-Magnified Moon Specs
+				i(35187),	-- Schematic: Justicebringer 3000 Specs
+				i(35193),	-- Schematic: Lightning Etched Specs
+				i(35195),	-- Schematic: Mayhem Projection Goggles
+				i(35189),	-- Schematic: Powerheal 9000 Lens
+				i(35192),	-- Schematic: Primal-Attuned Goggles
+				i(35197),	-- Schematic: Quad Deathblow X44 Goggles
+				i(35194),	-- Schematic: Surestrike Goggles v3.0
+				i(35191),	-- Schematic: Wonderheal XT68 Shades
 				i(35273),	-- Study of Advanced Smelting
 				-- #if BEFORE MOP
 				i(34349, {	-- Blade of Life's Inevitability

@@ -103,29 +103,16 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(23799, {	-- Schematic: Adamantite Rifle
-							["spellID"] = 30313,	-- Adamantite Rifle
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23815, {	-- Schematic: Adamantite Shell Machine
-							["spellID"] = 30347,	-- Adamantite Shell Machine
-							["timeline"] = { "removed 4.0.1.10000" },
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23816, {	-- Schematic: Fel Iron Toolbox
-							["spellID"] = 30348,	-- Fel Iron Toolbox
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23811, {	-- Schematic: White Smoke Flare
-							["spellID"] = 30341,	-- White Smoke Flare
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),

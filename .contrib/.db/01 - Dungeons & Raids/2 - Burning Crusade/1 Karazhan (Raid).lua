@@ -704,11 +704,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					16152,	-- Attumen the Huntsman
 				},
 				["groups"] = {
-					i(23809, {	-- Schematic: Stabilized Eternium Scope
-						["spellID"] = 30334,	-- Stabilized Eternium Scope
-						["requireSkill"] = ENGINEERING,
-						["f"] = 200,	-- Recipe
-					}),
+					i(23809),	-- Schematic: Stabilized Eternium Scope
 					ach(882),	-- Fiery Warhorse's Reins
 					i(30480),	-- Fiery Warhorse's Reins (MOUNT!)
 					i(28504),	-- Steelhawk Crossbow

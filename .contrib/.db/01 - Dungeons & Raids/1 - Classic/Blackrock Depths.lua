@@ -832,7 +832,6 @@ _.Instances = { tier(1, {	-- Classic
 					},
 				}),
 				i(18235, {	-- Schematic: Field Repair Bot 74A
-					["requireSkill"] = ENGINEERING,
 					["description"] = "On the floor next to Golem Lord Argelmach",
 				}),
 				i(18654, {	-- Schematic: Gnomish Alarm-o-Bot

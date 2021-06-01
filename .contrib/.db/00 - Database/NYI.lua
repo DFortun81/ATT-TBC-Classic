@@ -65,10 +65,6 @@ _.NeverImplemented =
 	q(55296),	-- This quest was reported as missing on Discord, but has no information related to it similar to 6842 and 7069.
 	q(3366),	-- The Glowing Shard [Quests #6981 and #3366 look identical, but WoWHead doesn't have much info on 3366]
 	
-	-- #if CLASSIC
-	i(22729),	-- Schematic: Steam Tonk Controller [This doesn't get added until TBC]
-	-- #endif
-	
 	un(NEVER_IMPLEMENTED, q(8226, {	-- Rare Fish - Pale Ghoulfish
 		--["qg"] = 15079,	-- Fishbot 5000
 		["requireSkill"] = FISHING,

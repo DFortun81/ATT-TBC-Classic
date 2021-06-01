@@ -473,6 +473,15 @@ _.Instances = { tier(1, {	-- Classic
 						6230,	-- Peacekeeper Security Suit
 					},
 				}),
+				-- #if AFTER WRATH
+				i(11827, {	-- Schematic: Lil' Smoky
+					["crs"] = {
+						6232,	-- Arcane Nullifier X-21
+						6229,	-- Crowd Pummeler 9-60
+						6230,	-- Peacekeeper Security Suit
+					},
+				}),
+				-- #endif
 				i(9486, {	-- Supercharger Battle Axe
 					["crs"] = {
 						6232,	-- Arcane Nullifier X-21
@@ -564,6 +573,7 @@ _.Instances = { tier(1, {	-- Classic
 				i(7560),	-- Schematic: Gnomish Universal Remote
 				i(7561),	-- Schematic: Goblin Jumper Cables
 				i(4416),	-- Schematic: Goblin Land Mine
+				i(7192),	-- Schematic: Goblin Rocket Boots
 				i(4417),	-- Schematic: Large Seaforium Charge
 				i(4408),	-- Schematic: Mechanical Squirrel Box
 				i(4412),	-- Schematic: Moonsight Rifle

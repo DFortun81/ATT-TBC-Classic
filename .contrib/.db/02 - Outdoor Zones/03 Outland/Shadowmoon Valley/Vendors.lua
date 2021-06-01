@@ -36,10 +36,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(23807, {	-- Schematic: Adamantite Scope
-							["spellID"] = 30329,	-- Adamantite Scope
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),

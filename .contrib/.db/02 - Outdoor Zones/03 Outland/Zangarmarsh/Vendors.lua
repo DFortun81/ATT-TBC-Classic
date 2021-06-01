@@ -38,16 +38,10 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						i(23805, {	-- Schematic: Ultra-Spectropic Detection Goggles
-							["spellID"] = 30318,	-- Ultra-Spectropic Detection Goggles
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23811, {	-- Schematic: White Smoke Flare
-							["spellID"] = 30341,	-- White Smoke Flare
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),

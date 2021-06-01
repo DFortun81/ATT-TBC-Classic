@@ -235,16 +235,10 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(23803, {	-- Schematic: Cogspinner Goggles
-							["spellID"] = 30316,	-- Cogspinner Goggles
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23805, {	-- Schematic: Ultra-Spectropic Detection Goggles
-							["spellID"] = 30318,	-- Ultra-Spectropic Detection Goggles
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),
@@ -346,16 +340,10 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						i(23807, {	-- Schematic: Adamantite Scope
-							["spellID"] = 30329,	-- Adamantite Scope
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23803, {	-- Schematic: Cogspinner Goggles
-							["spellID"] = 30316,	-- Cogspinner Goggles
-							["requireSkill"] = ENGINEERING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),
