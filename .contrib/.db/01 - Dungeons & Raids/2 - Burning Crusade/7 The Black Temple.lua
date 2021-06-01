@@ -111,26 +111,10 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_THREE, {	-- Burning Crusade
 						["requireSkill"] = LEATHERWORKING,
 						["f"] = 200,
 					}),
-					i(32442, {	-- Plans: Shadesteel Bracers
-						["spellID"] = 40034,	-- Shadesteel Bracers
-						["requireSkill"] = BLACKSMITHING,
-						["f"] = 200,
-					}),
-					i(32444, {	-- Plans: Shadesteel Girdle
-						["spellID"] = 40036,	-- Shadesteel Girdle
-						["requireSkill"] = BLACKSMITHING,
-						["f"] = 200,
-					}),
-					i(32443, {	-- Plans: Shadesteel Greaves
-						["spellID"] = 40035,	-- Shadesteel Greaves
-						["requireSkill"] = BLACKSMITHING,
-						["f"] = 200,
-					}),
-					i(32441, {	-- Plans: Shadesteel Sabots
-						["spellID"] = 40033,	-- Shadesteel Sabots
-						["requireSkill"] = BLACKSMITHING,
-						["f"] = 200,
-					}),
+					i(32442),	-- Plans: Shadesteel Bracers
+					i(32444),	-- Plans: Shadesteel Girdle
+					i(32443),	-- Plans: Shadesteel Greaves
+					i(32441),	-- Plans: Shadesteel Sabots
 					i(32490, {	-- Ashtongue Talisman of Acumen
 						["classes"] = { PRIEST },
 					}),
@@ -191,16 +175,8 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_THREE, {	-- Burning Crusade
 					["requireSkill"] = TAILORING,
 					["f"] = 200,
 				}),
-				i(32738, {	-- Plans: Dawnsteel Bracers
-					["spellID"] = 41134,	-- Dawnsteel Bracers
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,
-				}),
-				i(32737, {	-- Plans: Swiftsteel Shoulders
-					["spellID"] = 41133,	-- Swiftsteel Shoulders
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,
-				}),
+				i(32738),	-- Plans: Dawnsteel Bracers
+				i(32737),	-- Plans: Swiftsteel Shoulders
 				-- #if BEFORE WRATH
 				-- This is going to sound crazy, but apparently during TBC, some of the trash drops from Hyjal dropped from Black Temple.
 				-- This was changed after the Wrath Prepatch.

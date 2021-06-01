@@ -615,21 +615,9 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 				n(16388, { 	-- Koren
 					["description"] = "This vendor is located in the Livery Stables.",
 					["groups"] = {
-						i(31395, {	-- Plans: Iceguard Helm
-							["spellID"] = 38479,	-- Iceguard Helm
-							["requireSkill"] = BLACKSMITHING,
-							["f"] = 200,
-						}),
-						i(31393, {	-- Plans: Iceguard Breastplate
-							["spellID"] = 38477,	-- Iceguard Breastplate
-							["requireSkill"] = BLACKSMITHING,
-							["f"] = 200,
-						}),
-						i(31394, {	-- Plans: Iceguard Leggings
-							["spellID"] = 38478,	-- Iceguard Leggings
-							["requireSkill"] = BLACKSMITHING,
-							["f"] = 200,
-						}),
+						i(31395),	-- Plans: Iceguard Helm
+						i(31393),	-- Plans: Iceguard Breastplate
+						i(31394),	-- Plans: Iceguard Leggings
 					},
 				}),
 				n(17518, { 	-- Ythyar

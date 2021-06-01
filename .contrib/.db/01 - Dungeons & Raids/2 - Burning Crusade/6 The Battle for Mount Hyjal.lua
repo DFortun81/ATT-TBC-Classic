@@ -905,16 +905,8 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_THREE, {	-- Burning Crusade
 						["requireSkill"] = LEATHERWORKING,
 						["f"] = 200,
 					}),
-					i(32736, {	-- Plans: Swiftsteel Bracers
-						["spellID"] = 41132,	-- Swiftsteel Bracers
-						["requireSkill"] = BLACKSMITHING,
-						["f"] = 200,
-					}),
-					i(32739, {	-- Plans: Dawnsteel Shoulders
-						["spellID"] = 41135,	-- Dawnsteel Shoulders
-						["requireSkill"] = BLACKSMITHING,
-						["f"] = 200,
-					}),
+					i(32736),	-- Plans: Swiftsteel Bracers
+					i(32739),	-- Plans: Dawnsteel Shoulders
 					i(32609),	-- Boots of the Divine Light
 					i(32592),	-- Chestguard of Relentless Storms
 					i(32591),	-- Choker of Serrated Blades

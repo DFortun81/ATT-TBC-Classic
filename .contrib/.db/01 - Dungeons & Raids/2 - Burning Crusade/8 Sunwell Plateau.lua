@@ -80,26 +80,10 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_FIVE, {	-- Burning Crusade
 					["requireSkill"] = TAILORING,
 					["f"] = 200,
 				}),
-				i(35209, {	-- Plans: Hard Khorium Battlefists
-					["spellID"] = 46141,	-- Hard Khorium Battlefists
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,
-				}),
-				i(35211, {	-- Plans: Hard Khorium Battleplate
-					["spellID"] = 46144,	-- Hard Khorium Battleplate
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,
-				}),
-				i(35210, {	-- Plans: Sunblessed Breastplate
-					["spellID"] = 46142,	-- Sunblessed Breastplate
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,
-				}),
-				i(35208, {	-- Plans: Sunblessed Gauntlets
-					["spellID"] = 46140,	-- Sunblessed Gauntlets
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,
-				}),
+				i(35209),	-- Plans: Hard Khorium Battlefists
+				i(35211),	-- Plans: Hard Khorium Battleplate
+				i(35210),	-- Plans: Sunblessed Breastplate
+				i(35208),	-- Plans: Sunblessed Gauntlets
 				i(35186, {	-- Schematic: Annihilator Holo-Gogs
 					["spellID"] = 46111,	-- Annihilator Holo-Gogs
 					["requireSkill"] = ENGINEERING,

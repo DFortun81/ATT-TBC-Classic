@@ -56,20 +56,6 @@ _.NeverImplemented =
 	
 	i(8388),	-- Pattern: Nightscape Cloak
 	i(15780),	-- Pattern: Onyxia Scale Breastplate
-	i(12817),	-- Plans: Bleakwood Hew
-	i(12831),	-- Plans: Blood Talon
-	i(12832),	-- Plans: Darkspear
-	i(12818),	-- Plans: Inlaid Thorium Hammer
-	i(6734),	-- Plans: Ironforge Chain
-	i(6736),	-- Plans: Ironforge Gauntlets
-	i(7977),	-- Plans: Mithril Scale Gloves
-	i(7994),	-- Plans: Orcish War Leggings (learned from quest 2756 (horde) but recipe item is not in game)
-	i(7986),	-- Plans: Ornate Mithril Breastplate
-	i(7987),	-- Plans: Ornate Mithril Helm
-	i(7988),	-- Plans: Ornate Mithril Boots (learned from quest 2772 but recipe item is not in game)
-	i(5577),	-- Plans: Rough Bronze Bracers
-	i(12826),	-- Plans: Rune Edge
-	i(12816),	-- Plans: Thorium Greatsword
 	i(13517),	-- Recipe: Alchemists' Stone
 	i(5641),	-- Recipe: Cowardly Flight Potion
 	i(2556),	-- Recipe: Elixir of Tongues

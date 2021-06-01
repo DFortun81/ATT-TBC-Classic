@@ -85,26 +85,10 @@ _.Instances = { tier(2,	applyclassicphase(TBC_PHASE_TWO, { -- Burning Crusade
 					["requireSkill"] = LEATHERWORKING,
 					["f"] = 200,	-- Recipe
 				}),
-				i(30321, {	-- Plans: Belt of the Guardian
-					["spellID"] = 36389,	-- Belt of the Guardian
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,	-- Recipe
-				}),
-				i(30323, {	-- Plans: Boots of the Protector
-					["spellID"] = 36391,	-- Boots of the Protector
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,	-- Recipe
-				}),
-				i(30322, {	-- Plans: Red Belt of Battle
-					["spellID"] = 36390,	-- Red Belt of Battle
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,	-- Recipe
-				}),
-				i(30324, {	-- Plans: Red Havoc Boots
-					["spellID"] = 36392,	-- Red Havoc Boots
-					["requireSkill"] = BLACKSMITHING,
-					["f"] = 200,	-- Recipe
-				}),
+				i(30321),	-- Plans: Belt of the Guardian
+				i(30323),	-- Plans: Boots of the Protector
+				i(30322),	-- Plans: Red Belt of Battle
+				i(30324),	-- Plans: Red Havoc Boots
 				i(30022),	-- Pendant of the Perilous
 				-- #if BEFORE MOP
 				i(30025, {	-- Serpentshrine Shuriken

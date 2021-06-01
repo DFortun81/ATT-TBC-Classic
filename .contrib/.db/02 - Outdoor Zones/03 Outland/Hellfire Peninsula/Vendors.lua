@@ -313,10 +313,7 @@ _.Zones =
 							["requireSkill"] = LEATHERWORKING,
 							["timeline"] = { "removed 4.0.1.10000" },
 						}),
-						i(23619, {	-- Plans: Felsteel Shield Spike
-							["spellID"] = 29657,	-- Felsteel Shield Spike
-							["requireSkill"] = BLACKSMITHING,
-						}),
+						i(23619),	-- Plans: Felsteel Shield Spike
 						i(22905, {	-- Recipe: Elixir of Major Agility
 							["spellID"] = 28553,	-- Elixir of Major Agility
 							["requireSkill"] = ALCHEMY,
@@ -428,10 +425,7 @@ _.Zones =
 							["requireSkill"] = LEATHERWORKING,
 							["timeline"] = { "removed 4.0.1.10000" },
 						}),
-						i(24002, {	-- Plans: Felsteel Shield Spike
-							["spellID"] = 29657,	-- Felsteel Shield Spike
-							["requireSkill"] = BLACKSMITHING,
-						}),
+						i(24002),	-- Plans: Felsteel Shield Spike
 						i(24001, {	-- Recipe: Elixir of Major Agility
 							["spellID"] = 28553,	-- Elixir of Major Agility
 							["requireSkill"] = ALCHEMY,
@@ -462,17 +456,9 @@ _.Zones =
 					["coord"] = { 53.2, 38.2, HELLFIRE_PENINSULA },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(25847, {	-- Plans: Eternium Rod
-							["spellID"] = 32657,	-- Eternium Rod
-							["requireSkill"] = BLACKSMITHING,
-							["timeline"] = { "removed 5.0.4.10000" },
-							["f"] = 200,
-						}),
+						i(25847),	-- Plans: Eternium Rod
 						i(23638, {	-- Plans: Lesser Ward of Shielding
-							["spellID"] = 29728,	-- Lesser Ward of Shielding
-							["requireSkill"] = BLACKSMITHING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),

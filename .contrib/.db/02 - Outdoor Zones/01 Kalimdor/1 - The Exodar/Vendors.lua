@@ -62,28 +62,16 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = appendGroups(COMMON_CATACLYSM_BLACKSMITHING_RECIPES, {
 						i(23591, {	-- Plans: Adamantite Cleaver
-							["spellID"] = 29568,	-- Adamantite Cleaver
-							["requireSkill"] = BLACKSMITHING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23592, {	-- Plans: Adamantite Dagger
-							["spellID"] = 29569,	-- Adamantite Dagger
-							["requireSkill"] = BLACKSMITHING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23590, {	-- Plans: Adamantite Maul
-							["spellID"] = 29566,	-- Adamantite Maul
-							["requireSkill"] = BLACKSMITHING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23593, {	-- Plans: Adamantite Rapier
-							["spellID"] = 29571,	-- Adamantite Rapier
-							["requireSkill"] = BLACKSMITHING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					}),
 				}),

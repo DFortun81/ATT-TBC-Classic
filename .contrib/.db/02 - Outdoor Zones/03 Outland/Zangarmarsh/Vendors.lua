@@ -176,22 +176,13 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(23596, {	-- Plans: Adamantite Breastplate
-							["spellID"] = 29606,	-- Adamantite Breastplate
-							["requireSkill"] = BLACKSMITHING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23594, {	-- Plans: Adamantite Plate Bracers
-							["spellID"] = 29603,	-- Adamantite Plate Bracers
-							["requireSkill"] = BLACKSMITHING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23595, {	-- Plans: Adamantite Plate Gloves
-							["spellID"] = 29605,	-- Adamantite Plate Gloves
-							["requireSkill"] = BLACKSMITHING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),
