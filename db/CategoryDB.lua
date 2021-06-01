@@ -58,6 +58,7 @@ select(2, ...).CategoryNames = {
 	[257] = "Pants",
 	[258] = "Boots",
 	[259] = "Cloaks",
+	[445] = "Ring Enchantments",
 	[632] = "Cauldrons",
 	[633] = "Potions",
 	[634] = "Elixirs",

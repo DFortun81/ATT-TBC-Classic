@@ -256,18 +256,9 @@ _.Zones =
 						i(35464),	-- Dreadweave Robe
 						i(35465),	-- Evoker's Silk Amice
 						i(25825),	-- Footman's Longsword
-						i(22531, {	-- Formula: Enchant Bracer - Superior Healing
-							["spellID"] = 27911,	-- Enchant Bracer - Superior Healing
-							["requireSkill"] = ENCHANTING,
-						}),
-						i(22547, {	-- Formula: Enchant Chest - Exceptional Stats
-							["spellID"] = 27960,	-- Enchant Chest - Exceptional Stats
-							["requireSkill"] = ENCHANTING,
-						}),
-						i(33150, {	-- Formula: Enchant Cloak - Subtlety
-							["spellID"] = 25084,	-- Enchant Cloak - Subtlety
-							["requireSkill"] = ENCHANTING,
-						}),
+						i(22531),	-- Formula: Enchant Bracer - Superior Healing
+						i(22547),	-- Formula: Enchant Chest - Exceptional Stats
+						i(33150),	-- Formula: Enchant Cloak - Subtlety
 						i(29166),	-- Hellforged Halberd
 						i(29156),	-- Honor's Call
 						i(35470),	-- Kodohide Spaulders
@@ -356,18 +347,9 @@ _.Zones =
 						i(35332),	-- Dreadweave Robe
 						i(35343),	-- Evoker's Silk Amice
 						i(25824),	-- Farseer's Band
-						i(24000, {	-- Formula: Enchant Bracer - Superior Healing
-							["spellID"] = 27911,	-- Enchant Bracer - Superior Healing
-							["requireSkill"] = ENCHANTING,
-						}),
-						i(24003, {	-- Formula: Enchant Chest - Exceptional Stats
-							["spellID"] = 27960,	-- Enchant Chest - Exceptional Stats
-							["requireSkill"] = ENCHANTING,
-						}),
-						i(33151, {	-- Formula: Enchant Cloak - Subtlety
-							["spellID"] = 25084,	-- Enchant Cloak - Subtlety
-							["requireSkill"] = ENCHANTING,
-						}),
+						i(24000),	-- Formula: Enchant Bracer - Superior Healing
+						i(24003),	-- Formula: Enchant Chest - Exceptional Stats
+						i(33151),	-- Formula: Enchant Cloak - Subtlety
 						i(25823),	-- Grunt's Waraxe
 						i(35364),	-- Kodohide Spaulders
 						i(29152),	-- Marksman's Bow
@@ -452,6 +434,13 @@ _.Zones =
 					["coord"] = { 54.6, 63.6, HELLFIRE_PENINSULA },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = JEWELCRAFTING_PATTERNS,
+				}),
+				n(19004, {	-- Vodesiin <Reagents>
+					["coord"] = { 24.4, 38.8, HELLFIRE_PENINSULA },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(25848),	-- Formula: Runed Adamantite Rod
+					},
 				}),
 				n(18266, {	-- Warrant Officer Tracy Proudwell
 					["coord"] = { 56.4, 62.8, HELLFIRE_PENINSULA },

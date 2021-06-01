@@ -23,7 +23,7 @@ _.Zones =
 				}),
 				n(15419, {	-- Kania <Enchanting Supplies>
 					["coord"] = { 52.0, 39.7, SILITHUS },
-					["groups"] = bubbleDown({ ["u"] = PHASE_FIVE }, {
+					["groups"] = {
 						-- #if BEFORE CATA
 						i(6342),	-- Formula: Enchant Chest - Minor Mana
 						-- #endif
@@ -35,7 +35,7 @@ _.Zones =
 						i(20758),	-- Formula: Minor Wizard Oil
 						i(20755),	-- Formula: Wizard Oil
 						i(22308),	-- Pattern: Enchanted Runecloth Bag
-					}),
+					},
 				}),
 				n(15179, {	-- Mishta <General Trade Goods Vendor>
 					["coord"] = { 49.8, 36.4, SILITHUS },

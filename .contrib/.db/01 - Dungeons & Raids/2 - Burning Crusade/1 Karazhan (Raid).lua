@@ -625,19 +625,9 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					["groups"] = {
 						i(25903),	-- Design: Bracing Earthstorm Diamond
 						i(25902),	-- Design: Powerful Earthstorm Diamond
-						i(22535, {	-- Formula: Enchant Ring - Striking
-							-- #if AFTER WOD
+						i(22535, { 	-- Formula: Enchant Ring - Striking
 							-- #if AFTER BFA
 							["description"] = "This grey item is now needed for the second half of the secret involving the battle pet Baa'l.",
-							-- #endif
-							["spellID"] = 0,	-- Strip away the SpellID to make it not collectible.
-							["requireSkill"] = 0,	-- Strip away the Skill Requirement.
-							["u"] = REMOVED_FROM_GAME,
-							["f"] = 0,	-- Invalid
-							-- #else
-							["spellID"] = 27920,	-- Enchant Ring - Striking
-							["requireSkill"] = ENCHANTING,
-							["f"] = 200,	-- Recipe
 							-- #endif
 						}),
 					},
@@ -645,9 +635,6 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 			}),
 			n(ZONEDROPS, {
 				i(22545, {	-- Formula: Enchant Boots - Surefooted
-					["spellID"] = 27954,	-- Surefooted
-					["requireSkill"] = ENCHANTING,
-					["f"] = 200,	-- Recipe
 					["cr"] = 16472,	-- Phantom Stagehand
 				}),
 				i(21903, {	-- Pattern: Soulcloth Shoulders
@@ -718,11 +705,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 			e(1554, {	-- Moroes
 				["creatureID"] = 15687,
 				["groups"] = {
-					i(22559, {	-- Formula: Enchant Weapon - Mongoose
-						["spellID"] = 27984,	-- Mongoose
-						["requireSkill"] = ENCHANTING,
-						["f"] = 200,	-- Recipe
-					}),
+					i(22559),	-- Formula: Enchant Weapon - Mongoose
 					i(138797, {	-- Illusion: Mongoose
 						["timeline"] = {
 							"created 7.0.3.22248",
@@ -913,11 +896,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 			e(1560, {	-- Terestian Illhoof
 				["creatureID"] = 15688,
 				["groups"] = {
-					i(22561, {	-- Formula: Enchant Weapon - Soulfrost
-						["spellID"] = 27982,	-- Soulfrost
-						["requireSkill"] = ENCHANTING,
-						["f"] = 200,	-- Recipe
-					}),
+					i(22561),	-- Formula: Enchant Weapon - Soulfrost
 					i(138799, {	-- Illusion: Soulfrost
 						["timeline"] = {
 							"created 7.0.3.22248",
@@ -951,11 +930,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 			e(1559, {	-- Shade of Aran
 				["creatureID"] = 16524,
 				["groups"] = {
-					i(22560, {	-- Formula: Enchant Weapon - Sunfire
-						["spellID"] = 27981,	-- Sunfire
-						["requireSkill"] = ENCHANTING,
-						["f"] = 200,	-- Recipe
-					}),
+					i(22560),	-- Formula: Enchant Weapon - Sunfire
 					i(138798, {	-- Illusion: Sunfire
 						["timeline"] = {
 							"created 7.0.3.22248",

@@ -4,34 +4,13 @@
 local GORNII_GROUPS, PHEA_GROUPS = {}, {};
 local EGOMIS_GROUPS = {
 	i(22565, {	-- Formula: Large Prismatic Shard
-		["spellID"] = 28022,	-- Large Prismatic Shard
-		["requireSkill"] = ENCHANTING,
-		["timeline"] = { "added 2.0.1.6180" },
-		-- #if ANYCLASSIC
-		["u"] = TBC_PHASE_ONE,
-		-- #endif
 		["isLimited"] = true,
-		["f"] = 200,
 	}),
 	i(22562, {	-- Formula: Superior Mana Oil
-		["spellID"] = 28016,	-- Superior Mana Oil
-		["requireSkill"] = ENCHANTING,
-		["timeline"] = { "added 2.0.1.6180" },
-		-- #if ANYCLASSIC
-		["u"] = TBC_PHASE_ONE,
-		-- #endif
 		["isLimited"] = true,
-		["f"] = 200,
 	}),
 	i(22563, {	-- Formula: Superior Wizard Oil
-		["spellID"] = 28019,	-- Superior Wizard Oil
-		["requireSkill"] = ENCHANTING,
-		["timeline"] = { "added 2.0.1.6180" },
-		-- #if ANYCLASSIC
-		["u"] = TBC_PHASE_ONE,
-		-- #endif
 		["isLimited"] = true,
-		["f"] = 200,
 	}),
 };
 _.Zones =

@@ -46,6 +46,9 @@ _.Zones =
 						22822, 	-- Ethereum Nullifier
 					},
 				}),
+				i(28277, {  -- Formula: Enchant Cloak - Greater Shadow Resistance
+					["cr"] = 18870,  -- Voidshrieker
+				}),
 				i(22551, {	-- Formula: Enchant Weapon - Major Intellect
 					["cr"] = 20136,	-- Sunfury Researcher
 				}),

@@ -12,11 +12,8 @@ _.Zones =
 				i(24158, {  -- Design: Khorium Band of Shadows
 					["crs"] = { 19826 },  -- Dark Conclave Shadowmancer
 				}),
-				n(19796, {	-- Eclipsion Archmage
-					i(28276, {	-- Formula: Enchant Cloak - Greater Arcane Resistance
-						["spellID"] = 0,
-						["u"] = REMOVED_FROM_GAME,
-					}),
+				i(28276, {  -- Formula: Enchant Cloak - Greater Arcane Resistance
+					["cr"] = 19796,  -- Eclipsion Archmage
 				}),
 				i(23609, {	-- Plans: Khorium Pants
 					["crs"] = { 20878 },	-- Deathforge Guardian
