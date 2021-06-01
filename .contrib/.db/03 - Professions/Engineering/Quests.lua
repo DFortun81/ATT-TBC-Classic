@@ -435,10 +435,11 @@ profession(ENGINEERING, {
 			["maps"] = { ZANGARMARSH },
 			["races"] = ALLIANCE_ONLY,
 			["u"] = TBC_PHASE_ONE,
-			["cost"] = {
-				{ "i", 23981, 15 },	-- Steam Pump Part
-			},
 			["groups"] = {
+				objective(1, {	-- 0/15 Steam Pump Part
+					["provider"] = { "i", 23981 },	-- Steam Pump Part
+					["coord"] = { 81.5, 40.2, ZANGARMARSH },
+				}),
 				i(23888),	-- Schematic: Zapthrottle Mote Extractor
 			},
 		}),
@@ -450,10 +451,11 @@ profession(ENGINEERING, {
 			["maps"] = { ZANGARMARSH },
 			["races"] = HORDE_ONLY,
 			["u"] = TBC_PHASE_ONE,
-			["cost"] = {
-				{ "i", 23981, 15 },	-- Steam Pump Part
-			},
 			["groups"] = {
+				objective(1, {	-- 0/15 Steam Pump Part
+					["provider"] = { "i", 23981 },	-- Steam Pump Part
+					["coord"] = { 81.5, 40.2, ZANGARMARSH },
+				}),
 				i(23888),	-- Schematic: Zapthrottle Mote Extractor
 			},
 		}),
