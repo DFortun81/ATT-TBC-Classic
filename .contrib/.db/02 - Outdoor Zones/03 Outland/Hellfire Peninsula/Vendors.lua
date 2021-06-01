@@ -163,10 +163,7 @@ _.Zones =
 					["coord"] = { 54.6, 41.0, HELLFIRE_PENINSULA },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(27688, {	-- Recipe: Ravager Dog
-							["recipeID"] = 33284,	-- Ravager Dog
-							["requireSkill"] = COOKING,
-						}),
+						i(27688),	-- Recipe: Ravager Dog
 					},
 				}),
 				n(18997, {	-- Fallesh Sunfallow <Weapon Merchant>
@@ -454,10 +451,7 @@ _.Zones =
 					["coord"] = { 54.2, 63.6, HELLFIRE_PENINSULA },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(27688, {	-- Recipe: Ravager Dog
-							["recipeID"] = 33284,	-- Ravager Dog
-							["requireSkill"] = COOKING,
-						}),
+						i(27688),	-- Recipe: Ravager Dog
 					},
 				}),
 				n(19001, {	-- Talaara <Weapon Merchant>

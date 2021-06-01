@@ -37,6 +37,18 @@ _.Zones =
 						5842,	-- Takk the Leaper
 					},
 				}),
+				-- #if AFTER 4.2.0.10000
+				-- #if BEFORE 4.3.0.10000
+				i(44977, {	-- Recipe: Dig Rat Stew
+					["crs"] = {
+						39153,	-- Excavation Raider
+						3376,	-- Bael'dun Soldier
+						3378,	-- Bael'dun Officer
+						3377,	-- Bael'dun Rifleman
+					},
+				}),
+				-- #endif
+				-- #endif
 				i(6663),	-- Recipe: Elixir of Giant Growth
 				i(6661),	-- Recipe: Savory Deviate Delight
 				i(7119, {	-- Twitching Antenna

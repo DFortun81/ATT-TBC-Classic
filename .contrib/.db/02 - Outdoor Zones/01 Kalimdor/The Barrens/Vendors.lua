@@ -30,9 +30,7 @@ _.Zones =
 					["coord"] = { 55.2, 31.8, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(44977, {	-- Recipe: Dig Rat Stew
-							["timeline"] = { "removed 4.3.0.2000" },
-						}),
+						i(44977),	-- Recipe: Dig Rat Stew
 					},
 				}),
 				-- #endif
@@ -106,9 +104,7 @@ _.Zones =
 					["timeline"] = { "removed 4.3.0.2000" },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(44977, {	-- Recipe: Dig Rat Stew
-							["timeline"] = { "removed 4.3.0.2000" },
-						}),
+						i(44977),	-- Recipe: Dig Rat Stew
 					},
 				}),
 				-- #endif

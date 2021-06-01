@@ -210,6 +210,9 @@ _.Zones =
 						i(22906, {	-- Recipe: Shrouding Potion
 							["cost"] = { { "i", 24245, 30 }, },	-- 30x Glowcap
 						}),
+						i(27689, {	-- Recipe: Sporeling Snack
+							["cost"] = { { "i", 24245, 2 }, },	-- 2x Glowcap
+						}),
 						i(22916, {	-- Recipe: Transmute Primal Earth to Water
 							["cost"] = { { "i", 24245, 25 }, },	-- 25x Glowcap
 						}),

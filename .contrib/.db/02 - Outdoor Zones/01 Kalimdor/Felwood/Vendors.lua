@@ -10,16 +10,10 @@ _.Zones =
 					["coord"] = { 34.8, 53.2, FELWOOD },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						applyclassicphase(TBC_PHASE_ONE, i(35564, {	-- Recipe: Charred Bear Kabobs
-							["timeline"] = { "removed 4.1.0.10000" },
-							["requireSkill"] = COOKING,
-							["recipeID"] = 46684,
-						})),
-						applyclassicphase(TBC_PHASE_ONE, i(35566, {	-- Recipe: Juicy Bear Burger
-							["timeline"] = { "removed 4.1.0.10000" },
-							["requireSkill"] = COOKING,
-							["recipeID"] = 46688,
-						})),
+						-- #if AFTER TBC
+						i(35564),	-- Recipe: Charred Bear Kabobs
+						i(35566),	-- Recipe: Juicy Bear Burger
+						-- #endif
 						i(16110),	-- Recipe: Monster Omelet
 					},
 				}),
@@ -50,16 +44,10 @@ _.Zones =
 					["coord"] = { 62.2, 25.6, FELWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						applyclassicphase(TBC_PHASE_ONE, i(35564, {	-- Recipe: Charred Bear Kabobs
-							["timeline"] = { "removed 4.1.0.10000" },
-							["requireSkill"] = COOKING,
-							["recipeID"] = 46684,
-						})),
-						applyclassicphase(TBC_PHASE_ONE, i(35566, {	-- Recipe: Juicy Bear Burger
-							["timeline"] = { "removed 4.1.0.10000" },
-							["requireSkill"] = COOKING,
-							["recipeID"] = 46688,
-						})),
+						-- #if AFTER TBC
+						i(35564),	-- Recipe: Charred Bear Kabobs
+						i(35566),	-- Recipe: Juicy Bear Burger
+						-- #endif
 						i(16110),	-- Recipe: Monster Omelet
 					},
 				}),
