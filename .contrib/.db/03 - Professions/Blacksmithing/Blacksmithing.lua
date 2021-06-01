@@ -167,11 +167,11 @@ profession(BLACKSMITHING, {
 					["name"] = "Helm of the Great Chief",
 					["recipeID"] = 16728,
 				},
-				-- #endif
-				applyclassicphase(TBC_PHASE_ONE, {
+				{
 					["name"] = "Lionheart Helm",
 					["recipeID"] = 16729,
-				}),
+				},
+				-- #endif
 				{
 					["name"] = "Heavy Mithril Helm",
 					["recipeID"] = 9970
@@ -237,8 +237,6 @@ profession(BLACKSMITHING, {
 					["name"] = "Dawnbringer Shoulders",
 					["recipeID"] = 16660,
 				}),
-				-- #endif
-				-- #if AFTER TBC
 				{
 					["name"] = "Fiery Chain Shoulders",
 					["recipeID"] = 20873,
@@ -350,10 +348,22 @@ profession(BLACKSMITHING, {
 					["name"] = "Bloodsoul Gauntlets",
 					["recipeID"] = 24138,
 				}),
+				-- #if AFTER TBC
+				applyclassicphase(PHASE_THREE, {
+					["name"] = "Dark Iron Gauntlets",
+					["recipeID"] = 23637,
+				}),
+				-- #endif
 				un(PHASE_FOUR, {
 					["name"] = "Darkrune Gauntlets",
 					["recipeID"] = 24912,
 				}),
+				-- #if AFTER TBC
+				{
+					["name"] = "Fiery Plate Gauntlets",
+					["recipeID"] = 16655,
+				},
+				-- #endif
 				{
 					["name"] = "Gemmed Copper Gauntlets",
 					["recipeID"] = 3325
@@ -406,6 +416,20 @@ profession(BLACKSMITHING, {
 					["name"] = "Silvered Bronze Gauntlets",
 					["recipeID"] = 3333
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Storm Gauntlets",
+					["recipeID"] = 16661,
+				},
+				{
+					["name"] = "Stronghold Gauntlets",
+					["recipeID"] = 16741,
+				},
+				{
+					["name"] = "Truesilver Gauntlets",
+					["recipeID"] = 9954,
+				},
+				-- #endif
 			}
 		},
 		{
@@ -428,6 +452,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Dark Iron Mail",
 					["recipeID"] = 15293
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Dark Iron Plate",
+					["recipeID"] = 15296,
+				},
+				-- #endif
 				un(PHASE_FOUR, {
 					["name"] = "Darkrune Breastplate",
 					["recipeID"] = 24914,
@@ -436,6 +466,16 @@ profession(BLACKSMITHING, {
 					["name"] = "Darksoul Breastplate",
 					["recipeID"] = 24139,
 				}),
+				-- #if AFTER TBC
+				{
+					["name"] = "Demon Forged Breastplate",
+					["recipeID"] = 16667,
+				},
+				applyclassicphase(PHASE_THREE, {
+					["name"] = "Enchanted Thorium Breastplate",
+					["recipeID"] = 16745,
+				}),
+				-- #endif
 				{
 					["name"] = "Golden Scale Cuirass",
 					["recipeID"] = 3511
@@ -456,6 +496,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Imperial Plate Chest",
 					["recipeID"] = 16663
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Invulnerable Mail",
+					["recipeID"] = 16746,
+				},
+				-- #endif
 				{
 					["name"] = "Ironforge Breastplate",
 					["recipeID"] = 8367,
@@ -516,6 +562,16 @@ profession(BLACKSMITHING, {
 					["name"] = "Thorium Armor",
 					["recipeID"] = 16642
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Truesilver Breastplate",
+					["recipeID"] = 9974,
+				},
+				{
+					["name"] = "Wildthorn Mail",
+					["recipeID"] = 16650,
+				},
+				-- #endif
 			}
 		},
 		{
@@ -526,6 +582,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Copper Chain Belt",
 					["recipeID"] = 2661
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Fiery Chain Girdle",
+					["recipeID"] = 20872,
+				},
+				-- #endif
 				un(PHASE_THREE, {
 					["name"] = "Girdle of the Dawn",
 					["recipeID"] = 23632,
@@ -572,10 +634,22 @@ profession(BLACKSMITHING, {
 					["name"] = "Copper Chain Pants",
 					["recipeID"] = 2662
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Dark Iron Leggings",
+					["recipeID"] = 20876,
+				},
+				-- #endif
 				un(PHASE_FOUR, {
 					["name"] = "Darksoul Leggings",
 					["recipeID"] = 24140,
 				}),
+				-- #if AFTER TBC
+				applyclassicphase(PHASE_THREE, {
+					["name"] = "Enchanted Thorium Leggings",
+					["recipeID"] = 16744,
+				}),
+				-- #endif
 				{
 					["name"] = "Golden Scale Leggings",
 					["recipeID"] = 3507
@@ -629,6 +703,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Thorium Leggings",
 					["recipeID"] = 16662
 				},
+				-- #if AFTER TBC
+				applyclassicphase(PHASE_FIVE, {
+					["name"] = "Titanic Leggings",
+					["recipeID"] = 27829,
+				}),
+				-- #endif
 			}
 		},
 		{
@@ -643,6 +723,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Copper Chain Boots",
 					["recipeID"] = 3319
 				},
+				-- #if AFTER TBC
+				applyclassicphase(PHASE_FOUR, {
+					["name"] = "Dark Iron Boots",
+					["recipeID"] = 24399,
+				}),
+				-- #endif
 				{
 					["name"] = "Golden Scale Boots",
 					["recipeID"] = 3515
@@ -707,6 +793,20 @@ profession(BLACKSMITHING, {
 			["name"] = "Weapons",
 			["categoryID"] = 227,
 			["g"] = {
+				-- #if AFTER TBC
+				{
+					["name"] = "Annihilator",
+					["recipeID"] = 16991,
+				},
+				{
+					["name"] = "Arcanite Reaper",
+					["recipeID"] = 16994,
+				},
+				{
+					["name"] = "Arcanite Champion",
+					["recipeID"] = 16990,
+				},
+				-- #endif
 				{
 					["name"] = "Big Black Mace",
 					["recipeID"] = 10001
@@ -715,6 +815,36 @@ profession(BLACKSMITHING, {
 					["name"] = "Big Bronze Knife",
 					["recipeID"] = 3491
 				},
+				-- #if AFTER TBC
+				un(PHASE_THREE, {
+					["name"] = "Black Amnesty",
+					["recipeID"] = 23638,
+				}),
+				un(PHASE_THREE, {
+					["name"] = "Blackfury",
+					["recipeID"] = 23639,
+				}),
+				un(PHASE_THREE, {
+					["name"] = "Blackguard",
+					["recipeID"] = 23652,
+				}),
+				{
+					["name"] = "Blazing Rapier",
+					["recipeID"] = 16978,
+				},
+				un(NEVER_IMPLEMENTED, {
+					["name"] = "Bleakwood Hew",
+					["recipeID"] = 16965,
+				}),
+				{
+					["name"] = "Blight",
+					["recipeID"] = 10011,
+				},
+				un(NEVER_IMPLEMENTED, {
+					["name"] = "Blood Talon",
+					["recipeID"] = 16986,
+				}),
+				-- #endif
 				{
 					["name"] = "Blue Glittering Axe",
 					["recipeID"] = 9995
@@ -767,6 +897,36 @@ profession(BLACKSMITHING, {
 					["name"] = "Copper Shortsword",
 					["recipeID"] = 2739
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Corruption",
+					["recipeID"] = 16985,
+				},
+				{
+					["name"] = "Dark Iron Destroyer",
+					["recipeID"] = 20897,
+				},
+				{
+					["name"] = "Dark Iron Pulverizer",
+					["recipeID"] = 15292,
+				},
+				{
+					["name"] = "Dark Iron Reaver",
+					["recipeID"] = 20890,
+				},
+				{
+					["name"] = "Dark Iron Sunderer",
+					["recipeID"] = 15294,
+				},
+				un(NEVER_IMPLEMENTED, {
+					["name"] = "Darkspear",
+					["recipeID"] = 16987,
+				}),
+				{
+					["name"] = "Dawn's Edge",
+					["recipeID"] = 16970,
+				},
+				-- #endif
 				{
 					["name"] = "Dazzling Mithril Rapier",
 					["recipeID"] = 10005
@@ -775,6 +935,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Deadly Bronze Poniard",
 					["recipeID"] = 3295
 				},
+				-- #if AFTER TBC
+				un(PHASE_THREE, {
+					["name"] = "Ebon Hand",
+					["recipeID"] = 23650,
+				}),
+				-- #endif
 				{
 					["name"] = "Ebon Shiv",
 					["recipeID"] = 10013
@@ -783,6 +949,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Edge of Winter",
 					["recipeID"] = 21913
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Enchanted Battlehammer",
+					["recipeID"] = 16973,
+				},
+				-- #endif
 				-- #if BEFORE MOP
 				un(TBC_PHASE_ONE, {
 					["recipeID"] = 34982,	-- Enchanted Thorium Blades
@@ -796,6 +968,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Frost Tiger Blade",
 					["recipeID"] = 3497
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Frostguard",
+					["recipeID"] = 16992,
+				},
+				-- #endif
 				{
 					["name"] = "Glinting Steel Dagger",
 					["recipeID"] = 15972
@@ -808,6 +986,16 @@ profession(BLACKSMITHING, {
 					["name"] = "Hardened Iron Shortsword",
 					["recipeID"] = 3492
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Hammer of the Titans",
+					["recipeID"] = 16988,
+				},
+				{
+					["name"] = "Heartseeker",
+					["recipeID"] = 16995,
+				},
+				-- #endif
 				{
 					["name"] = "Heavy Bronze Mace",
 					["recipeID"] = 3296
@@ -844,6 +1032,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Massive Iron Axe",
 					["recipeID"] = 3498
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Masterwork Stormhammer",
+					["recipeID"] = 16993,
+				},
+				-- #endif
 				{
 					["name"] = "Mighty Iron Hammer",
 					["recipeID"] = 3297
@@ -852,6 +1046,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Moonsteel Broadsword",
 					["recipeID"] = 3496
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Nightfall",
+					["recipeID"] = 23653,
+				},
+				-- #endif
 				{
 					["name"] = "Ornate Thorium Handaxe",
 					["recipeID"] = 16969
@@ -860,6 +1060,16 @@ profession(BLACKSMITHING, {
 					["name"] = "Pearl-handled Dagger",
 					["recipeID"] = 6517
 				},
+				-- #if AFTER TBC
+				un(PHASE_FIVE, {
+					["name"] = "Persuader",
+					["recipeID"] = 27830,
+				}),
+				{
+					["name"] = "Phantom Blade",
+					["recipeID"] = 10007,
+				},
+				-- #endif
 				un(NEVER_IMPLEMENTED, {
 					["name"] = "Rune Edge",
 					["recipeID"] = 16980,
@@ -868,10 +1078,22 @@ profession(BLACKSMITHING, {
 					["name"] = "Runed Mithril Hammer",
 					["recipeID"] = 10009
 				},
+				-- #if AFTER TBC
+				un(PHASE_FIVE, {
+					["name"] = "Sageblade",
+					["recipeID"] = 27832,
+				}),
+				-- #endif
 				{
 					["name"] = "Searing Golden Blade",
 					["recipeID"] = 15973
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Serenity",
+					["recipeID"] = 16983,
+				},
+				-- #endif
 				{
 					["name"] = "Shadow Crescent Axe",
 					["recipeID"] = 3500
@@ -884,6 +1106,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Sulfuron Hammer",
 					["recipeID"] = 21161
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "The Shatterer",
+					["recipeID"] = 10003,
+				},
+				-- #endif
 				-- #if BEFORE MOP
 				un(TBC_PHASE_ONE, {
 					["recipeID"] = 34979,	-- Thick Bronze Darts
@@ -901,6 +1129,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Thorium Greatsword",
 					["recipeID"] = 16960,
 				}),
+				-- #if AFTER TBC
+				{
+					["name"] = "Truesilver Champion",
+					["recipeID"] = 10015,
+				},
+				-- #endif
 				{
 					["name"] = "Volcanic Hammer",
 					["recipeID"] = 16984

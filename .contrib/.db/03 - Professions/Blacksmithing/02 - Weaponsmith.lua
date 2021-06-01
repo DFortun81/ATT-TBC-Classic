@@ -288,22 +288,7 @@ profession(BLACKSMITHING, {
 						["recipeID"] = 16995,
 						["requireSkill"] = 9787,
 					},
-					{
-						["name"] = "Phantom Blade",
-						["recipeID"] = 10007,
-						["requireSkill"] = 9787,
-					},
-					{
-						["name"] = "The Shatterer",
-						["recipeID"] = 10003,
-						["requireSkill"] = 9787,
-					},
-					{
-						["name"] = "Truesilver Champion",
-						["recipeID"] = 10015,
-						["requireSkill"] = 9787,
-					},
-					-- endif
+					-- #endif
 					applyclassicphase(TBC_PHASE_ONE,{					
 						["name"] = "Light Earthforged Blade", 
 						["recipeID"] = 36125,
@@ -319,6 +304,23 @@ profession(BLACKSMITHING, {
 						["recipeID"] = 36126,
 						["requireSkill"] = 9787,
 					}),
+					-- #if BEFORE TBC
+					{
+						["name"] = "Phantom Blade",
+						["recipeID"] = 10007,
+						["requireSkill"] = 9787,
+					},
+					{
+						["name"] = "The Shatterer",
+						["recipeID"] = 10003,
+						["requireSkill"] = 9787,
+					},
+					{
+						["name"] = "Truesilver Champion",
+						["recipeID"] = 10015,
+						["requireSkill"] = 9787,
+					},
+					-- #endif
 				}
 			},
 		},
