@@ -3,7 +3,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Materials",
 			["categoryID"] = 247,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Cured Heavy Hide",
 					["recipeID"] = 3818
@@ -24,7 +24,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Cured Thick Hide",
 					["recipeID"] = 10482
 				},
-				un(PHASE_ONE_DIRE_MAUL, {
+				un(PHASE_ONE_DIREMAUL, {
 					["name"] = "Gordok Ogre Suit",
 					["recipeID"] = 22815
 				}),
@@ -53,7 +53,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Armor Kits",
 			["categoryID"] = 249,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Core Armor Kit",
 					["recipeID"] = 22727
@@ -83,7 +83,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Bags",
 			["categoryID"] = 250,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Heavy Leather Ammo Pouch",
 					["recipeID"] = 9194
@@ -117,7 +117,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Devices",
 			["categoryID"] = 188,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Heavy Leather Ball",
 					["recipeID"] = 23190
@@ -127,7 +127,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Helms",
 			["categoryID"] = 251,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Big Voodoo Mask",
 					["recipeID"] = 10531
@@ -173,7 +173,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Shoulders",
 			["categoryID"] = 252,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Shoulders",
 					["recipeID"] = 7151
@@ -223,7 +223,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Chest",
 			["categoryID"] = 253,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Harness",
 					["recipeID"] = 6661
@@ -354,7 +354,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Bracers",
 			["categoryID"] = 254,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Bracers",
 					["recipeID"] = 23399
@@ -415,7 +415,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Spitfire Bracers",
 					["recipeID"] = 24846,
 				}),
-				un(PHASE_ONE_DIRE_MAUL, {
+				un(PHASE_ONE_DIREMAUL, {
 					["name"] = "Swift Flight Bracers",
 					["recipeID"] = 22923,
 				}),
@@ -436,7 +436,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Gloves",
 			["categoryID"] = 255,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Gloves",
 					["recipeID"] = 3771
@@ -550,7 +550,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Belts",
 			["categoryID"] = 256,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Belt",
 					["recipeID"] = 3779
@@ -579,7 +579,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Gem-studded Leather Belt",
 					["recipeID"] = 3778
 				},
-				un(PHASE_ONE_DIRE_MAUL, {
+				un(PHASE_ONE_DIREMAUL, {
 					["name"] = "Girdle of Insight",
 					["recipeID"] = 22921,
 				}),
@@ -633,7 +633,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Pants",
 			["categoryID"] = 257,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Leggings",
 					["recipeID"] = 7149
@@ -707,7 +707,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Boots",
 			["categoryID"] = 258,
-			["g"] = {
+			["groups"] = {
 				un(PHASE_FIVE_CATCH_UP, {
 					["name"] = "Bramblewood Boots",
 					["recipeID"] = 28473,
@@ -736,7 +736,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Handstitched Leather Boots",
 					["recipeID"] = 2149
 				},
-				un(PHASE_ONE_DIRE_MAUL, {
+				un(PHASE_ONE_DIREMAUL, {
 					["name"] = "Mongoose Boots",
 					["recipeID"] = 22922,
 				}),
@@ -761,7 +761,7 @@ profession(LEATHERWORKING, {
 		{
 			["name"] = "Cloaks",
 			["categoryID"] = 259,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Big Voodoo Cloak",
 					["recipeID"] = 10562
@@ -814,7 +814,630 @@ profession(LEATHERWORKING, {
 		},
 	}),
 	applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
-		
+		{
+			["name"] = "Materials",
+			["categoryID"] = 927,
+			["groups"] = {
+				-- #if NOT ANYCLASSIC
+				{
+					["name"] = "Cobra Scales",
+					["recipeID"] = 163231
+				},
+				{
+					["name"] = "Crystal Infused Leather",
+					["recipeID"] = 163226
+				},
+				{
+					["name"] = "Fel Hide",
+					["recipeID"] = 163229
+				},
+				{
+					["name"] = "Fel Scales",
+					["recipeID"] = 163228
+				},
+				-- #endif
+				{
+					["name"] = "Heavy Knothide Leather",
+					["recipeID"] = 32455
+				},
+				{
+					["name"] = "Knothide Leather",
+					["recipeID"] = 32454
+				},
+				-- #if NOT ANYCLASSIC
+				{
+					["name"] = "Nether Dragonscales",
+					["recipeID"] = 163230
+				},
+				{
+					["name"] = "Thick Clefthoof Leather",
+					["recipeID"] = 163225
+				},
+				{
+					["name"] = "Wind Scales",
+					["recipeID"] = 163232
+				},
+				-- #endif
+			}
+		},
+		{
+			["name"] = "Armor Kits",
+			["categoryID"] = 928,
+			["groups"] = {
+				{
+					["name"] = "Clefthide Leg Armor",
+					["recipeID"] = 35555
+				},
+				{
+					["name"] = "Cobrahide Leg Armor",
+					["recipeID"] = 35549
+				},
+				{
+					["name"] = "Comfortable Insoles",
+					["recipeID"] = 32482
+				},
+				{
+					["name"] = "Glove Reinforcements",
+					["recipeID"] = 44770
+				},
+				{
+					["name"] = "Heavy Knothide Armor Kit",
+					["recipeID"] = 44970
+				},
+				{
+					["name"] = "Knothide Armor Kit",
+					["recipeID"] = 32456
+				},
+				{
+					["name"] = "Magister's Armor Kit",
+					["recipeID"] = 32458
+				},
+				{
+					["name"] = "Nethercleft Leg Armor",
+					["recipeID"] = 35557
+				},
+				{
+					["name"] = "Nethercobra Leg Armor",
+					["recipeID"] = 35554
+				},
+				{
+					["name"] = "Vindicator's Armor Kit",
+					["recipeID"] = 32457
+				}
+			}
+		},
+		{
+			["name"] = "Bags",
+			["categoryID"] = 929,
+			["groups"] = {
+				{
+					["name"] = "Bag of Many Hides",
+					["recipeID"] = 45117
+				},
+				{
+					["name"] = "Leatherworker's Satchel",
+					["recipeID"] = 45100
+				},
+				{
+					["name"] = "Quiver of a Thousand Feathers",
+					["recipeID"] = 44359
+				},
+				{
+					["name"] = "Reinforced Mining Bag",
+					["recipeID"] = 35530
+				}
+			}
+		},
+		{
+			["name"] = "Helms",
+			["categoryID"] = 930,
+			["groups"] = {
+				{
+					["name"] = "Cobrascale Hood",
+					["recipeID"] = 35558
+				},
+				{
+					["name"] = "Hood of Primal Life",
+					["recipeID"] = 35561
+				},
+				{
+					["name"] = "Living Dragonscale Helm",
+					["recipeID"] = 35564
+				},
+				{
+					["name"] = "Netherdrake Helm",
+					["recipeID"] = 35572
+				},
+				{
+					["name"] = "Stylin' Adventure Hat",
+					["recipeID"] = 32487
+				},
+				{
+					["name"] = "Stylin' Crimson Hat",
+					["recipeID"] = 32488
+				},
+				{
+					["name"] = "Stylin' Jungle Hat",
+					["recipeID"] = 32489
+				},
+				{
+					["name"] = "Stylin' Purple Hat",
+					["recipeID"] = 32485
+				},
+				{
+					["name"] = "Windscale Hood",
+					["recipeID"] = 35560
+				}
+			}
+		},
+		{
+			["name"] = "Shoulders",
+			["categoryID"] = 931,
+			["groups"] = {
+				{
+					["name"] = "Living Earth Shoulders",
+					["recipeID"] = 41164
+				},
+				{
+					["name"] = "Shoulderpads of Renewed Life",
+					["recipeID"] = 41157
+				},
+				{
+					["name"] = "Shoulders of Lightning Reflexes",
+					["recipeID"] = 41162
+				},
+				{
+					["name"] = "Swiftstrike Shoulders",
+					["recipeID"] = 41160
+				}
+			}
+		},
+		{
+			["name"] = "Chest",
+			["categoryID"] = 932,
+			["groups"] = {
+				{
+					["name"] = "Carapace of Sun and Shadow",
+					["recipeID"] = 46138
+				},
+				{
+					["name"] = "Ebon Netherscale Breastplate",
+					["recipeID"] = 35575
+				},
+				{
+					["name"] = "Embrace of the Phoenix",
+					["recipeID"] = 46137
+				},
+				{
+					["name"] = "Felscale Breastplate",
+					["recipeID"] = 32465
+				},
+				{
+					["name"] = "Felstalker Breastplate",
+					["recipeID"] = 32500
+				},
+				{
+					["name"] = "Golden Dragonstrike Breastplate",
+					["recipeID"] = 36079
+				},
+				{
+					["name"] = "Heavy Clefthoof Vest",
+					["recipeID"] = 32495
+				},
+				{
+					["name"] = "Leather Chestguard of the Sun",
+					["recipeID"] = 46136
+				},
+				{
+					["name"] = "Living Crystal Breastplate",
+					["recipeID"] = 36078
+				},
+				{
+					["name"] = "Netherstrike Breastplate",
+					["recipeID"] = 35580
+				},
+				{
+					["name"] = "Primalstorm Breastplate",
+					["recipeID"] = 36077
+				},
+				{
+					["name"] = "Primalstrike Vest",
+					["recipeID"] = 35589
+				},
+				{
+					["name"] = "Scaled Draenic Vest",
+					["recipeID"] = 32468
+				},
+				{
+					["name"] = "Shadowprowler's Chestguard",
+					["recipeID"] = 42731
+				},
+				{
+					["name"] = "Sun-Drenched Scale Chestguard",
+					["recipeID"] = 46139
+				},
+				{
+					["name"] = "Thick Draenic Vest",
+					["recipeID"] = 32473
+				},
+				{
+					["name"] = "Thick Netherscale Breastplate",
+					["recipeID"] = 35574
+				},
+				{
+					["name"] = "Wild Draenish Vest",
+					["recipeID"] = 32481
+				},
+				{
+					["name"] = "Windhawk Hauberk",
+					["recipeID"] = 35585
+				}
+			}
+		},
+		{
+			["name"] = "Bracers",
+			["categoryID"] = 933,
+			["groups"] = {
+				{
+					["name"] = "Bindings of Lightning Reflexes",
+					["recipeID"] = 41161
+				},
+				{
+					["name"] = "Bracers of Renewed Life",
+					["recipeID"] = 41156
+				},
+				{
+					["name"] = "Bracers of Shackled Souls",
+					["recipeID"] = 52733
+				},
+				{
+					["name"] = "Ebon Netherscale Bracers",
+					["recipeID"] = 35577
+				},
+				{
+					["name"] = "Felstalker Bracers",
+					["recipeID"] = 32499
+				},
+				{
+					["name"] = "Living Earth Bindings",
+					["recipeID"] = 41163
+				},
+				{
+					["name"] = "Netherstrike Bracers",
+					["recipeID"] = 35584
+				},
+				{
+					["name"] = "Primalstrike Bracers",
+					["recipeID"] = 35591
+				},
+				{
+					["name"] = "Redeemed Soul Wristguards",
+					["recipeID"] = 40004
+				},
+				{
+					["name"] = "Swiftstrike Bracers",
+					["recipeID"] = 41158
+				},
+				{
+					["name"] = "Windhawk Bracers",
+					["recipeID"] = 35588
+				}
+			}
+		},
+		{
+			["name"] = "Gloves",
+			["categoryID"] = 934,
+			["groups"] = {
+				{
+					["name"] = "Cobrascale Gloves",
+					["recipeID"] = 35559
+				},
+				{
+					["name"] = "Enchanted Clefthoof Gloves",
+					["recipeID"] = 35533
+				},
+				{
+					["name"] = "Enchanted Felscale Gloves",
+					["recipeID"] = 35526
+				},
+				{
+					["name"] = "Fel Leather Gloves",
+					["recipeID"] = 32490
+				},
+				{
+					["name"] = "Felscale Gloves",
+					["recipeID"] = 32462
+				},
+				{
+					["name"] = "Fletcher's Gloves of the Phoenix",
+					["recipeID"] = 46133
+				},
+				{
+					["name"] = "Gloves of Immortal Dusk",
+					["recipeID"] = 46134
+				},
+				{
+					["name"] = "Gloves of the Living Touch",
+					["recipeID"] = 35562
+				},
+				{
+					["name"] = "Leather Gauntlets of the Sun",
+					["recipeID"] = 46132
+				},
+				{
+					["name"] = "Netherdrake Gloves",
+					["recipeID"] = 35573
+				},
+				{
+					["name"] = "Scaled Draenic Gloves",
+					["recipeID"] = 32467
+				},
+				{
+					["name"] = "Sun-Drenched Scale Gloves",
+					["recipeID"] = 46135
+				},
+				{
+					["name"] = "Thick Draenic Gloves",
+					["recipeID"] = 32470
+				},
+				{
+					["name"] = "Wild Draenish Gloves",
+					["recipeID"] = 32479
+				},
+				{
+					["name"] = "Windslayer Wraps",
+					["recipeID"] = 35563
+				},
+				{
+					["name"] = "Windstrike Gloves",
+					["recipeID"] = 35568
+				}
+			}
+		},
+		{
+			["name"] = "Belts",
+			["categoryID"] = 935,
+			["groups"] = {
+				{
+					["name"] = "Belt of Deep Shadow",
+					["recipeID"] = 36351
+				},
+				{
+					["name"] = "Belt of Natural Power",
+					["recipeID"] = 36349
+				},
+				{
+					["name"] = "Belt of the Black Eagle",
+					["recipeID"] = 36352
+				},
+				{
+					["name"] = "Blastguard Belt",
+					["recipeID"] = 35537
+				},
+				{
+					["name"] = "Ebon Netherscale Belt",
+					["recipeID"] = 35576
+				},
+				{
+					["name"] = "Felstalker Belt",
+					["recipeID"] = 32498
+				},
+				{
+					["name"] = "Flamescale Belt",
+					["recipeID"] = 35531
+				},
+				{
+					["name"] = "Monsoon Belt",
+					["recipeID"] = 36353
+				},
+				{
+					["name"] = "Netherfury Belt",
+					["recipeID"] = 32501
+				},
+				{
+					["name"] = "Netherstrike Belt",
+					["recipeID"] = 35582
+				},
+				{
+					["name"] = "Primalstrike Belt",
+					["recipeID"] = 35590
+				},
+				{
+					["name"] = "Redeemed Soul Cinch",
+					["recipeID"] = 40006
+				},
+				{
+					["name"] = "Waistguard of Shackled Souls",
+					["recipeID"] = 40002
+				},
+				{
+					["name"] = "Windhawk Belt",
+					["recipeID"] = 35587
+				}
+			}
+		},
+		{
+			["name"] = "Pants",
+			["categoryID"] = 936,
+			["groups"] = {
+				{
+					["name"] = "Blastguard Pants",
+					["recipeID"] = 35535
+				},
+				{
+					["name"] = "Enchanted Clefthoof Leggings",
+					["recipeID"] = 35532
+				},
+				{
+					["name"] = "Enchanted Felscale Leggings",
+					["recipeID"] = 35525
+				},
+				{
+					["name"] = "Fel Leather Leggings",
+					["recipeID"] = 32494
+				},
+				{
+					["name"] = "Felscale Pants",
+					["recipeID"] = 32464
+				},
+				{
+					["name"] = "Flamescale Leggings",
+					["recipeID"] = 35529
+				},
+				{
+					["name"] = "Greaves of Shackled Souls",
+					["recipeID"] = 40001
+				},
+				{
+					["name"] = "Heavy Clefthoof Leggings",
+					["recipeID"] = 32496
+				},
+				{
+					["name"] = "Netherfury Leggings",
+					["recipeID"] = 32502
+				},
+				{
+					["name"] = "Redeemed Soul Legguards",
+					["recipeID"] = 40005
+				},
+				{
+					["name"] = "Scaled Draenic Pants",
+					["recipeID"] = 32466
+				},
+				{
+					["name"] = "Thick Draenic Pants",
+					["recipeID"] = 32471
+				},
+				{
+					["name"] = "Wild Draenish Leggings",
+					["recipeID"] = 32480
+				}
+			}
+		},
+		{
+			["name"] = "Boots",
+			["categoryID"] = 937,
+			["groups"] = {
+				{
+					["name"] = "Blastguard Boots",
+					["recipeID"] = 35536
+				},
+				{
+					["name"] = "Boots of Natural Grace",
+					["recipeID"] = 36355
+				},
+				{
+					["name"] = "Boots of Shackled Souls",
+					["recipeID"] = 39997
+				},
+				{
+					["name"] = "Boots of the Crimson Hawk",
+					["recipeID"] = 36358
+				},
+				{
+					["name"] = "Boots of Utter Darkness",
+					["recipeID"] = 36357
+				},
+				{
+					["name"] = "Earthen Netherscale Boots",
+					["recipeID"] = 35567
+				},
+				{
+					["name"] = "Enchanted Clefthoof Boots",
+					["recipeID"] = 35534
+				},
+				{
+					["name"] = "Enchanted Felscale Boots",
+					["recipeID"] = 35527
+				},
+				{
+					["name"] = "Fel Leather Boots",
+					["recipeID"] = 32493
+				},
+				{
+					["name"] = "Felscale Boots",
+					["recipeID"] = 32463
+				},
+				{
+					["name"] = "Flamescale Boots",
+					["recipeID"] = 35528
+				},
+				{
+					["name"] = "Heavy Clefthoof Boots",
+					["recipeID"] = 32497
+				},
+				{
+					["name"] = "Hurricane Boots",
+					["recipeID"] = 36359
+				},
+				{
+					["name"] = "Netherfury Boots",
+					["recipeID"] = 32503
+				},
+				{
+					["name"] = "Redeemed Soul Moccasins",
+					["recipeID"] = 40003
+				},
+				{
+					["name"] = "Scaled Draenic Boots",
+					["recipeID"] = 32469
+				},
+				{
+					["name"] = "Thick Draenic Boots",
+					["recipeID"] = 32472
+				},
+				{
+					["name"] = "Wild Draenish Boots",
+					["recipeID"] = 32478
+				}
+			}
+		},
+		{
+			["name"] = "Cloaks",
+			["categoryID"] = 938,
+			["groups"] = {
+				{
+					["name"] = "Cloak of Darkness",
+					["recipeID"] = 42546
+				}
+			}
+		},
+		{
+			["name"] = "Special",
+			["categoryID"] = 939,
+			["groups"] = {
+				{
+					["name"] = "Riding Crop",
+					["recipeID"] = 32461
+				}
+			}
+		},
+		{
+			["name"] = "Drums",
+			["categoryID"] = 940,
+			["groups"] = {
+				{
+					["name"] = "Drums of Battle",
+					["recipeID"] = 35543
+				},
+				{
+					["name"] = "Drums of Panic",
+					["recipeID"] = 35538
+				},
+				{
+					["name"] = "Drums of Restoration",
+					["recipeID"] = 35539
+				},
+				{
+					["name"] = "Drums of Speed",
+					["recipeID"] = 35544
+				},
+				{
+					["name"] = "Drums of War",
+					["recipeID"] = 35540
+				}
+			}
+		}
 	})),
 	applyclassicphase(WRATH_PHASE_ONE, tier(3, {	-- Wrath of the Lich King
 		
@@ -839,8 +1462,400 @@ profession(LEATHERWORKING, {
 	})),
 });
 
+-- Leatherworking Item Database
+_.ItemDB = {};
+
+-- Recipe Cache (for Validation)
+local recipeCache, recipeCacheU = {}, {};
+local function cacheRecipes(g)
+	if g and type(g) == "table" then
+		if g.groups then cacheRecipes(g.groups); end
+		if g.g then cacheRecipes(g.g); end
+		local spellID = g.spellID or g.recipeID;
+		if spellID then
+			recipeCache[spellID] = true; 
+			if g.u then recipeCacheU[spellID] = g.u; end
+		end
+		for i,o in ipairs(g) do
+			cacheRecipes(o);
+		end
+	end
+end
+cacheRecipes(_.Professions);
+
+-- Item Recipe Database
+local itemrecipe = function(name, itemID, spellID, phase, timeline)
+	local o = { ["itemID"] = itemID, ["spellID"] = spellID };
+	if type(phase) == "string" then
+		timeline = phase;
+		phase = nil;
+	end
+	if timeline then
+		-- Ensure that the timeline is in a table format.
+		if type(timeline) == "string" then timeline = { timeline }; end
+		if type(timeline) == "table" then o.timeline = timeline; end
+	end
+	if name then
+		-- Ensure that the name is in a string format.
+		if type(name) == "table" then
+			-- #if AFTER CATA
+			name = name[2];
+			-- #else
+			name = name[1];
+			-- #endif
+		end
+		o.name = name;
+	end
+	_.ItemDB[itemID] = phase and applyclassicphase(phase, o) or o;
+	
+	-- Ensure that this recipe's spellID exists in the profession database.
+	if recipeCache and type(timeline) ~= "boolean" then
+		if recipeCache[o.spellID] then
+			-- Grab the phase from the cache.
+			local u = recipeCacheU[o.spellID];
+			if u then
+				if o.u ~= u then
+					print("ITEM RECIPE MISSING U: ", name, o.spellID, u, o.u);
+					o.u = u;
+				end
+			elseif o.u ~= u then
+				print("RECIPE MISSING U: ", name, o.spellID, o.u);
+			end
+		else
+			print("MISSING RECIPE", name, o.spellID);
+		end
+	end
+	return o;
+end
+
+-- Classic Recipes
+itemrecipe("Pattern: Fine Leather Boots", 2406, 2158);
+itemrecipe("Pattern: White Leather Jerkin", 2407, 2163);
+itemrecipe("Pattern: Fine Leather Gloves", 2408, 2164);
+itemrecipe("Pattern: Dark Leather Tunic", 2409, 2169);
+itemrecipe("Pattern: Hillman's Leather Vest", 4293, 3762);
+itemrecipe("Pattern: Hillman's Belt", 4294, 3767);
+itemrecipe("Pattern: Dark Leather Shoulders", 4296, 3769);
+itemrecipe("Pattern: Barbaric Gloves", 4297, 3771);
+itemrecipe("Pattern: Guardian Belt", 4298, 3775);
+itemrecipe("Pattern: Guardian Armor", 4299, 3773);
+itemrecipe("Pattern: Guardian Leather Bracers", 4300, 3777);
+itemrecipe("Pattern: Barbaric Belt", 4301, 3779);
+itemrecipe("Pattern: Kodo Hide Bag", 5083, 5244);
+itemrecipe("Pattern: Murloc Scale Belt", 5786, 6702);
+itemrecipe("Pattern: Murloc Scale Breastplate", 5787, 6703);
+itemrecipe("Pattern: Thick Murloc Armor", 5788, 6704);
+itemrecipe("Pattern: Murloc Scale Bracers", 5789, 6705);
+itemrecipe("Pattern: Fine Leather Pants", 5972, 7133);
+itemrecipe("Pattern: Barbaric Leggings", 5973, 7149);
+itemrecipe("Pattern: Guardian Cloak", 5974, 7153);
+itemrecipe("Pattern: Deviate Scale Cloak", 6474, 7953);
+itemrecipe("Pattern: Deviate Scale Gloves", 6475, 7954);
+itemrecipe("Pattern: Deviate Scale Belt", 6476, 7955);
+itemrecipe("Pattern: Moonglow Vest", 6710, 8322);
+itemrecipe("Pattern: Rugged Leather Pants", 7288, 9064);
+itemrecipe("Pattern: Black Whelp Cloak", 7289, 9070);
+itemrecipe("Pattern: Red Whelp Gloves", 7290, 9072);
+itemrecipe("Pattern: Dark Leather Gloves", 7360, 3765);
+itemrecipe("Pattern: Herbalist's Gloves", 7361, 9146);
+itemrecipe("Pattern: Earthen Leather Shoulders", 7362, 9147);
+itemrecipe("Pattern: Pilferer's Gloves", 7363, 9148);
+itemrecipe("Pattern: Heavy Earthen Gloves", 7364, 9149);
+itemrecipe("Pattern: Dusky Leather Leggings", 7449, 9195);
+itemrecipe("Pattern: Green Whelp Armor", 7450, 9197);
+itemrecipe("Pattern: Green Whelp Bracers", 7451, 9202);
+itemrecipe("Pattern: Dusky Boots", 7452, 9207);
+itemrecipe("Pattern: Swift Boots", 7453, 9208);
+itemrecipe("Pattern: Green Leather Armor", 7613, 3772);
+itemrecipe("Pattern: Comfortable Leather Hat", 8384, 10490);
+itemrecipe("Pattern: Turtle Scale Gloves", 8385, 10509);
+itemrecipe("Pattern: Big Voodoo Robe", 8386, 10520);
+itemrecipe("Pattern: Big Voodoo Mask", 8387, 10531);
+itemrecipe("Pattern: Big Voodoo Pants", 8389, 10560);
+itemrecipe("Pattern: Big Voodoo Cloak", 8390, 10562);
+itemrecipe("Pattern: Tough Scorpid Breastplate", 8395, 10525);
+itemrecipe("Pattern: Tough Scorpid Bracers", 8397, 10533);
+itemrecipe("Pattern: Tough Scorpid Gloves", 8398, 10542);
+itemrecipe("Pattern: Tough Scorpid Boots", 8399, 10554);
+itemrecipe("Pattern: Tough Scorpid Shoulders", 8400, 10564);
+itemrecipe("Pattern: Tough Scorpid Leggings", 8401, 10568);
+itemrecipe("Pattern: Tough Scorpid Helm", 8402, 10570);
+itemrecipe("Pattern: Wild Leather Shoulders", 8403, 10529);
+itemrecipe("Pattern: Wild Leather Vest", 8404, 10544);
+itemrecipe("Pattern: Wild Leather Helmet", 8405, 10546);
+itemrecipe("Pattern: Wild Leather Boots", 8406, 10566);
+itemrecipe("Pattern: Wild Leather Leggings", 8407, 10572);
+itemrecipe("Pattern: Wild Leather Cloak", 8408, 10574);
+itemrecipe("Pattern: Nightscape Shoulders", 8409, 10516);
+itemrecipe("Pattern: Raptor Hide Harness", 13287, 4096);
+itemrecipe("Pattern: Raptor Hide Belt", 13288, 4097);
+itemrecipe("Pattern: Gem-studded Leather Belt", 14635, 3778);
+itemrecipe("Pattern: Heavy Scorpid Bracers", 15724, 19048);
+itemrecipe("Pattern: Wicked Leather Gauntlets", 15725, 19049);
+itemrecipe("Pattern: Green Dragonscale Breastplate", 15726, 19050);
+itemrecipe("Pattern: Heavy Scorpid Vest", 15727, 19051);
+itemrecipe("Pattern: Wicked Leather Bracers", 15728, 19052);
+itemrecipe("Pattern: Chimeric Gloves", 15729, 19053);
+itemrecipe("Pattern: Red Dragonscale Breastplate", 15730, 19054);
+itemrecipe("Pattern: Runic Leather Gauntlets", 15731, 19055);
+itemrecipe("Pattern: Volcanic Leggings", 15732, 19059);
+itemrecipe("Pattern: Green Dragonscale Leggings", 15733, 19060);
+itemrecipe("Pattern: Living Shoulders", 15734, 19061);
+itemrecipe("Pattern: Ironfeather Shoulders", 15735, 19062);
+itemrecipe("Pattern: Chimeric Boots", 15737, 19063);
+itemrecipe("Pattern: Heavy Scorpid Gauntlets", 15738, 19064);
+itemrecipe("Pattern: Runic Leather Bracers", 15739, 19065);
+itemrecipe("Pattern: Frostsaber Boots", 15740, 19066);
+itemrecipe("Pattern: Stormshroud Pants", 15741, 19067);
+itemrecipe("Pattern: Warbear Harness", 15742, 19068);
+itemrecipe("Pattern: Heavy Scorpid Belt", 15743, 19070);
+itemrecipe("Pattern: Wicked Leather Headband", 15744, 19071);
+itemrecipe("Pattern: Runic Leather Belt", 15745, 19072);
+itemrecipe("Pattern: Chimeric Leggings", 15746, 19073);
+itemrecipe("Pattern: Frostsaber Leggings", 15747, 19074);
+itemrecipe("Pattern: Heavy Scorpid Leggings", 15748, 19075);
+itemrecipe("Pattern: Volcanic Breastplate", 15749, 19076);
+itemrecipe("Pattern: Blue Dragonscale Breastplate", 15751, 19077);
+itemrecipe("Pattern: Living Leggings", 15752, 19078);
+itemrecipe("Pattern: Stormshroud Armor", 15753, 19079);
+itemrecipe("Pattern: Chimeric Vest", 15755, 19081);
+itemrecipe("Pattern: Runic Leather Headband", 15756, 19082);
+itemrecipe("Pattern: Wicked Leather Pants", 15757, 19083);
+itemrecipe("Pattern: Devilsaur Gauntlets", 15758, 19084);
+itemrecipe("Pattern: Black Dragonscale Breastplate", 15759, 19085);
+itemrecipe("Pattern: Ironfeather Breastplate", 15760, 19086);
+itemrecipe("Pattern: Frostsaber Gloves", 15761, 19087);
+itemrecipe("Pattern: Heavy Scorpid Helm", 15762, 19088);
+itemrecipe("Pattern: Blue Dragonscale Shoulders", 15763, 19089);
+itemrecipe("Pattern: Stormshroud Shoulders", 15764, 19090);
+itemrecipe("Pattern: Runic Leather Pants", 15765, 19091);
+itemrecipe("Pattern: Wicked Leather Belt", 15768, 19092);
+itemrecipe("Pattern: Onyxia Scale Cloak", 15769, 19093, "removed 3.2.2.10000");
+itemrecipe("Pattern: Black Dragonscale Shoulders", 15770, 19094);
+itemrecipe("Pattern: Living Breastplate", 15771, 19095);
+itemrecipe("Pattern: Devilsaur Leggings", 15772, 19097);
+itemrecipe("Pattern: Wicked Leather Armor", 15773, 19098);
+itemrecipe("Pattern: Heavy Scorpid Shoulders", 15774, 19100);
+itemrecipe("Pattern: Volcanic Shoulders", 15775, 19101);
+itemrecipe("Pattern: Runic Leather Armor", 15776, 19102);
+itemrecipe("Pattern: Runic Leather Shoulders", 15777, 19103);
+itemrecipe("Pattern: Frostsaber Tunic", 15779, 19104);
+itemrecipe("Pattern: Black Dragonscale Leggings", 15781, 19107);
+itemrecipe("Pattern: Corehound Boots", 17022, 20853);
+itemrecipe("Pattern: Molten Helm", 17023, 20854);
+itemrecipe("Pattern: Black Dragonscale Boots", 17025, 20855);
+itemrecipe("Pattern: Shadowskin Gloves", 18239, 22711);
+itemrecipe("Pattern: Core Armor Kit", 18252, 22727);
+itemrecipe("Pattern: Heavy Leather Ball", 18731, 23190);
+itemrecipe("Pattern: Barbaric Bracers", 18949, 23399);
+itemrecipe("Pattern: Warbear Harness", 20253, 19068);
+itemrecipe("Pattern: Warbear Woolies", 20254, 19080);
+itemrecipe("Pattern: Black Whelp Tunic", 20576, 24940);
+itemrecipe("Pattern: Stormshroud Gloves", 21548, 26279);
+
+itemrecipe("Pattern: Girdle of Insight", 18514, 22921, PHASE_ONE_DIREMAUL);
+itemrecipe("Pattern: Mongoose Boots", 18515, 22922, PHASE_ONE_DIREMAUL);
+itemrecipe("Pattern: Swift Flight Bracers", 18516, 22923, PHASE_ONE_DIREMAUL);
+itemrecipe("Pattern: Chromatic Cloak", 18517, 22926, PHASE_ONE_DIREMAUL);
+itemrecipe("Pattern: Hide of the Wild", 18518, 22927, PHASE_ONE_DIREMAUL);
+itemrecipe("Pattern: Shifting Cloak", 18519, 22928, PHASE_ONE_DIREMAUL);
+
+itemrecipe("Pattern: Might of the Timbermaw", 19326, 23703, PHASE_THREE);
+itemrecipe("Pattern: Timbermaw Brawlers", 19327, 23704, PHASE_THREE);
+itemrecipe("Pattern: Dawn Treaders", 19328, 23705, PHASE_THREE);
+itemrecipe("Pattern: Golden Mantle of the Dawn", 19329, 23706, PHASE_THREE);
+itemrecipe("Pattern: Lava Belt", 19330, 23707, PHASE_THREE);
+itemrecipe("Pattern: Chromatic Gauntlets", 19331, 23708, PHASE_THREE);
+itemrecipe("Pattern: Corehound Belt", 19332, 23709, PHASE_THREE);
+itemrecipe("Pattern: Molten Belt", 19333, 23710, PHASE_THREE);
+
+itemrecipe("Pattern: Primal Batskin Jerkin", 19769, 24121, PHASE_FOUR);
+itemrecipe("Pattern: Primal Batskin Gloves", 19770, 24122, PHASE_FOUR);
+itemrecipe("Pattern: Primal Batskin Bracers", 19771, 24123, PHASE_FOUR);
+itemrecipe("Pattern: Blood Tiger Breastplate", 19772, 24124, PHASE_FOUR);
+itemrecipe("Pattern: Blood Tiger Shoulders", 19773, 24125, PHASE_FOUR);
+itemrecipe("Pattern: Dreamscale Breastplate", 20382, 24703, PHASE_FOUR);
+itemrecipe("Pattern: Spitfire Bracers", 20506, 24846, PHASE_FOUR);
+itemrecipe("Pattern: Spitfire Gauntlets", 20507, 24847, PHASE_FOUR);
+itemrecipe("Pattern: Spitfire Breastplate", 20508, 24848, PHASE_FOUR);
+itemrecipe("Pattern: Sandstalker Bracers", 20509, 24849, PHASE_FOUR);
+itemrecipe("Pattern: Sandstalker Gauntlets", 20510, 24850, PHASE_FOUR);
+itemrecipe("Pattern: Sandstalker Breastplate", 20511, 24851, PHASE_FOUR);
+
+itemrecipe("Pattern: Bramblewood Belt", 22769, 28474, PHASE_FIVE_CATCH_UP);
+itemrecipe("Pattern: Bramblewood Boots", 22770, 28473, PHASE_FIVE_CATCH_UP);
+itemrecipe("Pattern: Bramblewood Helm", 22771, 28472, PHASE_FIVE_CATCH_UP);
+
+itemrecipe("Pattern: Polar Tunic", 22692, 28219, PHASE_SIX);
+itemrecipe("Pattern: Polar Gloves", 22694, 28220, PHASE_SIX);
+itemrecipe("Pattern: Polar Bracers", 22695, 28221, PHASE_SIX);
+itemrecipe("Pattern: Icy Scale Breastplate", 22696, 28222, PHASE_SIX);
+itemrecipe("Pattern: Icy Scale Gauntlets", 22697, 28223, PHASE_SIX);
+itemrecipe("Pattern: Icy Scale Bracers", 22698, 28224, PHASE_SIX);
+
+-- #if AFTER TBC
+-- TBC Recipes
+itemrecipe("Pattern: Heavy Knothide Leather", 25720, 32455, TBC_PHASE_ONE, "removed 3.2.0.10000");
+itemrecipe("Pattern: Vindicator's Armor Kit", 25721, 32457, TBC_PHASE_ONE);
+itemrecipe("Pattern: Magister's Armor Kit", 25722, 32458, TBC_PHASE_ONE);
+itemrecipe("Pattern: Riding Crop", 25725, 32461, TBC_PHASE_ONE);
+itemrecipe("Pattern: Comfortable Insoles", 25726, 32482, TBC_PHASE_ONE);
+itemrecipe("Pattern: Stylin' Purple Hat", 25728, 32485, TBC_PHASE_ONE);
+itemrecipe("Pattern: Stylin' Adventure Hat", 25729, 32487, TBC_PHASE_ONE);
+itemrecipe("Pattern: Stylin' Jungle Hat", 25730, 32489, TBC_PHASE_ONE);
+itemrecipe("Pattern: Stylin' Crimson Hat", 25731, 32488, TBC_PHASE_ONE);
+itemrecipe("Pattern: Fel Leather Gloves", 25732, 32490, TBC_PHASE_ONE);
+itemrecipe("Pattern: Fel Leather Boots", 25733, 32493, TBC_PHASE_ONE);
+itemrecipe("Pattern: Fel Leather Leggings", 25734, 32494, TBC_PHASE_ONE);
+itemrecipe("Pattern: Heavy Clefthoof Vest", 25735, 32495, TBC_PHASE_ONE);
+itemrecipe("Pattern: Heavy Clefthoof Leggings", 25736, 32496, TBC_PHASE_ONE);
+itemrecipe("Pattern: Heavy Clefthoof Boots", 25737, 32497, TBC_PHASE_ONE);
+itemrecipe("Pattern: Felstalker Belt", 25738, 32498, TBC_PHASE_ONE);
+itemrecipe("Pattern: Felstalker Bracers", 25739, 32499, TBC_PHASE_ONE);
+itemrecipe("Pattern: Felstalker Breastplate", 25740, 32500, TBC_PHASE_ONE);
+itemrecipe("Pattern: Netherfury Belt", 25741, 32501, TBC_PHASE_ONE);
+itemrecipe("Pattern: Netherfury Leggings", 25742, 32502, TBC_PHASE_ONE);
+itemrecipe("Pattern: Netherfury Boots", 25743, 32503, TBC_PHASE_ONE);
+itemrecipe("Pattern: Felstalker Belt", 29213, 32498, TBC_PHASE_ONE);
+itemrecipe("Pattern: Felstalker Bracers", 29214, 32499, TBC_PHASE_ONE);
+itemrecipe("Pattern: Felstalker Breastplate", 29215, 32500, TBC_PHASE_ONE);
+itemrecipe("Pattern: Netherfury Belt", 29217, 32501, TBC_PHASE_ONE);
+itemrecipe("Pattern: Netherfury Boots", 29218, 32503, TBC_PHASE_ONE);
+itemrecipe("Pattern: Netherfury Leggings", 29219, 32502, TBC_PHASE_ONE);
+itemrecipe("Pattern: Reinforced Mining Bag", 29664, 35530, TBC_PHASE_ONE);
+itemrecipe("Pattern: Shadow Armor Kit", 29669, 35520, TBC_PHASE_ONE, "removed 5.0.4.10000");
+itemrecipe("Pattern: Flame Armor Kit", 29672, 35521, TBC_PHASE_ONE, "removed 5.0.4.10000");
+itemrecipe("Pattern: Frost Armor Kit", 29673, 35522, TBC_PHASE_ONE, "removed 5.0.4.10000");
+itemrecipe("Pattern: Nature Armor Kit", 29674, 35523, TBC_PHASE_ONE, "removed 5.0.4.10000");
+itemrecipe("Pattern: Arcane Armor Kit", 29675, 35524, TBC_PHASE_ONE, "removed 5.0.4.10000");
+itemrecipe("Pattern: Enchanted Felscale Leggings", 29677, 35525, TBC_PHASE_ONE);
+itemrecipe("Pattern: Enchanted Felscale Gloves", 29682, 35526, TBC_PHASE_ONE);
+itemrecipe("Pattern: Enchanted Felscale Boots", 29684, 35527, TBC_PHASE_ONE);
+itemrecipe("Pattern: Flamescale Leggings", 29689, 35529, TBC_PHASE_ONE);
+itemrecipe("Pattern: Flamescale Boots", 29691, 35528, TBC_PHASE_ONE);
+itemrecipe("Pattern: Flamescale Belt", 29693, 35531, TBC_PHASE_ONE);
+itemrecipe("Pattern: Enchanted Clefthoof Leggings", 29698, 35532, TBC_PHASE_ONE);
+itemrecipe("Pattern: Enchanted Clefthoof Gloves", 29700, 35533, TBC_PHASE_ONE);
+itemrecipe("Pattern: Enchanted Clefthoof Boots", 29701, 35534, TBC_PHASE_ONE);
+itemrecipe("Pattern: Blastguard Pants", 29702, 35535, TBC_PHASE_ONE);
+itemrecipe("Pattern: Blastguard Boots", 29703, 35536, TBC_PHASE_ONE);
+itemrecipe("Pattern: Blastguard Belt", 29704, 35537, TBC_PHASE_ONE);
+itemrecipe("Pattern: Drums of Panic", 29713, 35538, TBC_PHASE_ONE);
+itemrecipe("Pattern: Drums of Restoration", 29714, 35539, TBC_PHASE_ONE);
+itemrecipe("Pattern: Drums of Battle", 29717, 35543, TBC_PHASE_ONE);
+itemrecipe("Pattern: Drums of Speed", 29718, 35544, TBC_PHASE_ONE);
+itemrecipe("Pattern: Cobrahide Leg Armor", 29719, 35549, TBC_PHASE_ONE);
+itemrecipe("Pattern: Clefthide Leg Armor", 29720, 35555, TBC_PHASE_ONE);
+itemrecipe("Pattern: Nethercleft Leg Armor", 29721, 35557, TBC_PHASE_ONE);
+itemrecipe("Pattern: Nethercobra Leg Armor", 29722, 35554, TBC_PHASE_ONE);
+itemrecipe("Pattern: Cobrascale Hood", 29723, 35558, TBC_PHASE_ONE);
+itemrecipe("Pattern: Cobrascale Gloves", 29724, 35559, TBC_PHASE_ONE);
+itemrecipe("Pattern: Windscale Hood", 29725, 35560, TBC_PHASE_ONE);
+itemrecipe("Pattern: Hood of Primal Life", 29726, 35561, TBC_PHASE_ONE);
+itemrecipe("Pattern: Gloves of the Living Touch", 29727, 35562, TBC_PHASE_ONE);
+itemrecipe("Pattern: Windslayer Wraps", 29728, 35563, TBC_PHASE_ONE);
+itemrecipe("Pattern: Living Dragonscale Helm", 29729, 35564, TBC_PHASE_ONE);
+itemrecipe("Pattern: Earthen Netherscale Boots", 29730, 35567, TBC_PHASE_ONE);
+itemrecipe("Pattern: Windstrike Gloves", 29731, 35568, TBC_PHASE_ONE);
+itemrecipe("Pattern: Netherdrake Helm", 29732, 35572, TBC_PHASE_ONE);
+itemrecipe("Pattern: Netherdrake Gloves", 29733, 35573, TBC_PHASE_ONE);
+itemrecipe("Pattern: Thick Netherscale Breastplate", 29734, 35574, TBC_PHASE_ONE);
+itemrecipe("Pattern: Cloak of Darkness", 33124, 42546, TBC_PHASE_ONE);
+itemrecipe("Pattern: Shadowprowler's Chestguard", 33205, 42731, TBC_PHASE_ONE);
+itemrecipe("Pattern: Drums of Speed", 34172, 35544, TBC_PHASE_ONE);
+itemrecipe("Pattern: Drums of Speed", 34173, 35544, TBC_PHASE_ONE);
+itemrecipe("Pattern: Drums of Restoration", 34174, 35539, TBC_PHASE_ONE);
+itemrecipe("Pattern: Drums of Restoration", 34175, 35539, TBC_PHASE_ONE);
+itemrecipe("Pattern: Quiver of a Thousand Feathers", 34200, 44359, TBC_PHASE_ONE, "removed 4.0.1.10000");
+itemrecipe("Pattern: Netherscale Ammo Pouch", 34201, 44768, TBC_PHASE_ONE, "removed 4.0.1.10000");
+itemrecipe("Pattern: Netherscale Ammo Pouch", 34218, 44768, TBC_PHASE_ONE, "removed 4.0.1.10000");
+itemrecipe("Pattern: Bag of Many Hides", 34491, 45117, TBC_PHASE_ONE);
+
+itemrecipe("Pattern: Reinforced Mining Bag", 30444, 35530, TBC_PHASE_ONE);
+itemrecipe("Pattern: Cobrahide Leg Armor", 31361, 35549, TBC_PHASE_ONE);
+itemrecipe("Pattern: Nethercobra Leg Armor", 31362, 35554, TBC_PHASE_ONE);
+
+itemrecipe("Pattern: Belt of Natural Power", 30301, 36349, TBC_PHASE_TWO);
+itemrecipe("Pattern: Belt of Deep Shadow", 30302, 36351, TBC_PHASE_TWO);
+itemrecipe("Pattern: Belt of the Black Eagle", 30303, 36352, TBC_PHASE_TWO);
+itemrecipe("Pattern: Monsoon Belt", 30304, 36353, TBC_PHASE_TWO);
+itemrecipe("Pattern: Boots of Natural Grace", 30305, 36355, TBC_PHASE_TWO);
+itemrecipe("Pattern: Boots of Utter Darkness", 30306, 36357, TBC_PHASE_TWO);
+itemrecipe("Pattern: Boots of the Crimson Hawk", 30307, 36358, TBC_PHASE_TWO);
+itemrecipe("Pattern: Hurricane Boots", 30308, 36359, TBC_PHASE_TWO);
+
+itemrecipe("Pattern: Boots of Shackled Souls", 32429, 39997, TBC_PHASE_THREE);
+itemrecipe("Pattern: Bracers of Shackled Souls", 32430, 40000, TBC_PHASE_THREE);
+itemrecipe("Pattern: Greaves of Shackled Souls", 32431, 40001, TBC_PHASE_THREE);
+itemrecipe("Pattern: Waistguard of Shackled Souls", 32432, 40002, TBC_PHASE_THREE);
+itemrecipe("Pattern: Redeemed Soul Moccasins", 32433, 40003, TBC_PHASE_THREE);
+itemrecipe("Pattern: Redeemed Soul Wristguards", 32434, 40004, TBC_PHASE_THREE);
+itemrecipe("Pattern: Redeemed Soul Legguards", 32435, 40005, TBC_PHASE_THREE);
+itemrecipe("Pattern: Redeemed Soul Cinch", 32436, 40006, TBC_PHASE_THREE);
+itemrecipe("Pattern: Bracers of Renewed Life", 32744, 41156, TBC_PHASE_THREE);
+itemrecipe("Pattern: Shoulderpads of Renewed Life", 32745, 41157, TBC_PHASE_THREE);
+itemrecipe("Pattern: Swiftstrike Bracers", 32746, 41158, TBC_PHASE_THREE);
+itemrecipe("Pattern: Swiftstrike Shoulders", 32747, 41160, TBC_PHASE_THREE);
+itemrecipe("Pattern: Bindings of Lightning Reflexes", 32748, 41161, TBC_PHASE_THREE);
+itemrecipe("Pattern: Shoulders of Lightning Reflexes", 32749, 41162, TBC_PHASE_THREE);
+itemrecipe("Pattern: Living Earth Bindings", 32750, 41163, TBC_PHASE_THREE);
+itemrecipe("Pattern: Living Earth Shoulders", 32751, 41164, TBC_PHASE_THREE);
+
+
+itemrecipe("Pattern: Leather Gauntlets of the Sun", 35212, 46132, TBC_PHASE_FIVE);
+itemrecipe("Pattern: Fletcher's Gloves of the Phoenix", 35213, 46133, TBC_PHASE_FIVE);
+itemrecipe("Pattern: Gloves of Immortal Dusk", 35214, 46134, TBC_PHASE_FIVE);
+itemrecipe("Pattern: Sun-Drenched Scale Gloves", 35215, 46135, TBC_PHASE_FIVE);
+itemrecipe("Pattern: Leather Chestguard of the Sun", 35216, 46136, TBC_PHASE_FIVE);
+itemrecipe("Pattern: Embrace of the Phoenix", 35217, 46137, TBC_PHASE_FIVE);
+itemrecipe("Pattern: Carapace of Sun and Shadow", 35218, 46138, TBC_PHASE_FIVE);
+itemrecipe("Pattern: Sun-Drenched Scale Chestguard", 35219, 46139, TBC_PHASE_FIVE);
+
+itemrecipe("Pattern: Windstrike Gloves", 35300, 35568, TBC_PHASE_FIVE, true);
+itemrecipe("Pattern: Netherdrake Gloves", 35301, 35573, TBC_PHASE_FIVE, true);
+itemrecipe("Pattern: Cobrascale Gloves", 35302, 35559, TBC_PHASE_FIVE, true);
+itemrecipe("Pattern: Gloves of the Living Touch", 35303, 35562, TBC_PHASE_FIVE, true);
+-- #endif
+
 --[[
-
-
-neverimplemented(i(8388));	-- Pattern: Nightscape Cloak							(Never added in Game)
+-- Holiday Stuff
+itemrecipe("Pattern: Gloves of the Greatfather", 17722, 21943, PHASE_1003_IDENTIFIER);
+itemrecipe("Pattern: Winter Boots", 34262, 44953);
 ]]
+
+
+-- These items never made it in.
+recipeCache = nil;	-- Invalidate the cache.
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	filter(200, {	-- Recipe
+		itemrecipe("Deprecated Pattern: Light Winter Cloak", 2404),
+		itemrecipe("Deprecated Pattern: Light Winter Boots", 2405),
+		itemrecipe("Deprecated Pattern: Forest Silk Gloves", 2599),
+		itemrecipe("Deprecated Pattern: Trogg Vest", 2600),
+		itemrecipe("Deprecated Pattern: Feathered Robe", 2602),
+		itemrecipe("Pattern: Double-stitched Leather Gloves OLD", 4295),
+		itemrecipe("Pattern: Warbear Woolies", 15754, 19080),
+		itemrecipe("Pattern: Nightscape Cloak", 8388, 10550),
+		itemrecipe("Pattern: Onyxia Scale Breastplate", 15780, 19106);
+		i(15141),	-- Onyxia Scale Breastplate
+		
+		-- #if AFTER TBC
+		itemrecipe("Pattern: Bindings of Lightning Reflexes", 35517),
+		itemrecipe("Pattern: Bracers of Renewed Life", 35519),
+		itemrecipe("Pattern: Living Earth Bindings", 35520),
+		itemrecipe("Pattern: Living Earth Shoulders", 35521),
+		itemrecipe("Pattern: Shoulderpads of Renewed Life", 35523),
+		itemrecipe("Pattern: Shoulders of Lightning Reflexes", 35524),
+		itemrecipe("Pattern: Swiftstrike Bracers", 35527),
+		itemrecipe("Pattern: Swiftstrike Shoulders", 35528),
+		itemrecipe("Pattern: Carapace of Sun and Shadow", 35539),
+		itemrecipe("Pattern: Embrace of the Phoenix", 35540),
+		itemrecipe("Pattern: Fletcher's Gloves of the Phoenix", 35541),
+		itemrecipe("Pattern: Gloves of Immortal Dusk", 35542),
+		itemrecipe("Pattern: Leather Chestguard of the Sun", 35545),
+		itemrecipe("Pattern: Leather Gauntlets of the Sun", 35546),
+		itemrecipe("Pattern: Sun-Drenched Scale Chestguard", 35549),
+		itemrecipe("Pattern: Sun-Drenched Scale Gloves", 35550),
+		-- #endif
+	}),
+});

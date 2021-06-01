@@ -1036,7 +1036,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(22542),	-- Formula: Enchant Boots - Vitality
 			i(22532),	-- Formula: Enchant Bracer - Versatility Prime
 			i(28270),	-- Formula: Enchant Chest - Major Resilience
+			i(22548),	-- Formula: Enchant Cloak - Major Resistance
 			i(22540),	-- Formula: Enchant Shield - Parry
+			i(22541),	-- Formula: Enchant Shield - Resistance
 			i(22557),	-- Formula: Enchant Weapon - Battlemaster
 			i(22553),	-- Formula: Enchant Weapon - Potency
 			i(22558),	-- Formula: Enchant Weapon - Spellsurge
@@ -1148,8 +1150,8 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		prof(LEATHERWORKING, {
 			i(29724),	-- Pattern: Cobrascale Gloves (BoE version)
 			i(29723),	-- Pattern: Cobrascale Hood
-			un(REMOVED_FROM_GAME, i(29714)),	-- Pattern: Drums of Restoration (BoE version was removed from game)
-			un(REMOVED_FROM_GAME, i(29718)),	-- Pattern: Drums of Speed (BoE version was removed from game)
+			i(29714),	-- Pattern: Drums of Restoration
+			i(29718),	-- Pattern: Drums of Speed
 			i(29730),	-- Pattern: Earthen Netherscale Boots
 			i(29727),	-- Pattern: Gloves of the Living Touch (BoE version)
 			i(29726),	-- Pattern: Hood of Primal Life

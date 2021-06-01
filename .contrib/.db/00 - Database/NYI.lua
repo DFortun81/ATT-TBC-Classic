@@ -53,9 +53,6 @@ _.NeverImplemented =
 		-- #endif
 	}),
 	q(63769),	-- Holiday Reset Yearly Quest
-	
-	i(8388),	-- Pattern: Nightscape Cloak
-	i(15780),	-- Pattern: Onyxia Scale Breastplate
 	q(7069),	-- "<UNUSED>" quest
 	q(55296),	-- This quest was reported as missing on Discord, but has no information related to it similar to 6842 and 7069.
 	q(3366),	-- The Glowing Shard [Quests #6981 and #3366 look identical, but WoWHead doesn't have much info on 3366]
@@ -74,15 +71,6 @@ _.NeverImplemented =
 		},
 	})),
 	
-	un(NEVER_IMPLEMENTED, i(15141)),	-- Onyxia Scale Breastplate (never made it out of Beta)
-	un(NEVER_IMPLEMENTED, {
-		["name"] = "Onyxia Scale Breastplate",
-		["recipeID"] = 19106,
-	}),
-	un(NEVER_IMPLEMENTED, {
-		["name"] = "Nightscape Cloak",
-		["recipeID"] = 10550,
-	}),
 	-- Arathi Highlands
 	q(636),	-- Legends of the Earth <NYI>
 	

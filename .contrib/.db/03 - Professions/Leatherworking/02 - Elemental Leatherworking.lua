@@ -116,7 +116,7 @@ profession(LEATHERWORKING, {
 				["name"] = "Cloaks",
 				["categoryID"] = 259,
 				["g"] = {
-					un(PHASE_ONE_DIRE_MAUL, {
+					un(PHASE_ONE_DIREMAUL, {
 						["name"] = "Shifting Cloak",
 						["recipeID"] = 22928,
 						["requireSkill"] = 10658,

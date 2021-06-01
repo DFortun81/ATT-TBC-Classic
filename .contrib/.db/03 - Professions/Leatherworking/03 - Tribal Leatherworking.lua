@@ -142,7 +142,7 @@ profession(LEATHERWORKING, {
 				["name"] = "Cloaks",
 				["categoryID"] = 259,
 				["g"] = {
-					un(PHASE_ONE_DIRE_MAUL, {
+					un(PHASE_ONE_DIREMAUL, {
 						["name"] = "Hide of the Wild",
 						["recipeID"] = 22927,
 						["requireSkill"] = 10660,

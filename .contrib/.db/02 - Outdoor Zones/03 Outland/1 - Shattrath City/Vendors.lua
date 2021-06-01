@@ -643,6 +643,7 @@ _.Zones =
 						i(35345),	-- Evoker's Silk Handguards
 						i(28273),	-- Formula: Enchant Gloves - Major Healing
 						i(33153),	-- Formula: Enchant Gloves - Threat
+						i(22537),	-- Formula: Enchant Ring - Healing Power
 						i(28281),	-- Formula: Enchant Weapon - Major Healing
 						i(29175),	-- Gavel of Pure Light
 						i(35362),	-- Kodohide Helm
@@ -659,6 +660,9 @@ _.Zones =
 						i(35395),	-- Seer's Ringmail Shoulderpads
 						i(31781),	-- Sha'tar Tabard
 						i(35380),	-- Stalker's Chain Spaulders
+						i(30634, {	-- Warpforged Key
+							["timeline"] = { "removed 4.2.0.10000" },
+						}),
 						i(35375),	-- Wyrmhide Robe
 						i(29179),	-- Xi'ri's Gift
 					},
@@ -1035,6 +1039,7 @@ _.Zones =
 					["coord" ] = { 62.6, 69.0, SHATTRATH_CITY },
 					["minReputation"] = { 1011, NEUTRAL },	-- Lower City, Neutral.
 					["groups"] = {
+						i(30633),	-- Auchenai Key
 						i(35405),	-- Crusader's Ornamented Leggings
 						i(35412),	-- Crusader's Scaled Chestpiece
 						i(33157),	-- Design: Falling Star
@@ -1045,6 +1050,7 @@ _.Zones =
 						i(35331),	-- Dreadweave Mantle
 						i(35344),	-- Evoker's Silk Cowl
 						i(33148),	-- Formula: Enchant Cloak - Dodge
+						i(22538),	-- Formula: Enchant Ring - Stats
 						i(30832),	-- Gavel of Unearthed Secrets
 						i(35361),	-- Kodohide Gloves
 						i(30836),	-- Leggings of the Skettis Exile
@@ -1053,6 +1059,7 @@ _.Zones =
 						i(35335),	-- Mooncloth Mitts
 						i(35370),	-- Opportunist's Leather Tunic
 						i(30833),	-- Pattern: Cloak of Arcane Evasion
+						i(34200),	-- Pattern: Quiver of a Thousand Feathers
 						i(22910),	-- Recipe: Elixir of Major Shadow Power
 						i(30835),	-- Salvager's Hauberk
 						i(35340),	-- Satin Leggings

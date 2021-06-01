@@ -602,7 +602,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(5474),	-- Roasted Kodo Meat
 			applyclassicphase(TBC_PHASE_ONE, i(24105)),	-- Roasted Moongraze Tenderloin
 			i(4594),	-- Rockscale Cod
-			applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18254)),	-- Runn Tum Tuber Surprise
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18254)),	-- Runn Tum Tuber Surprise
 			i(21217),	-- Sagefish Delight
 			i(5473),	-- Scorpid Surprise
 			i(1017),	-- Seasoned Wolf Kabob
@@ -1068,7 +1068,7 @@ _.Craftables = { tier(1, {	-- Classic
 					i(16984),	-- Black Dragonscale Boots
 				}),
 				category(259, {	-- Cloaks
-					applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18509)),	-- Chromatic Cloak
+					applyclassicphase(PHASE_ONE_DIREMAUL, i(18509)),	-- Chromatic Cloak
 				}),
 			},
 		}),
@@ -1102,7 +1102,7 @@ _.Craftables = { tier(1, {	-- Classic
 					i(15054),	-- Volcanic Leggings
 				}),
 				category(259, {	-- Cloaks
-					applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18511)),	-- Shifting Cloak
+					applyclassicphase(PHASE_ONE_DIREMAUL, i(18511)),	-- Shifting Cloak
 				}),
 			},
 		}),
@@ -1142,7 +1142,7 @@ _.Craftables = { tier(1, {	-- Classic
 					i(15071),	-- Frostsaber Boots
 				}),
 				category(259, {	-- Cloaks
-					applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18510)),	-- Hide of the Wild
+					applyclassicphase(PHASE_ONE_DIREMAUL, i(18510)),	-- Hide of the Wild
 				}),
 			},
 		}),
@@ -1152,7 +1152,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(4233),	-- Cured Medium Hide
 			i(15407),	-- Cured Rugged Hide
 			i(8172),	-- Cured Thick Hide
-			applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18258)),	-- Gordok Ogre Suit
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18258)),	-- Gordok Ogre Suit
 			i(4234),	-- Heavy Leather
 			i(2318),	-- Light Leather
 			i(2319),	-- Medium Leather
@@ -1288,7 +1288,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(7387),	-- Dusky Belt
 				i(4246),	-- Fine Leather Belt
 				i(4262),	-- Gem-Studded Leather Belt
-				applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18504)),	-- Girdle of Insight
+				applyclassicphase(PHASE_ONE_DIREMAUL, i(18504)),	-- Girdle of Insight
 				i(4257),	-- Green Leather Belt
 				i(4258),	-- Guardian Belt
 				i(4237),	-- Handstitched Leather Belt
@@ -1327,7 +1327,7 @@ _.Craftables = { tier(1, {	-- Classic
 				i(2309),	-- Embossed Leather Boots
 				i(2307),	-- Fine Leather Boots
 				i(2302),	-- Handstitched Leather Boots
-				applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18506)),	-- Mongoose Boots
+				applyclassicphase(PHASE_ONE_DIREMAUL, i(18506)),	-- Mongoose Boots
 				i(8197),	-- Nightscape Boots
 				i(7391),	-- Swift Boots
 				i(8213),	-- Wild Leather Boots
@@ -1356,7 +1356,7 @@ _.Craftables = { tier(1, {	-- Classic
 				applyclassicphase(PHASE_SIX, i(22665)),	-- Icy Scale Bracers
 				applyclassicphase(PHASE_FOUR, i(20476)),	-- Sandstalker Bracers
 				applyclassicphase(PHASE_FOUR, i(20481)),	-- Spitfire Bracers
-				applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18508)),	-- Swift Flight Bracers
+				applyclassicphase(PHASE_ONE_DIREMAUL, i(18508)),	-- Swift Flight Bracers
 				i(8205),	-- Tough Scorpid Bracers
 				i(8198),	-- Turtle Scale Bracers
 			}),
@@ -1473,7 +1473,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(14048),	-- Bolt of Runecloth
 			i(4305),	-- Bolt of Silk Cloth
 			i(2997),	-- Bolt of Woolen Cloth
-			applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18258)),	-- Gordok Ogre Suit
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18258)),	-- Gordok Ogre Suit
 			i(14342),	-- Mooncloth
 		}),
 		category(233, {	-- Bags
@@ -1593,7 +1593,7 @@ _.Craftables = { tier(1, {	-- Classic
 		}),
 		category(238, {	-- Belts
 			i(7052),	-- Azure Silk Belt
-			applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18405)),	-- Belt of the Archmage
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18405)),	-- Belt of the Archmage
 			i(7055),	-- Crimson Silk Belt
 			i(7061),	-- Earthen Silk Belt
 			i(14143),	-- Ghostweave Belt
@@ -1611,7 +1611,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(14043),	-- Cindercloth Gloves
 			i(7064),	-- Crimson Silk Gloves
 			i(10019),	-- Dreamweave Gloves
-			applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18407)),	-- Felcloth Gloves
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18407)),	-- Felcloth Gloves
 			i(16979),	-- Flarecore Gloves
 			i(13870),	-- Frostweave Gloves
 			i(14142),	-- Ghostweave Gloves
@@ -1621,8 +1621,8 @@ _.Craftables = { tier(1, {	-- Classic
 			i(7047),	-- Hands of Darkness
 			i(4307),	-- Heavy Linen Gloves
 			i(4310),	-- Heavy Woolen Gloves
-			applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18408)),	-- Inferno Gloves
-			applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18409)),	-- Mooncloth Gloves
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18408)),	-- Inferno Gloves
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18409)),	-- Mooncloth Gloves
 			i(4331),	-- Phoenix Gloves
 			i(10018),	-- Red Mageweave Gloves
 			i(13863),	-- Runecloth Gloves
@@ -1679,7 +1679,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(14103),	-- Brightcloth Cloak
 			i(14044),	-- Cindercloth Cloak
 			i(14134),	-- Cloak of Fire
-			applyclassicphase(PHASE_ONE_DIRE_MAUL, i(18413)),	-- Cloak of Warding
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18413)),	-- Cloak of Warding
 			i(7056),	-- Crimson Silk Cloak
 			applyclassicphase(PHASE_FIVE_CATCH_UP, i(22660)),	-- Gaea's Embrace
 			applyclassicphase(PHASE_SIX, i(22658)),	-- Glacial Cloak
