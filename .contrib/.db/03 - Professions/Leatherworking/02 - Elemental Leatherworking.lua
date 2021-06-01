@@ -7,7 +7,55 @@ profession(LEATHERWORKING, {
 		},
 		["groups"] = {
 			-- #if AFTER TBC
-			-- TODO: Move new Elemental Leatherworking recipes here.
+			{
+				["name"] = "Chest",
+				["categoryID"] = 932,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Primalstorm Breastplate",
+						["recipeID"] = 36077,
+						["requireSkill"] = 10658,
+					}),
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Primalstrike Vest",
+						["recipeID"] = 35589,
+						["requireSkill"] = 10658,
+					}),
+				}
+			},
+			{
+				["name"] = "Bracers",
+				["categoryID"] = 933,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Primalstrike Bracers",
+						["recipeID"] = 35591,
+						["requireSkill"] = 10658,
+					}),
+				}
+			},
+			{
+				["name"] = "Belts",
+				["categoryID"] = 935,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Primalstrike Belt",
+						["recipeID"] = 35590,
+						["requireSkill"] = 10658,
+					}),
+				}
+			},
+			{
+				["name"] = "Pants",
+				["categoryID"] = 936,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Blackstorm Leggings",
+						["recipeID"] = 36074,
+						["requireSkill"] = 10658,
+					}),
+				},
+			},
 			-- #else
 			{
 				["name"] = "Helms",
