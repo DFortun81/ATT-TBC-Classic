@@ -78,10 +78,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(22900, {	-- Recipe: Elixir of Camouflage
-							["spellID"] = 28543,	-- Elixir of Camouflage
-							["requireSkill"] = ALCHEMY,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),
@@ -90,10 +87,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						i(22900, {	-- Recipe: Elixir of Camouflage
-							["spellID"] = 28543,	-- Elixir of Camouflage
-							["requireSkill"] = ALCHEMY,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),
@@ -305,14 +299,8 @@ _.Zones =
 							["timeline"] = { "removed 4.0.1.10000" },
 						}),
 						i(23619),	-- Plans: Felsteel Shield Spike
-						i(22905, {	-- Recipe: Elixir of Major Agility
-							["spellID"] = 28553,	-- Elixir of Major Agility
-							["requireSkill"] = ALCHEMY,
-						}),
-						i(25870, {	-- Recipe: Transmute Skyfire Diamond
-							["spellID"] = 32766,	-- Transmute Skyfire Diamond
-							["requireSkill"] = ALCHEMY,
-						}),
+						i(22905),	-- Recipe: Elixir of Major Agility
+						i(25870),	-- Recipe: Transmute Skyfire Diamond
 						i(29169),	-- Ring of Convalescence
 						i(25826),	-- Sage's Band
 						i(35466),	-- Satin Hood
@@ -411,14 +399,8 @@ _.Zones =
 							["timeline"] = { "removed 4.0.1.10000" },
 						}),
 						i(24002),	-- Plans: Felsteel Shield Spike
-						i(24001, {	-- Recipe: Elixir of Major Agility
-							["spellID"] = 28553,	-- Elixir of Major Agility
-							["requireSkill"] = ALCHEMY,
-						}),
-						i(29232, {	-- Recipe: Transmute Skyfire Diamond
-							["spellID"] = 32766,	-- Transmute Skyfire Diamond
-							["requireSkill"] = ALCHEMY,
-						}),
+						i(24001),	-- Recipe: Elixir of Major Agility
+						i(29232),	-- Recipe: Transmute Skyfire Diamond
 						i(35339),	-- Satin Hood
 						i(35409),	-- Savage Plate Helm
 						i(35383),	-- Seer's Linked Helm

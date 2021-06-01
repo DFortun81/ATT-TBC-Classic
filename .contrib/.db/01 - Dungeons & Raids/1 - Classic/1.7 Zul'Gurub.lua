@@ -1016,7 +1016,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FOUR }, {	-- Classic
 						i(20012),	-- Recipe: Greater Dreamless Sleep Potion
 						i(20013),	-- Recipe: Living Action Potion
 						i(20011),	-- Recipe: Mageblood Potion
-						i(20014),	-- Recipe: Mighty Troll's Blood Potion
+						i(20014),	-- Recipe: Major Troll's Blood Potion
 						i(20000),	-- Schematic: Bloodvine Goggles
 						i(20001),	-- Schematic: Bloodvine Lens
 					},

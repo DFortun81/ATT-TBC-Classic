@@ -323,6 +323,7 @@ app.L = {
 		[-30] = FACTION_ALLIANCE,												-- Alliance
 		[-31] = FACTION_HORDE, 													-- Horde
 		[-32] = "Honor Titles",													-- Honor Titles
+		[-37] = BATTLE_PET_SOURCE_11,											-- Discovery
 -- World Events
 		[-47] = "Lunar Festival",												-- Lunar Festival
 		[-50] = "Love is in the Air",											-- Love is in the Air

@@ -56,10 +56,6 @@ _.NeverImplemented =
 	
 	i(8388),	-- Pattern: Nightscape Cloak
 	i(15780),	-- Pattern: Onyxia Scale Breastplate
-	i(13517),	-- Recipe: Alchemists' Stone
-	i(5641),	-- Recipe: Cowardly Flight Potion
-	i(2556),	-- Recipe: Elixir of Tongues
-	i(13500),	-- Recipe: Greater Holy Protection Potion
 	q(7069),	-- "<UNUSED>" quest
 	q(55296),	-- This quest was reported as missing on Discord, but has no information related to it similar to 6842 and 7069.
 	q(3366),	-- The Glowing Shard [Quests #6981 and #3366 look identical, but WoWHead doesn't have much info on 3366]

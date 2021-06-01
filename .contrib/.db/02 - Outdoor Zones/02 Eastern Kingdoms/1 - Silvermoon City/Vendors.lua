@@ -128,16 +128,10 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						i(22900, {	-- Recipe: Elixir of Camouflage
-							["spellID"] = 28543,	-- Elixir of Camouflage
-							["requireSkill"] = ALCHEMY,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 						i(23574, {	-- Recipe: Transmute Primal Might
-							["spellID"] = 29688,	-- Transmute Primal Might
-							["requireSkill"] = ALCHEMY,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),

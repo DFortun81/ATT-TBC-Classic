@@ -29,18 +29,7 @@ _.Zones =
 							["requireSkill"] = LEATHERWORKING,
 							["f"] = 200,
 						}),
-						i(33209, {	-- Recipe: Flask of Chromatic Wonder
-							-- #if BEFORE MOP
-							["spellID"] = 42736,	-- Flask of Chromatic Wonder
-							["requireSkill"] = ALCHEMY,
-							["f"] = 200,
-							-- #else
-							["spellID"] = 0,
-							-- #endif
-							["timeline"] = {
-								"removed 5.0.1.20000"
-							},
-						}),
+						i(33209),	-- Recipe: Flask of Chromatic Wonder
 						i(29187),	-- Inscription of Endurance
 						-- #if BEFORE CATA
 						i(34581, {	-- Mysterious Arrow

@@ -1341,10 +1341,7 @@ _.Zones =
 					["minReputation"] = { 1011, NEUTRAL },	-- Lower City, Neutral.
 					["groups"] = {
 						i(23574, {	-- Recipe: Transmute Primal Might
-							["spellID"] = 29688,	-- Transmute Primal Might
-							["requireSkill"] = ALCHEMY,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
 					},
 				}),
