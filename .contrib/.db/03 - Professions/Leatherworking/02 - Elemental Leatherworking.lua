@@ -9,7 +9,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Helms",
 				["categoryID"] = 251,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Helm of Fire",
 						["recipeID"] = 10632,
@@ -25,7 +25,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Shoulders",
 				["categoryID"] = 252,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Living Shoulders",
 						["recipeID"] = 19061,
@@ -46,7 +46,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Chest",
 				["categoryID"] = 253,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Living Breastplate",
 						["recipeID"] = 19095,
@@ -67,7 +67,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Gloves",
 				["categoryID"] = 255,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Gauntlets of the Sea",
 						["recipeID"] = 10630,
@@ -83,7 +83,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Belts",
 				["categoryID"] = 256,
-				["g"] = {
+				["groups"] = {
 					un(PHASE_THREE, {
 						["name"] = "Molten Belt",
 						["recipeID"] = 23710,
@@ -94,7 +94,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Pants",
 				["categoryID"] = 257,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Living Leggings",
 						["recipeID"] = 19078,
@@ -115,7 +115,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Cloaks",
 				["categoryID"] = 259,
-				["g"] = {
+				["groups"] = {
 					un(PHASE_ONE_DIREMAUL, {
 						["name"] = "Shifting Cloak",
 						["recipeID"] = 22928,

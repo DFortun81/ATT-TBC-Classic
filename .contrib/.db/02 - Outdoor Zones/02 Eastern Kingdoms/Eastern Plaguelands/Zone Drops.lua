@@ -141,7 +141,7 @@ _.Zones =
 				i(16242, {	-- Formula: Enchant Chest - Major Mana
 					["cr"] = 9452,	-- Scarlet Enchanter
 				}),
-				i(16222, {	-- Formula: Enchant Chest - Superior Spirit
+				i(16222, {	-- Formula: Enchant Shield - Superior Spirit
 					["cr"] = 9447,	-- Scarlet Warder
 				}),
 				i(18512, {	-- Larval Acid
