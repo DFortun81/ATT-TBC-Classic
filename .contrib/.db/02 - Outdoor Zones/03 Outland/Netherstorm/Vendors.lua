@@ -1,6 +1,7 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+local ASARNAN_MALIJ_GROUPS = {};
 _.Zones =
 {
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
@@ -8,12 +9,7 @@ _.Zones =
 			n(VENDORS, {
 				n(19540,  {	-- Asarnan <Enchanting Trainer>
 					["coord"] = { 44.2, 33.6, NETHERSTORM },
-					["g"] = {
-						i(20753),    -- Formula: Lesser Wizard Oil
-						i(20752),    -- Formula: Minor Mana Oil
-						i(20758),    -- Formula: Minor Wizard Oil
-						i(22307),    -- Pattern: Enchanted Mageweave Pouch
-					},
+					["g"] = ASARNAN_MALIJ_GROUPS,
 				}),
 				n(26352,  {	-- Big Zokk Torquewrench >Season 6< Elite
 					["u"] = REMOVED_FROM_GAME,
@@ -778,12 +774,7 @@ _.Zones =
 				}),
 				n(19537,  {	-- Dealer Malij <Enchanting Supplies>
 					["coord"] = { 44.2, 34.0, NETHERSTORM },
-					["g"] = {
-						i(20753),    -- Formula: Lesser Wizard Oil
-						i(20752),    -- Formula: Minor Mana Oil
-						i(20758),    -- Formula: Minor Wizard Oil
-						i(22307),    -- Pattern: Enchanted Mageweave Pouch
-					},
+					["g"] = ASARNAN_MALIJ_GROUPS,
 				}),
 				n(20980,  {	-- Dealer Rashaad <Exotic Creatures>
 					["coord"] = { 43.4, 35.2, NETHERSTORM },
@@ -1888,3 +1879,12 @@ _.Zones =
 		}),
 	})),
 };
+
+-- Add in the items that aren't locked by phase.
+local COMMON_ENCHANTING_RECIPES = {
+	i(20753),	-- Formula: Lesser Wizard Oil
+	i(20752),	-- Formula: Minor Mana Oil
+	i(20758),	-- Formula: Minor Wizard Oil
+	i(22307),	-- Pattern: Enchanted Mageweave Pouch
+};
+appendGroups(COMMON_ENCHANTING_RECIPES, ASARNAN_MALIJ_GROUPS);

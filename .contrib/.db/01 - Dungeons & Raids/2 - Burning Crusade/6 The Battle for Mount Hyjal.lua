@@ -885,21 +885,13 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_THREE, {	-- Burning Crusade
 						["requireSkill"] = LEATHERWORKING,
 						["f"] = 200,
 					}),
-					i(32755, {	-- Pattern: Mantle of Nimble Thought
-						["spellID"] = 41206,	-- Mantle of Nimble Thought
-						["requireSkill"] = TAILORING,
-						["f"] = 200,
-					}),
+					i(32755),	-- Pattern: Mantle of Nimble Thought
 					i(32745, {	-- Pattern: Shoulderpads of Renewed Life
 						["spellID"] = 41157,	-- Shoulderpads of Renewed Life
 						["requireSkill"] = LEATHERWORKING,
 						["f"] = 200,
 					}),
-					i(32752, {	-- Pattern: Swiftheal Wraps
-						["spellID"] = 41207,	-- Swiftheal Wraps
-						["requireSkill"] = TAILORING,
-						["f"] = 200,
-					}),
+					i(32752),	-- Pattern: Swiftheal Wraps
 					i(32746, {	-- Pattern: Swiftstrike Bracers
 						["spellID"] = 41158,	-- Swiftstrike Bracers
 						["requireSkill"] = LEATHERWORKING,

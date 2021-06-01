@@ -75,11 +75,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_TWO, {	-- Burning Crusade
 					19622,	-- Kael'thas Sunstrider
 				},
 				["g"] = {
-					i(30280, {	-- Pattern: Belt of Blasting
-						["spellID"] = 36315,	-- Belt of Blasting
-						["requireSkill"] = TAILORING,
-						["f"] = 200,	-- Recipe
-					}),
+					i(30280),	-- Pattern: Belt of Blasting
 					i(30302, {	-- Pattern: Belt of Deep Shadow
 						["spellID"] = 36351,	-- Belt of Deep Shadow
 						["requireSkill"] = LEATHERWORKING,
@@ -95,16 +91,8 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_TWO, {	-- Burning Crusade
 						["requireSkill"] = LEATHERWORKING,
 						["f"] = 200,	-- Recipe
 					}),
-					i(30281, {	-- Pattern: Belt of the Long Road
-						["spellID"] = 36316,	-- Belt of the Long Road
-						["requireSkill"] = TAILORING,
-						["f"] = 200,	-- Recipe
-					}),
-					i(30282, {	-- Pattern: Boots of Blasting
-						["spellID"] = 36317,	-- Boots of Blasting
-						["requireSkill"] = TAILORING,
-						["f"] = 200,	-- Recipe
-					}),
+					i(30281),	-- Pattern: Belt of the Long Road
+					i(30282),	-- Pattern: Boots of Blasting
 					i(30305, {	-- Pattern: Boots of Natural Grace
 						["spellID"] = 36355,	-- Boots of Natural Grace
 						["requireSkill"] = LEATHERWORKING,
@@ -115,11 +103,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_TWO, {	-- Burning Crusade
 						["requireSkill"] = LEATHERWORKING,
 						["f"] = 200,	-- Recipe
 					}),
-					i(30283, {	-- Pattern: Boots of the Long Road
-						["spellID"] = 36318,	-- Boots of the Long Road
-						["requireSkill"] = TAILORING,
-						["f"] = 200,	-- Recipe
-					}),
+					i(30283),	-- Pattern: Boots of the Long Road
 					i(30306, {	-- Pattern: Boots of Utter Darkness
 						["spellID"] = 36357,	-- Boots of Utter Darkness
 						["requireSkill"] = LEATHERWORKING,

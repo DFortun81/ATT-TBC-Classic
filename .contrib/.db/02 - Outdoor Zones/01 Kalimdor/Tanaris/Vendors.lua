@@ -37,26 +37,16 @@ _.Zones =
 						i(13946),	-- Recipe: Poached Sunscale Salmon
 					},
 				}),
+				-- #if AFTER TBC
 				n(15165, {	-- Haughty Modiste <Fashion Designer>
 					["coord"] = { 66.6, 22.2, TANARIS },
-					["groups"] = applyclassicphase(TBC_PHASE_ONE, {
-						i(37915, {	-- Dress Shoes
-							["timeline"] = { "added 2.4.2.8301" },
-							["requireSkill"] = TAILORING,
-							["spellID"] = 49677,
-						}),
-						i(38327, {	-- Pattern: Haliscan Jacket
-							["timeline"] = { "added 2.4.2.8301" },
-							["requireSkill"] = TAILORING,
-							["spellID"] = 50644,
-						}),
-						i(38328, {	-- Pattern: Haliscan Pantaloons
-							["timeline"] = { "added 2.4.2.8301" },
-							["requireSkill"] = TAILORING,
-							["spellID"] = 50647,
-						}),
-					}),
+					["groups"] = {
+						i(37915),	-- Dress Shoes
+						i(38327),	-- Pattern: Haliscan Jacket
+						i(38328),	-- Pattern: Haliscan Pantaloons
+					},
 				}),
+				-- #endif
 				n(8139, {	-- Jabbey <General Goods>
 					["coord"] = { 67.0, 22.0, TANARIS },
 					["groups"] = {

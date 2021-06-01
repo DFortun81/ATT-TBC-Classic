@@ -74,9 +74,6 @@ _.NeverImplemented =
 		},
 	})),
 	
-	un(NEVER_IMPLEMENTED, {	-- Greater Holy Protection Potion
-		["recipeID"] = 17579,
-	}),
 	un(NEVER_IMPLEMENTED, i(15141)),	-- Onyxia Scale Breastplate (never made it out of Beta)
 	un(NEVER_IMPLEMENTED, {
 		["name"] = "Onyxia Scale Breastplate",
@@ -86,9 +83,6 @@ _.NeverImplemented =
 		["name"] = "Nightscape Cloak",
 		["recipeID"] = 10550,
 	}),
-	
-	un(NEVER_IMPLEMENTED, i(24315)),	-- Pattern: Heavy Netherweave Net
-	
 	-- Arathi Highlands
 	q(636),	-- Legends of the Earth <NYI>
 	

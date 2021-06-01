@@ -40,11 +40,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_FIVE, {	-- Burning Crusade
 					["requireSkill"] = LEATHERWORKING,
 					["f"] = 200,
 				}),
-				i(35205, {	-- Pattern: Hands of Eternal Light
-					["spellID"] = 46129,	-- Hands of Eternal Light
-					["requireSkill"] = TAILORING,
-					["f"] = 200,
-				}),
+				i(35205),	-- Pattern: Hands of Eternal Light
 				i(35216, {	-- Pattern: Leather Chestguard of the Sun
 					["spellID"] = 46136,	-- Leather Chestguard of the Sun
 					["requireSkill"] = LEATHERWORKING,
@@ -55,11 +51,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_FIVE, {	-- Burning Crusade
 					["requireSkill"] = LEATHERWORKING,
 					["f"] = 200,
 				}),
-				i(35207, {	-- Pattern: Robe of Eternal Light
-					["spellID"] = 46131,	-- Robe of Eternal Light
-					["requireSkill"] = TAILORING,
-					["f"] = 200,
-				}),
+				i(35207),	-- Pattern: Robe of Eternal Light
 				i(35219, {	-- Pattern: Sun-Drenched Scalee Chestguard
 					["spellID"] = 46139,	-- Sun-Drenched Scalee Chestguard
 					["requireSkill"] = LEATHERWORKING,
@@ -70,16 +62,8 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_FIVE, {	-- Burning Crusade
 					["requireSkill"] = LEATHERWORKING,
 					["f"] = 200,
 				}),
-				i(35204, {	-- Pattern: Sunfire Handwraps
-					["spellID"] = 46128,	-- Sunfire Handwraps
-					["requireSkill"] = TAILORING,
-					["f"] = 200,
-				}),
-				i(35206, {	-- Pattern: Sunfire Robe
-					["spellID"] = 46130,	-- Sunfire Robe
-					["requireSkill"] = TAILORING,
-					["f"] = 200,
-				}),
+				i(35204),	-- Pattern: Sunfire Handwraps
+				i(35206),	-- Pattern: Sunfire Robe
 				i(35209),	-- Plans: Hard Khorium Battlefists
 				i(35211),	-- Plans: Hard Khorium Battleplate
 				i(35210),	-- Plans: Sunblessed Breastplate

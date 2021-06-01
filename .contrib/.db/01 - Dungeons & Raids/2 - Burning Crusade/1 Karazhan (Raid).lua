@@ -651,15 +651,9 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					["cr"] = 16472,	-- Phantom Stagehand
 				}),
 				i(21903, {	-- Pattern: Soulcloth Shoulders
-					["spellID"] = 26780,	-- Soulcloth Shoulders
-					["requireSkill"] = TAILORING,
-					["f"] = 200,	-- Recipe
 					["cr"] = 16406,	-- Phantom Attendant
 				}),
 				i(21904, {	-- Pattern: Soulcloth Vest
-					["spellID"] = 26781,	-- Soulcloth Vest
-					["requireSkill"] = TAILORING,
-					["f"] = 200,	-- Recipe
 					["cr"] = 16408,	-- Phantom Valet
 				}),
 				i(30642),	-- Drape of the Righteous
@@ -793,9 +787,6 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 						},
 						["groups"] = {
 							i(138017, {	-- Clothes Chest Pattern: Karazhan Opera House
-								["spellID"] = 213036,	-- Clothes Chest: Karazhan Opera House
-								["requireSkill"] = TAILORING,
-								["f"] = 200,	-- Recipe
 								["timeline"] = {
 									"created 7.0.3.22248",
 									"added 7.0.3.22248"

@@ -150,27 +150,12 @@ _.Zones =
 					["coord"] = { 64.7, 68.5, THE_EXODAR },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = appendGroups(COMMON_CATACLYSM_TAILORING_RECIPES, {
-						i(21892, {	-- Pattern: Bolt of Imbued Netherweave
-							["spellID"] = 26747,	-- Bolt of Imbued Netherweave
-							["requireSkill"] = TAILORING,
-							["f"] = 200,
-						}),
+						i(21892),	-- Pattern: Bolt of Imbued Netherweave
 						i(21894, {	-- Pattern: Bolt of Soulcloth
-							["spellID"] = 26750,	-- Bolt of Soulcloth
-							["requireSkill"] = TAILORING,
 							["isLimited"] = true,
-							["f"] = 200,
 						}),
-						i(21896, {	-- Pattern: Netherweave Robe
-							["spellID"] = 26773,	-- Netherweave Robe
-							["requireSkill"] = TAILORING,
-							["f"] = 200,
-						}),
-						i(21897, {	-- Pattern: Netherweave Tunic
-							["spellID"] = 26774,	-- Netherweave Tunic
-							["requireSkill"] = TAILORING,
-							["f"] = 200,
-						}),
+						i(21896),	-- Pattern: Netherweave Robe
+						i(21897),	-- Pattern: Netherweave Tunic
 					}),
 				}),
 				n(16718, {	-- Phea <Cooking Supplies>
@@ -231,9 +216,5 @@ for i,o in ipairs({
 	i(20753),	-- Formula: Lesser Wizard Oil
 	i(20752),	-- Formula: Minor Mana Oil
 	i(20758),	-- Formula: Minor Wizard Oil
-	i(22307, {	-- Pattern: Enchanted Mageweave Pouch
-		["spellID"] = 27658,	-- Enchanted Mageweave Pouch
-		["requireSkill"] = TAILORING,
-		["f"] = 200,
-	}),
+	i(22307),	-- Pattern: Enchanted Mageweave Pouch
 }) do table.insert(EGOMIS_GROUPS, o); end
