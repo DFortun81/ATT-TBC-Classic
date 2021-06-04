@@ -619,6 +619,16 @@ profession(ENGINEERING, {
 	}),
 	applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		{
+			["name"] = "Bullets",
+			["categoryID"] = 1,
+			["g"] = {
+				{
+					["name"] = "Fel Iron Shells",
+					["recipeID"] = 30346
+				},
+			}
+		},
+		{
 			["name"] = "Reagents",
 			["categoryID"] = 750,
 			["g"] = {
