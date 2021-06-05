@@ -2805,29 +2805,25 @@ profession(COOKING, {
 			},
 			["lvl"] = 40,
 		}),
-		q(11380, {	-- Manalicious
+		applyclassicphase(TBC_PHASE_ONE, q(11380, {	-- Manalicious
 			["qg"] = 24393,	-- The Rokk <Master of Cooking>
-			["coords"] = {
-				{ 61.6, 16.6, SHATTRATH_CITY },
-				{ 48, 54, NETHERSTORM },
-			},
+			["coord"] = { 61.6, 16.6, SHATTRATH_CITY },
 			["maps"] = { SHATTRATH_CITY, NETHERSTORM },
-			["cost"] = {
-				{ "i", 33849, 15 },	-- Mana Berry
-			},
+			["requireSkill"] = COOKING,
 			["isDaily"] = true,
-			-- #if ANYCLASSIC
-			["u"] = TBC_PHASE_ONE,
-			-- #endif
 			["lvl"] = 70,
 			["groups"] = {
+				objective(1, {	-- 0/15 Mana Berry
+					["provider"] = { "i", 33849 },	-- Mana Berry
+					["coord"] = { 48, 54, NETHERSTORM },
+				}),
 				crit(3, {	-- Manalicious
 					["achievementID"] = 906,	-- Kickin' It Up a Notch
 				}),
 				i(33844),	-- Barrel of Fish
 				i(33857),	-- Crate of Meat
 			},
-		}),
+		})),
 		q(4161, {	-- Recipe of the Kaldorei
 			["qg"] = 6286,	-- Zarrin
 			["requireSkill"] = COOKING,
@@ -2844,37 +2840,31 @@ profession(COOKING, {
 				}),
 			},
 		}),
-		q(11377, {	-- Revenge is Tasty
+		applyclassicphase(TBC_PHASE_ONE, q(11377, {	-- Revenge is Tasty
 			["qg"] = 24393,	-- The Rokk <Master of Cooking>
 			["coord"] = { 61.6, 16.6, SHATTRATH_CITY },
 			["maps"] = { SHATTRATH_CITY, TEROKKAR_FOREST },
-			["cost"] = {
-				{ "i", 33839, 1 },	-- Kaliri Stew
-			},
+			["requireSkill"] = COOKING,
 			["isDaily"] = true,
-			-- #if ANYCLASSIC
-			["u"] = TBC_PHASE_ONE,
-			-- #endif
 			["lvl"] = 70,
 			["groups"] = {
-				crit(1, {	-- Revenge is Tasty
-					["achievementID"] = 906,	-- Kickin' It Up a Notch
-				}),
-				i(33837, {	-- Cooking Pot
+				objective(1, {	-- 0/1 Kaliri Stew
+					["provider"] = { "i", 33839 },	-- Kaliri Stew
 					["coord"] = { 68.4, 79.0, TEROKKAR_FOREST },
 					["cr"] = 23051,	-- Monstrous Kaliri
 					["cost"] = {
+						{ "i", 33837, 1 },	-- Cooking Pot
 						{ "i", 27659, 3 },	-- Warp Burger
 						{ "i", 33838, 1 },	-- Giant Kaliri Wing
 					},
-					["groups"] = {
-						i(33839),	-- Kaliri Stew
-					},
+				}),
+				crit(1, {	-- Revenge is Tasty
+					["achievementID"] = 906,	-- Kickin' It Up a Notch
 				}),
 				i(33844),	-- Barrel of Fish
 				i(33857),	-- Crate of Meat
 			},
-		}),
+		})),
 		q(8313, {	-- Sharing the Knowledge
 			["provider"] = { "o", 180503 },	-- Sandy Cookbook
 			["sourceQuest"] = 8307,	-- Desert Recipe
@@ -2931,66 +2921,54 @@ profession(COOKING, {
 				i(3729),	-- Soothing Turtle Bisque
 			},
 		}),
-		q(11381, {	-- Soup for the Soul
+		applyclassicphase(TBC_PHASE_ONE, q(11381, {	-- Soup for the Soul
 			["qg"] = 24393,	-- The Rokk <Master of Cooking>
 			["coord"] = { 61.6, 16.6, SHATTRATH_CITY },
 			["maps"] = { SHATTRATH_CITY, NAGRAND },
-			["cost"] = {
-				{ "i", 33850, 1 },	-- Spiritual Soup
-			},
+			["requireSkill"] = COOKING,
 			["isDaily"] = true,
-			-- #if ANYCLASSIC
-			["u"] = TBC_PHASE_ONE,
-			-- #endif
 			["lvl"] = 70,
 			["groups"] = {
+				objective(1, {	-- 0/1 Spiritual Soup
+					["provider"] = { "i", 33850 },	-- Spiritual Soup
+					["coord"] = { 25.81, 59.40, NAGRAND },
+					["cost"] = {
+						{ "i", 33851, 1 },	-- Cooking Pot
+						{ "i", 27658, 4 },	-- Roasted Clefthoof
+					},
+				}),
 				crit(4, {	-- Soup for the Soul
 					["achievementID"] = 906,	-- Kickin' It Up a Notch
 				}),
-				i(33851, {	-- Cooking Pot
-					["coord"] = { 26, 58, NAGRAND },
-					["cost"] = {
-						{ "i", 27658, 4 },	-- Roasted Clefthoof
-					},
-					["groups"] = {
-						i(33850),	-- Spiritual Soup
-					},
-				}),
 				i(33844),	-- Barrel of Fish
 				i(33857),	-- Crate of Meat
 			},
-		}),
-		q(11379, {	-- Super Hot Stew
+		})),
+		applyclassicphase(TBC_PHASE_ONE, q(11379, {	-- Super Hot Stew
 			["qg"] = 24393,	-- The Rokk <Master of Cooking>
 			["coord"] = { 61.6, 16.6, SHATTRATH_CITY },
 			["maps"] = { SHATTRATH_CITY, BLADES_EDGE_MOUNTAINS },
-			["cost"] = {
-				{ "i", 33848, 1 },	-- Demon Broiled Surprise
-			},
+			["requireSkill"] = COOKING,
 			["isDaily"] = true,
-			-- #if ANYCLASSIC
-			["u"] = TBC_PHASE_ONE,
-			-- #endif
 			["lvl"] = 70,
 			["groups"] = {
-				crit(2, {	-- Super Hot Stew
-					["achievementID"] = 906,	-- Kickin' It Up a Notch
-				}),
-				i(33852, {	-- Cooking Pot
+				objective(1, {	-- 0/1 Demon Broiled Surprise
+					["provider"] = { "i", 33848 },	-- Demon Broiled Surprise
 					["coord"] = { 28.0, 82.2, BLADES_EDGE_MOUNTAINS },
 					["cr"] = 19973,	-- Abyssal Flamebringer
 					["cost"] = {
+						{ "i", 33852, 1 },	-- Cooking Pot
 						{ "i", 31672, 2 },	-- Mok'Nathal Shortribs
 						{ "i", 31673, 1 },	-- Crunchy Serpent
 					},
-					["groups"] = {
-						i(33848),	-- Demon Broiled Surprise
-					},
+				}),
+				crit(2, {	-- Super Hot Stew
+					["achievementID"] = 906,	-- Kickin' It Up a Notch
 				}),
 				i(33844),	-- Barrel of Fish
 				i(33857),	-- Crate of Meat
 			},
-		}),
+		})),
 		q(6611, {	-- To Gadgetzan You Go!
 			["qg"] = 3399,	-- Zamja
 			-- #if AFTER CATA
@@ -3007,25 +2985,29 @@ profession(COOKING, {
 	}),
 	-- #if AFTER TBC
 	n(REWARDS, applyclassicphase(TBC_PHASE_ONE, {
-		i(33844, {	-- Barrel of Fish
-			i(33869),	-- Recipe: Broiled Bloodfin
-			-- #if AFTER WRATH
-			i(34834),	-- Recipe: Captain Rumsey's Lager
-			-- #endif
-			i(33925),	-- Recipe: Delicious Chocolate Cake
-			i(33875),	-- Recipe: Kibler's Bits
-			i(33870),	-- Recipe: Skullfish Soup
-			i(33871),	-- Recipe: Stormchops
-		}),
-		i(33857, {	-- Crate of Meat
-			-- #if AFTER WRATH
-			i(34834),	-- Recipe: Captain Rumsey's Lager
-			-- #endif
-			i(33925),	-- Recipe: Delicious Chocolate Cake
-			i(33875),	-- Recipe: Kibler's Bits
-			i(33873),	-- Recipe: Spicy Hot Talbuk
-			i(33871),	-- Recipe: Stormchops
-		}),
+		["maps"] = { SHATTRATH_CITY },
+		["requireSkill"] = COOKING,
+		["groups"]= {
+			i(33844, {	-- Barrel of Fish
+				i(33869),	-- Recipe: Broiled Bloodfin
+				i(34834, {	-- Recipe: Captain Rumsey's Lager
+					-- #if ANYCLASSIC
+					["description"] = "This was originally not available as a drop within the crate or barrel until Patch 2.3.3. I'm not sure if it's available or not, please let the ATT Discord know if you get it in TBC Classic!",
+					-- #endif
+				}),
+				i(33925),	-- Recipe: Delicious Chocolate Cake
+				i(33875),	-- Recipe: Kibler's Bits
+				i(33870),	-- Recipe: Skullfish Soup
+				i(33871),	-- Recipe: Stormchops
+			}),
+			i(33857, {	-- Crate of Meat
+				i(34834),	-- Recipe: Captain Rumsey's Lager
+				i(33925),	-- Recipe: Delicious Chocolate Cake
+				i(33875),	-- Recipe: Kibler's Bits
+				i(33873),	-- Recipe: Spicy Hot Talbuk
+				i(33871),	-- Recipe: Stormchops
+			}),
+		},
 	})),
 	-- #endif
 	-- #if NOT ANYCLASSIC
