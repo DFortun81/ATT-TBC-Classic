@@ -11239,7 +11239,7 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 		-- Setup Event Handlers and register for events
 		self:SetScript("OnEvent", function(self, e, ...)
 			if e == "TRADE_SKILL_LIST_UPDATE" or e == "SKILL_LINES_CHANGED" then
-				self:RefreshRecipes();
+				self:Update();
 			elseif e == "TRADE_SKILL_SHOW" or e == "CRAFT_SHOW" then
 				if self.TSMCraftingVisible == nil then
 					self:SetTSMCraftingVisible(false);
@@ -11801,7 +11801,6 @@ app.events.VARIABLES_LOADED = function()
 	app:RegisterEvent("QUEST_LOG_UPDATE");
 	app:RegisterEvent("QUEST_ACCEPTED");
 	app:RegisterEvent("QUEST_TURNED_IN");
-	app:RegisterEvent("SKILL_LINES_CHANGED");
 	StartCoroutine("RefreshSaves", RefreshSaves);
 	app:RefreshData(false);
 	app:RefreshLocation();
@@ -12433,9 +12432,6 @@ app.events.PLAYER_LEVEL_UP = function(newLevel)
 	app.Level = newLevel;
 	app:UpdateWindows();
 	app.Settings:Refresh();
-end
-app.events.SKILL_LINES_CHANGED = function()
-	app:RefreshData(true, true);
 end
 app.events.BOSS_KILL = function(id, name, ...)
 	-- This is so that when you kill a boss, you can trigger 
