@@ -12435,7 +12435,7 @@ app.events.PLAYER_LEVEL_UP = function(newLevel)
 	app.Settings:Refresh();
 end
 app.events.SKILL_LINES_CHANGED = function()
-	RefreshSkills();
+	app:RefreshData(true, true);
 end
 app.events.BOSS_KILL = function(id, name, ...)
 	-- This is so that when you kill a boss, you can trigger 
