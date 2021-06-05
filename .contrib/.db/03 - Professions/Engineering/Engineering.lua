@@ -362,11 +362,11 @@ profession(ENGINEERING, {
 			["name"] = "Goggles",
 			["categoryID"] = 185,
 			["g"] = {
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Bloodvine Goggles",
 					["recipeID"] = 24356,
 				}),
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Bloodvine Lens",
 					["recipeID"] = 24357,
 				}),
@@ -829,16 +829,16 @@ profession(ENGINEERING, {
 			["name"] = "Devices",
 			["categoryID"] = 753,
 			["g"] = {
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Adamantite Arrow Maker",
-					["timeline"] = { "removed 4.0.1.10000" },
+					["timeline"] = { "added 2.1.0.6692", "removed 4.0.1.10000" },
 					["recipeID"] = 43676,
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Adamantite Shell Machine",
-					["timeline"] = { "removed 4.0.1.10000" },
+					["timeline"] = { "added 2.1.0.6692", "removed 4.0.1.10000" },
 					["recipeID"] = 30347,
-				},
+				}),
 				{
 					["name"] = "Crashin' Thrashin' Robot",
 					["recipeID"] = 30337
@@ -1172,8 +1172,6 @@ itemrecipe("Schematic: Crashin' Thrashin' Robot", 23810, 30337, TBC_PHASE_ONE);
 itemrecipe("Schematic: White Smoke Flare", 23811, 30341, TBC_PHASE_ONE);
 itemrecipe("Schematic: Green Smoke Flare", 23814, 30344, TBC_PHASE_ONE);
 itemrecipe("Schematic: Purple Smoke Flare", 25887, 32814, TBC_PHASE_ONE);
-itemrecipe("Schematic: Adamantite Arrow Maker", 33804, 43676, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Schematic: Adamantite Shell Machine", 23815, 30347, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Schematic: Fel Iron Toolbox", 23816, 30348, TBC_PHASE_ONE);
 itemrecipe("Schematic: Elemental Seaforium Charge", 23874, 30547, TBC_PHASE_ONE);
 itemrecipe("Schematic: Healing Potion Injector", 23883, 30551, TBC_PHASE_ONE);
@@ -1182,6 +1180,9 @@ itemrecipe("Schematic: Rocket Boots Xtreme", 23887, 30556, TBC_PHASE_ONE);
 itemrecipe("Schematic: Fused Wiring", 32381, 39895, TBC_PHASE_ONE);
 itemrecipe("Schematic: Zapthrottle Mote Extractor", 23888, 30548, TBC_PHASE_ONE);
 itemrecipe("Schematic: Field Repair Bot 110G", 34114, 44391, TBC_PHASE_ONE);
+
+itemrecipe("Schematic: Adamantite Arrow Maker", 33804, 43676, TBC_PHASE_THREE, { "added 2.1.0.6692", "removed 4.0.1.10000" });
+itemrecipe("Schematic: Adamantite Shell Machine", 23815, 30347, TBC_PHASE_THREE, { "added 2.1.0.6692", "removed 4.0.1.10000" });
 
 itemrecipe("Schematic: Annihilator Holo-Gogs", 35186, 46111, TBC_PHASE_FIVE);
 itemrecipe("Schematic: Justicebringer 3000 Specs", 35187, 46107, TBC_PHASE_FIVE);
