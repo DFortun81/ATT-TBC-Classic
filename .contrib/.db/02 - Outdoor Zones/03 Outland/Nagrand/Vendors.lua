@@ -176,7 +176,7 @@ _.Zones =
 						i(25733), 	-- Pattern: Fel Leather Boots
 						i(25732), 	-- Pattern: Fel Leather Gloves
 						i(25734), 	-- Pattern: Fel Leather Leggings
-						i(23874),	-- Schematic: Elemental Seaforium Charge
+						applyclassicphase(TBC_PHASE_THREE, i(23874)),	-- Schematic: Elemental Seaforium Charge
 						un(REMOVED_FROM_GAME, i(29118)),	-- Smuggler's Ammo Pouch
 						i(29117),	-- Stormspire Vest
 					},

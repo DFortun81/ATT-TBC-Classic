@@ -674,10 +674,10 @@ profession(ENGINEERING, {
 					["name"] = "Adamantite Grenade",
 					["recipeID"] = 30311
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Elemental Seaforium Charge",
 					["recipeID"] = 30547
-				},
+				}),
 				{
 					["name"] = "Fel Iron Bomb",
 					["recipeID"] = 30310
@@ -939,10 +939,10 @@ profession(ENGINEERING, {
 					["name"] = "Adamantite Scope",
 					["recipeID"] = 30329
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Khorium Scope",
 					["recipeID"] = 30332
-				},
+				}),
 				{
 					["name"] = "Stabilized Eternium Scope",
 					["recipeID"] = 30334
@@ -1173,7 +1173,6 @@ itemrecipe("Schematic: White Smoke Flare", 23811, 30341, TBC_PHASE_ONE);
 itemrecipe("Schematic: Green Smoke Flare", 23814, 30344, TBC_PHASE_ONE);
 itemrecipe("Schematic: Purple Smoke Flare", 25887, 32814, TBC_PHASE_ONE);
 itemrecipe("Schematic: Fel Iron Toolbox", 23816, 30348, TBC_PHASE_ONE);
-itemrecipe("Schematic: Elemental Seaforium Charge", 23874, 30547, TBC_PHASE_ONE);
 itemrecipe("Schematic: Healing Potion Injector", 23883, 30551, TBC_PHASE_ONE);
 itemrecipe("Schematic: Mana Potion Injector", 23884, 30552, TBC_PHASE_ONE);
 itemrecipe("Schematic: Rocket Boots Xtreme", 23887, 30556, TBC_PHASE_ONE);
@@ -1183,6 +1182,7 @@ itemrecipe("Schematic: Field Repair Bot 110G", 34114, 44391, TBC_PHASE_ONE);
 
 itemrecipe("Schematic: Adamantite Arrow Maker", 33804, 43676, TBC_PHASE_THREE, { "added 2.1.0.6692", "removed 4.0.1.10000" });
 itemrecipe("Schematic: Adamantite Shell Machine", 23815, 30347, TBC_PHASE_THREE, { "added 2.1.0.6692", "removed 4.0.1.10000" });
+itemrecipe("Schematic: Elemental Seaforium Charge", 23874, 30547, TBC_PHASE_THREE, "added 2.1.0.6692");
 
 itemrecipe("Schematic: Annihilator Holo-Gogs", 35186, 46111, TBC_PHASE_FIVE);
 itemrecipe("Schematic: Justicebringer 3000 Specs", 35187, 46107, TBC_PHASE_FIVE);
