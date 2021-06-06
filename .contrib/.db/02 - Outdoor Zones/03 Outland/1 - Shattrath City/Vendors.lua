@@ -1338,9 +1338,9 @@ _.Zones =
 				n(18484, {	-- Wind Trader Lathrai
 					["coord"] = { 72.6, 31.6, SHATTRATH_CITY },
 					["groups"] = {
-						i(23815, {	-- Schematic: Adamantite Shell Machine
+						applyclassicphase(TBC_PHASE_THREE, i(23815, {	-- Schematic: Adamantite Shell Machine
 							["isLimited"] = true,
-						}),
+						})),
 						i(23816, {	-- Schematic: Fel Iron Toolbox
 							["isLimited"] = true,
 						}),

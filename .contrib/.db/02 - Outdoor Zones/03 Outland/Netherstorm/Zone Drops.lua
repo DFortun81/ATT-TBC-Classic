@@ -67,9 +67,9 @@ _.Zones =
 				i(23610, {	-- Plans: Khorium Boots
 					["cr"] = 18873,	-- Disembodied Protector
 				}),
-				i(33804, {	-- Schematic: Adamantite Arrow Maker
+				applyclassicphase(TBC_PHASE_THREE, i(33804, {	-- Schematic: Adamantite Arrow Maker
 					["cr"] = 19707,	-- Sunfury Archer
-				}),
+				})),
 				i(23808, {	-- Schematic: Khorium Scope
 					["cr"] = 20207,	-- Sunfury Bowman
 				}),
