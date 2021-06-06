@@ -1166,7 +1166,6 @@ itemrecipe("Schematic: Power Amplification Goggles", 23804, 30317, TBC_PHASE_ONE
 itemrecipe("Schematic: Ultra-Spectropic Detection Goggles", 23805, 30318, TBC_PHASE_ONE);
 itemrecipe("Schematic: Hyper-Vision Goggles", 23806, 30325, TBC_PHASE_ONE);
 itemrecipe("Schematic: Adamantite Scope", 23807, 30329, TBC_PHASE_ONE);
-itemrecipe("Schematic: Khorium Scope", 23808, 30332, TBC_PHASE_ONE);
 itemrecipe("Schematic: Stabilized Eternium Scope", 23809, 30334, TBC_PHASE_ONE);
 itemrecipe("Schematic: Crashin' Thrashin' Robot", 23810, 30337, TBC_PHASE_ONE);
 itemrecipe("Schematic: White Smoke Flare", 23811, 30341, TBC_PHASE_ONE);
@@ -1183,6 +1182,7 @@ itemrecipe("Schematic: Field Repair Bot 110G", 34114, 44391, TBC_PHASE_ONE);
 itemrecipe("Schematic: Adamantite Arrow Maker", 33804, 43676, TBC_PHASE_THREE, { "added 2.1.0.6692", "removed 4.0.1.10000" });
 itemrecipe("Schematic: Adamantite Shell Machine", 23815, 30347, TBC_PHASE_THREE, { "added 2.1.0.6692", "removed 4.0.1.10000" });
 itemrecipe("Schematic: Elemental Seaforium Charge", 23874, 30547, TBC_PHASE_THREE, "added 2.1.0.6692");
+itemrecipe("Schematic: Khorium Scope", 23808, 30332, TBC_PHASE_ONE, "added 2.1.0.6692");
 
 itemrecipe("Schematic: Annihilator Holo-Gogs", 35186, 46111, TBC_PHASE_FIVE);
 itemrecipe("Schematic: Justicebringer 3000 Specs", 35187, 46107, TBC_PHASE_FIVE);
