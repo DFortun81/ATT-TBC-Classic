@@ -183,6 +183,7 @@ _.Zones =
 				}),
 				n(20241, {	-- Provisioner Nasela <Mag'har Quartermaster>
 					["coord"] = { 55.8, 37.8, NAGRAND },
+					["races"] = HORDE_ONLY,
 					["g"] = {
 						i(29145),	-- Band of Ancestral Spirits
 						i(29139),	-- Ceremonial Cover
