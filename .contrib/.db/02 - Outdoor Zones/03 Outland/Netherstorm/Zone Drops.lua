@@ -70,9 +70,9 @@ _.Zones =
 				applyclassicphase(TBC_PHASE_THREE, i(33804, {	-- Schematic: Adamantite Arrow Maker
 					["cr"] = 19707,	-- Sunfury Archer
 				})),
-				applyclassicphase(TBC_PHASE_THREE, i(23808, {	-- Schematic: Khorium Scope
+				i(23808, {	-- Schematic: Khorium Scope
 					["cr"] = 20207,	-- Sunfury Bowman
-				})),
+				}),
 			}),
 		}),
 	})),

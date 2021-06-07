@@ -939,10 +939,10 @@ profession(ENGINEERING, {
 					["name"] = "Adamantite Scope",
 					["recipeID"] = 30329
 				},
-				applyclassicphase(TBC_PHASE_THREE, {
+				{
 					["name"] = "Khorium Scope",
 					["recipeID"] = 30332
-				}),
+				},
 				{
 					["name"] = "Stabilized Eternium Scope",
 					["recipeID"] = 30334
