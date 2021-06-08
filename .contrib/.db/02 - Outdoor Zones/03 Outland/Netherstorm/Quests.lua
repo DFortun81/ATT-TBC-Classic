@@ -359,13 +359,14 @@ _.Zones =
 					["coord"] = { 37.3, 63.6, NETHERSTORM },
 					["sourceQuests"] = { 10248 },	-- You, Robot
 					["g"] = {
-						i(134021),	-- X-52 Rocket Helmet (TOY!)
+						i(134021, {	-- X-52 Rocket Helmet (TOY!)
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 						i(30019),	-- Area 52 Defender's Pants
 						i(30014),	-- X-52 Pilot's Leggings
 						i(30016),	-- X-52 Technician's Helm
-						un(REMOVED_FROM_GAME, {
-							["itemID"] = 134012,	-- X-52 Rocket Helmet (Normal Reward till 7.0.1)
-							["description"] = "This item was one of the original quest rewards. Blizzard does not give transmog for removed quest rewards.",
+						i(30847, {	-- X-52 Rocket Helmet
+							["timeline"] = { "removed 7.0.3.22248" },
 						}),
 					},
 				}),
