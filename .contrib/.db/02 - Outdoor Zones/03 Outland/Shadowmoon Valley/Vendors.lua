@@ -63,7 +63,7 @@ _.Zones =
 						11114,	-- Zoya the Veridian Netherwing Drake
 					},
 					["minReputation"] = { 1015, EXALTED },
-					["description"] = "To access this vendor, you must reach Exalted with the Netherwing, complete the quest 'Bow to the Highlord, Lord Illidan Stormrage' and claim one of the six drakes in Shattrath.|r",
+					["description"] = "To access this vendor, you must reach Exalted with the Netherwing, complete the quest 'Bow to the Highlord, Lord Illidan Stormrage' and claim one of the six drakes in Shattrath.",
 					["coord"] = { 65.6, 85.9, SHADOWMOON_VALLEY },
 					["groups"] = {
 						i(32858),	-- Reins of the Azure Netherwing Drake Mount
