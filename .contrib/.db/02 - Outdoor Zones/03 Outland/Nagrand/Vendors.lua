@@ -177,7 +177,9 @@ _.Zones =
 						i(25732), 	-- Pattern: Fel Leather Gloves
 						i(25734), 	-- Pattern: Fel Leather Leggings
 						applyclassicphase(TBC_PHASE_THREE, i(23874)),	-- Schematic: Elemental Seaforium Charge
-						un(REMOVED_FROM_GAME, i(29118)),	-- Smuggler's Ammo Pouch
+						i(29118, {	-- Smuggler's Ammo Pouch
+							["timeline"] = { "removed 4.0.1.12941" },
+						}),
 						i(29117),	-- Stormspire Vest
 					},
 				}),
@@ -187,14 +189,18 @@ _.Zones =
 					["g"] = {
 						i(29145),	-- Band of Ancestral Spirits
 						i(29139),	-- Ceremonial Cover
-						un(REMOVED_FROM_GAME, i(29143)),	-- Clefthoof Hide Quiver
+						i(29143, {	-- Clefthoof Hide Quiver
+							["timeline"] = { "removed 4.0.1.12941" },
+						}),
 						i(29135),	-- Earthcaller's Headdress
 						i(29137),	-- Hellscream's Will
 						i(31773),	-- Mag'har Tabard
 						i(34174),	-- Pattern: Drums of Restoration
 						i(34172),	-- Pattern: Drums of Speed
+						-- #if ANYCLASSIC
 						i(185924),	-- Pattern: Greater Drums of Restoration
 						i(185923),	-- Pattern: Greater Drums of Speed
+						-- #endif
 						i(25741),	-- Pattern: Netherfury Belt
 						i(25743),	-- Pattern: Netherfury Boots
 						i(25742),	-- Pattern: Netherfury Leggings
@@ -425,8 +431,10 @@ _.Zones =
 						i(31774),	-- Kurenai Tabard
 						i(34175),	-- Pattern: Drums of Restoration
 						i(34173),	-- Pattern: Drums of Speed
+						-- #if ANYCLASSIC
 						i(187048),	-- Pattern: Greater Drums of Restoration
 						i(187049),	-- Pattern: Greater Drums of Speed
+						-- #endif
 						i(29217),	-- Pattern: Netherfury Belt
 						i(29218),	-- Pattern: Netherfury Boots
 						i(29219),	-- Pattern: Netherfury Leggings
