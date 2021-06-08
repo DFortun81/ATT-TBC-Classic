@@ -4273,7 +4273,8 @@ app.CacheFlightPathDataForTarget = function(nodes)
 			local searchResults = SearchForField("creatureID", npcID);
 			if searchResults and #searchResults > 0 then
 				for i,group in ipairs(searchResults) do
-					if group.flightPathID and not group.nmr and not group.nmc and not group.u then
+					print(group.key, group[group.key])
+					if group.flightPathID and not group.nmr and not group.nmc and (not group.u or group.u > 1) then
 						nodes[group.flightPathID] = true;
 						count = count + 1;
 					end
@@ -4356,18 +4357,8 @@ app.events.GOSSIP_SHOW = function()
 end
 app.events.TAXIMAP_OPENED = function()
 	local knownNodeIDs = {};
-	if app.CacheFlightPathDataForTarget(knownNodeIDs) == 0 and select(4, GetBuildInfo()) < 20000 then
-		if app.CacheFlightPathDataForMap(app.CurrentMapID, knownNodeIDs) == 0 then
-			print("Failed to find nearest Flight Path. Please report this to the ATT Discord!");
-			local pos = C_Map.GetPlayerMapPosition(app.CurrentMapID, "player");
-			if pos then
-				local px, py = pos:GetXY();
-				print(" Location: " .. (math.floor(px * 10000) * 0.01) .. ", " ..(math.floor(py * 10000) * 0.01) .. ", " .. app.CurrentMapID);
-				local target = UnitGUID("target");
-				if target then print(" Master: ", target); end
-			end
-		end
-	end
+	app.CacheFlightPathDataForTarget(knownNodeIDs);
+	app.CacheFlightPathDataForMap(app.CurrentMapID, knownNodeIDs);
 	
 	local allNodeData = C_TaxiMap.GetAllTaxiNodes(app.CurrentMapID);
 	if allNodeData then
