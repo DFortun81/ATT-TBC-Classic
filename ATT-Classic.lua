@@ -3961,6 +3961,9 @@ local fields = {
 			return L["WE_JUST_HATE_TIMEWALKING"];
 		end
 	end,
+	["hash"] = function(t)
+		if t.parent then return t.key .. t[t.key] .. "~" .. t.parent.key .. t.parent[t.parent.key]; end
+	end,
 };
 app.BaseDifficulty = app.BaseObjectFields(fields);
 app.CreateDifficulty = function(id, t)
