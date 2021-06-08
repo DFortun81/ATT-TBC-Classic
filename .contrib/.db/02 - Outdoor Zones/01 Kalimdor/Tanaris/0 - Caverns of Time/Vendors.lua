@@ -43,8 +43,22 @@ _.Zones =
 							i(33152),	-- Formula: Enchant Gloves - Superior Agility
 							i(22536),	-- Formula: Enchant Ring - Spellpower
 							i(29713),	-- Pattern: Drums of Panic
+							-- #if ANYCLASSIC
 							i(185925),	-- Pattern: Greater Drums of Panic
+							-- #endif
 							i(31355),	-- Recipe: Flask of Supreme Power
+						},
+					}),
+					n(155944, {	-- Otela <Time-Lost Baubles>
+						["coord"] = { 42.4, 71.6, 74 },
+						["timeline"] = { "added 8.2.0.30918" },
+						["groups"] = {
+							i(170739, {	-- Sunswarmed Sand
+								["cost"] = { { "c", 1166, 10 }, },		-- 10x Timewarped Badge
+							}),
+							i(170380, {	-- Jar of the Sunwarmed Sand (TOY!)
+								["cost"] = { { "c", 1166, 1000 }, },	-- 1,000x Timewarped Badge
+							}),
 						},
 					}),
 				}),
