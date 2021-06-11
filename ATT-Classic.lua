@@ -4276,7 +4276,6 @@ app.CacheFlightPathDataForTarget = function(nodes)
 			local searchResults = SearchForField("creatureID", npcID);
 			if searchResults and #searchResults > 0 then
 				for i,group in ipairs(searchResults) do
-					print(group.key, group[group.key])
 					if group.flightPathID and not group.nmr and not group.nmc and (not group.u or group.u > 1) then
 						nodes[group.flightPathID] = true;
 						count = count + 1;

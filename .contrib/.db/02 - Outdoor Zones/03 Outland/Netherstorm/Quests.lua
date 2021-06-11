@@ -1052,3 +1052,18 @@ _.Zones =
 		}),
 	})),
 };
+
+
+-- #if AFTER TBC
+-- These quests trigger after specific events occur in the zone.
+_.HiddenQuestTriggers = {
+	
+};
+
+-- These quests never made it in.
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	n(QUESTS, {
+		i(134012),	-- X-52 Rocket Helmet [Might be the transmog it applies when you use the toy itself.]
+	}),
+});
+-- #endif
