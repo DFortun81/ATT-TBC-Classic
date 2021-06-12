@@ -276,7 +276,6 @@ _.Zones =
 				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10955, {	-- Morthis Whisperwing
 					["qg"] = 12042,	-- Loganaar <Druid Trainer>
 					["coord"] = { 52.5, 40.6, MOONGLADE },
-					["maps"] = { MOONGLADE },
 					["classes"] = { DRUID },
 					["lvl"] = 70,
 				})),

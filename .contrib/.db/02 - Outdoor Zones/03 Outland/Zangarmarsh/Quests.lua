@@ -741,9 +741,9 @@ _.Zones =
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
 					["classes"] = { DRUID },
 					["cost"] = {
-						"i", 31950, 10 ,	-- Bogblossom
-						"i", 22790, 10 ,	-- Ancient Lichen
-						"i", 22786, 10 ,	-- Dreaming Glory
+						{ "i", 31950, 10 },	-- Bogblossom
+						{ "i", 22790, 10 },	-- Ancient Lichen
+						{ "i", 22786, 10 },	-- Dreaming Glory
 					},
 					["lvl"] = 70,
 				})),
