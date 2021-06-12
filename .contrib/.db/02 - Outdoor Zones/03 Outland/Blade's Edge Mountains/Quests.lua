@@ -348,6 +348,15 @@ _.Zones =
 						i(31523),	-- Treebole's Hoop
 					},
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10986, {	-- Eyes in the Sky
+					["qg"] = 22924,	-- Arthorn Windsong
+					["sourceQuest"] = 10980,	-- The Book of the Raven
+					["coord"] = { 61.5, 38.3, BLADES_EDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.1" },
+					["maps"] = { NAGRAND },
+					["classes"] = { DRUID },
+					["lvl"] = 70,
+				})),
 				q(10797, {	-- Favor of the Gronn
 					["provider"] = { "i", 31363 },	-- Gorgrom's Favor
 					["coord"] = { 55.0, 24.2, BLADES_EDGE_MOUNTAINS },
@@ -803,6 +812,18 @@ _.Zones =
 						i(29750),	-- Ethereum Stasis Chamber Key
 					},
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10993, {	-- Return to Cenarion Refuge
+					["qg"] = 22924,	-- Arthorn Windsong
+					["sourceQuest"] = 10992,	-- The Hawk's Essence
+					["coord"] = { 61.5, 38.3, BLADES_EDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.1" },
+					["maps"] = { ZANGARMARSH },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32359, 1 },	-- Arthorn's Package (Provided)
+					},
+					["lvl"] = 70,
+				})),
 				q(10709, {	-- Reunion
 					["qg"] = 22004,	-- Leoroxx
 					["sourceQuest"] = 10614,	-- Whispers on the Wind
@@ -1033,6 +1054,17 @@ _.Zones =
 						i(31478),	-- Rugged Mountain Bracers
 					},
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10980, {	-- The Book of the Raven
+					["qg"] = 22924,	-- Arthorn Windsong
+					["sourceQuest"] = 10979,	-- To the Evergrove
+					["coord"] = { 61.5, 38.3, BLADES_EDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.1" },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32244, 1 },	-- Seer's Stone (Provided)
+					},
+					["lvl"] = 70,
+				})),
 				applyclassicphase(TBC_PHASE_THREE_OGRILA, q(11025, {	-- The Crystals
 					["qg"] = 23233,	-- Chu'a'lor
 					["coord"] = { 28.8, 57.4, BLADES_EDGE_MOUNTAINS },
@@ -1070,6 +1102,34 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = lvlsquish(65, 20, 65),
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10991, {	-- The Falcon's Essence
+					["qg"] = 22924,	-- Arthorn Windsong
+					["sourceQuest"] = 10990,	-- The Eagle's Essence
+					["coord"] = { 61.5, 38.3, BLADES_EDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.1" },
+					["maps"] = { TEROKKAR_FOREST },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32657, 1 },	-- Arthorn's Sparrowhawk Whistle (Provided)
+						{ "i", 32357, 1 },	-- Essence of the Falcon
+					},
+					["lvl"] = 70,
+					["groups"] = {
+						i(32481),	-- Charm of Swift Flight
+					},
+				})),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10992, {	-- The Hawk's Essence
+					["qg"] = 22924,	-- Arthorn Windsong
+					["sourceQuest"] = 10991,	-- The Falcon's Essence
+					["coord"] = { 61.5, 38.3, BLADES_EDGE_MOUNTAINS },
+					["maps"] = { TEROKKAR_FOREST },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32657, 1 },	-- Arthorn's Sparrowhawk Whistle (Provided)
+						{ "i", 32356, 1 },	-- Essence of the Hawk
+					},
+					["lvl"] = 70,
+				})),
 				q(10912, {	-- The Hound-Master
 					["qg"] = 22423,	-- Evergrove Druid
 					["sourceQuest"] = 10911,	-- Fire At Will!

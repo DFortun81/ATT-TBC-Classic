@@ -149,6 +149,18 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = lvlsquish(62, 10, 62),
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10994, {	-- Chasing the Moonstone
+					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
+					["sourceQuest"] = 10993,	-- Return to Cenarion Refuge
+					["coord"] = { 80.2, 65.2, ZANGARMARSH },
+					["maps"] = { AZSHARA },
+					["timeline"] = { "removed 4.0.1" },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32364, 1 },	-- Southfury Moonstone
+					},
+					["lvl"] = 70,
+				})),
 				q(10104, {	-- Concerns About Tuurem
 					["qg"] = 18008,	-- Ikuti
 					["coord"] = { 41.8, 27.2, ZANGARMARSH },
@@ -192,6 +204,18 @@ _.Zones =
 						i(27730),	-- Watcher's Cloak of Vigilance
 					},
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(11011, {	-- Eternal Vigilance
+					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
+					["sourceQuest"] = 11001,	-- Vanquish the Raven God
+					["coord"] = { 80.2, 65.2, ZANGARMARSH },
+					["timeline"] = { "removed 4.0.1" },
+					["maps"] = { ZANGARMARSH },
+					["classes"] = { DRUID },
+					["lvl"] = lvlsquish(70, 30, 70),
+					["groups"] = {
+						i(32449),	-- Essence-Infused Moonstone
+					},
+				})),
 				q(9752,  {	-- Escape from Umbrafen
 					["qg"] = 17969,	-- Kayra Longmane
 					["coord"] = { 83.4, 85.5, ZANGARMARSH },
@@ -739,6 +763,7 @@ _.Zones =
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 10955,	-- Morthis Whisperwing
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
+					["timeline"] = { "removed 4.0.1" },
 					["classes"] = { DRUID },
 					["cost"] = {
 						{ "i", 31950, 10 },	-- Bogblossom
@@ -759,6 +784,15 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = lvlsquish(59, 10, 59),
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10979, {	-- To the Evergrove
+					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
+					["sourceQuest"] = 10978,	-- Return to Morthis Whisperwing
+					["coord"] = { 80.2, 65.2, ZANGARMARSH },
+					["timeline"] = { "removed 4.0.1" },
+					["maps"] = { BLADES_EDGE_MOUNTAINS },
+					["classes"] = { DRUID },
+					["lvl"] = 70,
+				})),
 				q(9781,  {	-- Too Many Mouths to Feed
 					["qg"] = 18005,	-- Haalrun
 					["coord"] = { 67.8, 48.0, ZANGARMARSH },
@@ -799,6 +833,7 @@ _.Zones =
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 10961,	-- The Ward of Wakening
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
+					["timeline"] = { "removed 4.0.1" },
 					["classes"] = { DRUID },
 					["cost"] = {
 						{ "i", 31953, 1 },	-- Ward of Waking (Provided)

@@ -270,12 +270,14 @@ _.Zones =
 					["qg"] = 22834,	-- Clintar Dreamwalker
 					["sourceQuest"] = 10964,	-- Waking the Sleeper
 					["coord"] = { 75.5, 67.0, MOONGLADE },
+					["timeline"] = { "removed 4.0.1" },
 					["classes"] = { DRUID },
 					["lvl"] = 70,
 				})),
 				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10955, {	-- Morthis Whisperwing
 					["qg"] = 12042,	-- Loganaar <Druid Trainer>
 					["coord"] = { 52.5, 40.6, MOONGLADE },
+					["timeline"] = { "removed 4.0.1" },
 					["classes"] = { DRUID },
 					["lvl"] = 70,
 				})),
@@ -323,6 +325,18 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 54,
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10978, {	-- Return to Morthis Whisperwing
+					["qg"] = 22837,	-- Dreamwarden Lurosa
+					["sourceQuest"] = 10965,	-- No Mere Dream
+					["coord"] = { 72.5, 63.3, MOONGLADE },
+					["timeline"] = { "removed 4.0.1" },
+					["maps"] = { ZANGARMARSH },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32074, 1 },	-- Relics of Aviana (Provided)
+					},
+					["lvl"] = 70,
+				})),
 				q(5526, {	-- Shards of the Felvine
 					["qg"] = 11801,	-- Rabine Saturna
 					["sourceQuest"] = 5527,	-- A Reliquary of Purity
@@ -583,6 +597,18 @@ _.Zones =
 						},
 					},
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10978, {	-- Return to Morthis Whisperwing
+					["qg"] = 22837,	-- Dreamwarden Lurosa
+					["sourceQuest"] = 10965,	-- No Mere Dream
+					["coord"] = { 72.5, 63.3, MOONGLADE },
+					["timeline"] = { "removed 4.0.1" },
+					["maps"] = { ZANGARMARSH },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32074, 1 },	-- Relics of Aviana (Provided)
+					},
+					["lvl"] = 70,
+				})),
 				q(6845, {	-- Uncovering Past Secrets
 					["qg"] = 11939,	-- Umber
 					["sourceQuest"] = 6844,	-- Umber, Archivist

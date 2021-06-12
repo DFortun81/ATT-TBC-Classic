@@ -44,18 +44,6 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					["isBreadcrumb"] = true,
 					["lvl"] = lvlsquish(65, 15, 65),
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(11011, {	-- Eternal Vigilance
-					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
-					["sourceQuest"] = 11001,	-- Vanquish the Raven God
-					["coord"] = { 80.2, 65.2, ZANGARMARSH },
-					["timeline"] = { "removed 4.0.1" },
-					["maps"] = { ZANGARMARSH },
-					["classes"] = { DRUID },
-					["lvl"] = lvlsquish(70, 30, 70),
-					["groups"] = {
-						i(32449),	-- Essence-Infused Moonstone
-					},
-				})),
 				q(29607, {	-- Eyes of Desire
 					["qg"] = 54847,	-- Dealer Vijaad
 					["description"] = "Dealer Vijaad appears upon defeating Darkweaver Syth.",
@@ -101,17 +89,18 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(11001, {	-- Vanquish the Raven God
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 10994,	-- Chasing the Moonstone
-					["description"] = "This quest chain may not be available until a later phase.",
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
 					["timeline"] = { "removed 4.0.1" },
 					["maps"] = { ZANGARMARSH },
 					["classes"] = { DRUID },
-					["lvl"] = lvlsquish(70, 30, 70),
-					["groups"] = {
-						i(32462, {	-- Morthis' Materials
+					["cost"] = {
+						i(32462, {	-- Morthis' Materials (Provided)
 							i(32454),	-- Arthorn's Research
 							i(32449),	-- Essence-Infused Moonstone
 						}),
+					},
+					["lvl"] = lvlsquish(70, 30, 70),
+					["groups"] = {
 						-- #if BEFORE 4.0.1
 						recipe(40123),	-- Swift Flight Form
 						-- #endif

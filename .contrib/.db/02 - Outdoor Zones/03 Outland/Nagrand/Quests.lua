@@ -772,6 +772,19 @@ _.Zones =
 						{ 51.0, 69.8, NAGRAND },
 					},
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10990, {	-- The Eagle's Essence
+					["qg"] = 22981,	-- Watcher Elaira
+					["sourceQuest"] = 10988,	-- The Raven Stones
+					["coord"] = { 20.6, 35.7, NAGRAND },
+					["maps"] = { BLADES_EDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.1" },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32657, 1 },	-- Arthorn's Sparrowhawk Whistle (Provided)
+						{ "i", 32355, 1 },	-- Essence of the Eagle
+					},
+					["lvl"] = 70,
+				})),
 				q(9861,  {	-- The Howling Wind
 					["provider"] = { "i", 24504 },	-- Howling Wind
 					["crs"] = {
@@ -826,6 +839,19 @@ _.Zones =
 						i(25779),	-- Warmaul Slayer's Band
 					},
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10988, {	-- The Raven Stones
+					["qg"] = 22981,	-- Watcher Elaira
+					["sourceQuest"] = 10987,	-- To Catch A Sparrowhawk
+					["coord"] = { 20.6, 35.7, NAGRAND },
+					["maps"] = { TEROKKAR_FOREST },
+					["timeline"] = { "removed 4.0.1" },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32315, 1 },	-- Cenarion Sparrowhawk Whistle (Provided)
+						{ "i", 32313, 8 },	-- Raven Stone
+					},
+					["lvl"] = 70,
+				})),
 				q(9962,  {	-- The Ring of Blood: Brokentoe
 					["provider"] = { "n", 18471 },	-- Gurgthock
 					["coord"] = { 42.8, 20.7, NAGRAND },
@@ -978,6 +1004,18 @@ _.Zones =
 					["timeline"] = { "removed 4.0.1.13287" },
 					["races"] = HORDE_ONLY,
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10987, {	-- To Catch A Sparrowhawk
+					["qg"] = 22981,	-- Watcher Elaira
+					["sourceQuest"] = 10986,	-- Eyes in the Sky
+					["coord"] = { 20.6, 35.7, NAGRAND },
+					["timeline"] = { "removed 4.0.1" },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 32321, 1 },	-- Sparrowhawk Net (Provided)
+						{ "i", 32320, 1 },	-- Captive Sparrowhawk
+					},
+					["lvl"] = 70,
+				})),
 				q(10081, {	-- To Meet Mother Kashur
 					["provider"] = { "n", 18141 },	-- Greatmother Geyah
 					["coord"] = { 56.6, 34.2, NAGRAND },
