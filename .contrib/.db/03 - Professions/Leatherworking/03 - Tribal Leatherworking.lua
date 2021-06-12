@@ -9,7 +9,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Helms",
 				["categoryID"] = 251,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Wolfshead Helm",
 						["recipeID"] = 10621,
@@ -20,7 +20,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Shoulders",
 				["categoryID"] = 252,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Ironfeather Shoulders",
 						["recipeID"] = 19062,
@@ -31,7 +31,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Chest",
 				["categoryID"] = 253,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Chimeric Vest",
 						["recipeID"] = 19081,
@@ -62,7 +62,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Gloves",
 				["categoryID"] = 255,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Chimeric Gloves",
 						["recipeID"] = 19053,
@@ -83,8 +83,8 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Belts",
 				["categoryID"] = 256,
-				["g"] = {
-					un(PHASE_THREE, {
+				["groups"] = {
+					applyclassicphase(PHASE_THREE, {
 						["name"] = "Corehound Belt",
 						["recipeID"] = 23709,
 						["requireSkill"] = 10660,
@@ -94,7 +94,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Pants",
 				["categoryID"] = 257,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Chimeric Leggings",
 						["recipeID"] = 19073,
@@ -120,7 +120,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Boots",
 				["categoryID"] = 258,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Chimeric Boots",
 						["recipeID"] = 19063,
@@ -141,8 +141,8 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Cloaks",
 				["categoryID"] = 259,
-				["g"] = {
-					un(PHASE_ONE_DIREMAUL, {
+				["groups"] = {
+					applyclassicphase(PHASE_ONE_DIREMAUL, {
 						["name"] = "Hide of the Wild",
 						["recipeID"] = 22927,
 						["requireSkill"] = 10660,

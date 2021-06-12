@@ -6,10 +6,80 @@ profession(LEATHERWORKING, {
 			5145,	-- Dragonscale Leatherworking [Horde]
 		},
 		["groups"] = {
+			-- #if AFTER TBC
+			{
+				["name"] = "Chest",
+				["categoryID"] = 932,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Ebon Netherscale Breastplate",
+						["recipeID"] = 35575,
+						["requireSkill"] = 10656,
+					}),
+					-- #if BEFORE CATA
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Golden Dragonstrike Breastplate",
+						["recipeID"] = 36079,
+						["requireSkill"] = 10656,
+					}),
+					-- #endif
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Netherstrike Breastplate",
+						["recipeID"] = 35580,
+						["requireSkill"] = 10656,
+					}),
+				}
+			},
+			{
+				["name"] = "Bracers",
+				["categoryID"] = 933,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Ebon Netherscale Bracers",
+						["recipeID"] = 35577,
+						["requireSkill"] = 10656,
+					}),
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Netherstrike Bracers",
+						["recipeID"] = 35584,
+						["requireSkill"] = 10656,
+					}),
+				}
+			},
+			{
+				["name"] = "Belts",
+				["categoryID"] = 935,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Ebon Netherscale Belt",
+						["recipeID"] = 35576,
+						["requireSkill"] = 10656,
+					}),
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Netherstrike Belt",
+						["recipeID"] = 35582,
+						["requireSkill"] = 10656,
+					}),
+				}
+			},
+			-- #if BEFORE CATA
+			{
+				["name"] = "Pants",
+				["categoryID"] = 936,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Dragonstrike Leggings",
+						["recipeID"] = 36076,
+						["requireSkill"] = 10656,
+					}),
+				},
+			},
+			-- #endif
+			-- #else
 			{
 				["name"] = "Shoulders",
 				["categoryID"] = 252,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Black Dragonscale Shoulders",
 						["recipeID"] = 19094,
@@ -25,7 +95,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Chest",
 				["categoryID"] = 253,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Black Dragonscale Breastplate",
 						["recipeID"] = 19085,
@@ -41,7 +111,7 @@ profession(LEATHERWORKING, {
 						["recipeID"] = 10650,
 						["requireSkill"] = 10656,
 					},
-					un(PHASE_FOUR, {
+					applyclassicphase(PHASE_FOUR, {
 						["name"] = "Dreamscale Breastplate",
 						["recipeID"] = 24703,
 						["requireSkill"] = 10656,
@@ -61,8 +131,8 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Gloves",
 				["categoryID"] = 255,
-				["g"] = {
-					un(PHASE_THREE, {
+				["groups"] = {
+					applyclassicphase(PHASE_THREE, {
 						["name"] = "Chromatic Gauntlets",
 						["recipeID"] = 23708,
 						["requireSkill"] = 10656,
@@ -82,7 +152,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Pants",
 				["categoryID"] = 257,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Black Dragonscale Leggings",
 						["recipeID"] = 19107,
@@ -103,7 +173,7 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Boots",
 				["categoryID"] = 258,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Black Dragonscale Boots",
 						["recipeID"] = 20855,
@@ -114,14 +184,15 @@ profession(LEATHERWORKING, {
 			{
 				["name"] = "Cloaks",
 				["categoryID"] = 259,
-				["g"] = {
-					un(PHASE_ONE_DIREMAUL, {
+				["groups"] = {
+					applyclassicphase(PHASE_ONE_DIREMAUL, {
 						["name"] = "Chromatic Cloak",
 						["recipeID"] = 22926,
 						["requireSkill"] = 10656,
 					}),
 				}
 			},
+			-- #endif
 		},
 	}),
 });

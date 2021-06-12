@@ -11,11 +11,13 @@ profession(LEATHERWORKING, {
 				["name"] = "Chest",
 				["categoryID"] = 932,
 				["groups"] = {
+					-- #if BEFORE CATA
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Primalstorm Breastplate",
 						["recipeID"] = 36077,
 						["requireSkill"] = 10658,
 					}),
+					-- #endif
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Primalstrike Vest",
 						["recipeID"] = 35589,
@@ -45,6 +47,7 @@ profession(LEATHERWORKING, {
 					}),
 				}
 			},
+			-- #if BEFORE CATA
 			{
 				["name"] = "Pants",
 				["categoryID"] = 936,
@@ -56,6 +59,7 @@ profession(LEATHERWORKING, {
 					}),
 				},
 			},
+			-- #endif
 			-- #else
 			{
 				["name"] = "Helms",
@@ -135,7 +139,7 @@ profession(LEATHERWORKING, {
 				["name"] = "Belts",
 				["categoryID"] = 256,
 				["groups"] = {
-					un(PHASE_THREE, {
+					applyclassicphase(PHASE_THREE, {
 						["name"] = "Molten Belt",
 						["recipeID"] = 23710,
 						["requireSkill"] = 10658,
@@ -167,7 +171,7 @@ profession(LEATHERWORKING, {
 				["name"] = "Cloaks",
 				["categoryID"] = 259,
 				["groups"] = {
-					un(PHASE_ONE_DIREMAUL, {
+					applyclassicphase(PHASE_ONE_DIREMAUL, {
 						["name"] = "Shifting Cloak",
 						["recipeID"] = 22928,
 						["requireSkill"] = 10658,

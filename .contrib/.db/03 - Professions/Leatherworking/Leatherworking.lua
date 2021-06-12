@@ -24,7 +24,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Cured Thick Hide",
 					["recipeID"] = 10482
 				},
-				un(PHASE_ONE_DIREMAUL, {
+				applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["name"] = "Gordok Ogre Suit",
 					["recipeID"] = 22815
 				}),
@@ -132,7 +132,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Big Voodoo Mask",
 					["recipeID"] = 10531
 				},
-				un(PHASE_FIVE_CATCH_UP, {
+				applyclassicphase(PHASE_FIVE_CATCH_UP, {
 					["name"] = "Bramblewood Helm",
 					["recipeID"] = 28472,
 				}),
@@ -188,10 +188,22 @@ profession(LEATHERWORKING, {
 					["name"] = "Barbaric Shoulders",
 					["recipeID"] = 7151
 				},
-				un(PHASE_FOUR, {
+				-- #if AFTER TBC
+				{
+					["name"] = "Black Dragonscale Shoulders",
+					["recipeID"] = 19094,
+				},
+				-- #endif
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Blood Tiger Shoulders",
 					["recipeID"] = 24125,
 				}),
+				-- #if AFTER TBC
+				{
+					["name"] = "Blue Dragonscale Shoulders",
+					["recipeID"] = 19089,
+				},
+				-- #endif
 				{
 					["name"] = "Dark Leather Shoulders",
 					["recipeID"] = 3769
@@ -200,7 +212,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Earthen Leather Shoulders",
 					["recipeID"] = 9147
 				},
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Golden Mantle of the Dawn",
 					["recipeID"] = 23706,
 				}),
@@ -260,18 +272,42 @@ profession(LEATHERWORKING, {
 					["name"] = "Big Voodoo Robe",
 					["recipeID"] = 10520
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Black Dragonscale Breastplate",
+					["recipeID"] = 19085,
+				},
+				-- #endif
 				{
 					["name"] = "Black Whelp Tunic",
 					["recipeID"] = 24940
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Blood Tiger Breastplate",
 					["recipeID"] = 24124,
 				}),
+				-- #if AFTER TBC
+				{
+					["name"] = "Blue Dragonscale Breastplate",
+					["recipeID"] = 19077,
+				},
+				-- #endif
 				{
 					["name"] = "Dark Leather Tunic",
 					["recipeID"] = 2169
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Dragonscale Breastplate",
+					["recipeID"] = 10650,
+				},
+				-- #endif
+				-- #if AFTER TBC
+				applyclassicphase(PHASE_FOUR, {
+					["name"] = "Dreamscale Breastplate",
+					["recipeID"] = 24703,
+				}),
+				-- #endif
 				{
 					["name"] = "Dusky Leather Armor",
 					["recipeID"] = 9196
@@ -284,6 +320,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Fine Leather Tunic",
 					["recipeID"] = 3761
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Green Dragonscale Breastplate",
+					["recipeID"] = 19050,
+				},
+				-- #endif
 				{
 					["name"] = "Green Leather Armor",
 					["recipeID"] = 3772
@@ -308,7 +350,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Hillman's Leather Vest",
 					["recipeID"] = 3762
 				},
-				un(PHASE_SIX, {
+				applyclassicphase(PHASE_SIX, {
 					["name"] = "Icy Scale Breastplate",
 					["recipeID"] = 28222,
 				}),
@@ -330,11 +372,11 @@ profession(LEATHERWORKING, {
 					["name"] = "Nightscape Tunic",
 					["recipeID"] = 10499
 				},
-				un(PHASE_SIX, {
+				applyclassicphase(PHASE_SIX, {
 					["name"] = "Polar Tunic",
 					["recipeID"] = 28219,
 				}),
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Primal Batskin Jerkin",
 					["recipeID"] = 24121,
 				}),
@@ -343,15 +385,21 @@ profession(LEATHERWORKING, {
 					["recipeID"] = 4096,
 					["races"] = HORDE_ONLY,
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Red Dragonscale Breastplate",
+					["recipeID"] = 19054,
+				},
+				-- #endif
 				{
 					["name"] = "Runic Leather Armor",
 					["recipeID"] = 19102
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Sandstalker Breastplate",
 					["recipeID"] = 24851,
 				}),
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Spitfire Breastplate",
 					["recipeID"] = 24848,
 				}),
@@ -429,7 +477,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Heavy Scorpid Bracers",
 					["recipeID"] = 19048
 				},
-				un(PHASE_SIX, {
+				applyclassicphase(PHASE_SIX, {
 					["name"] = "Icy Scale Bracers",
 					["recipeID"] = 28224,
 				}),
@@ -441,11 +489,11 @@ profession(LEATHERWORKING, {
 					["name"] = "Murloc Scale Bracers",
 					["recipeID"] = 6705
 				},
-				un(PHASE_SIX, {
+				applyclassicphase(PHASE_SIX, {
 					["name"] = "Polar Bracers",
 					["recipeID"] = 28221,
 				}),
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Primal Batskin Bracers",
 					["recipeID"] = 24123,
 				}),
@@ -453,15 +501,15 @@ profession(LEATHERWORKING, {
 					["name"] = "Runic Leather Bracers",
 					["recipeID"] = 19065
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Sandstalker Bracers",
 					["recipeID"] = 24849,
 				}),
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Spitfire Bracers",
 					["recipeID"] = 24846,
 				}),
-				un(PHASE_ONE_DIREMAUL, {
+				applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["name"] = "Swift Flight Bracers",
 					["recipeID"] = 22923,
 				}),
@@ -487,6 +535,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Barbaric Gloves",
 					["recipeID"] = 3771
 				},
+				-- #if AFTER TBC
+				applyclassicphase(PHASE_THREE, {
+					["name"] = "Chromatic Gauntlets",
+					["recipeID"] = 23708,
+				}),
+				-- #endif
 				{
 					["name"] = "Dark Leather Gloves",
 					["recipeID"] = 3765
@@ -495,6 +549,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Deviate Scale Gloves",
 					["recipeID"] = 7954
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Dragonscale Gauntlets",
+					["recipeID"] = 10619,
+				},
+				-- #endif
 				{
 					["name"] = "Embossed Leather Gloves",
 					["recipeID"] = 3756
@@ -517,6 +577,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Gloves of the Greatfather",
 					["recipeID"] = 21943
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Green Dragonscale Gauntlets",
+					["recipeID"] = 24655,
+				},
+				-- #endif
 				{
 					["name"] = "Guardian Gloves",
 					["recipeID"] = 7156
@@ -537,7 +603,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Hillman's Leather Gloves",
 					["recipeID"] = 3764
 				},
-				un(PHASE_SIX, {
+				applyclassicphase(PHASE_SIX, {
 					["name"] = "Icy Scale Gauntlets",
 					["recipeID"] = 28223,
 				}),
@@ -549,11 +615,11 @@ profession(LEATHERWORKING, {
 					["name"] = "Pilferer's Gloves",
 					["recipeID"] = 9148
 				},
-				un(PHASE_SIX, {
+				applyclassicphase(PHASE_SIX, {
 					["name"] = "Polar Gloves",
 					["recipeID"] = 28220,
 				}),
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Primal Batskin Gloves",
 					["recipeID"] = 24122,
 				}),
@@ -565,7 +631,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Runic Leather Gauntlets",
 					["recipeID"] = 19055
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Sandstalker Gauntlets",
 					["recipeID"] = 24850,
 				}),
@@ -573,7 +639,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Shadowskin Gloves",
 					["recipeID"] = 22711
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Spitfire Gauntlets",
 					["recipeID"] = 24847,
 				}),
@@ -583,7 +649,7 @@ profession(LEATHERWORKING, {
 					["recipeID"] = 26279,
 				},
 				-- #endif
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Timbermaw Brawlers",
 					["recipeID"] = 23704,
 				}),
@@ -613,7 +679,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Barbaric Belt",
 					["recipeID"] = 3779
 				},
-				un(PHASE_FIVE_CATCH_UP, {
+				applyclassicphase(PHASE_FIVE_CATCH_UP, {
 					["name"] = "Bramblewood Belt",
 					["recipeID"] = 28474,
 				}),
@@ -637,7 +703,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Gem-studded Leather Belt",
 					["recipeID"] = 3778
 				},
-				un(PHASE_ONE_DIREMAUL, {
+				applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["name"] = "Girdle of Insight",
 					["recipeID"] = 22921,
 				}),
@@ -661,16 +727,16 @@ profession(LEATHERWORKING, {
 					["name"] = "Hillman's Belt",
 					["recipeID"] = 3767
 				},
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Lava Belt",
 					["recipeID"] = 23707
 				}),
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Might of the Timbermaw",
 					["recipeID"] = 23703,
 				}),
 				-- #if AFTER TBC
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Molten Belt",
 					["recipeID"] = 23710,
 				}),
@@ -706,10 +772,32 @@ profession(LEATHERWORKING, {
 					["name"] = "Big Voodoo Pants",
 					["recipeID"] = 10560
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Black Dragonscale Leggings",
+					["recipeID"] = 19107,
+				},
+				-- #if AFTER CATA
+				applyclassicphase(TBC_PHASE_ONE, {
+					["name"] = "Blackstorm Leggings",
+					["recipeID"] = 36074,
+				}),
+				-- #endif
+				{
+					["name"] = "Blue Dragonscale Leggings",
+					["recipeID"] = 24654,
+				},
+				-- #endif
 				{
 					["name"] = "Dark Leather Pants",
 					["recipeID"] = 7135
 				},
+				-- #if AFTER CATA
+				applyclassicphase(TBC_PHASE_ONE, {
+					["name"] = "Dragonstrike Leggings",
+					["recipeID"] = 36076,
+				}),
+				-- #endifc
 				{
 					["name"] = "Dusky Leather Leggings",
 					["recipeID"] = 9195
@@ -722,6 +810,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Fine Leather Pants",
 					["recipeID"] = 7133
 				},
+				-- #if AFTER TBC
+				{
+					["name"] = "Green Dragonscale Leggings",
+					["recipeID"] = 19060,
+				},
+				-- #endif
 				{
 					["name"] = "Guardian Pants",
 					["recipeID"] = 7147
@@ -790,7 +884,13 @@ profession(LEATHERWORKING, {
 			["name"] = "Boots",
 			["categoryID"] = 258,
 			["groups"] = {
-				un(PHASE_FIVE_CATCH_UP, {
+				-- #if AFTER TBC
+				{
+					["name"] = "Black Dragonscale Boots",
+					["recipeID"] = 20855,
+				},
+				-- #endif
+				applyclassicphase(PHASE_FIVE_CATCH_UP, {
 					["name"] = "Bramblewood Boots",
 					["recipeID"] = 28473,
 				}),
@@ -798,7 +898,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Dark Leather Boots",
 					["recipeID"] = 2167
 				},
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Dawn Treaders",
 					["recipeID"] = 23705,
 				}),
@@ -818,7 +918,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Handstitched Leather Boots",
 					["recipeID"] = 2149
 				},
-				un(PHASE_ONE_DIREMAUL, {
+				applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["name"] = "Mongoose Boots",
 					["recipeID"] = 22922,
 				}),
@@ -852,6 +952,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Black Whelp Cloak",
 					["recipeID"] = 9070
 				},
+				-- #if AFTER TBC
+				applyclassicphase(PHASE_ONE_DIREMAUL, {
+					["name"] = "Chromatic Cloak",
+					["recipeID"] = 22926,
+				}),
+				-- #endif
 				{
 					["name"] = "Dark Leather Cloak",
 					["recipeID"] = 2168
@@ -889,7 +995,7 @@ profession(LEATHERWORKING, {
 					["recipeID"] = 19093
 				},
 				-- #if AFTER TBC
-				un(PHASE_ONE_DIREMAUL, {
+				applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["name"] = "Shifting Cloak",
 					["recipeID"] = 22928,
 				}),
@@ -1113,10 +1219,6 @@ profession(LEATHERWORKING, {
 					["name"] = "Carapace of Sun and Shadow",
 					["recipeID"] = 46138
 				}),
-				{
-					["name"] = "Ebon Netherscale Breastplate",
-					["recipeID"] = 35575
-				},
 				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Embrace of the Phoenix",
 					["recipeID"] = 46137
@@ -1129,10 +1231,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Felstalker Breastplate",
 					["recipeID"] = 32500
 				},
+				-- #if AFTER CATA
 				{
 					["name"] = "Golden Dragonstrike Breastplate",
 					["recipeID"] = 36079
 				},
+				-- #endif
 				{
 					["name"] = "Heavy Clefthoof Vest",
 					["recipeID"] = 32495
@@ -1145,18 +1249,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Living Crystal Breastplate",
 					["recipeID"] = 36078
 				},
-				{
-					["name"] = "Netherstrike Breastplate",
-					["recipeID"] = 35580
-				},
+				-- #if AFTER CATA
 				{
 					["name"] = "Primalstorm Breastplate",
 					["recipeID"] = 36077
 				},
-				{
-					["name"] = "Primalstrike Vest",
-					["recipeID"] = 35589
-				},
+				-- #endif
 				{
 					["name"] = "Scaled Draenic Vest",
 					["recipeID"] = 32468
@@ -1204,10 +1302,6 @@ profession(LEATHERWORKING, {
 					["recipeID"] = 52733
 				}),
 				{
-					["name"] = "Ebon Netherscale Bracers",
-					["recipeID"] = 35577
-				},
-				{
 					["name"] = "Felstalker Bracers",
 					["recipeID"] = 32499
 				},
@@ -1215,14 +1309,6 @@ profession(LEATHERWORKING, {
 					["name"] = "Living Earth Bindings",
 					["recipeID"] = 41163
 				}),
-				{
-					["name"] = "Netherstrike Bracers",
-					["recipeID"] = 35584
-				},
-				{
-					["name"] = "Primalstrike Bracers",
-					["recipeID"] = 35591
-				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Redeemed Soul Wristguards",
 					["recipeID"] = 40004
@@ -1328,10 +1414,6 @@ profession(LEATHERWORKING, {
 					["recipeID"] = 35537
 				},
 				{
-					["name"] = "Ebon Netherscale Belt",
-					["recipeID"] = 35576
-				},
-				{
 					["name"] = "Felstalker Belt",
 					["recipeID"] = 32498
 				},
@@ -1346,14 +1428,6 @@ profession(LEATHERWORKING, {
 				{
 					["name"] = "Netherfury Belt",
 					["recipeID"] = 32501
-				},
-				{
-					["name"] = "Netherstrike Belt",
-					["recipeID"] = 35582
-				},
-				{
-					["name"] = "Primalstrike Belt",
-					["recipeID"] = 35590
 				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Redeemed Soul Cinch",
