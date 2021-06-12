@@ -44,7 +44,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					["isBreadcrumb"] = true,
 					["lvl"] = lvlsquish(65, 15, 65),
 				}),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11011, {	-- Eternal Vigilance
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(11011, {	-- Eternal Vigilance
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 11001,	-- Vanquish the Raven God
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
@@ -244,7 +244,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 							i(27633),	-- Terokk's Mask
 						},
 					}),
-					applyclassicphase(TBC_PHASE_THREE_NETHERWING, e(542, {	-- Anzu
+					applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, e(542, {	-- Anzu
 						-- #if BEFORE 4.0.1
 						["description"] = "This special encounter can be started by a Druid that has completed the 'Vanquish the Raven God' quest chain. It's the same quest chain that grants them Swift Flight Form, so if you see a speedy flappy boi out in the world and they join your dungeon group, you're pretty much guaranteed to have a shot at this... unless they forget the quest item (in the keyring) used to summon him. :)\n\nDruids: You can right click this boss to see the quest chain you need to finish.",
 						["sourceQuest"] = 11001,	-- Vanquish the Raven God
