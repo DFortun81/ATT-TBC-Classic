@@ -1114,9 +1114,6 @@ _.Zones =
 						{ "i", 32357, 1 },	-- Essence of the Falcon
 					},
 					["lvl"] = 70,
-					["groups"] = {
-						i(32481),	-- Charm of Swift Flight
-					},
 				})),
 				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10992, {	-- The Hawk's Essence
 					["qg"] = 22924,	-- Arthorn Windsong
