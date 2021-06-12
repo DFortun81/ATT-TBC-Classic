@@ -597,18 +597,6 @@ _.Zones =
 						},
 					},
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10978, {	-- Return to Morthis Whisperwing
-					["qg"] = 22837,	-- Dreamwarden Lurosa
-					["sourceQuest"] = 10965,	-- No Mere Dream
-					["coord"] = { 72.5, 63.3, MOONGLADE },
-					["timeline"] = { "removed 4.0.1" },
-					["maps"] = { ZANGARMARSH },
-					["classes"] = { DRUID },
-					["cost"] = {
-						{ "i", 32074, 1 },	-- Relics of Aviana (Provided)
-					},
-					["lvl"] = 70,
-				})),
 				q(6845, {	-- Uncovering Past Secrets
 					["qg"] = 11939,	-- Umber
 					["sourceQuest"] = 6844,	-- Umber, Archivist
