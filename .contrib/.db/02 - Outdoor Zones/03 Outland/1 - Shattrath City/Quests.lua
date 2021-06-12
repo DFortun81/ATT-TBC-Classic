@@ -6,17 +6,6 @@ _.Zones =
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(SHATTRATH_CITY, {
 			n(QUESTS, {
-				-- TODO: https://wowwiki-archive.fandom.com/wiki/Wind_Trader_Zhareem
-				q(11369, {	-- WANTED: A Black Stalker Egg
-					["qg"] = 24369,	-- Wind Trader Zhareem
-					["coord"] = { 75, 37, SHATTRATH_CITY },
-					["maps"] = { COILFANG_RESERVOIR_UNDERBOG },
-					["isDaily"] = true,
-					["lvl"] = 70,
-					["cost"] = {
-						{ "i", 33826, 1 },	-- Black Stalker Egg
-					},
-				}),
 				q(10552, {	-- Allegiance to the Scryers
 					["sourceQuest"] = 10211,	-- City of Light
 					["coord"] = { 54.7, 44.3, SHATTRATH_CITY },
@@ -26,11 +15,13 @@ _.Zones =
 					["sourceQuest"] = 10552,	-- Allegiance to the Scryers
 					["coord"] = { 54.7, 44.3, SHATTRATH_CITY },
 					["provider"] = { "n", 18166 },	-- Archmage Khadgar
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10412, {	-- Firewing Signets
 					["sourceQuest"] = 10552,	-- Allegiance to the Scryers
 					["coord"] = { 45.1, 81.4, SHATTRATH_CITY },
 					["provider"] = { "n", 18531 },	-- Magistrix Fyalenn
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10414, {	-- Single Firewing Signet
 					["description"] = "Gives reputation through Honored.",
@@ -38,6 +29,8 @@ _.Zones =
 					["repeatable"] = true,
 					["coord"] = { 45.1, 81.4, SHATTRATH_CITY },
 					["provider"] = { "n", 18531 },	-- Magistrix Fyalenn
+					["maxReputation"] = { 934, HONORED },	-- The Scryers, Honored.
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10415, {	-- More Firewing Signets
 					["description"] = "Gives reputation through Honored.",
@@ -45,11 +38,14 @@ _.Zones =
 					["repeatable"] = true,
 					["coord"] = { 45.1, 81.4, SHATTRATH_CITY },
 					["provider"] = { "n", 18531 },	-- Magistrix Fyalenn
+					["maxReputation"] = { 934, HONORED },	-- The Scryers, Honored.
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10656, {	-- Sunfury Signets
 					["sourceQuest"] = 10552,	-- Allegiance to the Scryers
 					["coord"] = { 45.1, 81.4, SHATTRATH_CITY },
 					["provider"] = { "n", 18531 },	-- Magistrix Fyalenn
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10659, {	-- Single Sunfury Signet
 					["description"] = "Gives reputation through Exalted.",
@@ -57,6 +53,7 @@ _.Zones =
 					["repeatable"] = true,
 					["coord"] = { 45.1, 81.4, SHATTRATH_CITY },
 					["provider"] = { "n", 18531 },	-- Magistrix Fyalenn
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10658, {	-- More Sunfury Signets
 					["description"] = "Gives reputation through Exalted.",
@@ -64,18 +61,20 @@ _.Zones =
 					["repeatable"] = true,
 					["coord"] = { 45.1, 81.4, SHATTRATH_CITY },
 					["provider"] = { "n", 18531 },	-- Magistrix Fyalenn
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10416, {	-- Synthesis of Power
 					["sourceQuest"] = 10552,	-- Allegiance to the Scryers
 					["coord"] = { 42.6, 91.4, SHATTRATH_CITY },
 					["provider"] = { "n", 18530 },	-- Voren'thal the Seer
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10419, {	-- Arcane Tomes
-					["description"] = "Gives reputation through Exalted.",
 					["sourceQuest"] = 10416,	-- Synthesis of Power
 					["repeatable"] = true,
 					["coord"] = { 42.6, 91.4, SHATTRATH_CITY },
 					["provider"] = { "n", 18530 },	-- Voren'thal the Seer
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(11039, {	-- Report to Spymaster Thalodien
 					["isBreadcrumb"] = true,	-- for Manaforge B'naar
@@ -88,6 +87,7 @@ _.Zones =
 						{ "n", 23273 }, 	-- Arcanist Raestan
 						{ "n", 23272 },	-- Arcanist Savan
 					},
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10024, {	-- Voren'thal's Visions
 					["description"] = "If you want to switch from Aldor to Scryers, use these quests to regain lost Scryers reputation.",
@@ -101,11 +101,11 @@ _.Zones =
 					["provider"] = { "n", 18596 },	-- Arcanist Adyria
 				}),
 				q(11482, {	-- Duty Calls
-					["minReputation"] = { 934, FRIENDLY },
 					["isBreadcrumb"] = true,
 					["provider"] = { "n", 18594 },	-- Dathris Sunstriker
 					["coord"] = { 54.6, 80.8, SHATTRATH_CITY },
 					["lvl"] = 70,
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10551, {	-- Allegiance to the Aldor
 					["sourceQuest"] = 10211,	-- City of Light
@@ -116,54 +116,61 @@ _.Zones =
 					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
 					["coord"] = { 54.7, 44.3, SHATTRATH_CITY },
 					["provider"] = { "n", 18166 },	-- Archmage Khadgar
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10021, {	-- Restoring the Light
 					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
 					["coord"] = { 24.2, 29.8, SHATTRATH_CITY },
 					["provider"] = { "n", 18538 },	-- Ishanah
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10325, {	-- Marks of Kil'jaeden
-					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
+					["qg"] = 18537,	-- Adyen the Lightwarden
+					["sourceQuest"] = 10551,	-- Allegiance to the Aldor
 					["coord"] = { 30.7, 34.6, SHATTRATH_CITY },
-					["provider"] = { "n", 18537 },	-- Adyen the Lightwarden
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10327, {	-- Single Mark of Kil'jaeden
-					["description"] = "Gives reputation through Honored.",
 					["sourceQuest"] = 10325,	-- Marks of Kil'jaeden
 					["repeatable"] = true,
 					["coord"] = { 30.7, 34.6, SHATTRATH_CITY },
 					["provider"] = { "n", 18537 },	-- Adyen the Lightwarden
+					["maxReputation"] = { 932, HONORED },	-- The Aldor, Honored.
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10326, {	-- More Marks of Kil'jaeden
-					["description"] = "Gives reputation through Honored.",
 					["sourceQuest"] = 10325,	-- Marks of Kil'jaeden
 					["repeatable"] = true,
 					["coord"] = { 30.7, 34.6, SHATTRATH_CITY },
 					["provider"] = { "n", 18537 },	-- Adyen the Lightwarden
+					["maxReputation"] = { 932, HONORED },	-- The Aldor, Honored.
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10653, {	-- Marks of Sargeras
 					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
 					["coord"] = { 30.7, 34.6, SHATTRATH_CITY },
 					["provider"] = { "n", 18537 },	-- Adyen the Lightwarden
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10655, {	-- Single Mark of Sargeras
-					["description"] = "Gives reputation through Exalted.",
 					["sourceQuests"] = { 10653 },	-- Marks of Sargeras
 					["repeatable"] = true,
 					["coord"] = { 30.7, 34.6, SHATTRATH_CITY },
 					["provider"] = { "n", 18537 },	-- Adyen the Lightwarden
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10654, {	-- More Marks of Sargeras
-					["description"] = "Gives reputation through Exalted.",
 					["sourceQuests"] = { 10653 },	-- Marks of Sargeras
 					["repeatable"] = true,
 					["coord"] = { 30.7, 34.6, SHATTRATH_CITY },
 					["provider"] = { "n", 18537 },	-- Adyen the Lightwarden
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10420, {	-- A Cleansing Light
 					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
 					["coord"] = { 24.2, 29.8, SHATTRATH_CITY },
 					["provider"] = { "n", 18538 },	-- Ishanah
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10421, {	-- Fel Armaments
 					["description"] = "Gives reputation through Exalted.",
@@ -171,19 +178,23 @@ _.Zones =
 					["repeatable"] = true,
 					["coord"] = { 24.2, 29.8, SHATTRATH_CITY },
 					["provider"] = { "n", 18538 },	-- Ishanah
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10020, {	-- A Cure for Zahlia
 					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
 					["provider"] = { "n", 18597 },	-- Sha'nir
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(11481, {	-- Crisis at the Sunwell (may be able to be picked up in Netherstorm)
 					["isBreadcrumb"] = true,
 					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
 					["provider"] = { "n", 18537 },	-- Adyen the Lightwarden
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(11038, {	-- Assist Exarch Orelis
 					["isBreadcrumb"] = true,	-- for "Distraction at Manaforge B'naar," unavailable if you did any Netherstorm breadcrumb quest
 					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["coords"] = {
 						{ 35.0, 32.6, SHATTRATH_CITY },
 						{ 47.4, 26.4, SHATTRATH_CITY },
@@ -532,10 +543,16 @@ _.Zones =
 					["provider"] = { "n", 18481 },	-- A'dal
 					["sourceQuests"] = { 10883 },	-- The Tempest Key
 				}),
-				q(11369, {	-- Wanted: A Black Stalker Egg
-					["provider"] = { "n", 24369 },	-- Wind Trader Zhareem
+				-- TODO: https://wowwiki-archive.fandom.com/wiki/Wind_Trader_Zhareem
+				q(11369, {	-- WANTED: A Black Stalker Egg
+					["qg"] = 24369,	-- Wind Trader Zhareem
 					["coord"] = { 75, 37, SHATTRATH_CITY },
+					["maps"] = { COILFANG_RESERVOIR_UNDERBOG },
 					["isDaily"] = true,
+					["lvl"] = 70,
+					["cost"] = {
+						{ "i", 33826, 1 },	-- Black Stalker Egg
+					},
 				}),
 				q(11389, {	-- Wanted: Arcatraz Sentinels
 					["provider"] = { "n", 24370 },	-- Nether-Stalker Mah'duun
