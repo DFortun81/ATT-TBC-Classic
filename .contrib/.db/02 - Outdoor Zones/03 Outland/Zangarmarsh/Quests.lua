@@ -735,6 +735,18 @@ _.Zones =
 					["coord"] = { 80.4, 64.2, ZANGARMARSH },
 					["lvl"] = lvlsquish(60, 10, 60),
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10961, {	-- The Ward of Wakening
+					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
+					["sourceQuest"] = 10955,	-- Morthis Whisperwing
+					["coord"] = { 80.2, 65.2, ZANGARMARSH },
+					["classes"] = { DRUID },
+					["cost"] = {
+						"i", 31950, 10 ,	-- Bogblossom
+						"i", 22790, 10 ,	-- Ancient Lichen
+						"i", 22786, 10 ,	-- Dreaming Glory
+					},
+					["lvl"] = 70,
+				})),
 				q(9769,  {	-- There's No Explanation for Fashion
 					["qg"] = 18016,	-- Magasha
 					["coord"] = { 84.4, 54.3, ZANGARMARSH },
@@ -783,6 +795,16 @@ _.Zones =
 						i(25617),	-- Captain Krosh's Crash Helmet
 					},
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10964, {	-- Waking the Sleeper
+					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
+					["sourceQuest"] = 10961,	-- The Ward of Wakening
+					["coord"] = { 80.2, 65.2, ZANGARMARSH },
+					["classes"] = { DRUID },
+					["cost"] = {
+						{ "i", 31953, 1 },	-- Ward of Waking (Provided)
+					},
+					["lvl"] = 70,
+				})),
 				q(9820,  {	-- WANTED: Boss Grog'ak
 					["provider"] = { "o", 182165 },	-- Wanted Poster
 					["coord"] = { 32.0, 49.3, ZANGARMARSH },

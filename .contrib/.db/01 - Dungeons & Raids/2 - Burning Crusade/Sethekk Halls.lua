@@ -44,7 +44,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					["isBreadcrumb"] = true,
 					["lvl"] = lvlsquish(65, 15, 65),
 				}),
-				q(11011, {	-- Eternal Vigilance
+				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11011, {	-- Eternal Vigilance
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 11001,	-- Vanquish the Raven God
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
@@ -55,7 +55,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					["groups"] = {
 						i(32449),	-- Essence-Infused Moonstone
 					},
-				}),
+				})),
 				q(29607, {	-- Eyes of Desire
 					["qg"] = 54847,	-- Dealer Vijaad
 					["description"] = "Dealer Vijaad appears upon defeating Darkweaver Syth.",
@@ -98,7 +98,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 						i(29329),	-- Terokk's Quill
 					},
 				}),
-				q(11001, {	-- Vanquish the Raven God
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(11001, {	-- Vanquish the Raven God
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 10994,	-- Chasing the Moonstone
 					["description"] = "This quest chain may not be available until a later phase.",
@@ -117,7 +117,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 						-- #endif
 						i(32387),	-- Idol of the Raven Goddess
 					},
-				}),
+				})),
 			}),
 			n(COMMON_BOSS_DROPS, {
 				-- #if AFTER 8.0.1.27326
@@ -244,7 +244,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 							i(27633),	-- Terokk's Mask
 						},
 					}),
-					e(542, {	-- Anzu
+					applyclassicphase(TBC_PHASE_THREE_NETHERWING, e(542, {	-- Anzu
 						-- #if BEFORE 4.0.1
 						["description"] = "This special encounter can be started by a Druid that has completed the 'Vanquish the Raven God' quest chain. It's the same quest chain that grants them Swift Flight Form, so if you see a speedy flappy boi out in the world and they join your dungeon group, you're pretty much guaranteed to have a shot at this... unless they forget the quest item (in the keyring) used to summon him. :)\n\nDruids: You can right click this boss to see the quest chain you need to finish.",
 						["sourceQuest"] = 11001,	-- Vanquish the Raven God
@@ -266,7 +266,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 							i(32778),	-- Boots of Righteous Fortitude
 							i(32779),	-- Band of Frigid Elements
 						},
-					}),
+					})),
 					e(543, {	-- Talon King Ikiss
 						["creatureID"] = 18473,
 						["groups"] = {

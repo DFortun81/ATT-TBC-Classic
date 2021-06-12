@@ -266,6 +266,20 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["classes"] = { DRUID },
 				}),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10965, {	-- No Mere Dream
+					["qg"] = 22834,	-- Clintar Dreamwalker
+					["sourceQuest"] = 10964,	-- Waking the Sleeper
+					["coord"] = { 75.5, 67.0, MOONGLADE },
+					["classes"] = { DRUID },
+					["lvl"] = 70,
+				})),
+				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10955, {	-- Morthis Whisperwing
+					["qg"] = 12042,	-- Loganaar <Druid Trainer>
+					["coord"] = { 52.5, 40.6, MOONGLADE },
+					["maps"] = { MOONGLADE },
+					["classes"] = { DRUID },
+					["lvl"] = 70,
+				})),
 				q(6125, {	-- Power over Poison
 					["qg"] = 11802,	-- Dendrite Starblaze
 					["sourceQuest"] = 6124,	-- Curing the Sick
