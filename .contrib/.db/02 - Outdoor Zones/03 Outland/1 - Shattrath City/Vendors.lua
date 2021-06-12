@@ -1017,6 +1017,17 @@ _.Zones =
 					["groups"] = COMMON_WRATH_JEWELCRAFTING_RECIPES,
 				}),
 				-- #endif
+				-- #if BEFORE 4.0.1
+				n(19186, {	-- Kylene <Barmaid>
+					["description"] = "Speak to her and tell her she's quite the cook to learn these recipes.\n\nNOTE: It's believed that she will not train the Trout-related recipes until Phase 2.",
+					["coord"] = { 75.6, 32.6, SHATTRATH_CITY },
+					["groups"] = applyclassicphase(TBC_PHASE_TWO, bubbleDown({ ["requireSkill"] = COOKING }, {
+						recipe(42302),	-- Fisherman's Feast
+						recipe(42305),	-- Hot Buttered Trout
+						recipe(42296),	-- Stewed Trout
+					})),
+				}),
+				-- #endif
 				n(115546, {	-- Lunelli <Keeper of Lost Recipes>
 					["description"] = "She will only sell these recipes to those who have completed the quests that reward them.",
 					["coord"] = { 64.2, 71.4, SHATTRATH_CITY },

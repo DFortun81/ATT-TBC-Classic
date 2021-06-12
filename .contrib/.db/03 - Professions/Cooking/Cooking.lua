@@ -564,10 +564,10 @@ profession(COOKING, {
 			["name"] = "Feltail Delight",
 			["recipeID"] = 33291
 		},
-		{
+		applyclassicphase(TBC_PHASE_TWO, {
 			["name"] = "Fisherman's Feast",
 			["recipeID"] = 42302
-		},
+		}),
 		{
 			["name"] = "Golden Fish Sticks",
 			["recipeID"] = 33295
@@ -576,10 +576,10 @@ profession(COOKING, {
 			["name"] = "Grilled Mudfish",
 			["recipeID"] = 33293
 		},
-		{
+		applyclassicphase(TBC_PHASE_TWO, {
 			["name"] = "Hot Buttered Trout",
 			["recipeID"] = 42305
-		},
+		}),
 		{
 			["name"] = "Kibler's Bits",
 			["recipeID"] = 43772
@@ -617,10 +617,10 @@ profession(COOKING, {
 			["timeline"] = { "removed 4.2.0.10000" },
 			["recipeID"] = 33285
 		},
-		{
+		applyclassicphase(TBC_PHASE_TWO, {
 			["name"] = "Stewed Trout",
 			["recipeID"] = 42296
-		},
+		}),
 		{
 			["name"] = "Stormchops",
 			["recipeID"] = 43758

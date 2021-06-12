@@ -41,10 +41,10 @@ _.Craftables = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 		i(30155),	-- Clam Bar
 		i(31673),	-- Crunchy Serpent
 		i(27662),	-- Feltail Delight
-		i(33052),	-- Fisherman's Feast
+		applyclassicphase(TBC_PHASE_TWO, i(33052)),	-- Fisherman's Feast
 		i(27666),	-- Golden Fish Sticks
 		i(27664),	-- Grilled Mudfish
-		i(33053),	-- Hot Buttered Trout
+		applyclassicphase(TBC_PHASE_TWO, i(33053)),	-- Hot Buttered Trout
 		i(33874),	-- Kibler's Bits
 		i(31672),	-- Mok'Nathal Shortribs
 		i(27665),	-- Poached Bluefish
@@ -53,7 +53,7 @@ _.Craftables = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 		i(33825),	-- Skullfish Soup
 		i(27667),	-- Spicy Crawdad
 		i(33872),	-- Spicy Hot Talbuk
-		i(33048),	-- Stewed Trout
+		applyclassicphase(TBC_PHASE_TWO, i(33048)),	-- Stewed Trout
 		i(33866),	-- Stormchops
 		i(27660),	-- Talbuk Steak
 		i(27659),	-- Warp Burger
