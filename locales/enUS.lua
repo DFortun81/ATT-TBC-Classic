@@ -409,6 +409,7 @@ app.L = {
 		["Ahn'Qiraj"] = "Temple of Ahn'Qiraj";
 		["Ahn'Qiraj Temple"] = "Temple of Ahn'Qiraj";
 		["Sunken Temple"] = "The Temple of Atal'hakkar";
+		["Hellfire Citadel: Ramparts"] = "Hellfire Ramparts";
 	};
 
 	-- This is necessary to have because Blizzard does not always have the correct map ID at the time of zone change.
