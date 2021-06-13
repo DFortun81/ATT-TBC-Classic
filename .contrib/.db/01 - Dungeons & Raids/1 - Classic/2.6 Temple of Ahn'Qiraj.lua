@@ -728,7 +728,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						{ "i", 20858, 15 },	-- Stone Scarab
 					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
 						i(21200),	-- Signet Ring of the Bronze Dragonflight
 						i(21210),	-- Signet Ring of the Bronze Dragonflight
 					},
@@ -747,7 +747,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						{ "i", 20863, 15 },	-- Clay Scarab
 					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
 						i(21200),	-- Signet Ring of the Bronze Dragonflight
 						i(21205),	-- Signet Ring of the Bronze Dragonflight
 					},
@@ -766,7 +766,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						{ "i", 20860, 15 },	-- Silver Scarab
 					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
 						i(21210),	-- Signet Ring of the Bronze Dragonflight
 						i(21205),	-- Signet Ring of the Bronze Dragonflight
 					},
@@ -781,11 +781,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8756,	-- The Qiraji Conqueror
 						8751,	-- The Protector of Kalimdor
 					},
-					["cost"] = {
-						{ "i", 21209, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21209 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21210),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -799,7 +799,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8747,	-- The Path of the Protector (1/4)
 					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
 						i(21201),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -813,11 +813,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8758,	-- The Path of the Invoker (2/4)
 						8748,	-- The Path of the Protector (2/4)
 					},
-					["cost"] = {
-						{ "i", 21201, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21201 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21202),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -831,11 +831,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8759,	-- The Path of the Invoker (3/4)
 						8749,	-- The Path of the Protector (3/4)
 					},
-					["cost"] = {
-						{ "i", 21202, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21202 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21203),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -849,11 +849,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8760,	-- The Path of the Invoker (4/4)
 						8750,	-- The Path of the Protector (4/4)
 					},
-					["cost"] = {
-						{ "i", 21203, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21203 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21204),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -867,7 +867,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8747,	-- The Path of the Protector (1/4)
 					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
 						i(21206),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -881,11 +881,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8753,	-- The Path of the Conqueror (2/4)
 						8748,	-- The Path of the Protector (2/4)
 					},
-					["cost"] = {
-						{ "i", 21206, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21206 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21207),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -899,11 +899,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8754,	-- The Path of the Conqueror (3/4)
 						8749,	-- The Path of the Protector (3/4)
 					},
-					["cost"] = {
-						{ "i", 21207, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21207 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21208),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -917,11 +917,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8755,	-- The Path of the Conqueror (4/4)
 						8750,	-- The Path of the Protector (4/4)
 					},
-					["cost"] = {
-						{ "i", 21208, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21208 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21209),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -935,7 +935,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8757,	-- The Path of the Invoker (1/4)
 					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
 						i(21196),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -949,11 +949,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8753,	-- The Path of the Conqueror (2/4)
 						8758,	-- The Path of the Invoker (2/4)
 					},
-					["cost"] = {
-						{ "i", 21196, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21196 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21197),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -967,11 +967,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8754,	-- The Path of the Conqueror (3/4)
 						8759,	-- The Path of the Invoker (3/4)
 					},
-					["cost"] = {
-						{ "i", 21197, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21197 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21198),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -985,11 +985,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8755,	-- The Path of the Conqueror (4/4)
 						8760,	-- The Path of the Invoker (4/4)
 					},
-					["cost"] = {
-						{ "i", 21198, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21198 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21199),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -1003,11 +1003,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8761,	-- The Grand Invoker
 						8756,	-- The Qiraji Conqueror
 					},
-					["cost"] = {
-						{ "i", 21199, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21199 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21200),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
@@ -1021,11 +1021,11 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						8761,	-- The Grand Invoker
 						8751,	-- The Protector of Kalimdor
 					},
-					["cost"] = {
-						{ "i", 21203, 1 },	-- Signet Ring of the Bronze Dragonflight
-					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 Signet Ring of the Bronze Dragonflight
+							["provider"] = { "i", 21203 },	-- Signet Ring of the Bronze Dragonflight
+						}),
 						i(21205),	-- Signet Ring of the Bronze Dragonflight
 					},
 				}),
