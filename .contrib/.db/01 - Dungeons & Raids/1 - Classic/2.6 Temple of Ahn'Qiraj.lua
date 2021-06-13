@@ -1,14 +1,25 @@
 -----------------------------------------------------
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
-_.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
-	map(TEMPLE_OF_AHNQIRAJ, {
+-- #if AFTER TBC
+local ANACHRONOS_COORD = { 41.6, 49.8, CAVERNS_OF_TIME };
+-- #else
+local ANACHRONOS_COORD = { 65, 50, TANARIS },
+-- #endif
+_.Instances = { tier(1, applyclassicphase(PHASE_FIVE, {	-- Classic
+	inst(744, {	-- Temple of Ahn'Qiraj
 		["description"] = "Dark whispers ride on the winds of Silithus desert. An old god stirs in his wretched lair and the entire world shall soon be the target of his wrath.\n\nAfter thousands of years of slumber, the old god, C'thun has awakened and is quickly regenerating his power. Once he has reached full potential nothing will be able to stop him. The dragons that so humbly sacrificed themselves so long ago to imprison C'thun are weakened or enslaved in the temple, so the charge of protecting the land falls to other heroes.\n\nHeroes must enter Temple of Ahn'Qiraj, challenge C'thun's most wicked servants, and slay a god. The road will not be easy and it is wrought with peril at every turn. Will the heroes turn back now or face C'thun in his mighty lair and put an end to him once and for all?",
+		["coord"] = { 46.76, 7.53, 327 },	-- Temple of Ahn'Qiraj, Ahn Qiraj: The Fallen Kingdom
+		["maps"] = {
+			TEMPLE_OF_AHNQIRAJ,	-- The Temple Gates
+			319,	-- The Hive Undergrounds
+			321,	-- Vault of C'Thun
+		},
 		["isRaid"] = true,
 		["lvl"] = 50,
 		["groups"] = {
 			n(FACTIONS, {
-				faction(910, { 	-- Brood of Nozdormu
+				faction(910, {	-- Brood of Nozdormu
 					["icon"] = "Interface\\Icons\\INV_Misc_Head_Dragon_Bronze",
 					["maps"] = { CAVERNS_OF_TIME },
 				}),
@@ -690,7 +701,6 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						i(21273),	-- Blessed Qiraji Acolyte Staff
 						i(21275),	-- Blessed Qiraji Augur Staff
 						i(21268),	-- Blessed Qiraji War Hammer
-						
 					},
 				}),
 				q(8579, {	-- Mortal Champions
@@ -718,7 +728,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8756,	-- The Qiraji Conqueror
 					["minReputation"] = { 910, EXALTED },	-- Brood of Nozdormu, Exalted.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["repeatable"] = true,
 					["cost"] = {
@@ -737,7 +747,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8761,	-- The Grand Invoker
 					["minReputation"] = { 910, EXALTED },	-- Brood of Nozdormu, Exalted.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["repeatable"] = true,
 					["cost"] = {
@@ -756,7 +766,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8751,	-- The Protector of Kalimdor
 					["minReputation"] = { 910, EXALTED },	-- Brood of Nozdormu, Exalted.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["repeatable"] = true,
 					["cost"] = {
@@ -775,7 +785,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8760,	-- The Path of the Invoker (4/4)
 					["minReputation"] = { 910, EXALTED },	-- Brood of Nozdormu, Exalted.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8756,	-- The Qiraji Conqueror
@@ -792,7 +802,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 				q(8752, {	-- The Path of the Conqueror (1/4)
 					["qg"] = 15192,	-- Anachronos
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu, Neutral.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8757,	-- The Path of the Invoker (1/4)
@@ -807,7 +817,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8752,	-- The Path of the Conqueror (1/4)
 					["minReputation"] = { 910, FRIENDLY },	-- Brood of Nozdormu, Friendly.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8758,	-- The Path of the Invoker (2/4)
@@ -825,7 +835,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8753,	-- The Path of the Conqueror (2/4)
 					["minReputation"] = { 910, HONORED },	-- Brood of Nozdormu, Honored.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8759,	-- The Path of the Invoker (3/4)
@@ -843,7 +853,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8754,	-- The Path of the Conqueror (3/4)
 					["minReputation"] = { 910, REVERED },	-- Brood of Nozdormu, Revered.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8760,	-- The Path of the Invoker (4/4)
@@ -860,7 +870,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 				q(8757, {	-- The Path of the Invoker (1/4)
 					["qg"] = 15192,	-- Anachronos
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu, Neutral.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8752,	-- The Path of the Conqueror (1/4)
@@ -875,7 +885,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8757,	-- The Path of the Invoker (1/4)
 					["minReputation"] = { 910, FRIENDLY },	-- Brood of Nozdormu, Friendly.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8753,	-- The Path of the Conqueror (2/4)
@@ -893,7 +903,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8758,	-- The Path of the Invoker (2/4)
 					["minReputation"] = { 910, HONORED },	-- Brood of Nozdormu, Honored.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8754,	-- The Path of the Conqueror (3/4)
@@ -911,7 +921,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8759,	-- The Path of the Invoker (3/4)
 					["minReputation"] = { 910, REVERED },	-- Brood of Nozdormu, Revered.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8755,	-- The Path of the Conqueror (4/4)
@@ -928,7 +938,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 				q(8747, {	-- The Path of the Protector (1/4)
 					["qg"] = 15192,	-- Anachronos
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu, Neutral.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8752,	-- The Path of the Conqueror (1/4)
@@ -943,7 +953,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8747,	-- The Path of the Protector (1/4)
 					["minReputation"] = { 910, FRIENDLY },	-- Brood of Nozdormu, Friendly.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8753,	-- The Path of the Conqueror (2/4)
@@ -961,7 +971,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8748,	-- The Path of the Protector (2/4)
 					["minReputation"] = { 910, HONORED },	-- Brood of Nozdormu, Honored.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8754,	-- The Path of the Conqueror (3/4)
@@ -979,7 +989,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8749,	-- The Path of the Protector (3/4)
 					["minReputation"] = { 910, REVERED },	-- Brood of Nozdormu, Revered.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8755,	-- The Path of the Conqueror (4/4)
@@ -997,7 +1007,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8750,	-- The Path of the Protector (4/4)
 					["minReputation"] = { 910, EXALTED },	-- Brood of Nozdormu, Exalted.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8761,	-- The Grand Invoker
@@ -1015,7 +1025,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					["qg"] = 15192,	-- Anachronos
 					["sourceQuest"] = 8755,	-- The Path of the Conqueror (4/4)
 					["minReputation"] = { 910, EXALTED },	-- Brood of Nozdormu, Exalted.
-					["coord"] = { 65, 50, TANARIS },
+					["coord"] = ANACHRONOS_COORD,
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
 						8761,	-- The Grand Invoker
@@ -1030,11 +1040,8 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					},
 				}),
 				q(8802, {	-- The Savior of Kalimdor
-					["qg"] = 15379,	-- Caelestrasz
+					["provider"] = { "i", 21221 },	-- Eye of C'Thun
 					["sourceQuest"] = 8801,	-- C'Thun's Legacy
-					["cost"] = {
-						{ "i", 21221, 1 },	-- Eye of C'Thun
-					},
 					["groups"] = {
 						i(21712),	-- Amulet of the Fallen God
 						i(21710),	-- Cloak of the Fallen God
@@ -1222,8 +1229,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						15299,	-- Viscidus
 					},
 				}),
-				i(76402, {	-- Greater Scarab Coffer Key
-					["u"] = CATA_PHASE_ONE,
+				applyclassicphase(CATA_PHASE_ONE, i(76402, {	-- Greater Scarab Coffer Key
 					["timeline"] = {
 						"added 4.3.0.15005"
 					},
@@ -1241,7 +1247,7 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 						15544,	-- Vem
 						15299,	-- Viscidus
 					},
-				}),
+				})),
 				i(21229, {	-- Qiraji Lord's Insignia
 					["crs"] = {
 						15516,	-- Battleguard Sartura
@@ -1277,104 +1283,145 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					}),
 				},
 			}),
-			n(15263, {	-- The Prophet Skeram
-				i(22222),	-- Plans: Thick Obisidan Breastplate
-				i(21703),	-- Hammer of Ji'zhi
-				i(21128),	-- Staff of the Qiraji Prophets
-				i(21702),	-- Amulet of Foul Warding
-				i(21700),	-- Pendant of the Qiraji Guardian
-				i(21699),	-- Barrage Shoulders
-				i(21701),	-- Cloak of Concentrated Hatred
-				i(21814),	-- Breastplate of Annihilation
-				i(21708),	-- Beetle Scaled Waistguards
-				i(21698),	-- Leggings of Immersion
-				i(21705),	-- Boots of the Fallen Prophet
-				i(21704),	-- Boots of the Redeemed Prophecy
-				i(21706),	-- Boots of the Unwavering Will
-				i(21707),	-- Ring of Swarming Thought
-				i(93041, {	-- Jewel of Maddening Whispers (Pet)
-					["u"] = MOP_PHASE_ONE,
-					["timeline"] = {
-						"added 5.1.0.16309",
-					},
-				}),
-			}),
-			n(-20, {	-- Silithid Royalty
-				["description"] = "This can be a fairly -buggy- encounter if you don't do it right. Kill 1 boss at a time and allow it to get consumed. Then kill the next one and allow it to also get consumed. The last boss you leave alive determines the loot that can drop.\n\nThese items can drop from killing the Silithid Royalty bosses regardless of order. For the other items, refer to their individual listings.",
-				["providers"] = {
-					{ "n", 15511 },	-- Lord Kri
-					{ "n", 15543 },	-- Princess Yauj
-					{ "n", 15544 },	-- Vem
-				},
+			e(1543, {	-- The Prophet Skeram
+				["creatureID"] = 15263,
 				["groups"] = {
-					i(21693),	-- Guise of the Devourer
-					i(21694),	-- Ternary Mantle
-					i(21697),	-- Cape of the Trinity
-					i(21696),	-- Robes of the Triumvirate
-					i(21692),	-- Triad Girdle
-					i(21695),	-- Angelista's Touch
+					i(22222),	-- Plans: Thick Obisidan Breastplate
+					i(21703),	-- Hammer of Ji'zhi
+					i(21128),	-- Staff of the Qiraji Prophets
+					i(21702),	-- Amulet of Foul Warding
+					i(21700),	-- Pendant of the Qiraji Guardian
+					i(21699),	-- Barrage Shoulders
+					i(21701),	-- Cloak of Concentrated Hatred
+					i(21814),	-- Breastplate of Annihilation
+					i(21708),	-- Beetle Scaled Waistguards
+					i(21698),	-- Leggings of Immersion
+					i(21705),	-- Boots of the Fallen Prophet
+					i(21704),	-- Boots of the Redeemed Prophecy
+					i(21706),	-- Boots of the Unwavering Will
+					i(21707),	-- Ring of Swarming Thought
+					applyclassicphase(MOP_PHASE_ONE, i(93041, {	-- Jewel of Maddening Whispers (Pet)
+						["timeline"] = {
+							"added 5.1.0.16309",
+						},
+					})),
 				},
 			}),
-			n(15511, {	-- Lord Kri
-				["description"] = "Killing this boss last can drop the following items.",
+			-- #if AFTER LEGION
+			e(1547, {	-- Silithid Royalty
+				["description"] = "This can be a fairly -buggy- encounter if you don't do it right. Kill 1 boss at a time and allow it to get consumed. Then kill the next one and allow it to also get consumed. The last boss you leave alive determines the loot that can drop.",
 				["groups"] = {
-					i(21603),	-- Wand of Qiraji Nobility
-					i(21680),	-- Vest of Swift Execution
-					i(21681),	-- Ring of the Devoured
-					i(21685),	-- Petrified Scarab
+			-- #endif
+					n(	-- Silithid Royalty
+					-- #if ANYCLASSIC
+					-20,
+					-- #else
+					COMMON_BOSS_DROPS,
+					-- #endif
+					{
+						-- #if ANYCLASSIC
+						["description"] = "This can be a fairly -buggy- encounter if you don't do it right. Kill 1 boss at a time and allow it to get consumed. Then kill the next one and allow it to also get consumed. The last boss you leave alive determines the loot that can drop. These items can drop from killing the Silithid Royalty bosses regardless of order. For the other items, refer to their individual listings.",
+						["providers"] = {
+							{ "n", 15511 },	-- Lord Kri
+							{ "n", 15543 },	-- Princess Yauj
+							{ "n", 15544 },	-- Vem
+						},
+						-- #else
+						["description"] = "These items can drop from killing the Silithid Royalty bosses regardless of order. For the other items, refer to their individual listings.",
+						["crs"] = {
+							15511,	-- Lord Kri
+							15543,	-- Princess Yauj
+							15544,	-- Vem
+						},
+						-- #endif
+						["groups"] = {
+							i(21693),	-- Guise of the Devourer
+							i(21694),	-- Ternary Mantle
+							i(21697),	-- Cape of the Trinity
+							i(21696),	-- Robes of the Triumvirate
+							i(21692),	-- Triad Girdle
+							i(21695),	-- Angelista's Touch
+						},
+					}),
+					n(15511, {	-- Lord Kri
+						["description"] = "Killing this boss last can drop the following items.",
+						["groups"] = {
+							i(21603),	-- Wand of Qiraji Nobility
+							i(21680),	-- Vest of Swift Execution
+							i(21681),	-- Ring of the Devoured
+							i(21685),	-- Petrified Scarab
+						},
+					}),
+					n(15543, {	-- Princess Yauj
+						["description"] = "Killing this boss last can drop the following items.",
+						["groups"] = {
+							i(21683),	-- Mantle of the Desert Crusade
+							i(21684),	-- Mantle of the Desert's Fury
+							i(21686),	-- Mantle of Phrenic Power
+							i(21682),	-- Bile-Covered Gauntlets
+							i(21687),	-- Ukko's Ring of Darkness
+						},
+					}),
+					n(15544, {	-- Vem
+						["description"] = "Killing this boss last can drop the following items.",
+						["groups"] = {
+							i(21690),	-- Angelista's Charm
+							i(21689),	-- Gloves of Ebru
+							i(21691),	-- Ooze-Ridden Gauntlets
+							i(21688),	-- Boots of the Fallen Hero
+						},
+					}),
+			-- #if AFTER LEGION
 				},
 			}),
-			n(15543, {	-- Princess Yauj
-				["description"] = "Killing this boss last can drop the following items.",
+			-- #endif
+			e(1544, {	-- Battleguard Sartura
+				["creatureID"] = 15516,
 				["groups"] = {
-					i(21683),	-- Mantle of the Desert Crusade
-					i(21684),	-- Mantle of the Desert's Fury
-					i(21686),	-- Mantle of Phrenic Power
-					i(21682),	-- Bile-Covered Gauntlets
-					i(21687),	-- Ukko's Ring of Darkness
+					i(21673),	-- Silithid Claw
+					i(21666),	-- Sartura's Might
+					i(21669),	-- Creeping Vine Helm
+					i(21678),	-- Necklace of Purity
+					i(21671),	-- Robes of the Battleguard
+					i(21674),	-- Gauntlets of Steadfast Determination
+					i(21672),	-- Gloves of Enforcement
+					i(21675),	-- Thick Qirajihide Belt
+					i(21676),	-- Leggings of the Festering Swarm
+					i(21667),	-- Legplates of Blazing Light
+					i(21668),	-- Scaled Leggings of Qiraji Fury
+					i(21648),	-- Recomposed Boots
+					i(21670),	-- Badge of the Swarmguard
 				},
 			}),
-			n(15544, {	-- Vem
-				["description"] = "Killing this boss last can drop the following items.",
+			e(1545, {	-- Fankriss the Unyielding
+				["creatureID"] = 15510,
 				["groups"] = {
-					i(21690),	-- Angelista's Charm
-					i(21689),	-- Gloves of Ebru
-					i(21691),	-- Ooze-Ridden Gauntlets
-					i(21688),	-- Boots of the Fallen Hero
+					i(21635),	-- Barb of the Sand Reaver
+					i(21650),	-- Ancient Qiraji Ripper
+					i(21664),	-- Barbed Choker
+					i(21665),	-- Mantle of Wicked Revenge
+					i(21639),	-- Pauldrons of the Unrelenting
+					i(21627),	-- Cloak of Untold Secrets
+					i(21663),	-- Robes of the Guardian Saint
+					i(21652),	-- Silithid Carapace Chestguard
+					i(21651),	-- Scaled Sand Reaver Leggings
+					i(21645),	-- Hive Tunneler's Boots
+					i(21647),	-- Fetish of the Sand Reaver
+					i(22402, {	-- Libram of Grace
+						["timeline"] = { "removed 5.0.4.10000" },
+					}),
+					i(22396, {	-- Totem of Life
+						["timeline"] = { "removed 5.0.4.10000" },
+					}),
 				},
 			}),
-			n(15516, {	-- Battleguard Sartura
-				i(21673),	-- Silithid Claw
-				i(21666),	-- Sartura's Might
-				i(21669),	-- Creeping Vine Helm
-				i(21678),	-- Necklace of Purity
-				i(21671),	-- Robes of the Battleguard
-				i(21674),	-- Gauntlets of Steadfast Determination
-				i(21672),	-- Gloves of Enforcement
-				i(21675),	-- Thick Qirajihide Belt
-				i(21676),	-- Leggings of the Festering Swarm
-				i(21667),	-- Legplates of Blazing Light
-				i(21668),	-- Scaled Leggings of Qiraji Fury
-				i(21648),	-- Recomposed Boots
-				i(21670),	-- Badge of the Swarmguard
-			}),
-			n(15510, {	-- Fankriss the Unyielding
-				i(21635),	-- Barb of the Sand Reaver
-				i(21650),	-- Ancient Qiraji Ripper
-				i(21664),	-- Barbed Choker
-				i(21665),	-- Mantle of Wicked Revenge
-				i(21639),	-- Pauldrons of the Unrelenting
-				i(21627),	-- Cloak of Untold Secrets
-				i(21663),	-- Robes of the Guardian Saint
-				i(21652),	-- Silithid Carapace Chestguard
-				i(21651),	-- Scaled Sand Reaver Leggings
-				i(21645),	-- Hive Tunneler's Boots
-				i(21647),	-- Fetish of the Sand Reaver
-				i(22402),	-- Libram of Grace
-				i(22396),	-- Totem of Life
-			}),
-			n(15299, {	-- Viscidus
+			e(1548, {	-- Viscidus
+				-- #if BEFORE CATA
 				["description"] = "This boss requires 200 frost hits to freeze. Once frozen, you need 75 melee hits to shatter him. Equipping barov peasant caller trinket and using it after boss freezes will help to do this.",
+				-- #else
+				["description"] = "This boss requires 20 frost hits to freeze. Once frozen, you need 30 melee hits to shatter him. Equipping the Crate of Kidnapped Puppies or Barov Peasant Caller and using it after the boss freezes will help.",
+				-- #endif
+				["creatureID"] = 15299,
 				["groups"] = {
 					i(20928),	-- Qiraji Bindings of Command
 					i(20932),	-- Qiraji Bindings of Dominance
@@ -1384,87 +1431,99 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_FIVE }, {	-- Classic
 					i(21626),	-- Slime-Coated Leggings
 					i(21677),	-- Ring of Qiraji Fury
 					i(21625),	-- Scarab Brooch
-					i(22399),	-- Idol of Health
-					i(93039, {	-- Viscidus Globule (Pet)
-						["u"] = MOP_PHASE_ONE,
+					i(22399, {	-- Idol of Health
+						["timeline"] = { "removed 5.0.4.10000" },
+					}),
+					applyclassicphase(MOP_PHASE_ONE, i(93039, {	-- Viscidus Globule (Pet)
 						["timeline"] = {
 							"added 5.1.0.16309",
 						},
+					})),
+				},
+			}),
+			e(1546, {	-- Princess Huhuran
+				["creatureID"] = 15509,
+				["groups"] = {
+					i(20928),	-- Qiraji Bindings of Command
+					i(20932),	-- Qiraji Bindings of Dominance
+					i(21616),	-- Huhuran's Stinger
+					i(21621),	-- Cloak of the Golden Hive
+					i(21618),	-- Hive Defiler Wristguards
+					i(21619),	-- Gloves of the Messiah
+					i(21617),	-- Wasphide Gauntlets
+					i(21620),	-- Ring of the Martyr
+				},
+			}),
+			-- #if AFTER LEGION
+			e(1549, {	-- The Twin Emperors
+			-- #endif
+				n(15276, {	-- Emperor Vek'lor
+					i(20735),	-- Formula: Enchant Cloak - Subtlety
+					i(20930),	-- Vek'lor's Diadem
+					i(21597),	-- Royal Scepter of Vek'lor
+					i(21602),	-- Qiraji Execution Bracers
+					i(21599),	-- Vek'lor's Gloves of Devastation
+					i(21598),	-- Royal Qiraji Belt
+					i(21600),	-- Boots of Epiphany
+					i(21601),	-- Ring of Emperor Vek'lor
+					applyclassicphase(MOP_PHASE_ONE, i(93040, {	-- Anubisath Idol (Pet)
+						["timeline"] = {
+							"added 5.1.0.16309",
+						},
+					})),
+				}),
+				n(15275, {	-- Emperor Vek'nilash
+					i(20726),	-- Formula: Enchant Gloves - Threat
+					i(20926),	-- Vek'nilash's Circlet
+					i(21679),	-- Kalimdor's Revenge
+					i(21608),	-- Amulet of Vek'nilash
+					i(21604),	-- Bracelets of Royal Redemption
+					i(21605),	-- Gloves of the Hidden Temple
+					i(21606),	-- Belt of the Fallen Emperor
+					i(21607),	-- Grasp of the Fallen Emperor
+					i(21609),	-- Regenerating Belt of Vek'nilash
+				}),
+			-- #if AFTER LEGION
+			}),
+			-- #endif
+			e(1550, {	-- Ouro
+				["creatureID"] = 15517,
+				["groups"] = {
+					i(20927),	-- Ouro's Intact Hide
+					i(20931),	-- Skin of the Great Sandworm
+					i(23557),	-- Larvae of the Great Worm
+					i(21610),	-- Wormscale Blocker
+					i(21615),	-- Don Rigoberto's Lost Hat
+					i(21611),	-- Burrower Bracers
+					i(23570),	-- Jom Gabbar
+					i(23558),	-- The Burrower's Shell
+				},
+			}),
+			e(1551, {	-- C'Thun
+				["creatureID"] = 15727,
+				["groups"] = {
+					ach(687),	-- Temple of Ahn'Qiraj
+					i(21221),	-- Eye of C'Thun
+					applyclassicphase(PHASE_SIX, {
+						["itemID"] = 22734,	-- Base of Atiesh
+						["classes"] = { PRIEST, MAGE, WARLOCK, DRUID },
 					}),
+					i(20929),	-- Carapace of the Old God
+					i(20933),	-- Husk of the Old God
+					i(21134),	-- Dark Edge of Insanity
+					i(21126),	-- Death's Sting
+					i(21839),	-- Scepter of the False Prophet
+					i(22732),	-- Mark of C'Thun
+					i(21583),	-- Cloak of Clarity
+					i(22731),	-- Cloak of the Devoured
+					i(21585),	-- Dark Storm Gauntlets
+					i(21581),	-- Gauntlets of Annihilation
+					i(21586),	-- Belt of Never-Ending Agony
+					i(22730),	-- Eyestalk Waist Cord
+					i(21582),	-- Grasp of the Old God
+					i(21596),	-- Ring of the Godslayer
+					i(21579),	-- Vanquished Tentacle of C'Thun
 				},
-			}),
-			n(15509, {	-- Princess Huhuran
-				i(20928),	-- Qiraji Bindings of Command
-				i(20932),	-- Qiraji Bindings of Dominance
-				i(21616),	-- Huhuran's Stinger
-				i(21621),	-- Cloak of the Golden Hive
-				i(21618),	-- Hive Defiler Wristguards
-				i(21619),	-- Gloves of the Messiah
-				i(21617),	-- Wasphide Gauntlets
-				i(21620),	-- Ring of the Martyr
-			}),
-			n(15276, {	-- Emperor Vek'lor
-				i(20735),	-- Formula: Enchant Cloak - Subtlety
-				i(20930),	-- Vek'lor's Diadem
-				i(21597), 	-- Royal Scepter of Vek'lor
-				i(21602), 	-- Qiraji Execution Bracers
-				i(21599), 	-- Vek'lor's Gloves of Devastation
-				i(21598), 	-- Royal Qiraji Belt
-				i(21600), 	-- Boots of Epiphany
-				i(21601),	-- Ring of Emperor Vek'lor
-				i(93040, {	-- Anubisath Idol (Pet)
-					["u"] = MOP_PHASE_ONE,
-					["timeline"] = {
-						"added 5.1.0.16309",
-					},
-				}),
-			}),
-			n(15275, {	-- Emperor Vek'nilash
-				i(20726),	-- Formula: Enchant Gloves - Threat
-				i(20926),	-- Vek'nilash's Circlet
-				i(21679), 	-- Kalimdor's Revenge
-				i(21608),	-- Amulet of Vek'nilash
-				i(21604), 	-- Bracelets of Royal Redemption
-				i(21605), 	-- Gloves of the Hidden Temple
-				i(21606), 	-- Belt of the Fallen Emperor
-				i(21607), 	-- Grasp of the Fallen Emperor
-				i(21609), 	-- Regenerating Belt of Vek'nilash
-			}),
-			n(15517, { 	-- Ouro
-				i(20927),	-- Ouro's Intact Hide
-				i(20931),	-- Skin of the Great Sandworm
-				i(23557),	-- Larvae of the Great Worm
-				i(21610),	-- Wormscale Blocker
-				i(21615),	-- Don Rigoberto's Lost Hat
-				i(21611),	-- Burrower Bracers
-				i(23570),	-- Jom Gabbar
-				i(23558),	-- The Burrower's Shell
-			}),
-			n(15727, { 	-- C'Thun
-				{
-					["itemID"] = 21221,	-- Eye of C'Thun
-					["questID"] = 8801,	-- C'Thun's Legacy
-				},
-				un(PHASE_SIX, {
-					["itemID"] = 22734,	-- Base of Atiesh
-					["questID"] = 9251,	-- Atiesh, the Befouled Greatstaff
-					["classes"] = { PRIEST, MAGE, WARLOCK, DRUID },
-				}),
-				i(20929),	-- Carapace of the Old God
-				i(20933),	-- Husk of the Old God
-				i(21134),	-- Dark Edge of Insanity
-				i(21126),	-- Death's Sting
-				i(21839),	-- Scepter of the False Prophet
-				i(22732),	-- Mark of C'Thun
-				i(21583),	-- Cloak of Clarity
-				i(22731),	-- Cloak of the Devoured
-				i(21585),	-- Dark Storm Gauntlets
-				i(21581),	-- Gauntlets of Annihilation
-				i(21586),	-- Belt of Never-Ending Agony
-				i(22730),	-- Eyestalk Waist Cord
-				i(21582),	-- Grasp of the Old God
-				i(21596),	-- Ring of the Godslayer
-				i(21579),	-- Vanquished Tentacle of C'Thun
 			}),
 		},
 	}),
