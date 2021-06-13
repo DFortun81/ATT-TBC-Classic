@@ -100,47 +100,47 @@ _.Zones =
 					["sourceQuests"] = { 10824, 10656 },	-- Sunfury Signets (in SMV OR in Shattrath)
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10804, {	-- Kindness
+				q(10804, {	-- Kindness
 					["provider"] = { "n", 22113 },	-- Mordenai
 					["coord"] = { 59.3, 58.7, SHADOWMOON_VALLEY },
-				})),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10811, {	-- Seek Out Neltharaku
+				}),
+				q(10811, {	-- Seek Out Neltharaku
 					["provider"] = { "n", 22113 },	-- Mordenai
 					["sourceQuests"] = { 10804 },	-- Kindness
 					["coord"] = { 59.3, 58.7, SHADOWMOON_VALLEY },
-				})),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10814, {	-- Neltharaku's Tale
+				}),
+				q(10814, {	-- Neltharaku's Tale
 					["provider"] = { "n", 21657 },	-- Neltharaku
 					["sourceQuests"] = { 10811 },	-- Seek Out Neltharaku
 					["coord"] = { 61.9, 60.0, SHADOWMOON_VALLEY },
-				})),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10836, {	-- Infiltrating Dragonmaw Fortress
+				}),
+				q(10836, {	-- Infiltrating Dragonmaw Fortress
 					["provider"] = { "n", 21657 },	-- Neltharaku
 					["sourceQuests"] = { 10814 },	-- Neltharaku's Tale
 					["coord"] = { 61.9, 60.0, SHADOWMOON_VALLEY },
-				})),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10837, {	-- To Netherwing Ledge!
+				}),
+				q(10837, {	-- To Netherwing Ledge!
 					["provider"] = { "n", 21657 },	-- Neltharaku
 					["sourceQuests"] = { 10836 },	-- Infiltrating Dragonmaw Fortress
 					["coord"] = { 61.9, 60.0, SHADOWMOON_VALLEY },
-				})),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10854, {	-- The Force of Neltharaku
+				}),
+				q(10854, {	-- The Force of Neltharaku
 					["provider"] = { "n", 21657 },	-- Neltharaku
 					["sourceQuests"] = { 10837 },	-- To Netherwing Ledge!
 					["coord"] = { 61.9, 60.0, SHADOWMOON_VALLEY },
-				})),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10858, {	-- Karynaku
+				}),
+				q(10858, {	-- Karynaku
 					["provider"] = { "n", 21657 },	-- Neltharaku
 					["sourceQuests"] = { 10854 },	-- The Force of Neltharaku
 					["coord"] = { 61.9, 60.0, SHADOWMOON_VALLEY },
-				})),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10866, {	-- Zuluhed the Whacked
+				}),
+				q(10866, {	-- Zuluhed the Whacked
 					["provider"] = { "n", 22112 },	-- Karynaku
 					["sourceQuests"] = { 10858 },	-- Karynaku
 					["coord"] = { 69.8, 61.4, SHADOWMOON_VALLEY },
 					["_drop"] = { "races" },	-- stop this from being marked as horde only when it is not horde only
-				})),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10870, {	-- Ally of the Netherwing
+				}),
+				q(10870, {	-- Ally of the Netherwing
 					["provider"] = { "n", 22112 },	-- Karynaku
 					["sourceQuests"] = { 10866 },	-- Zuluhed the Whacked
 					["coord"] = { 69.8, 61.4, SHADOWMOON_VALLEY },
@@ -152,7 +152,7 @@ _.Zones =
 						i(31494),	-- Netherwing Sorceror's Charm
 						i(31493),	-- Netherwing Spiritualist's Charm
 					},
-				})),
+				}),
 				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11012, {	-- Blood Oath of the Netherwing
 					["provider"] = { "n", 22113 },	-- Mordenai
 					["sourceQuests"] = { 10870 },	-- Ally of the Netherwing
