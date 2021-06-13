@@ -6,6 +6,60 @@ profession(LEATHERWORKING, {
 			5148,	-- Tribal Leatherworking [Horde]
 		},
 		["groups"] = {
+			-- #if AFTER TBC
+			{
+				["name"] = "Chest",
+				["categoryID"] = 932,
+				["groups"] = {
+					-- #if BEFORE CATA
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Living Crystal Breastplate",
+						["recipeID"] = 36078,
+						["requireSkill"] = 10660,
+					}),
+					-- #endif
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Windhawk Hauberk",
+						["recipeID"] = 35585,
+						["requireSkill"] = 10660,
+					}),
+				}
+			},
+			{
+				["name"] = "Bracers",
+				["categoryID"] = 933,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Windhawk Bracers",
+						["recipeID"] = 35588,
+						["requireSkill"] = 10660,
+					}),
+				}
+			},
+			{
+				["name"] = "Belts",
+				["categoryID"] = 935,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Windhawk Belt",
+						["recipeID"] = 35587
+					}),
+				},
+			},
+			-- #if BEFORE CATA
+			{
+				["name"] = "Pants",
+				["categoryID"] = 936,
+				["groups"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Wildfeather Leggings",
+						["recipeID"] = 36075,
+						["requireSkill"] = 10660,
+					}),
+				},
+			},
+			-- #endif
+			-- #else
 			{
 				["name"] = "Helms",
 				["categoryID"] = 251,
@@ -149,6 +203,7 @@ profession(LEATHERWORKING, {
 					}),
 				}
 			},
+			-- #endif
 		},
 	}),
 });
