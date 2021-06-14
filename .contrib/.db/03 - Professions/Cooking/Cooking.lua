@@ -2990,11 +2990,7 @@ profession(COOKING, {
 		["groups"]= {
 			i(33844, {	-- Barrel of Fish
 				i(33869),	-- Recipe: Broiled Bloodfin
-				i(34834, {	-- Recipe: Captain Rumsey's Lager
-					-- #if ANYCLASSIC
-					["description"] = "This was originally not available as a drop within the crate or barrel until Patch 2.3.3. I'm not sure if it's available or not, please let the ATT Discord know if you get it in TBC Classic!",
-					-- #endif
-				}),
+				i(34834),	-- Recipe: Captain Rumsey's Lager
 				i(33925),	-- Recipe: Delicious Chocolate Cake
 				i(33875),	-- Recipe: Kibler's Bits
 				i(33870),	-- Recipe: Skullfish Soup
