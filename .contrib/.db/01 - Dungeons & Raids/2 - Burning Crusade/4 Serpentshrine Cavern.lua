@@ -1,6 +1,7 @@
 -----------------------------------------------------
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
+local COILFANG_ARMAMENTS = i(24368);	-- Coilfang Armaments
 _.Instances = { tier(2,	applyclassicphase(TBC_PHASE_TWO, { -- Burning Crusade
 	inst(748, {	-- Serpentshrine Cavern
 		["mapID"] = SERPENTSHRINE_CAVERN,
@@ -24,7 +25,7 @@ _.Instances = { tier(2,	applyclassicphase(TBC_PHASE_TWO, { -- Burning Crusade
 				}),
 			}),
 			n(ZONEDROPS, {
-				i(24368),	-- Coilfang Armaments
+				COILFANG_ARMAMENTS,
 				i(30280),	-- Pattern: Belt of Blasting
 				i(30302, {	-- Pattern: Belt of Deep Shadow
 					["spellID"] = 36351,	-- Belt of Deep Shadow
@@ -269,3 +270,6 @@ _.Instances = { tier(2,	applyclassicphase(TBC_PHASE_TWO, { -- Burning Crusade
 		},
 	}),
 }))};
+
+-- Remove the Phase from Coilfang Armaments
+COILFANG_ARMAMENTS.u = nil;
