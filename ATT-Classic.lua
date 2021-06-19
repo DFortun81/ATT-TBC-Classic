@@ -4633,7 +4633,7 @@ local itemFields = {
 		return t.collectedAsCost;
 	end,
 	["collectedAsCost"] = function(t)
-		local id = t.itemID;
+		local id, partial = t.itemID;
 		local results = app.SearchForField("itemIDAsCost", id, true);
 		if results and #results > 0 then
 			for _,ref in pairs(results) do
@@ -4643,11 +4643,23 @@ local itemFields = {
 							return false;
 						end
 					elseif (ref.collectible and not ref.collected) or (ref.total and ref.total > 0 and not GetRelativeField(t, "parent", ref) and ref.progress < ref.total) then
-						return false;
+						if ref.cost then
+							for k,v in ipairs(ref.cost) do
+								if v[2] == id and v[1] == "i" then
+									if GetItemCount(id, true) >= (v[3] or 1) then
+										partial = true;
+									else
+										return false;
+									end
+								end
+							end
+						else
+							return false;
+						end
 					end
 				end
 			end
-			return true;
+			return partial and 2 or 1;
 		end
 	end,
 	["collectedAsCostAfterFailure"] = function(t)
