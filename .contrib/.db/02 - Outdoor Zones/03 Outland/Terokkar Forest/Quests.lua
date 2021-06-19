@@ -57,8 +57,9 @@ _.Zones =
 				q(11667, {	-- The One That Got Away
 					["provider"] = { "n", 25580 },	-- Old Man Barlo
 					["coord"] = { 38.6, 12.8, TEROKKAR_FOREST },
-					["isDaily"] = true,
 					["requireSkill"] = FISHING,
+					["maps"] = { NAGRAND },
+					["isDaily"] = true,
 					["g"] = {
 						i(34863, {  -- Bag of Fishing Treasures
 							i(33820),  -- Weather-Beaten Fishing Hat

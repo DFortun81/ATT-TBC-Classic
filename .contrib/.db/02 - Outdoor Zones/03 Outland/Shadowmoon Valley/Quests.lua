@@ -730,6 +730,7 @@ _.Zones =
 				q(10676, {	-- Bane of the Illidari
 					["provider"] = { "n", 21465 },	-- David Wayne
 					["coord"] = { 77.4, 38.6, TEROKKAR_FOREST },
+					["maps"] = { TEROKKAR_FOREST },
 					["sourceQuests"] = {
 						10670,	-- Tear of the Earthmother
 						10667,	-- Underworld Loam
@@ -739,6 +740,7 @@ _.Zones =
 					["provider"] = { "n", 21465 },	-- David Wayne
 					["coord"] = { 77.4, 38.6, TEROKKAR_FOREST },
 					["sourceQuest"] = 10676,	-- Bane of the Illidari
+					["maps"] = { TEROKKAR_FOREST },
 					["groups"] = {
 						i(30788),	-- Illidari-Bane Broadsword
 						i(30789),	-- Illidari-Bane Claymore

@@ -1881,13 +1881,33 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 			local costResults = app.SearchForField("itemIDAsCost", paramB);
 			if costResults and #costResults > 0 then
 				if not group.g then group.g = {} end
+				local attunement = app.CreateNPC(-17);
+				if not attunement.g then attunement.g = {}; end
 				local usedToBuy = app.CreateNPC(-2);
-				usedToBuy.text = "Currency For";
 				if not usedToBuy.g then usedToBuy.g = {}; end
 				for i,o in ipairs(costResults) do
-					MergeObject(usedToBuy.g, CreateObject(o));
+					if o.key == "difficultyID" or o.key == "instanceID" or o.key == "mapID" or o.key == "headerID" then
+						if app.CollectibleQuests then
+							local d = CreateObject(o);
+							d.collectible = true;
+							d.collected = GetItemCount(paramB) > 0;
+							d.progress = nil;
+							d.total = nil;
+							d.g = {};
+							MergeObject(attunement.g, d);
+						end
+					else
+						MergeObject(usedToBuy.g, CreateObject(o));
+					end
 				end
-				MergeObject(group.g, usedToBuy);
+				if #attunement.g > 0 then
+					attunement.text = "Attunement For";
+					MergeObject(group.g, attunement);
+				end
+				if #usedToBuy.g > 0 then
+					usedToBuy.text = "Currency For";
+					MergeObject(group.g, usedToBuy);
+				end
 			end
 		end
 		
@@ -4578,7 +4598,9 @@ local itemFields = {
 		if results and #results > 0 then
 			for _,ref in pairs(results) do
 				if ref.itemID ~= id and app.RecursiveGroupRequirementsFilter(ref) then
-					if ref.collectible or (ref.total and ref.total > 0) then
+					if ref.key == "difficultyID" or ref.key == "instanceID" or ref.key == "mapID" or ref.key == "headerID" then
+						return app.CollectibleQuests;
+					elseif ref.collectible or (ref.total and ref.total > 0) then
 						return true;
 					end
 				end
@@ -4616,7 +4638,11 @@ local itemFields = {
 		if results and #results > 0 then
 			for _,ref in pairs(results) do
 				if ref.itemID ~= id and app.RecursiveGroupRequirementsFilter(ref) then
-					if (ref.collectible and not ref.collected) or (ref.total and ref.total > 0 and not GetRelativeField(t, "parent", ref) and ref.progress < ref.total) then
+					if ref.key == "difficultyID" or ref.key == "instanceID" or ref.key == "mapID" or ref.key == "headerID" then
+						if app.CollectibleQuests and GetItemCount(id) == 0 then
+							return false;
+						end
+					elseif (ref.collectible and not ref.collected) or (ref.total and ref.total > 0 and not GetRelativeField(t, "parent", ref) and ref.progress < ref.total) then
 						return false;
 					end
 				end

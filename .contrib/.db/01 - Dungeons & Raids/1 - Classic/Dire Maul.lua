@@ -1,8 +1,7 @@
 -----------------------------------------------------
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
-
-_.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_ONE_DIREMAUL }, {	-- Classic
+_.Instances = { tier(1, applyclassicphase(PHASE_ONE_DIREMAUL, {	-- Classic
 	map(DIRE_MAUL, {
 		["description"] = "Dire Maul is a three-wing instance found in north-central Feralas. It was once a proud Highborne city called Eldre'Thalas, but now lies in ruins, overrun by ogres, satyrs, and undead. Only a tiny remnant of the original Highborne population remains in the form of a murderous sect called the Shen'dralar.",
 		["lvl"] = 44,
@@ -558,14 +557,8 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_ONE_DIREMAUL }, {	-- Classic
 					n(14354, {	-- Pusillin
 						["description"] = "Talk to him and then chase him. Eventually he will go up a ramp and become killable.",
 						["groups"] = {
-							{
-								["itemID"] = 18249,	-- Crescent Key
-								["description"] = "Used to unlock the doors to Dire Maul North and West.",
-							},
-							{
-								["itemID"] = 18261,	-- Book of Incantations
-								["questID"] = 7441,	-- Pusillin and the Elder Azj'Tordin
-							},
+							i(18249),	-- Crescent Key
+							i(18261),	-- Book of Incantations
 							i(18267),	-- Recipe: Runn Tum Tuber Surprise
 						},
 					}),
@@ -650,6 +643,9 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_ONE_DIREMAUL }, {	-- Classic
 			}),
 			n(-13, {	-- Gordok Commons [North - Ogres] [Straight]
 				["description"] = "This part of the instance can be accessed after clearing West or entering from the northern-most portal.",
+				["cost"] = {
+					{ "i", 18249, 1 },	-- Crescent Key
+				},
 				["groups"] = {
 					n(14326, {	-- Guard Mol'dar
 						i(18498),	-- Hedgecutter
@@ -777,6 +773,9 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_ONE_DIREMAUL }, {	-- Classic
 			}),
 			n(-14, {	-- Capital Gardens [West - Elves] [Left Side]
 				["description"] = "This part of the instance can be accessed from the western-most portal. (left side)",
+				["cost"] = {
+					{ "i", 18249, 1 },	-- Crescent Key
+				},
 				["groups"] = {
 					n(VENDORS, {
 						n(14371, {	-- Shen'dralar Provisioner

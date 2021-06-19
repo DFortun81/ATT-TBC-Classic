@@ -9,6 +9,11 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 			270,	-- Stasis Block: Maximus
 			271,	-- Containment Core
 		},
+		-- #if BEFORE CATA
+		["cost"] = {
+			{ "i", 31084, 1 },	-- Key to the Arcatraz
+		},
+		-- #endif
 		["lvl"] = lvlsquish(65, 25, 65),
 		["groups"] = {
 			n(QUESTS, {

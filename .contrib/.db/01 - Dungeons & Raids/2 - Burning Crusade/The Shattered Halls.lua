@@ -5,6 +5,11 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 	inst(259, {	-- The Shattered Halls
 		["coord"] = { 47.66, 51.98, HELLFIRE_PENINSULA },	-- The Shattered Halls, Hellfire Peninsula
 		["mapID"] = HELLFIRE_CITADEL_SHATTERED_HALLS,
+		-- #if BEFORE CATA
+		["cost"] = {
+			{ "i", 28395, 1 },	-- Shattered Halls Key
+		},
+		-- #endif
 		["lvl"] = lvlsquish(65, 20, 65),
 		["groups"] = {
 			n(QUESTS, {
