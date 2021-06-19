@@ -134,6 +134,7 @@ _.PvP =
 						["qg"] = 13320,	-- Commander Karl Philips
 						["coord"] = { 50.9, 30.8, ALTERAC_VALLEY },
 						["cr"] = 13154,	-- Commander Louis Philips
+						["timeline"] = { "removed 2.3.0", "added 8.1.5" },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 51,
 					}),
@@ -141,6 +142,7 @@ _.PvP =
 						["qg"] = 13154,	-- Commander Louis Philips
 						["coord"] = { 50.4, 65.5, ALTERAC_VALLEY },
 						["cr"] = 13320,	-- Commander Karl Philips
+						["timeline"] = { "removed 2.3.0", "added 8.1.5" },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 51,
 					}),
@@ -306,12 +308,14 @@ _.PvP =
 					q(7301, {	-- Fallen Sky Lords (Alliance)
 						["qg"] = 13319,	-- Commander Duffy
 						["coord"] = { 49.0, 14.6, ALTERAC_VALLEY },
+						["timeline"] = { "removed 2.3.0" },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 51,
 					}),
 					q(7302, {	-- Fallen Sky Lords (Horde)
 						["qg"] = 13153,	-- Commander Mulfort
 						["coord"] = { 49.5, 88.2, ALTERAC_VALLEY },
+						["timeline"] = { "removed 2.3.0" },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 51,
 					}),
@@ -380,6 +384,7 @@ _.PvP =
 					q(8369, {	-- Invaders of Alterac Valley
 						["qg"] = 15350,	-- Horde Warbringer
 						["races"] = HORDE_ONLY,
+						["timeline"] = { "removed 2.0.1" },
 						["cost"] = {
 							{ "i", 20560, 3 },	-- Alterac Valley Mark of Honor
 						},
@@ -390,6 +395,7 @@ _.PvP =
 						["sourceQuest"] = 8369,	-- Invaders of Alterac Valley
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
+						["timeline"] = { "removed 2.0.1" },
 						["cost"] = {
 							{ "i", 20560, 3 },	-- Alterac Valley Mark of Honor
 						},
@@ -533,6 +539,7 @@ _.PvP =
 					q(8375, {	-- Remember Alterac Valley!
 						["qg"] = 15351,	-- Alliance Brigadier General
 						["races"] = ALLIANCE_ONLY,
+						["timeline"] = { "removed 2.0.1" },
 						["cost"] = {
 							{ "i", 20560, 3 },	-- Alterac Valey Mark of Honor
 						},
@@ -543,6 +550,7 @@ _.PvP =
 						["sourceQuest"] = 8375,	-- Remember Alterac Valley!
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
+						["timeline"] = { "removed 2.0.1" },
 						["cost"] = {
 							{ "i", 20560, 3 },	-- Alterac Valey Mark of Honor
 						},
@@ -643,6 +651,7 @@ _.PvP =
 					q(7261, {	-- The Sovereign Imperative
 						["qg"] = 13843,	-- Lieutenant Rotimer <Stormpike Guard Recruitment Officer>
 						["coord"] = { 32.8, 64.6, IRONFORGE },
+						["timeline"] = { "removed 4.0.3" },
 						["maps"] = { IRONFORGE },
 						["races"] = ALLIANCE_ONLY,
 						["isBreadcrumb"] = true,
