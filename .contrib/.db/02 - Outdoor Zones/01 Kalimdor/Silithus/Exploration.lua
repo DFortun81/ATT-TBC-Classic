@@ -6,49 +6,34 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(SILITHUS, {
-			n(EXPLORATION, explorationBatch({
+			n(EXPLORATION, {
+				applyclassicphase(TBC_PHASE_ONE, exploration(3427, {	-- Bronzebeard Encampment
+					["maphash"] = "128:128:0:0",
+					["coord"] = { 41.2, 89.2, SILITHUS },
+				})),
+				exploration(3425, "320:256:344:197"),	-- Cenarion Hold
+				exploration(2742, "512:320:265:12"),	-- Hive'Ashi
+				exploration(2744, "512:384:245:285"),	-- Hive'Regal
+				exploration(2743, "384:512:97:144"),	-- Hive'Zora
+				exploration(2738, "384:384:500:65"),	-- Southwind Village
+				exploration(2740, "320:289:104:24"),	-- The Crystal Vale
+				exploration(2737, "288:256:116:413"),	-- The Scarab Wall
 				--[[
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
-				exploration(, ""),	-- 
+				exploration(2477, ""),	-- The Veiled Sea
+				exploration(2739, ""),	-- Twilight Base Camp
+				exploration(2741, ""),	-- The Scarab Dais
+				exploration(3077, ""),	-- Valor's Rest
+				exploration(3097, ""),	-- The Swarming Pillar
+				exploration(3098, ""),	-- Twilight Post
+				exploration(3099, ""),	-- Twilight Outpost
+				exploration(3100, ""),	-- Ravaged Twilight Camp
+				exploration(3257, ""),	-- Bones of Grakkarond
+				exploration(3426, ""),	-- Staghelm Point
+				exploration(3446, ""),	-- Twilight's Run
+				exploration(3447, ""),	-- Ortell's Hideout
+				exploration(3454, ""),	-- Ruins of Ahn'Qiraj
 				]]--
-				["288:256:116:413"] = 2737,	-- The Scarab Wall
-		["320:256:344:197"] = 3425,	-- Cenarion Hold
-		["320:289:104:24"] = 2740,	-- The Crystal Vale
-		["384:384:500:65"] = 2738,	-- Southwind Village
-		["384:512:97:144"] = 2743,	-- Hive'Zora
-		["512:320:265:12"] = 2742,	-- Hive'Ashi
-		["512:384:245:285"] = 2744,	-- Hive'Regal
-		--[[
-		[2477] = 1,                              -- The Veiled Sea
-		[2739] = 4,                              -- Twilight Base Camp
-		[2741] = 6,                              -- The Scarab Dais
-		[3077] = 10,                             -- Valor's Rest
-		[3097] = 11,                             -- The Swarming Pillar
-		[3098] = 12,                             -- Twilight Post
-		[3099] = 13,                             -- Twilight Outpost
-		[3100] = 14,                             -- Ravaged Twilight Camp
-		[3257] = 15,                             -- Bones of Grakkarond
-		[3426] = 17,                             -- Staghelm Point
-		[3427] = 18,                             -- Bronzebeard Encampment
-		[3446] = 19,                             -- Twilight's Run
-		[3447] = 20,                             -- Ortell's Hideout
-		[3454] = 21,                             -- Ruins of Ahn'Qiraj
-		]]--
-			})),
+			}),
 		}),
 	}),
 };

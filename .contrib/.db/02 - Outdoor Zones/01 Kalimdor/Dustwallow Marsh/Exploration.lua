@@ -8,9 +8,14 @@ _.Zones =
 		m(DUSTWALLOW_MARSH, {
 			n(EXPLORATION, {
 				exploration(2079, "200:195:660:21"),	-- Alcaz Island
-				-- #if AFTER TBC
-				exploration(512, "128:128:0:0"),		-- Blackhoof Village
-				-- #endif
+				applyclassicphase(TBC_PHASE_ONE, exploration(512, {		-- Blackhoof Village
+					["maphash"] = "128:128:0:0",
+					["coord"] = { 41.8, 13.7, DUSTWALLOW_MARSH },
+				})),
+				applyclassicphase(TBC_PHASE_ONE, exploration(498, {		-- Bloodfen Burrow
+					["maphash"] = "0:0:0:0",
+					["coord"] = { 32.6, 65.9, DUSTWALLOW_MARSH },
+				})),
 				exploration(496, "280:270:230:0"),		-- Brackenwall Village
 				exploration(509, "255:250:257:313"),	-- The Den of Flame
 				exploration(2302, "400:255:239:189"),	-- The Quagmire
@@ -25,12 +30,10 @@ _.Zones =
 				exploration(, ""),	-- 
 				exploration(, ""),	-- 
 				exploration(, ""),	-- 
-				exploration(, ""),	-- 
 				]]--
 				--[[
 				[403] = 1,                               -- Shady Rest Inn
 				[497] = 3,                               -- Swamplight Manor
-				[498] = 4,                               -- Bloodfen Burrow
 				[499] = 5,                               -- Darkmist Cavern
 				[500] = 6,                               -- Moggle Point
 				[501] = 7,                               -- Beezil's Wreck
