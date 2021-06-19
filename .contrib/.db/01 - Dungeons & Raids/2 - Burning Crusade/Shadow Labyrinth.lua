@@ -175,6 +175,11 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 						i(27889),	-- Jaedenfire Gloves of Annihilation
 						i(27908),	-- Leggings of Assassination
 						i(27884),	-- Ornate Boots of the Sanctified
+						-- #if BEFORE MOP
+						i(27886, {	-- Idol of the Emerald Queen
+							["timeline"] = { "removed 5.0.4.10000" },
+						}),
+						-- #endif
 					},
 				}),
 				e(545, {	-- Blackheart the Inciter
@@ -261,7 +266,12 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 							i(27888),	-- Dream-Wing Helm
 							i(27889),	-- Jaedenfire Gloves of Annihilation
 							i(27908),	-- Leggings of Assassination
-							i(27884)	-- Ornate Boots of the Sanctified
+							i(27884),	-- Ornate Boots of the Sanctified
+							-- #if BEFORE MOP
+							i(27886, {	-- Idol of the Emerald Queen
+								["timeline"] = { "removed 5.0.4.10000" },
+							}),
+							-- #endif
 						},
 					}),
 					e(545, {	-- Blackheart the Inciter

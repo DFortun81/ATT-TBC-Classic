@@ -1,6 +1,7 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+local HUNGRY_NETHER_RAYS_GROUPS = {};
 _.Zones =
 {
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
@@ -153,10 +154,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 32834, 1 },	-- Nether Ray Cage (Provided)
 					},
-					["groups"] = {
-						i(28103),	-- Adept's Elixir
-						i(22831),	-- Elixir of Major Agility
-					},
+					["groups"] = HUNGRY_NETHER_RAYS_GROUPS,
 				})),
 				applyclassicphase(TBC_PHASE_THREE_SKYGUARD, q(11021, {	-- Ishaal's Almanac
 					["provider"] = { "i", 32523 },	-- Ishaal's Almanac
@@ -925,6 +923,11 @@ _.Zones =
 	})),
 };
 
+-- Now add the elixirs as to not mark them incorrectly.
+appendGroups({
+	i(28103),	-- Adept's Elixir
+	i(22831),	-- Elixir of Major Agility
+}, HUNGRY_NETHER_RAYS_GROUPS);
 
 -- #if AFTER TBC
 -- These quests trigger after specific events occur in the zone.
