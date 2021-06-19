@@ -703,6 +703,11 @@ profession(ENCHANTING, {
 					["timeline"] = { "removed 5.0.4.10000" },
 					["recipeID"] = 32667
 				},
+				{
+					["name"] = "Runed Fel Iron Rod",
+					["timeline"] = { "removed 5.0.4.10000" },
+					["recipeID"] = 32664
+				},
 			}
 		},
 		{
@@ -716,6 +721,10 @@ profession(ENCHANTING, {
 				{
 					["name"] = "Large Prismatic Shard",
 					["recipeID"] = 28022
+				},
+				{
+					["name"] = "Nexus Transformation",
+					["recipeID"] = 42613
 				},
 				{
 					["name"] = "Small Prismatic Shard",
