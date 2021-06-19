@@ -481,6 +481,17 @@ _.Zones =
 						}),
 						i(28062),	-- Expedition Repeater
 						i(28063),	-- Survivalist's Wand
+						-- #if BEFORE MOP
+						i(28064, {	-- Idol of the Wild
+							["timeline"] = { "removed 5.0.4.10000" },
+						}),
+						i(28065, {	-- Libram of Wracking
+							["timeline"] = { "removed 5.0.4.10000" },
+						}),
+						i(28066, {	-- Totem of Lightning
+							["timeline"] = { "removed 5.0.4.10000" },
+						}),
+						-- #endif
 					},
 				}),
 				q(10134, {	-- Crimson Crystal Clue
