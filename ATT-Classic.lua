@@ -4101,11 +4101,18 @@ local fields = {
 		return app.CollectibleReputations;
 	end,
 	["saved"] = function(t)
-		if app.CurrentCharacter.Factions[t.factionID] then return 1; end
 		if t.standing >= t.maxstanding then
 			app.CurrentCharacter.Factions[t.factionID] = 1;
 			ATTAccountWideData.Factions[t.factionID] = 1;
 			return 1;
+		elseif app.CurrentCharacter.Factions[t.factionID] then
+			app.CurrentCharacter.Factions[t.factionID] = nil;
+			ATTAccountWideData.Factions[t.factionID] = nil;
+			for guid,character in pairs(ATTCharacterData) do
+				if character.Factions and character.Factions[t.factionID] then
+					ATTAccountWideData.Factions[t.factionID] = 1;
+				end
+			end
 		end
 		if app.AccountWideReputations and ATTAccountWideData.Factions[t.factionID] then return 2; end
 		
