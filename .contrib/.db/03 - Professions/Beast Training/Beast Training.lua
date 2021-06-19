@@ -1151,7 +1151,7 @@ profession(261, {	-- Beast Training
 		},
 		
 		{
-			["recipeID"] = 35387,	-- Poison Spit [Rank 1]
+			["recipeID"] = 35388,	-- Poison Spit [Rank 1]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 1,
 			["lvl"] = 15,
@@ -1162,7 +1162,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 35389,	-- Poison Spit [Rank 2]
+			["recipeID"] = 35390,	-- Poison Spit [Rank 2]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 2,
 			["lvl"] = 45,
@@ -1173,7 +1173,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 35392,	-- Poison Spit [Rank 3]
+			["recipeID"] = 35391,	-- Poison Spit [Rank 3]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 3,
 			["lvl"] = 60,
