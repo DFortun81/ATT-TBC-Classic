@@ -793,7 +793,7 @@ profession(261, {	-- Beast Training
 		},
 		
 		{
-			["recipeID"] = 35290,	-- Gore [Rank 1]
+			["recipeID"] = 35299,	-- Gore [Rank 1]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 1,
 			["lvl"] = 1,
@@ -807,7 +807,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 35291,	-- Gore [Rank 2]
+			["recipeID"] = 35300,	-- Gore [Rank 2]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 2,
 			["lvl"] = 8,
@@ -820,7 +820,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 35292,	-- Gore [Rank 3]
+			["recipeID"] = 35302,	-- Gore [Rank 3]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 3,
 			["lvl"] = 16,
@@ -831,7 +831,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 35293,	-- Gore [Rank 4]
+			["recipeID"] = 35303,	-- Gore [Rank 4]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 4,
 			["lvl"] = 24,
@@ -841,20 +841,20 @@ profession(261, {	-- Beast Training
 		},
 		-- #if AFTER TBC
 		un(NEVER_IMPLEMENTED, {	-- No known training sources.
-			["recipeID"] = 35294,	-- Gore [Rank 5]
+			["recipeID"] = 35304,	-- Gore [Rank 5]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 5,
 			["lvl"] = 32,
 		}),
 		un(NEVER_IMPLEMENTED, {	-- No known training sources.
-			["recipeID"] = 35295,	-- Gore [Rank 6]
+			["recipeID"] = 35305,	-- Gore [Rank 6]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 6,
 			["lvl"] = 40,
 		}),
 		-- #endif
 		{
-			["recipeID"] = 35296,	-- Gore [Rank 7]
+			["recipeID"] = 35306,	-- Gore [Rank 7]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 7,
 			["lvl"] = 48,
@@ -863,7 +863,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 35297,	-- Gore [Rank 8]
+			["recipeID"] = 35307,	-- Gore [Rank 8]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 8,
 			["lvl"] = 56,
@@ -875,7 +875,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 35298,	-- Gore [Rank 9]
+			["recipeID"] = 35308,	-- Gore [Rank 9]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 9,
 			["lvl"] = 63,
