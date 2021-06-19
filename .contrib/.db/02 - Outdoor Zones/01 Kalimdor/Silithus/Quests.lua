@@ -306,6 +306,7 @@ _.Zones =
 					["qg"] = 15282,	-- Aurel Goldleaf
 					["sourceQuest"] = 8332,	-- Dukes of the Council
 					["coord"] = { 52.0, 38.2, SILITHUS },
+					["isBreadcrumb"] = true,
 					["lvl"] = 54,
 				}),
 				q(8351, {	-- Bor Wishes to Speak
