@@ -715,10 +715,6 @@ profession(ENCHANTING, {
 			["categoryID"] = 680,
 			["groups"] = {
 				{
-					["name"] = "Arcane Dust",
-					["recipeID"] = 28021
-				},
-				{
 					["name"] = "Large Prismatic Shard",
 					["recipeID"] = 28022
 				},
@@ -1333,6 +1329,7 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		-- #if AFTER TBC
 		itemrecipe("Formula: Enchant Chest - Exceptional Mana", 22546);
 		itemrecipe("Formula: Arcane Dust", 22564);
+		recipe(28021),	-- Arcane Dust
 		-- #endif
 	}),
 });
