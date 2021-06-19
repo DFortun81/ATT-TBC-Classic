@@ -70,6 +70,11 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 							["description"] = "Found on the floor in the center of the room before Talon King Ikiss.",
 							["timeline"] = { "removed 4.3.0.14942" },
 						}),
+						-- #if BEFORE 4.3.0
+						i(29330),	-- The Saga of Terokk
+						i(29332),	-- Terokk's Mask
+						i(29329),	-- Terokk's Quill
+						-- #endif
 					},
 				}),
 				q(29606, {	-- Terokk's Legacy
