@@ -185,12 +185,12 @@ _.Zones =
 					["provider"] = { "n", 18597 },	-- Sha'nir
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
-				q(11481, {	-- Crisis at the Sunwell (may be able to be picked up in Netherstorm)
+				applyclassicphase(TBC_PHASE_FIVE, q(11481, {	-- Crisis at the Sunwell (may be able to be picked up in Netherstorm)
 					["isBreadcrumb"] = true,
 					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
 					["provider"] = { "n", 18537 },	-- Adyen the Lightwarden
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
-				}),
+				})),
 				q(11038, {	-- Assist Exarch Orelis
 					["isBreadcrumb"] = true,	-- for "Distraction at Manaforge B'naar," unavailable if you did any Netherstorm breadcrumb quest
 					["sourceQuests"] = { 10551 },	-- Allegiance to the Aldor
@@ -228,37 +228,37 @@ _.Zones =
 					["repeatable"] = true,
 					["description"] = "This daily quest is only available to characters with Herbalism, Mining, or Skinning.",
 				}),
-				q(11513, {	-- Intercepting the Mana Cells
+				applyclassicphase(TBC_PHASE_FIVE, q(11513, {	-- Intercepting the Mana Cells
 					["sourceQuests"] = { 11534 },	-- Report to Nasuun
 					["provider"] = { "n", 24932 },	-- Exarch Nasuun
 					["isDaily"] = true,
 					["coord"] = { 49.8, 42.6, SHATTRATH_CITY },
 					["u"] = REMOVED_FROM_GAME,
-				}),
-				q(11514, {	-- Maintaining the Sunwell Portal
+				})),
+				applyclassicphase(TBC_PHASE_FIVE, q(11514, {	-- Maintaining the Sunwell Portal
 					["provider"] = { "n", 24932 },	-- Exarch Nasuun
 					["coord"] = { 49.8, 42.6, SHATTRATH_CITY },
 					["repeatable"] = true,
-				}),
-				q(11096, {	-- Threat from Above
+				})),
+				applyclassicphase(TBC_PHASE_THREE_SKYGUARD, q(11096, {	-- Threat from Above
 					["coord"] = { 64.0, 42.0, SHATTRATH_CITY },
 					["provider"] = { "n", 23449 },	-- Yuula
-				}),
-				q(11098, {	-- To Skettis!
+				})),
+				applyclassicphase(TBC_PHASE_THREE_SKYGUARD, q(11098, {	-- To Skettis!
 					["sourceQuest"] = 11096,	-- Threat From Above
 					["coord"] = { 64.0, 42.0, SHATTRATH_CITY },
 					["provider"] = { "n", 23449 },	-- Yuula
-				}),
+				})),
 				q(10984, {	-- Speak with the Ogre
 					["isBreadcrumb"] = true,
 					["coord"] = { 56.4, 49.2, SHATTRATH_CITY },
 					["provider"] = { "n", 22497 },	-- V'eru
 				}),
-				q(10917,  {  -- The Outcast's Plight
+				q(10917, {  -- The Outcast's Plight
 					["provider"] = { "n", 22429 },	-- Vekax
 					["coord"] = { 47.7, 18.8, SHATTRATH_CITY },
 					["g"] = {
-						i(31800,  {  -- Outcasts Cache
+						i(31800, {  -- Outcasts Cache
 							i(28495),	-- Windwalker's Sash
 							i(28496),	-- Talonite's Belt
 							i(28497),	-- Dreadhawk's Girdle
@@ -270,7 +270,7 @@ _.Zones =
 						}),
 					},
 				}),
-				q(10918,  {  -- More Feathers
+				q(10918, {  -- More Feathers
 					["maxReputation"] = { 1011, HONORED },
 					["sourceQuests"] = { 10917 },	-- The Outcast's Plight
 					["repeatable"] = true,
@@ -278,7 +278,7 @@ _.Zones =
 					["coord"] = { 47.7, 18.8, SHATTRATH_CITY },
 					["cost"] = { { "i", 25719, 30 } },	-- 30x Arakkoa Feather
 					["g"] = {
-						i(31800,  {  -- Outcasts Cache
+						i(31800, {  -- Outcasts Cache
 							i(28495),	-- Windwalker's Sash
 							i(28496),	-- Talonite's Belt
 							i(28497),	-- Dreadhawk's Girdle
@@ -296,8 +296,9 @@ _.Zones =
 					["provider"] = { "n", 22429 },	-- Vekax
 					["coord"] = { 47.7, 18.8, SHATTRATH_CITY },
 					["cost"] = { { "i", 25719, 30 } },	-- 30x Arakkoa Feather
+					["timeline"] = { "added 8.2.5.31960" },
 					["g"] = {
-						i(31800,  {  -- Outcasts Cache
+						i(31800, {  -- Outcasts Cache
 							i(28495),	-- Windwalker's Sash
 							i(28496),	-- Talonite's Belt
 							i(28497),	-- Dreadhawk's Girdle
@@ -309,74 +310,54 @@ _.Zones =
 						}),
 					},
 				}),
-				q(11109, {	-- Jorus the Cobalt Netherwing Drake
+				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11109, {	-- Jorus the Cobalt Netherwing Drake
 					-- ["provider"] = { "n",  },	-- 
 					["sourceQuests"] = { 11107 },	-- Bow to the Highlord
 					-- ["coord"] = { , SHATTRATH_CITY },
 					["g"] = {
 						i(32859),	-- Reins of the Cobalt Netherwing Drake Mount
 					},
-				}),
-				q(11110, {	-- Malfas the Purple Netherwing Drake
+				})),
+				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11110, {	-- Malfas the Purple Netherwing Drake
 					-- ["provider"] = { "n",  },	-- 
 					["sourceQuests"] = { 11107 },	-- Bow to the Highlord
 					-- ["coord"] = { , SHATTRATH_CITY },
 					["g"] = {
 						i(32860),	-- Reins of the Purple Netherwing Drake Mount
 					},
-				}),
-				q(11111, {	-- Onyxien the Onyx Netherwing Drake
+				})),
+				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11111, {	-- Onyxien the Onyx Netherwing Drake
 					-- ["provider"] = { "n",  },	-- 
 					["sourceQuests"] = { 11107 },	-- Bow to the Highlord
 					-- ["coord"] = { , SHATTRATH_CITY },
 					["g"] = {
 						i(32857),	-- Reins of the Onyx Netherwing Drake Mount
 					},
-				}),
-				q(11112, {	-- Suraku the Azure Netherwing Drake
+				})),
+				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11112, {	-- Suraku the Azure Netherwing Drake
 					-- ["provider"] = { "n",  },	-- 
 					["sourceQuests"] = { 11107 },	-- Bow to the Highlord
 					-- ["coord"] = { , SHATTRATH_CITY },
 					["g"] = {
 						i(32858),	-- Reins of the Azure Netherwing Drake Mount
 					},
-				}),
-				q(11113, {	-- Voranaku the Violet Netherwing Drake
+				})),
+				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11113, {	-- Voranaku the Violet Netherwing Drake
 					-- ["provider"] = { "n",  },	-- 
 					["sourceQuests"] = { 11107 },	-- Bow to the Highlord
 					-- ["coord"] = { , SHATTRATH_CITY },
 					["g"] = {
 						i(32862),	-- Reins of the Violet Netherwing Drake Mount
 					},
-				}),
-				q(11114, {	-- Zoya the Veridian Netherwing Drake
+				})),
+				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11114, {	-- Zoya the Veridian Netherwing Drake
 					-- ["provider"] = { "n",  },	-- 
 					["sourceQuests"] = { 11107 },	-- Bow to the Highlord
 					-- ["coord"] = { , SHATTRATH_CITY },
 					["g"] = {
 						i(32861),	-- Reins of the Veridian Netherwing Drake Mount
 					},
-				}),
-				q(12753, {	-- A Desperate Alliance
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { DWARF },
-				}),
-				q(12753, {	-- A Desperate Alliance
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { NIGHTELF },
-				}),
-				q(12775, {	-- A Desperate Alliance
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { HUMAN },
-				}),
-				q(12777, {	-- A Desperate Alliance
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { DRAENEI },
-				}),
-				q(12808, {	-- A Desperate Alliance
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { GNOME },
-				}),
+				})),
 				q(10210, {	-- A'dal
 					["provider"] = { "n", 19684 },	-- Haggard War Veteran
 					["coord"] = { 59.6, 41.4, SHATTRATH_CITY },
@@ -410,36 +391,11 @@ _.Zones =
 					["provider"] = { "n", 18584 },	-- Sal'salabim
 					["sourceQuests"] = { 10004 },	-- Patience and Understanding *UNTESTED*
 				}),
-				q(12773, {	-- Darnassus
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { NIGHTELF },
-					["provider"] = { "n", 29087 },	-- Bishop Lazaril
-					["sourceQuest"] = 12753,	-- A Desperate Alliance
-				}),
-				q(12783, {	-- Desperate Research
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { TROLL },
-				}),
-				q(12752, {	-- Desperate Research
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { UNDEAD },
-				}),
-				q(12782, {	-- Desperate Research
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { BLOODELF },
-				}),
-				q(12784, {	-- Desperate Research
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { TAUREN },
-				}),
-				q(12811, {	-- Desperate Research
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { ORC },
-				}),
 				q(47523, {	-- Disturbance Detected: Black Temple (EVENT: TIMEWALKING)
 					["provider"] = { "n", 123252 },	-- Vormu
 					["isWeekly"] = true,
 					["description"] = "This quest is only available during BC Timewalking.",
+					["timeline"] = { "added 7.2.5.23910" },
 				}),
 				q(41160, {	-- Earth to Earth
 					["requireSkill"] = BLACKSMITHING,
@@ -452,38 +408,14 @@ _.Zones =
 						i(142286),	-- Plans: Lavaforged Warhammer
 					},
 				}),
-				q(10949, {	-- Entry Into the Black Temple
+				applyclassicphase(TBC_PHASE_THREE, q(10949, {	-- Entry Into the Black Temple
 					["provider"] = { "n", 18481 },	-- A'dal
 					["coord"] = { 54.3, 44.3, SHATTRATH_CITY },
 					["sourceQuests"] = { 10948 },	-- The Hostage Soul
-				}),
-				q(12771, {	-- Ironforge (Dwarf)
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { DWARF },
-					["provider"] = { "n", 29087 },	-- Bishop Lazaril
-					["sourceQuest"] = 12753,	-- A Desperate Alliance
-				}),
-				q(12809, {	-- Ironforge (Gnome)
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { GNOME },
-					["provider"] = { "n", 29087 },	-- Bishop Lazaril
-					["sourceQuest"] = 12808,	-- A Desperate Alliance
-				}),
+				})),
 				q(10010, {	-- It's Just That Easy?
 					["provider"] = { "n", 18584 },	-- Sal'salabim
 					["sourceQuests"] = { 10009 },	-- Crackin' Some Skulls *UNTESTED*
-				}),
-				q(12785, {	-- Orgrimmar (Troll)
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { TROLL },
-					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
-					["sourceQuest"] = 12783,	-- Desperate Research
-				}),
-				q(12812, {	-- Orgrimmar (Orc)
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { ORC },
-					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
-					["sourceQuest"] = 12811,	-- Desperate Research
 				}),
 				q(10037, {	-- Rather Be Fishin'
 					["provider"] = { "n", 18653 },	-- Seth
@@ -491,32 +423,15 @@ _.Zones =
 						i(25978)	-- Seth's Graphite Fishing Pole
 					},
 				}),
-				q(12788, {	-- Silvermoon
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { BLOODELF },
-					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
-					["sourceQuest"] = 12782,	-- Desperate Research
-				}),
-				q(12774, {	-- Stormwind
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { HUMAN },
-					["provider"] = { "n", 29087 },	-- Bishop Lazaril
-					["sourceQuest"] = 12775,	-- A Desperate Alliance
-				}),
-				q(13082, {	-- The Boon of A'dal
+				applyclassicphase(WRATH_PHASE_ONE, q(13082, {	-- The Boon of A'dal
 					["provider"] = { "n", 18481 },	-- A'dal
 					["sourceQuests"] = { 13081 },	-- The Will of the Naaru *UNTESTED*
-				}),
+					["timeline"] = { "added 3.0.3" },
+				})),
 				q(10550, {	-- The Bundle of Bloodthistle
 					["provider"] = { "n", 21411 },	-- Tobias the Filth Gorger
 					["sourceQuests"] = { 10547 },	-- Of Thistleheads and Eggs...
 					["coord"] = { 63.8, 69.7, SHATTRATH_CITY },
-				}),
-				q(12776, {	-- The Exodar
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { DRAENEI },
-					["provider"] = { "n", 29087 },	-- Bishop Lazaril
-					["sourceQuest"] = 12777,	-- A Desperate Alliance
 				}),
 				q(10251, {	-- The Master's Grand Design?
 					["coord"] = { 43.6, 29.6, SHATTRATH_CITY },
@@ -526,18 +441,6 @@ _.Zones =
 				q(10883, {	-- The Tempest Key
 					["provider"] = { "n", 18166 },	-- Archmage Khadgar
 					["sourceQuests"] = { 10588 },	-- The Cipher of Damnation
-				}),
-				q(12787, {	-- The Undercity
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { UNDEAD },
-					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
-					["sourceQuest"] = 12752,	-- Desperate Research
-				}),
-				q(12786, {	-- Thunder Bluff
-					["u"] = REMOVED_FROM_GAME,
-					["races"] = { TAUREN },
-					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
-					["sourceQuest"] = 12784,	-- Desperate Research
 				}),
 				q(10886, {	-- Trial of the Naaru: Tenacity
 					["provider"] = { "n", 18481 },	-- A'dal
@@ -634,6 +537,108 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,	-- for "A Ghost in the Machine" in SMV, mutually exclusive w/other bcrumbs
 				}),
+				
+				-- Scourge Invasion (Wrath Quests) -- TODO: Move these!
+				applyclassicphase(WRATH_PHASE_ONE, q(12753, {	-- A Desperate Alliance
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { DWARF },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12753, {	-- A Desperate Alliance
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { NIGHTELF },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12775, {	-- A Desperate Alliance
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { HUMAN },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12777, {	-- A Desperate Alliance
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { DRAENEI },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12808, {	-- A Desperate Alliance
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { GNOME },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12773, {	-- Darnassus
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { NIGHTELF },
+					["provider"] = { "n", 29087 },	-- Bishop Lazaril
+					["sourceQuest"] = 12753,	-- A Desperate Alliance
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12783, {	-- Desperate Research
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { TROLL },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12752, {	-- Desperate Research
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { UNDEAD },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12782, {	-- Desperate Research
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { BLOODELF },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12784, {	-- Desperate Research
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { TAUREN },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12811, {	-- Desperate Research
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { ORC },
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12771, {	-- Ironforge (Dwarf)
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { DWARF },
+					["provider"] = { "n", 29087 },	-- Bishop Lazaril
+					["sourceQuest"] = 12753,	-- A Desperate Alliance
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12809, {	-- Ironforge (Gnome)
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { GNOME },
+					["provider"] = { "n", 29087 },	-- Bishop Lazaril
+					["sourceQuest"] = 12808,	-- A Desperate Alliance
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12785, {	-- Orgrimmar (Troll)
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { TROLL },
+					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
+					["sourceQuest"] = 12783,	-- Desperate Research
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12812, {	-- Orgrimmar (Orc)
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { ORC },
+					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
+					["sourceQuest"] = 12811,	-- Desperate Research
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12788, {	-- Silvermoon
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { BLOODELF },
+					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
+					["sourceQuest"] = 12782,	-- Desperate Research
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12774, {	-- Stormwind
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { HUMAN },
+					["provider"] = { "n", 29087 },	-- Bishop Lazaril
+					["sourceQuest"] = 12775,	-- A Desperate Alliance
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12776, {	-- The Exodar
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { DRAENEI },
+					["provider"] = { "n", 29087 },	-- Bishop Lazaril
+					["sourceQuest"] = 12777,	-- A Desperate Alliance
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12787, {	-- The Undercity
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { UNDEAD },
+					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
+					["sourceQuest"] = 12752,	-- Desperate Research
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, q(12786, {	-- Thunder Bluff
+					["timeline"] = { "added 3.0.2", "removed 3.1.0" },
+					["races"] = { TAUREN },
+					["provider"] = { "n", 28318 },	-- Grand Apothecary Putress
+					["sourceQuest"] = 12784,	-- Desperate Research
+				})),
 			}),
 		}),
 	})),

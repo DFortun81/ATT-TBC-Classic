@@ -10,53 +10,63 @@ _.Zones =
 					["provider"] = { "n", 19840 },	-- Caledis Brightdawn
 					["coord"] = { 48.2, 86.6, NETHERSTORM },
 					["sourceQuest"] = 10652,	-- Behind Enemy Lines
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10202, {	-- A Defector
 					["provider"] = { "n", 19469 },	-- Magistrix Larynna
 					["coord"] = { 32.1, 64.0, NETHERSTORM },
 					["sourceQuest"] = 10341,	-- Kick Them While They're Down
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10508, {	-- A Gift for Voren'thal
 					["provider"] = { "n", 19468 },	-- Spymaster Thalodien
 					["coord"] = { 32.0, 64.1, NETHERSTORM },
 					["sourceQuest"] = 10432,	-- Damning Evidence
 					-- May also require Shutting Down Manaforge Ara.
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10264, {	-- Assisting the Consortium (The Scryers)
 					["provider"] = { "n", 19468 },	-- Spymaster Thalodien
 					["coord"] = { 32.0, 64.1, NETHERSTORM },
 					["isBreadcrumb"] = true,
 					["sourceQuests"] = { 10186 },	-- You're Hired!
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10652, {	-- Behind Enemy Lines
 					["provider"] = { "n", 20162 },	-- Veronia
 					["coord"] = { 33.8, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10194,	-- Stealth Flight
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10204, {	-- Bloodgem Crystals
 					["provider"] = { "n", 19469 },	-- Magistrix Larynna
 					["coord"] = { 32.1, 64.0, NETHERSTORM },
 					["sourceQuests"] = { 10189 },	-- Manaforge B'naar
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10509, {	-- Bound for Glory
 					["provider"] = { "n", 19468 },	-- Spymaster Thalodien
 					["coord"] = { 32.0, 64.1, NETHERSTORM },
 					["sourceQuest"] = 10508,	-- A Gift for Voren'thal
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10432, {	-- Damning Evidence
 					["provider"] = { "n", 20920 },	-- Magister Theledorn
 					["coord"] = { 26.2, 41.6, NETHERSTORM },
 					["sourceQuest"] = 10202,	-- A Defector
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10193, {	-- High Value Targets
 					["provider"] = { "n", 19468 },	-- Spymaster Thalodien
 					["coord"] = { 32.0, 64.1, NETHERSTORM },
 					["sourceQuests"] = { 10189 },	-- Manaforge B'naar
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10198, {	-- Information Gathering
 					["provider"] = { "n", 19840 },	-- Caledis Brightdawn
 					["coord"] = { 48.2, 86.6, NETHERSTORM },
 					["sourceQuest"] = 10197,	-- A Convincing Disguise
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["g"] = {
 						i(30383),	-- Belt of the Sage
 						i(30386),	-- Bloodguard's Greaves
@@ -68,6 +78,7 @@ _.Zones =
 					["provider"] = { "n", 19469 },	-- Magistrix Larynna
 					["coord"] = { 32.1, 64.0, NETHERSTORM },
 					["sourceQuest"] = 10330,	-- Shutting Down Manaforge Coruu
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["g"] = {
 						i(30522),	-- Conjurer's Staff
 						i(30396),	-- Jeweled Halberd
@@ -82,36 +93,43 @@ _.Zones =
 						10552,	-- Allegiance to the Scryers
 						11039,	-- Report to Spymaster Thalodien
 					},
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10200, {	-- Return to Thalodien
 					["provider"] = { "n", 19840 },	-- Caledis Brightdawn
 					["coord"] = { 48.2, 86.6, NETHERSTORM },
 					["sourceQuest"] = 10330,	-- Shutting Down Manaforge Coruu
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10329, {	-- Shutting Down Manaforge B'naar
 					["provider"] = { "n", 19468 },	-- Spymaster Thalodien
 					["coord"] = { 32.0, 64.1, NETHERSTORM },
 					["sourceQuest"] = 10193,	-- High Value Targets
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10330, {	-- Shutting Down Manaforge Coruu
 					["provider"] = { "n", 19840 },	-- Caledis Brightdawn
 					["coord"] = { 48.2, 86.6, NETHERSTORM },
 					["sourceQuest"] = 10198,	-- Information Gathering
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10338, {	-- Shutting Down Manaforge Duro
 					["provider"] = { "n", 19468 },	-- Spymaster Thalodien
 					["coord"] = { 32.0, 64.1, NETHERSTORM },
 					["sourceQuest"] = 10200,	-- Return to Thalodien
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10194, {	-- Stealth Flight
 					["provider"] = { "n", 19468 },	-- Spymaster Thalodien
 					["coord"] = { 32.0, 64.1, NETHERSTORM },
 					["sourceQuests"] = { 10329 },	-- Shutting Down Manaforge B'naar
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10365, {	-- Shutting Down Manaforge Ara
 					["provider"] = { "n", 19468 },	-- Spymaster Thalodien
 					["coord"] = { 32.0, 64.0, NETHERSTORM },
 					["sourceQuest"] = 10338,	-- Shutting Down Manaforge Duro
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["g"] = {
 						i(30366),	-- Manastorm Band
 						i(30378),	-- Thalodien's Charm
@@ -121,6 +139,7 @@ _.Zones =
 					["provider"] = { "n", 18530 },	-- Voren'thal the Seer
 					["coord"] = { 42.6, 91.4, SHATTRATH_CITY },
 					["sourceQuest"] = 10509,	-- Bound for Glory
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["g"] = {
 						i(30375),	-- Gauntlets of the Vanquisher
 						i(30374),	-- Greaves of Spellpower
@@ -178,11 +197,13 @@ _.Zones =
 					["provider"] = { "n", 20780 },	-- Kaylaan
 					["coord"] = { 34.8, 38.3, NETHERSTORM },
 					["sourceQuest"] = 10431,	-- Outside Assistance
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10381, {	-- Aldor No More
 					["provider"] = { "n", 20780 },	-- Kaylaan
 					["coord"] = { 34.8, 38.3, NETHERSTORM },
 					["sourceQuest"] = 10380,	-- A Dark Pact
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["g"] = {
 						i(30382),	-- Aldor Ceremonial Wraps
 						i(30380),	-- Girdle of the Lost Vindicator
@@ -195,21 +216,25 @@ _.Zones =
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["isBreadcrumb"] = true,
 					["sourceQuests"] = { 10186 },	-- You're Hired!
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10246, {	-- Attack on Manaforge Coruu
 					["provider"] = { "n", 19466 },	-- Exarch Orelis
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10299,	-- Shutting Down Manaforge B'naar
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10245, {	-- B'naar Console Transcription
 					["provider"] = { "o", 183770 },	-- B'naar Control Console
 					["coord"] = { 23.2, 68.2, NETHERSTORM },
 					["sourceQuest"] = 10243,	-- Naaru Technology
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10409, {	-- Deathblow to the Legion
 					["provider"] = { "n", 18538 },	-- Ishanah
 					["coord"] = { 24.2, 29.8, SHATTRATH_CITY },
 					["sourceQuest"] = 10410,	-- Ishanah's Help
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["g"] = {
 						i(30369),	-- Cleansed Fel Pauldrons
 						i(30370),	-- Gauntlets of the Redeemed Vindicator
@@ -221,6 +246,7 @@ _.Zones =
 				q(10241, {	-- Distraction at Manaforge B'naar
 					["provider"] = { "n", 19466 },	-- Exarch Orelis
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["sourceQuests"] = {
 						10551,	-- Allegiance to the Aldor
 						11038,	-- Assist Exarch Orelis
@@ -230,11 +256,13 @@ _.Zones =
 					["provider"] = { "n", 19467 },	-- Anchorite Karja
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10407,	-- Socrethar's Shadow
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10313, {	-- Measuring Warp Energies
 					["provider"] = { "n", 19466 },	-- Exarch Orelis
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10241,	-- Distraction at Manaforge B'naar
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["g"] = {
 						i(30362),	-- Energized Helm
 						i(30364),	-- Resonating Axe
@@ -246,16 +274,19 @@ _.Zones =
 					["provider"] = { "n", 19467 },	-- Anchorite Karja
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10241,	-- Distraction at Manaforge B'naar
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10431, {	-- Outside Assistance
 					["provider"] = { "n", 19466 },	-- Exarch Orelis
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10328,	-- Sunfury Briefings
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10323, {	-- Shutting Down Manaforge Ara
 					["provider"] = { "n", 19467 },	-- Anchorite Karja
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10322,	-- Shutting Down Manaforge Duro
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["g"] = {
 						i(30377),	-- Karja's Medallion
 						i(30365),	-- Overseer's Signet
@@ -265,16 +296,19 @@ _.Zones =
 					["provider"] = { "n", 19467 },	-- Anchorite Karja
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10245,	-- B'naar Console Transcription
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10321, {	-- Shutting Down Manaforge Coruu
 					["provider"] = { "n", 19467 },	-- Anchorite Karja
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10299,	-- Shutting Down Manaforge B'naar
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10322, {	-- Shutting Down Manaforge Duro
 					["provider"] = { "n", 19467 },	-- Anchorite Karja
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10321,	-- Shutting Down Manaforge Coruu
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10407, {	-- Socrethar's Shadow
 					["provider"] = { "n", 19467 },	-- Anchorite Karja
@@ -283,11 +317,13 @@ _.Zones =
 						10323,	-- Shutting Down Manaforge Ara
 						10381,	-- Aldor No More
 					},
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10328, {	-- Sunfury Briefings
 					["provider"] = { "n", 19466 },	-- Exarch Orelis
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10321,	-- Shutting Down Manaforge Coruu
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10185, {	-- A Fate Worse Than Death
 					["provider"] = { "n", 19488 },	-- Custodian Dieworth

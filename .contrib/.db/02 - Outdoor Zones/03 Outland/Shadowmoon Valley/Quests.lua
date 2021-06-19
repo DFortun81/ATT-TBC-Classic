@@ -1207,7 +1207,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["sourceQuests"] = { 10627 },	-- Capture the Weapons
 				}),
-				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(10948, {	-- The Hostage Soul
+				applyclassicphase(TBC_PHASE_THREE, q(10948, {	-- The Hostage Soul
 					["provider"] = { "n", 21700 },	-- Akama
 					["coord"] = { 58.1, 48.2, SHADOWMOON_VALLEY },
 					["sourceQuests"] = { 10947 },	-- An Artifact From the Past
