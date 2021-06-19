@@ -77,6 +77,8 @@ profession(BLACKSMITHING, {
 			["maps"] = { WINTERSPRING, STRATHOLME },
 			-- #if BEFORE TBC
 			["requireSkill"] = 9787,	-- Weaponsmith
+			-- #else
+			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["cost"] = {
 				{ "i", 13350, 1 },	-- Insignia of the Black Guard
@@ -111,6 +113,8 @@ profession(BLACKSMITHING, {
 			["provider"] = { "i", 18769 },	-- Enchanted Thorium Platemail (Volume I)
 			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #else
+			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["maps"] = { DIRE_MAUL, BLACKROCK_SPIRE },
 			["cost"] = {
@@ -125,6 +129,8 @@ profession(BLACKSMITHING, {
 			["provider"] = { "i", 18770 },	-- Enchanted Thorium Platemail (Volume II)
 			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #else
+			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["maps"] = { DIRE_MAUL, STRATHOLME, SCHOLOMANCE },
 			["cost"] = {
@@ -140,6 +146,8 @@ profession(BLACKSMITHING, {
 			["provider"] = { "i", 18771 },	-- Enchanted Thorium Platemail (Volume III)
 			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #else
+			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["maps"] = { DIRE_MAUL, BLACKROCK_SPIRE, STRATHOLME },
 			["cost"] = {
@@ -173,6 +181,8 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 5103,	-- Hot Fiery Death
 			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #else
+			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["coord"] = { 61.0, 38.8, WINTERSPRING },
 			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
@@ -239,6 +249,8 @@ profession(BLACKSMITHING, {
 			["provider"] = { "o", 176090 },	-- Human Remains
 			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #else
+			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["description"] = "At the bottom floor of Lower Blackrock Spire near the lava.",
 			["maps"] = { BLACKROCK_SPIRE },
@@ -426,6 +438,8 @@ profession(BLACKSMITHING, {
 			["qg"] = 11192,	-- Kilram
 			-- #if BEFORE TBC
 			["requireSkill"] = 9787,	-- Weaponsmith
+			-- #else
+			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["description"] = "Upon finishing this quest, you will become a Master Axesmith and be locked out of becoming a Master Hammersmith and Master Swordsmith.",
 			["coord"] = { 61.2, 37, WINTERSPRING },
@@ -465,6 +479,8 @@ profession(BLACKSMITHING, {
 			["qg"] = 11191,	-- Lilith the Lithe
 			-- #if BEFORE TBC
 			["requireSkill"] = 9787,	-- Weaponsmith
+			-- #else
+			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["description"] = "Upon finishing this quest, you will become a Master Hammersmith and be locked out of becoming a Master Axesmith and Master Swordsmith.",
 			["coord"] = { 61.2, 37.2, WINTERSPRING },
@@ -542,6 +558,8 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 5126,	-- Lorax's Tale
 			-- #if BEFORE TBC
 			["requireSkill"] = 9788,	-- Armorsmith
+			-- #else
+			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["coord"] = { 63.8, 73.8, WINTERSPRING },
 			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },

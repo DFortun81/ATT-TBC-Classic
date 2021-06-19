@@ -7,6 +7,10 @@ _.Zones =
 	m(EASTERN_KINGDOMS, applyclassicphase(TBC_PHASE_ONE, {
 		m(GHOSTLANDS, {
 			n(EXPLORATION, {
+				exploration(3510, {						-- Amani Catacombs [TBC]
+					["maphash"] = "0:0:0:0",
+					["coord"] = { 12, 24, GHOSTLANDS },
+				}),
 				exploration(3508, "404:436:598:232"),	-- Amani Pass [TBC]
 				exploration(3501, "256:256:184:238"),	-- Bleeding Ziggurat [TBC]
 				exploration(3495, "427:256:575:0"),		-- Dawnstar Spire [TBC]
@@ -18,7 +22,6 @@ _.Zones =
 				exploration(3823, "256:256:585:0"),		-- Isle of Tribulations [TBC]
 				exploration(3494, "256:256:210:126"),	-- Sanctum of the Moon [TBC]
 				exploration(3493, "256:512:448:150"),	-- Sanctum of the Sun [TBC]
-				exploration(3503, "0:0:0:0"),			-- Shalandis Isle [TBC]
 				exploration(3489, "512:256:460:0"),		-- Suncrown Village [TBC]
 				exploration(3861, "256:262:364:406"),	-- Thalassian Pass [TBC]
 				exploration(3488, "256:512:365:2"),		-- Tranquillien [TBC]

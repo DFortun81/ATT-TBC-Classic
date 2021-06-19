@@ -1,6 +1,7 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+local REDEMPTION = recipe(7328);	-- Redemption
 _.Zones =
 {
 	m(KALIMDOR, applyclassicphase(TBC_PHASE_ONE, {
@@ -67,6 +68,16 @@ _.Zones =
 					["lvl"] = lvlsquish(10, 1, 10),
 					-- #endif
 				}),
+				q(10366, {	-- Jol
+					["qg"] = 17483,	-- Tullas <Paladin Trainer>
+					["coord"] = { 48.4, 49.6, AZUREMYST_ISLE },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { AZUREMYST_ISLE },
+					["classes"] = { PALADIN },
+					["races"] = { DRAENEI },
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(12, 10, 12),
+				}),
 				q(32661, {	-- Learn To Ride
 					["qg"] = 20914,	-- Aalun <Riding Trainer>
 					["coord"] = { 81.4, 52.6, THE_EXODAR },
@@ -86,6 +97,38 @@ _.Zones =
 					["DisablePartySync"] = true,
 					["isBreadcrumb"] = true,
 					["lvl"] = lvlsquish(20, 10, 20),
+				}),
+				q(9598, {	-- Redemption (1/2)
+					["qg"] = 17509,	-- Jol <Paladin Trainer>
+					["sourceQuest"] = 10366,	-- Jol
+					["coord"] = { 38.4, 82.2, THE_EXODAR },
+					["timeline"] = { "removed 4.0.3" },
+					["classes"] = { PALADIN },
+					["races"] = { DRAENEI },
+					["cost"] = {
+						{ "i", 23926, 1 },	-- Tome of Divinity
+					},
+					["lvl"] = lvlsquish(12, 10, 12),
+				}),
+				q(9600, {	-- Redemption (2/2)
+					["qg"] = 17509,	-- Jol <Paladin Trainer>
+					["sourceQuest"] = 9598,	-- Redemption (1/2)
+					["coord"] = { 38.4, 82.2, THE_EXODAR },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { BLOODMYST_ISLE },
+					["classes"] = { PALADIN },
+					["races"] = { DRAENEI },
+					["lvl"] = lvlsquish(12, 10, 12),
+					["groups"] = {
+						objective(1, {	-- Young Furbolg Shaman Resurrected
+							["provider"] = { "i", 6866 },	-- Symbol of Life
+							["coord"] = { 65.0, 77.6, BLOODMYST_ISLE },
+							["cr"] = 17542,	-- Young Furbolg Shaman
+						}),
+						-- #if BEFORE CATA
+						REDEMPTION,
+						-- #endif
+					},
 				}),
 				q(9606, {	-- Return to Caregiver Chellan
 					["qg"] = 17555,	-- Stephanos
@@ -110,3 +153,6 @@ _.Zones =
 		}),
 	})),
 };
+
+-- Remove the phase requirement from Redemption.
+REDEMPTION.u = nil;
