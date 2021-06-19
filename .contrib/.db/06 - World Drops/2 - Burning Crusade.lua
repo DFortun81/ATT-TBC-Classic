@@ -999,6 +999,44 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 		i(31893),	-- Eight of Storms
 	}),
 	filter(200, {	-- Recipes
+		cl(DRUID, {
+			{
+				["itemID"] = 22146,		-- Book: Gift of the Wild III
+				["spellID"] = 26991,	-- Gift of the Wild III
+				["rank"] = 3,
+			},
+		}),
+		cl(MAGE, {
+			{
+				["itemID"] = 22153,		-- Tome of Arcane Brilliance II
+				["spellID"] = 27127,	-- Arcane Brilliance II
+				["rank"] = 2,
+			},
+			{
+				["itemID"] = 31501,		-- Tome of Conjure Food VIII
+				["spellID"] = 33717,	-- Conjure Food VIII
+				["description"] = "Learn both of these tomes and then visit your trainer for the table.",
+				["rank"] = 8,
+			},
+			{
+				["itemID"] = 29550,		-- Tome of Conjure Water IX
+				["spellID"] = 27090,	-- Conjure Water IX
+				["description"] = "Learn both of these tomes and then visit your trainer for the table.",
+				["rank"] = 9,
+			},
+		}),
+		cl(PRIEST, {
+			{
+				["itemID"] = 29549,		-- Codex: Prayer of Fortitude III
+				["spellID"] = 25392,	-- Prayer of Fortitude III
+				["rank"] = 3,
+			},
+			{
+				["itemID"] = 31837,		-- Codex: Prayer of Shadow Protection II
+				["spellID"] = 39374,	-- Prayer of Shadow Protection II
+				["rank"] = 2,
+			},
+		}),
 		prof(ALCHEMY, {
 			i(22914),	-- Recipe: Destruction Potion
 			i(22926),	-- Recipe: Elixir of Empowerment (BoE version)

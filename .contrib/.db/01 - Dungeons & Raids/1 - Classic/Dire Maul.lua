@@ -889,6 +889,11 @@ _.Instances = { tier(1, applyclassicphase(PHASE_ONE_DIREMAUL, {	-- Classic
 						i(18391),	-- Eyestalk Cord
 						i(18379),	-- Odious Greaves
 						i(18370),	-- Vigilance Charm
+						applyclassicphase(TBC_PHASE_ONE, i(24345, {	-- Book of Cower IV
+							["spellID"] = 31709,	-- Cower IV
+							["classes"] = { DRUID },
+							["rank"] = 4,
+						})),
 					}),
 					n(14506, {	-- Lord Hel'nurath
 						["description"] = "|cff3399ffSTEP 1:|r Find a Warlock that is on or has completed Dreadsteed of Xoroth.\n|cff3399ffSTEP 2:|r Warlock buys Xorothian Glyphs, Black Lodestone & J'eevee's Jar from Gorzeeki Wildeyes. (Burning Steppes - 12.4, 31.6)\n|cff3399ffSTEP 3:|r Kill Immol'thar.\n|cff3399ffSTEP 4:|r Warlock uses J'eevee's Jar while standing on platform summoning Wheel of the Black March, Doomsday Candle, & Bell of Dethmoora.\n|cff3399ffSTEP 5:|r Kill stuff & use Black Lodestone to keep 3 artifacts active, this requires soul shards to do.\n|cff3399ffSTEP 6:|r Once mobs stop spawning, use Xorothian Glyphs to summon the dreadsteed.\n|cff3399ffSTEP 7:|r Kill Lord Hel'nurath & collect loot.",
