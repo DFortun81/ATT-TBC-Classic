@@ -22,6 +22,10 @@ profession(ENGINEERING, {
 						["name"] = "Gnomish Death Ray",
 						["recipeID"] = 12759
 					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Gnomish Flame Turret",
+						["recipeID"] = 30568
+					}),
 					{
 						["name"] = "Gnomish Harm Prevention Belt",
 						["recipeID"] = 12903
@@ -34,6 +38,10 @@ profession(ENGINEERING, {
 						["name"] = "Gnomish Net-o-Matic Projector",
 						["recipeID"] = 12902
 					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Gnomish Poultryizer",
+						["recipeID"] = 30569
+					}),
 					{
 						["name"] = "Gnomish Rocket Boots",
 						["recipeID"] = 12905
@@ -47,11 +55,24 @@ profession(ENGINEERING, {
 						["description"] = "While this recipe does not have a requirement for Gnomish Engineering, you cannot learn this recipe without Gnomish Engineering and switching to Gnomish from Goblin is not possible in Classic.",
 						["recipeID"] = 15633
 					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Nigh-Invulnerability Belt",
+						["recipeID"] = 30570
+					}),
 					{
 						["name"] = "Ultrasafe Transporter - Gadgetzan",
 						["recipeID"] = 23489,
 						["description"] = "Speak to Jhordy Lapforge in Gadgetzan at 52.17, 27.88 to learn this recipe.",
+						["coord"] = { 52.17, 27.88, TANARIS },
+						["cr"] = 14743,	-- Jhordy Lapforge
 					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Ultrasafe Transporter - Toshley's Station",
+						["recipeID"] = 36955,
+						["description"] = "Speak to Smiles O'Byron in Blade's Edge Mountains at 60.2, 65.2 to learn this recipe.",
+						["coord"] = { 60.2, 65.2, BLADES_EDGE_MOUNTAINS },
+						["cr"] = 21494,	-- Smiles O'Byron
+					}),
 					{
 						["name"] = "World Enlarger",
 						["recipeID"] = 23129
@@ -62,10 +83,18 @@ profession(ENGINEERING, {
 				["name"] = "Goggles",
 				["categoryID"] = 185,
 				["g"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Gnomish Battle Goggles",
+						["recipeID"] = 30575
+					}),
 					{
 						["name"] = "Gnomish Goggles",
 						["recipeID"] = 12897
-					}
+					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Gnomish Power Goggles",
+						["recipeID"] = 30574
+					}),
 				}
 			},
 			{

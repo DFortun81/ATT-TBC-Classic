@@ -7,13 +7,28 @@ profession(ENGINEERING, {
 				["name"] = "Devices",
 				["categoryID"] = 188,
 				["g"] = {
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Dimensional Ripper - Area 52",
+						["recipeID"] = 36954,
+						["description"] = "Speak to Kablamm Farflinger in Netherstorm at 32, 63 to learn this recipe.",
+						["coord"] = { 32, 63, NETHERSTORM },
+						["cr"] = 21493,	-- Kablamm Farflinger
+					}),
 					{
 						["name"] = "Dimensional Ripper - Everlook",
 						["recipeID"] = 23486,
 						["description"] = "Speak to Zap Farflinger in Winterspring at 59.6, 49.8 to learn this recipe.",
-						["qg"] = 14742,	-- Zap Farflinger
 						["coord"] = { 59.6, 49.8, WINTERSPRING },
+						["cr"] = 14742,	-- Zap Farflinger
 					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Foreman's Enchanted Helmet",
+						["recipeID"] = 30565
+					}),
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Foreman's Reinforced Helmet",
+						["recipeID"] = 30566
+					}),
 					{
 						["name"] = "Goblin Construction Helmet",
 						["recipeID"] = 12718
@@ -30,6 +45,10 @@ profession(ENGINEERING, {
 						["name"] = "Goblin Rocket Helmet",
 						["recipeID"] = 12758
 					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Goblin Rocket Launcher",
+						["recipeID"] = 30563
+					}),
 					{
 						["name"] = "Pet Bombling",
 						["description"] = "While this recipe does not have a requirement for Goblin Engineering, you cannot learn this recipe without Goblin Engineering and switching to Goblin from Gnomish is not possible in Classic.",
@@ -57,10 +76,18 @@ profession(ENGINEERING, {
 						["name"] = "Goblin Sapper Charge",
 						["recipeID"] = 12760
 					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Super Sapper Charge",
+						["recipeID"] = 30560
+					}),
 					{
 						["name"] = "The Big One",
 						["recipeID"] = 12754
 					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "The Bigger One",
+						["recipeID"] = 30558
+					}),
 					{
 						["name"] = "The Mortar: Reloaded",
 						["recipeID"] = 13240

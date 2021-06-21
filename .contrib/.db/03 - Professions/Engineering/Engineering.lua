@@ -674,10 +674,10 @@ profession(ENGINEERING, {
 					["name"] = "Adamantite Grenade",
 					["recipeID"] = 30311
 				},
-				applyclassicphase(TBC_PHASE_THREE, {
+				{
 					["name"] = "Elemental Seaforium Charge",
 					["recipeID"] = 30547
-				}),
+				},
 				{
 					["name"] = "Fel Iron Bomb",
 					["recipeID"] = 30310
@@ -686,14 +686,6 @@ profession(ENGINEERING, {
 					["name"] = "Frost Grenade",
 					["recipeID"] = 39973
 				},
-				{
-					["name"] = "Super Sapper Charge",
-					["recipeID"] = 30560
-				},
-				{
-					["name"] = "The Bigger One",
-					["recipeID"] = 30558
-				}
 			}
 		},
 		{
@@ -725,14 +717,6 @@ profession(ENGINEERING, {
 					["name"] = "Gadgetstorm Goggles",
 					["recipeID"] = 41315
 				}),
-				{
-					["name"] = "Gnomish Battle Goggles",
-					["recipeID"] = 30575
-				},
-				{
-					["name"] = "Gnomish Power Goggles",
-					["recipeID"] = 30574
-				},
 				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Hard Khorium Goggles",
 					["classes"] = { WARRIOR, PALADIN, DEATHKNIGHT },
@@ -844,36 +828,12 @@ profession(ENGINEERING, {
 					["recipeID"] = 30337
 				},
 				{
-					["name"] = "Dimensional Ripper - Area 52",
-					["recipeID"] = 36954
-				},
-				{
 					["name"] = "Fel Iron Toolbox",
 					["recipeID"] = 30348
 				},
 				{
 					["name"] = "Field Repair Bot 110G",
 					["recipeID"] = 44391
-				},
-				{
-					["name"] = "Foreman's Enchanted Helmet",
-					["recipeID"] = 30565
-				},
-				{
-					["name"] = "Foreman's Reinforced Helmet",
-					["recipeID"] = 30566
-				},
-				{
-					["name"] = "Gnomish Flame Turret",
-					["recipeID"] = 30568
-				},
-				{
-					["name"] = "Gnomish Poultryizer",
-					["recipeID"] = 30569
-				},
-				{
-					["name"] = "Goblin Rocket Launcher",
-					["recipeID"] = 30563
 				},
 				{
 					["name"] = "Healing Potion Injector",
@@ -884,20 +844,12 @@ profession(ENGINEERING, {
 					["recipeID"] = 30552
 				},
 				{
-					["name"] = "Nigh-Invulnerability Belt",
-					["recipeID"] = 30570
-				},
-				{
 					["name"] = "Rocket Boots Xtreme",
 					["recipeID"] = 30556
 				},
 				{
 					["name"] = "Rocket Boots Xtreme Lite",
 					["recipeID"] = 46697
-				},
-				{
-					["name"] = "Ultrasafe Transporter - Toshley's Station",
-					["recipeID"] = 36955
 				},
 				{
 					["name"] = "Zapthrottle Mote Extractor",
