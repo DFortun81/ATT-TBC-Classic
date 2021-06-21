@@ -1719,7 +1719,7 @@ _.Zones =
 						i(25733), 	-- Pattern: Fel Leather Boots
 						i(25732), 	-- Pattern: Fel Leather Gloves
 						i(25734), 	-- Pattern: Fel Leather Leggings
-						applyclassicphase(TBC_PHASE_THREE, i(23874)),	-- Schematic: Elemental Seaforium Charge
+						i(23874),	-- Schematic: Elemental Seaforium Charge
 						i(29118, {	-- Smuggler's Ammo Pouch
 							["timeline"] = { "removed 4.0.1.12941" },
 						}),
