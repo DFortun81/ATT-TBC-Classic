@@ -88,6 +88,13 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					["maps"] = { SHADOWMOON_VALLEY },
 					["lvl"] = lvlsquish(68, 25, 68),
 				}),
+				q(10886, {	-- Trial of the Naaru: Tenacity
+					["qg"] = 18481,	-- A'dal
+					["sourceQuest"] = 10883,	-- The Tempest Key
+					["coord"] = { 53.7, 44.6, SHATTRATH_CITY },
+					["maps"] = { SHATTRATH_CITY },
+					["lvl"] = lvlsquish(70, 25, 70),
+				}),
 				q(29674, {	-- Unbound Darkness
 					["qg"] = 18481,	-- A'dal
 					["timeline"] = { "added 4.3.0.14732" },
@@ -302,6 +309,10 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 						["creatureID"] = 20912,
 						["groups"] = {
 							ach(681),	-- Heroic: The Arcatraz
+							objective(1, {	-- Millhouse Manastorm Rescued
+								["provider"] = { "n", 20977 },	-- Millhouse Manastorm
+								["questID"] = 10886,	-- Trial of the Naaru: Tenacity
+							}),
 							-- #if BEFORE 7.3.5
 							i(28416),	-- Hungering Spineripper (7.3.5 - Moved to Dalliah)
 							-- #endif
