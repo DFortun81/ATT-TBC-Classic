@@ -442,10 +442,6 @@ _.Zones =
 					["provider"] = { "n", 18166 },	-- Archmage Khadgar
 					["sourceQuests"] = { 10588 },	-- The Cipher of Damnation
 				}),
-				q(10886, {	-- Trial of the Naaru: Tenacity
-					["provider"] = { "n", 18481 },	-- A'dal
-					["sourceQuests"] = { 10883 },	-- The Tempest Key
-				}),
 				-- TODO: https://wowwiki-archive.fandom.com/wiki/Wind_Trader_Zhareem
 				q(11369, {	-- WANTED: A Black Stalker Egg
 					["qg"] = 24369,	-- Wind Trader Zhareem

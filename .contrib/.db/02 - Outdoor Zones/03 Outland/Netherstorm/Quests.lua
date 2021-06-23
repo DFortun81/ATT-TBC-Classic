@@ -185,15 +185,6 @@ _.Zones =
 					["minReputation"] = { 933, HONORED },
 					["isBreadcrumb"] = true, 	-- for "A Mission of Mercy"
 				}),
-				q(10974, {	-- Stasis Chambers of Bash'ir
-					["provider"] = { "n", 20448 },	-- Commander Ameer
-					["sourceQuest"] = 10973,	-- A Thousand Worlds
-					["coord"] = { 59.5, 32.4, NETHERSTORM },
-					["maps"] = { BLADES_EDGE_MOUNTAINS },
-					["groups"] = {
-						i(32064),	-- Protectorate Treasure Cache
-					},
-				}),
 				q(10380, {	-- A Dark Pact
 					["provider"] = { "n", 20780 },	-- Kaylaan
 					["coord"] = { 34.8, 38.3, NETHERSTORM },

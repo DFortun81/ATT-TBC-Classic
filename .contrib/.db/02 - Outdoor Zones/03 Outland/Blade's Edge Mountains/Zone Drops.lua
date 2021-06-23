@@ -6,31 +6,31 @@ _.Zones =
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(BLADES_EDGE_MOUNTAINS, {
 			n(ZONEDROPS, {
-				i(32663, {	-- Apexis Cleaver
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32663, {	-- Apexis Cleaver
 					["cost"] = {
 						{ "i", 32670, 1 },	-- Depleted Two-Handed Axe
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
-				i(32661, {	-- Apexis Crystal Mace
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32661, {	-- Apexis Crystal Mace
 					["cost"] = {
 						{ "i", 32671, 1 },	-- Depleted Mace
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
-				i(32569),	-- Apexis Shard
-				i(32658, {	-- Badge of Tenacity
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32569)),	-- Apexis Shard
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32658, {	-- Badge of Tenacity
 					["cost"] = {
 						{ "i", 32672, 1 },	-- Depleted Badge
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
-				i(32578, {	-- Charged Crystal Focus
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32578, {	-- Charged Crystal Focus
 					["cost"] = {
 						{ "i", 32576, 1 },	-- Depleted Crystal Focus
 						{ "i", 32569, 10 },	-- Apexis Shard
 					},
-				}),
+				})),
 				i(31121, {	-- Costume Scraps
 					["crs"] = {
 						22308,	-- Wyrmcult Hunter
@@ -41,37 +41,37 @@ _.Zones =
 						21810,	-- Wyrmcult Hewer
 					},
 				}),
-				i(32660, {	-- Crystal Forged Sword
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32660, {	-- Crystal Forged Sword
 					["cost"] = {
 						{ "i", 32674, 1 },	-- Depleted Sword
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
-				i(32659, {	-- Crystal-Infused Shiv
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32659, {	-- Crystal-Infused Shiv
 					["cost"] = {
 						{ "i", 32673, 1 },	-- Depleted Dagger
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
-				i(32656, {	-- Crystalhide Handwraps
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32656, {	-- Crystalhide Handwraps
 					["cost"] = {
 						{ "i", 32675, 1 },	-- Depleted Mail Gauntlets
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
-				i(32655, {	-- Crystalweave Bracers
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32655, {	-- Crystalweave Bracers
 					["cost"] = {
 						{ "i", 32676, 1 },	-- Depleted Cloth Bracers
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
-				i(32665, {	-- Crystalweave Cape
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32665, {	-- Crystalweave Cape
 					["cost"] = {
 						{ "i", 32677, 1 },	-- Depleted Cloak
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
-				i(31942, {	-- Deathwing Brood Cloak
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(31942, {	-- Deathwing Brood Cloak
 					["description"]	= "You need to summon the four dragons for 35 Apexis Shards and loot the scale to put the cloak together.",
 					["cost"] = {
 						{ "i", 32684, 1 },	-- Insidion's Ebony Scale
@@ -79,8 +79,8 @@ _.Zones =
 						{ "i", 32682, 1 },	-- Obsidia Scale
 						{ "i", 32681, 1 },	-- Onyx Scale of Rivendark
 					},
-				}),
-				i(32672, {	-- Depleted Badge
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32672, {	-- Depleted Badge
 					["crs"] = {
 						19973,	-- Abyssal Flamebringer
 						22175,	-- Apexis Flayer
@@ -99,8 +99,8 @@ _.Zones =
 						20557,	-- Wrath Hound
 						23355,	-- Zarcsin
 					},
-				}),
-				i(32677, {	-- Depleted Cloak
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32677, {	-- Depleted Cloak
 					["crs"] = {
 						19973,	-- Abyssal Flamebringer
 						22181,	-- Aether Ray
@@ -119,8 +119,8 @@ _.Zones =
 						20557,	-- Wrath Hound
 						23355,	-- Zarcsin
 					},
-				}),
-				i(32676, {	-- Depleted Cloth Bracers
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32676, {	-- Depleted Cloth Bracers
 					["crs"] = {
 						22181,	-- Aether Ray
 						22175,	-- Apexis Flayer
@@ -139,9 +139,9 @@ _.Zones =
 						22244,	-- Unbound Ethereal
 						23355,	-- Zarcsin
 					},
-				}),
-				i(32576),	-- Depleted Crystal Focus
-				i(32673, {	-- Depleted Dagger
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32576)),	-- Depleted Crystal Focus
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32673, {	-- Depleted Dagger
 					["crs"] = {
 						19973,	-- Abyssal Flamebringer
 						22181,	-- Aether Ray
@@ -159,8 +159,8 @@ _.Zones =
 						22180,	-- Shard-Hide Boar
 						23355,	-- Zarcsin
 					},
-				}),
-				i(32671, {	-- Depleted Mace
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32671, {	-- Depleted Mace
 					["crs"] = {
 						19973,	-- Abyssal Flamebringer
 						22175,	-- Apexis Flayer
@@ -182,8 +182,8 @@ _.Zones =
 						22195,	-- Wrath Speaker
 						23355,	-- Zarcsin
 					},
-				}),
-				i(32675, {	-- Depleted Mail Gauntlets
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32675, {	-- Depleted Mail Gauntlets
 					["crs"] = {
 						19973,	-- Abyssal Flamebringer
 						22181,	-- Aether Ray
@@ -201,8 +201,8 @@ _.Zones =
 						22195,	-- Wrath Speaker
 						23355,	-- Zarcsin
 					},
-				}),
-				i(32678, {	-- Depleted Ring
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32678, {	-- Depleted Ring
 					["crs"] = {
 						22175,	-- Apexis Flayer
 						22275,	-- Apexis Guardian
@@ -220,8 +220,8 @@ _.Zones =
 						20557,	-- Wrath Hound
 						23355,	-- Zarcsin
 					},
-				}),
-				i(32679, {	-- Depleted Staff
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32679, {	-- Depleted Staff
 					["crs"] = {
 						22181,	-- Aether Ray
 						22175,	-- Apexis Flayer
@@ -241,8 +241,8 @@ _.Zones =
 						20557,	-- Wrath Hound
 						23355,	-- Zarcsin
 					},
-				}),
-				i(32674, {	-- Depleted Sword
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32674, {	-- Depleted Sword
 					["crs"] = {
 						22175,	-- Apexis Flayer
 						22275,	-- Apexis Guardian
@@ -263,8 +263,8 @@ _.Zones =
 						20557,	-- Wrath Hound
 						23355,	-- Zarcsin
 					},
-				}),
-				i(32670, {	-- Depleted Two-Handed Axe
+				})),
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32670, {	-- Depleted Two-Handed Axe
 					["crs"] = {
 						19973,	-- Abyssal Flamebringer
 						22181,	-- Aether Ray
@@ -284,7 +284,7 @@ _.Zones =
 						22195,	-- Wrath Speaker
 						23355,	-- Zarcsin
 					},
-				}),
+				})),
 				i(31874, {	-- Design: Deadly Flame Spessarite
 					["crs"] = {
 						22275,	-- Apexis Guardian
@@ -341,12 +341,12 @@ _.Zones =
 						23355,	-- Zarcsin
 					},
 				}),
-				i(32664, {	-- Dreamcrystal Band
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32664, {	-- Dreamcrystal Band
 					["cost"] = {
 						{ "i", 32678, 1 },	-- Depleted Ring
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
+				})),
 				n(20889, {	-- Ethereum Prisoner (Group Energy Ball)
 					["description"] = "You can use either of the keys listed below to open an Ethereum Stasis Chamber.",
 					["coords"] = {
@@ -378,12 +378,12 @@ _.Zones =
 						}),
 					},
 				}),
-				i(32662, {	-- Flaming Quartz Staff
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32662, {	-- Flaming Quartz Staff
 					["cost"] = {
 						{ "i", 32679, 1 },	-- Depleted Staff
 						{ "i", 32569, 50 },	-- Apexis Shard
 					},
-				}),
+				})),
 				i(22534, {	-- Formula: Enchant Bracer - Spellpower
 					["coords"] = {
 						{ 43.8, 70.6, BLADES_EDGE_MOUNTAINS },

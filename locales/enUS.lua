@@ -409,7 +409,16 @@ app.L = {
 		["Ahn'Qiraj"] = "Temple of Ahn'Qiraj";
 		["Ahn'Qiraj Temple"] = "Temple of Ahn'Qiraj";
 		["Sunken Temple"] = "The Temple of Atal'hakkar";
+		["Auchindoun: Auchenai Crypts"] = "Auchenai Crypts";
+		["Auchindoun: Mana-Tombs"] = "Mana Tombs";
+		["Auchindoun: The Mana Tombs"] = "Mana Tombs";
+		["Auchindoun: Sethekk Halls"] = "Sethekk Halls";
+		["Auchindoun: Shadow Labyrinth"] = "Shadow Labyrinth";
+		["Auchindoun: The Shadow Labyrinth"] = "Shadow Labyrinth";
 		["Hellfire Citadel: Ramparts"] = "Hellfire Ramparts";
+		["Hellfire Citadel: Blood Furnace"] = "The Blood Furnace";
+		["Hellfire Citadel: The Blood Furnace"] = "The Blood Furnace";
+		["Hellfire Citadel: The Shattered Halls"] = "The Shattered Halls";
 	};
 
 	-- This is necessary to have because Blizzard does not always have the correct map ID at the time of zone change.
