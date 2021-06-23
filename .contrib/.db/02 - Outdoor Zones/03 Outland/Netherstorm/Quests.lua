@@ -187,8 +187,9 @@ _.Zones =
 				}),
 				q(10974, {	-- Stasis Chambers of Bash'ir
 					["provider"] = { "n", 20448 },	-- Commander Ameer
-					["coord"] = { 59.5, 32.4, NETHERSTORM },
 					["sourceQuest"] = 10973,	-- A Thousand Worlds
+					["coord"] = { 59.5, 32.4, NETHERSTORM },
+					["maps"] = { BLADES_EDGE_MOUNTAINS },
 					["groups"] = {
 						i(32064),	-- Protectorate Treasure Cache
 					},
