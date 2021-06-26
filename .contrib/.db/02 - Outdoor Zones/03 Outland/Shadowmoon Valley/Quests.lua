@@ -146,15 +146,23 @@ _.Zones =
 					["sourceQuests"] = { 10519 },	-- The Cipher of Damnation - Truth and History
 				}),
 				q(10777, {	-- Asghar's Totem
-					["provider"] = { "n", 22024 },	-- Parshah
+					["qg"] = 22024,	-- Parshah
+					["sourceQuests"] = {
+						10759,	-- Find the Deserter (Alliance)
+						10761,	-- Find the Deserter (Horde)
+					},
 					["coords"] = {	-- questgiver pats up and down the road
 						{ 35.4, 37.6, SHADOWMOON_VALLEY },
 						{ 35.2, 40.4, SHADOWMOON_VALLEY },
 						{ 35.4, 41.8, SHADOWMOON_VALLEY },
 					},
-					["sourceQuests"] = {
-						10759,	-- Find the Deserter (Alliance)
-						10761,	-- Find the Deserter (Horde)
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/1 Sketh'lon War Totem
+							["provider"] = { "i", 31169 },	-- Sketh'lon War Totem
+							["coord"] = { 39, 29, SHADOWMOON_VALLEY },
+							["cr"] = 22025,	-- Asghar
+						}),
 					},
 				}),
 				q(10676, {	-- Bane of the Illidari
@@ -193,11 +201,17 @@ _.Zones =
 					["sourceQuests"] = { 49532 },	-- Warchief's Command: Shadowmoon Valley!
 				}),
 				q(10564, {	-- Blast the Infernals! (A)
-					["provider"] = { "n", 21357 },	-- Wing Commander Nuainn
+					["qg"] = 21357,	-- Wing Commander Nuainn
+					["sourceQuest"] = 10572,	-- Setting Up the Bomb
 					["coord"] = { 39.5, 53.7, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
-					["sourceQuests"] = { 10572 },	-- Setting Up the Bomb
+					["lvl"] = 67,
 					["groups"] = {
+						objective(1, {	-- 0/1	Destroy Legion Hold Infernals
+							["provider"] = { "i", 30614 },	-- Fel Bomb
+							["cr"] = 21512,	-- Invis Legion Hold Glyph
+							["coord"] = { 22.6, 39.9, SHADOWMOON_VALLEY },
+						}),
 						i(30986),	-- Bloodforged Guard
 						i(30947),	-- Crimson Mail Hauberk
 						i(30946),	-- Mooncrest Headdress
@@ -281,6 +295,10 @@ _.Zones =
 							["provider"] = { "i", 30785 },	-- Morgroron's Glaive
 							["cr"] = 21500,	-- Morgroron
 						}),
+						i(30926),	-- Ashwalker's Footwraps
+						i(30938),	-- Azurestrike Shoulders
+						i(30950),	-- Darkhunter's Cinch
+						i(30966),	-- Singed Vambraces
 					},
 				}),
 				q(10627, {	-- Capture the Weapons (H)
@@ -405,25 +423,51 @@ _.Zones =
 					["coord"] = { 65.9, 87.2, SHADOWMOON_VALLEY },
 				})),
 				q(10481, {	-- Enraged Spirits of Air
-					["provider"] = { "n", 21024 },	-- Earthmender Torlok
-					["coord"] = { 42.1, 45.0, SHADOWMOON_VALLEY },
-					["sourceQuests"] = { 10480 },	-- Enraged Spirits of Water
+					["qg"] = 21024,	-- Earthmender Torlok
+					["sourceQuest"] = 10458,	-- Enraged Spirits of Fire and Earth
+					["coord"] = { 42.2, 45.0, SHADOWMOON_VALLEY },
+					["lvl"] = 67,
 					["groups"] = {
+						objective(1, {	-- 0/10 Airy Soul Captured
+							["cr"] = 21096,	-- Credit Marker: Air
+							["provider"] = { "i", 30094 },	-- Totem of Spirits (Provided)
+						}),
 						i(30953),	-- Boots of the Skybreaker
 						i(30930),	-- Grips of the Void
 						i(30942),	-- Manimal's Cinch
 						i(30964),	-- Skybreaker's Pauldrons
 					},
 				}),
-				q(10458, {	-- Enraged Spirits of Fire and Earth -- aa
-					["provider"] = { "n", 21024 },	-- Earthmender Torlok
+				q(10458, {	-- Enraged Spirits of Fire and Earth
+					["qg"] = 21024,	-- Earthmender Torlok
+					["sourceQuests"] = {
+						10680,	-- The Hand of Gul'dan (A)
+						10681,	-- The Hand of Gul'dan (H)
+					},
 					["coord"] = { 42.2, 45.0, SHADOWMOON_VALLEY },
-					["sourceQuests"] = { 10680, 10681 },	-- The Hand of Gul'dan (A/H)
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/8 Earthen Soul Captured
+							["cr"] = 21092,	-- Credit Marker: Earth
+							["provider"] = { "i", 30094 },	-- Totem of Spirits (Provided)
+						}),
+						objective(2, {	-- 0/8 Fiery Soul Captured
+							["cr"] = 21094,	-- Credit Marker: Fire
+							["provider"] = { "i", 30094 },	-- Totem of Spirits (Provided)
+						}),
+					},
 				}),
 				q(10480, {	-- Enraged Spirits of Water
-					["provider"] = { "n", 21024 },	-- Earthmender Torlok
-					["coord"] = { 42.1, 45.0, SHADOWMOON_VALLEY },
-					["sourceQuests"] = { 10458 },	-- Enraged Spirits of Fire and Earth
+					["qg"] = 21024,	-- Earthmender Torlok
+					["sourceQuest"] = 10458,	-- Enraged Spirits of Fire and Earth
+					["coord"] = { 42.2, 45.0, SHADOWMOON_VALLEY },
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/5 Watery Soul Captured
+							["cr"] = 21095,	-- Credit Marker: Water
+							["provider"] = { "i", 30094 },	-- Totem of Spirits (Provided)
+						}),
+					},
 				}),
 				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11014, {	-- Enter the Taskmaster
 					["provider"] = { "n", 23139 },	-- Overlord Mor'ghor
@@ -617,10 +661,19 @@ _.Zones =
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10582, {	-- Minions of the Shadow Council (A)
-					["provider"] = { "n", 21471 },	-- Stormer Ewan Wildwing
+					["qg"] = 21471,	-- Stormer Ewan Wildwing
+					["sourceQuest"] = 10573,	-- The Deathforge
 					["coord"] = { 40.4, 41.3, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
-					["sourceQuests"] = { 10573 },	-- The Deathforge
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/10		Deathforge Guardian slain
+							["cr"] = 20878,	-- Deathforge Guardian
+						}),
+						objective(2, {	-- 0/5		Deathforge Summoner slain
+							["cr"] = 20872,	-- Deathforge Summoner
+						}),
+					},
 				}),
 				q(10600, {	-- Minions of the Shadow Council (H)
 					["provider"] = { "n", 21475 },	-- Scout Zagran
@@ -909,10 +962,14 @@ _.Zones =
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10662, {	-- The Hermit Smith (A)
-					["provider"] = { "n", 19370 },	-- Ordinn Thunderfist
+					["qg"] = 19370,	-- Ordinn Thunderfist
+					["sourceQuest"] = 10626,	-- Capture the Weapons
 					["coord"] = { 36.8, 54.8, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
-					["sourceQuest"] = 10627,	-- Capture the Weapons
+					["lvl"] = 67,
+					["cost"] = {
+						{ "i", 30822, 1 },	-- Box of Ingots (Provided)
+					},
 				}),
 				q(10663, {	-- The Hermit Smith (H)
 					["provider"] = { "n", 19333 },	-- Grokom Deatheye
@@ -986,14 +1043,15 @@ _.Zones =
 					},
 				}),
 				q(10644, {	-- Teron Gorefiend - Lore and Legend (A)
-					["provider"] = { "n", 21774 },	-- Zorus the Judicator
-					["races"] = ALLIANCE_ONLY,
-					["sourceQuests"] = { 10643 },	-- Harbingers of Shadowmoon
+					["qg"] = 21774,	-- Zorus the Judicator
+					["sourceQuest"] = 10643,	-- Harbingers of Shadowmoon
 					["coords"] = {	-- questgiver pats
 						{ 36.6, 55.4, SHADOWMOON_VALLEY },
 						{ 36.6, 56.6, SHADOWMOON_VALLEY },
 						{ 37.2, 55.8, SHADOWMOON_VALLEY },
 					},
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 67,
 				}),
 				q(10633, {	-- Teron Gorefiend - Lore and Legend (H)
 					["provider"] = { "n", 21772 },	-- Chief Apothecary Hildagard
@@ -1119,10 +1177,11 @@ _.Zones =
 					["description"] = "For players aligned with the Aldor.",
 				})),
 				q(10573, {	-- The Deathforge (A)
-					["provider"] = { "n", 21357 },	-- Wing Commander Nuainn
+					["qg"] = 21357,	-- Wing Commander Nuainn
+					["sourceQuest"] = 10564,	-- Blast the Infernals!
 					["coord"] = { 39.5, 53.7, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
-					["sourceQuests"] = { 10564 },	-- Blast the Infernals!
+					["lvl"] = 67,
 				}),
 				q(10599, {	-- The Deathforge (H)
 					["provider"] = { "n", 21359 },	-- Blood Guard Gulmok
@@ -1166,10 +1225,11 @@ _.Zones =
 					["minReputation"] = { 1015, FRIENDLY },
 				})),
 				q(10680, {	-- The Hand of Gul'dan (A)
-					["provider"] = { "n", 21937 },	-- Earthmender Sophurus
+					["qg"] = 21937,	-- Earthmender Sophurus
 					["coord"] = { 36.3, 56.9, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,	-- for Enraged Spirits of Fire and Earth
+					["lvl"] = 67,
 				}),
 				q(10681, {	-- The Hand of Gul'dan (H) -- aa
 					["provider"] = { "n", 21938 },	-- Earthmender Splinthoof
@@ -1381,12 +1441,18 @@ _.Zones =
 						i(31009),	-- Wildcaller
 					},
 				}),
-				q(10648, {	-- Wanted: Uvuros, Scourge of Shadowmoon (A) -- aa
+				q(10648, {	-- Wanted: Uvuros, Scourge of Shadowmoon (A)
+					["provider"] = { "o", 184946 },	-- Wanted Poster
 					["coord"] = { 38.2, 53.9, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
 					["model"] = 199476,
-					["provider"] = { "o", 184946 },	-- Wanted Poster
+					["lvl"] = 67,
 					["groups"] = {
+						objective(1, {	-- 0/1 Uvuros's Fiery Mane
+							["provider"] = { "i", 30807 },	-- Uvuros's Fiery Mane
+							["cr"] = 21102,	-- Uvuros
+							["coord"] = { 55.8, 48.6, SHADOWMOON_VALLEY },
+						}),
 						i(31112),	-- Uvuros Hide Boots
 						i(31114),	-- Uvuros Hide Cinch
 						i(31111),	-- Uvuros Hide Gloves
