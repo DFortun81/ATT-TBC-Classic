@@ -65,8 +65,15 @@ _.Zones =
 					},
 				})),
 				q(10515, {	-- A Lesson Learned
-					["provider"] = { "n", 21183 },	-- Oronok Torn-heart
-					["sourceQuests"] = { 10514 },	-- I Was a Lot of Things...
+					["qg"] = 21183,	-- Oronok Torn-heart
+					["sourceQuest"] = 10514,	-- I Was a Lot of Things...
+					["coord"] = { 53.8, 23.6, SHADOWMOON_VALLEY },
+					["lvl"] = 68,
+					["groups"] = {
+						objective(1, {	-- 0/10	Ravenous Flayer Egg Destroyed
+							["provider"] = { "o", 184684 },	-- Ravenous Flayer Egg
+						}),
+					},
 				}),
 				q(10637, {	-- A Necessary Distraction
 					["provider"] = { "n", 21860 },	-- Exarch Onaala
@@ -231,10 +238,23 @@ _.Zones =
 					},
 				}),
 				q(10774, {	-- Blood Elf + Giant = ???
-					["provider"] = { "n", 22059 },	-- Wildhammer Gryphon Rider
-					["races"] = ALLIANCE_ONLY,
-					["description"] = "Use your Wildhammer Flare Gun to summon the questgiver anywhere on the Path of Conquest.",
+					["qg"] = 22059,	-- Wildhammer Gryphon Rider
 					["sourceQuests"] = { 10773 },	-- Breaching the Path
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 68,
+					["description"] = "Use your Wildhammer Flare Gun to summon the questgiver anywhere on the Path of Conquest.",
+					["groups"] = {
+						objective(1, {	--	0/1 Chancellor Bloodleaf slain
+							["cr"] = 22012, -- Chancellor Bloodleaf
+						}),
+						objective(2, {	--	0/1 Corok the Mighty slain
+							["cr"] = 22011, -- Corok the Mighty
+						}),
+						objective(3, {	--	0/1 Illidan's Command
+							["provider"] = { "i", 31271 },	-- Illidan's Command
+							["cr"] = 22012,	-- Chancellor Bloodleaf
+						}),
+					},
 				}),
 				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11012, {	-- Blood Oath of the Netherwing
 					["provider"] = { "n", 22113 },	-- Mordenai
@@ -252,10 +272,22 @@ _.Zones =
 					["minReputation"] = { 1015, EXALTED },
 				})),
 				q(10773, {	-- Breaching the Path (A)
-					["provider"] = { "n", 22059 },	-- Wildhammer Gryphon Rider
+					["qg"] = 22059,	-- Wildhammer Gryphon Rider
+					["sourceQuest"] =	10772 ,	-- The Path of Conquest
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 67,
 					["description"] = "Use your Wildhammer Flare Gun to summon the questgiver anywhere on the Path of Conquest.",
-					["sourceQuests"] = { 10772 },	-- The Path of Conquest
+					["groups"] = {
+						objective(1, {	--	0/20 Eclipsion Soldier slain
+							["cr"] = 22016, -- Eclipsion Soldier
+						}),
+						objective(2, {	--	0/10 Eclipsion Cavalier slain
+							["cr"] = 22018, -- Eclipsion Cavalier
+						}),
+						objective(3, {	--	0/5 Son of Corok slain
+							["cr"] = 19824, -- Son of Corok
+						}),
+					},
 				}),
 				q(10751, {	-- Breaching the Path (H)
 					["provider"] = { "n", 21998 },	-- Kor'kron Wind Rider
@@ -340,11 +372,17 @@ _.Zones =
 					["isDaily"] = true,
 				})),
 				q(10776, {	-- Dissension Amongst the Ranks...
-					["provider"] = { "n", 22059 },	-- Wildhammer Gryphon Rider
+					["qg"] = 22059,	-- Wildhammer Gryphon Rider
+					["sourceQuest"] = 	10775,	-- Tabards of the Illidari
+					["coord"] = { 52.4, 68.4, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 68,
 					["description"] = "Use your Wildhammer Flare Gun to summon the questgiver anywhere on the Path of Conquest.",
-					["sourceQuests"] = { 10775 },	-- Tabards of the Illidari
 					["groups"] = {
+						objective(1, {	--	0/5 Crazed Colossus slain while in disguise
+							["provider"] = { "i", 31279 },	-- Enchanted Illidari Tabard (Provided)
+							["cr"] = 22051,	-- Crazed Colossus Kill Credit
+						}),
 						i(31075),	-- Evoker's Mark of the Redemption
 						i(31078),	-- Protector's Mark of the Redemption
 						i(31077),	-- Slayer's Mark of the Redemption
@@ -363,19 +401,40 @@ _.Zones =
 					},
 				}),
 				q(10634, {	-- Divination: Gorefiend's Armor
-					["provider"] = { "n", 21797 },	-- Ancient Shadowmoon Spirit
+					["qg"] = 21797,	-- Ancient Shadowmoon Spirit
+					["sourceQuest"] = 10633,	-- Teron Gorefiend - Lore and Legend
 					["coord"] = { 58.2, 70.8, SHADOWMOON_VALLEY },
-					["sourceQuests"] = { 10633 },	-- Teron Gorefiend - Lore and Legend
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/1 Gorefiend's Armor
+							["provider"] = { "i", 30797 },	-- Gorefiend's Armor
+							["cr"] = 21801,	-- Vhelkur
+						}),
+					},
 				}),
 				q(10635, {	-- Divination: Gorefiend's Cloak
-					["provider"] = { "n", 21797 },	-- Ancient Shadowmoon Spirit
+					["qg"] = 21797,	-- Ancient Shadowmoon Spirit
+					["sourceQuest"] = 10633,	-- Teron Gorefiend - Lore and Legend
 					["coord"] = { 58.2, 70.8, SHADOWMOON_VALLEY },
-					["sourceQuests"] = { 10644, 10633 },	-- Teron Gorefiend - Lore and Legend (A/H)
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/1 Gorefiend's Cloak
+							["provider"] = { "i", 30799 },	-- Gorefiend's Cloak
+							["cr"] = 21815,	-- Cleric of Karabor
+						}),
+					},
 				}),
 				q(10636, {	-- Divination: Gorefiend's Truncheon
-					["provider"] = { "n", 21797 },	-- Ancient Shadowmoon Spirit
+					["qg"] = 21797,	-- Ancient Shadowmoon Spirit
+					["sourceQuest"] = 10633,	-- Teron Gorefiend - Lore and Legend
 					["coord"] = { 58.2, 70.8, SHADOWMOON_VALLEY },
-					["sourceQuests"] = { 10633 },	-- Teron Gorefiend - Lore and Legend
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/1 Gorefiend's Truncheon
+							["provider"] = { "i", 30800 },	-- Gorefiend's Truncheon
+							["cr"] = 21784,	-- Ghostrider of Karabor
+						}),
+					},
 				}),
 				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11071, {	-- Dragonmaw Race: Captain Skyshatter
 					["provider"] = { "n", 23348 } ,	-- Captain Skyshatter
@@ -593,8 +652,16 @@ _.Zones =
 					["sourceQuests"] = { 10604 },	-- Gaining Access
 				}),
 				q(10514, {	-- I Was A Lot Of Things...
-					["provider"] = { "n", 21183 },	-- Oronok Torn-heart
-					["sourceQuests"] = { 10513 },	-- Oronok Torn-heart
+					["qg"] = 21183,	-- Oronok Torn-heart
+					["sourceQuest"] = 10513,	-- Oronok Torn-heart
+					["coord"] = { 53.8, 23.6, SHADOWMOON_VALLEY },
+					["lvl"] = 68,
+					["groups"] = {
+						objective(1, {	-- 0/10	Shadowmoon Tuber
+							["provider"] = { "i", 30356 },	-- Shadowmoon Tuber
+							["provider"] = { "i", 30462 },	-- Oronok's Boar Whistle (Provided)
+						}),
+					},
 				}),
 				q(10587, {	-- Karabor Training Grounds
 					["provider"] = { "n", 21860 },	-- Exarch Onaala
@@ -741,8 +808,10 @@ _.Zones =
 					["sourceQuests"] = { 10546 },	-- Borak, Son of Oronok
 				}),
 				q(10513, {	-- Oronok Torn-heart
-					["provider"] = { "n", 21024 },	-- Earthmender Torlok
-					["sourceQuests"] = { 10481 },	-- Enraged Spirits of Air
+					["qg"] = 21024,	-- Earthmender Torlok
+					["sourceQuest"] = 10481,	-- Enraged Spirits of Air
+					["coord"] = { 42.2, 45.0, SHADOWMOON_VALLEY },
+					["lvl"] = 67,
 				}),
 				q(10571, {	-- Oronu the Elder
 					["provider"] = { "n", 21402 },	-- Anchorite Ceyla
@@ -882,12 +951,19 @@ _.Zones =
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10780, {	-- Sketh'lon Feathers
-					["provider"] = { "n", 22024 },	-- Parshah
-					["sourceQuests"] = { 10778 },	-- The Rod of Lianthe
+					["qg"] = 22024,	-- Parshah
+					["sourceQuest"] = 10778,	-- The Rod of Lianthe
 					["coords"] = {	-- questgiver pats up and down the road
 						{ 35.4, 37.6, SHADOWMOON_VALLEY },
 						{ 35.2, 40.4, SHADOWMOON_VALLEY },
 						{ 35.4, 41.8, SHADOWMOON_VALLEY },
+					},
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/10 Sketh'lon Feather
+							["provider"] = { "i", 31324 },	-- Sketh'lon Feather
+						}),
 					},
 				}),
 				q(10625, {	-- Spectrecles
@@ -941,10 +1017,25 @@ _.Zones =
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
 				q(10775, {	-- Tabards of the Illidari (A)
-					["provider"] = { "n", 22059 },	-- Wildhammer Gryphon Rider
+					["qg"] = 22059,	-- Wildhammer Gryphon Rider
+					["sourceQuest"] = 10774 ,	-- Blood Elf + Giant = ???
 					["coord"] = { 52.4, 68.4, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
-					["sourceQuests"] = { 10774 },	-- Blood Elf + Giant = ???
+					["lvl"] = 68,
+					["description"] = "Use your Wildhammer Flare Gun to summon the questgiver anywhere on the Path of Conquest.",
+					["groups"] = {
+						objective(1, {	--	0/10 Illidari Tabard
+							["provider"] = { "i", 31278 },	-- Illidari Tabard
+							["crs"] = {
+								22093,	-- Illidari Watcher <The Crimson Sigil>
+								22017,	-- Eclipsion Spellbinder
+								22016,	-- Eclipsion Soldier
+								22018,	-- Eclipsion Cavalier
+								22076,	-- Torloth the Magnificent <The Crimson Sigil>
+								21979,	-- Val'zareq the Conqueror <The Crimson Sigil>
+							},
+						}),
+					},
 				}),
 				q(10768, {	-- Tabards of the Illidari (H)
 					["provider"] = { "n", 21998 },	-- Kor'kron Wind Rider
@@ -1007,15 +1098,19 @@ _.Zones =
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
 				q(10645, {	-- Teron Gorefiend, I am... (A)
-					["provider"] = { "n", 21797 },	-- Ancient Shadowmoon Spirit
-					["coord"] = { 58.2, 70.7, SHADOWMOON_VALLEY },
-					["races"] = ALLIANCE_ONLY,
+					["qg"] = 21797,	-- Ancient Shadowmoon Spirit
 					["sourceQuests"] = {
 						10634,	-- Divination: Gorefiend's Armor
 						10635,	-- Divination: Gorefiend's Cloak
 						10636,	-- Divination: Gorefiend's Truncheon
 					},
+					["coord"] = { 58.2, 70.7, SHADOWMOON_VALLEY },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 67,
 					["groups"] = {
+						objective(1, {	-- 0/1 Karsius the Ancient Watcher slain
+							["cr"] = 21877,	-- Karsius the Ancient Watcher
+						}),
 						i(31104),	-- Evoker's Helmet of Second Sight
 						i(31110),	-- Druidic Helmet of Second Sight
 						i(31109),	-- Stealther's Helmet of Second Sight
@@ -1159,8 +1254,10 @@ _.Zones =
 					},
 				}),
 				q(10519, {	-- The Cipher of Damnation - Truth and History
-					["provider"] = { "n", 21183 },	-- Oronok Torn-heart
-					["sourceQuests"] = { 10515 },	-- A Lesson Learned
+					["qg"] = 21183,	-- Oronok Torn-heart
+					["sourceQuest"] = 10515,	-- A Lesson Learned
+					["coord"] = { 53.8, 23.6, SHADOWMOON_VALLEY },
+					["lvl"] = 68,
 				}),
 				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11097, {	-- The Deadliest Trap Ever Laid
 					-- ["provider"] = { "n",  },	--
@@ -1282,10 +1379,17 @@ _.Zones =
 					["coord"] = { 65.9, 86.4, SHADOWMOON_VALLEY },
 				})),
 				q(10678, {	-- The Main Course!
-					["provider"] = { "n", 21777 },	-- Gnomus
+					["qg"] = 21777,	-- Gnomus
+					["sourceQuest"] = 10677,	-- The Second Course...
 					["coord"] = { 36.5, 55.2, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
-					["sourceQuests"] = { 10677 },	-- The Second Course...
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/1 Felspine's Hide
+							["provider"] = { "i", 30851 },	-- Felspine's Hide
+							["cr"] = 21897,	-- Felspine the Greater
+						}),
+					},
 				}),
 				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11075, {	-- The Netherwing Mines
 					["provider"] = { "n", 23140 },	-- Taskmaster Varkule Dragonbreath
@@ -1294,9 +1398,16 @@ _.Zones =
 					["description"] = "Available once you reach Friendly with Netherwing.",
 				})),
 				q(10772, {	-- The Path of Conquest (A)
-					["provider"] = { "n", 21773 },	-- Thane Yoregar
+					["qg"] = 21773,	-- Thane Yoregar
 					["coord"] = { 36.2, 57.0, SHADOWMOON_VALLEY },
 					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 	The Path of Conquest Discovered
+							["provider"] = { "i", 31310 },	-- Wildhammer Flare Gun (Provided)
+							["coord"] = { 51 , 62, SHADOWMOON_VALLEY },
+						}),
+					},
 				}),
 				q(10750, {	-- The Path of Conquest (H)
 					["provider"] = { "n", 21769 },	-- Overlord Or'barokh
@@ -1304,12 +1415,27 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 				}),
 				q(10778, {	-- The Rod of Lianthe
-					["provider"] = { "n", 22024 },	-- Parshah
-					["sourceQuests"] = { 10777 },	-- Asghar's Totem
+					["qg"] = 22024,	-- Parshah
+					["sourceQuest"] = 10777,	-- Asghar's Totem
 					["coords"] = {	-- questgiver pats up and down the road
 						{ 35.4, 37.6, SHADOWMOON_VALLEY },
 						{ 35.2, 40.4, SHADOWMOON_VALLEY },
 						{ 35.4, 41.8, SHADOWMOON_VALLEY },
+					},
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 67,
+					["groups"] = {
+						objective(1, {	-- 0/1 Lianthe's Key
+							["provider"] = { "i", 31316 },	-- Lianthe's Key
+							["crs"] = {
+								19806,	-- Eclipsion Bloodwarder
+								19792,	-- Eclipsion Centurion
+								19796,	-- Eclipsion Archmage
+							},
+						}),
+						objective(2, {	-- 0/1 Rod of Lianthe
+							["provider"] = { "i", 31317 },	-- Rod of Lianthe
+						}),
 					},
 				}),
 				q(10576, {	-- The Shadowmoon Shuffle
