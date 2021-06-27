@@ -1071,6 +1071,9 @@ _.Zones =
 						i(35370),	-- Opportunist's Leather Tunic
 						i(30833),	-- Pattern: Cloak of Arcane Evasion
 						i(34200),	-- Pattern: Quiver of a Thousand Feathers
+						i(31357, {	-- Recipe: Flask of Chromatic Resistance
+							["timeline"] = { "removed 5.0.4" },
+						}),
 						i(22910),	-- Recipe: Elixir of Major Shadow Power
 						i(30835),	-- Salvager's Hauberk
 						i(35340),	-- Satin Leggings
