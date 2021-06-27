@@ -98,7 +98,11 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_THREE, {	-- Burning Crusade
 						{ "n", 19935 },	-- Soridormi
 						{ "n", 19936 },	-- Arazmodu
 					},
+					-- #if AFTER 3.0.2
 					["sourceQuest"] = 13432,	-- The Vials of Eternity
+					-- #else
+					["sourceQuest"] = 10445,	-- The Vials of Eternity
+					-- #endif
 					["minReputation"] = { 990, FRIENDLY },	-- The Scale of the Sands, Friendly.
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
@@ -201,7 +205,11 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_THREE, {	-- Burning Crusade
 						{ "n", 19935 },	-- Soridormi
 						{ "n", 19936 },	-- Arazmodu
 					},
+					-- #if AFTER 3.0.2
 					["sourceQuest"] = 13432,	-- The Vials of Eternity
+					-- #else
+					["sourceQuest"] = 10445,	-- The Vials of Eternity
+					-- #endif
 					["minReputation"] = { 990, FRIENDLY },	-- The Scale of the Sands, Friendly.
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
@@ -304,7 +312,11 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_THREE, {	-- Burning Crusade
 						{ "n", 19935 },	-- Soridormi
 						{ "n", 19936 },	-- Arazmodu
 					},
+					-- #if AFTER 3.0.2
 					["sourceQuest"] = 13432,	-- The Vials of Eternity
+					-- #else
+					["sourceQuest"] = 10445,	-- The Vials of Eternity
+					-- #endif
 					["minReputation"] = { 990, FRIENDLY },	-- The Scale of the Sands, Friendly.
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
@@ -407,7 +419,11 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_THREE, {	-- Burning Crusade
 						{ "n", 19935 },	-- Soridormi
 						{ "n", 19936 },	-- Arazmodu
 					},
+					-- #if AFTER 3.0.2
 					["sourceQuest"] = 13432,	-- The Vials of Eternity
+					-- #else
+					["sourceQuest"] = 10445,	-- The Vials of Eternity
+					-- #endif
 					["minReputation"] = { 990, FRIENDLY },	-- The Scale of the Sands, Friendly.
 					["maps"] = { CAVERNS_OF_TIME },
 					["altQuests"] = {
