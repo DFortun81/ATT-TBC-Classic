@@ -410,6 +410,7 @@ app.L = {
 		["Ahn'Qiraj Temple"] = "Temple of Ahn'Qiraj";
 		["Sunken Temple"] = "The Temple of Atal'hakkar";
 		["Auchindoun: Auchenai Crypts"] = "Auchenai Crypts";
+		["Auchindoun: Crypts"] = "Auchenai Crypts";
 		["Auchindoun: Mana-Tombs"] = "Mana Tombs";
 		["Auchindoun: The Mana Tombs"] = "Mana Tombs";
 		["Auchindoun: Sethekk Halls"] = "Sethekk Halls";
@@ -420,10 +421,15 @@ app.L = {
 		["Coilfang: The Steamvault"] = "The Steamvault";
 		["Coilfang: Underbog"] = "The Underbog";
 		["Coilfang: The Underbog"] = "The Underbog";
+		["Caverns of Time: Old Hillsbrad Foothills"] = "Old Hillsbrad Foothills";
+		["Caverns of Time: The Black Morass"] = "The Black Morass";
 		["Hellfire Citadel: Ramparts"] = "Hellfire Ramparts";
 		["Hellfire Citadel: Blood Furnace"] = "The Blood Furnace";
 		["Hellfire Citadel: The Blood Furnace"] = "The Blood Furnace";
 		["Hellfire Citadel: The Shattered Halls"] = "The Shattered Halls";
+		["Tempest Keep: The Arcatraz"] = "The Arcatraz";
+		["Tempest Keep: The Botanica"] = "The Botanica";
+		["Tempest Keep: The Mechanar"] = "The Mechanar";
 	};
 
 	-- This is necessary to have because Blizzard does not always have the correct map ID at the time of zone change.
