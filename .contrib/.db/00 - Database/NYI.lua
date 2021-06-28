@@ -737,6 +737,95 @@ _.NeverImplemented =
 	q(9357),	-- BETA Report to Aeldon Sunbrand [Eversong Woods]
 	q(8896),	-- BETA The Dwarven Spy [Eversong Woods]
 	q(9695),	-- The Sun King's Command [Bloodmyst Isle]
+	
+	filter(20, {	-- Daggers
+		i(23650),	-- Deprecated: Keanna's Will
+		i(23905),	-- Deprecated: Keanna's Will
+		i(23911),	-- Deprecated: Keanna's Will
+		i(23912),	-- Deprecated: Keanna's Will
+		i(23916),	-- Deprecated: Keanna's Will
+		i(23917),	-- Deprecated: Keanna's Will
+	}),
+	filter(1, {	-- Held in Off Hand
+		i(28366),	-- Test Orb
+	}),
+	filter(25, {	-- One-Handed Swords
+		i(23229),	-- Sword of Sockety Goodness
+		i(23230),	-- Dagger of Sockety Goodness
+		i(23232),	-- Huge Sword of Sockety Goodness
+		i(23647),	-- Deprecated: Keanna's Will
+		i(23648),	-- Deprecated: Keanna's Will
+		i(23649),	-- Deprecated: Keanna's Will
+		i(23651),	-- Deprecated: Keanna's Will
+		i(23652),	-- Deprecated: Keanna's Will
+		i(23653),	-- Deprecated: Keanna's Will
+		i(23914),	-- Deprecated: Keanna's Will
+		i(23918),	-- Deprecated: Keanna's Will
+		i(28087),	-- Monster - Sword, Iblis, Blade of the Fallen Seraph
+	}),
+	filter(23, {	-- One-Handed Maces
+		i(23362),	-- Hammer of the Sun
+	}),
+	filter(22, {	-- Two-Handed Axes
+		i(25493),	-- QR 9447 2H Axe
+	}),
+	filter(26, {	-- Two-Handed Swords
+		i(28115),	-- Monster - Obsidian Edged Blade
+	}),
+	filter(4, {		-- Cloth
+		i(24265),	-- Old Spellstrike Hood
+		i(24561),	-- 130 Test Caster Belt
+		i(24562),	-- 130 Test Caster Shoulder
+		i(24563),	-- 130 Test Caster Helm
+		i(24564),	-- 130 Test Caster Robe
+		i(24565),	-- 130 Test Caster Boots
+		i(24572),	-- 130 Test Caster Bracer
+		i(25800),	-- 130 Test Caster Legs
+		i(27530),	-- Test Epic Belt
+	}),
+	filter(5, {		-- Leather
+		i(25547),	-- QR XXXX Druid Shoulders
+		i(25571),	-- QR 9863 Druid Helm
+		i(25582),	-- QR 9867 Druid Moonkin Belt
+	}),
+	filter(6, {		-- Mail
+		i(25551),	-- QR XXXX Hunter Legs
+		i(25572),	-- QR 9863 Shaman Legs
+		i(25581),	-- QR 9867 Hunter Gloves
+	}),
+	filter(7, {		-- Plate
+		i(23363),	-- Titanic Breastplate
+		i(24137),	-- PH Plate Ramparts Reward
+		i(24526),	-- 130 Epic Warrior Bracelets
+		i(24527),	-- 130 Epic Warrior Breastplate
+		i(24529),	-- 130 Epic Warrior Gauntlets
+		i(24531),	-- 130 Epic Warrior Helm
+		i(24532),	-- 130 Epic Warrior Legplates
+		i(24534),	-- 130 Epic Warrior Pauldrons
+		i(24536),	-- 130 Epic Warrior Sabatons
+		i(24537),	-- 130 Epic Warrior Waistband
+		i(24548),	-- zzOLDbrokenitem
+		i(25573),	-- QR 9863 Warrior Chest
+		i(25580),	-- QR 9867 Warrior Legs
+		i(25626),	-- QR 9922 Paladin Bracer
+	}),
+	filter(50, {	-- Miscellaneous
+		i(37892),	-- [ph] Green Brewfest Stein
+		i(37893),	-- [ph] Filled Green Brewfest Stein
+		i(37894),	-- [ph] Filled Green Brewfest Stein
+		i(37895),	-- [PH[ Filled Green Brewfest Stein
+		i(37896),	-- [PH] Filled Green Brewfest Stein
+		i(37897),	-- [ph] Filled Green Brewfest Stein
+	}),
+	filter(53, {	-- Trinkets
+		i(25798),	-- 130 Epic Warrior Trinket
+		i(25801),	-- 130 Test Caster Trinket
+	}),
+	filter(100, {	-- Mounts
+		i(27819),	-- Crazy Raptor 75
+		i(27853),	-- Crazy Raptor 150
+		i(28482),	-- Great Elite Elekk
+	}),
 	-- #endif
 };
 i = oldI;
