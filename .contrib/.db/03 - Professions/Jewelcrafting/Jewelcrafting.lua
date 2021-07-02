@@ -5481,6 +5481,7 @@ itemrecipe("Design: Quick Lionseye", 35763, 47056);
 itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740);
 itemrecipe("Design: Radiant Talasite", 24218, 31111);
 itemrecipe("Design: Reckless Pyrestone", 35762, 47055);
+itemrecipe("Design: Regal Talasite", 35708, 46803);
 itemrecipe("Design: Ring of Flowing Life", 35199, 46123);
 itemrecipe("Design: Ruby Crown of Restoration", 21942, 26878);
 itemrecipe("Design: Shifting Nightseye", 24210, 31103);
@@ -5617,7 +5618,6 @@ i(24212, {	-- Design: Purified Nightseye
 }),
 i(24218),	-- Design: Radiant Talasite
 i(24215),	-- Design: Reckless Noble Topaz
-i(24217),	-- Design: Regal Talasite
 i(24205),	-- Design: Rigid Star of Elune (BoE version)
 i(31875, {	-- Design: Rigid Star of Elune
 	["spellID"] = 0,	-- This is now available via 24205, need to delink the old plans from the recipe
@@ -5669,7 +5669,6 @@ i(35268, {	-- Design: Reckless Pyrestone
 	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35708),	-- Design: Regal Talasite
 i(35766),	-- Design: Steady Seaspray Emerald
 i(35244),	-- Design: Bold Crimson Spinel
 
