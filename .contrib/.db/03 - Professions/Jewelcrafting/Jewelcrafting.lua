@@ -523,6 +523,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Glinting Shadowsong Amethyst",
 					["recipeID"] = 39736
 				},
+				-- #if BEFORE CATA
+				{
+					["name"] = "Glowing Nightseye",
+					["recipeID"] = 31104
+				},
+				-- #endif
 				{
 					["name"] = "Purified Jaggal Pearl",
 					["recipeID"] = 41420
@@ -567,10 +573,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Sovereign Shadowsong Amethyst",
 					["recipeID"] = 39727
 				},
+				-- #if AFTER CATA
 				{
 					["name"] = "Timeless Nightseye",
 					["recipeID"] = 31104
 				},
+				-- #endif
 				{
 					["name"] = "Timeless Shadow Draenite",
 					["recipeID"] = 28925
@@ -5610,17 +5618,11 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-i(24202),	-- Design: Stormy Star of Elune
-i(23154),	-- Design: Stormy Azure Moonstone
 i(24197),	-- Design: Subtle Dawnstone
 i(24207, {	-- Design: Subtle Dawnstone
 	["spellID"] = 0,	-- This is now available via 24197, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(25905),	-- Design: Tenacious Earthstorm Diamond
-i(24166),	-- Design: Thick Felsteel Necklace
-i(32411),	-- Design: Thundering Skyfire Diamond
-i(24211),	-- Design: Timeless Nightseye
 i(31878),	-- Design: Veiled Nightseye
 
 
@@ -5873,11 +5875,9 @@ itemrecipe("Design: Gleaming Golden Draenite", 23149, UNKNOWN_SPELLID, TBC_PHASE
 itemrecipe("Design: Thick Golden Draenite", 23150, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Rigid Golden Draenite [TBC]", 23151, 28948, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Solid Azure Moonstone [TBC]", 23152, 28950, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Stormy Azure Moonstone", 23154, 28955, TBC_PHASE_ONE);
 itemrecipe("Design: Lustrous Azure Moonstone", 23155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Khorium Band of Shadows", 24158, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Arcane Khorium Band", 24162, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Thick Felsteel Necklace", 24166, 31067, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Frozen Flame", 24174, UNKNOWN_SPELLID);
 itemrecipe("Design: Pendant of Thawing", 24175, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Withering", 24176, UNKNOWN_SPELLID, TBC_PHASE_ONE);
@@ -5888,7 +5888,6 @@ itemrecipe("Design: Bright Living Ruby [TBC]", 24192, 31089, TBC_PHASE_ONE, "rem
 itemrecipe("Design: Teardrop Living Ruby", 24195, UNKNOWN_SPELLID);
 itemrecipe("Design: Runed Living Ruby [TBC]", 24196, 31088, TBC_PHASE_ONE);
 itemrecipe("Design: Subtle Living Ruby [TBC]", 24197, 31090, TBC_PHASE_ONE);
-itemrecipe("Design: Stormy Star of Elune", 24202, 31095, TBC_PHASE_ONE);
 itemrecipe("Design: Rigid Dawnstone [TBC]", 24205, 31098, TBC_PHASE_ONE);
 itemrecipe("Design: Gleaming Dawnstone [TBC]", 24206, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Thick Dawnstone [TBC]", 24207, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
@@ -5902,7 +5901,6 @@ itemrecipe("Design: Primal Stone Statue", 25888, 32810, TBC_PHASE_ONE);
 itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866, TBC_PHASE_ONE);
 itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867, TBC_PHASE_ONE);
 itemrecipe("Design: Insightful Earthstorm Diamond", 25904, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Tenacious Earthstorm Diamond", 25905, 32868, TBC_PHASE_ONE);
 itemrecipe("Design: Enigmatic Skyfire Diamond", 25910, UNKNOWN_SPELLID);
 itemrecipe("Design: Smooth Golden Draenite [TBC]", 28291, 34069, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Bright Blood Garnet [TBC]", 28596, 34590, TBC_PHASE_ONE, "removed 4.0.1.10000");
@@ -5945,7 +5943,6 @@ itemrecipe("Design: Enduring Seaspray Emerald [TBC]", 32309, 39739, PHASE_19_IDE
 itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald [TBC]", 32311, 39741, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Thundering Skyfire Diamond", 32411, 39963, TBC_PHASE_ONE);
 itemrecipe("Design: Kailee's Rose", 33155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Stone of Blades", 33158, UNKNOWN_SPELLID);
 itemrecipe("Design: Blood of Amber", 33159, UNKNOWN_SPELLID, TBC_PHASE_ONE);

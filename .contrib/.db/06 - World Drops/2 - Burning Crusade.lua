@@ -1136,6 +1136,7 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			-- #endif
 			i(24216),	-- Design: Glinting Noble Topaz [TBC] / Design: Glinting Nightseye [CATA+]
 			-- #if BEFORE CATA
+			i(24211),	-- Design: Glowing Nightseye [TBC] / Design: Timeless Nightseye [CATA+]
 			i(31875),	-- Design: Great Dawnstone [TBC] / Design: Rigid Star of Elune [CATA+]
 			-- #endif
 			i(24163),	-- Design: Heavy Felsteel Ring
@@ -1193,7 +1194,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(25905),	-- Design: Tenacious Earthstorm Diamond
 			i(24166),	-- Design: Thick Felsteel Necklace
 			i(32411),	-- Design: Thundering Skyfire Diamond
-			i(24211),	-- Design: Timeless Nightseye
+			-- #if AFTER CATA
+			i(24211),	-- Design: Timeless Nightseye [CATA+] / Design: Glowing Nightseye [TBC]
+			-- #endif
 			i(31878),	-- Design: Veiled Nightseye
 			-- #if BEFORE CATA
 			i(31879),	-- Design: Wicked Noble Topaz [TBC] / Design: Deadly Noble Topaz [CATA+]
