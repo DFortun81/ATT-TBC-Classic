@@ -1,3 +1,4 @@
+local REMOVED_WITH_CATA = "removed 4.0.1.10000";
 applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 	tier(1, {	-- Classic
 		filter(52, {	-- Finger
@@ -467,6 +468,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Inscribed Pyrestone",
 					["recipeID"] = 39733
 				},
+				-- #if BEFORE CATA
+				{
+					["name"] = "Luminous Noble Topaz [TBC] / Reckless Noble Topaz [CATA+]",
+					["recipeID"] = 31108
+				},
+				-- #endif
 				{
 					["name"] = "Potent Flame Spessarite",
 					["recipeID"] = 28915
@@ -483,10 +490,17 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Reckless Flame Spessarite",
 					["recipeID"] = 28912
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Reckless Noble Topaz",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 46404,
+				}),
+				-- #if AFTER CATA
+				{
+					["name"] = "Reckless Noble Topaz [CATA+] / Luminous Noble Topaz [TBC]",
 					["recipeID"] = 31108
 				},
+				-- #endif
 				{
 					["name"] = "Reckless Pyrestone",
 					["recipeID"] = 47055
@@ -5361,7 +5375,6 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 }));
 
 -- Jewelcrafting Item Database
-local REMOVED_WITH_CATA = "removed 4.0.1.10000";
 _.ItemDB = {};
 
 -- Recipe Cache (for Validation)
@@ -5544,6 +5557,7 @@ itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
 
 -- Recipes that got new Spell IDs with Cata?!
+itemrecipe({"Design: Reckless Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 35323, 46404, 31108);
 itemrecipe({"Design: Enduring Talasite [TBC]", "Design: Regal Talasite [CATA+]"}, 24217, 31110, 46803);
 itemrecipe({"Design: Great Golden Draenite [TBC]", "Design: Rigid Azure Moonstone [CATA+]"}, 31870, 39451, 28948);
 
@@ -5595,13 +5609,6 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-i(24218),	-- Design: Radiant Talasite
-i(24215),	-- Design: Reckless Noble Topaz
-i(24210),	-- Design: Shifting Nightseye
-i(31876, {	-- Design: Shifting Nightseye
-	["spellID"] = 0,	-- This is now available via 24210, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
 i(24209),	-- Design: Sovereign Nightseye
 i(24200),	-- Design: Sparkling Star of Elune
 i(24201, {	-- Design: Sparkling Star of Elune
@@ -5680,7 +5687,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 i(35322),	-- Design: Quick Dawnstone
 i(35768),	-- Design: Quick Lionseye
 i(35254),	-- Design: Radiant Seaspray Emerald
-i(35323),	-- Design: Reckless Noble Topaz
 i(35767),	-- Design: Reckless Pyrestone
 i(35268, {	-- Design: Reckless Pyrestone
 	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
@@ -5768,7 +5774,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 i(35322),	-- Design: Quick Dawnstone
 i(35768),	-- Design: Quick Lionseye
 i(35254),	-- Design: Radiant Seaspray Emerald
-i(35323),	-- Design: Reckless Noble Topaz
 i(35767),	-- Design: Reckless Pyrestone
 i(35268, {	-- Design: Reckless Pyrestone
 	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
@@ -5897,13 +5902,10 @@ itemrecipe("Design: Gleaming Dawnstone [TBC]", 24206, 0, PHASE_2_IDENTIFIER, "re
 itemrecipe("Design: Thick Dawnstone [TBC]", 24207, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Mystic Dawnstone", 24208, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Sovereign Nightseye", 24209, 31102, TBC_PHASE_ONE);
-itemrecipe("Design: Shifting Nightseye", 24210, 31103, TBC_PHASE_ONE);
 itemrecipe("Design: Glowing Nightseye [TBC]", 24211, 31104, TBC_PHASE_ONE);
 itemrecipe("Design: Royal Nightseye [TBC]", 24212, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Luminous Noble Topaz [TBC]", 24215, 31108, TBC_PHASE_ONE);
 itemrecipe("Design: Glinting Noble Topaz [TBC]", 24216, 31109, TBC_PHASE_ONE);
 itemrecipe("Design: Enduring Talasite [TBC]", 24217, 31110, TBC_PHASE_ONE);
-itemrecipe("Design: Radiant Talasite", 24218, 31111, TBC_PHASE_ONE);
 itemrecipe("Design: Dazzling Talasite [TBC]", 24219, 31112, TBC_PHASE_ONE);
 itemrecipe("Design: Primal Stone Statue", 25888, 32810, TBC_PHASE_ONE);
 itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866, TBC_PHASE_ONE);
@@ -5915,7 +5917,6 @@ itemrecipe("Design: Smooth Golden Draenite [TBC]", 28291, 34069, TBC_PHASE_ONE, 
 itemrecipe("Design: Bright Blood Garnet [TBC]", 28596, 34590, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Ring of Arcane Shielding", 30826, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Enduring Deep Peridot [TBC - Horde]", 31359, 28918, TBC_PHASE_ONE);
-itemrecipe("Design: Balanced Nightseye [TBC]", 31876, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Infused Nightseye [TBC]", 31877, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Veiled Noble Topaz [TBC]", 31878, 39470, TBC_PHASE_ONE);
 itemrecipe("Design: Wicked Noble Topaz [TBC]", 31879, 39471, TBC_PHASE_ONE);
@@ -6005,7 +6006,6 @@ itemrecipe("Design: Runed Living Ruby", 35305, UNKNOWN_SPELLID, PHASE_21_IDENTIF
 itemrecipe("Design: Bright Living Ruby [TBC]", 35306, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Rigid Dawnstone", 35307, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Quick Dawnstone", 35322, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Reckless Noble Topaz", 35323, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Forceful Talasite", 35325, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Eternal Earthstorm Diamond", 35502, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Ember Skyfire Diamond", 35505, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);

@@ -1090,6 +1090,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(25887),	-- Schematic: Purple Smoke Flare
 		}),
 		prof(JEWELCRAFTING, {
+			-- #if BEFORE CATA
+			i(31876),	-- Design: Balanced Nightseye [TBC] / Design: Shifting Nightseye [CATA+]
+			-- #endif
 			i(24165),	-- Design: Blazing Eternium Band
 			i(24193),	-- Design: Bold Living Ruby
 			i(24168),	-- Design: Braided Eternium Chain
@@ -1142,6 +1145,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24213),	-- Design: Inscribed Noble Topaz
 			i(24220),	-- Design: Jagged Talasite
 			i(24167),	-- Design: Living Ruby Pendant
+			-- #if BEFORE CATA
+			i(24215),	-- Design: Luminous Noble Topaz [TBC] / Design: Reckless Noble Topaz [CATA+]
+			-- #endif
 			i(25909),	-- Design: Mystical Skyfire Diamond
 			i(24214),	-- Design: Potent Noble Topaz
 			-- #if AFTER CATA
@@ -1149,7 +1155,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24212),	-- Design: Purified Nightseye [CATA+] / Design: Royal Nightseye [TBC]
 			-- #endif
 			i(24218),	-- Design: Radiant Talasite
-			i(24215),	-- Design: Reckless Noble Topaz
+			-- #if AFTER CATA
+			i(24215),	-- Design: Reckless Noble Topaz [CATA+] / Design: Luminous Noble Topaz [TBC]
+			-- #endif
 			i(24217),	-- Design: Regal Talasite
 			i(24205),	-- Design: Rigid Dawnstone [TBC] / Design: Rigid Star of Elune [CATA+]
 			-- #if AFTER CATA
@@ -1160,10 +1168,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24196),	-- Design: Runed Living Ruby [TBC] / Design: Brilliant Living Ruby [CATA+]
 			-- #endif
 			i(24210),	-- Design: Shifting Nightseye
-			i(31876, {	-- Design: Shifting Nightseye
-				["spellID"] = 0,	-- This is now available via 24210, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
+			-- #if AFTER CATA
+			i(31876),	-- Design: Shifting Nightseye [CATA+] / Design: Balanced Nightseye [TBC]
+			-- #endif
 			i(24204),	-- Design: Smooth Dawnstone
 			i(24206, {	-- Design: Smooth Dawnstone
 				["spellID"] = 0,	-- This is now available via 24204, need to delink the old plans from the recipe
