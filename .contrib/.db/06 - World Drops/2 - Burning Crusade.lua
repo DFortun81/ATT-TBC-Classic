@@ -1125,15 +1125,17 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24170),	-- Design: Embrace of the Dawn
 			i(24169),	-- Design: Eye of the Night
 			i(24198),	-- Design: Flashing Living Ruby
-			i(24216),	-- Design: Glinting Nightseye
-			i(31877, {	-- Design: Glinting Nightseye
-				["spellID"] = 0,	-- This is now available via 24216, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
+			-- #if AFTER CATA
+			i(31877),	-- Design: Glinting Nightseye [CATA+] / Design: Infused Nightseye [TBC]
+			-- #endif
+			i(24216),	-- Design: Glinting Noble Topaz [TBC] / Design: Glinting Nightseye [CATA+]
 			-- #if BEFORE CATA
 			i(31875),	-- Design: Great Dawnstone [TBC] / Design: Rigid Star of Elune [CATA+]
 			-- #endif
 			i(24163),	-- Design: Heavy Felsteel Ring
+			-- #if BEFORE CATA
+			i(31877),	-- Design: Infused Nightseye [TBC] / Design: Glinting Nightseye [CATA+]
+			-- #endif
 			i(24213),	-- Design: Inscribed Noble Topaz
 			i(24220),	-- Design: Jagged Talasite
 			i(24167),	-- Design: Living Ruby Pendant
