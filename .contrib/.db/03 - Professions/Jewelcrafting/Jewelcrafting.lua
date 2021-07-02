@@ -5482,6 +5482,7 @@ itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740);
 itemrecipe("Design: Radiant Talasite", 24218, 31111);
 itemrecipe("Design: Reckless Pyrestone", 35762, 47055);
 itemrecipe("Design: Regal Talasite", 35708, 46803);
+itemrecipe("Design: Relentless Earthstorm Diamond", 33622, 39961);
 itemrecipe("Design: Ring of Flowing Life", 35199, 46123);
 itemrecipe("Design: Ruby Crown of Restoration", 21942, 26878);
 itemrecipe("Design: Shifting Nightseye", 24210, 31103);
@@ -5592,11 +5593,6 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-i(33622),	-- Design: Relentless Earthstorm Diamond
-i(32412, {	-- Design: Relentless Earthstorm Diamond
-	["spellID"] = 0,	-- This is now available via 33622, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
 i(31871, {	-- Design: Shifting Shadow Draenite
 	["spellID"] = 0,	-- This is now available via 23146, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
@@ -5977,12 +5973,10 @@ itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740, PHASE_19_IDENTIFIER
 itemrecipe("Design: Dazzling Seaspray Emerald [TBC]", 32311, 39741, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Thundering Skyfire Diamond", 32411, 39963, TBC_PHASE_ONE);
-itemrecipe("Design: Relentless Earthstorm Diamond", 32412, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Kailee's Rose", 33155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Stone of Blades", 33158, UNKNOWN_SPELLID);
 itemrecipe("Design: Blood of Amber", 33159, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Facet of Eternity", 33160, UNKNOWN_SPELLID);
-itemrecipe("Design: Relentless Earthstorm Diamond", 33622, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Steady Talasite", 33783, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Chaotic Skyfire Diamond", 34221, UNKNOWN_SPELLID);
 itemrecipe("Design: Chaotic Skyfire Diamond", 34689, UNKNOWN_SPELLID, TBC_PHASE_ONE);
@@ -6351,6 +6345,7 @@ neverimplemented(recipe(26920));	-- Blood Crown
 neverimplemented(i(21780));	-- Blood Crown
 neverimplemented(itemrecipe("Design: Primal Stone Statue", 25888, 32810));
 neverimplemented(recipe(32810));	-- Primal Stone Statue
+neverimplemented(itemrecipe("Design: Relentless Earthstorm Diamond", 32412, 39961));	-- Originally Consortium Quartermaster, never made it out of Beta. A Different version was added later.
 neverimplemented(i(25884));	-- Primal Stone Statue
 neverimplemented(itemrecipe("Design: Silver Rose Pendant", 20972, 25614));
 neverimplemented(recipe(25614));	-- Silver Rose Pendant
