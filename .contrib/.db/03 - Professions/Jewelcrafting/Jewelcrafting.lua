@@ -504,7 +504,13 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				{
 					["name"] = "Reckless Pyrestone",
 					["recipeID"] = 47055
-				}
+				},
+				-- #if BEFORE CATA
+				{
+					["name"] = "Veiled Noble Topaz",
+					["recipeID"] = 39470
+				},
+				-- #endif
 			}
 		},
 		{
@@ -587,10 +593,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Timeless Shadowsong Amethyst",
 					["recipeID"] = 39731
 				},
+				-- #if AFTER CATA
 				{
 					["name"] = "Veiled Nightseye",
 					["recipeID"] = 39470
 				},
+				-- #endif
 				{
 					["name"] = "Veiled Shadow Draenite",
 					["recipeID"] = 39466
@@ -5624,7 +5632,6 @@ i(24207, {	-- Design: Subtle Dawnstone
 	["spellID"] = 0,	-- This is now available via 24197, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(31878),	-- Design: Veiled Nightseye
 
 
 -- From the Isle of QD:
@@ -5906,7 +5913,6 @@ itemrecipe("Design: Bright Blood Garnet [TBC]", 28596, 34590, TBC_PHASE_ONE, "re
 itemrecipe("Design: Ring of Arcane Shielding", 30826, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Enduring Deep Peridot [TBC - Horde]", 31359, 28918, TBC_PHASE_ONE);
 itemrecipe("Design: Infused Nightseye [TBC]", 31877, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Veiled Noble Topaz [TBC]", 31878, 39470, TBC_PHASE_ONE);
 itemrecipe("Design: Wicked Noble Topaz [TBC]", 31879, 39471, TBC_PHASE_ONE);
 itemrecipe("Design: Bold Crimson Spinel", 32274, 39705, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Delicate Crimson Spinel", 32277, 39706, PHASE_19_IDENTIFIER);

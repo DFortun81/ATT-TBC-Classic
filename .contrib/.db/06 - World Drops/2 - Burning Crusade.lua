@@ -1197,7 +1197,7 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			-- #if AFTER CATA
 			i(24211),	-- Design: Timeless Nightseye [CATA+] / Design: Glowing Nightseye [TBC]
 			-- #endif
-			i(31878),	-- Design: Veiled Nightseye
+			i(31878),	-- Design: Veiled Noble Topaz [TBC] / Design: Veiled Nightseye [CATA+]
 			-- #if BEFORE CATA
 			i(31879),	-- Design: Wicked Noble Topaz [TBC] / Design: Deadly Noble Topaz [CATA+]
 			-- #endif
