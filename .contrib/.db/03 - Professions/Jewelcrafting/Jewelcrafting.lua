@@ -5492,6 +5492,7 @@ itemrecipe("Design: Solid Empyrean Sapphire", 32286, 39715);
 itemrecipe("Design: Solid Star of Elune", 24199, 31092);
 itemrecipe("Design: Sovereign Nightseye", 24209, 31102);
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 32297, 39727);
+itemrecipe("Design: Sparkling Azure Moonstone", 23155, 28953);
 itemrecipe("Design: Sparkling Empyrean Sapphire", 32287, 39716);
 itemrecipe("Design: Sparkling Star of Elune", 24200, 31149);
 itemrecipe("Design: Steady Seaspray Emerald", 35764, 47054);
@@ -5499,6 +5500,7 @@ itemrecipe("Design: Stormy Azure Moonstone", 23154, 28955);
 itemrecipe("Design: Stormy Empyrean Sapphire", 32289, 39718);
 itemrecipe("Design: Stormy Star of Elune", 24202, 31095);
 itemrecipe("Design: Subtle Lionseye", 32284, 39713);
+itemrecipe("Design: Swift Skyfire Diamond", 25908, 32873);
 itemrecipe("Design: Tenacious Earthstorm Diamond", 25905, 32868);
 itemrecipe("Design: The Frozen Eye", 31401, 38503);
 itemrecipe("Design: The Jade Eye", 20975, 25619);
@@ -5520,6 +5522,7 @@ itemrecipe({"Design: Enduring Seaspray Emerald [TBC]", "Design: Regal Seaspray E
 itemrecipe({"Design: Glinting Noble Topaz [TBC]", "Design: Glinting Nightseye [CATA+]"}, 24216, 31109);
 itemrecipe({"Design: Glinting Pyrestone [TBC]", "Design: Glinting Shadowsong Amethyst [CATA+]"}, 32306, 39736);
 itemrecipe({"Design: Glowing Nightseye [TBC]", "Design: Timeless Nightseye [CATA+]"}, 24211, 31104);
+itemrecipe({"Design: Luminous Flame Spessarite [TBC]", "Design: Reckless Flame Spessarite [CATA+]"}, 23136, 28912);
 itemrecipe({"Design: Luminous Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 24215, 31108);
 itemrecipe({"Design: Rigid Dawnstone [TBC]", "Design: Rigid Star of Elune [CATA+]"}, 24205, 31098);
 itemrecipe({"Design: Rigid Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CATA+]"}, 32292, 39721);
@@ -5539,7 +5542,6 @@ itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"
 -- Recipes that got new Spell IDs with Cata?!
 itemrecipe({"Design: Enduring Talasite [TBC]", "Design: Regal Talasite [CATA+]"}, 24217, 31110, 46803);
 itemrecipe({"Design: Great Golden Draenite [TBC]", "Design: Rigid Azure Moonstone [CATA+]"}, 31870, 39451, 28948);
-
 
 -- Recipes Removed with Cata
 itemrecipe({"Design: Balanced Nightseye [TBC]", "Design: Shifting Nightseye [CATA+]"}, 31876, 39463, 31103, REMOVED_WITH_CATA);
@@ -5565,7 +5567,6 @@ itemrecipe({"Design: Teardrop Crimson Spinel [TBC]", "Design: Brilliant Crimson 
 itemrecipe({"Design: Thick Dawnstone [TBC]", "Design: Subtle Dawnstone [CATA+]"}, 24207, 31100, 31090, REMOVED_WITH_CATA);
 itemrecipe({"Design: Thick Lionseye [TBC]", "Design: Subtle Lionseye [CATA+]"}, 32294, 39723, 39713, REMOVED_WITH_CATA);
 
-
 -- Recipes that were only removed as a Recipe Item in Cata, but still available from a trainer? Cata was a god damned mystery.
 itemrecipe({"Design: Bright Blood Garnet [TBC]", "Design: Delicate Blood Garnet [CATA+]"}, 28596, 34590, 34590, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bold Blood Garnet [TBC]", "Design: Bold Blood Garnet [CATA+]"}, 23131, 28905, 28905, REMOVED_WITH_CATA);
@@ -5590,7 +5591,6 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 --[[
 i(35307),	-- Design: Rigid Star of Elune (BoP version)
 i(35304),	-- Design: Solid Star of Elune (BoP version)
-i(23136),	-- Design: Luminous Flame Spessarite [TBC] / Design: Reckless Flame Spessarite [Cata+]
 i(33622),	-- Design: Relentless Earthstorm Diamond
 i(32412, {	-- Design: Relentless Earthstorm Diamond
 	["spellID"] = 0,	-- This is now available via 33622, need to delink the old plans from the recipe
@@ -5604,12 +5604,7 @@ i(31872, {	-- Design: Shifting Shadow Draenite
 	["spellID"] = 0,	-- This is now available via 23146, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(23155),	-- Design: Sparkling Azure Moonstone
-i(25908),	-- Design: Swift Skyfire Diamond
 
--- #if AFTER CATA
-i(24196),	-- Design: Brilliant Living Ruby [CATA+] / Design: Runed Living Ruby [TBC]
--- #endif
 i(24216),	-- Design: Glinting Nightseye
 i(31877, {	-- Design: Glinting Nightseye
 	["spellID"] = 0,	-- This is now available via 24216, need to delink the old plans from the recipe
@@ -5898,7 +5893,6 @@ itemrecipe("Design: Teardrop Blood Garnet [TBC]", 23130, 28903, TBC_PHASE_ONE, "
 itemrecipe("Design: Bold Blood Garnet [TBC]", 23131, 28905, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Runed Blood Garnet", 23133, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Inscribed Flame Spessarite [TBC]", 23135, 28910, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Luminous Flame Spessarite", 23136, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Glinting Flame Spessarite [TBC]", 23137, 28914, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Potent Flame Spessarite", 23138, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Radiant Deep Peridot [TBC]", 23140, 28916, TBC_PHASE_ONE, "removed 4.0.1.10000");
@@ -5913,7 +5907,6 @@ itemrecipe("Design: Gleaming Golden Draenite", 23149, UNKNOWN_SPELLID, TBC_PHASE
 itemrecipe("Design: Thick Golden Draenite", 23150, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Rigid Golden Draenite [TBC]", 23151, 28948, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Solid Azure Moonstone [TBC]", 23152, 28950, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Sparkling Azure Moonstone [TBC]", 23153, 28953, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Stormy Azure Moonstone", 23154, 28955, TBC_PHASE_ONE);
 itemrecipe("Design: Lustrous Azure Moonstone", 23155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Khorium Band of Shadows", 24158, UNKNOWN_SPELLID, TBC_PHASE_ONE);
@@ -5952,7 +5945,6 @@ itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866, TBC_PHASE_ONE);
 itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867, TBC_PHASE_ONE);
 itemrecipe("Design: Insightful Earthstorm Diamond", 25904, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Tenacious Earthstorm Diamond", 25905, 32868, TBC_PHASE_ONE);
-itemrecipe("Design: Swift Skyfire Diamond", 25908, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Enigmatic Skyfire Diamond", 25910, UNKNOWN_SPELLID);
 itemrecipe("Design: Smooth Golden Draenite [TBC]", 28291, 34069, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Bright Blood Garnet [TBC]", 28596, 34590, TBC_PHASE_ONE, "removed 4.0.1.10000");
