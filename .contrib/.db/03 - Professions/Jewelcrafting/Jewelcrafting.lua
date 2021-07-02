@@ -430,10 +430,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Regal Talasite",
 					["recipeID"] = 46803
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Steady Seaspray Emerald",
 					["recipeID"] = 47054
-				},
+				}),
 				{
 					["name"] = "Steady Talasite",
 					["recipeID"] = 43493
@@ -5539,6 +5539,7 @@ itemrecipe("Design: Sparkling Azure Moonstone", 23155, 28953);
 itemrecipe("Design: Sparkling Empyrean Sapphire", 32287, 39716);
 itemrecipe("Design: Sparkling Star of Elune", 24200, 31149);
 itemrecipe("Design: Steady Seaspray Emerald", 35764, 47054);
+itemrecipe("Design: Steady Seaspray Emerald", 35766, 47054);
 itemrecipe("Design: Stormy Azure Moonstone", 23154, 28955);
 itemrecipe("Design: Stormy Empyrean Sapphire", 32289, 39718);
 itemrecipe("Design: Stormy Star of Elune", 24202, 31095);
@@ -5651,7 +5652,6 @@ i(35268, {	-- Design: Reckless Pyrestone
 	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35766),	-- Design: Steady Seaspray Emerald
 
 
 i(35248),	-- Design: Brilliant Crimson Spinel
@@ -5719,7 +5719,6 @@ i(35262, {	-- Design: Sparkling Empyrean Sapphire
 	["spellID"] = 0,	-- This is now available via 35262, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35766),	-- Design: Steady Seaspray Emerald
 i(35265),	-- Design: Stormy Empyrean Sapphire
 i(35249),	-- Design: Subtle Lionseye
 i(35261, {	-- Design: Subtle Lionseye
@@ -5803,7 +5802,6 @@ i(35262, {	-- Design: Sparkling Empyrean Sapphire
 	["spellID"] = 0,	-- This is now available via 35264, need to delink the old plans from the recipe
 		["u"] = REMOVED_FROM_GAME,
 }),
-i(35766),	-- Design: Steady Seaspray Emerald
 i(35265),	-- Design: Stormy Empyrean Sapphire
 i(35249),	-- Design: Subtle Lionseye
 i(35261, {	-- Design: Subtle Lionseye
@@ -6002,8 +6000,6 @@ itemrecipe("Design: Pendant of Sunfire", 35537, UNKNOWN_SPELLID);
 itemrecipe("Design: Ring of Flowing Life", 35538, UNKNOWN_SPELLID);
 itemrecipe("Design: Regal Nightseye", 35708, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Reckless Pyrestone", 35762, 47055, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Steady Seaspray Emerald", 35764, 47054, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Steady Seaspray Emerald", 35766, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Reckless Pyrestone", 35767, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Purified Shadowsong Amethyst", 37504, 0, PHASE_2_IDENTIFIER);
 ]]--
