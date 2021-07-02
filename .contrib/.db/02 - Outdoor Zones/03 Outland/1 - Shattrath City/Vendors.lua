@@ -1135,6 +1135,9 @@ _.Zones =
 						}),
 						i(35267),	-- Design: Inscribed Pyrestone
 						i(35253),	-- Design: Jagged Seaspray Emerald
+						-- #if BEFORE CATA
+						i(35268),	-- Design: Luminous Pyrestone [TBC] / Design: Reckless Pyrestone [CATA+]
+						-- #endif
 						i(35258),	-- Design: Mystic Lionseye
 						i(35269),	-- Design: Potent Pyrestone
 						i(35251),	-- Design: Purified Shadowsong Amethyst
@@ -1151,10 +1154,9 @@ _.Zones =
 						i(35254),	-- Design: Radiant Seaspray Emerald
 						i(35323),	-- Design: Reckless Noble Topaz
 						i(35767),	-- Design: Reckless Pyrestone
-						i(35268, {	-- Design: Reckless Pyrestone
-							["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
+						-- #if AFTER CATA
+						i(35268),	-- Design: Reckless Pyrestone [CATA+] / Design: Luminous Pyrestone [TBC]
+						-- #endif
 						i(35252),	-- Design: Regal Seaspray Emerald
 						i(35259),	-- Design: Rigid Empyrean Sapphire
 						i(35257, {	-- Design: Rigid Empyrean Sapphire

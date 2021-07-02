@@ -474,6 +474,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 31108
 				},
 				-- #endif
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Luminous Pyrestone",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39735
+				}),
 				{
 					["name"] = "Potent Flame Spessarite",
 					["recipeID"] = 28915
@@ -501,10 +506,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 31108
 				},
 				-- #endif
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Reckless Pyrestone",
 					["recipeID"] = 47055
-				},
+				}),
 				-- #if BEFORE CATA
 				{
 					["name"] = "Veiled Noble Topaz",
@@ -5521,6 +5526,7 @@ itemrecipe("Design: Quick Lionseye", 35768, 47056);
 itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740);
 itemrecipe("Design: Radiant Talasite", 24218, 31111);
 itemrecipe("Design: Reckless Pyrestone", 35762, 47055);
+itemrecipe("Design: Reckless Pyrestone", 35767, 47055);
 itemrecipe("Design: Regal Talasite", 35708, 46803);
 itemrecipe("Design: Relentless Earthstorm Diamond", 33622, 39961);
 itemrecipe("Design: Ring of Flowing Life", 35199, 46123);
@@ -5606,6 +5612,7 @@ itemrecipe({"Design: Great Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CA
 itemrecipe({"Design: Infused Nightseye [TBC]", "Design: Glinting Nightseye [CATA+]"}, 31877, 39462, 31109, REMOVED_WITH_CATA);
 itemrecipe({"Design: Infused Shadowsong Amethyst [TBC]", "Design: Glinting Shadowsong Amethyst [CATA+]"}, 32300, 39730, 39736, REMOVED_WITH_CATA);
 itemrecipe({"Design: Luminous Pyrestone [TBC]", "Design: Reckless Pyrestone [CATA+]"}, 32305, 39735, 47055, REMOVED_WITH_CATA);
+itemrecipe({"Design: Luminous Pyrestone [TBC]", "Design: Reckless Pyrestone [CATA+]"}, 35268, 39735, 47055, REMOVED_WITH_CATA);
 itemrecipe({"Design: Lustrous Empyrean Sapphire [TBC]", "Design: Sparkling Empyrean Sapphire [CATA+]"}, 32288, 39717, 39716, REMOVED_WITH_CATA);
 itemrecipe({"Design: Lustrous Star of Elune [TBC]", "Design: Sparkling Star of Elune [CATA+]"}, 24201, 31094, 31149, REMOVED_WITH_CATA);
 itemrecipe({"Design: Royal Nightseye [TBC]", "Design: Purified Nightseye [CATA+]"}, 24212, 31105, 31112, REMOVED_WITH_CATA);
@@ -5647,11 +5654,7 @@ i(24207, {	-- Design: Subtle Dawnstone
 
 -- From the Isle of QD:
 
-i(35767),	-- Design: Reckless Pyrestone
-i(35268, {	-- Design: Reckless Pyrestone
-	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
+
 
 
 i(35248),	-- Design: Brilliant Crimson Spinel
@@ -5691,11 +5694,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 }),
 i(35322),	-- Design: Quick Dawnstone
 i(35254),	-- Design: Radiant Seaspray Emerald
-i(35767),	-- Design: Reckless Pyrestone
-i(35268, {	-- Design: Reckless Pyrestone
-	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
 i(35252),	-- Design: Regal Seaspray Emerald
 i(35259),	-- Design: Rigid Empyrean Sapphire
 i(35257, {	-- Design: Rigid Empyrean Sapphire
@@ -5774,11 +5772,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 }),
 i(35322),	-- Design: Quick Dawnstone
 i(35254),	-- Design: Radiant Seaspray Emerald
-i(35767),	-- Design: Reckless Pyrestone
-i(35268, {	-- Design: Reckless Pyrestone
-	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
 i(35252),	-- Design: Regal Seaspray Emerald
 i(35259),	-- Design: Rigid Empyrean Sapphire
 i(35257, {	-- Design: Rigid Empyrean Sapphire
@@ -5933,7 +5926,6 @@ itemrecipe("Design: Glowing Shadowsong Amethyst [TBC]", 32301, 39731, PHASE_19_I
 itemrecipe("Design: Royal Shadowsong Amethyst [TBC]", 32302, 39732, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Inscribed Pyrestone", 32303, 39733, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Luminous Pyrestone [TBC]", 32305, 39735, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Glinting Pyrestone [TBC]", 32306, 39736, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Wicked Pyrestone [TBC]", 32308, 39738, PHASE_19_IDENTIFIER);
@@ -5983,7 +5975,6 @@ itemrecipe("Design: Sparkling Empyrean Sapphire", 35264, UNKNOWN_SPELLID, PHASE_
 itemrecipe("Design: Stormy Empyrean Sapphire", 35265, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Glinting Pyrestone", 35266, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Inscribed Pyrestone", 35267, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Luminous Pyrestone", 35268, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Potent Pyrestone", 35269, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Veiled Pyrestone", 35270, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Wicked Pyrestone", 35271, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
@@ -5999,8 +5990,6 @@ itemrecipe("Design: Loop of Forged Power", 35536, UNKNOWN_SPELLID);
 itemrecipe("Design: Pendant of Sunfire", 35537, UNKNOWN_SPELLID);
 itemrecipe("Design: Ring of Flowing Life", 35538, UNKNOWN_SPELLID);
 itemrecipe("Design: Regal Nightseye", 35708, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Reckless Pyrestone", 35762, 47055, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Reckless Pyrestone", 35767, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Purified Shadowsong Amethyst", 37504, 0, PHASE_2_IDENTIFIER);
 ]]--
 

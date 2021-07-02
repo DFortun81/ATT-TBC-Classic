@@ -20,12 +20,14 @@ _.Zones =
 						i(35699),	-- Design: Figurine - Seaspray Albatross
 						i(35698),	-- Design: Figurine - Shadowsong Panther
 						i(35769),	-- Design: Forceful Seaspray Emerald
+						-- #if BEFORE CATA
+						i(35268),	-- Design: Luminous Pyrestone [TBC] / Design: Reckless Pyrestone [CATA+]
+						-- #endif
 						i(35768),	-- Design: Quick Lionseye
 						i(35767),	-- Design: Reckless Pyrestone
-						i(35268, {	-- Design: Reckless Pyrestone
-							["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
-							["u"] = REMOVED_FROM_GAME,
-						}),
+						-- #if AFTER CATA
+						i(35268),	-- Design: Reckless Pyrestone [CATA+] / Design: Luminous Pyrestone [TBC]
+						-- #endif
 						i(35708),	-- Design: Regal Talasite
 						i(35766),	-- Design: Steady Seaspray Emerald
 						i(35500),	-- Formula: Enchant Chest - Dodge
@@ -782,6 +784,9 @@ _.Zones =
 						}),
 						i(35267),	-- Design: Inscribed Pyrestone
 						i(35253),	-- Design: Jagged Seaspray Emerald
+						-- #if BEFORE CATA
+						i(35268),	-- Design: Luminous Pyrestone [TBC] / Design: Reckless Pyrestone [CATA+]
+						-- #endif
 						i(35258),	-- Design: Mystic Lionseye
 						i(35269),	-- Design: Potent Pyrestone
 						i(35251),	-- Design: Purified Shadowsong Amethyst
@@ -798,10 +803,9 @@ _.Zones =
 						i(35254),	-- Design: Radiant Seaspray Emerald
 						i(35323),	-- Design: Reckless Noble Topaz
 						i(35767),	-- Design: Reckless Pyrestone
-						i(35268, {	-- Design: Reckless Pyrestone
-							["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
-							["u"] = REMOVED_FROM_GAME,
-						}),
+						-- #if AFTER CATA
+						i(35268),	-- Design: Reckless Pyrestone [CATA+] / Design: Luminous Pyrestone [TBC]
+						-- #endif
 						i(35252),	-- Design: Regal Seaspray Emerald
 						i(35259),	-- Design: Rigid Empyrean Sapphire
 						i(35257, {	-- Design: Rigid Empyrean Sapphire
