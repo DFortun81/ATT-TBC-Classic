@@ -617,10 +617,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Bold Blood Garnet",
 					["recipeID"] = 28905
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Bold Crimson Spinel",
 					["recipeID"] = 39705
-				},
+				}),
 				{
 					["name"] = "Bold Living Ruby",
 					["recipeID"] = 31084
@@ -5459,6 +5459,7 @@ itemrecipe("Design: Black Pearl Panther", 21941, 26875);
 itemrecipe("Design: Blazing Citrine Ring", 20973, 25617);
 itemrecipe("Design: Blazing Eternium Band", 24165, 31061);
 itemrecipe("Design: Bold Crimson Spinel", 32274, 39705);
+itemrecipe("Design: Bold Crimson Spinel", 35244, 39705);
 itemrecipe("Design: Bold Living Ruby", 24193, 31084);
 itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867);
 itemrecipe("Design: Braided Eternium Chain", 24168, 31070);
@@ -5651,7 +5652,6 @@ i(35268, {	-- Design: Reckless Pyrestone
 	["u"] = REMOVED_FROM_GAME,
 }),
 i(35766),	-- Design: Steady Seaspray Emerald
-i(35244),	-- Design: Bold Crimson Spinel
 
 
 i(35248),	-- Design: Brilliant Crimson Spinel
@@ -5738,7 +5738,6 @@ i(35270),	-- Design: Veiled Shadowsong Amethyst
 i(24175),	-- Design: Pendant of Thawing
 i(23138),	-- Design: Potent Flame Spessarite
 
-i(35244),	-- Design: Bold Crimson Spinel
 i(35248),	-- Design: Brilliant Crimson Spinel
 i(35250, {	-- Design: Brilliant Crimson Spinel
 	["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
@@ -5911,7 +5910,6 @@ itemrecipe("Design: Ring of Arcane Shielding", 30826, UNKNOWN_SPELLID, TBC_PHASE
 itemrecipe("Design: Enduring Deep Peridot [TBC - Horde]", 31359, 28918, TBC_PHASE_ONE);
 itemrecipe("Design: Infused Nightseye [TBC]", 31877, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Wicked Noble Topaz [TBC]", 31879, 39471, TBC_PHASE_ONE);
-itemrecipe("Design: Bold Crimson Spinel", 32274, 39705, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Delicate Crimson Spinel", 32277, 39706, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Teardrop Crimson Spinel [TBC]", 32281, 39710, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Runed Crimson Spinel [TBC]", 32282, 39711, PHASE_19_IDENTIFIER);
@@ -5964,7 +5962,6 @@ itemrecipe("Design: Infused Shadowsong Amethyst", 35240, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Royal Shadowsong Amethyst", 35241, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Shifting Shadowsong Amethyst", 35242, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 35243, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Bold Crimson Spinel", 35244, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Bright Crimson Spinel", 35245, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Delicate Crimson Spinel", 35246, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Flashing Crimson Spinel", 35247, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
