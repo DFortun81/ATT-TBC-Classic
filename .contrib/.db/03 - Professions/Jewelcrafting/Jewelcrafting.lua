@@ -5524,6 +5524,7 @@ itemrecipe({"Design: Rigid Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CA
 itemrecipe({"Design: Runed Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32282, 39711);
 itemrecipe({"Design: Runed Living Ruby [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24196, 31088);
 itemrecipe({"Design: Subtle Living Ruby [TBC]", "Design: Subtle Dawnstone [CATA+]"}, 24197, 31090);
+itemrecipe({"Design: Veiled Flame Spessarite [TBC]","Design: Veiled Shadow Draenite [CATA+]"}, 31873, 39466);
 itemrecipe({"Design: Veiled Noble Topaz [TBC]", "Design: Veiled Nightseye [CATA+]"}, 31878, 39470);
 itemrecipe({"Design: Wicked Noble Topaz [TBC]", "Design: Deadly Noble Topaz [CATA+]"}, 31879, 39471);
 itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"}, 32308, 39738);
@@ -5623,22 +5624,10 @@ i(31870, {	-- Design: Great Golden Draenite [Before 4.0.1] / Design: Rigid Azure
 		"added 2.2.0.7272",
 	},
 }),
-i(31873, {	-- Design: Veiled Shadow Draenite
-	
-}),
 
-i(24193),	-- Design: Bold Living Ruby
--- #if BEFORE CATA
-i(24203),	-- Design: Brilliant Dawnstone [TBC] / Design: Brilliant Living Ruby [CATA+]
--- #endif
+
 -- #if AFTER CATA
 i(24196),	-- Design: Brilliant Living Ruby [CATA+] / Design: Runed Living Ruby [TBC]
--- #endif
--- #if AFTER CATA
-i(24203),	-- Design: Brilliant Dawnstone [TBC] / Design: Brilliant Living Ruby [CATA+]
--- #endif
--- #if AFTER CATA
-i(31879),	-- Design: Deadly Noble Topaz [CATA+] / Design: Wicked Noble Topaz [TBC]
 -- #endif
 i(25907),	-- Design: Destructive Skyfire Diamond
 i(24198),	-- Design: Flashing Living Ruby
@@ -5692,9 +5681,6 @@ i(24166),	-- Design: Thick Felsteel Necklace
 i(32411),	-- Design: Thundering Skyfire Diamond
 i(24211),	-- Design: Timeless Nightseye
 i(31878),	-- Design: Veiled Nightseye
--- #if BEFORE CATA
-i(31879),	-- Design: Wicked Noble Topaz [TBC] / Design: Deadly Noble Topaz [CATA+]
--- #endif
 
 
 -- From the Isle of QD:
@@ -5965,7 +5951,6 @@ itemrecipe("Design: Pendant of Shadow's End", 24177, UNKNOWN_SPELLID, TBC_PHASE_
 itemrecipe("Design: Living Ruby Serpent", 24181, UNKNOWN_SPELLID);
 itemrecipe("Design: Talasite Owl", 24182, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Bright Living Ruby [TBC]", 24192, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Bold Living Ruby", 24193, 31084, TBC_PHASE_ONE);
 itemrecipe("Design: Teardrop Living Ruby", 24195, UNKNOWN_SPELLID);
 itemrecipe("Design: Runed Living Ruby [TBC]", 24196, 31088, TBC_PHASE_ONE);
 itemrecipe("Design: Subtle Living Ruby [TBC]", 24197, 31090, TBC_PHASE_ONE);
@@ -5974,7 +5959,6 @@ itemrecipe("Design: Solid Star of Elune", 24199, 31092, TBC_PHASE_ONE);
 itemrecipe("Design: Sparkling Star of Elune", 24200, 31149, TBC_PHASE_ONE);
 itemrecipe("Design: Lustrous Star of Elune [TBC]", 24201, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Stormy Star of Elune", 24202, 31095, TBC_PHASE_ONE);
-itemrecipe("Design: Brilliant Dawnstone [TBC]", 24203, 31088, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Smooth Dawnstone", 24204, 31097, TBC_PHASE_ONE);
 itemrecipe("Design: Rigid Dawnstone [TBC]", 24205, 31098, TBC_PHASE_ONE);
 itemrecipe("Design: Gleaming Dawnstone [TBC]", 24206, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
@@ -6004,7 +5988,6 @@ itemrecipe("Design: Enduring Deep Peridot [TBC - Horde]", 31359, 28918, TBC_PHAS
 itemrecipe("Design: Great Golden Draenite", 31870, UNKNOWN_SPELLID, TBC_PHASE_ONE, "added 2.2.0.7272");
 itemrecipe("Design: Balanced Shadow Draenite", 31871, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Infused Shadow Draenite", 31872, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Veiled Flame Spessarite", 31873, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Wicked Flame Spessarite", 31874, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Rigid Star of Elune [TBC]", 31875, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Balanced Nightseye [TBC]", 31876, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");

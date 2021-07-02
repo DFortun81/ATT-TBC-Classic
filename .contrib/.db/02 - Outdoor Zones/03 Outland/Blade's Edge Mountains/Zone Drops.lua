@@ -326,7 +326,7 @@ _.Zones =
 						23355,	-- Zarcsin
 					},
 				}),
-				i(31873, {	-- Design: Veiled Shadow Draenite
+				i(31873, {	-- Design: Veiled Flame Spessarite [TBC] / Design: Veiled Shadow Draenite [CATA+]
 					["crs"] = {
 						22275,	-- Apexis Guardian
 						23390,	-- Bash'ir's Harbinger
