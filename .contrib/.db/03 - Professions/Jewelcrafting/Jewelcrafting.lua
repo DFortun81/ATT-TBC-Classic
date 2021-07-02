@@ -5526,6 +5526,7 @@ itemrecipe({"Design: Rigid Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CA
 itemrecipe({"Design: Runed Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32282, 39711);
 itemrecipe({"Design: Runed Living Ruby [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24196, 31088);
 itemrecipe({"Design: Subtle Living Ruby [TBC]", "Design: Subtle Dawnstone [CATA+]"}, 24197, 31090);
+itemrecipe({"Design: Thick Golden Draenite [TBC]", "Design: Subtle Golden Draenite [CATA+]"}, 23150, 28947);
 itemrecipe({"Design: Veiled Flame Spessarite [TBC]","Design: Veiled Shadow Draenite [CATA+]"}, 31873, 39466);
 itemrecipe({"Design: Veiled Noble Topaz [TBC]", "Design: Veiled Nightseye [CATA+]"}, 31878, 39470);
 itemrecipe({"Design: Wicked Noble Topaz [TBC]", "Design: Deadly Noble Topaz [CATA+]"}, 31879, 39471);
@@ -5600,7 +5601,6 @@ i(31872, {	-- Design: Shifting Shadow Draenite
 	["u"] = REMOVED_FROM_GAME,
 }),
 i(23155),	-- Design: Sparkling Azure Moonstone
-i(23150),	-- Design: Subtle Golden Draenite
 i(25908),	-- Design: Swift Skyfire Diamond
 
 
