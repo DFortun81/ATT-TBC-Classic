@@ -5491,6 +5491,7 @@ itemrecipe("Design: Smooth Dawnstone", 24204, 31097);
 itemrecipe("Design: Smooth Lionseye", 32291, 39720);
 itemrecipe("Design: Solid Empyrean Sapphire", 32286, 39715);
 itemrecipe("Design: Solid Star of Elune", 24199, 31092);
+itemrecipe("Design: Solid Star of Elune", 35304, 31092);
 itemrecipe("Design: Sovereign Nightseye", 24209, 31102);
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 32297, 39727);
 itemrecipe("Design: Sparkling Azure Moonstone", 23155, 28953);
@@ -5591,8 +5592,6 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-
-i(35304),	-- Design: Solid Star of Elune (BoP version)
 i(33622),	-- Design: Relentless Earthstorm Diamond
 i(32412, {	-- Design: Relentless Earthstorm Diamond
 	["spellID"] = 0,	-- This is now available via 33622, need to delink the old plans from the recipe
@@ -5624,7 +5623,6 @@ i(31876, {	-- Design: Shifting Nightseye
 	["spellID"] = 0,	-- This is now available via 24210, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(24199),	-- Design: Solid Star of Elune (BoE version)
 i(24209),	-- Design: Sovereign Nightseye
 i(24200),	-- Design: Sparkling Star of Elune
 i(24201, {	-- Design: Sparkling Star of Elune
@@ -5912,7 +5910,6 @@ itemrecipe("Design: Bright Living Ruby [TBC]", 24192, 31089, TBC_PHASE_ONE, "rem
 itemrecipe("Design: Teardrop Living Ruby", 24195, UNKNOWN_SPELLID);
 itemrecipe("Design: Runed Living Ruby [TBC]", 24196, 31088, TBC_PHASE_ONE);
 itemrecipe("Design: Subtle Living Ruby [TBC]", 24197, 31090, TBC_PHASE_ONE);
-itemrecipe("Design: Solid Star of Elune", 24199, 31092, TBC_PHASE_ONE);
 itemrecipe("Design: Sparkling Star of Elune", 24200, 31149, TBC_PHASE_ONE);
 itemrecipe("Design: Lustrous Star of Elune [TBC]", 24201, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Stormy Star of Elune", 24202, 31095, TBC_PHASE_ONE);
@@ -6029,7 +6026,6 @@ itemrecipe("Design: Luminous Pyrestone", 35268, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Potent Pyrestone", 35269, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Veiled Pyrestone", 35270, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Wicked Pyrestone", 35271, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Solid Star of Elune", 35304, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Runed Living Ruby", 35305, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Bright Living Ruby [TBC]", 35306, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Rigid Dawnstone", 35307, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
