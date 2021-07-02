@@ -5494,6 +5494,7 @@ itemrecipe("Design: Mystical Skyfire Diamond", 25909, 32872);
 itemrecipe("Design: Nightseye Panther", 24183, 31083);
 itemrecipe("Design: Opal Necklace of Impact", 21948, 26897);
 itemrecipe("Design: Pendant of Sunfire", 35201, 46125);
+itemrecipe("Design: Pendant of the Agate Shield", 20970, 25610);
 itemrecipe("Design: Pendant of the Null Rune", 24178, 31066);
 itemrecipe("Design: Potent Noble Topaz", 24214, 31107);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734);
@@ -5829,8 +5830,6 @@ i(24176),	-- Design: Pendant of Withering
 
 
 
-itemrecipe("Design: Heavy Golden Necklace of Battle", 20856, 25320, TBC_PHASE_ONE);
-itemrecipe("Design: Pendant of the Agate Shield", 20970, UNKNOWN_SPELLID);
 itemrecipe("Design: Heavy Iron Knuckles", 20971, 25612, TBC_PHASE_ONE);
 itemrecipe("Design: Silver Rose Pendant", 20972, 25614, TBC_PHASE_ONE);
 itemrecipe("Design: Blazing Citrine Ring", 20973, 25617, TBC_PHASE_ONE);

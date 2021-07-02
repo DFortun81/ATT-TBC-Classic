@@ -10,6 +10,9 @@ _.Zones =
 					["coord"] = { 46.0, 51.6, THOUSAND_NEEDLES },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
+						i(20970, {	-- Design: Pendant of the Agate Shield
+							["isLimited"] = true,
+						}),
 						i(5973),	-- Pattern: Barbaric Leggings
 					},
 				}),

@@ -57,6 +57,15 @@ _.Zones =
 						i(11304),	-- Fine Longbow
 					},
 				}),
+				n(1448, {	-- Neal Allen <Engineering Supplies & General Goods>
+					["coord"] = { 10.8, 56.8, WETLANDS },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(20970, {	-- Design: Pendant of the Agate Shield
+							["isLimited"] = true,
+						}),
+					},
+				}),
 				n(3178, {	-- Stuart Fleming <Fisherman>
 					["coord"] = { 8.0, 58.3, WETLANDS },
 					["races"] = ALLIANCE_ONLY,
