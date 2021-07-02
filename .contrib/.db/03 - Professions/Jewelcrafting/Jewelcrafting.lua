@@ -695,10 +695,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Quick Dawnstone",
 					["recipeID"] = 46403
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Quick Lionseye",
 					["recipeID"] = 47056
-				},
+				}),
 				{
 					["name"] = "Smooth Dawnstone",
 					["recipeID"] = 31097
@@ -5516,6 +5516,7 @@ itemrecipe("Design: Potent Noble Topaz", 24214, 31107);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734);
 itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866);
 itemrecipe("Design: Quick Lionseye", 35763, 47056);
+itemrecipe("Design: Quick Lionseye", 35768, 47056);
 itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740);
 itemrecipe("Design: Radiant Talasite", 24218, 31111);
 itemrecipe("Design: Reckless Pyrestone", 35762, 47055);
@@ -5644,8 +5645,6 @@ i(24207, {	-- Design: Subtle Dawnstone
 
 -- From the Isle of QD:
 
-
-i(35768),	-- Design: Quick Lionseye
 i(35767),	-- Design: Reckless Pyrestone
 i(35268, {	-- Design: Reckless Pyrestone
 	["spellID"] = 0,	-- This is now available via 35767, need to delink the old plans from the recipe
@@ -5691,7 +5690,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 	["u"] = REMOVED_FROM_GAME,
 }),
 i(35322),	-- Design: Quick Dawnstone
-i(35768),	-- Design: Quick Lionseye
 i(35254),	-- Design: Radiant Seaspray Emerald
 i(35767),	-- Design: Reckless Pyrestone
 i(35268, {	-- Design: Reckless Pyrestone
@@ -5777,7 +5775,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 		["u"] = REMOVED_FROM_GAME,
 }),
 i(35322),	-- Design: Quick Dawnstone
-i(35768),	-- Design: Quick Lionseye
 i(35254),	-- Design: Radiant Seaspray Emerald
 i(35767),	-- Design: Reckless Pyrestone
 i(35268, {	-- Design: Reckless Pyrestone
@@ -6008,11 +6005,9 @@ itemrecipe("Design: Pendant of Sunfire", 35537, UNKNOWN_SPELLID);
 itemrecipe("Design: Ring of Flowing Life", 35538, UNKNOWN_SPELLID);
 itemrecipe("Design: Regal Nightseye", 35708, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Reckless Pyrestone", 35762, 47055, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Quick Lionseye", 35763, 47056, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Steady Seaspray Emerald", 35764, 47054, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Steady Seaspray Emerald", 35766, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Reckless Pyrestone", 35767, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Quick Lionseye", 35768, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Purified Shadowsong Amethyst", 37504, 0, PHASE_2_IDENTIFIER);
 ]]--
 
