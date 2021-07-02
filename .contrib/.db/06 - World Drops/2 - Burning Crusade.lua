@@ -1130,6 +1130,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 				["spellID"] = 0,	-- This is now available via 24216, need to delink the old plans from the recipe
 				["u"] = REMOVED_FROM_GAME,
 			}),
+			-- #if BEFORE CATA
+			i(31875),	-- Design: Great Dawnstone [TBC] / Design: Rigid Star of Elune [CATA+]
+			-- #endif
 			i(24163),	-- Design: Heavy Felsteel Ring
 			i(24213),	-- Design: Inscribed Noble Topaz
 			i(24220),	-- Design: Jagged Talasite
@@ -1144,11 +1147,10 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24218),	-- Design: Radiant Talasite
 			i(24215),	-- Design: Reckless Noble Topaz
 			i(24217),	-- Design: Regal Talasite
-			i(24205),	-- Design: Rigid Star of Elune (BoE version)
-			i(31875, {	-- Design: Rigid Star of Elune
-				["spellID"] = 0,	-- This is now available via 24205, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
+			i(24205),	-- Design: Rigid Dawnstone [TBC] / Design: Rigid Star of Elune [CATA+]
+			-- #if AFTER CATA
+			i(31875),	-- Design: Rigid Star of Elune [CATA+] / Design: Great Dawnstone [TBC]
+			-- #endif
 			-- #if BEFORE CATA
 			i(24196),	-- Design: Runed Living Ruby [TBC] / Design: Brilliant Living Ruby [CATA+]
 			-- #endif

@@ -5526,6 +5526,7 @@ itemrecipe({"Design: Glowing Nightseye [TBC]", "Design: Timeless Nightseye [CATA
 itemrecipe({"Design: Luminous Flame Spessarite [TBC]", "Design: Reckless Flame Spessarite [CATA+]"}, 23136, 28912);
 itemrecipe({"Design: Luminous Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 24215, 31108);
 itemrecipe({"Design: Rigid Dawnstone [TBC]", "Design: Rigid Star of Elune [CATA+]"}, 24205, 31098);
+itemrecipe({"Design: Rigid Dawnstone [TBC]", "Design: Rigid Star of Elune [CATA+]"}, 35307, 31098);
 itemrecipe({"Design: Rigid Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CATA+]"}, 32292, 39721);
 itemrecipe({"Design: Runed Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32282, 39711);
 itemrecipe({"Design: Runed Living Ruby [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24196, 31088);
@@ -5555,13 +5556,13 @@ itemrecipe({"Design: Brilliant Lionseye [TBC]", "Design: Brilliant Crimson Spine
 itemrecipe({"Design: Gleaming Dawnstone [TBC]", "Design: Smooth Dawnstone [CATA+]"}, 24206, 31099, 31097, REMOVED_WITH_CATA);
 itemrecipe({"Design: Gleaming Lionseye [TBC]", "Design: Smooth Lionseye [CATA+]"}, 32293, 39722, 39720, REMOVED_WITH_CATA);
 itemrecipe({"Design: Glowing Shadowsong Amethyst [TBC]", "Design: Timeless Shadowsong Amethyst [CATA+]"}, 32301, 39731, 39731, REMOVED_WITH_CATA);
+itemrecipe({"Design: Great Dawnstone [TBC]", "Design: Rigid Star of Elune [CATA+]"}, 31875, 39452, 31098, REMOVED_WITH_CATA);
 itemrecipe({"Design: Great Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CATA+]"}, 32296, 39725, 39721, REMOVED_WITH_CATA);
 itemrecipe({"Design: Infused Nightseye [TBC]", "Design: Glinting Nightseye [CATA+]"}, 31877, 39462, 31109, REMOVED_WITH_CATA);
 itemrecipe({"Design: Infused Shadowsong Amethyst [TBC]", "Design: Glinting Shadowsong Amethyst [CATA+]"}, 32300, 39730, 39736, REMOVED_WITH_CATA);
 itemrecipe({"Design: Luminous Pyrestone [TBC]", "Design: Reckless Pyrestone [CATA+]"}, 32305, 39735, 47055, REMOVED_WITH_CATA);
 itemrecipe({"Design: Lustrous Empyrean Sapphire [TBC]", "Design: Sparkling Empyrean Sapphire [CATA+]"}, 32288, 39717, 39716, REMOVED_WITH_CATA);
 itemrecipe({"Design: Lustrous Star of Elune [TBC]", "Design: Sparkling Star of Elune [CATA+]"}, 24201, 31094, 31149, REMOVED_WITH_CATA);
-itemrecipe({"Design: Rigid Star of Elune [TBC]", "Design: Rigid Star of Elune [CATA+]"}, 31875, 39452, 31098, REMOVED_WITH_CATA);
 itemrecipe({"Design: Royal Nightseye [TBC]", "Design: Purified Nightseye [CATA+]"}, 24212, 31105, 31112, REMOVED_WITH_CATA);
 itemrecipe({"Design: Royal Shadowsong Amethyst [TBC]", "Design: Purified Shadowsong Amethyst [CATA+]"}, 32302, 39732, 39741, REMOVED_WITH_CATA);
 itemrecipe({"Design: Teardrop Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32281, 39710, 39711, REMOVED_WITH_CATA);
@@ -5590,7 +5591,7 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-i(35307),	-- Design: Rigid Star of Elune (BoP version)
+
 i(35304),	-- Design: Solid Star of Elune (BoP version)
 i(33622),	-- Design: Relentless Earthstorm Diamond
 i(32412, {	-- Design: Relentless Earthstorm Diamond
@@ -5618,19 +5619,9 @@ i(24212, {	-- Design: Purified Nightseye
 }),
 i(24218),	-- Design: Radiant Talasite
 i(24215),	-- Design: Reckless Noble Topaz
-i(24205),	-- Design: Rigid Star of Elune (BoE version)
-i(31875, {	-- Design: Rigid Star of Elune
-	["spellID"] = 0,	-- This is now available via 24205, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
 i(24210),	-- Design: Shifting Nightseye
 i(31876, {	-- Design: Shifting Nightseye
 	["spellID"] = 0,	-- This is now available via 24210, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-i(24204),	-- Design: Smooth Dawnstone
-i(24206, {	-- Design: Smooth Dawnstone
-	["spellID"] = 0,	-- This is now available via 24204, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
 i(24199),	-- Design: Solid Star of Elune (BoE version)
@@ -5925,7 +5916,6 @@ itemrecipe("Design: Solid Star of Elune", 24199, 31092, TBC_PHASE_ONE);
 itemrecipe("Design: Sparkling Star of Elune", 24200, 31149, TBC_PHASE_ONE);
 itemrecipe("Design: Lustrous Star of Elune [TBC]", 24201, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Stormy Star of Elune", 24202, 31095, TBC_PHASE_ONE);
-itemrecipe("Design: Smooth Dawnstone", 24204, 31097, TBC_PHASE_ONE);
 itemrecipe("Design: Rigid Dawnstone [TBC]", 24205, 31098, TBC_PHASE_ONE);
 itemrecipe("Design: Gleaming Dawnstone [TBC]", 24206, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Thick Dawnstone [TBC]", 24207, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
@@ -5951,7 +5941,6 @@ itemrecipe("Design: Ring of Arcane Shielding", 30826, UNKNOWN_SPELLID, TBC_PHASE
 itemrecipe("Design: Enduring Deep Peridot [TBC - Horde]", 31359, 28918, TBC_PHASE_ONE);
 itemrecipe("Design: Balanced Shadow Draenite", 31871, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Infused Shadow Draenite", 31872, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Rigid Star of Elune [TBC]", 31875, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Balanced Nightseye [TBC]", 31876, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Infused Nightseye [TBC]", 31877, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Veiled Noble Topaz [TBC]", 31878, 39470, TBC_PHASE_ONE);
