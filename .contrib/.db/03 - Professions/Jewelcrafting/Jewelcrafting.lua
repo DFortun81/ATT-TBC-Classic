@@ -5610,12 +5610,6 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-i(24209),	-- Design: Sovereign Nightseye
-i(24200),	-- Design: Sparkling Star of Elune
-i(24201, {	-- Design: Sparkling Star of Elune
-	["spellID"] = 0,	-- This is now available via 24200, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
 i(24202),	-- Design: Stormy Star of Elune
 i(23154),	-- Design: Stormy Azure Moonstone
 i(24197),	-- Design: Subtle Dawnstone
@@ -5894,14 +5888,11 @@ itemrecipe("Design: Bright Living Ruby [TBC]", 24192, 31089, TBC_PHASE_ONE, "rem
 itemrecipe("Design: Teardrop Living Ruby", 24195, UNKNOWN_SPELLID);
 itemrecipe("Design: Runed Living Ruby [TBC]", 24196, 31088, TBC_PHASE_ONE);
 itemrecipe("Design: Subtle Living Ruby [TBC]", 24197, 31090, TBC_PHASE_ONE);
-itemrecipe("Design: Sparkling Star of Elune", 24200, 31149, TBC_PHASE_ONE);
-itemrecipe("Design: Lustrous Star of Elune [TBC]", 24201, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Stormy Star of Elune", 24202, 31095, TBC_PHASE_ONE);
 itemrecipe("Design: Rigid Dawnstone [TBC]", 24205, 31098, TBC_PHASE_ONE);
 itemrecipe("Design: Gleaming Dawnstone [TBC]", 24206, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Thick Dawnstone [TBC]", 24207, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Mystic Dawnstone", 24208, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Sovereign Nightseye", 24209, 31102, TBC_PHASE_ONE);
 itemrecipe("Design: Glowing Nightseye [TBC]", 24211, 31104, TBC_PHASE_ONE);
 itemrecipe("Design: Royal Nightseye [TBC]", 24212, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Glinting Noble Topaz [TBC]", 24216, 31109, TBC_PHASE_ONE);

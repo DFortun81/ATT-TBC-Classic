@@ -1147,6 +1147,7 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24167),	-- Design: Living Ruby Pendant
 			-- #if BEFORE CATA
 			i(24215),	-- Design: Luminous Noble Topaz [TBC] / Design: Reckless Noble Topaz [CATA+]
+			i(24201),	-- Design: Lustrous Star of Elune [TBC] / Design: Sparkling Star of Elune [CATA+]
 			-- #endif
 			i(25909),	-- Design: Mystical Skyfire Diamond
 			i(24214),	-- Design: Potent Noble Topaz
@@ -1179,10 +1180,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24199),	-- Design: Solid Star of Elune (BoE version)
 			i(24209),	-- Design: Sovereign Nightseye
 			i(24200),	-- Design: Sparkling Star of Elune
-			i(24201, {	-- Design: Sparkling Star of Elune
-				["spellID"] = 0,	-- This is now available via 24200, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
+			-- #if AFTER CATA
+			i(24201),	-- Design: Sparkling Star of Elune [CATA+] / Design: Lustrous Star of Elune [TBC]
+			-- #endif
 			i(24202),	-- Design: Stormy Star of Elune
 			i(23154),	-- Design: Stormy Azure Moonstone
 			i(24197),	-- Design: Subtle Dawnstone
