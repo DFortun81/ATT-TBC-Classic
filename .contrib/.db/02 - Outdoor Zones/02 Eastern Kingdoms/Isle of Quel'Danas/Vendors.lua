@@ -759,16 +759,18 @@ _.Zones =
 					["coord"] = { 51.5, 32.5, ISLE_OF_QUELDANAS },
 					["g"] = {
 						i(35244),	-- Design: Bold Crimson Spinel
+						-- #if BEFORE CATA
+						i(35245),	-- Design: Bright Crimson Spinel [TBC] / Design: Delicate Crimson Spinel [CATA+]
+						-- #endif
 						i(35255),	-- Design: Brilliant Lionseye [TBC] / Design: Brilliant Crimson Spinel [CATA+]
 						-- #if AFTER CATA
 						i(35248),	-- Design: Brilliant Crimson Spinel [CATA+] / Design: Runed Crimson Spinel [TBC]
 						-- #endif
 						i(35271),	-- Design: Deadly Pyrestone
 						i(35246),	-- Design: Delicate Crimson Spinel
-						i(35245, {	-- Design: Delicate Crimson Spinel
-							["spellID"] = 0,	-- This is now available via 35246, need to delink the old plans from the recipe
-							["u"] = REMOVED_FROM_GAME,
-						}),
+						-- #if AFTER CATA
+						i(35245),	-- Design: Delicate Crimson Spinel [CATA+] / Design: Bright Crimson Spinel [TBC]
+						-- #endif
 						i(35247),	-- Design: Flashing Crimson Spinel
 						i(35769),	-- Design: Forceful Seaspray Emerald
 						i(35325),	-- Design: Forceful Talasite

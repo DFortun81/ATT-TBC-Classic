@@ -630,6 +630,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Bold Living Ruby",
 					["recipeID"] = 31084
 				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Bright Crimson Spinel",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39712
+				}),
 				{
 					["name"] = "Brilliant Blood Garnet",
 					["recipeID"] = 28903
@@ -640,11 +645,6 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 39711
 				}),
 				-- #endif
-				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Brilliant Lionseye",
-					["timeline"] = { REMOVED_WITH_CATA },
-					["recipeID"] = 39719
-				}),
 				{
 					["name"] = "Brilliant Living Ruby",
 					["recipeID"] = 31088
@@ -657,10 +657,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Delicate Blood Garnet",
 					["recipeID"] = 34590
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Delicate Crimson Spinel",
 					["recipeID"] = 39706
-				},
+				}),
 				{
 					["name"] = "Delicate Living Ruby",
 					["recipeID"] = 31085
@@ -702,6 +702,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Blood of Amber",
 					["recipeID"] = 42592
 				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Brilliant Lionseye",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39719
+				}),
 				{
 					["name"] = "Facet of Eternity",
 					["recipeID"] = 42593
@@ -5501,6 +5506,7 @@ itemrecipe("Design: Dawnstone Crab - Alliance", 24180, 31080);
 itemrecipe("Design: Dawnstone Crab - Horde", 31358, 31080);
 itemrecipe("Design: Delicate Blood Garnet", 23134, 34590);
 itemrecipe("Design: Delicate Crimson Spinel", 32277, 39706);
+itemrecipe("Design: Delicate Crimson Spinel", 35246, 39706);
 itemrecipe("Design: Delicate Eternium Ring", 24164, 31060);
 itemrecipe("Design: Delicate Living Ruby", 24194, 31085);
 itemrecipe("Design: Destructive Skyfire Diamond", 25907, 32871);
@@ -5624,6 +5630,7 @@ itemrecipe({"Design: Great Golden Draenite [TBC]", "Design: Rigid Azure Moonston
 itemrecipe({"Design: Balanced Nightseye [TBC]", "Design: Shifting Nightseye [CATA+]"}, 31876, 39463, 31103, REMOVED_WITH_CATA);
 itemrecipe({"Design: Balanced Shadowsong Amethyst [TBC]", "Design: Shifting Shadowsong Amethyst [CATA+]"}, 32299, 39729, 39728, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bright Crimson Spinel [TBC]", "Design: Delicate Crimson Spinel [CATA+]"}, 32283, 39712, 39706, REMOVED_WITH_CATA);
+itemrecipe({"Design: Bright Crimson Spinel [TBC]", "Design: Delicate Crimson Spinel [CATA+]"}, 35245, 39712, 39706, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bright Living Ruby [TBC]", "Design: Delicate Living Ruby [CATA+]"}, 24192, 31089, 31085, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bright Living Ruby [TBC]", "Design: Delicate Living Ruby [CATA+]"}, 35306, 31089, 31085, REMOVED_WITH_CATA);
 itemrecipe({"Design: Brilliant Dawnstone [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24203, 31088, 31096, REMOVED_WITH_CATA);
@@ -5672,11 +5679,8 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 --[[
 -- From the Isle of QD:
 i(35271),	-- Design: Deadly Pyrestone
-i(35246),	-- Design: Delicate Crimson Spinel
-i(35245, {	-- Design: Delicate Crimson Spinel
-	["spellID"] = 0,	-- This is now available via 35246, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
+
+
 i(35247),	-- Design: Flashing Crimson Spinel
 i(35325),	-- Design: Forceful Talasite
 i(35266),	-- Design: Glinting Shadowsong Amethyst
@@ -5742,11 +5746,7 @@ i(23138),	-- Design: Potent Flame Spessarite
 
 
 i(35271),	-- Design: Deadly Pyrestone
-i(35246),	-- Design: Delicate Crimson Spinel
-i(35245, {	-- Design: Delicate Crimson Spinel
-	["spellID"] = 0,	-- This is now available via 35246, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
+
 i(35247),	-- Design: Flashing Crimson Spinel
 i(35325),	-- Design: Forceful Talasite
 i(35266),	-- Design: Glinting Shadowsong Amethyst
@@ -5897,8 +5897,6 @@ itemrecipe("Design: Ring of Arcane Shielding", 30826, UNKNOWN_SPELLID, TBC_PHASE
 itemrecipe("Design: Enduring Deep Peridot [TBC - Horde]", 31359, 28918, TBC_PHASE_ONE);
 itemrecipe("Design: Infused Nightseye [TBC]", 31877, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Wicked Noble Topaz [TBC]", 31879, 39471, TBC_PHASE_ONE);
-itemrecipe("Design: Delicate Crimson Spinel", 32277, 39706, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Bright Crimson Spinel [TBC]", 32283, 39712, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Subtle Lionseye", 32284, 39713, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Flashing Crimson Spinel", 32285, 39714, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Solid Empyrean Sapphire", 32286, 39715, PHASE_19_IDENTIFIER);
@@ -5945,8 +5943,6 @@ itemrecipe("Design: Infused Shadowsong Amethyst", 35240, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Royal Shadowsong Amethyst", 35241, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Shifting Shadowsong Amethyst", 35242, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 35243, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Bright Crimson Spinel", 35245, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Delicate Crimson Spinel", 35246, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Flashing Crimson Spinel", 35247, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Subtle Crimson Spinel", 35249, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald", 35251, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
