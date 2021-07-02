@@ -285,11 +285,32 @@ _.Zones =
 						23355,	-- Zarcsin
 					},
 				})),
+				-- #if BEFORE CATA
+				i(31871, {	-- Design: Balanced Shadow Draenite [TBC] / Design: Shifting Shadow Draenite [CATA+]
+					["crs"] = {
+						22275,	-- Apexis Guardian
+						23391,	-- Bash'ir
+						23390,	-- Bash'ir's Harbinger
+						23332,	-- Bash'ir Reckoner
+						23353,	-- Braxxus
+						23261,	-- Furywing
+						22281,	-- Galvanoth
+						23281,	-- Insidion
+						23354,	-- Mo'arg Incinerator
+						23282,	-- Obsidia
+						23061,	-- Rivendark
+						23333,	-- The Grand Collector
+						23355,	-- Zarcsin
+					},
+				}),
+				-- #endif
 				-- #if AFTER CATA
 				i(31874, {	-- Design: Deadly Flame Spessarite [CATA+] / Design: Wicked Flame Spessarite [TBC]
 					["crs"] = {
 						22275,	-- Apexis Guardian
+						23391,	-- Bash'ir
 						23390,	-- Bash'ir's Harbinger
+						23332,	-- Bash'ir Reckoner
 						23353,	-- Braxxus
 						23261,	-- Furywing
 						22281,	-- Galvanoth
@@ -306,7 +327,26 @@ _.Zones =
 				i(31870, {	-- Design: Great Golden Draenite [TBC] / Design: Rigid Azure Moonstone [CATA+]
 					["crs"] = {
 						22275,	-- Apexis Guardian
+						23391,	-- Bash'ir
 						23390,	-- Bash'ir's Harbinger
+						23332,	-- Bash'ir Reckoner
+						23353,	-- Braxxus
+						23261,	-- Furywing
+						22281,	-- Galvanoth
+						23281,	-- Insidion
+						23354,	-- Mo'arg Incinerator
+						23282,	-- Obsidia
+						23061,	-- Rivendark
+						23333,	-- The Grand Collector
+						23355,	-- Zarcsin
+					},
+				}),
+				i(31872, {	-- Design: Infused Shadow Draenite [TBC] / Design: Shifting Shadow Draenite [CATA+]
+					["crs"] = {
+						22275,	-- Apexis Guardian
+						23391,	-- Bash'ir
+						23390,	-- Bash'ir's Harbinger
+						23332,	-- Bash'ir Reckoner
 						23353,	-- Braxxus
 						23261,	-- Furywing
 						22281,	-- Galvanoth
@@ -326,7 +366,9 @@ _.Zones =
 				i(31870, {	-- Design: Rigid Azure Moonstone [CATA+] / Design: Great Golden Draenite [TBC]
 					["crs"] = {
 						22275,	-- Apexis Guardian
+						23391,	-- Bash'ir
 						23390,	-- Bash'ir's Harbinger
+						23332,	-- Bash'ir Reckoner
 						23353,	-- Braxxus
 						23261,	-- Furywing
 						22281,	-- Galvanoth
@@ -338,11 +380,15 @@ _.Zones =
 						23355,	-- Zarcsin
 					},
 				}),
+				i(31871),	-- Design: Shifting Shadow Draenite [CATA+] / Design: Balanced Shadow Draenite [TBC] (removed from game)
+				i(31872),	-- Design: Shifting Shadow Draenite [CATA+] / Design: Infused Shadow Draenite [TBC] (removed from game)
 				-- #endif
 				i(31873, {	-- Design: Veiled Flame Spessarite [TBC] / Design: Veiled Shadow Draenite [CATA+]
 					["crs"] = {
 						22275,	-- Apexis Guardian
+						23391,	-- Bash'ir
 						23390,	-- Bash'ir's Harbinger
+						23332,	-- Bash'ir Reckoner
 						23353,	-- Braxxus
 						23261,	-- Furywing
 						22281,	-- Galvanoth
@@ -358,7 +404,9 @@ _.Zones =
 				i(31874, {	-- Design: Wicked Flame Spessarite [TBC] / Design: Deadly Flame Spessarite [CATA+]
 					["crs"] = {
 						22275,	-- Apexis Guardian
+						23391,	-- Bash'ir
 						23390,	-- Bash'ir's Harbinger
+						23332,	-- Bash'ir Reckoner
 						23353,	-- Braxxus
 						23261,	-- Furywing
 						22281,	-- Galvanoth
