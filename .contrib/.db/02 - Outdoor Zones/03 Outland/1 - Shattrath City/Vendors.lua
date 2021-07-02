@@ -1115,10 +1115,7 @@ _.Zones =
 							["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
 								["u"] = REMOVED_FROM_GAME,
 						}),
-						i(35255, {	-- Design: Brilliant Crimson Spinel
-							["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
+						i(35255),	-- Design: Brilliant Lionseye [TBC] / Design: Brilliant Crimson Spinel [CATA+]
 						i(35271),	-- Design: Deadly Pyrestone
 						i(35246),	-- Design: Delicate Crimson Spinel
 						i(35245, {	-- Design: Delicate Crimson Spinel
