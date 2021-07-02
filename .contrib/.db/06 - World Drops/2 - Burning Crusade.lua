@@ -1186,12 +1186,14 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			-- #endif
 			i(24202),	-- Design: Stormy Star of Elune
 			i(23154),	-- Design: Stormy Azure Moonstone
-			i(24197),	-- Design: Subtle Dawnstone
-			i(24207, {	-- Design: Subtle Dawnstone
-				["spellID"] = 0,	-- This is now available via 24197, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
+			i(24197),	-- Design: Subtle Living Ruby [TBC] / Design: Subtle Dawnstone [CATA+]
+			-- #if AFTER CATA
+			i(24207),	-- Design: Subtle Dawnstone [CATA+] / Design: Thick Dawnstone [TBC]
+			-- #endif
 			i(25905),	-- Design: Tenacious Earthstorm Diamond
+			-- #if BEFORE CATA
+			i(24207),	-- Design: Thick Dawnstone [TBC] / Design: Subtle Dawnstone [CATA+]
+			-- #endif
 			i(24166),	-- Design: Thick Felsteel Necklace
 			i(32411),	-- Design: Thundering Skyfire Diamond
 			-- #if AFTER CATA

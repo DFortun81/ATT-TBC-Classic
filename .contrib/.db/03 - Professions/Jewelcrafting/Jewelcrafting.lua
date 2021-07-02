@@ -749,7 +749,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				{
 					["name"] = "Subtle Lionseye",
 					["recipeID"] = 39713
-				}
+				},
+				{
+					["name"] = "Thick Dawnstone",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 31100
+				},
 			}
 		},
 		{
@@ -5665,13 +5670,6 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-i(24197),	-- Design: Subtle Dawnstone
-i(24207, {	-- Design: Subtle Dawnstone
-	["spellID"] = 0,	-- This is now available via 24197, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-
-
 -- From the Isle of QD:
 i(35271),	-- Design: Deadly Pyrestone
 i(35246),	-- Design: Delicate Crimson Spinel
@@ -5882,7 +5880,6 @@ itemrecipe("Design: Runed Living Ruby [TBC]", 24196, 31088, TBC_PHASE_ONE);
 itemrecipe("Design: Subtle Living Ruby [TBC]", 24197, 31090, TBC_PHASE_ONE);
 itemrecipe("Design: Rigid Dawnstone [TBC]", 24205, 31098, TBC_PHASE_ONE);
 itemrecipe("Design: Gleaming Dawnstone [TBC]", 24206, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Thick Dawnstone [TBC]", 24207, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Mystic Dawnstone", 24208, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Glowing Nightseye [TBC]", 24211, 31104, TBC_PHASE_ONE);
 itemrecipe("Design: Royal Nightseye [TBC]", 24212, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
