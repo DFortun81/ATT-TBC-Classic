@@ -17,6 +17,7 @@ _.Zones =
 					["coord"] = { 35.1, 52.1, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
+						applyclassicphase(TBC_PHASE_ONE, i(20855)),	-- Design: Wicked Moonstone Ring
 						i(11039),	-- Formula: Enchant Cloak - Minor Agility
 						i(11101),	-- Formula: Enchant Bracer - Lesser Strength
 					},

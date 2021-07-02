@@ -5525,6 +5525,7 @@ itemrecipe("Design: Thick Felsteel Necklace", 24166, 31067);
 itemrecipe("Design: Thundering Skyfire Diamond", 32411, 39963);
 itemrecipe("Design: Truesilver Crab", 21943, 26881);
 itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737);
+itemrecipe("Design: Wicked Moonstone Ring", 20855, 25323);
 -- itemrecipe("", ITEMID, SPELLID);
 -- itemrecipe("", ITEMID, SPELLID);
 -- itemrecipe("", ITEMID, SPELLID);
@@ -5831,8 +5832,7 @@ i(24176),	-- Design: Pendant of Withering
 
 
 
-itemrecipe("Design: Amulet of the Moon", 20854, 25339, TBC_PHASE_ONE);
-itemrecipe("Design: Wicked Moonstone Ring", 20855, UNKNOWN_SPELLID);
+
 itemrecipe("Design: Heavy Golden Necklace of Battle", 20856, 25320, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of the Agate Shield", 20970, UNKNOWN_SPELLID);
 itemrecipe("Design: Heavy Iron Knuckles", 20971, 25612, TBC_PHASE_ONE);

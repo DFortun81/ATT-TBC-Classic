@@ -111,6 +111,7 @@ _.Zones =
 				n(3499, {	-- Ranik <Trade Supplies>
 					["coord"] = { 61.9, 38.7, THE_BARRENS },
 					["groups"] = {
+						applyclassicphase(TBC_PHASE_ONE, i(20855)),	-- Design: Wicked Moonstone Ring
 						i(5640),	-- Recipe: Rage Potion
 						i(6272),	-- Pattern: Blue Linen Robe
 						i(6275),	-- Pattern: Greater Adept's Robe
