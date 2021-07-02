@@ -5433,6 +5433,7 @@ itemrecipe("Design: Bold Crimson Spinel", 32274, 39705);
 itemrecipe("Design: Bold Living Ruby", 24193, 31084);
 itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867);
 itemrecipe("Design: Braided Eternium Chain", 24168, 31070);
+itemrecipe("Design: Brilliant Living Ruby", 35305, 31088);
 itemrecipe("Design: Brutal Earthstorm Diamond", 25906, 32869);
 itemrecipe("Design: Chain of the Twilight Owl", 24171, 31076);
 itemrecipe("Design: Circlet of Arcane Might", 24173, 31078);
@@ -5463,6 +5464,7 @@ itemrecipe("Design: Inscribed Pyrestone", 32303, 39733);
 itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742);
 itemrecipe("Design: Jagged Talasite", 24220, 31113);
 itemrecipe("Design: Khorium Band of Frost", 24159, 31054);
+itemrecipe("Design: Khorium Band of Leaves", 24161, 31056);
 itemrecipe("Design: Khorium Inferno Band", 24160, 31055);
 itemrecipe("Design: Living Ruby Pendant", 24167, 31068);
 itemrecipe("Design: Loop of Forged Power", 35198, 46122);
@@ -5581,12 +5583,6 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-i(35305),	-- Design: Brilliant Living Ruby
-{	-- Design: Brilliant Living Ruby
-	["itemID"] = 24195,	-- Design: Brilliant Living Ruby
-	["spellID"] = 0,	-- This is now available via 35305, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-},
 i(35307),	-- Design: Rigid Star of Elune (BoP version)
 i(35304),	-- Design: Solid Star of Elune (BoP version)
 i(23136),	-- Design: Luminous Flame Spessarite [TBC] / Design: Reckless Flame Spessarite [Cata+]
@@ -5611,9 +5607,6 @@ i(25908),	-- Design: Swift Skyfire Diamond
 i(31874, {	-- Design: Deadly Flame Spessarite
 
 }),
-i(24161, {	-- Design: Khorium Band of Leaves
-	["cr"] = 19984,	-- Vekh'nir Dreadhawk
-}),
 i(31870, {	-- Design: Great Golden Draenite [Before 4.0.1] / Design: Rigid Azure Moonstone [After 4.0.1]
 	-- #if TBC
 	["recipeID"] = 39451,	-- Great Golden Draenite
@@ -5629,8 +5622,6 @@ i(31870, {	-- Design: Great Golden Draenite [Before 4.0.1] / Design: Rigid Azure
 -- #if AFTER CATA
 i(24196),	-- Design: Brilliant Living Ruby [CATA+] / Design: Runed Living Ruby [TBC]
 -- #endif
-i(25907),	-- Design: Destructive Skyfire Diamond
-i(24198),	-- Design: Flashing Living Ruby
 i(24216),	-- Design: Glinting Nightseye
 i(31877, {	-- Design: Glinting Nightseye
 	["spellID"] = 0,	-- This is now available via 24216, need to delink the old plans from the recipe
@@ -5649,9 +5640,6 @@ i(31875, {	-- Design: Rigid Star of Elune
 	["spellID"] = 0,	-- This is now available via 24205, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
--- #if BEFORE CATA
-i(24196),	-- Design: Runed Living Ruby [TBC] / Design: Brilliant Living Ruby [CATA+]
--- #endif
 i(24210),	-- Design: Shifting Nightseye
 i(31876, {	-- Design: Shifting Nightseye
 	["spellID"] = 0,	-- This is now available via 24210, need to delink the old plans from the recipe
@@ -5941,7 +5929,6 @@ itemrecipe("Design: Sparkling Azure Moonstone [TBC]", 23153, 28953, TBC_PHASE_ON
 itemrecipe("Design: Stormy Azure Moonstone", 23154, 28955, TBC_PHASE_ONE);
 itemrecipe("Design: Lustrous Azure Moonstone", 23155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Khorium Band of Shadows", 24158, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Khorium Band of Leaves", 24161, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Arcane Khorium Band", 24162, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Thick Felsteel Necklace", 24166, 31067, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Frozen Flame", 24174, UNKNOWN_SPELLID);
@@ -5954,7 +5941,6 @@ itemrecipe("Design: Bright Living Ruby [TBC]", 24192, 31089, TBC_PHASE_ONE, "rem
 itemrecipe("Design: Teardrop Living Ruby", 24195, UNKNOWN_SPELLID);
 itemrecipe("Design: Runed Living Ruby [TBC]", 24196, 31088, TBC_PHASE_ONE);
 itemrecipe("Design: Subtle Living Ruby [TBC]", 24197, 31090, TBC_PHASE_ONE);
-itemrecipe("Design: Flashing Living Ruby", 24198, 31091, TBC_PHASE_ONE);
 itemrecipe("Design: Solid Star of Elune", 24199, 31092, TBC_PHASE_ONE);
 itemrecipe("Design: Sparkling Star of Elune", 24200, 31149, TBC_PHASE_ONE);
 itemrecipe("Design: Lustrous Star of Elune [TBC]", 24201, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
@@ -5978,7 +5964,6 @@ itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866, TBC_PHASE_ONE);
 itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867, TBC_PHASE_ONE);
 itemrecipe("Design: Insightful Earthstorm Diamond", 25904, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Tenacious Earthstorm Diamond", 25905, 32868, TBC_PHASE_ONE);
-itemrecipe("Design: Destructive Skyfire Diamond", 25907, 32871, TBC_PHASE_ONE);
 itemrecipe("Design: Swift Skyfire Diamond", 25908, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Enigmatic Skyfire Diamond", 25910, UNKNOWN_SPELLID);
 itemrecipe("Design: Smooth Golden Draenite [TBC]", 28291, 34069, TBC_PHASE_ONE, "removed 4.0.1.10000");
