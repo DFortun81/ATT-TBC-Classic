@@ -1110,12 +1110,10 @@ _.Zones =
 					["minReputation"] = { 1077, NEUTRAL },	-- Shattered Sun Offensive, Neutral.
 					["groups"] = {
 						i(35244),	-- Design: Bold Crimson Spinel
-						i(35248),	-- Design: Brilliant Crimson Spinel
-						i(35250, {	-- Design: Brilliant Crimson Spinel
-							["spellID"] = 0,	-- This is now available via 35248, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
 						i(35255),	-- Design: Brilliant Lionseye [TBC] / Design: Brilliant Crimson Spinel [CATA+]
+						-- #if AFTER CATA
+						i(35248),	-- Design: Brilliant Crimson Spinel [CATA+] / Design: Runed Crimson Spinel [TBC]
+						-- #endif
 						i(35271),	-- Design: Deadly Pyrestone
 						i(35246),	-- Design: Delicate Crimson Spinel
 						i(35245, {	-- Design: Delicate Crimson Spinel
@@ -1160,6 +1158,9 @@ _.Zones =
 							["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
 								["u"] = REMOVED_FROM_GAME,
 						}),
+						-- #if BEFORE CATA
+						i(35248),	-- Design: Runed Crimson Spinel [TBC] / Design: Brilliant Crimson Spinel [CATA+]
+						-- #endif
 						i(35242),	-- Design: Shifting Shadowsong Amethyst
 						i(35238, {	-- Design: Shifting Shadowsong Amethyst
 							["spellID"] = 0,	-- This is now available via 35242, need to delink the old plans from the recipe

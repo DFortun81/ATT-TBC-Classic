@@ -634,10 +634,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Brilliant Blood Garnet",
 					["recipeID"] = 28903
 				},
+				-- #if AFTER CATA
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Brilliant Crimson Spinel",
 					["recipeID"] = 39711
 				}),
+				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Brilliant Lionseye",
 					["timeline"] = { REMOVED_WITH_CATA },
@@ -678,7 +680,18 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				{
 					["name"] = "Kailee's Rose",
 					["recipeID"] = 42588
-				}
+				},
+				-- #if BEFORE CATA
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Runed Crimson Spinel",
+					["recipeID"] = 39711
+				}),
+				-- #endif
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Teardrop Crimson Spinel",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39710
+				}),
 			}
 		},
 		{
@@ -5584,6 +5597,7 @@ itemrecipe({"Design: Rigid Dawnstone [TBC]", "Design: Rigid Star of Elune [CATA+
 itemrecipe({"Design: Rigid Dawnstone [TBC]", "Design: Rigid Star of Elune [CATA+]"}, 35307, 31098);
 itemrecipe({"Design: Rigid Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CATA+]"}, 32292, 39721);
 itemrecipe({"Design: Runed Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32282, 39711);
+itemrecipe({"Design: Runed Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 35248, 39711);
 itemrecipe({"Design: Runed Living Ruby [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24196, 31088);
 itemrecipe({"Design: Subtle Living Ruby [TBC]", "Design: Subtle Dawnstone [CATA+]"}, 24197, 31090);
 itemrecipe({"Design: Thick Golden Draenite [TBC]", "Design: Subtle Golden Draenite [CATA+]"}, 23150, 28947);
@@ -5659,16 +5673,6 @@ i(24207, {	-- Design: Subtle Dawnstone
 
 
 -- From the Isle of QD:
-
-
-
-
-itemrecipe("Design: Teardrop Crimson Spinel [TBC]", 32281, 39710, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Teardrop Crimson Spinel", 35250, 0, PHASE_2_IDENTIFIER);
-i(35248),	-- Design: Brilliant Crimson Spinel
-
-
-
 i(35271),	-- Design: Deadly Pyrestone
 i(35246),	-- Design: Delicate Crimson Spinel
 i(35245, {	-- Design: Delicate Crimson Spinel
@@ -5897,7 +5901,6 @@ itemrecipe("Design: Enduring Deep Peridot [TBC - Horde]", 31359, 28918, TBC_PHAS
 itemrecipe("Design: Infused Nightseye [TBC]", 31877, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Wicked Noble Topaz [TBC]", 31879, 39471, TBC_PHASE_ONE);
 itemrecipe("Design: Delicate Crimson Spinel", 32277, 39706, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Runed Crimson Spinel [TBC]", 32282, 39711, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Bright Crimson Spinel [TBC]", 32283, 39712, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Subtle Lionseye", 32284, 39713, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Flashing Crimson Spinel", 32285, 39714, PHASE_19_IDENTIFIER);
@@ -5948,7 +5951,6 @@ itemrecipe("Design: Sovereign Shadowsong Amethyst", 35243, UNKNOWN_SPELLID, PHAS
 itemrecipe("Design: Bright Crimson Spinel", 35245, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Delicate Crimson Spinel", 35246, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Flashing Crimson Spinel", 35247, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Runed Crimson Spinel", 35248, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Subtle Crimson Spinel", 35249, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald", 35251, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Enduring Seaspray Emerald", 35252, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
@@ -6279,6 +6281,7 @@ neverimplemented(i(21780));	-- Blood Crown
 neverimplemented(itemrecipe("Design: Primal Stone Statue", 25888, 32810));
 neverimplemented(recipe(32810));	-- Primal Stone Statue
 neverimplemented(itemrecipe("Design: Relentless Earthstorm Diamond", 32412, 39961));	-- Originally Consortium Quartermaster, never made it out of Beta. A Different version was added later.
+neverimplemented(itemrecipe("Design: Teardrop Crimson Spinel [TBC] / Design: Brilliant Crimson Spinel [CATA]", 35250, 39710));	-- Originally Shattered Sun Offensive Vendor, never made it out of Beta. A Different version was added later.
 neverimplemented(i(25884));	-- Primal Stone Statue
 neverimplemented(itemrecipe("Design: Silver Rose Pendant", 20972, 25614));
 neverimplemented(recipe(25614));	-- Silver Rose Pendant
