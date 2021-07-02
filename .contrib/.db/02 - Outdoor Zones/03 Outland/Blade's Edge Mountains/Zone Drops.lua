@@ -285,7 +285,8 @@ _.Zones =
 						23355,	-- Zarcsin
 					},
 				})),
-				i(31874, {	-- Design: Deadly Flame Spessarite
+				-- #if AFTER CATA
+				i(31874, {	-- Design: Deadly Flame Spessarite [CATA+] / Design: Wicked Flame Spessarite [TBC]
 					["crs"] = {
 						22275,	-- Apexis Guardian
 						23390,	-- Bash'ir's Harbinger
@@ -300,18 +301,29 @@ _.Zones =
 						23355,	-- Zarcsin
 					},
 				}),
+				-- #endif
+				-- #if BEFORE CATA
+				i(31870, {	-- Design: Great Golden Draenite [TBC] / Design: Rigid Azure Moonstone [CATA+]
+					["crs"] = {
+						22275,	-- Apexis Guardian
+						23390,	-- Bash'ir's Harbinger
+						23353,	-- Braxxus
+						23261,	-- Furywing
+						22281,	-- Galvanoth
+						23281,	-- Insidion
+						23354,	-- Mo'arg Incinerator
+						23282,	-- Obsidia
+						23061,	-- Rivendark
+						23333,	-- The Grand Collector
+						23355,	-- Zarcsin
+					},
+				}),
+				-- #endif
 				i(24161, {	-- Design: Khorium Band of Leaves
 					["cr"] = 19984,	-- Vekh'nir Dreadhawk
 				}),
-				i(31870, {	-- Design: Great Golden Draenite [Before 4.0.1] / Design: Rigid Azure Moonstone [After 4.0.1]
-					-- #if TBC
-					["recipeID"] = 39451,	-- Great Golden Draenite
-					-- #else
-					["recipeID"] = 28948,	-- Rigid Azure Moonstone
-					-- #endif
-					["timeline"] = {
-						"added 2.2.0.7272",
-					},
+				-- #if AFTER CATA
+				i(31870, {	-- Design: Rigid Azure Moonstone [CATA+] / Design: Great Golden Draenite [TBC]
 					["crs"] = {
 						22275,	-- Apexis Guardian
 						23390,	-- Bash'ir's Harbinger
@@ -326,6 +338,7 @@ _.Zones =
 						23355,	-- Zarcsin
 					},
 				}),
+				-- #endif
 				i(31873, {	-- Design: Veiled Flame Spessarite [TBC] / Design: Veiled Shadow Draenite [CATA+]
 					["crs"] = {
 						22275,	-- Apexis Guardian
@@ -341,6 +354,23 @@ _.Zones =
 						23355,	-- Zarcsin
 					},
 				}),
+				-- #if BEFORE CATA
+				i(31874, {	-- Design: Wicked Flame Spessarite [TBC] / Design: Deadly Flame Spessarite [CATA+]
+					["crs"] = {
+						22275,	-- Apexis Guardian
+						23390,	-- Bash'ir's Harbinger
+						23353,	-- Braxxus
+						23261,	-- Furywing
+						22281,	-- Galvanoth
+						23281,	-- Insidion
+						23354,	-- Mo'arg Incinerator
+						23282,	-- Obsidia
+						23061,	-- Rivendark
+						23333,	-- The Grand Collector
+						23355,	-- Zarcsin
+					},
+				}),
+				-- #endif
 				applyclassicphase(TBC_PHASE_THREE_OGRILA, i(32664, {	-- Dreamcrystal Band
 					["cost"] = {
 						{ "i", 32678, 1 },	-- Depleted Ring
