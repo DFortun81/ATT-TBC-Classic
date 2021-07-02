@@ -1687,31 +1687,32 @@ _.Zones =
 						i(33156),	-- Design: Crimson Sun
 						i(23134),	-- Design: Delicate Blood Garnet
 						i(33305),	-- Design: Don Julio's Heart
+						-- #if BEFORE CATA
+						i(23136),	-- Design: Luminous Flame Spessarite [TBC] / Design: Reckless Flame Spessarite [Cata+]
+						i(23155),	-- Design: Lustrous Azure Moonstone [TBC] / Design: Sparkling Azure Moonstone [Cata+]
+						-- #endif
 						i(24178),	-- Design: Pendant of the Null Rune
-						i(23136),	-- Design: Reckless Flame Spessarite
+						-- #if AFTER CATA
+						i(23136),	-- Design: Reckless Flame Spessarite [Cata+] / Design: Luminous Flame Spessarite [TBC]
+						-- #endif
 						i(33622),	-- Design: Relentless Earthstorm Diamond
-						i(32412, {	-- Design: Relentless Earthstorm Diamond
-							["spellID"] = 0,	-- This is now available via 33622, need to delink the old plans from the recipe
-							["u"] = REMOVED_FROM_GAME,
-						}),
 						i(23146),	-- Design: Shifting Shadow Draenite
-						i(31871, {	-- Design: Shifting Shadow Draenite
-							["spellID"] = 0,	-- This is now available via 23146, need to delink the old plans from the recipe
-							["u"] = REMOVED_FROM_GAME,
-						}),
-						i(31872, {	-- Design: Shifting Shadow Draenite
-							["spellID"] = 0,	-- This is now available via 23146, need to delink the old plans from the recipe
-							["u"] = REMOVED_FROM_GAME,
-						}),
-						i(23155),	-- Design: Sparkling Azure Moonstone
-						i(23150),	-- Design: Subtle Golden Draenite
+						-- #if AFTER CATA
+						i(23155),	-- Design: Sparkling Azure Moonstone [Cata+] / Design: Lustrous Azure Moonstone [TBC]
+						i(23150),	-- Design: Subtle Golden Draenite [Cata+] / Design: Thick Golden Draenite [TBC]
+						-- #endif
 						i(25908),	-- Design: Swift Skyfire Diamond
-						i(28274),	-- Formula: Enchant Cloak - PvP Power
-						i(22552),	-- Formula: Enchant Weapon - Major Striking
+						-- #if BEFORE CATA
+						i(23150),	-- Design: Thick Golden Draenite [TBC] / Design: Subtle Golden Draenite [Cata+]
+						-- #endif
+						i(28274),	-- Formula: Enchant Cloak - Spell Penetration [TBC] / Formula: Enchant Cloak - PvP Power [Cata+]
+						applyclassicphase(TBC_PHASE_TWO, i(22552)),	-- Formula: Enchant Weapon - Major Striking
 						i(29456),	-- Gift of the Ethereal
 						i(29121),	-- Guile of Khoraazi
 						i(29119),	-- Haramad's Bargain
-						i(138796),	-- Illusion: Executioner
+						i(138796, {	-- Illusion: Executioner
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 						i(29122),	-- Nether Runner's Cowl
 						i(29457),	-- Nethershard
 						i(29116),	-- Nomad's Leggings

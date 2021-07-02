@@ -5437,8 +5437,10 @@ itemrecipe("Design: Brutal Earthstorm Diamond", 25906, 32869);
 itemrecipe("Design: Chain of the Twilight Owl", 24171, 31076);
 itemrecipe("Design: Circlet of Arcane Might", 24173, 31078);
 itemrecipe("Design: Coronet of Verdant Flame", 24172, 31077);
+itemrecipe("Design: Crimson Sun", 33156, 42589);
 itemrecipe("Design: Dawnstone Crab - Alliance", 24180, 31080);
 itemrecipe("Design: Dawnstone Crab - Horde", 31358, 31080);
+itemrecipe("Design: Delicate Blood Garnet", 23134, 34590);
 itemrecipe("Design: Delicate Crimson Spinel", 32277, 39706);
 itemrecipe("Design: Delicate Eternium Ring", 24164, 31060);
 itemrecipe("Design: Delicate Living Ruby", 24194, 31085);
@@ -5469,6 +5471,7 @@ itemrecipe("Design: Mystical Skyfire Diamond", 25909, 32872);
 itemrecipe("Design: Nightseye Panther", 24183, 31083);
 itemrecipe("Design: Opal Necklace of Impact", 21948, 26897);
 itemrecipe("Design: Pendant of Sunfire", 35201, 46125);
+itemrecipe("Design: Pendant of the Null Rune", 24178, 31066);
 itemrecipe("Design: Potent Noble Topaz", 24214, 31107);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734);
 itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866);
@@ -5576,32 +5579,14 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-				i(35305),	-- Design: Brilliant Living Ruby
-							{	-- Design: Brilliant Living Ruby
-								["itemID"] = 24195,	-- Design: Brilliant Living Ruby
-								["spellID"] = 0,	-- This is now available via 35305, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-							},
-							i(35307),	-- Design: Rigid Star of Elune (BoP version)
-							i(35304),	-- Design: Solid Star of Elune (BoP version)
-i(24162, {	-- Design: Arcane Khorium Band
-	["cr"] = 18866,  -- Mageslayer
-}),
-i(34689, {	-- Design: Chaotic Skyfire Diamond
-	["crs"] = { 19768 },  -- Coilskar Siren
-}),
-i(24158, {  -- Design: Khorium Band of Shadows
-	["crs"] = { 19826 },  -- Dark Conclave Shadowmancer
-}),
-i(24208, {	-- Design: Mystic Dawnstone
-	["isLimited"] = true,
-}),
-i(33783, {	-- Design: Steady Talasite
-	["cost"] = { { "i", 26044, 4 }, },	-- 4x Halaa Research Token
-}),
-i(33156),	-- Design: Crimson Sun
-i(23134),	-- Design: Delicate Blood Garnet
-i(24178),	-- Design: Pendant of the Null Rune
+i(35305),	-- Design: Brilliant Living Ruby
+{	-- Design: Brilliant Living Ruby
+	["itemID"] = 24195,	-- Design: Brilliant Living Ruby
+	["spellID"] = 0,	-- This is now available via 35305, need to delink the old plans from the recipe
+	["u"] = REMOVED_FROM_GAME,
+},
+i(35307),	-- Design: Rigid Star of Elune (BoP version)
+i(35304),	-- Design: Solid Star of Elune (BoP version)
 i(23136),	-- Design: Reckless Flame Spessarite
 i(33622),	-- Design: Relentless Earthstorm Diamond
 i(32412, {	-- Design: Relentless Earthstorm Diamond
@@ -5976,7 +5961,6 @@ itemrecipe("Design: Blood Crown", 21959, 26920, TBC_PHASE_ONE);
 itemrecipe("Design: Teardrop Blood Garnet [TBC]", 23130, 28903, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Bold Blood Garnet [TBC]", 23131, 28905, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Runed Blood Garnet", 23133, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Delicate Blood Garnet", 23134, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Inscribed Flame Spessarite [TBC]", 23135, 28910, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Luminous Flame Spessarite", 23136, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Glinting Flame Spessarite [TBC]", 23137, 28914, TBC_PHASE_ONE, "removed 4.0.1.10000");
@@ -6013,7 +5997,6 @@ itemrecipe("Design: Pendant of Frozen Flame", 24174, UNKNOWN_SPELLID);
 itemrecipe("Design: Pendant of Thawing", 24175, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Withering", 24176, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Shadow's End", 24177, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Pendant of the Null Rune", 24178, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Dawnstone Crab - Alliance", 24180, 31080, TBC_PHASE_ONE);
 itemrecipe("Design: Living Ruby Serpent", 24181, UNKNOWN_SPELLID);
 itemrecipe("Design: Talasite Owl", 24182, UNKNOWN_SPELLID, TBC_PHASE_ONE);
@@ -6109,7 +6092,6 @@ itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742, PHASE_19_IDENTIFIER)
 itemrecipe("Design: Thundering Skyfire Diamond", 32411, 39963, TBC_PHASE_ONE);
 itemrecipe("Design: Relentless Earthstorm Diamond", 32412, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Kailee's Rose", 33155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Crimson Sun", 33156, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Stone of Blades", 33158, UNKNOWN_SPELLID);
 itemrecipe("Design: Blood of Amber", 33159, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Facet of Eternity", 33160, UNKNOWN_SPELLID);
