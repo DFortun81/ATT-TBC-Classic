@@ -1110,6 +1110,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			-- #endif
 			i(25906),	-- Design: Brutal Earthstorm Diamond
 			i(24171),	-- Design: Chain of the Twilight Owl
+			-- #if BEFORE CATA
+			i(24219),	-- Design: Dazzling Talasite [TBC] / Design: Purified Nightseye [CATA+]
+			-- #endif
 			-- #if AFTER CATA
 			i(31879),	-- Design: Deadly Noble Topaz [CATA+] / Design: Wicked Noble Topaz [TBC]
 			-- #endif
@@ -1141,11 +1144,10 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24167),	-- Design: Living Ruby Pendant
 			i(25909),	-- Design: Mystical Skyfire Diamond
 			i(24214),	-- Design: Potent Noble Topaz
-			i(24219),	-- Design: Purified Nightseye
-			i(24212, {	-- Design: Purified Nightseye
-				["spellID"] = 0,	-- This is now available via 24219, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
+			-- #if AFTER CATA
+			i(24219),	-- Design: Purified Nightseye [CATA+] / Design: Dazzling Talasite [TBC]
+			i(24212),	-- Design: Purified Nightseye [CATA+] / Design: Royal Nightseye [TBC]
+			-- #endif
 			i(24218),	-- Design: Radiant Talasite
 			i(24215),	-- Design: Reckless Noble Topaz
 			i(24217),	-- Design: Regal Talasite
@@ -1154,6 +1156,7 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(31875),	-- Design: Rigid Star of Elune [CATA+] / Design: Great Dawnstone [TBC]
 			-- #endif
 			-- #if BEFORE CATA
+			i(24212),	-- Design: Royal Nightseye [TBC] / Design: Purified Nightseye [CATA+]
 			i(24196),	-- Design: Runed Living Ruby [TBC] / Design: Brilliant Living Ruby [CATA+]
 			-- #endif
 			i(24210),	-- Design: Shifting Nightseye

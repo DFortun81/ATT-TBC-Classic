@@ -5595,11 +5595,6 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 
 --[[
-i(24219),	-- Design: Purified Nightseye
-i(24212, {	-- Design: Purified Nightseye
-	["spellID"] = 0,	-- This is now available via 24219, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
 i(24218),	-- Design: Radiant Talasite
 i(24215),	-- Design: Reckless Noble Topaz
 i(24210),	-- Design: Shifting Nightseye
