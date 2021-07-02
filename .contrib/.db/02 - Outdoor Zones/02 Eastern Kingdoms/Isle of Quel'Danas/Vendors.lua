@@ -765,8 +765,8 @@ _.Zones =
 						i(35255),	-- Design: Brilliant Lionseye [TBC] / Design: Brilliant Crimson Spinel [CATA+]
 						-- #if AFTER CATA
 						i(35248),	-- Design: Brilliant Crimson Spinel [CATA+] / Design: Runed Crimson Spinel [TBC]
+						i(35271),	-- Design: Deadly Pyrestone [CATA+] / Design: Wicked Pyrestone [TBC]
 						-- #endif
-						i(35271),	-- Design: Deadly Pyrestone
 						i(35246),	-- Design: Delicate Crimson Spinel
 						-- #if AFTER CATA
 						i(35245),	-- Design: Delicate Crimson Spinel [CATA+] / Design: Bright Crimson Spinel [TBC]
@@ -838,6 +838,9 @@ _.Zones =
 						}),
 						i(35239),	-- Design: Timeless Shadowsong Amethyst
 						i(35270),	-- Design: Veiled Shadowsong Amethyst
+						-- #if BEFORE CATA
+						i(35271),	-- Design: Wicked Pyrestone [TBC] / Design: Deadly Pyrestone [CATA+]
+						-- #endif
 					},
 				}),
 				n(25046, {	-- Smith Hauthaa <Weapons & Armorsmith>
