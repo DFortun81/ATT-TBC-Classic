@@ -386,10 +386,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["name"] = "Green Gems",
 			["categoryID"] = 858,
 			["groups"] = {
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Forceful Seaspray Emerald",
 					["recipeID"] = 47053
-				},
+				}),
 				{
 					["name"] = "Forceful Talasite",
 					["recipeID"] = 46405
@@ -973,26 +973,26 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["name"] = "Trinkets",
 			["categoryID"] = 866,
 			["groups"] = {
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Figurine - Crimson Serpent",
 					["recipeID"] = 46777
-				},
+				}),
 				{
 					["name"] = "Figurine - Dawnstone Crab",
 					["recipeID"] = 31080
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Figurine - Empyrean Tortoise",
 					["recipeID"] = 46775
-				},
+				}),
 				{
 					["name"] = "Figurine - Felsteel Boar",
 					["recipeID"] = 31079
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Figurine - Khorium Boar",
 					["recipeID"] = 46776
-				},
+				}),
 				{
 					["name"] = "Figurine - Living Ruby Serpent",
 					["recipeID"] = 31081
@@ -1001,14 +1001,14 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Figurine - Nightseye Panther",
 					["recipeID"] = 31083
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Figurine - Seaspray Albatross",
 					["recipeID"] = 46779
-				},
-				{
+				}),
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Figurine - Shadowsong Panther",
 					["recipeID"] = 46778
-				},
+				}),
 				{
 					["name"] = "Figurine - Talasite Owl",
 					["recipeID"] = 31082
@@ -5482,9 +5482,15 @@ itemrecipe("Design: Eternal Earthstorm Diamond", 35502, 46597);
 itemrecipe("Design: Eye of the Night", 24169, 31071);
 itemrecipe("Design: Falling Star", 33157, 42590);
 itemrecipe("Design: Felsteel Boar", 24179, 31079);
+itemrecipe("Design: Figurine - Crimson Serpent", 35697, 46777);
+itemrecipe("Design: Figurine - Empyrean Tortoise", 35695, 46775);
+itemrecipe("Design: Figurine - Khorium Boar", 35696, 46776);
+itemrecipe("Design: Figurine - Seaspray Albatross", 35699, 46779);
+itemrecipe("Design: Figurine - Shadowsong Panther", 35698, 46778);
 itemrecipe("Design: Flashing Crimson Spinel", 32285, 39714);
 itemrecipe("Design: Flashing Living Ruby", 24198, 31091);
 itemrecipe("Design: Forceful Seaspray Emerald", 35765, 47053);
+itemrecipe("Design: Forceful Seaspray Emerald", 35769, 47053);
 itemrecipe("Design: Hard Khorium Band", 35200, 46124);
 itemrecipe("Design: Hard Khorium Choker", 35203, 46127);
 itemrecipe("Design: Heavy Felsteel Ring", 24163, 31058);
@@ -5637,12 +5643,8 @@ i(24207, {	-- Design: Subtle Dawnstone
 
 
 -- From the Isle of QD:
-i(35697),	-- Design: Figurine - Crimson Serpent
-i(35695),	-- Design: Figurine - Empyrean Tortoise
-i(35696),	-- Design: Figurine - Khorium Boar
-i(35699),	-- Design: Figurine - Seaspray Albatross
-i(35698),	-- Design: Figurine - Shadowsong Panther
-i(35769),	-- Design: Forceful Seaspray Emerald
+
+
 i(35768),	-- Design: Quick Lionseye
 i(35767),	-- Design: Reckless Pyrestone
 i(35268, {	-- Design: Reckless Pyrestone
@@ -5669,7 +5671,6 @@ i(35245, {	-- Design: Delicate Crimson Spinel
 	["u"] = REMOVED_FROM_GAME,
 }),
 i(35247),	-- Design: Flashing Crimson Spinel
-i(35769),	-- Design: Forceful Seaspray Emerald
 i(35325),	-- Design: Forceful Talasite
 i(35266),	-- Design: Glinting Shadowsong Amethyst
 i(35240, {	-- Design: Glinting Shadowsong Amethyst
@@ -5756,7 +5757,6 @@ i(35245, {	-- Design: Delicate Crimson Spinel
 		["u"] = REMOVED_FROM_GAME,
 }),
 i(35247),	-- Design: Flashing Crimson Spinel
-i(35769),	-- Design: Forceful Seaspray Emerald
 i(35325),	-- Design: Forceful Talasite
 i(35266),	-- Design: Glinting Shadowsong Amethyst
 i(35240, {	-- Design: Glinting Shadowsong Amethyst
@@ -6006,20 +6006,13 @@ itemrecipe("Design: Hard Khorium Choker", 35535, UNKNOWN_SPELLID);
 itemrecipe("Design: Loop of Forged Power", 35536, UNKNOWN_SPELLID);
 itemrecipe("Design: Pendant of Sunfire", 35537, UNKNOWN_SPELLID);
 itemrecipe("Design: Ring of Flowing Life", 35538, UNKNOWN_SPELLID);
-itemrecipe("Design: Figurine - Empyrean Tortoise", 35695, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Figurine - Khorium Boar", 35696, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Figurine - Crimson Serpent", 35697, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Figurine - Shadowsong Panther", 35698, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Figurine - Seaspray Albatross", 35699, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Regal Nightseye", 35708, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Reckless Pyrestone", 35762, 47055, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Quick Lionseye", 35763, 47056, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Steady Seaspray Emerald", 35764, 47054, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Forceful Seaspray Emerald", 35765, 47053, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Steady Seaspray Emerald", 35766, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Reckless Pyrestone", 35767, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Quick Lionseye", 35768, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Forceful Seaspray Emerald", 35769, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Purified Shadowsong Amethyst", 37504, 0, PHASE_2_IDENTIFIER);
 ]]--
 
