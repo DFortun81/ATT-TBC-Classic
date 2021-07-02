@@ -757,10 +757,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Enigmatic Skyfire Diamond",
 					["recipeID"] = 32874
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Eternal Earthstorm Diamond",
 					["recipeID"] = 46597
-				},
+				}),
 				{
 					["name"] = "Insightful Earthstorm Diamond",
 					["recipeID"] = 32870
@@ -5478,6 +5478,7 @@ itemrecipe("Design: Destructive Skyfire Diamond", 25907, 32871);
 itemrecipe("Design: Don Julio's Heart", 33305, 42558);
 itemrecipe("Design: Ember Skyfire Diamond", 35505, 46601);
 itemrecipe("Design: Embrace of the Dawn", 24170, 31072);
+itemrecipe("Design: Eternal Earthstorm Diamond", 35502, 46597);
 itemrecipe("Design: Eye of the Night", 24169, 31071);
 itemrecipe("Design: Falling Star", 33157, 42590);
 itemrecipe("Design: Felsteel Boar", 24179, 31079);
@@ -5636,7 +5637,6 @@ i(24207, {	-- Design: Subtle Dawnstone
 
 
 -- From the Isle of QD:
-i(35502),	-- Design: Eternal Earthstorm Diamond
 i(35697),	-- Design: Figurine - Crimson Serpent
 i(35695),	-- Design: Figurine - Empyrean Tortoise
 i(35696),	-- Design: Figurine - Khorium Boar
@@ -6000,7 +6000,6 @@ itemrecipe("Design: Bright Living Ruby [TBC]", 35306, 31089, TBC_PHASE_ONE, "rem
 itemrecipe("Design: Rigid Dawnstone", 35307, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Quick Dawnstone", 35322, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Forceful Talasite", 35325, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Eternal Earthstorm Diamond", 35502, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Amulet of Flowing Life", 35533, UNKNOWN_SPELLID);
 itemrecipe("Design: Hard Khorium Band", 35534, UNKNOWN_SPELLID);
 itemrecipe("Design: Hard Khorium Choker", 35535, UNKNOWN_SPELLID);
