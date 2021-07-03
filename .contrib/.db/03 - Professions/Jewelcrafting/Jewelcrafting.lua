@@ -5575,6 +5575,7 @@ itemrecipe("Design: Mystic Lionseye", 35258, 39724);
 itemrecipe("Design: Mystical Skyfire Diamond", 25909, 32872);
 itemrecipe("Design: Nightseye Panther", 24183, 31083);
 itemrecipe("Design: Opal Necklace of Impact", 21948, 26897);
+itemrecipe("Design: Pendant of Shadow's End", 24177, 31065);
 itemrecipe("Design: Pendant of Sunfire", 35201, 46125);
 itemrecipe("Design: Pendant of Thawing", 24175, 31063);
 itemrecipe("Design: Pendant of the Agate Shield", 20970, 25610);
@@ -5805,7 +5806,6 @@ i(35261, {	-- Design: Subtle Lionseye
 }),
 
 
-i(24177),	-- Design: Pendant of Shadow's End
 i(23145),	-- Design: Purified Shadow Draenite
 i(23143, {	-- Design: Purified Shadow Draenite
 	["spellID"] = 0,	-- This is now available via 23145, need to delink the old plans from the recipe
@@ -5872,7 +5872,6 @@ itemrecipe("Design: Khorium Band of Shadows", 24158, UNKNOWN_SPELLID, TBC_PHASE_
 itemrecipe("Design: Arcane Khorium Band", 24162, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Frozen Flame", 24174, UNKNOWN_SPELLID);
 itemrecipe("Design: Pendant of Withering", 24176, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Pendant of Shadow's End", 24177, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Living Ruby Serpent", 24181, UNKNOWN_SPELLID);
 itemrecipe("Design: Talasite Owl", 24182, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Bright Living Ruby [TBC]", 24192, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
