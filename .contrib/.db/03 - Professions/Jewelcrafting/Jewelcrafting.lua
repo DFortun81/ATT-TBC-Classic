@@ -489,10 +489,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Potent Noble Topaz",
 					["recipeID"] = 31107
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Potent Pyrestone",
 					["recipeID"] = 39734
-				},
+				}),
 				{
 					["name"] = "Reckless Flame Spessarite",
 					["recipeID"] = 28912
@@ -5560,6 +5560,7 @@ itemrecipe("Design: Pendant of the Agate Shield", 20970, 25610);
 itemrecipe("Design: Pendant of the Null Rune", 24178, 31066);
 itemrecipe("Design: Potent Noble Topaz", 24214, 31107);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734);
+itemrecipe("Design: Potent Pyrestone", 35269, 39734);
 itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866);
 itemrecipe("Design: Quick Lionseye", 35763, 47056);
 itemrecipe("Design: Quick Lionseye", 35768, 47056);
@@ -5695,7 +5696,6 @@ i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35269),	-- Design: Potent Pyrestone
 i(35251),	-- Design: Purified Shadowsong Amethyst
 i(35241, {	-- Design: Purified Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
@@ -5755,7 +5755,6 @@ i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
 		["u"] = REMOVED_FROM_GAME,
 }),
-i(35269),	-- Design: Potent Pyrestone
 i(35251),	-- Design: Purified Shadowsong Amethyst
 i(35241, {	-- Design: Purified Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
@@ -5911,7 +5910,6 @@ itemrecipe("Design: Balanced Shadowsong Amethyst [TBC]", 32299, 39729, PHASE_19_
 itemrecipe("Design: Infused Shadowsong Amethyst [TBC]", 32300, 39730, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Glowing Shadowsong Amethyst [TBC]", 32301, 39731, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Royal Shadowsong Amethyst [TBC]", 32302, 39732, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Potent Pyrestone", 32304, 39734, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Glinting Pyrestone [TBC]", 32306, 39736, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Enduring Seaspray Emerald [TBC]", 32309, 39739, PHASE_19_IDENTIFIER);
@@ -5950,7 +5948,6 @@ itemrecipe("Design: Solid Empyrean Sapphire", 35263, UNKNOWN_SPELLID, PHASE_21_I
 itemrecipe("Design: Sparkling Empyrean Sapphire", 35264, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Stormy Empyrean Sapphire", 35265, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Glinting Pyrestone", 35266, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Potent Pyrestone", 35269, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Veiled Pyrestone", 35270, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Runed Living Ruby", 35305, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Bright Living Ruby [TBC]", 35306, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
