@@ -398,10 +398,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Jagged Deep Peridot",
 					["recipeID"] = 28917
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Jagged Seaspray Emerald",
 					["recipeID"] = 39742
-				},
+				}),
 				{
 					["name"] = "Jagged Talasite",
 					["recipeID"] = 31113
@@ -5543,6 +5543,7 @@ itemrecipe("Design: Inscribed Noble Topaz", 24213, 31106);
 itemrecipe("Design: Inscribed Pyrestone", 32303, 39733);
 itemrecipe("Design: Inscribed Pyrestone", 35267, 39733);
 itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742);
+itemrecipe("Design: Jagged Seaspray Emerald", 35253, 39742);
 itemrecipe("Design: Jagged Talasite", 24220, 31113);
 itemrecipe("Design: Khorium Band of Frost", 24159, 31054);
 itemrecipe("Design: Khorium Band of Leaves", 24161, 31056);
@@ -5694,7 +5695,6 @@ i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35253),	-- Design: Jagged Seaspray Emerald
 i(35269),	-- Design: Potent Pyrestone
 i(35251),	-- Design: Purified Shadowsong Amethyst
 i(35241, {	-- Design: Purified Shadowsong Amethyst
@@ -5755,7 +5755,6 @@ i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
 		["u"] = REMOVED_FROM_GAME,
 }),
-i(35253),	-- Design: Jagged Seaspray Emerald
 i(35269),	-- Design: Potent Pyrestone
 i(35251),	-- Design: Purified Shadowsong Amethyst
 i(35241, {	-- Design: Purified Shadowsong Amethyst
@@ -5918,7 +5917,6 @@ itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737, PHASE_19_IDENTIFI
 itemrecipe("Design: Enduring Seaspray Emerald [TBC]", 32309, 39739, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald [TBC]", 32311, 39741, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Kailee's Rose", 33155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Stone of Blades", 33158, UNKNOWN_SPELLID);
 itemrecipe("Design: Blood of Amber", 33159, UNKNOWN_SPELLID, TBC_PHASE_ONE);
@@ -5941,7 +5939,6 @@ itemrecipe("Design: Sovereign Shadowsong Amethyst", 35243, UNKNOWN_SPELLID, PHAS
 itemrecipe("Design: Subtle Crimson Spinel", 35249, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald", 35251, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Enduring Seaspray Emerald", 35252, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Jagged Seaspray Emerald", 35253, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Radiant Seaspray Emerald", 35254, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Gleaming Lionseye", 35256, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Great Lionseye", 35257, 0, PHASE_2_IDENTIFIER);
