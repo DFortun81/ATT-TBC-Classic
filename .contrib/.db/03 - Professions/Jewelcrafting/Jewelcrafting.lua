@@ -594,10 +594,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Sovereign Shadow Draenite",
 					["recipeID"] = 28936
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Sovereign Shadowsong Amethyst",
 					["recipeID"] = 39727
-				},
+				}),
 				-- #if AFTER CATA
 				{
 					["name"] = "Timeless Nightseye",
@@ -5593,6 +5593,7 @@ itemrecipe("Design: Solid Star of Elune", 24199, 31092);
 itemrecipe("Design: Solid Star of Elune", 35304, 31092);
 itemrecipe("Design: Sovereign Nightseye", 24209, 31102);
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 32297, 39727);
+itemrecipe("Design: Sovereign Shadowsong Amethyst", 35243, 39727);
 itemrecipe("Design: Sparkling Azure Moonstone", 23155, 28953);
 itemrecipe("Design: Sparkling Empyrean Sapphire", 32287, 39716);
 itemrecipe("Design: Sparkling Star of Elune", 24200, 31149);
@@ -5732,7 +5733,6 @@ i(35256, {	-- Design: Smooth Lionseye
 	["spellID"] = 0,	-- This is now available via 35260, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35243),	-- Design: Sovereign Shadowsong Amethyst
 i(35264),	-- Design: Sparkling Empyrean Sapphire
 i(35262, {	-- Design: Sparkling Empyrean Sapphire
 	["spellID"] = 0,	-- This is now available via 35262, need to delink the old plans from the recipe
@@ -5787,7 +5787,6 @@ i(35256, {	-- Design: Smooth Lionseye
 	["spellID"] = 0,	-- This is now available via 35260, need to delink the old plans from the recipe
 		["u"] = REMOVED_FROM_GAME,
 }),
-i(35243),	-- Design: Sovereign Shadowsong Amethyst
 i(35264),	-- Design: Sparkling Empyrean Sapphire
 i(35262, {	-- Design: Sparkling Empyrean Sapphire
 	["spellID"] = 0,	-- This is now available via 35264, need to delink the old plans from the recipe
@@ -5907,7 +5906,6 @@ itemrecipe("Design: Rigid Lionseye [TBC]", 32292, 39721, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Gleaming Lionseye [TBC]", 32293, 39722, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Thick Lionseye [TBC]", 32294, 39723, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Great Lionseye [TBC]", 32296, 39725, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Sovereign Shadowsong Amethyst", 32297, 39727, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Shifting Shadowsong Amethyst", 32298, 39728, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Balanced Shadowsong Amethyst [TBC]", 32299, 39729, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Infused Shadowsong Amethyst [TBC]", 32300, 39730, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
@@ -5934,7 +5932,6 @@ itemrecipe("Design: Glowing Shadowsong Amethyst", 35239, UNKNOWN_SPELLID, PHASE_
 itemrecipe("Design: Infused Shadowsong Amethyst", 35240, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Royal Shadowsong Amethyst", 35241, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Shifting Shadowsong Amethyst", 35242, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Sovereign Shadowsong Amethyst", 35243, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Subtle Crimson Spinel", 35249, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald", 35251, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Gleaming Lionseye", 35256, 0, PHASE_2_IDENTIFIER);
