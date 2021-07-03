@@ -721,10 +721,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Mystic Dawnstone",
 					["recipeID"] = 31101
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Mystic Lionseye",
 					["recipeID"] = 39724
-				},
+				}),
 				{
 					["name"] = "Quick Dawnstone",
 					["recipeID"] = 46403
@@ -5550,6 +5550,7 @@ itemrecipe("Design: Khorium Inferno Band", 24160, 31055);
 itemrecipe("Design: Living Ruby Pendant", 24167, 31068);
 itemrecipe("Design: Loop of Forged Power", 35198, 46122);
 itemrecipe("Design: Mystic Lionseye", 32295, 39724);
+itemrecipe("Design: Mystic Lionseye", 35258, 39724);
 itemrecipe("Design: Mystical Skyfire Diamond", 25909, 32872);
 itemrecipe("Design: Nightseye Panther", 24183, 31083);
 itemrecipe("Design: Opal Necklace of Impact", 21948, 26897);
@@ -5694,7 +5695,6 @@ i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["u"] = REMOVED_FROM_GAME,
 }),
 i(35253),	-- Design: Jagged Seaspray Emerald
-i(35258),	-- Design: Mystic Lionseye
 i(35269),	-- Design: Potent Pyrestone
 i(35251),	-- Design: Purified Shadowsong Amethyst
 i(35241, {	-- Design: Purified Shadowsong Amethyst
@@ -5756,7 +5756,6 @@ i(35240, {	-- Design: Glinting Shadowsong Amethyst
 		["u"] = REMOVED_FROM_GAME,
 }),
 i(35253),	-- Design: Jagged Seaspray Emerald
-i(35258),	-- Design: Mystic Lionseye
 i(35269),	-- Design: Potent Pyrestone
 i(35251),	-- Design: Purified Shadowsong Amethyst
 i(35241, {	-- Design: Purified Shadowsong Amethyst
@@ -5906,7 +5905,6 @@ itemrecipe("Design: Smooth Lionseye", 32291, 39720, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Rigid Lionseye [TBC]", 32292, 39721, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Gleaming Lionseye [TBC]", 32293, 39722, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Thick Lionseye [TBC]", 32294, 39723, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Mystic Lionseye", 32295, 39724, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Great Lionseye [TBC]", 32296, 39725, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 32297, 39727, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Shifting Shadowsong Amethyst", 32298, 39728, PHASE_19_IDENTIFIER);
@@ -5947,7 +5945,6 @@ itemrecipe("Design: Jagged Seaspray Emerald", 35253, UNKNOWN_SPELLID, PHASE_21_I
 itemrecipe("Design: Radiant Seaspray Emerald", 35254, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Gleaming Lionseye", 35256, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Great Lionseye", 35257, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Mystic Lionseye", 35258, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Rigid Lionseye", 35259, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Smooth Lionseye", 35260, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Thick Lionseye", 35261, 0, PHASE_2_IDENTIFIER);
