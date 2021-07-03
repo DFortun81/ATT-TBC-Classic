@@ -782,6 +782,9 @@ _.Zones =
 							["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
 							["u"] = REMOVED_FROM_GAME,
 						}),
+						-- #if BEFORE CATA
+						i(35239),	-- Design: Glowing Shadowsong Amethyst [TBC] / Design: Timeless Shadowsong Amethyst [CATA+]
+						-- #endif
 						i(35267),	-- Design: Inscribed Pyrestone
 						i(35253),	-- Design: Jagged Seaspray Emerald
 						-- #if BEFORE CATA
@@ -839,7 +842,9 @@ _.Zones =
 							["spellID"] = 0,	-- This is now available via 35261, need to delink the old plans from the recipe
 							["u"] = REMOVED_FROM_GAME,
 						}),
-						i(35239),	-- Design: Timeless Shadowsong Amethyst
+						-- #if AFTER CATA
+						i(35239),	-- Design: Timeless Shadowsong Amethyst [CATA+] / Design: Glowing Shadowsong Amethyst [TBC]
+						-- #endif
 						i(35270),	-- Design: Veiled Shadowsong Amethyst
 						-- #if BEFORE CATA
 						i(35271),	-- Design: Wicked Pyrestone [TBC] / Design: Deadly Pyrestone [CATA+]

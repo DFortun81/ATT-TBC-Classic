@@ -553,6 +553,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Glowing Nightseye",
 					["recipeID"] = 31104
 				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Glowing Shadowsong Amethyst",
+					["recipeID"] = 39731
+				}),
 				-- #endif
 				{
 					["name"] = "Purified Jaggal Pearl",
@@ -608,10 +612,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Timeless Shadow Draenite",
 					["recipeID"] = 28925
 				},
-				{
+				-- #if AFTER CATA
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Timeless Shadowsong Amethyst",
 					["recipeID"] = 39731
-				},
+				}),
+				-- #endif
 				-- #if AFTER CATA
 				{
 					["name"] = "Veiled Nightseye",
@@ -5628,6 +5634,7 @@ itemrecipe({"Design: Enduring Seaspray Emerald [TBC]", "Design: Regal Seaspray E
 itemrecipe({"Design: Glinting Noble Topaz [TBC]", "Design: Glinting Nightseye [CATA+]"}, 24216, 31109);
 itemrecipe({"Design: Glinting Pyrestone [TBC]", "Design: Glinting Shadowsong Amethyst [CATA+]"}, 32306, 39736);
 itemrecipe({"Design: Glowing Nightseye [TBC]", "Design: Timeless Nightseye [CATA+]"}, 24211, 31104);
+itemrecipe({"Design: Glowing Shadowsong Amethyst [TBC]", "Design: Timeless Shadowsong Amethyst [CATA+]"}, 35239, 39731);
 itemrecipe({"Design: Luminous Flame Spessarite [TBC]", "Design: Reckless Flame Spessarite [CATA+]"}, 23136, 28912);
 itemrecipe({"Design: Luminous Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 24215, 31108);
 itemrecipe({"Design: Rigid Dawnstone [TBC]", "Design: Rigid Star of Elune [CATA+]"}, 24205, 31098);
@@ -5649,9 +5656,9 @@ itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"
 -- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
 
 -- Recipes that got new Spell IDs with Cata?!
-itemrecipe({"Design: Reckless Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 35323, 46404, 31108);
 itemrecipe({"Design: Enduring Talasite [TBC]", "Design: Regal Talasite [CATA+]"}, 24217, 31110, 46803);
 itemrecipe({"Design: Great Golden Draenite [TBC]", "Design: Rigid Azure Moonstone [CATA+]"}, 31870, 39451, 28948);
+itemrecipe({"Design: Reckless Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 35323, 46404, 31108);
 
 -- Recipes Removed with Cata
 itemrecipe({"Design: Balanced Nightseye [TBC]", "Design: Shifting Nightseye [CATA+]"}, 31876, 39463, 31103, REMOVED_WITH_CATA);
@@ -5744,7 +5751,6 @@ i(35261, {	-- Design: Subtle Lionseye
 	["spellID"] = 0,	-- This is now available via 35261, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35239),	-- Design: Timeless Shadowsong Amethyst
 i(35270),	-- Design: Veiled Shadowsong Amethyst
 
 
@@ -5797,7 +5803,6 @@ i(35261, {	-- Design: Subtle Lionseye
 	["spellID"] = 0,	-- This is now available via 35249, need to delink the old plans from the recipe
 		["u"] = REMOVED_FROM_GAME,
 }),
-i(35239),	-- Design: Timeless Shadowsong Amethyst
 i(35270),	-- Design: Veiled Shadowsong Amethyst
 
 
@@ -5907,7 +5912,6 @@ itemrecipe("Design: Great Lionseye [TBC]", 32296, 39725, PHASE_19_IDENTIFIER, "r
 itemrecipe("Design: Shifting Shadowsong Amethyst", 32298, 39728, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Balanced Shadowsong Amethyst [TBC]", 32299, 39729, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Infused Shadowsong Amethyst [TBC]", 32300, 39730, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Glowing Shadowsong Amethyst [TBC]", 32301, 39731, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Royal Shadowsong Amethyst [TBC]", 32302, 39732, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Glinting Pyrestone [TBC]", 32306, 39736, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737, PHASE_19_IDENTIFIER);
@@ -5926,7 +5930,6 @@ itemrecipe("Design: Pendant of Sunfire", 35201, 46125, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Amulet of Flowing Life", 35202, 46126, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Hard Khorium Choker", 35203, 46127, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Balanced Shadowsong Amethyst", 35238, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Glowing Shadowsong Amethyst", 35239, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Infused Shadowsong Amethyst", 35240, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Royal Shadowsong Amethyst", 35241, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Shifting Shadowsong Amethyst", 35242, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
