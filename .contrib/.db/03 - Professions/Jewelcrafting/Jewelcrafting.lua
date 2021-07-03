@@ -725,10 +725,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Mystic Lionseye",
 					["recipeID"] = 39724
 				}),
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Quick Dawnstone",
 					["recipeID"] = 46403
-				},
+				}),
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Quick Lionseye",
 					["recipeID"] = 47056
@@ -5562,6 +5562,7 @@ itemrecipe("Design: Potent Noble Topaz", 24214, 31107);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734);
 itemrecipe("Design: Potent Pyrestone", 35269, 39734);
 itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866);
+itemrecipe("Design: Quick Dawnstone", 35322, 46403);
 itemrecipe("Design: Quick Lionseye", 35763, 47056);
 itemrecipe("Design: Quick Lionseye", 35768, 47056);
 itemrecipe("Design: Radiant Seaspray Emerald", 32310, 39740);
@@ -5705,7 +5706,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35322),	-- Design: Quick Dawnstone
 i(35254),	-- Design: Radiant Seaspray Emerald
 i(35252),	-- Design: Regal Seaspray Emerald
 i(35259),	-- Design: Rigid Empyrean Sapphire
@@ -5764,7 +5764,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
 		["u"] = REMOVED_FROM_GAME,
 }),
-i(35322),	-- Design: Quick Dawnstone
 i(35254),	-- Design: Radiant Seaspray Emerald
 i(35252),	-- Design: Regal Seaspray Emerald
 i(35259),	-- Design: Rigid Empyrean Sapphire
@@ -5952,7 +5951,6 @@ itemrecipe("Design: Veiled Pyrestone", 35270, UNKNOWN_SPELLID, PHASE_21_IDENTIFI
 itemrecipe("Design: Runed Living Ruby", 35305, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Bright Living Ruby [TBC]", 35306, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Rigid Dawnstone", 35307, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Quick Dawnstone", 35322, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Amulet of Flowing Life", 35533, UNKNOWN_SPELLID);
 itemrecipe("Design: Hard Khorium Band", 35534, UNKNOWN_SPELLID);
 itemrecipe("Design: Hard Khorium Choker", 35535, UNKNOWN_SPELLID);
