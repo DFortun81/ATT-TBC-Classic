@@ -526,6 +526,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 39470
 				},
 				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Veiled Pyrestone",
+					["recipeID"] = 39737
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Wicked Pyrestone",
 					["recipeID"] = 39738
 				}),
@@ -628,10 +632,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Veiled Shadow Draenite",
 					["recipeID"] = 39466
 				},
-				{
+				-- #if AFTER CATA
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Veiled Shadowsong Amethyst",
 					["recipeID"] = 39737
-				}
+				}),
+				-- #endif
 			}
 		},
 		{
@@ -5620,7 +5626,6 @@ itemrecipe("Design: The Natural Ward", 31402, 38504);
 itemrecipe("Design: Thick Felsteel Necklace", 24166, 31067);
 itemrecipe("Design: Thundering Skyfire Diamond", 32411, 39963);
 itemrecipe("Design: Truesilver Crab", 21943, 26881);
-itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737);
 itemrecipe("Design: Wicked Moonstone Ring", 20855, 25323);
 -- itemrecipe("", ITEMID, SPELLID);
 -- itemrecipe("", ITEMID, SPELLID);
@@ -5649,6 +5654,8 @@ itemrecipe({"Design: Subtle Living Ruby [TBC]", "Design: Subtle Dawnstone [CATA+
 itemrecipe({"Design: Thick Golden Draenite [TBC]", "Design: Subtle Golden Draenite [CATA+]"}, 23150, 28947);
 itemrecipe({"Design: Veiled Flame Spessarite [TBC]","Design: Veiled Shadow Draenite [CATA+]"}, 31873, 39466);
 itemrecipe({"Design: Veiled Noble Topaz [TBC]", "Design: Veiled Nightseye [CATA+]"}, 31878, 39470);
+itemrecipe({"Design: Veiled Pyrestone [TBC]", "Design: Veiled Shadowsong Amethyst [CATA+]"}, 32307, 39737);
+itemrecipe({"Design: Veiled Pyrestone [TBC]", "Design: Veiled Shadowsong Amethyst [CATA+]"}, 35270, 39737);
 itemrecipe({"Design: Wicked Flame Spessarite [TBC]","Design: Deadly Flame Spessarite [CATA+]"}, 31874, 39467);
 itemrecipe({"Design: Wicked Noble Topaz [TBC]", "Design: Deadly Noble Topaz [CATA+]"}, 31879, 39471);
 itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"}, 32308, 39738);
@@ -5753,8 +5760,6 @@ i(35261, {	-- Design: Subtle Lionseye
 	["spellID"] = 0,	-- This is now available via 35261, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35270),	-- Design: Veiled Shadowsong Amethyst
-
 
 
 
@@ -5798,7 +5803,6 @@ i(35261, {	-- Design: Subtle Lionseye
 	["spellID"] = 0,	-- This is now available via 35249, need to delink the old plans from the recipe
 		["u"] = REMOVED_FROM_GAME,
 }),
-i(35270),	-- Design: Veiled Shadowsong Amethyst
 
 
 i(24177),	-- Design: Pendant of Shadow's End
@@ -5907,7 +5911,6 @@ itemrecipe("Design: Balanced Shadowsong Amethyst [TBC]", 32299, 39729, PHASE_19_
 itemrecipe("Design: Infused Shadowsong Amethyst [TBC]", 32300, 39730, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Royal Shadowsong Amethyst [TBC]", 32302, 39732, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Glinting Pyrestone [TBC]", 32306, 39736, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald [TBC]", 32311, 39741, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Kailee's Rose", 33155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Stone of Blades", 33158, UNKNOWN_SPELLID);
@@ -5936,7 +5939,6 @@ itemrecipe("Design: Thick Lionseye", 35261, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Lustrous Empyrean Sapphire", 35262, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Sparkling Empyrean Sapphire", 35264, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Glinting Pyrestone", 35266, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Veiled Pyrestone", 35270, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Runed Living Ruby", 35305, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Bright Living Ruby [TBC]", 35306, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Rigid Dawnstone", 35307, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);

@@ -845,7 +845,7 @@ _.Zones =
 						-- #if AFTER CATA
 						i(35239),	-- Design: Timeless Shadowsong Amethyst [CATA+] / Design: Glowing Shadowsong Amethyst [TBC]
 						-- #endif
-						i(35270),	-- Design: Veiled Shadowsong Amethyst
+						i(35270),	-- Design: Veiled Pyrestone [TBC] / Design: Veiled Shadowsong Amethyst [CATA+]
 						-- #if BEFORE CATA
 						i(35271),	-- Design: Wicked Pyrestone [TBC] / Design: Deadly Pyrestone [CATA+]
 						-- #endif
