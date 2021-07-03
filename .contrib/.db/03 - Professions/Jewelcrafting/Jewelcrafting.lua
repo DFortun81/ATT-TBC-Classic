@@ -386,6 +386,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["name"] = "Green Gems",
 			["categoryID"] = 858,
 			["groups"] = {
+				-- #if BEFORE CATA
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Enduring Seaspray Emerald",
+					["recipeID"] = 39739
+				}),
+				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Forceful Seaspray Emerald",
 					["recipeID"] = 47053
@@ -422,10 +428,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Regal Deep Peridot",
 					["recipeID"] = 28918
 				},
-				{
+				-- #if AFTER CATA
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Regal Seaspray Emerald",
 					["recipeID"] = 39739
-				},
+				}),
+				-- #endif
 				{
 					["name"] = "Regal Talasite",
 					["recipeID"] = 46803
@@ -5613,6 +5621,7 @@ itemrecipe({"Design: Dazzling Talasite [TBC]", "Design: Purified Nightseye [CATA
 itemrecipe({"Design: Enduring Deep Peridot [TBC - Alliance]", "Design: Regal Deep Peridot [CATA+ - Alliance]"}, 23142, 28918);
 itemrecipe({"Design: Enduring Deep Peridot [TBC - Horde]", "Design: Regal Deep Peridot [CATA+ - Horde]"}, 31359, 28918);
 itemrecipe({"Design: Enduring Seaspray Emerald [TBC]", "Design: Regal Seaspray Emerald [CATA+]"}, 32309, 39739);
+itemrecipe({"Design: Enduring Seaspray Emerald [TBC]", "Design: Regal Seaspray Emerald [CATA+]"}, 35252, 39739);
 itemrecipe({"Design: Glinting Noble Topaz [TBC]", "Design: Glinting Nightseye [CATA+]"}, 24216, 31109);
 itemrecipe({"Design: Glinting Pyrestone [TBC]", "Design: Glinting Shadowsong Amethyst [CATA+]"}, 32306, 39736);
 itemrecipe({"Design: Glowing Nightseye [TBC]", "Design: Timeless Nightseye [CATA+]"}, 24211, 31104);
@@ -5707,7 +5716,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35252),	-- Design: Regal Seaspray Emerald
 i(35259),	-- Design: Rigid Empyrean Sapphire
 i(35257, {	-- Design: Rigid Empyrean Sapphire
 	["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
@@ -5764,7 +5772,6 @@ i(37504, {	-- Design: Purified Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
 		["u"] = REMOVED_FROM_GAME,
 }),
-i(35252),	-- Design: Regal Seaspray Emerald
 i(35259),	-- Design: Rigid Empyrean Sapphire
 i(35257, {	-- Design: Rigid Empyrean Sapphire
 	["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
@@ -5910,7 +5917,6 @@ itemrecipe("Design: Glowing Shadowsong Amethyst [TBC]", 32301, 39731, PHASE_19_I
 itemrecipe("Design: Royal Shadowsong Amethyst [TBC]", 32302, 39732, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Glinting Pyrestone [TBC]", 32306, 39736, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Veiled Shadowsong Amethyst", 32307, 39737, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Enduring Seaspray Emerald [TBC]", 32309, 39739, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald [TBC]", 32311, 39741, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Kailee's Rose", 33155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Stone of Blades", 33158, UNKNOWN_SPELLID);
@@ -5933,7 +5939,6 @@ itemrecipe("Design: Shifting Shadowsong Amethyst", 35242, UNKNOWN_SPELLID, PHASE
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 35243, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Subtle Crimson Spinel", 35249, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald", 35251, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Enduring Seaspray Emerald", 35252, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Gleaming Lionseye", 35256, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Great Lionseye", 35257, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Rigid Lionseye", 35259, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);

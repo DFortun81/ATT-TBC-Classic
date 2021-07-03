@@ -1122,6 +1122,9 @@ _.Zones =
 						-- #if AFTER CATA
 						i(35245),	-- Design: Delicate Crimson Spinel [CATA+] / Design: Bright Crimson Spinel [TBC]
 						-- #endif
+						-- #if BEFORE CATA
+						i(35252),	-- Design: Enduring Seaspray Emerald [TBC] / Design: Regal Seaspray Emerald [CATA+]
+						-- #endif
 						i(35247),	-- Design: Flashing Crimson Spinel
 						i(35769),	-- Design: Forceful Seaspray Emerald
 						i(35325),	-- Design: Forceful Talasite
@@ -1153,8 +1156,8 @@ _.Zones =
 						i(35767),	-- Design: Reckless Pyrestone
 						-- #if AFTER CATA
 						i(35268),	-- Design: Reckless Pyrestone [CATA+] / Design: Luminous Pyrestone [TBC]
+						i(35252),	-- Design: Regal Seaspray Emerald [CATA+] / Design: Enduring Seaspray Emerald [TBC]
 						-- #endif
-						i(35252),	-- Design: Regal Seaspray Emerald
 						i(35259),	-- Design: Rigid Empyrean Sapphire
 						i(35257, {	-- Design: Rigid Empyrean Sapphire
 							["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
