@@ -5573,6 +5573,7 @@ itemrecipe("Design: Pendant of Sunfire", 35201, 46125);
 itemrecipe("Design: Pendant of Thawing", 24175, 31063);
 itemrecipe("Design: Pendant of the Agate Shield", 20970, 25610);
 itemrecipe("Design: Pendant of the Null Rune", 24178, 31066);
+itemrecipe("Design: Potent Flame Spessarite", 23138, 28915);
 itemrecipe("Design: Potent Noble Topaz", 24214, 31107);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734);
 itemrecipe("Design: Potent Pyrestone", 35269, 39734);
@@ -5758,12 +5759,6 @@ i(35270),	-- Design: Veiled Shadowsong Amethyst
 
 
 -- From Shattrath... Oh god please why
-
-
-i(23138),	-- Design: Potent Flame Spessarite
-
-
-
 i(35266),	-- Design: Glinting Shadowsong Amethyst
 i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
@@ -5856,7 +5851,6 @@ itemrecipe("Design: Bold Blood Garnet [TBC]", 23131, 28905, TBC_PHASE_ONE, "remo
 itemrecipe("Design: Runed Blood Garnet", 23133, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Inscribed Flame Spessarite [TBC]", 23135, 28910, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Glinting Flame Spessarite [TBC]", 23137, 28914, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Potent Flame Spessarite", 23138, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Radiant Deep Peridot [TBC]", 23140, 28916, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Jagged Deep Peridot [TBC]", 23141, 28917, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Enduring Deep Peridot [TBC - Alliance]", 23142, 28918, TBC_PHASE_ONE);
