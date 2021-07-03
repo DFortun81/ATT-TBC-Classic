@@ -675,10 +675,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Don Julio's Heart",
 					["recipeID"] = 42558
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Flashing Crimson Spinel",
 					["recipeID"] = 39714
-				},
+				}),
 				{
 					["name"] = "Flashing Living Ruby",
 					["recipeID"] = 31091
@@ -5529,6 +5529,7 @@ itemrecipe("Design: Figurine - Khorium Boar", 35696, 46776);
 itemrecipe("Design: Figurine - Seaspray Albatross", 35699, 46779);
 itemrecipe("Design: Figurine - Shadowsong Panther", 35698, 46778);
 itemrecipe("Design: Flashing Crimson Spinel", 32285, 39714);
+itemrecipe("Design: Flashing Crimson Spinel", 35247, 39714);
 itemrecipe("Design: Flashing Living Ruby", 24198, 31091);
 itemrecipe("Design: Forceful Seaspray Emerald", 35765, 47053);
 itemrecipe("Design: Forceful Seaspray Emerald", 35769, 47053);
@@ -5686,8 +5687,6 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 
 --[[
 -- From the Isle of QD:
-i(35247),	-- Design: Flashing Crimson Spinel
-
 i(35266),	-- Design: Glinting Shadowsong Amethyst
 i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
@@ -5751,7 +5750,6 @@ i(23138),	-- Design: Potent Flame Spessarite
 
 
 
-i(35247),	-- Design: Flashing Crimson Spinel
 i(35266),	-- Design: Glinting Shadowsong Amethyst
 i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
@@ -5901,7 +5899,6 @@ itemrecipe("Design: Enduring Deep Peridot [TBC - Horde]", 31359, 28918, TBC_PHAS
 itemrecipe("Design: Infused Nightseye [TBC]", 31877, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Wicked Noble Topaz [TBC]", 31879, 39471, TBC_PHASE_ONE);
 itemrecipe("Design: Subtle Lionseye", 32284, 39713, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Flashing Crimson Spinel", 32285, 39714, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Solid Empyrean Sapphire", 32286, 39715, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Sparkling Empyrean Sapphire", 32287, 39716, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Lustrous Empyrean Sapphire [TBC]", 32288, 39717, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
@@ -5945,7 +5942,6 @@ itemrecipe("Design: Infused Shadowsong Amethyst", 35240, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Royal Shadowsong Amethyst", 35241, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Shifting Shadowsong Amethyst", 35242, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 35243, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Flashing Crimson Spinel", 35247, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Subtle Crimson Spinel", 35249, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald", 35251, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Enduring Seaspray Emerald", 35252, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
