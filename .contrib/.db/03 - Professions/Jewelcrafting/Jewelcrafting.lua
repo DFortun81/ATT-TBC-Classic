@@ -372,10 +372,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Stormy Azure Moonstone",
 					["recipeID"] = 28955
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Stormy Empyrean Sapphire",
 					["recipeID"] = 39718
-				},
+				}),
 				{
 					["name"] = "Stormy Star of Elune",
 					["recipeID"] = 31095
@@ -5601,6 +5601,7 @@ itemrecipe("Design: Steady Seaspray Emerald", 35764, 47054);
 itemrecipe("Design: Steady Seaspray Emerald", 35766, 47054);
 itemrecipe("Design: Stormy Azure Moonstone", 23154, 28955);
 itemrecipe("Design: Stormy Empyrean Sapphire", 32289, 39718);
+itemrecipe("Design: Stormy Empyrean Sapphire", 35265, 39718);
 itemrecipe("Design: Stormy Star of Elune", 24202, 31095);
 itemrecipe("Design: Subtle Lionseye", 32284, 39713);
 itemrecipe("Design: Swift Skyfire Diamond", 25908, 32873);
@@ -5738,7 +5739,6 @@ i(35262, {	-- Design: Sparkling Empyrean Sapphire
 	["spellID"] = 0,	-- This is now available via 35262, need to delink the old plans from the recipe
 	["u"] = REMOVED_FROM_GAME,
 }),
-i(35265),	-- Design: Stormy Empyrean Sapphire
 i(35249),	-- Design: Subtle Lionseye
 i(35261, {	-- Design: Subtle Lionseye
 	["spellID"] = 0,	-- This is now available via 35261, need to delink the old plans from the recipe
@@ -5792,7 +5792,6 @@ i(35262, {	-- Design: Sparkling Empyrean Sapphire
 	["spellID"] = 0,	-- This is now available via 35264, need to delink the old plans from the recipe
 		["u"] = REMOVED_FROM_GAME,
 }),
-i(35265),	-- Design: Stormy Empyrean Sapphire
 i(35249),	-- Design: Subtle Lionseye
 i(35261, {	-- Design: Subtle Lionseye
 	["spellID"] = 0,	-- This is now available via 35249, need to delink the old plans from the recipe
@@ -5900,7 +5899,6 @@ itemrecipe("Design: Wicked Noble Topaz [TBC]", 31879, 39471, TBC_PHASE_ONE);
 itemrecipe("Design: Subtle Lionseye", 32284, 39713, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Sparkling Empyrean Sapphire", 32287, 39716, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Lustrous Empyrean Sapphire [TBC]", 32288, 39717, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Stormy Empyrean Sapphire", 32289, 39718, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Smooth Lionseye", 32291, 39720, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Rigid Lionseye [TBC]", 32292, 39721, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Gleaming Lionseye [TBC]", 32293, 39722, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
@@ -5941,7 +5939,6 @@ itemrecipe("Design: Smooth Lionseye", 35260, UNKNOWN_SPELLID, PHASE_21_IDENTIFIE
 itemrecipe("Design: Thick Lionseye", 35261, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Lustrous Empyrean Sapphire", 35262, 0, PHASE_2_IDENTIFIER);
 itemrecipe("Design: Sparkling Empyrean Sapphire", 35264, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Stormy Empyrean Sapphire", 35265, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Glinting Pyrestone", 35266, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Veiled Pyrestone", 35270, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Runed Living Ruby", 35305, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
