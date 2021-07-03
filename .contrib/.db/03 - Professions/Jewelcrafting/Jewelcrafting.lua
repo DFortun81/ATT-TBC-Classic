@@ -390,10 +390,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Forceful Seaspray Emerald",
 					["recipeID"] = 47053
 				}),
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Forceful Talasite",
 					["recipeID"] = 46405
-				},
+				}),
 				{
 					["name"] = "Jagged Deep Peridot",
 					["recipeID"] = 28917
@@ -5532,6 +5532,7 @@ itemrecipe("Design: Flashing Crimson Spinel", 32285, 39714);
 itemrecipe("Design: Flashing Living Ruby", 24198, 31091);
 itemrecipe("Design: Forceful Seaspray Emerald", 35765, 47053);
 itemrecipe("Design: Forceful Seaspray Emerald", 35769, 47053);
+itemrecipe("Design: Forceful Talasite", 35325, 46405);
 itemrecipe("Design: Hard Khorium Band", 35200, 46124);
 itemrecipe("Design: Hard Khorium Choker", 35203, 46127);
 itemrecipe("Design: Heavy Felsteel Ring", 24163, 31058);
@@ -5686,7 +5687,7 @@ itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Dr
 --[[
 -- From the Isle of QD:
 i(35247),	-- Design: Flashing Crimson Spinel
-i(35325),	-- Design: Forceful Talasite
+
 i(35266),	-- Design: Glinting Shadowsong Amethyst
 i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
@@ -5751,7 +5752,6 @@ i(23138),	-- Design: Potent Flame Spessarite
 
 
 i(35247),	-- Design: Flashing Crimson Spinel
-i(35325),	-- Design: Forceful Talasite
 i(35266),	-- Design: Glinting Shadowsong Amethyst
 i(35240, {	-- Design: Glinting Shadowsong Amethyst
 	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
@@ -5969,7 +5969,6 @@ itemrecipe("Design: Runed Living Ruby", 35305, UNKNOWN_SPELLID, PHASE_21_IDENTIF
 itemrecipe("Design: Bright Living Ruby [TBC]", 35306, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Rigid Dawnstone", 35307, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Quick Dawnstone", 35322, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Forceful Talasite", 35325, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
 itemrecipe("Design: Amulet of Flowing Life", 35533, UNKNOWN_SPELLID);
 itemrecipe("Design: Hard Khorium Band", 35534, UNKNOWN_SPELLID);
 itemrecipe("Design: Hard Khorium Choker", 35535, UNKNOWN_SPELLID);
