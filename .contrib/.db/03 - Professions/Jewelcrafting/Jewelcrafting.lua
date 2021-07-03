@@ -5570,6 +5570,7 @@ itemrecipe("Design: Mystical Skyfire Diamond", 25909, 32872);
 itemrecipe("Design: Nightseye Panther", 24183, 31083);
 itemrecipe("Design: Opal Necklace of Impact", 21948, 26897);
 itemrecipe("Design: Pendant of Sunfire", 35201, 46125);
+itemrecipe("Design: Pendant of Thawing", 24175, 31063);
 itemrecipe("Design: Pendant of the Agate Shield", 20970, 25610);
 itemrecipe("Design: Pendant of the Null Rune", 24178, 31066);
 itemrecipe("Design: Potent Noble Topaz", 24214, 31107);
@@ -5759,7 +5760,6 @@ i(35270),	-- Design: Veiled Shadowsong Amethyst
 -- From Shattrath... Oh god please why
 
 
-i(24175),	-- Design: Pendant of Thawing
 i(23138),	-- Design: Potent Flame Spessarite
 
 
@@ -5873,7 +5873,6 @@ itemrecipe("Design: Lustrous Azure Moonstone", 23155, UNKNOWN_SPELLID, TBC_PHASE
 itemrecipe("Design: Khorium Band of Shadows", 24158, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Arcane Khorium Band", 24162, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Frozen Flame", 24174, UNKNOWN_SPELLID);
-itemrecipe("Design: Pendant of Thawing", 24175, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Withering", 24176, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Shadow's End", 24177, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Living Ruby Serpent", 24181, UNKNOWN_SPELLID);
