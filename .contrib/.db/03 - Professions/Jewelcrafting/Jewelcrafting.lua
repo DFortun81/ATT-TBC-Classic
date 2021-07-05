@@ -5824,7 +5824,6 @@ i(24176),	-- Design: Pendant of Withering
 
 
 
-itemrecipe("Design: Heavy Iron Knuckles", 20971, 25612, TBC_PHASE_ONE);
 itemrecipe("Design: Silver Rose Pendant", 20972, 25614, TBC_PHASE_ONE);
 itemrecipe("Design: Blazing Citrine Ring", 20973, 25617, TBC_PHASE_ONE);
 itemrecipe("Design: Jade Pendant of Blasting", 20974, UNKNOWN_SPELLID);
