@@ -2240,11 +2240,11 @@ _.Zones =
 						objective(1, {	-- 0/12 Unyielding Footman slain
 							["cr"] = 16904,	-- Unyielding Footman
 						}),
-						objective(2, {	-- 0/8 Unyielding Knight slain
-							["cr"] = 16906,	-- Unyielding Knight
-						}),
-						objective(3, {	-- 0/6 Unyielding Sorcerer slain
+						objective(2, {	-- 0/10 Unyielding Sorcerer slain
 							["cr"] = 16905,	-- Unyielding Sorcerer
+						}),
+						objective(3, {	-- 0/5 Unyielding Knight slain
+							["cr"] = 16906,	-- Unyielding Knight
 						}),
 					},
 				}),
