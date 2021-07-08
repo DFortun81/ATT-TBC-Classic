@@ -697,15 +697,16 @@ _.Zones =
 					["coord"] = { 62.6, 40.2, BLADES_EDGE_MOUNTAINS },
 					["lvl"] = lvlsquish(65, 20, 65),
 				}),
-				q(11009, {	-- Ogre Heaven
+				applyclassicphase(TBC_PHASE_THREE_OGRILA, q(11009, {	-- Ogre Heaven
 					["qg"] = 22941,	-- Mog'dorg the Wizened
 					["sourceQuests"] = {
 						11000,	-- Into the Soulgrinder
 						11022,	-- Speak with Mog'dorg
 					},
+					["description"] = "You can pick up this quest now, but cannot turn it in until they introduce the Ogri'la faction in a later phase.",
 					["coord"] = { 55.5, 44.8, BLADES_EDGE_MOUNTAINS },
 					["lvl"] = lvlsquish(70, 20, 70),
-				}),
+				})),
 				q(10714, {	-- On Spirit's Wings
 					["qg"] = 21984,	-- Rexxar
 					["sourceQuest"] = 10709,	-- Reunion
