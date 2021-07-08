@@ -151,13 +151,28 @@ _.Zones =
 					["qg"] = 10618,	-- Rivern Frostwind
 					["minReputation"] = { 589, NEUTRAL },	-- Wintersaber Trainers, Neutral.
 					["maxReputation"] = { 589, EXALTED },	-- Wintersaber Trainers, Exalted.
-					["cost"] = {
-						{ "i", 12623, 5 },	-- Chillwind Meat
-						{ "i", 12622, 5 },	-- Shardtooth Meat
-					},
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 58,
+					["groups"] = {
+						objective(1, {	-- 0/5 Shardtooth Meat
+							["provider"] = { "i", 12622 },
+							["crs"] = {
+								7445,	-- Elder Shardtooth
+								7446,	-- Rabid Shardtooth
+								7444,	-- Shardtooth Bear
+								7443,	-- Shardtooth Mauler
+							},
+						}),
+						objective(2, {	-- 0/5 Chillwind Meat
+							["provider"] = { "i", 12623 },
+							["crs"] = {
+								7448,	-- Chillwind Chimaera
+								7449,	-- Chillwind Ravager
+								7447,	-- Fledgling Chillwind
+							},
+						}),
+					},
 				}),
 				q(4901, {	-- Guardians of the Altar
 					["qg"] = 10300,	-- Ranshalla
