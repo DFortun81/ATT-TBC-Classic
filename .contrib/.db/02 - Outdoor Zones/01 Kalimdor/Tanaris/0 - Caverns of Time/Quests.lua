@@ -6,7 +6,7 @@ _.Zones =
 	m(KALIMDOR, {
 		m(TANARIS, {
 			m(CAVERNS_OF_TIME, {
-				n(QUESTS, applyclassicphase(TBC_PHASE_ONE, {
+				n(QUESTS, applyclassicphase(TBC_PHASE_TWO, {
 					q(10445, {	-- The Vials of Eternity
 						["providers"] = {
 							{ "n", 19935 },	-- Soridormi
