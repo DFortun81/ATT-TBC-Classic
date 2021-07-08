@@ -6,7 +6,9 @@ _.Zones =
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(NAGRAND, {
 			n(FACTIONS, {
-				faction(933),	-- The Consortium
+				faction(933, {	-- The Consortium
+					["maps"] = { NETHERSTORM, AUCHINDOUN_MANA_TOMBS },
+				}),
 				faction(941, {	-- The Mag'har
 					["races"] = HORDE_ONLY,
 				}),
