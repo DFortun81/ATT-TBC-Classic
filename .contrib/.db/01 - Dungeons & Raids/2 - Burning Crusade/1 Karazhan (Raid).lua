@@ -70,6 +70,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					["qg"] = 23948,	-- Apprentice Tasserel
 					["coord"] = { 75.0, 33.2, SHATTRATH_CITY },
 					["maps"] = { DEADWIND_PASS, SHATTRATH_CITY },
+					["isBreadcrumb"] = true,
 					["lvl"] = 68,
 				}),
 				q(11031, {	-- Archmage No More
