@@ -699,11 +699,11 @@ profession(ALCHEMY, {
 					["name"] = "Flask of Blinding Light",
 					["recipeID"] = 28590
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Flask of Chromatic Wonder",
 					["timeline"] = { "removed 5.0.1.20000" },
 					["recipeID"] = 42736
-				},
+				}),
 				{
 					["name"] = "Flask of Fortification",
 					["recipeID"] = 28587
@@ -1047,7 +1047,7 @@ itemrecipe("Recipe: Fel Regeneration Potion", 31681, 38962, TBC_PHASE_ONE);
 itemrecipe("Recipe: Fel Mana Potion", 31682, 38961, TBC_PHASE_ONE);
 itemrecipe("Recipe: Earthen Elixir", 32070, 39637, TBC_PHASE_ONE);
 itemrecipe("Recipe: Elixir of Ironskin", 32071, 39639, TBC_PHASE_ONE);
-itemrecipe("Recipe: Flask of Chromatic Wonder", 33209, 42736, TBC_PHASE_ONE, "removed 5.0.1.20000");
+itemrecipe("Recipe: Flask of Chromatic Wonder", 33209, 42736, TBC_PHASE_THREE, "removed 5.0.1.20000");
 
 itemrecipe("Recipe: Elixir of Empowerment", 35294, 28578, TBC_PHASE_FIVE, true);
 itemrecipe("Recipe: Haste Potion", 35295, 28564, TBC_PHASE_FIVE, true);
