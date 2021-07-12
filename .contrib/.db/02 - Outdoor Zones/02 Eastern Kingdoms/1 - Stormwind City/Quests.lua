@@ -415,6 +415,7 @@ _.Zones =
 					},
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
+					["isBreadcrumb"] = true,
 					["lvl"] = 26,
 				}),
 				q(6183, {	-- Honor the Dead
