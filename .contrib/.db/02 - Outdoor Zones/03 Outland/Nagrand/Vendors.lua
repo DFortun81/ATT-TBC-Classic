@@ -457,7 +457,9 @@ _.Zones =
 						i(29230),	-- Reins of the Tan War Talbuk
 						i(31836),	-- Reins of the White Riding Talbuk
 						i(29231),	-- Reins of the White War Talbuk
-						un(REMOVED_FROM_GAME, i(29144)),	-- Worg Hide Quiver
+						i(29144, {	-- Worg Hide Quiver
+							["timeline"] = { "removed 4.0.1.12941" },
+						}),
 					},
 				}),
 				n(20096, {	-- Uriku <Cooking Supplies>

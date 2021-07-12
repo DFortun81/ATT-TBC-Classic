@@ -64,10 +64,6 @@ local VENDOR_GEMS = {
 	i(28470),	-- Thick Amber (TBC) / Subtle Amber (Cata+)
 };
 local FELANNIA_JOHAN_GROUPS = {};
--- #if AFTER WRATH
--- All of these were removed and the associated recipes are now available through trainers now.
-bubbleDown({ ["spellID"] = 0, ["u"] = REMOVED_FROM_GAME }, JEWELCRAFTING_PATTERNS);
--- #endif
 _.Zones =
 {
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {

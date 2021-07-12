@@ -10,7 +10,6 @@ _.Zones =
 					["provider"] = { "n", 18528 },	-- Xi'ri
 					["coord"] = { 65.2, 44.0, SHADOWMOON_VALLEY },
 					["sourceQuests"] = { 10949 },	-- Entry Into the Black Temple
-					["u"] = REMOVED_FROM_GAME,
 					["groups"] = {
 						i(32649),	-- Medallion of Karabor
 					},
@@ -696,14 +695,20 @@ _.Zones =
 					["coord"] = { 59.3, 58.7, SHADOWMOON_VALLEY },
 				}),
 				q(11497, {	-- Learning to Fly (A)
-					["u"] = REMOVED_FROM_GAME,
+					["qg"] = 18940,	-- Nutral
+					["coord"] = { 63.8, 41, SHATTRATH_CITY },
+					["maps"] = { SHATTRATH_CITY },
 					["races"] = ALLIANCE_ONLY,
-					["provider"] = { "n", 18940 },	-- Nutral
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(70, 20, 70),
 				}),
 				q(11498, {	-- Learning to Fly (H)
-					["u"] = REMOVED_FROM_GAME,
+					["qg"] = 18940,	-- Nutral
+					["coord"] = { 63.8, 41, SHATTRATH_CITY },
+					["maps"] = { SHATTRATH_CITY },
 					["races"] = HORDE_ONLY,
-					["provider"] = { "n", 18940 },	-- Nutral
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(70, 20, 70),
 				}),
 				q(10537, {	-- Lohn'goron, Bow of the Torn-heart
 					["provider"] = { "n", 21318 },	-- Spirit of Ar'tor

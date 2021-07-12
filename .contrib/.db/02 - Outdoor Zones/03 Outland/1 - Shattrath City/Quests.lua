@@ -233,7 +233,6 @@ _.Zones =
 					["provider"] = { "n", 24932 },	-- Exarch Nasuun
 					["isDaily"] = true,
 					["coord"] = { 49.8, 42.6, SHATTRATH_CITY },
-					["u"] = REMOVED_FROM_GAME,
 				})),
 				applyclassicphase(TBC_PHASE_FIVE, q(11514, {	-- Maintaining the Sunwell Portal
 					["provider"] = { "n", 24932 },	-- Exarch Nasuun
@@ -361,10 +360,6 @@ _.Zones =
 				q(10210, {	-- A'dal
 					["provider"] = { "n", 19684 },	-- Haggard War Veteran
 					["coord"] = { 59.6, 41.4, SHATTRATH_CITY },
-				}),
-				q(11216, {	-- Archmage Alturus
-					["u"] = REMOVED_FROM_GAME,
-					["provider"] = { "n", 23948 },	-- Apprentice Tasserel
 				}),
 				q(10211, {	-- City of Light
 					["provider"] = { "n", 18166 },	-- Archmage Khadgar

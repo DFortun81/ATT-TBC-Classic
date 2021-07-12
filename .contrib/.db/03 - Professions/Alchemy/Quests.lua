@@ -10,9 +10,7 @@ profession(ALCHEMY, {
 			["cost"] = {
 				{ "i", 7867, 3 },	-- Vessel of Dragon's Blood
 			},
-			-- #if AFTER CATA
-			["u"] = REMOVED_FROM_GAME,
-			-- #endif
+			["timeline"] = { "removed 4.0.3" },
 			["lvl"] = 40,
 			["groups"] = {
 				i(7870, {	-- Thaumaturgy Vessel Lockbox
@@ -25,9 +23,7 @@ profession(ALCHEMY, {
 				}),
 				recipe(11452, {	-- Restorative Potion
 					["requireSkill"] = ALCHEMY,
-					-- #if AFTER CATA
-					["u"] = REMOVED_FROM_GAME,
-					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 				}),
 			},
 		}),
@@ -41,9 +37,7 @@ profession(ALCHEMY, {
 			["cost"] = {
 				{ "i", 7867, 3 },	-- Vessel of Dragon's Blood
 			},
-			-- #if AFTER CATA
-			["u"] = REMOVED_FROM_GAME,
-			-- #endif
+			["timeline"] = { "removed 4.0.3" },
 			["lvl"] = 40,
 			["groups"] = {
 				i(7870, {	-- Thaumaturgy Vessel Lockbox
@@ -56,9 +50,7 @@ profession(ALCHEMY, {
 				}),
 				recipe(11452, {	-- Restorative Potion
 					["requireSkill"] = ALCHEMY,
-					-- #if AFTER CATA
-					["u"] = REMOVED_FROM_GAME,
-					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 				}),
 			},
 		}),
