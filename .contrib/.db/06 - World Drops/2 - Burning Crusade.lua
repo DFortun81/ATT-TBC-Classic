@@ -1174,10 +1174,6 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(31876),	-- Design: Shifting Nightseye [CATA+] / Design: Balanced Nightseye [TBC]
 			-- #endif
 			i(24204),	-- Design: Smooth Dawnstone
-			i(24206, {	-- Design: Smooth Dawnstone
-				["spellID"] = 0,	-- This is now available via 24204, need to delink the old plans from the recipe
-				["u"] = REMOVED_FROM_GAME,
-			}),
 			i(24199),	-- Design: Solid Star of Elune (BoE version)
 			i(24209),	-- Design: Sovereign Nightseye
 			i(24200),	-- Design: Sparkling Star of Elune
