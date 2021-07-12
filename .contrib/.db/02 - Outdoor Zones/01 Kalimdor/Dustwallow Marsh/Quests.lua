@@ -292,6 +292,7 @@ _.Zones =
 				applyclassicphase(TBC_PHASE_ONE, q(11211, {	-- Help for Mudsprocket
 					["qg"] = 6546,	-- Tabetha
 					["coord"] = { 46, 57, DUSTWALLOW_MARSH },
+					["isBreadcrumb"] = true,
 					["lvl"] = 38,
 				})),
 				applyclassicphase(TBC_PHASE_ONE, q(11215, {	-- Help Mudsprocket
