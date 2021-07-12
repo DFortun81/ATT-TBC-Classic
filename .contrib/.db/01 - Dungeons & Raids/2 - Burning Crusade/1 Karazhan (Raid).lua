@@ -631,11 +631,11 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					["groups"] = {
 						i(25903),	-- Design: Bracing Earthstorm Diamond
 						i(25902),	-- Design: Powerful Earthstorm Diamond
-						i(22535, { 	-- Formula: Enchant Ring - Striking
+						applyclassicphase(TBC_PHASE_THREE, i(22535, { 	-- Formula: Enchant Ring - Striking
 							-- #if AFTER BFA
 							["description"] = "This grey item is now needed for the second half of the secret involving the battle pet Baa'l.",
 							-- #endif
-						}),
+						})),
 					},
 				}),
 			}),
