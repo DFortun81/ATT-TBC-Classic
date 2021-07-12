@@ -2053,8 +2053,6 @@ itemrecipe("Pattern: Windstrike Gloves", 29731, 35568, TBC_PHASE_ONE);
 itemrecipe("Pattern: Netherdrake Helm", 29732, 35572, TBC_PHASE_ONE);
 itemrecipe("Pattern: Netherdrake Gloves", 29733, 35573, TBC_PHASE_ONE);
 itemrecipe("Pattern: Thick Netherscale Breastplate", 29734, 35574, TBC_PHASE_ONE);
-itemrecipe("Pattern: Cloak of Darkness", 33124, 42546, TBC_PHASE_ONE);
-itemrecipe("Pattern: Shadowprowler's Chestguard", 33205, 42731, TBC_PHASE_ONE);
 itemrecipe("Pattern: Drums of Speed", 34172, 35544, TBC_PHASE_ONE);
 itemrecipe("Pattern: Drums of Speed", 34173, 35544, TBC_PHASE_ONE);
 itemrecipe("Pattern: Drums of Restoration", 34174, 35539, TBC_PHASE_ONE);
@@ -2076,6 +2074,9 @@ itemrecipe("Pattern: Boots of Natural Grace", 30305, 36355, TBC_PHASE_TWO);
 itemrecipe("Pattern: Boots of Utter Darkness", 30306, 36357, TBC_PHASE_TWO);
 itemrecipe("Pattern: Boots of the Crimson Hawk", 30307, 36358, TBC_PHASE_TWO);
 itemrecipe("Pattern: Hurricane Boots", 30308, 36359, TBC_PHASE_TWO);
+
+itemrecipe("Pattern: Cloak of Darkness", 33124, 42546, TBC_PHASE_THREE);
+itemrecipe("Pattern: Shadowprowler's Chestguard", 33205, 42731, TBC_PHASE_THREE);
 
 itemrecipe("Pattern: Boots of Shackled Souls", 32429, 39997, TBC_PHASE_THREE);
 itemrecipe("Pattern: Bracers of Shackled Souls", 32430, 40000, TBC_PHASE_THREE);
