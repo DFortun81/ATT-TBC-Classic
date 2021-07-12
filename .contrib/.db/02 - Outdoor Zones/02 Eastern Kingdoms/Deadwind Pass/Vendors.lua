@@ -14,8 +14,8 @@ _.Zones =
 					-- #endif
 					["groups"] = {
 						i(31401),	-- Design: The Frozen Eye
-						i(33165),	-- Formula: Enchant Weapon - Greater Agility
 						i(33124, {	-- Pattern: Cloak of Darkness
+						applyclassicphase(TBC_PHASE_THREE, i(33165)),	-- Formula: Enchant Weapon - Greater Agility
 							["spellID"] = 42546,	-- Cloak of Darkness
 							["requireSkill"] = LEATHERWORKING,
 							["f"] = 200,
