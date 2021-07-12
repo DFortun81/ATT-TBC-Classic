@@ -635,6 +635,7 @@ _.Zones =
 					["provider"] = { "n", 19645 },	-- Papa Wheeler
 					["coord"] = { 33.0, 64.7, NETHERSTORM },
 					["sourceQuest"] = 10206,	-- Pick Your Part
+					["isBreadcrumb"] = true,
 				}),
 				q(10293, {	-- Hitting the Motherlode
 					["provider"] = { "n", 20067 },	-- Zuben Elgenubi
