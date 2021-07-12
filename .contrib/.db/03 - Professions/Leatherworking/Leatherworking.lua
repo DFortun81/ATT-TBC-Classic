@@ -1357,10 +1357,10 @@ profession(LEATHERWORKING, {
 					["name"] = "Scaled Draenic Vest",
 					["recipeID"] = 32468
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Shadowprowler's Chestguard",
 					["recipeID"] = 42731
-				},
+				}),
 				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Sun-Drenched Scale Chestguard",
 					["recipeID"] = 46139
@@ -1669,10 +1669,10 @@ profession(LEATHERWORKING, {
 			["name"] = "Cloaks",
 			["categoryID"] = 938,
 			["groups"] = {
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Cloak of Darkness",
 					["recipeID"] = 42546
-				}
+				})
 			}
 		},
 		{

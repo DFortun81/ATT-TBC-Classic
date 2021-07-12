@@ -14,18 +14,18 @@ _.Zones =
 					-- #endif
 					["groups"] = {
 						i(31401),	-- Design: The Frozen Eye
-						i(33124, {	-- Pattern: Cloak of Darkness
 						applyclassicphase(TBC_PHASE_THREE, i(33165)),	-- Formula: Enchant Weapon - Greater Agility
+						applyclassicphase(TBC_PHASE_THREE, i(33124, {	-- Pattern: Cloak of Darkness
 							["spellID"] = 42546,	-- Cloak of Darkness
 							["requireSkill"] = LEATHERWORKING,
 							["f"] = 200,
-						}),
-						i(33205, {	-- Pattern: Shadowprowler's Chestguard
+						})),
+						applyclassicphase(TBC_PHASE_THREE, i(33205, {	-- Pattern: Shadowprowler's Chestguard
 							["spellID"] = 42731,	-- Shadowprowler's Chestguard
 							["requireSkill"] = LEATHERWORKING,
 							["f"] = 200,
-						}),
-						i(33209),	-- Recipe: Flask of Chromatic Wonder
+						})),
+						applyclassicphase(TBC_PHASE_THREE, i(33209)),	-- Recipe: Flask of Chromatic Wonder
 						i(29187),	-- Inscription of Endurance
 						-- #if BEFORE CATA
 						applyclassicphase(TBC_PHASE_THREE, i(34581, {	-- Mysterious Arrow
