@@ -5514,9 +5514,11 @@ end
 -- Recipes introduced with Burning Crusade
 itemrecipe("Design: Amulet of Flowing Life", 35202, 46126);
 itemrecipe("Design: Amulet of the Moon", 20854, 25339);
+itemrecipe("Design: Arcane Khorium Band", 24162, 31057);
 itemrecipe("Design: Black Pearl Panther", 21941, 26875);
 itemrecipe("Design: Blazing Citrine Ring", 20973, 25617);
 itemrecipe("Design: Blazing Eternium Band", 24165, 31061);
+itemrecipe("Design: Blood of Amber", 33159, 42592);
 itemrecipe("Design: Bold Crimson Spinel", 32274, 39705);
 itemrecipe("Design: Bold Crimson Spinel", 35244, 39705);
 itemrecipe("Design: Bold Living Ruby", 24193, 31084);
@@ -5565,6 +5567,7 @@ itemrecipe("Design: Inscribed Pyrestone", 35267, 39733);
 itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742);
 itemrecipe("Design: Jagged Seaspray Emerald", 35253, 39742);
 itemrecipe("Design: Jagged Talasite", 24220, 31113);
+itemrecipe("Design: Kailee's Rose", 33155, 42588);
 itemrecipe("Design: Khorium Band of Frost", 24159, 31054);
 itemrecipe("Design: Khorium Band of Leaves", 24161, 31056);
 itemrecipe("Design: Khorium Inferno Band", 24160, 31055);
@@ -5813,9 +5816,7 @@ i(23143, {	-- Design: Purified Shadow Draenite
 }),
 i(23149),	-- Design: Smooth Golden Draenite
 
-i(33159),	-- Design: Blood of Amber
 i(25904),	-- Design: Insightful Earthstorm Diamond
-i(33155),	-- Design: Kailee's Rose
 i(30826),	-- Design: Ring of Arcane Shielding
 i(24182),	-- Design: Talasite Owl
 i(23133),	-- Design: Brilliant Blood Garnet
@@ -5868,7 +5869,6 @@ itemrecipe("Design: Rigid Golden Draenite [TBC]", 23151, 28948, TBC_PHASE_ONE, "
 itemrecipe("Design: Solid Azure Moonstone [TBC]", 23152, 28950, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Lustrous Azure Moonstone", 23155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Khorium Band of Shadows", 24158, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Arcane Khorium Band", 24162, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Pendant of Frozen Flame", 24174, UNKNOWN_SPELLID);
 itemrecipe("Design: Pendant of Withering", 24176, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Living Ruby Serpent", 24181, UNKNOWN_SPELLID);
@@ -5910,9 +5910,7 @@ itemrecipe("Design: Infused Shadowsong Amethyst [TBC]", 32300, 39730, PHASE_19_I
 itemrecipe("Design: Royal Shadowsong Amethyst [TBC]", 32302, 39732, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
 itemrecipe("Design: Glinting Pyrestone [TBC]", 32306, 39736, PHASE_19_IDENTIFIER);
 itemrecipe("Design: Dazzling Seaspray Emerald [TBC]", 32311, 39741, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Kailee's Rose", 33155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Stone of Blades", 33158, UNKNOWN_SPELLID);
-itemrecipe("Design: Blood of Amber", 33159, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Facet of Eternity", 33160, UNKNOWN_SPELLID);
 itemrecipe("Design: Steady Talasite", 33783, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Chaotic Skyfire Diamond", 34221, UNKNOWN_SPELLID);
