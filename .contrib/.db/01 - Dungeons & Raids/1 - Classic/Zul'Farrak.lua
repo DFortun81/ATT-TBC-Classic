@@ -30,7 +30,11 @@ _.Instances = { tier(1, {	-- Classic
 					["groups"] = {
 						{
 							["itemID"] = 11122,	-- Carrot on a Stick
+							-- #if AFTER TBC
+							["description"] = "Once you have a Riding Crop, you may safely vendor this item as the two effects do not stack. Until then, use it to make mounted travel more efficient.",
+							-- #else
 							["description"] = "Do NOT vendor this item. Keep it with you always. It is best-in-slot when you are traveling long distances on your mount. (which you do a lot in Classic!)",
+							-- #endif
 						},
 						un(NEVER_IMPLEMENTED, i(9653)),	-- Speedy Racer Goggles
 					},
