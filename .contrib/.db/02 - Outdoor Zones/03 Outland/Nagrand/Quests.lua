@@ -819,15 +819,16 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 				}),
 				q(10113, {	-- The Nesingwary Safari (A)
-					["isBreadcrumb"] = true,
 					["provider"] = { "n", 19137 },	-- "Shotgun" Jones <Nesingwary Safari>
 					["coord"] = { 55.0, 70.4, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
 				}),
 				q(10114, {	-- The Nesingwary Safari (H)
 					["provider"] = { "n", 19133 },	-- Ohlorn Farstrider <Nesingwary Safari>
 					["coord"] = { 55.4, 37.4, NAGRAND },
 					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
 				}),
 				q(9956,  { 	-- The Ravaged Caravan
 					["provider"] = { "n", 18416 },	-- Huntress Kima
