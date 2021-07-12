@@ -1131,6 +1131,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24170),	-- Design: Embrace of the Dawn
 			i(24169),	-- Design: Eye of the Night
 			i(24198),	-- Design: Flashing Living Ruby
+			-- #if BEFORE CATA
+			i(24206),	-- Design: Gleaming Dawnstone [TBC] / Design: Smooth Dawnstone [CATA+]
+			-- #endif
 			-- #if AFTER CATA
 			i(31877),	-- Design: Glinting Nightseye [CATA+] / Design: Infused Nightseye [TBC]
 			-- #endif
@@ -1174,6 +1177,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(31876),	-- Design: Shifting Nightseye [CATA+] / Design: Balanced Nightseye [TBC]
 			-- #endif
 			i(24204),	-- Design: Smooth Dawnstone
+			-- #if AFTER CATA
+			i(24206),	-- Design: Smooth Dawnstone [CATA+] / Design: Gleaming Dawnstone [TBC]
+			-- #endif
 			i(24199),	-- Design: Solid Star of Elune (BoE version)
 			i(24209),	-- Design: Sovereign Nightseye
 			i(24200),	-- Design: Sparkling Star of Elune
