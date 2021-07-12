@@ -401,8 +401,8 @@ _.Instances = { tier(1, {	-- Classic
 				{
 					["questID"] = 4136,	-- Ribbly Screwspigot
 					["qg"] = 9544,	-- Yuka Screwspigot
-					["coord"] = { 66.1, 21.9, BLASTED_LANDS },
-					["maps"] = { BLASTED_LANDS },
+					["coord"] = { 66.1, 21.9, BURNING_STEPPES },
+					["maps"] = { BURNING_STEPPES },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 11313, 1 },	-- Ribbly's Head
