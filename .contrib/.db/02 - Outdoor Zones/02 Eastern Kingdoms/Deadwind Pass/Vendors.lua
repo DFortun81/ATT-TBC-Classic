@@ -28,16 +28,16 @@ _.Zones =
 						i(33209),	-- Recipe: Flask of Chromatic Wonder
 						i(29187),	-- Inscription of Endurance
 						-- #if BEFORE CATA
-						i(34581, {	-- Mysterious Arrow
+						applyclassicphase(TBC_PHASE_THREE, i(34581, {	-- Mysterious Arrow
 							["timeline"] = {
 								"removed 4.0.1.20000"
 							},
-						}),
-						i(34582, {	-- Mysterious Shell
+						})),
+						applyclassicphase(TBC_PHASE_THREE, i(34582, {	-- Mysterious Shell
 							["timeline"] = {
 								"removed 4.0.1.20000"
 							},
-						}),
+						})),
 						-- #endif
 					},
 				}),
