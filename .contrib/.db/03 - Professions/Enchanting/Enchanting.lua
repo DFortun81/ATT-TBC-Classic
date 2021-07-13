@@ -746,16 +746,16 @@ profession(ENCHANTING, {
 					["timeline"] = { "removed 6.0.2.10000" },
 					["recipeID"] = 27924,
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Stats",
 					["timeline"] = { "removed 6.0.2.10000" },
 					["recipeID"] = 27927,
-				},
-				applyclassicphase(TBC_PHASE_THREE, {
+				}),
+				{
 					["name"] = "Striking",
 					["timeline"] = { "removed 6.0.2.10000" },
 					["recipeID"] = 27920,
-				}),
+				},
 			},
 		},
 		{
@@ -971,10 +971,10 @@ profession(ENCHANTING, {
 					["name"] = "Major Spellpower",
 					["recipeID"] = 27975
 				},
-				{
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Major Striking",
 					["recipeID"] = 27967
-				},
+				}),
 				{
 					["name"] = "Mongoose",
 					["recipeID"] = 27984
@@ -1252,7 +1252,7 @@ itemrecipe("Formula: Enchant Bracer - Spellpower", 22534, 27917, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Ring - Striking", 22535, 27920, TBC_PHASE_ONE, "removed 6.0.2.10000");
 itemrecipe("Formula: Enchant Ring - Spellpower", 22536, 27924, TBC_PHASE_ONE, "removed 6.0.2.10000");
 itemrecipe("Formula: Enchant Ring - Healing Power", 22537, 27926, TBC_PHASE_ONE, "removed 6.0.2.10000");
-itemrecipe("Formula: Enchant Ring - Stats", 22538, 27927, TBC_PHASE_ONE, "removed 6.0.2.10000");
+itemrecipe("Formula: Enchant Ring - Stats", 22538, 27927, TBC_PHASE_THREE, "removed 6.0.2.10000");
 itemrecipe("Formula: Enchant Shield - Intellect", 22539, 27945, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Shield - Shield Block", 22540, 27946, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Shield - Resistance", 22541, 27947, TBC_PHASE_ONE, "removed 5.0.4.10000");
@@ -1263,7 +1263,7 @@ itemrecipe("Formula: Enchant Boots - Surefooted", 22545, 27954, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Chest - Exceptional Stats", 22547, 27960, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Cloak - Major Resistance", 22548, 27962, TBC_PHASE_ONE, "removed 5.0.4.10000");
 itemrecipe("Formula: Enchant Weapon - Major Intellect", 22551, 27968, TBC_PHASE_ONE);
-itemrecipe("Formula: Enchant Weapon - Major Striking", 22552, 27967, TBC_PHASE_ONE);
+itemrecipe("Formula: Enchant Weapon - Major Striking", 22552, 27967, TBC_PHASE_TWO);
 itemrecipe("Formula: Enchant Weapon - Potency", 22553, 27972, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant 2H Weapon - Savagery", 22554, 27971, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Weapon - Major Spellpower", 22555, 27975, TBC_PHASE_ONE);

@@ -1061,7 +1061,7 @@ _.Zones =
 						i(35331),	-- Dreadweave Mantle
 						i(35344),	-- Evoker's Silk Cowl
 						i(33148),	-- Formula: Enchant Cloak - Dodge
-						i(22538),	-- Formula: Enchant Ring - Stats
+						applyclassicphase(TBC_PHASE_THREE, i(22538)),	-- Formula: Enchant Ring - Stats
 						i(30832),	-- Gavel of Unearthed Secrets
 						i(35361),	-- Kodohide Gloves
 						i(30836),	-- Leggings of the Skettis Exile
