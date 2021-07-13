@@ -1249,7 +1249,7 @@ itemrecipe("Formula: Enchant Bracer - Superior Healing", 22531, 27911, TBC_PHASE
 itemrecipe("Formula: Enchant Bracer - Restore Mana Prime", 22532, 27911, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Bracer - Fortitude", 22533, 27914, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Bracer - Spellpower", 22534, 27917, TBC_PHASE_ONE);
-itemrecipe("Formula: Enchant Ring - Striking", 22535, 27920, TBC_PHASE_THREE, "removed 6.0.2.10000");
+itemrecipe("Formula: Enchant Ring - Striking", 22535, 27920, TBC_PHASE_ONE, "removed 6.0.2.10000");
 itemrecipe("Formula: Enchant Ring - Spellpower", 22536, 27924, TBC_PHASE_ONE, "removed 6.0.2.10000");
 itemrecipe("Formula: Enchant Ring - Healing Power", 22537, 27926, TBC_PHASE_ONE, "removed 6.0.2.10000");
 itemrecipe("Formula: Enchant Ring - Stats", 22538, 27927, TBC_PHASE_ONE, "removed 6.0.2.10000");
