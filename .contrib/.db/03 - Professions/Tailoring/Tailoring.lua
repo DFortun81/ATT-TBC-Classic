@@ -508,7 +508,10 @@ profession(TAILORING, {
 				{
 					["name"] = "Robe of the Void",
 					["timeline"] = { "timeline 5.0.4.10000" },
-					["recipeID"] = 18458
+					["recipeID"] = 18458,
+					-- #if AFTER TBC
+					["classes"] = { WARLOCK },
+					-- #endif
 				},
 				{
 					["name"] = "Robe of Winter Night",
