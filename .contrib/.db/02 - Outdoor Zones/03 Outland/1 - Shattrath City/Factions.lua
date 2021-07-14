@@ -13,7 +13,9 @@ _.Zones =
 				faction(934, {	-- The Scryers
 					["maxReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 				}),
-				faction(935),	-- The Sha'tar
+				faction(935, {	-- The Sha'tar
+					["maps"] = { TEMPEST_KEEP_ARCATRAZ, TEMPEST_KEEP_BOTANICA, TEMPEST_KEEP_MECHANAR },
+				}),
 			}),
 		}),
 	})),
