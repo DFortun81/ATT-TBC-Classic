@@ -877,14 +877,15 @@ _.Zones =
 					["sourceQuest"] = 11138,	-- Renn McGill
 					["coord"] = { 63.7, 17.0, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 33038, 1 },	-- Damaged Diving Gear
-						{ "i", 33039, 1 },	-- Tool Kit
-					},
 					["lvl"] = 32,
 					["groups"] = {
-						i(33038, {	-- Damaged Diving Gear
-							["coord"] = { 62.6, 18.2, DUSTWALLOW_MARSH },
+						objective(1, {	-- 0/1 Damaged Diving Gear
+							["provider"] = { "i", 33038 },	-- Damaged Diving Gear
+							["coord"] = { 61.68, 18.16, DUSTWALLOW_MARSH },
+						}),
+						objective(2, {	-- 0/1 Tool Kit
+							["provider"] = { "i", 33039 },	-- Tool Kit
+							["coord"] = { 62.9, 18.80, DUSTWALLOW_MARSH },
 						}),
 					},
 				})),

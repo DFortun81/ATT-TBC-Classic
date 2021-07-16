@@ -149,10 +149,6 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["u"] = TBC_PHASE_ONE,
 				}),
-				i(33039, {	-- Tool Kit
-					["coord"] = { 64.9, 26.9, DUSTWALLOW_MARSH },
-					["u"] = TBC_PHASE_ONE,
-				}),
 				i(5884, {	-- Unpopped Darkmist Eye
 					["crs"] = {
 						4377,	-- Darkmist Lurker
