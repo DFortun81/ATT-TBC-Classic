@@ -74,8 +74,6 @@ _.Zones =
 					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { AZUREMYST_ISLE },
 					["classes"] = { PALADIN },
-					["races"] = { DRAENEI },
-					["isBreadcrumb"] = true,
 					["lvl"] = lvlsquish(12, 10, 12),
 				}),
 				q(32661, {	-- Learn To Ride
