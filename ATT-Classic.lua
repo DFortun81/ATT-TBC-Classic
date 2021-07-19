@@ -2781,6 +2781,7 @@ local EXTERMINATOR = {
 	["Player-4372-00312AD9"] = true,	-- Hewn
 	["Player-4372-0046F7E8"] = true,	-- Holochops
 	["Player-4372-007AF4B7"] = true,	-- Intothefray
+	["Player-4372-01125B10"] = true,	-- Jonaya
 	["Player-4372-011C1FE9"] = true,	-- Katalysm
 	["Player-4372-00EBCC07"] = true,	-- Lilithann
 	["Player-4372-0075A187"] = true,	-- Loknido
