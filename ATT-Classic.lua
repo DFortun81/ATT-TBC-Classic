@@ -8830,7 +8830,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 					}),
 				},
 			};
-			selectedInstance = instances.options[5];
+			selectedInstance = instances.options[#instances.options];
 			selectedQuest = app.CreateQuest(971);
 			instanceSelector = app.CreateMap(1455, {
 				['visible'] = true,
