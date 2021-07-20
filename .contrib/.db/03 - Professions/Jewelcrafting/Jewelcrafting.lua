@@ -5510,7 +5510,6 @@ local itemrecipe = function(name, itemID, spellID, spellIDAfterCata, timeline)
 	return o;
 end
 
--- #if AFTER TBC
 -- Recipes introduced with Burning Crusade
 itemrecipe("Design: Amulet of Flowing Life", 35202, 46126);
 itemrecipe("Design: Amulet of the Moon", 20854, 25339);
@@ -5947,8 +5946,6 @@ itemrecipe("Design: Regal Nightseye", 35708, UNKNOWN_SPELLID, PHASE_21_IDENTIFIE
 itemrecipe("Design: Purified Shadowsong Amethyst", 37504, 0, PHASE_2_IDENTIFIER);
 ]]--
 
-
--- #endif
 
 -- #if AFTER WRATH
 --[[
