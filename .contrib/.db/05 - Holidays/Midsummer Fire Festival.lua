@@ -114,7 +114,6 @@ _.Holidays = bubbleDown({ ["u"] = MIDSUMMER_FIRE_FESTIVAL },
 						}),
 					},
 				}),
-				-- #if AFTER WRATH
 				i(54536, {	-- Satchel of Chilled Goods
 					["timeline"] = { "added 3.3.3.11723", "removed 6.0.1.18594" },
 					["groups"] = {
@@ -135,7 +134,6 @@ _.Holidays = bubbleDown({ ["u"] = MIDSUMMER_FIRE_FESTIVAL },
 						-- #endif
 					},
 				}),
-				-- #endif
 				i(35723, {	-- Shards of Ahune
 					["description"] = "This item can be looted and completed once per character.",
 					["timeline"] = { "added 2.4.0.7994" },
