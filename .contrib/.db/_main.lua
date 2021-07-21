@@ -764,6 +764,9 @@ applylegacyclassicphase = function(phase, data)
 	return bubbleDown({ ["u"] = REMOVED_FROM_GAME }, data);
 	-- #endif
 end
+applyholiday = function(holiday, data)
+	return bubbleDown({ ["u"] = holiday }, data);
+end
 lvlsquish = function(originalLvl, shadowlandsLvl, retailLvl)
 	-- #if ANYCLASSIC
 	return originalLvl;
