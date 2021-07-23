@@ -537,6 +537,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		q(44570, {	-- Honor the Flame — Spires of Arak
 			["qg"] = 114488,	-- Spires of Arak Flame Guardian
 			["coord"] = { 48.0, 44.6, 542 },
+			["timeline"] = { "added 6.0.1" },
 			["maps"] = { 542 },	-- Spires of Arak
 			["isYearly"] = true,
 		}),
@@ -654,6 +655,12 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 			},
 			["races"] = ALLIANCE_ONLY,
 			["isDaily"] = true,
+			["groups"] = {
+				objective(1, {	-- 	Catch 4 torches in a row.
+					["provider"] = { "i", 34833 },	-- Unlit Torches
+				}),
+				i(23247),	-- Burning Blossom
+			},
 		}),
 		q(11925, {	-- More Torch Catching (H)
 			["qg"] = 26113,	-- Master Flame Eater
@@ -673,6 +680,12 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 			},
 			["races"] = HORDE_ONLY,
 			["isDaily"] = true,
+			["groups"] = {
+				objective(1, {	-- 	Catch 4 torches in a row.
+					["provider"] = { "i", 34833 },	-- Unlit Torches
+				}),
+				i(23247),	-- Burning Blossom
+			},
 		}),
 		q(11921, {	-- More Torch Tossing (A)
 			["qg"] = 25975,	-- Master Fire Eater
@@ -692,6 +705,12 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 			},
 			["races"] = ALLIANCE_ONLY,
 			["isDaily"] = true,
+			["groups"] = {
+				objective(1, {	-- Hit 8 braziers.
+					["provider"] = { "i", 34862 },	-- Practice Torches
+				}),
+				i(23247),	-- Burning Blossom
+			},
 		}),
 		q(11926, {	-- More Torch Tossing (H)
 			["qg"] = 26113,	-- Master Flame Eater
@@ -711,6 +730,12 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 			},
 			["races"] = HORDE_ONLY,
 			["isDaily"] = true,
+			["groups"] = {
+				objective(1, {	-- Hit 8 braziers.
+					["provider"] = { "i", 34862 },	-- Practice Torches
+				}),
+				i(23247),	-- Burning Blossom
+			},
 		}),
 		q(11882, {	-- Playing with Fire (A)
 			["qg"] = FIRE_EATER_ALLIANCE_ID,
@@ -1140,11 +1165,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 			["races"] = ALLIANCE_ONLY,
 			["groups"] = {
 				objective(1, {	-- 	Catch 4 torches in a row.
-					["provider"] = { "i", 34599 },	-- Juggling Torch
-					["cost"] = {
-						{ "i", 34833, 1 },	-- Unlit Torches
-					},
+					["provider"] = { "i", 34833 },	-- Unlit Torches
 				}),
+				i(34599),	-- Juggling Torch
 				i(23247),	-- Burning Blossom
 			},
 		}),
@@ -1167,11 +1190,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 			["races"] = HORDE_ONLY,
 			["groups"] = {
 				objective(1, {	-- 	Catch 4 torches in a row.
-					["provider"] = { "i", 34599 },	-- Juggling Torch
-					["cost"] = {
-						{ "i", 34833, 1 },	-- Unlit Torches
-					},
+					["provider"] = { "i", 34833 },	-- Unlit Torches
 				}),
+				i(34599),	-- Juggling Torch
 				i(23247),	-- Burning Blossom
 			},
 		}),
@@ -1646,7 +1667,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { 121 },	-- Zul'Drak
 				}),
 				q(11804, {	-- Honor the Flame — Arathi Highlands
-					["provider"] = { "n", 25887 },	-- Arathi Flame Warden
+					["qg"] = 25887,	-- Arathi Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 44.3, 45.8, ARATHI_HIGHLANDS },
 					-- #else
@@ -1655,7 +1676,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { ARATHI_HIGHLANDS },
 				}),
 				q(11805, {	-- Honor the Flame — Ashenvale
-					["provider"] = { "n", 25883 },	-- Ashenvale Flame Warden
+					["qg"] = 25883,	-- Ashenvale Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 87.0, 42.0, ASHENVALE },
 					-- #else
@@ -1664,23 +1685,23 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { ASHENVALE },
 				}),
 				q(11806, {	-- Honor the Flame — Azuremyst Isle
-					["provider"] = { "n", 25888 },	-- Azuremyst Isle Flame Warden
+					["qg"] = 25888,	-- Azuremyst Isle Flame Warden
 					["coord"] = { 44.0, 53.0, AZUREMYST_ISLE },
 					["maps"] = { AZUREMYST_ISLE },
 				}),
 				q(28925, {	-- Honor the Flame — Badlands
-					["provider"] = { "n", 51585 },	-- Badlands Flame Warden
+					["qg"] = 51585,	-- Badlands Flame Warden
 					["coord"] = { 18.9, 56.1, BADLANDS },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { BADLANDS },
 				}),
 				q(11807, {	-- Honor the Flame — Blade's Edge Mountains
-					["provider"] = { "n", 25889 },	-- Blade's Edge Flame Warden
+					["qg"] = 25889,	-- Blade's Edge Flame Warden
 					["coord"] = { 42.0, 66.0, BLADES_EDGE_MOUNTAINS },
 					["maps"] = { BLADES_EDGE_MOUNTAINS },
 				}),
 				q(11808, {	-- Honor the Flame — Blasted Lands
-					["provider"] = { "n", 25890 },	-- Blasted Lands Flame Warden
+					["qg"] = 25890,	-- Blasted Lands Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 55.5, 15.0, BLASTED_LANDS },
 					-- #else
@@ -1689,7 +1710,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { BLASTED_LANDS },
 				}),
 				q(11809, {	-- Honor the Flame — Bloodmyst Isle
-					["provider"] = { "n", 25891 },	-- Bloodmyst Isle Flame Warden
+					["qg"] = 25891,	-- Bloodmyst Isle Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 55.0, 69.0, BLOODMYST_ISLE },
 					-- #else
@@ -1698,13 +1719,13 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { BLOODMYST_ISLE },
 				}),
 				q(13485, {	-- Honor the Flame — Borean Tundra
-					["provider"] = { "n", 32801 },	-- Borean Tundra Flame Warden
+					["qg"] = 32801,	-- Borean Tundra Flame Warden
 					["coord"] = { 55.0, 20.0, 114 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 114 },	-- Borean Tundra
 				}),
 				q(11810, {	-- Honor the Flame — Burning Steppes
-					["provider"] = { "n", 25892 },	-- Burning Steppes Flame Warden
+					["qg"] = 25892,	-- Burning Steppes Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 68.2, 60.6, BURNING_STEPPES },
 					-- #else
@@ -1713,13 +1734,13 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { BURNING_STEPPES },
 				}),
 				q(13491, {	-- Honor the Flame — Crystalsong Forest
-					["provider"] = { "n", 32807 },	-- Crystalsong Forest Flame Warden
+					["qg"] = 32807,	-- Crystalsong Forest Flame Warden
 					["coord"] = { 78.0, 75.0, 127 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 127 },	-- Crystalsong Forest
 				}),
 				q(11811, {	-- Honor the Flame — Darkshore
-					["provider"] = { "n", 25893 },	-- Darkshore Flame Warden
+					["qg"] = 25893,	-- Darkshore Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 49.0, 23.0, DARKSHORE },
 					-- #else
@@ -1728,13 +1749,13 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { DARKSHORE },
 				}),
 				q(29036, {	-- Honor the Flame — Deepholm
-					["provider"] = { "n", 51698 },	-- Deepholm Flame Guardian
+					["qg"] = 51698,	-- Deepholm Flame Guardian
 					["coord"] = { 49.4, 51.4, 207 },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { 207 },	-- Deepholm
 				}),
 				q(11812, {	-- Honor the Flame — Desolace
-					["provider"] = { "n", 25894 },	-- Desolace Flame Warden
+					["qg"] = 25894,	-- Desolace Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 65.0, 17.0, DESOLACE },
 					-- #else
@@ -1743,19 +1764,19 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { DESOLACE },
 				}),
 				q(13487, {	-- Honor the Flame — Dragonblight
-					["provider"] = { "n", 32803 },	-- Dragonblight Flame Warden
+					["qg"] = 32803,	-- Dragonblight Flame Warden
 					["coord"] = { 75.0, 44.0, 115 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 115 },	-- Dragonblight
 				}),
 				q(54743, {	-- Honor the Flame — Drustvar
-					["provider"] = { "n", 148934 },	-- Drustvar Flame Warden
+					["qg"] = 148934,	-- Drustvar Flame Warden
 					["coord"] = { 40.2, 47.7, 896 },
 					["timeline"] = { "added 8.0.1" },
 					["maps"] = { 896 },	-- Drustvar
 				}),
 				q(11813, {	-- Honor the Flame — Dun Morogh
-					["provider"] = { "n", 25895 },	-- Dun Morogh Flame Warden
+					["qg"] = 25895,	-- Dun Morogh Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 53.8, 45.2, DUN_MOROGH },
 					-- #else
@@ -1769,7 +1790,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { DUSKWOOD },
 				}),
 				q(11815, {	-- Honor the Flame — Dustwallow Marsh
-					["provider"] = { "n", 25897 },	-- Dustwallow Marsh Flame Warden
+					["qg"] = 25897,	-- Dustwallow Marsh Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 62.0, 40.0, DUSTWALLOW_MARSH },
 					-- #else
@@ -1783,7 +1804,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { ELWYNN_FOREST },
 				}),
 				q(11817, {	-- Honor the Flame — Feralas
-					["provider"] = { "n", 25899 },	-- Feralas Flame Warden
+					["qg"] = 25899,	-- Feralas Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 47.0, 44.0, FERALAS },
 					-- #else
@@ -1792,13 +1813,13 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { FERALAS },
 				}),
 				q(13489, {	-- Honor the Flame — Grizzly Hills
-					["provider"] = { "n", 32805 },	-- Grizzly Hills Flame Warden
+					["qg"] = 32805,	-- Grizzly Hills Flame Warden
 					["coord"] = { 34.0, 61.0, 116 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 116 },	-- Grizzly Hills
 				}),
 				q(11818, {	-- Honor the Flame — Hellfire Peninsula
-					["provider"] = { "n", 25900 },	-- Hellfire Peninsula Flame Warden
+					["qg"] = 25900,	-- Hellfire Peninsula Flame Warden
 					["coord"] = { 62.0, 58.0, HELLFIRE_PENINSULA },
 					["maps"] = { HELLFIRE_PENINSULA },
 				}),
@@ -1809,19 +1830,19 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 				}),
 				q(13488, {	-- Honor the Flame — Howling Fjord
-					["provider"] = { "n", 32804 },	-- Howling Fjord Flame Warden
+					["qg"] = 32804,	-- Howling Fjord Flame Warden
 					["coord"] = { 58.0, 16.0, 117 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 117 },	-- Howling Fjord
 				}),
 				q(29030, {	-- Honor the Flame — Hyjal
-					["provider"] = { "n", 51682 },	-- Hyjal Flame Guardian
+					["qg"] = 51682,	-- Hyjal Flame Guardian
 					["coord"] = { 62.8, 22.6, MOUNT_HYJAL },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { MOUNT_HYJAL },
 				}),
 				q(11820, {	-- Honor the Flame — Loch Modan
-					["provider"] = { "n", 25902 },	-- Loch Modan Flame Warden
+					["qg"] = 25902,	-- Loch Modan Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 32.3, 41.0, LOCH_MODAN },
 					-- #else
@@ -1830,17 +1851,17 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { LOCH_MODAN },
 				}),
 				q(11821, {	-- Honor the Flame — Nagrand (Outland)
-					["provider"] = { "n", 25903 },	-- Nagrand Flame Warden
+					["qg"] = 25903,	-- Nagrand Flame Warden
 					["coord"] = { 49.6, 69.5, NAGRAND },
 					["maps"] = { NAGRAND },
 				}),
 				q(11830, {	-- Honor the Flame — Netherstorm
-					["provider"] = { "n", 25913 },	-- Netherstorm Flame Warden
+					["qg"] = 25913,	-- Netherstorm Flame Warden
 					["coord"] = { 31.0, 63.0, NETHERSTORM },
 					["maps"] = { NETHERSTORM },
 				}),
 				q(28922, {	-- Honor the Flame — Northern Stranglethorn
-					["provider"] = { "n", 51574 },	-- Northern Stranglethorn Flame Warden
+					["qg"] = 51574,	-- Northern Stranglethorn Flame Warden
 					["coord"] = { 52.0, 63.6, NORTHERN_STRANGLETHORN },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { NORTHERN_STRANGLETHORN },
@@ -1855,24 +1876,24 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { REDRIDGE_MOUNTAINS },
 				}),
 				q(11823, {	-- Honor the Flame — Shadowmoon Valley (Outland)
-					["provider"] = { "n", 25905 },	-- Shadowmoon Valley Flame Warden
+					["qg"] = 25905,	-- Shadowmoon Valley Flame Warden
 					["coord"] = { 40.0, 55.0, SHADOWMOON_VALLEY },
 					["maps"] = { SHADOWMOON_VALLEY },
 				}),
 				q(44579, {	-- Honor the Flame — Shadowmoon Valley (WoD)
-					["provider"] = { "n", 114500 },	-- Shadowmoon Valley Flame Warden
+					["qg"] = 114500,	-- Shadowmoon Valley Flame Warden
 					["coord"] = { 42.6, 36.0, 539 },
 					["timeline"] = { "added 6.0.1" },
 					["maps"] = { 539 },	-- Shadowmoon Valley
 				}),
 				q(13486, {	-- Honor the Flame — Sholazar Basin
-					["provider"] = { "n", 32802 },	-- Sholazar Basin Flame Warden
+					["qg"] = 32802,	-- Sholazar Basin Flame Warden
 					["coord"] = { 47.0, 66.0, 119 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 119 },	-- Sholazar Basin
 				}),
 				q(11831, {	-- Honor the Flame — Silithus
-					["provider"] = { "n", 25914 },	-- Silithus Flame Warden
+					["qg"] = 25914,	-- Silithus Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 60.0, 33.0, SILITHUS },
 					-- #else
@@ -1881,43 +1902,43 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { SILITHUS },
 				}),
 				q(28926, {	-- Honor the Flame — Southern Barrens
-					["provider"] = { "n", 51586 },	-- Southern Barrens Flame Warden
+					["qg"] = 51586,	-- Southern Barrens Flame Warden
 					["coord"] = { 48.0, 72.0, SOUTHERN_BARRENS },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { SOUTHERN_BARRENS },
 				}),
 				q(28928, {	-- Honor the Flame — Stonetalon Mountains
-					["provider"] = { "n", 51588 },	-- Stonetalon Mountains Flame Warden
+					["qg"] = 51588,	-- Stonetalon Mountains Flame Warden
 					["coord"] = { 49.0, 51.0, STONETALON_MOUNTAINS },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { STONETALON_MOUNTAINS },
 				}),
 				q(13490, {	-- Honor the Flame — Storm Peaks
-					["provider"] = { "n", 32806 },	-- Storm Peaks Flame Warden
+					["qg"] = 32806,	-- Storm Peaks Flame Warden
 					["coord"] = { 42.0, 87.0, 120 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 120 },	-- Storm Peaks
 				}),
 				q(54741, {	-- Honor the Flame — Stormsong Valley
-					["provider"] = { "n", 148932 },	-- Stormsong Valley Flame Warden
+					["qg"] = 148932,	-- Stormsong Valley Flame Warden
 					["coord"] = { 35.8, 51.2, 942 },
 					["timeline"] = { "added 8.0.1" },
 					["maps"] = { 942 },	-- Stormsong Valley
 				}),
 				q(44613, {	-- Honor the Flame — Suramar
-					["provider"] = { "n", 114519 },	-- Suramar Flame Warden
+					["qg"] = 114519,	-- Suramar Flame Warden
 					["coord"] = { 23.0, 58.4, 680 },
 					["timeline"] = { "added 7.0.1" },
 					["maps"] = { 680 },	-- Suramar
 				}),
 				q(28929, {	-- Honor the Flame — Swamp of Sorrows
-					["provider"] = { "n", 51602 },	-- Swamp of Sorrows Flame Warden
+					["qg"] = 51602,	-- Swamp of Sorrows Flame Warden
 					["coord"] = { 70.1, 15.4, SWAMP_OF_SORROWS },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { SWAMP_OF_SORROWS },
 				}),
 				q(11833, {	-- Honor the Flame — Tanaris
-					["provider"] = { "n", 25916 },	-- Tanaris Flame Warden
+					["qg"] = 25916,	-- Tanaris Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 52.0, 29.0, TANARIS },
 					-- #else
@@ -1926,7 +1947,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { TANARIS },
 				}),
 				q(11824, {	-- Honor the Flame — Teldrassil
-					["provider"] = { "n", 25906 },	-- The Teldrassil Flame Warden
+					["qg"] = 25906,	-- The Teldrassil Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 54.8, 52.9, TELDRASSIL },
 					-- #else
@@ -1935,7 +1956,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { TELDRASSIL },
 				}),
 				q(11825, {	-- Honor the Flame — Terokkar Forest
-					["provider"] = { "n", 25907 },	-- Terokkar Forest Flame Warden
+					["qg"] = 25907,	-- Terokkar Forest Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 55.0, 55.0, TEROKKAR_FOREST },
 					-- #else
@@ -1945,7 +1966,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(11832, {	-- Honor the Flame — The Cape of Stranglethorn / Stranglethorn Vale
 					-- #if AFTER CATA
-					["provider"] = { "n", 25915 },	-- Cape of Stranglethorn Flame Warden
+					["qg"] = 25915,	-- Cape of Stranglethorn Flame Warden
 					["coord"] = { 51.9, 67.8, 210 },
 					["maps"] = { 210 },	-- The Cape of Stranglethorn
 					-- #else
@@ -1955,48 +1976,48 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					-- #endif
 				}),
 				q(11826, {	-- Honor the Flame — The Hinterlands
-					["provider"] = { "n", 25908 },	-- The Hinterlands Flame Warden
+					["qg"] = 25908,	-- The Hinterlands Flame Warden
 					["coord"] = { 14.4, 50.2, THE_HINTERLANDS },
 					["maps"] = { THE_HINTERLANDS },
 				}),
 				q(54737, {	-- Honor the Flame — Tiragarde Sound
-					["provider"] = { "n", 148917 },	-- Tiragarde Sound Flame Warden
+					["qg"] = 148917,	-- Tiragarde Sound Flame Warden
 					["coord"] = { 76.3, 49.9, 895 },
 					["timeline"] = { "added 8.0.1" },
 					["maps"] = { 895 },	-- Tiragarde Sound
 				}),
 				q(28945, {	-- Honor the Flame — Twilight Highlands
-					["provider"] = { "n", 51650 },	-- Twilight Highlands Flame Warden
+					["qg"] = 51650,	-- Twilight Highlands Flame Warden
 					["coord"] = { 47.0, 28.0, TWILIGHT_HIGHLANDS },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { TWILIGHT_HIGHLANDS },
 				}),
 				q(28950, {	-- Honor the Flame — Uldum
-					["provider"] = { "n", 51653 },	-- Uldum Flame Warden
+					["qg"] = 51653,	-- Uldum Flame Warden
 					["coord"] = { 53.0, 32.0, 249 },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { 249 },	-- Uldum
 				}),
 				q(28932, {	-- Honor the Flame — Un'goro Crater
-					["provider"] = { "n", 51606 },	-- Un'Goro Crater Flame Warden
+					["qg"] = 51606,	-- Un'Goro Crater Flame Warden
 					["coord"] = { 60.0, 63.0, UNGORO_CRATER },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { UNGORO_CRATER },
 				}),
 				q(32510, {	-- Honor the Flame — Vale of Eternal Blossoms
-					["provider"] = { "n", 69572 },	-- Vale of Eternal Blossoms Flame Warden
+					["qg"] = 69572,	-- Vale of Eternal Blossoms Flame Warden
 					["coord"] = { 79.6, 37.2, 390 },
 					["timeline"] = { "added 5.0.1" },
 					["maps"] = { 390 },	-- Vale of Eternal Blossoms
 				}),
 				q(29031, {	-- Honor the Flame — Vashj'ir
-					["provider"] = { "n", 51697 },	-- Vashj'ir Flame Guardian
+					["qg"] = 51697,	-- Vashj'ir Flame Guardian
 					["coord"] = { 49.4, 42.0, 205 },	-- Shimmering Expanse
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { 203, 205 },	-- Vashj'ir + Shimmering Expanse
 				}),
 				q(11827, {	-- Honor the Flame — Western Plaguelands
-					["provider"] = { "n", 25909 },	-- Western Plaguelands Flame Warden
+					["qg"] = 25909,	-- Western Plaguelands Flame Warden
 					["coord"] = { 43.5, 82.2, WESTERN_PLAGUELANDS },
 					["maps"] = { WESTERN_PLAGUELANDS },
 				}),
@@ -2010,12 +2031,12 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { WESTFALL },
 				}),
 				q(11828, {	-- Honor the Flame — Wetlands
-					["provider"] = { "n", 25911 },	-- Wetlands Flame Warden
+					["qg"] = 25911,	-- Wetlands Flame Warden
 					["coord"] = { 13.5, 47.1, WETLANDS },
 					["maps"] = { WETLANDS },
 				}),
 				q(11834, {	-- Honor the Flame — Winterspring
-					["provider"] = { "n", 25917 },	-- Winterspring Flame Warden
+					["qg"] = 25917,	-- Winterspring Flame Warden
 					-- #if AFTER CATA
 					["coord"] = { 62.0, 35.0, WINTERSPRING },
 					-- #else
@@ -2024,12 +2045,12 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { WINTERSPRING },
 				}),
 				q(11829, {	-- Honor the Flame — Zangarmarsh
-					["provider"] = { "n", 25912 },	-- Zangarmarsh Flame Warden
+					["qg"] = 25912,	-- Zangarmarsh Flame Warden
 					["coord"] = { 69.0, 52.0, ZANGARMARSH },
 					["maps"] = { ZANGARMARSH },
 				}),
 				q(13492, {	-- Honor the Flame — Zul'Drak
-					["provider"] = { "n", 32808 },	-- Zul'Drak Flame Warden
+					["qg"] = 32808,	-- Zul'Drak Flame Warden
 					["coord"] = { 41.0, 61.0, 121 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 121 },	-- Zul'Drak
@@ -2415,7 +2436,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { ASHENVALE },
 				}),
 				q(28923, {	-- Honor the Flame — Azshara
-					["provider"] = { "n", 51575 },	-- Azshara Flame Keeper
+					["qg"] = 51575,	-- Azshara Flame Keeper
 					["coord"] = { 60.8, 53.5, AZSHARA },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { AZSHARA },
@@ -2430,18 +2451,18 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { BADLANDS },
 				}),
 				q(11843, {	-- Honor the Flame — Blade's Edge Mountains
-					["provider"] = { "n", 25926 },	-- Blade's Edge Flame Keeper
+					["qg"] = 25926,	-- Blade's Edge Flame Keeper
 					["coord"] = { 50.0, 59.0, BLADES_EDGE_MOUNTAINS },
 					["maps"] = { BLADES_EDGE_MOUNTAINS },
 				}),
 				q(28930, {	-- Honor the Flame — Blasted Lands
-					["provider"] = { "n", 51603 },	-- Blasted Lands Flame Keeper
+					["qg"] = 51603,	-- Blasted Lands Flame Keeper
 					["coord"] = { 46.2, 13.8, BLASTED_LANDS },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { BLASTED_LANDS },
 				}),
 				q(13493, {	-- Honor the Flame — Borean Tundra
-					["provider"] = { "n", 32809 },	-- Borean Tundra Flame Keeper
+					["qg"] = 32809,	-- Borean Tundra Flame Keeper
 					["coord"] = { 51.0, 12.0, 114 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 114 },	-- Borean Tundra
@@ -2456,13 +2477,13 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { BURNING_STEPPES },
 				}),
 				q(13499, {	-- Honor the Flame — Crystalsong Forest
-					["provider"] = { "n", 32815 },	-- Crystalsong Forest Flame Keeper
+					["qg"] = 32815,	-- Crystalsong Forest Flame Keeper
 					["coord"] = { 80.0, 53.0, 127 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 127 },	-- Crystalsong Forest
 				}),
 				q(29036, {	-- Honor the Flame — Deepholm
-					["provider"] = { "n", 51698 },	-- Deepholm Flame Guardian
+					["qg"] = 51698,	-- Deepholm Flame Guardian
 					["coord"] = { 49.4, 51.4, 207 },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { 207 },	-- Deepholm
@@ -2473,7 +2494,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { DESOLACE },
 				}),
 				q(13495, {	-- Honor the Flame — Dragonblight
-					["provider"] = { "n", 32811 },	-- Dragonblight Flame Keeper
+					["qg"] = 32811,	-- Dragonblight Flame Keeper
 					["coord"] = { 39.0, 48.0, 115 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 115 },	-- Dragonblight
@@ -2507,7 +2528,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { FERALAS },
 				}),
 				q(44580, {	-- Honor the Flame — Frostfire Ridge
-					["provider"] = { "n", 114499 },	-- Frostfire Ridge Flame Keeper
+					["qg"] = 114499,	-- Frostfire Ridge Flame Keeper
 					["coord"] = { 72.6, 65.0, 525 },
 					["timeline"] = { "added 6.0.1" },
 					["maps"] = { 525 },	-- Frostfire Ridge
@@ -2518,13 +2539,13 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { GHOSTLANDS },
 				}),
 				q(13497, {	-- Honor the Flame — Grizzly Hills
-					["provider"] = { "n", 32813 },	-- Grizzly Hills Flame Keeper
+					["qg"] = 32813,	-- Grizzly Hills Flame Keeper
 					["coord"] = { 19.0, 61.0, 116 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 116 },	-- Grizzly Hills
 				}),
 				q(11851, {	-- Honor the Flame — Hellfire Peninsula
-					["provider"] = { "n", 25934 },	-- Hellfire Peninsula Flame Keeper
+					["qg"] = 25934,	-- Hellfire Peninsula Flame Keeper
 					-- #if AFTER CATA
 					["coord"] = { 55.0, 40.0, HELLFIRE_PENINSULA },
 					-- #else
@@ -2542,13 +2563,13 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 				}),
 				q(13496, {	-- Honor the Flame — Howling Fjord
-					["provider"] = { "n", 32812 },	-- Howling Fjord Flame Keeper
+					["qg"] = 32812,	-- Howling Fjord Flame Keeper
 					["coord"] = { 48.0, 13.0, 117 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 117 },	-- Howling Fjord
 				}),
 				q(29030, {	-- Honor the Flame — Hyjal
-					["provider"] = { "n", 51682 },	-- Hyjal Flame Guardian
+					["qg"] = 51682,	-- Hyjal Flame Guardian
 					["coord"] = { 62.8, 22.6, MOUNT_HYJAL },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { MOUNT_HYJAL },
@@ -2564,13 +2585,13 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { NAGRAND },
 				}),
 				q(54747, {	-- Honor the Flame — Nazmir
-					["provider"] = { "n", 148950 },    -- Nazmir Flame Keeper
+					["qg"] = 148950,    -- Nazmir Flame Keeper
 					["coord"] = { 40.0, 74.3, 863 },
 					["timeline"] = { "added 8.0.1" },
 					["maps"] = { 863 },	-- Nazmir
 				}),
 				q(11835, {	-- Honor the Flame — Netherstorm
-					["provider"] = { "n", 25918 },	-- Netherstorm Flame Keeper
+					["qg"] = 25918,	-- Netherstorm Flame Keeper
 					["coord"] = { 32.0, 68.0, NETHERSTORM },
 					["maps"] = { NETHERSTORM },
 				}),
@@ -2586,24 +2607,24 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					-- #endif
 				}),
 				q(28924, {	-- Honor the Flame — Northern Stranglethorn
-					["provider"] = { "n", 51582 },	-- Northern Stranglethorn Vale Flame Keeper
+					["qg"] = 51582,	-- Northern Stranglethorn Vale Flame Keeper
 					["coord"] = { 40.6, 50.9, NORTHERN_STRANGLETHORN },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { NORTHERN_STRANGLETHORN },
 				}),
 				q(11855, {	-- Honor the Flame — Shadowmoon Valley (Outland)
-					["provider"] = { "n", 25938 },	-- Shadowmoon Valley Flame Keeper
+					["qg"] = 25938,	-- Shadowmoon Valley Flame Keeper
 					["coord"] = { 33.4, 30.5, SHADOWMOON_VALLEY },
 					["maps"] = { SHADOWMOON_VALLEY },
 				}),
 				q(13494, {	-- Honor the Flame — Sholazar Basin
-					["provider"] = { "n", 32810 },	-- Sholazar Basin Flame Keeper
+					["qg"] = 32810,	-- Sholazar Basin Flame Keeper
 					["coord"] = { 47.0, 62.0, 119 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 119 },	-- Sholazar Basin
 				}),
 				q(11836, {	-- Honor the Flame — Silithus
-					["provider"] = { "n", 25919 },	-- Silithus Flame Keeper
+					["qg"] = 25919,	-- Silithus Flame Keeper
 					-- #if AFTER CATA
 					["coord"] = { 50.9, 41.3, SILITHUS },
 					-- #else
@@ -2612,18 +2633,18 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { SILITHUS },
 				}),
 				q(11584, {	-- Honor the Flame — Silverpine Forest
-					["provider"] = { "n", 25939 },	-- Silverpine Forest Flame Keeper
+					["qg"] = 25939,	-- Silverpine Forest Flame Keeper
 					["coord"] = { 49.6, 38.2, SILVERPINE_FOREST },
 					["maps"] = { SILVERPINE_FOREST },	-- Silverpine Forest
 				}),
 				q(28927, {	-- Honor the Flame — Southern Barrens
-					["provider"] = { "n", 51587 },	-- The Southern Barrens Flame Keeper
+					["qg"] = 51587,	-- The Southern Barrens Flame Keeper
 					["coord"] = { 41.0, 68.0, SOUTHERN_BARRENS },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { SOUTHERN_BARRENS },
 				}),
 				q(11856, {	-- Honor the Flame — Stonetalon Mountains
-					["provider"] = { "n", 25940 },	-- Stonetalon Flame Keeper
+					["qg"] = 25940,	-- Stonetalon Flame Keeper
 					-- #if AFTER CATA
 					["coord"] = { 52.9, 62.5, STONETALON_MOUNTAINS },
 					-- #else
@@ -2632,19 +2653,19 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { STONETALON_MOUNTAINS },
 				}),
 				q(13498, {	-- Honor the Flame — Storm Peaks
-					["provider"] = { "n", 32814 },	-- Storm Peaks Flame Keeper
+					["qg"] = 32814,	-- Storm Peaks Flame Keeper
 					["coord"] = { 40.0, 86.0, 120 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 120 },	-- Storm Peaks
 				}),
 				q(44614, {	-- Honor the Flame — Suramar
-					["provider"] = { "n", 114518 },	-- Suramar Flame Keeper
+					["qg"] = 114518,	-- Suramar Flame Keeper
 					["coord"] = { 30.4, 45.4, 680 },
 					["timeline"] = { "added 7.0.1" },
 					["maps"] = { 680 },	-- Suramar
 				}),
 				q(11857, {	-- Honor the Flame — Swamp of Sorrows
-					["provider"] = { "n", 25941 },	-- Swamp of Sorrows Flame Keeper
+					["qg"] = 25941,	-- Swamp of Sorrows Flame Keeper
 					-- #if AFTER CATA
 					["coord"] = { 76.3, 13.8, SWAMP_OF_SORROWS },
 					-- #else
@@ -2688,43 +2709,43 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { TIRISFAL_GLADES },
 				}),
 				q(28946, {	-- Honor the Flame — Twilight Highlands
-					["provider"] = { "n", 51651 },	-- Twilight Highlands Flame Keeper
+					["qg"] = 51651,	-- Twilight Highlands Flame Keeper
 					["coord"] = { 53.1, 46.2, TWILIGHT_HIGHLANDS },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { TWILIGHT_HIGHLANDS },
 				}),
 				q(28949, {	-- Honor the Flame — Uldum
-					["provider"] = { "n", 51652 },	-- Uldum Flame Keeper
+					["qg"] = 51652,	-- Uldum Flame Keeper
 					["coord"] = { 53.2, 34.5, 249 },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { 249 },	-- Uldum
 				}),
 				q(28933, {	-- Honor the Flame — Un'goro Crater
-					["provider"] = { "n", 51607 },	-- Un'Goro Flame Keeper
+					["qg"] = 51607,	-- Un'Goro Flame Keeper
 					["coord"] = { 56.0, 66.0, UNGORO_CRATER },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { UNGORO_CRATER },
 				}),
 				q(32509, {	-- Honor the Flame — Vale of Eternal Blossoms
-					["provider"] = { "n", 69551 },	-- Vale of Eternal Blossoms Flame Keeper
+					["qg"] = 69551,	-- Vale of Eternal Blossoms Flame Keeper
 					["coord"] = { 77.8, 33.1, 390 },
 					["timeline"] = { "added 5.0.1" },
 					["maps"] = { 390 },	-- Vale of Eternal Blossoms
 				}),
 				q(29031, {	-- Honor the Flame — Vashj'ir
-					["provider"] = { "n", 51697 },	-- Vashj'ir Flame Guardian
+					["qg"] = 51697,	-- Vashj'ir Flame Guardian
 					["coord"] = { 49.4, 42.0, 205 },	-- Shimmering Expanse
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { 203, 205 },	-- Vashj'ir + Shimmering Expanse
 				}),
 				q(54750, {	-- Honor the Flame — Vol'dun
-					["provider"] = { "n", 148986 },    -- Vol'dun Flame Keeper
+					["qg"] = 148986,    -- Vol'dun Flame Keeper
 					["coord"] = { 56.0, 47.8, 864 },
 					["timeline"] = { "added 8.0.1" },
 					["maps"] = { 864 },	-- Vol'dun
 				}),
 				q(28931, {	-- Honor the Flame — Western Plaguelands
-					["provider"] = { "n", 51604 },	-- Western Plaguelands Flame Keeper
+					["qg"] = 51604,	-- Western Plaguelands Flame Keeper
 					["coord"] = { 29.2, 57.3, WESTERN_PLAGUELANDS },
 					["timeline"] = { "added 4.0.1" },
 					["maps"] = { WESTERN_PLAGUELANDS },
@@ -2739,18 +2760,18 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { WINTERSPRING },
 				}),
 				q(11863, {	-- Honor the Flame — Zangarmarsh
-					["provider"] = { "n", 25947 },	-- Zangarmarsh Flame Keeper
+					["qg"] = 25947,	-- Zangarmarsh Flame Keeper
 					["coord"] = { 35.3, 51.6, ZANGARMARSH },
 					["maps"] = { ZANGARMARSH },
 				}),
 				q(54745, {	-- Honor the Flame — Zuldazar
-					["provider"] = { "n", 148944 },	-- Zuldazar Flame Keeper
+					["qg"] = 148944,	-- Zuldazar Flame Keeper
 					["coord"] = { 53.3, 48.1, 862 },
 					["timeline"] = { "added 8.0.1" },
 					["maps"] = { 862 },	-- Zuldazar
 				}),
 				q(13500, {	-- Honor the Flame — Zul'Drak
-					["provider"] = { "n", 32816 },	-- Zul'Drak Flame Keeper
+					["qg"] = 32816,	-- Zul'Drak Flame Keeper
 					["coord"] = { 43.0, 71.0, 121 },
 					["timeline"] = { "added 3.0.1" },
 					["maps"] = { 121 },	-- Zul'Drak
