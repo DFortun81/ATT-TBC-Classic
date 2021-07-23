@@ -40,7 +40,7 @@ _.Zones =
 						}),
 					}),
 					i(20469, {	-- Decoded True Believer Clippings
-						["description"] = "This will arrive in your mailbox approximately 12-24 hours either of the quests are turned in.\n\nWARNING: You may want to space out turn ins as you will not receive multiple mails.",
+						["description"] = "This will arrive in your mailbox approximately 12-24 hours either of the quests are turned in.",
 						["sourceQuests"] = {
 							8324,	-- Still Believing
 							8323,	-- True Believers
