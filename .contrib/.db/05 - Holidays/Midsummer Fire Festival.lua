@@ -1823,7 +1823,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["coord"] = { 62.0, 58.0, HELLFIRE_PENINSULA },
 					["maps"] = { HELLFIRE_PENINSULA },
 				}),
-				q(11853, {	-- Honor the Flame — Hillsbrad Foothills
+				q(11819, {	-- Honor the Flame — Hillsbrad Foothills
 					["qg"] = 25901,	-- Hillsbrad Flame Warden
 					["coord"] = { 50.4, 47.6, HILLSBRAD_FOOTHILLS },
 					["timeline"] = { "removed 4.0.1" },	-- Southshore got destroyed with Cataclysm
