@@ -2,7 +2,6 @@ _.PvP =
 {
 	n(-304, {	-- Battlegrounds
 		m(1461, {	-- Arathi Basin
-			["maps"] = { ARATHI_HIGHLANDS },
 			["description"] = "Arathi Basin is a 15v15 battleground located in Arathi Highlands. Players fight over five bases (Stables, Mines, Blacksmith, Lumber Mill, and Farm) which reward teams with resources. The more bases a team controls, the faster they accumulate resources. A team with all five bases captured will gain 30 resources per second.\n\nThe game is won when one team reaches 1,600 resources. The most common way of winning is to hold three bases and defend, with the Blacksmith being a key base.",
 			["groups"] = {
 				n(FACTIONS, {
@@ -18,6 +17,7 @@ _.PvP =
 						["qg"] = 15127,	-- Samuel Hawke
 						["minReputation"] = { 509, FRIENDLY },	-- The League of Arathor, Friendly.
 						["coord"] = { 46.0, 45.2, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 45,
 						["groups"] = {
@@ -28,6 +28,7 @@ _.PvP =
 						["qg"] = 15127,	-- Samuel Hawke
 						["minReputation"] = { 509, FRIENDLY },	-- The League of Arathor, Friendly.
 						["coord"] = { 46.0, 45.2, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = { 25, 34 },
 						["groups"] = {
@@ -38,6 +39,7 @@ _.PvP =
 						["qg"] = 15127,	-- Samuel Hawke
 						["minReputation"] = { 509, FRIENDLY },	-- The League of Arathor, Friendly.
 						["coord"] = { 46.0, 45.2, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = { 35, 44 },
 						["groups"] = {
@@ -608,6 +610,7 @@ _.PvP =
 						["qg"] = 15126,	-- Rutherford Twing
 						["minReputation"] = { 510, FRIENDLY },	-- The Defilers, Friendly.
 						["coord"] = { 73.4, 29.8, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 45,
 						["groups"] = {
@@ -618,6 +621,7 @@ _.PvP =
 						["qg"] = 15126,	-- Rutherford Twing
 						["minReputation"] = { 510, FRIENDLY },	-- The Defilers, Friendly.
 						["coord"] = { 73.4, 29.8, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = { 25, 34 },
 						["groups"] = {
@@ -628,6 +632,7 @@ _.PvP =
 						["qg"] = 15126,	-- Rutherford Twing
 						["minReputation"] = { 510, FRIENDLY },	-- The Defilers, Friendly.
 						["coord"] = { 73.4, 29.8, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = { 35, 44 },
 						["groups"] = {
@@ -638,9 +643,8 @@ _.PvP =
 						["qg"] = 14983,	-- Field Marshal Oslight
 						["minReputation"] = { 509, EXALTED },	-- The League of Arathor, Exalted.
 						["sourceQuest"] = 8114,	-- Control Four Bases
-						["coords"] = {
-							{ 45.8, 45.6, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 45.8, 45.6, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 60,
 						["groups"] = {
@@ -651,9 +655,8 @@ _.PvP =
 						["qg"] = 15021,	-- Deathmaster Dwire
 						["minReputation"] = { 510, EXALTED },	-- The Defilers, Exalted.
 						["sourceQuest"] = 8121,	-- Control Four Bases
-						["coords"] = {
-							{ 73.3, 29.7, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 73.3, 29.7, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 60,
 						["groups"] = {
@@ -669,9 +672,8 @@ _.PvP =
 							8166,	-- The Battle for Arathi Basin! [Level 40]
 							8105,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 45.8, 45.6, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 45.8, 45.6, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 60,
 					}),
@@ -684,9 +686,8 @@ _.PvP =
 							8169,	-- The Battle for Arathi Basin! [Level 40]
 							8120,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 73.3, 29.7, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 73.3, 29.7, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 60,
 					}),
@@ -698,9 +699,8 @@ _.PvP =
 							8166,	-- The Battle for Arathi Basin! [Level 40]
 							8105,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 45.8, 45.6, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 45.8, 45.6, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = { 20, 29 },
 					}),
@@ -712,9 +712,8 @@ _.PvP =
 							8166,	-- The Battle for Arathi Basin! [Level 40]
 							8105,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 45.8, 45.6, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 45.8, 45.6, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = { 30, 39 },
 					}),
@@ -726,9 +725,8 @@ _.PvP =
 							8166,	-- The Battle for Arathi Basin! [Level 40]
 							8105,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 45.8, 45.6, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 45.8, 45.6, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = { 40, 49 },
 					}),
@@ -740,9 +738,8 @@ _.PvP =
 							8166,	-- The Battle for Arathi Basin! [Level 40]
 							8105,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 45.8, 45.6, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 45.8, 45.6, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 50,
 					}),
@@ -754,9 +751,8 @@ _.PvP =
 							8169,	-- The Battle for Arathi Basin! [Level 40]
 							8120,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 73.3, 29.7, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 73.3, 29.7, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = { 20, 29 },
 					}),
@@ -768,9 +764,8 @@ _.PvP =
 							8169,	-- The Battle for Arathi Basin! [Level 40]
 							8120,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 73.3, 29.7, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 73.3, 29.7, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = { 30, 39 },
 					}),
@@ -782,9 +777,8 @@ _.PvP =
 							8169,	-- The Battle for Arathi Basin! [Level 40]
 							8120,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 73.3, 29.7, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 73.3, 29.7, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = { 40, 49 },
 					}),
@@ -796,9 +790,8 @@ _.PvP =
 							8169,	-- The Battle for Arathi Basin! [Level 40]
 							8120,	-- The Battle for Arathi Basin! [Level 50]
 						},
-						["coords"] = {
-							{ 73.3, 29.7, ARATHI_HIGHLANDS },
-						},
+						["coord"] = { 73.3, 29.7, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 50,
 					}),
@@ -806,6 +799,7 @@ _.PvP =
 				n(VENDORS, {
 					n(15126, {	-- Rutherford Twing
 						["coord"] = { 73.4, 29.8, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["groups"] = {
 							-- Tabard & Weapons
 							--i(20131),	-- Battle Tabard of the Defilers [Cannot be purchased, it's a quest reward.]
@@ -895,6 +889,7 @@ _.PvP =
 					}),
 					n(15127, {	-- Samuel Hawke <League of Arathor Supply Officer>
 						["coord"] = { 46.0, 45.2, ARATHI_HIGHLANDS },
+						["maps"] = { ARATHI_HIGHLANDS },
 						["groups"] = {
 							-- Tabard & Weapons
 							--i(20132),	-- Arathor Battle Tabard [Cannot be purchased, it's a quest reward.]

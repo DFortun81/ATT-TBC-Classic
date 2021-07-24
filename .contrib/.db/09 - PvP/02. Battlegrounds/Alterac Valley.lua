@@ -3,7 +3,6 @@ _.PvP =
 	n(-304, {	-- Battlegrounds
 		m(ALTERAC_VALLEY, {	-- Alterac Valley
 			["description"] = "Alterac Valley is a battleground players fight in frosty Alterac between the Frostwolf Clan (Horde) and Stormpike Guard (Alliance). Alterac Valley is notable both for how many people can queue per side (40) as well as how much honor each game rewards.",
-			["maps"] = { ALTERAC_MOUNTAINS, HILLSBRAD_FOOTHILLS },
 			["groups"] = {
 				n(13419, {	-- Ivus the Forest Lord
 					["isRaid"] = true,
@@ -118,6 +117,7 @@ _.PvP =
 					q(7081, {	-- Alterac Valley Graveyards
 						["qg"] = 13777,	-- Sergeant Durgen Stormpike
 						["coord"] = { 36.8, 77.2, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 51,
 					}),
@@ -209,12 +209,14 @@ _.PvP =
 					q(7122, {	-- Capture a Mine (Alliance)
 						["qg"] = 13777,	-- Sergeant Durgen Stormpike
 						["coord"] = { 36.8, 77.2, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 51,
 					}),
 					q(7124, {	-- Capture a Mine (Horde)
 						["qg"] = 13776,	-- Corporal Teeka Bloodsnarl
 						["coord"] = { 65.6, 55.1, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 51,
 					}),
@@ -253,6 +255,7 @@ _.PvP =
 						["sourceQuest"] = 7169,	-- Honored Amongst the Guard
 						["coord"] = { 39.6, 81.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 730, REVERED },  -- Stormpike Guard, Revered
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 17901, 1 },	-- Stormpike Insignia Rank 3
@@ -267,6 +270,7 @@ _.PvP =
 						["sourceQuest"] = 7164,	-- Honored Amongst the Clan
 						["coord"] = { 62.2, 59.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 729, REVERED },    -- Frostwolf Clan, Revered
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 17906, 1 },	-- Frostwolf Insignia Rank 3
@@ -323,6 +327,7 @@ _.PvP =
 						["qg"] = 13817,	-- Voggah Deathgrip
 						["sourceQuest"] = 7142,	-- The Battle for Alterac
 						["coord"] = { 63.6, 60.4, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 51,
 						["groups"] = {
@@ -336,6 +341,7 @@ _.PvP =
 						["qg"] = 13816,	-- Prospector Stonehewer
 						["sourceQuest"] = 7141,	-- The Battle of Alterac
 						["coord"] = { 41.0, 79.6, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 51,
 						["groups"] = {
@@ -350,6 +356,7 @@ _.PvP =
 						["sourceQuest"] = 7163,	-- Rise and Be Recognized
 						["coord"] = { 62.2, 59.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 729, HONORED },    -- Frostwolf Clan, Honored
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 17905, 1 },	-- Frostwolf Insignia Rank 2
@@ -364,6 +371,7 @@ _.PvP =
 						["sourceQuest"] = 7168,	-- Rise and Be Recognized
 						["coord"] = { 39.6, 81.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 730, HONORED },  -- Stormpike Guard, Honored
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 17900, 1 },	-- Stormpike Insignia Rank 2
@@ -436,6 +444,7 @@ _.PvP =
 						["sourceQuest"] = 7170,	-- Earned Reverence
 						["coord"] = { 39.6, 81.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 730, EXALTED },  -- Stormpike Guard, Exalted
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 17902, 1 },	-- Stormpike Insignia Rank 4
@@ -450,6 +459,7 @@ _.PvP =
 						["sourceQuest"] = 7165,	-- Earned Reverence
 						["coord"] = { 62.2, 59.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 729, EXALTED },    -- Frostwolf Clan, Exalted
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 17907, 1 },	-- Frostwolf Insignia Rank 4
@@ -495,6 +505,7 @@ _.PvP =
 						["qg"] = 13841,	-- Lieutenant Haggerdin
 						["sourceQuest"] = 7261,	-- The Sovereign Imperative
 						["coord"] = { 39.6, 81.0, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 17849, 1 },	-- Stormpike Banner
@@ -509,6 +520,7 @@ _.PvP =
 						["qg"] = 13840,	-- Warmaster Laggrond
 						["sourceQuest"] = 7241,	-- In Defense of Frostwolf
 						["coord"] = { 62.2, 59.0, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 51,
 						["groups"] = {
@@ -561,6 +573,7 @@ _.PvP =
 						["sourceQuest"] = 7162,	-- Proving Grounds
 						["coord"] = { 39.6, 81.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 730, FRIENDLY },  -- Stormpike Guard, Friendly
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 17691, 1 },	-- Stormpike Insignia Rank 1
@@ -575,6 +588,7 @@ _.PvP =
 						["sourceQuest"] = 7161,	-- Proving Grounds
 						["coord"] = { 62.2, 59.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 729, FRIENDLY },    -- Frostwolf Clan, Friendly
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 17690, 1 },	-- Frostwolf Insignia Rank 1
@@ -596,6 +610,7 @@ _.PvP =
 						-- ["sourceQuest"] = 7221,	-- Speak with Prospector Stonehewer [Not in WoW Classic]
 						["coord"] = { 41.0, 79.6, ALTERAC_MOUNTAINS },
 						["cr"] = 11946,	-- Drek'Thar <Frostwolf General>
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 51,
 					}),
@@ -604,6 +619,7 @@ _.PvP =
 						--["sourceQuest"] = 7222,	-- Speak with Voggah Deathgrip [Not in WoW Classic]
 						["cr"] = 11948,	-- Vanndar Stormpike <Stormpike General>
 						["coord"] = { 63.6, 60.4, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 51,
 					}),
@@ -612,6 +628,7 @@ _.PvP =
 						["sourceQuest"] = 7171,	-- Legendary Heroes
 						["coord"] = { 39.6, 81.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 730, EXALTED },  -- Stormpike Guard, 999/1000 Exalted
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 17903, 1 },	-- Stormpike Insignia Rank 5
@@ -626,6 +643,7 @@ _.PvP =
 						["sourceQuest"] = 7166,	-- Legendary Heroes
 						["coord"] = { 62.2, 59.0, ALTERAC_MOUNTAINS },
 						["minReputation"] = { 729, EXALTED + 998 },    -- Frostwolf Clan, 999/1000 Exalted
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 17908, 1 },	-- Frostwolf Insignia Rank 5
@@ -638,6 +656,7 @@ _.PvP =
 					q(7082, {	-- The Graveyards of Alterac
 						["qg"] = 13776,	-- Corporal Teeka Bloodsnarl
 						["coord"] = { 65.4, 55.2, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 51,
 					}),
@@ -660,12 +679,14 @@ _.PvP =
 					q(7102, {	-- Towers and Bunkers (Alliance)
 						["qg"] = 13777,	-- Sergeant Durgen Stormpike
 						["coord"] = { 36.8, 77.2, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 51,
 					}),
 					q(7101, {	-- Towers and Bunkers (Horde)
 						["qg"] = 13776,	-- Corporal Teeka Bloodsnarl
 						["coord"] = { 65.4, 55.2, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 51,
 					}),
@@ -757,6 +778,7 @@ _.PvP =
 					}),
 					n(13219, {	-- Jekyll Flandring <Frostwolf Supply Officer>
 						["coord"] = { 62.8, 59.4, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = HORDE_ONLY,
 						["groups"] = {
 							i(19099),	-- Glacial Blade
@@ -799,6 +821,7 @@ _.PvP =
 					}),
 					n(13217, {	-- Thanthaldis Snowgleam <Stormpike Supply Officer>
 						["coord"] = { 39.6, 81.6, ALTERAC_MOUNTAINS },
+						["maps"] = { ALTERAC_MOUNTAINS },
 						["races"] = ALLIANCE_ONLY,
 						["groups"] = {
 							i(19100),	-- Electrified Dagger
