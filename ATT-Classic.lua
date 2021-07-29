@@ -11117,7 +11117,7 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 					for craftIndex = 1,numberOfCrafts do
 						spellID = 0;
 						local craftName, craftSubSpellName, craftType, numAvailable, isExpanded, trainingPointCost, requiredLevel = GetCraftInfo(craftIndex);
-						if craftType ~= "header" then
+						if craftType == "optimal" or craftType == "medium" or craftType == "easy" or craftType == "trivial" or craftType == "used" or craftType == "none" then
 							spellID = craftSubSpellName and (select(7, GetSpellInfo(craftName, craftSubSpellName)) or app.SpellNameToSpellID[craftName .. " (" .. craftSubSpellName .. ")"]) or app.SpellNameToSpellID[craftName];
 							if spellID then
 								app.CurrentCharacter.SpellRanks[spellID] = shouldShowSpellRanks and app.CraftTypeToCraftTypeID(craftType) or nil;
@@ -11164,7 +11164,7 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 					local numTradeSkills = GetNumTradeSkills();
 					for skillIndex = 1,numTradeSkills do
 						local skillName, skillType, numAvailable, isExpanded = GetTradeSkillInfo(skillIndex);
-						if skillType ~= "header" then
+						if skillType == "optimal" or skillType == "medium" or skillType == "easy" or skillType == "trivial" or skillType == "used" or skillType == "none" then
 							local spellID = app.SpellNameToSpellID[skillName];
 							if spellID then
 								app.CurrentCharacter.SpellRanks[spellID] = shouldShowSpellRanks and app.CraftTypeToCraftTypeID(skillType) or nil;
