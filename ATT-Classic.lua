@@ -8774,7 +8774,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 					}),
 					app.CreateMap(232, {	-- Molten Core
 						['icon'] = "Interface\\Icons\\Spell_Fire_Immolation",
-						['description'] = "These are players attuned to Molten Core.\n\nPeople can whisper you '!mc' to mark themselves attuned.",
+						['description'] = "These are players attuned to Molten Core.",
 						['questID'] = 7848,
 						['visible'] = true,
 						["isRaid"] = true,
@@ -8788,7 +8788,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 					}),
 					app.CreateMap(248, {	-- Onyxia's Lair
 						['icon'] = "Interface\\Icons\\INV_Misc_Head_Dragon_01",
-						['description'] = "These are players attuned to Onyxia's Lair.\n\nPeople can whisper you '!ony' to mark themselves attuned.",
+						['description'] = "These are players attuned to Onyxia's Lair.",
 						['questID'] = app.FactionID == Enum.FlightPathFaction.Horde and 6602 or 6502,
 						['visible'] = true,
 						["isRaid"] = true,
@@ -8802,7 +8802,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 					}),
 					app.CreateMap(287, {	-- Blackwing Lair
 						['icon'] = "Interface\\Icons\\INV_Misc_Head_Dragon_01",
-						['description'] = "These are players attuned to Blackwing Lair.\n\nPeople can whisper you '!bwl' to mark themselves attuned.",
+						['description'] = "These are players attuned to Blackwing Lair.",
 						['questID'] = 7761,
 						['visible'] = true,
 						["isRaid"] = true,
@@ -8816,7 +8816,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 					}),
 					app.CreateMap(162, {	-- Naxxramas
 						['icon'] = "Interface\\Icons\\INV_Trinket_Naxxramas03",
-						['description'] = "These are players attuned to Naxxramas.\n\nPeople can whisper you '!naxx' to mark themselves attuned.",
+						['description'] = "These are players attuned to Naxxramas.",
 						['questID'] = 9378,	-- Attunement [HIDDEN QUEST TRIGGER]
 						['visible'] = true,
 						["isRaid"] = true,
@@ -8828,6 +8828,21 @@ app:GetWindow("Attuned", UIParent, function(self)
 							return true;
 						end
 					}),
+					app.CreateMap(350, {	-- Karazhan
+						['icon'] = "Interface\\Icons\\Ability_mount_dreadsteed",
+						['description'] = "These are players attuned to Karazhan.",
+						['questID'] = 9837,	-- Return to Khadgar [The Master's Key]
+						['visible'] = true,
+						["isRaid"] = true,
+						['back'] = 0.5,
+						['OnUpdate'] = app.AlwaysShowUpdate,
+						['OnClick'] = function(row, button)
+							selectedInstance = row.ref;
+							self:Reset();
+							return true;
+						end
+					}),
+					
 				},
 			};
 			selectedInstance = instances.options[#instances.options];
@@ -8846,8 +8861,9 @@ app:GetWindow("Attuned", UIParent, function(self)
 				['text'] = "Attunements",
 				['icon'] = app.asset("Achievement_Dungeon_HEROIC_GloryoftheRaider"), 
 				["description"] = "This list shows you all of the players you have encountered that are Attuned to raids.",
-				['visible'] = true, 
+				['visible'] = true,
 				['expanded'] = true,
+				['nameToGUID'] = {},
 				['back'] = 1,
 				['OnUpdate'] = function(data)
 					data.progress = 0;
@@ -8899,8 +8915,6 @@ app:GetWindow("Attuned", UIParent, function(self)
 					end
 					selectedQuest.questID = selectedInstance.questID;
 					
-					
-					local nameToGUID = {};
 					local groupMembers = {};
 					local count = GetNumGroupMembers();
 					if count > 0 then
@@ -8909,7 +8923,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 							if name then
 								local unit = app.CreateQuestUnit(name);
 								local guid = unit.guid;
-								if guid then nameToGUID[name] = guid; end
+								if guid then data.nameToGUID[strsplit("-",name)] = guid; end
 								table.insert(groupMembers, unit);
 							end
 						end
@@ -8953,7 +8967,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 										if (((yearsOffline or 0) * 12) + (monthsOffline or 0)) < 3 or debugMode then
 											local unit = app.CreateQuestUnit(guid);
 											local name = unit.name;
-											if name then nameToGUID[name] = guid; end
+											if name then data.nameToGUID[strsplit("-",name)] = guid;  end
 											local a = guildRanks[rankIndex + 1];
 											if a then table.insert(a.g, unit); end
 										end
@@ -8981,7 +8995,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 					if addonMessages and #addonMessages > 0 then
 						local unprocessedMessages = {};
 						for i,message in ipairs(addonMessages) do
-							local guid = nameToGUID[message[1]];
+							local guid = data.nameToGUID[message[1]];
 							if guid then
 								-- Attempt to process a quest message.
 								if message[2] == 'q' then
