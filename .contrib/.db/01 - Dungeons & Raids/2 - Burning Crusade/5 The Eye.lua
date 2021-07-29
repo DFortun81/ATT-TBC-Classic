@@ -30,7 +30,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_TWO, {	-- Burning Crusade
 		["coord"] = { 73.73, 63.71, NETHERSTORM },	-- The Eye, Netherstorm
 		["mapID"] = TEMPEST_KEEP_THE_EYE,
 		-- #if BEFORE WRATH
-		["sourceQuest"] = 13430,	-- Trial of the Naaru: Magtheridon
+		["sourceQuest"] = 10888,	-- Trial of the Naaru: Magtheridon
 		-- #endif
 		["sharedLockout"] = 1,
 		["isRaid"] = true,

@@ -8801,7 +8801,7 @@ app:GetWindow("Attuned", UIParent, function(self)
 						end
 					}),
 					app.CreateMap(287, {	-- Blackwing Lair
-						['icon'] = "Interface\\Icons\\INV_Misc_Head_Dragon_01",
+						['icon'] = "Interface\\Icons\\inv_misc_head_dragon_black",
 						['description'] = "These are players attuned to Blackwing Lair.",
 						['questID'] = 7761,
 						['visible'] = true,
@@ -8842,7 +8842,62 @@ app:GetWindow("Attuned", UIParent, function(self)
 							return true;
 						end
 					}),
-					
+					app.CreateMap(332, {	-- SSC
+						['icon'] = "Interface\\Icons\\inv_weapon_shortblade_42",
+						['description'] = "These are players attuned to Serpentshrine Cavern.",
+						['questID'] = 10901,	-- The Cudgel of Kar'desh
+						['visible'] = true,
+						["isRaid"] = true,
+						['back'] = 0.5,
+						['OnUpdate'] = app.AlwaysShowUpdate,
+						['OnClick'] = function(row, button)
+							selectedInstance = row.ref;
+							self:Reset();
+							return true;
+						end
+					}),
+					app.CreateMap(334, {	-- The Eye
+						['icon'] = "Interface\\Icons\\inv_misc_summerfest_brazierorange",
+						['description'] = "These are players attuned to The Eye.",
+						['questID'] = 10888,	-- Trial of the Naaru: Magtheridon
+						['visible'] = true,
+						["isRaid"] = true,
+						['back'] = 0.5,
+						['OnUpdate'] = app.AlwaysShowUpdate,
+						['OnClick'] = function(row, button)
+							selectedInstance = row.ref;
+							self:Reset();
+							return true;
+						end
+					}),
+					app.CreateMap(329, {	-- Hyjal Summit
+						['icon'] = "Interface\\Icons\\inv_weapon_bow_30",
+						['description'] = "These are players attuned to Hyjal Summit.",
+						['questID'] = 10445,	-- The Vials of Eternity
+						['visible'] = true,
+						["isRaid"] = true,
+						['back'] = 0.5,
+						['OnUpdate'] = app.AlwaysShowUpdate,
+						['OnClick'] = function(row, button)
+							selectedInstance = row.ref;
+							self:Reset();
+							return true;
+						end
+					}),
+					app.CreateMap(340, {	-- Black Temple
+						['icon'] = "Interface\\Icons\\inv_helmet_98",
+						['description'] = "These are players attuned to the Black Temple.",
+						['questID'] = 10985,	-- A Distraction for Akama
+						['visible'] = true,
+						["isRaid"] = true,
+						['back'] = 0.5,
+						['OnUpdate'] = app.AlwaysShowUpdate,
+						['OnClick'] = function(row, button)
+							selectedInstance = row.ref;
+							self:Reset();
+							return true;
+						end
+					}),
 				},
 			};
 			selectedInstance = instances.options[#instances.options];
