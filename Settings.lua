@@ -1350,16 +1350,16 @@ ClassicPhasesLabel:Show();
 table.insert(settings.MostRecentTab.objects, ClassicPhasesLabel);
 
 -- Classic Phases
-local last, xoffset, yoffset, offset, spacing, vspacing = ClassicPhasesLabel, 0, -4, 0, 8, 1;
-for i,o in ipairs({ { 11, 0, 0 }, {1101, spacing, -vspacing }, { 12, -spacing, -vspacing }, { 13, 0 }, { 14, 0 }, { 15, 0 }, { 1501, spacing, -vspacing }, { 1502, 0 }, { 1503, 0 }, { 1504, 0 }, { 16, -spacing, -vspacing }, { 1601, spacing, -vspacing }, { 1602, 0 }, { 1603, 0 }, }) do
+local last, xoffset, yoffset, spacing, vspacing = ClassicPhasesLabel, 0, -4, 8, 1;
+for i,o in ipairs({ { 11, 0, 0 }, {1101, spacing, -vspacing }, { 12, 0, -vspacing }, { 13, 0 }, { 14, 0 }, { 15, 0 }, { 1501, spacing, -vspacing }, { 1502, spacing }, { 1503, spacing }, { 1504, spacing }, { 16, 0, -vspacing }, { 1601, spacing, -vspacing }, { 1602, spacing }, { 1603, spacing }, }) do
 	local u = o[1];
-	offset = offset + o[2];
 	yoffset = o[3] or 6;
 	local reason = reasons[u];
 	local filter = settings:CreateCheckBox(reason[3] or tostring(u), UnobtainableOnRefresh, UnobtainableFilterOnClick);
 	filter:SetATTTooltip(reason[2] .. (reason[6] or ""));
-	filter:SetPoint("TOPLEFT", last, "BOTTOMLEFT", o[2], yoffset);
-	filter:SetScale(offset > 0 and 0.8 or 1);
+	filter:SetPoint("LEFT", ClassicPhasesLabel, "LEFT", o[2], 0);
+	filter:SetPoint("TOP", last, "BOTTOMLEFT", 0, yoffset);
+	filter:SetScale(o[2] > 0 and 0.8 or 1);
 	filter.u = u;
 	last = filter;
 end
@@ -1371,16 +1371,16 @@ TBCPhasesLabel:SetText("|CFFAAFFAATBC Phases|r");
 TBCPhasesLabel:Show();
 table.insert(settings.MostRecentTab.objects, TBCPhasesLabel);
 
-last, xoffset, yoffset, offset = TBCPhasesLabel, 0, -4, 0;
-for i,o in ipairs({ { 17, 0, 0 }, {1701, spacing, -vspacing }, { 18, -spacing, -vspacing }, { 19, 0 }, {1901, spacing, -vspacing }, { 1902, 0 }, { 1903, 0 }, { 20, -spacing, -vspacing }, { 21, 0 }, }) do
+last, xoffset, yoffset = TBCPhasesLabel, 0, -4;
+for i,o in ipairs({ { 17, 0, 0 }, {1701, spacing, -vspacing }, { 18, 0, -vspacing }, { 19, 0 }, {1901, spacing, -vspacing }, { 1902, spacing }, { 1903, spacing }, { 20, 0, -vspacing }, { 21, 0 }, }) do
 	local u = o[1];
-	offset = offset + o[2];
 	yoffset = o[3] or 6;
 	local reason = reasons[u];
 	local filter = settings:CreateCheckBox(reason[3] or tostring(u), UnobtainableOnRefresh, UnobtainableFilterOnClick);
 	filter:SetATTTooltip(reason[2] .. (reason[6] or ""));
-	filter:SetPoint("TOPLEFT", last, "BOTTOMLEFT", o[2], yoffset);
-	filter:SetScale(offset > 0 and 0.8 or 1);
+	filter:SetPoint("LEFT", TBCPhasesLabel, "LEFT", o[2], 0);
+	filter:SetPoint("TOP", last, "BOTTOMLEFT", 0, yoffset);
+	filter:SetScale(o[2] > 0 and 0.8 or 1);
 	filter.u = u;
 	last = filter;
 end

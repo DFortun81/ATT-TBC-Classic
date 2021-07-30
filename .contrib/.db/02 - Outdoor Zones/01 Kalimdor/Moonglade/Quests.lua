@@ -266,7 +266,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["classes"] = { DRUID },
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10965, {	-- No Mere Dream
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10965, {	-- No Mere Dream
 					["qg"] = 22834,	-- Clintar Dreamwalker
 					["sourceQuest"] = 10964,	-- Waking the Sleeper
 					["coord"] = { 75.5, 67.0, MOONGLADE },
@@ -274,7 +274,7 @@ _.Zones =
 					["classes"] = { DRUID },
 					["lvl"] = 70,
 				})),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10955, {	-- Morthis Whisperwing
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10955, {	-- Morthis Whisperwing
 					["qg"] = 12042,	-- Loganaar <Druid Trainer>
 					["coord"] = { 52.5, 40.6, MOONGLADE },
 					["timeline"] = { "removed 4.0.1" },
@@ -325,7 +325,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 54,
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10978, {	-- Return to Morthis Whisperwing
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10978, {	-- Return to Morthis Whisperwing
 					["qg"] = 22837,	-- Dreamwarden Lurosa
 					["sourceQuest"] = 10965,	-- No Mere Dream
 					["coord"] = { 72.5, 63.3, MOONGLADE },

@@ -772,7 +772,7 @@ _.Zones =
 						{ 51.0, 69.8, NAGRAND },
 					},
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10990, {	-- The Eagle's Essence
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10990, {	-- The Eagle's Essence
 					["qg"] = 22981,	-- Watcher Elaira
 					["sourceQuest"] = 10988,	-- The Raven Stones
 					["coord"] = { 20.6, 35.7, NAGRAND },
@@ -840,7 +840,7 @@ _.Zones =
 						i(25779),	-- Warmaul Slayer's Band
 					},
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10988, {	-- The Raven Stones
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10988, {	-- The Raven Stones
 					["qg"] = 22981,	-- Watcher Elaira
 					["sourceQuest"] = 10987,	-- To Catch A Sparrowhawk
 					["coord"] = { 20.6, 35.7, NAGRAND },
@@ -1005,7 +1005,7 @@ _.Zones =
 					["timeline"] = { "removed 4.0.1.13287" },
 					["races"] = HORDE_ONLY,
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10987, {	-- To Catch A Sparrowhawk
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10987, {	-- To Catch A Sparrowhawk
 					["qg"] = 22981,	-- Watcher Elaira
 					["sourceQuest"] = 10986,	-- Eyes in the Sky
 					["coord"] = { 20.6, 35.7, NAGRAND },

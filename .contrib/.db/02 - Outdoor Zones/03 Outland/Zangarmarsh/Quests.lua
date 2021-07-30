@@ -149,7 +149,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = lvlsquish(62, 10, 62),
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10994, {	-- Chasing the Moonstone
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10994, {	-- Chasing the Moonstone
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 10993,	-- Return to Cenarion Refuge
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
@@ -204,7 +204,7 @@ _.Zones =
 						i(27730),	-- Watcher's Cloak of Vigilance
 					},
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(11011, {	-- Eternal Vigilance
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(11011, {	-- Eternal Vigilance
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 11001,	-- Vanquish the Raven God
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
@@ -759,7 +759,7 @@ _.Zones =
 					["coord"] = { 80.4, 64.2, ZANGARMARSH },
 					["lvl"] = lvlsquish(60, 10, 60),
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10961, {	-- The Ward of Wakening
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10961, {	-- The Ward of Wakening
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 10955,	-- Morthis Whisperwing
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
@@ -784,7 +784,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = lvlsquish(59, 10, 59),
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10979, {	-- To the Evergrove
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10979, {	-- To the Evergrove
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 10978,	-- Return to Morthis Whisperwing
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
@@ -829,7 +829,7 @@ _.Zones =
 						i(25617),	-- Captain Krosh's Crash Helmet
 					},
 				}),
-				applyclassicphase(TBC_PHASE_THREE_SWIFTFLIGHTFORM, q(10964, {	-- Waking the Sleeper
+				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(10964, {	-- Waking the Sleeper
 					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
 					["sourceQuest"] = 10961,	-- The Ward of Wakening
 					["coord"] = { 80.2, 65.2, ZANGARMARSH },
