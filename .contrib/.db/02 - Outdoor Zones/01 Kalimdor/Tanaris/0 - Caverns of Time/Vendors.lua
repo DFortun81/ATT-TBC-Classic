@@ -42,6 +42,12 @@ _.Zones =
 							i(28272),	-- Formula: Enchant Gloves - Major Spellpower
 							i(33152),	-- Formula: Enchant Gloves - Superior Agility
 							i(22536),	-- Formula: Enchant Ring - Spellpower
+							i(29198, {	-- Glyph of Frost Warding
+								["timeline"] = { "removed 5.0.4" },
+							}),
+							i(29186, {	-- Glyph of the Defender
+								["timeline"] = { "removed 5.0.4" },
+							}),
 							i(29713),	-- Pattern: Drums of Panic
 							-- #if ANYCLASSIC
 							i(185925),	-- Pattern: Greater Drums of Panic
