@@ -1599,6 +1599,12 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["coord"] = { 76.4, 74.5, THE_HINTERLANDS },
 					["maps"] = { THE_HINTERLANDS },
 				}),
+				q(11785, {	-- Desecrate this Fire! — Thousand Needles
+					["provider"] = { "o", 187973 },	-- Horde Bonfire
+					["coord"] = { 42.5, 52.9, THOUSAND_NEEDLES },
+					["timeline"] = { "removed 4.0.1" },	-- Freewind Post got destroyed with Cataclysm
+					["maps"] = { THOUSAND_NEEDLES },
+				}),
 				q(11786, {	-- Desecrate this Fire! — Tirisfal Glades
 					["provider"] = { "o", 187974 },	-- Horde Bonfire
 					["coord"] = { 57.0, 51.9, TIRISFAL_GLADES },
@@ -2702,6 +2708,12 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["qg"] = 25944,	-- The Hinterlands Flame Keeper
 					["coord"] = { 76.6, 75.0, THE_HINTERLANDS },
 					["maps"] = { THE_HINTERLANDS },
+				}),
+				q(11861, {	-- Honor the Flame — Thousand Needles
+					["qg"] = 25945,	-- Thousand Needles Flame Warden
+					["coord"] = { 42.3, 52.9, THOUSAND_NEEDLES },
+					["timeline"] = { "removed 4.0.1" },	-- Freewind Post got destroyed with Cataclysm
+					["maps"] = { THOUSAND_NEEDLES },
 				}),
 				q(11862, {	-- Honor the Flame — Tirisfal Glades
 					["qg"] = 25946,	-- Tirisfal Glades Flame Keeper
