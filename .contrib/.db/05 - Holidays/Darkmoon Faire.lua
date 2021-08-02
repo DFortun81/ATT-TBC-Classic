@@ -9,6 +9,7 @@ local BIG_STICK = i(12251);
 local SLYVAN_SHORTBOW = i(11308);
 local STURDY_RECURVE = i(11306);
 local FINE_SHORTBOW = i(11303);
+local STEAM_TONK_CONTROLLER = i(22729);
 local TIER_ONE_MAX_REPUTATION = { 909, NEUTRAL + 500 };	-- Darkmoon Faire, must be less than 500 over Neutral
 local TIER_TWO_MAX_REPUTATION = { 909, NEUTRAL + 1100 };	-- Darkmoon Faire, must be less than 1100 over Neutral
 local TIER_THREE_MAX_REPUTATION = { 909, NEUTRAL + 1700 };	-- Darkmoon Faire, must be less than 1700 over Neutral
@@ -24,7 +25,13 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 {
 	faction(909, {	-- Darkmoon Faire
 		["icon"] = asset("dmf"),
-		["maps"] = { ELWYNN_FOREST, MULGORE },
+		["maps"] = {
+			ELWYNN_FOREST,
+			MULGORE,
+			-- #if AFTER TBC
+			TERROKAR_FOREST,
+			-- #endif
+		},
 		["groups"] = {
 			n(QUESTS, {
 				q(7930, {	-- 5 Tickets - Darkmoon Flower
@@ -32,6 +39,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
 						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -47,6 +57,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
 						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -62,6 +75,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
 						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -76,6 +92,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
 						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -90,6 +109,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
 						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -99,11 +121,32 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19296),	-- Greater Darkmoon Prize
 					},
 				}),
+				q(9249, {	-- 40 Tickets - Schematic: Steam Tonk Controller
+					["qg"] = 14828,  -- Gelvas Grimegate <Darkmoon Faire Ticket Redemption>
+					["coords"] = {
+						{ 37.3, 37.7, MULGORE },
+						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
+					},
+					["repeatable"] = true,
+					["u"] = TBC_PHASE_ONE,
+					["cost"] = {
+						{ "i", 19182, 40 },	-- Darkmoon Faire Prize Ticket
+					},
+					["g"] = {
+						STEAM_TONK_CONTROLLER,
+					},
+				}),
 				q(7934, {	-- 50 Tickets - Darkmoon Storage Box
 					["qg"] = 14828,  -- Gelvas Grimegate <Darkmoon Faire Ticket Redemption>
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
 						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -118,6 +161,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
 						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -132,6 +178,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
 						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -146,6 +195,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
 						{ 41.6, 68.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.7, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -160,6 +212,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
 						{ 36.2, 35.2, MULGORE },
+						-- #if AFTER TBC
+						{ 33.8, 36.0, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_FIVE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -176,6 +231,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
 						{ 37.8, 39.8, MULGORE },
+						-- #if AFTER TBC
+						{ 34.8, 35.1, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_FOUR_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -192,6 +250,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
 						{ 36.2, 35.2, MULGORE },
+						-- #if AFTER TBC
+						{ 33.8, 36.0, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_ONE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -207,6 +268,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
 						{ 36.2, 35.2, MULGORE },
+						-- #if AFTER TBC
+						{ 33.8, 36.0, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_TWO_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -223,6 +287,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
 						{ 37.8, 39.8, MULGORE },
+						-- #if AFTER TBC
+						{ 34.8, 35.1, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_ONE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -238,6 +305,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 41.7, 70.7, ELWYNN_FOREST },
 						{ 37.1, 37.2, MULGORE },
+						-- #if AFTER TBC
+						{ 34.0, 34.8, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_ONE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -253,6 +323,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
 						{ 36.2, 35.2, MULGORE },
+						-- #if AFTER TBC
+						{ 33.8, 36.0, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_FOUR_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -276,7 +349,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 31890 },  -- Blessings Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["u"] = TBC_PHASE_ONE,
+					["u"] = TBC_PHASE_TWO,
 					["g"] = {
 						i(31856),	-- Darkmoon Card: Crusade
 					},
@@ -293,7 +366,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 31907 },  -- Furies Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["u"] = TBC_PHASE_ONE,
+					["u"] = TBC_PHASE_TWO,
 					["g"] = {
 						i(31858),	-- Darkmoon Card: Vengeance
 					},
@@ -302,7 +375,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 31914 },  -- Lunacy Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["u"] = TBC_PHASE_ONE,
+					["u"] = TBC_PHASE_TWO,
 					["g"] = {
 						i(31859),	-- Darkmoon Card: Madness
 					},
@@ -319,7 +392,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 31891 },  -- Storms Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["u"] = TBC_PHASE_ONE,
+					["u"] = TBC_PHASE_TWO,
 					["g"] = {
 						i(31857),	-- Darkmoon Card: Wrath
 					},
@@ -337,6 +410,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
 						{ 37.5, 39.6, MULGORE },
+						-- #if AFTER TBC
+						{ 34.3, 35.7, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_FIVE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -353,6 +429,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
 						{ 37.5, 39.6, MULGORE },
+						-- #if AFTER TBC
+						{ 34.3, 35.7, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_FIVE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -369,6 +448,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 41.7, 70.7, ELWYNN_FOREST },
 						{ 37.1, 37.2, MULGORE },
+						-- #if AFTER TBC
+						{ 34.0, 34.8, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_THREE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -385,6 +467,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
 						{ 37.8, 39.8, MULGORE },
+						-- #if AFTER TBC
+						{ 34.8, 35.1, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_THREE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -401,6 +486,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
 						{ 37.8, 39.8, MULGORE },
+						-- #if AFTER TBC
+						{ 34.8, 35.1, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_TWO_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -417,6 +505,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 41.7, 70.7, ELWYNN_FOREST },
 						{ 37.1, 37.2, MULGORE },
+						-- #if AFTER TBC
+						{ 34.0, 34.8, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_FOUR_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -433,6 +524,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
 						{ 36.2, 35.2, MULGORE },
+						-- #if AFTER TBC
+						{ 33.8, 36.0, TERROKAR_FOREST },
+						-- #endif
 					},
 					["sourceQuest"] = 7885,	-- Armor Kits
 					["repeatable"] = true,
@@ -450,6 +544,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
 						{ 37.5, 39.6, MULGORE },
+						-- #if AFTER TBC
+						{ 34.3, 35.7, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -466,6 +563,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
 						{ 37.8, 39.8, MULGORE },
+						-- #if AFTER TBC
+						{ 34.8, 35.1, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -482,6 +582,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
 						{ 37.5, 39.6, MULGORE },
+						-- #if AFTER TBC
+						{ 34.3, 35.7, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -498,6 +601,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 41.7, 70.7, ELWYNN_FOREST },
 						{ 37.1, 37.2, MULGORE },
+						-- #if AFTER TBC
+						{ 34.0, 34.8, TERROKAR_FOREST },
+						-- #endif
 					},
 					["repeatable"] = true,
 					["cost"] = {
@@ -513,6 +619,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
 						{ 37.8, 39.8, MULGORE },
+						-- #if AFTER TBC
+						{ 34.8, 35.1, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_FIVE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -529,6 +638,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
 						{ 37.5, 39.6, MULGORE },
+						-- #if AFTER TBC
+						{ 34.3, 35.7, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_ONE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -544,6 +656,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
 						{ 37.5, 39.6, MULGORE },
+						-- #if AFTER TBC
+						{ 34.3, 35.7, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_THREE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -557,6 +672,13 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 				}),
 				q(7946,  {	-- Spawn of Jubjub
 					["qg"] = 14871,  -- Morja
+					["coords"] = {
+						{ 43.3, 70.3, ELWYNN_FOREST },
+						{ 35.9, 35.3, MULGORE },
+						-- #if AFTER TBC
+						{ 33.7, 35.9, TERROKAR_FOREST },
+						-- #endif
+					},
 					["description"] = "You need to throw down a Dark Iron Ale mug near her (hence why you need 2 of them) and wait for the jubling to come hopping to it, then she'll offer this quest.",
 					["cost"] = {
 						{ "i", 11325, 2 },	-- Dark Iron Ale Mug
@@ -600,6 +722,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
 						{ 36.2, 35.2, MULGORE },
+						-- #if AFTER TBC
+						{ 33.8, 36.0, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_THREE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -616,6 +741,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 41.7, 70.7, ELWYNN_FOREST },
 						{ 37.1, 37.2, MULGORE },
+						-- #if AFTER TBC
+						{ 34.0, 34.8, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_FIVE_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -632,6 +760,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
 						{ 37.5, 39.6, MULGORE },
+						-- #if AFTER TBC
+						{ 34.3, 35.7, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_TWO_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -648,6 +779,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
 						{ 37.5, 39.6, MULGORE },
+						-- #if AFTER TBC
+						{ 34.3, 35.7, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_FOUR_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -664,6 +798,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
 						{ 37.5, 39.6, MULGORE },
+						-- #if AFTER TBC
+						{ 34.3, 35.7, TERROKAR_FOREST },
+						-- #endif
 					},
 					["maxReputation"] = TIER_TWO_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -724,6 +861,10 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ 42.8, 66.6, ELWYNN_FOREST },
 						{ 41.4, 69.8, ELWYNN_FOREST },
 						{ 43.6, 71.0, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.3, 35.1, TERROKAR_FOREST },
+						{ 35.8, 33.8, TERROKAR_FOREST },
+						-- #endif
 					},
 					["groups"] = {
 						HEAVY_LEATHER_BALL,
@@ -735,6 +876,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 36.4, 38.0, MULGORE },
 						{ 41.2, 69.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.3, 34.4, TERROKAR_FOREST },
+						-- #endif
 					},
 					["groups"] = {
 						BIG_STICK,
@@ -754,6 +898,9 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["coords"] = {
 						{ 36.8, 38.2, MULGORE },
 						{ 42.0, 69.0, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.9, 35.0, TERROKAR_FOREST },
+						-- #endif
 					},
 					["groups"] = {
 						i(19229),	-- Sayge's Fortune #1
@@ -778,19 +925,11 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19266),	-- Sayge's Fortune #20
 						i(19254),	-- Sayge's Fortune #21
 						i(19255),	-- Sayge's Fortune #22
-						i(19423, {	-- Sayge's Fortune #23
-							--["questID"] = 7937,	-- Your Fortune Awaits You...
-						}),
-						i(19424, {	-- Sayge's Fortune #24
-							--["questID"] = 7938,	-- Your Fortune Awaits You...
-						}),
-						i(19443, {	-- Sayge's Fortune #25
-							--["questID"] = 7944,	-- Your Fortune Awaits You...
-						}),
+						i(19423),	-- Sayge's Fortune #23
+						i(19424),	-- Sayge's Fortune #24
+						i(19443),	-- Sayge's Fortune #25
 						i(19451),	-- Sayge's Fortune #26
-						i(19452, {	-- Sayge's Fortune #27
-							--["questID"] = 7945,	-- Your Fortune Awaits You...
-						}),
+						i(19452),	-- Sayge's Fortune #27
 						i(19453),	-- Sayge's Fortune #28
 						i(19454),	-- Sayge's Fortune #29
 					},
@@ -811,7 +950,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["lvl"] = 55,
 				}),
 				i(31890, {	-- Blessings Deck
-					["u"] = TBC_PHASE_ONE,
+					["u"] = TBC_PHASE_TWO,
 					["cost"] = {
 						{ "i", 31882, 1 },	-- Ace of Blessings
 						{ "i", 31889, 1 },	-- Two of Blessings
@@ -837,7 +976,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["lvl"] = 55,
 				}),
 				i(31907, {	-- Furies Deck
-					["u"] = TBC_PHASE_ONE,
+					["u"] = TBC_PHASE_TWO,
 					["cost"] = {
 						{ "i", 31901, 1 },	-- Ace of Furies
 						{ "i", 31909, 1 },	-- Two of Furies
@@ -850,7 +989,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					},
 				}),
 				i(31914, {	-- Lunacy Deck
-					["u"] = TBC_PHASE_ONE,
+					["u"] = TBC_PHASE_TWO,
 					["cost"] = {
 						{ "i", 31910, 1 },	-- Ace of Lunacy
 						{ "i", 31918, 1 },	-- Two of Lunacy
@@ -876,7 +1015,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["lvl"] = 55,
 				}),
 				i(31891, {	-- Storms Deck
-					["u"] = TBC_PHASE_ONE,
+					["u"] = TBC_PHASE_TWO,
 					["cost"] = {
 						{ "i", 31892, 1 },	-- Ace of Storms
 						{ "i", 31900, 1 },	-- Two of Storms
@@ -914,3 +1053,4 @@ BIG_STICK.u = nil;
 SLYVAN_SHORTBOW.u = nil;
 STURDY_RECURVE.u = nil;
 FINE_SHORTBOW.u = nil;
+STEAM_TONK_CONTROLLER.u = nil;
