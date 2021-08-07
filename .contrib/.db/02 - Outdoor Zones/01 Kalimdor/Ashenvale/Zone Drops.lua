@@ -12,7 +12,7 @@ _.Zones =
 					["cr"] = 12759,	-- Tideress
 					["races"] = HORDE_ONLY,
 				}),
-				i(23780, {	-- Diabolical Plans [Alliance]
+				i(23777, {	-- Diabolical Plans [Alliance]
 					["races"] = ALLIANCE_ONLY,
 					["u"] = TBC_PHASE_ONE,
 					["crs"] = {
@@ -21,7 +21,7 @@ _.Zones =
 						6073,	-- Searing Infernal
 					},
 				}),
-				i(23798, {	-- Diabolical Plans [Horde]
+				i(23797, {	-- Diabolical Plans [Horde]
 					["races"] = HORDE_ONLY,
 					["u"] = TBC_PHASE_ONE,
 					["crs"] = {

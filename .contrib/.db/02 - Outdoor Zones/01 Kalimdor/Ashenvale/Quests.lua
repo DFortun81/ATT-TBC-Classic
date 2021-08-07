@@ -99,13 +99,19 @@ _.Zones =
 					["lvl"] = 26,
 				}),
 				q(9520, {	-- Diabolical Plans [Alliance]
-					["provider"] = { "i", 23780 },	-- Diabolical Plans
+					["provider"] = { "i", 23777 },	-- Diabolical Plans
+					["cost"] = {
+						{ "i", 23780, 1 },	-- Diabolical Plans
+					},
 					["races"] = ALLIANCE_ONLY,
 					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 27,
 				}),
 				q(9535, {	-- Diabolical Plans [Horde]
-					["provider"] = { "i", 23798 },	-- Diabolical Plans
+					["provider"] = { "i", 23797 },	-- Diabolical Plans
+					["cost"] = {
+						{ "i", 23798, 1 },	-- Diabolical Plans
+					},
 					["races"] = HORDE_ONLY,
 					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 27,
