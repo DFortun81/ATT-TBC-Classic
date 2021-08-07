@@ -708,6 +708,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 42588
 				},
 				-- #if BEFORE CATA
+				{
+					["name"] = "Runed Blood Garnet",
+					["recipeID"] = 28906
+				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Runed Crimson Spinel",
 					["recipeID"] = 39711
@@ -5676,6 +5680,7 @@ itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"
 itemrecipe({"Design: Enduring Talasite [TBC]", "Design: Regal Talasite [CATA+]"}, 24217, 31110, 46803);
 itemrecipe({"Design: Great Golden Draenite [TBC]", "Design: Rigid Azure Moonstone [CATA+]"}, 31870, 39451, 28948);
 itemrecipe({"Design: Reckless Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 35323, 46404, 31108);
+itemrecipe({"Design: Runed Blood Garnet [TBC]", "Design: Brilliant Blood Garnet[CATA+]"}, 23133, 28906, 28903);
 
 -- Recipes Removed with Cata
 itemrecipe({"Design: Balanced Nightseye [TBC]", "Design: Shifting Nightseye [CATA+]"}, 31876, 39463, 31103, REMOVED_WITH_CATA);
@@ -5857,7 +5862,6 @@ itemrecipe("Design: Arcanite Sword Pendant", 21958, UNKNOWN_SPELLID);
 itemrecipe("Design: Blood Crown", 21959, 26920, TBC_PHASE_ONE);
 itemrecipe("Design: Teardrop Blood Garnet [TBC]", 23130, 28903, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Bold Blood Garnet [TBC]", 23131, 28905, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Runed Blood Garnet", 23133, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Inscribed Flame Spessarite [TBC]", 23135, 28910, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Glinting Flame Spessarite [TBC]", 23137, 28914, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Design: Radiant Deep Peridot [TBC]", 23140, 28916, TBC_PHASE_ONE, "removed 4.0.1.10000");

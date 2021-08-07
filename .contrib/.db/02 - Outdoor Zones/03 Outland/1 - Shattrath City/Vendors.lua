@@ -1218,13 +1218,16 @@ _.Zones =
 						i(31779),	-- Aldor Tabard
 						i(29129),	-- Anchorite's Robes
 						i(29130),	-- Auchenai Staff
+						-- #if BEFORE CATA
+						i(23143),	-- Design: Dazzling Deep Peridot [TBC] / Purified Shadow Draenite [CATA+]
+						i(23149),	-- Design: Gleaming Golden Draenite [TBC] / Design: Smooth Golden Draenite [CATA+]
+						-- #endif
 						i(24177),	-- Design: Pendant of Shadow's End
 						i(23145),	-- Design: Purified Shadow Draenite
-						i(23143, {	-- Design: Purified Shadow Draenite
-							["spellID"] = 0,	-- This is now available via 23145, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
-						i(23149),	-- Design: Smooth Golden Draenite
+						-- #if AFTER CATA
+						i(23143),	-- Purified Shadow Draenite [CATA+] / Design: Dazzling Deep Peridot [TBC]
+						i(23149),	-- Design: Smooth Golden Draenite [CATA+] / Design: Gleaming Golden Draenite [TBC]
+						-- #endif
 						i(29128),	-- Lightwarden's Band
 						i(29123),	-- Medallion of the Lightbearer
 						i(29704),	-- Pattern: Blastguard Belt
@@ -1251,8 +1254,13 @@ _.Zones =
 					["coord" ] = { 60.6, 64.2, SHATTRATH_CITY },
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["groups"] = {
-						i(23133),	-- Design: Brilliant Blood Garnet
+						-- #if AFTER CATA
+						i(23133),	-- Design: Brilliant Blood Garnet [CATA+] / Design: Runed Blood Garnet [TBC]
+						-- #endif
 						i(24176),	-- Design: Pendant of Withering
+						-- #if BEFORE CATA
+						i(23133),	-- Design: Runed Blood Garnet [TBC] / Design: Brilliant Blood Garnet [CATA+]
+						-- #endif
 						i(29134),	-- Gauntlets of the Chosen
 						i(29701),	-- Pattern: Enchanted Clefthoof Boots
 						i(29700),	-- Pattern: Enchanted Clefthoof Gloves
