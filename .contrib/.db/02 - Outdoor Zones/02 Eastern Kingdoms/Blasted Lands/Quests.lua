@@ -254,17 +254,16 @@ _.Zones =
 					["qg"] = 7572,	-- Fallen Hero of the Horde
 					["sourceQuest"] = 3627,	-- Uniting the Shattered Amulet
 					["coord"] = { 34.3, 66.2, SWAMP_OF_SORROWS },
-					["cost"] = {
-						{ "i", 10759, 1 },	-- Severed Horn of the Defiler
-					},
 					["lvl"] = 45,
 					["g"] = {
-						{
-							["itemID"] = 10759,	-- Severed Horn of the Defiler
-							["questID"] = 3628,	-- You Are Rakh'likh, Demon
-							["cr"] = 7664,	-- Razelikh the Defiler
+						objective(1, {	-- Severed Horn of the Defiler
+							["provider"] = { "i", 10759 },	-- Severed Horn of the Defiler
+							["cost"] = {
+								{ "i", 10757, 1 },	-- Ward of the Defiler
+							},
 							["coord"] = { 47.6, 30.0, BLASTED_LANDS },
-						},
+							["cr"] = 7664,	-- Razelikh the Defiler
+						}),
 						i(10778),	-- Necklace of Sanctuary
 						i(10779),	-- Demon's Blood
 						i(10959),	-- Demon Hide Sack
