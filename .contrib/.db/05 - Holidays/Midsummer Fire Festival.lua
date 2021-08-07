@@ -947,7 +947,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 			["lvl"] = FLAME_STEAL_LEVEL_REQUIREMENT,
 			["groups"] = FLAME_STEAL_REWARDS,
 		}),
-		q(11917, {	-- Striking Back [Level 22]
+		q(11917, {	-- Striking Back [Level 22, Ashenvale]	-- The level requirement was removed in 9.0.5, all "Striking Back" quests could be completed daily.
 			["qg"] = EARTHEN_RING_ELDER_ID,
 			-- #if AFTER CATA
 			["sourceQuests"] = { 29092, 12012 },	-- Inform the Elder (A, H)
@@ -960,7 +960,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				ASHENVALE,
 			}),
 			["isDaily"] = true,
-			["lvl"] = lvlsquish(16, 1, 16),
+			-- #if BEFORE 9.0.5
+			["lvl"] = { 16, 25 },
+			-- #endif
 			["groups"] = {
 				objective(1, {	-- Frostwave Lieutenant slain
 					["provider"] = { "n", 26116 },	-- Frostwave Lieutenant
@@ -969,7 +971,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				i(23247),	-- Burning Blossom
 			},
 		}),
-		q(11947, {	-- Striking Back [Level 32]
+		q(11947, {	-- Striking Back [Level 32, Desolace]
 			["qg"] = EARTHEN_RING_ELDER_ID,
 			-- #if AFTER CATA
 			["sourceQuests"] = { 29092, 12012 },	-- Inform the Elder (A, H)
@@ -982,7 +984,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				DESOLACE,
 			}),
 			["isDaily"] = true,
-			["lvl"] = lvlsquish(26, 1, 26),
+			-- #if BEFORE 9.0.5
+			["lvl"] = { 26, 38 },
+			-- #endif
 			["groups"] = {
 				objective(1, {	-- Hailstone Lieutenant slain
 					["provider"] = { "n", 26178 },	-- Hailstone Lieutenant
@@ -991,7 +995,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				i(23247),	-- Burning Blossom
 			},
 		}),
-		q(11948, {	-- Striking Back [Level 43]
+		q(11948, {	-- Striking Back [Level 43, Stranglethorn Vale]
 			["qg"] = EARTHEN_RING_ELDER_ID,
 			-- #if AFTER CATA
 			["sourceQuests"] = { 29092, 12012 },	-- Inform the Elder (A, H)
@@ -1008,7 +1012,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				-- #endif
 			}),
 			["isDaily"] = true,
-			["lvl"] = lvlsquish(39, 1, 39),
+			-- #if BEFORE 9.0.5
+			["lvl"] = { 39, 44 },
+			-- #endif
 			["groups"] = {
 				objective(1, {	-- Chillwind Lieutenant slain
 					["provider"] = { "n", 26204 },	-- Chillwind Lieutenant
@@ -1021,7 +1027,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				i(23247),	-- Burning Blossom
 			},
 		}),
-		q(11952, {	-- Striking Back [Level 51]
+		q(11952, {	-- Striking Back [Level 51, Burning Steppes]
 			["qg"] = EARTHEN_RING_ELDER_ID,
 			-- #if AFTER CATA
 			["sourceQuests"] = { 29092, 12012 },	-- Inform the Elder (A, H)
@@ -1034,7 +1040,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				BURNING_STEPPES,
 			}),
 			["isDaily"] = true,
-			["lvl"] = lvlsquish(45, 1, 45),
+			-- #if BEFORE 9.0.5
+			["lvl"] = { 45, 53 },
+			-- #endif
 			["groups"] = {
 				objective(1, {	-- Frigid Lieutenant slain
 					["provider"] = { "n", 26214 },	-- Frigid Lieutenant
@@ -1043,7 +1051,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				i(23247),	-- Burning Blossom
 			},
 		}),
-		q(11953, {	-- Striking Back [Level 60]
+		q(11953, {	-- Striking Back [Level 60, Silithus]
 			["qg"] = EARTHEN_RING_ELDER_ID,
 			-- #if AFTER CATA
 			["sourceQuests"] = { 29092, 12012 },	-- Inform the Elder (A, H)
@@ -1056,7 +1064,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				SILITHUS,
 			}),
 			["isDaily"] = true,
-			["lvl"] = lvlsquish(54, 1, 54),
+			-- #if BEFORE 9.0.5
+			["lvl"] = { 54, 60 },
+			-- #endif
 			["groups"] = {
 				objective(1, {	-- Glacial Lieutenant slain
 					["provider"] = { "n", 26215 },	-- Glacial Lieutenant
@@ -1065,7 +1075,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				i(23247),	-- Burning Blossom
 			},
 		}),
-		q(11954, {	-- Striking Back [Level 67]
+		q(11954, {	-- Striking Back [Level 67, Hellfire Peninsula]
 			["qg"] = EARTHEN_RING_ELDER_ID,
 			-- #if AFTER CATA
 			["sourceQuests"] = { 29092, 12012 },	-- Inform the Elder (A, H)
@@ -1078,7 +1088,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				HELLFIRE_PENINSULA,
 			}),
 			["isDaily"] = true,
-			["lvl"] = lvlsquish(61, 1, 61),
+			-- #if BEFORE 9.0.5
+			["lvl"] = 61,
+			-- #endif
 			["groups"] = {
 				objective(1, {	-- Glacial Templar slain
 					["provider"] = { "n", 26216 },	-- Glacial Templar
