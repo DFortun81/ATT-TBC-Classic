@@ -561,9 +561,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		}),
 		q(44574, {	-- Honor the Flame — Azsuna
 			["qg"] = 114492,	-- Azsuna Flame Guardian
-			["coord"] = { 48.2, 29.6, 630 },
+			["coord"] = { 48.2, 29.6, AZSUNA },
 			["timeline"] = { "added 7.0.1" },
-			["maps"] = { 630 },	-- Azsuna
+			["maps"] = { AZSUNA },
 			["isYearly"] = true,
 		}),
 		q(32497, {	-- Honor the Flame — Dread Wastes
@@ -582,9 +582,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		}),
 		q(44576, {	-- Honor the Flame — Highmountain
 			["qg"] = 114494,	-- Highmountain Flame Guardian
-			["coord"] = { 55.4, 84.4, 650 },
+			["coord"] = { 55.4, 84.4, HIGHMOUNTAIN },
 			["timeline"] = { "added 7.0.1" },
-			["maps"] = { 650 },	-- Highmountain
+			["maps"] = { HIGHMOUNTAIN },
 			["isYearly"] = true,
 		}),
 		q(32498, {	-- Honor the Flame — Jade Forest
@@ -624,9 +624,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		}),
 		q(44577, {	-- Honor the Flame — Stormheim
 			["qg"] = 114496,	-- Stormheim Flame Guardian
-			["coord"] = { 32.4, 42.2, 634 },
+			["coord"] = { 32.4, 42.2, STORMHEIM },
 			["timeline"] = { "added 7.0.1" },
-			["maps"] = { 634 },	-- Stormheim
+			["maps"] = { STORMHEIM },
 			["isYearly"] = true,
 		}),
 		q(44571, {	-- Honor the Flame — Talador
@@ -652,9 +652,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		}),
 		q(44575, {	-- Honor the Flame — Val'sharah
 			["qg"] = 114493,	-- Val'sharah Flame Guardian
-			["coord"] = { 44.8, 58.0, 641 },
+			["coord"] = { 44.8, 58.0, VALSHARAH },
 			["timeline"] = { "added 7.0.1" },
-			["maps"] = { 641 },	-- Val'sharah
+			["maps"] = { VALSHARAH },
 			["isYearly"] = true,
 		}),
 		q(11964, {	-- Incense for the Summer Scorchlings (A)
@@ -1436,7 +1436,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		n(FACTION_HEADER_ALLIANCE, {
 			["timeline"] = { "added 2.4.0.7994" },
 			["races"] = ALLIANCE_ONLY,
-			["groups"] = bubbleDown({ ["isYearly"] = true, ["races"] = ALLIANCE_ONLY, }, {
+			["groups"] = bubbleDown({ ["isYearly"] = true, ["races"] = ALLIANCE_ONLY }, {
 				q(11764, {	-- Desecrate this Fire! — Arathi Highlands
 					["provider"] = { "o", 187947 },	-- Horde Bonfire
 					-- #if AFTER CATA
@@ -2164,7 +2164,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		n(FACTION_HEADER_HORDE, {
 			["timeline"] = { "added 2.4.0.7994" },
 			["races"] = HORDE_ONLY,
-			["groups"] = bubbleDown({ ["isYearly"] = true, ["races"] = HORDE_ONLY, }, {
+			["groups"] = bubbleDown({ ["isYearly"] = true, ["races"] = HORDE_ONLY }, {
 				q(11732, {	-- Desecrate this Fire! — Arathi Highlands
 					["provider"] = { "o", 187914 },	-- Alliance Bonfire
 					-- #if AFTER CATA
