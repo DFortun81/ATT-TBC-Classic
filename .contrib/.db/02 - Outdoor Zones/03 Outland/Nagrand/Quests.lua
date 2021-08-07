@@ -553,6 +553,7 @@ _.Zones =
 					["provider"] = { "n", 18302 },	-- Matron Drakia
 					["coord"] = { 56.6, 34.2, NAGRAND },
 					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
 				}),
 				q(9920,  {	-- Mo'mor the Breaker
 					["provider"] = { "n", 18353 },	-- Huntress Bintook
