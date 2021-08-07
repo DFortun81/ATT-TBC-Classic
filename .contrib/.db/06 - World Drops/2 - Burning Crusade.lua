@@ -1098,19 +1098,13 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24168),	-- Design: Braided Eternium Chain
 			-- #if BEFORE CATA
 			i(24192),	-- Design: Bright Living Ruby [TBC] / Design: Delicate Living Ruby [CATA+]
-			-- #endif
-			-- #if BEFORE CATA
 			i(35306),	-- Design: Bright Living Ruby [TBC] / Design: Delicate Living Ruby [CATA+]
-			-- #endif
-			-- #if BEFORE CATA
 			i(24203),	-- Design: Brilliant Dawnstone [TBC] / Design: Brilliant Living Ruby [CATA+]
 			-- #endif
 			-- #if AFTER CATA
 			i(24196),	-- Design: Brilliant Living Ruby [CATA+] / Design: Runed Living Ruby [TBC]
 			i(24195),	-- Design: Brilliant Living Ruby [CATA+] / Design: Teardrop Living Ruby [TBC]
-			-- #endif
-			-- #if AFTER CATA
-			i(24203),	-- Design: Brilliant Dawnstone [TBC] / Design: Brilliant Living Ruby [CATA+]
+			i(24203),	-- Design: Brilliant Living Ruby [CATA+] / Design: Brilliant Dawnstone [TBC]
 			-- #endif
 			i(25906),	-- Design: Brutal Earthstorm Diamond
 			i(24171),	-- Design: Chain of the Twilight Owl
@@ -1124,8 +1118,6 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24194),	-- Design: Delicate Living Ruby
 			-- #if AFTER CATA
 			i(24192),	-- Design: Delicate Living Ruby [CATA+] / Design: Bright Living Ruby [TBC]
-			-- #endif
-			-- #if AFTER CATA
 			i(35306),	-- Design: Delicate Living Ruby [CATA+] / Design: Bright Living Ruby [TBC]
 			-- #endif
 			i(25907),	-- Design: Destructive Skyfire Diamond

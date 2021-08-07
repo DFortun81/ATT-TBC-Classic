@@ -737,6 +737,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Blood of Amber",
 					["recipeID"] = 42592
 				},
+				{
+					["name"] = "Brilliant Dawnstone",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 31096
+				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Brilliant Lionseye",
 					["timeline"] = { REMOVED_WITH_CATA },
@@ -5689,7 +5694,7 @@ itemrecipe({"Design: Bright Crimson Spinel [TBC]", "Design: Delicate Crimson Spi
 itemrecipe({"Design: Bright Crimson Spinel [TBC]", "Design: Delicate Crimson Spinel [CATA+]"}, 35245, 39712, 39706, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bright Living Ruby [TBC]", "Design: Delicate Living Ruby [CATA+]"}, 24192, 31089, 31085, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bright Living Ruby [TBC]", "Design: Delicate Living Ruby [CATA+]"}, 35306, 31089, 31085, REMOVED_WITH_CATA);
-itemrecipe({"Design: Brilliant Dawnstone [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24203, 31088, 31096, REMOVED_WITH_CATA);
+itemrecipe({"Design: Brilliant Dawnstone [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24203, 31096, 31088, REMOVED_WITH_CATA);
 itemrecipe({"Design: Brilliant Lionseye [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32290, 39719, 39711, REMOVED_WITH_CATA);
 itemrecipe({"Design: Brilliant Lionseye [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 35255, 39719, 39711, REMOVED_WITH_CATA);
 itemrecipe({"Design: Gleaming Dawnstone [TBC]", "Design: Smooth Dawnstone [CATA+]"}, 24206, 31099, 31097, REMOVED_WITH_CATA);
