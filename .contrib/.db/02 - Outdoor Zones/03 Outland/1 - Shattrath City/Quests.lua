@@ -372,11 +372,11 @@ _.Zones =
 					["isBreadcrumb"] = true,	-- for "A Haunted History" in Shadowmoon Valley
 				}),
 				q(44863, {	-- Clearing the Air
+					["qg"] = 115546,	-- Lunelli
 					["requireSkill"] = BLACKSMITHING,
 					["coord"] = { 64.1, 71.5, SHATTRATH_CITY },
-					["provider"] = { "n", 115546 },	-- Lunelli
-					["timeline"] = { "timeline 7.0.3.21655" },
-					["g"] = {
+					["timeline"] = { "added 7.0.3.21655" },
+					["groups"] = {
 						i(142279),	-- Plans: Windforged Rapier
 						i(142283),	-- Plans: Skyforged Great Axe
 						i(142282),	-- Plans: Stormforged Axe
