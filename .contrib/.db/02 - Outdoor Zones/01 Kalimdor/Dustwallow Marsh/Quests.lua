@@ -1319,6 +1319,7 @@ _.Zones =
 				applyclassicphase(TBC_PHASE_ONE, q(11172, {	-- The Zeppelin Crash
 					["qg"] = 23600,	-- Apprentice Morlann <Tabetha's Apprentice>
 					["coord"] = { 46.1, 57.4, DUSTWALLOW_MARSH },
+					["isBreadcrumb"] = true,
 					["lvl"] = 35,
 				})),
 				q(1201, {	-- Theramore Spies
