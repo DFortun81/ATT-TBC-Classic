@@ -901,6 +901,7 @@ profession(BLACKSMITHING, {
 				{
 					["name"] = "Corruption",
 					["recipeID"] = 16985,
+					["timeline"] = { "removed 2.0.1", "added 3.0.1" },
 				},
 				{
 					["name"] = "Dark Iron Destroyer",
@@ -1096,6 +1097,7 @@ profession(BLACKSMITHING, {
 				{
 					["name"] = "Serenity",
 					["recipeID"] = 16983,
+					["timeline"] = { "removed 2.0.1", "added 3.0.1" },
 				},
 				-- #endif
 				{

@@ -111,6 +111,7 @@ profession(BLACKSMITHING, {
 						["name"] = "Serenity",
 						["recipeID"] = 16983,
 						["requireSkill"] = 17040,
+						["timeline"] = { "removed 2.0.1", "added 3.0.1" },
 					},
 					-- #endif
 					applyclassicphase(TBC_PHASE_ONE,{
@@ -178,6 +179,7 @@ profession(BLACKSMITHING, {
 						["name"] = "Corruption",
 						["recipeID"] = 16985,
 						["requireSkill"] = 17039,
+						["timeline"] = { "removed 2.0.1", "added 3.0.1" },
 					},
 					{
 						["name"] = "Dark Iron Reaver",

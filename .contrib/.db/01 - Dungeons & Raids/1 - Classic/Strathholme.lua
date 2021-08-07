@@ -429,6 +429,7 @@ _.Instances = { tier(1, {	-- Classic
 							i(13351),	-- Crimson Hammersmith's Apron
 							i(12827, {	-- Plans: Serenity
 								["description"] = "You must be a Blacksmith in order to loot this from the Plans on the floor.",
+								["timeline"] = { "removed 2.0.1", "added 3.0.1" },
 							}),
 						},
 					}),
@@ -568,6 +569,7 @@ _.Instances = { tier(1, {	-- Classic
 							i(13350),	-- Insignia of the Black Guard
 							i(12830, {	-- Plans: Corruption
 								["description"] = "You must be a Blacksmith in order to loot this from the Plans on the floor.",
+								["timeline"] = { "removed 2.0.1", "added 3.0.1" },
 							}),
 						},
 					}),

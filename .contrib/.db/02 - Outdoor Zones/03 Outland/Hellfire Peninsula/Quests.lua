@@ -1219,7 +1219,7 @@ _.Zones =
 				}),
 				q(10289, {	-- Journey to Thrallmar
 					["qg"] = 18930,	-- Vlagga Freyfeather
-					["sourceQuest"] = 10120,	-- Arrival in Outlanad
+					["sourceQuest"] = 10120,	-- Arrival in Outland
 					["coord"] = { 87.3, 48.1, HELLFIRE_PENINSULA },
 					["cost"] = {
 						{ "i", 28024, 1 },	-- Orion's Report
