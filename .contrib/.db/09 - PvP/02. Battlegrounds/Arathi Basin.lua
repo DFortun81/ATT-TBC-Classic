@@ -68,6 +68,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -96,6 +97,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -124,6 +126,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -152,6 +155,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -180,6 +184,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -208,6 +213,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -236,6 +242,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -264,6 +271,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -292,6 +300,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -320,6 +329,7 @@ _.PvP =
 							{ 69.8, 90.6, IRONFORGE },
 							{ 79.4, 18.0, STORMWIND_CITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = ALLIANCE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -348,6 +358,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -376,6 +387,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -404,6 +416,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -432,6 +445,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -460,6 +474,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -488,6 +503,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -516,6 +532,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -544,6 +561,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -572,6 +590,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
@@ -600,6 +619,7 @@ _.PvP =
 							{ 57.8, 76.8, THUNDER_BLUFF },
 							{ 58.2, 97.6, UNDERCITY },
 						},
+						["timeline"] = { "removed 2.0.1" },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 20559, 3 },	-- Arathi Basin Mark of Honor
