@@ -1107,6 +1107,7 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			-- #endif
 			-- #if AFTER CATA
 			i(24196),	-- Design: Brilliant Living Ruby [CATA+] / Design: Runed Living Ruby [TBC]
+			i(24195),	-- Design: Brilliant Living Ruby [CATA+] / Design: Teardrop Living Ruby [TBC]
 			-- #endif
 			-- #if AFTER CATA
 			i(24203),	-- Design: Brilliant Dawnstone [TBC] / Design: Brilliant Living Ruby [CATA+]
@@ -1191,6 +1192,9 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
 			i(24197),	-- Design: Subtle Living Ruby [TBC] / Design: Subtle Dawnstone [CATA+]
 			-- #if AFTER CATA
 			i(24207),	-- Design: Subtle Dawnstone [CATA+] / Design: Thick Dawnstone [TBC]
+			-- #endif
+			-- #if BEFORE CATA
+			i(24195),	-- Design: Teardrop Living Ruby [TBC] / Design: Brilliant Living Ruby [CATA+]
 			-- #endif
 			i(25905),	-- Design: Tenacious Earthstorm Diamond
 			-- #if BEFORE CATA

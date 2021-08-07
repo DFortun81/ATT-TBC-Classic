@@ -718,6 +718,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39710
 				}),
+				{
+					["name"] = "Teardrop Living Ruby",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 31087
+				},
 			}
 		},
 		{
@@ -5696,6 +5701,7 @@ itemrecipe({"Design: Lustrous Star of Elune [TBC]", "Design: Sparkling Star of E
 itemrecipe({"Design: Royal Nightseye [TBC]", "Design: Purified Nightseye [CATA+]"}, 24212, 31105, 31112, REMOVED_WITH_CATA);
 itemrecipe({"Design: Royal Shadowsong Amethyst [TBC]", "Design: Purified Shadowsong Amethyst [CATA+]"}, 32302, 39732, 39741, REMOVED_WITH_CATA);
 itemrecipe({"Design: Teardrop Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32281, 39710, 39711, REMOVED_WITH_CATA);
+itemrecipe({"Design: Teardrop Living Ruby [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24195, 31087, 31088, REMOVED_WITH_CATA);
 itemrecipe({"Design: Thick Dawnstone [TBC]", "Design: Subtle Dawnstone [CATA+]"}, 24207, 31100, 31090, REMOVED_WITH_CATA);
 itemrecipe({"Design: Thick Lionseye [TBC]", "Design: Subtle Lionseye [CATA+]"}, 32294, 39723, 39713, REMOVED_WITH_CATA);
 
@@ -5873,7 +5879,6 @@ itemrecipe("Design: Pendant of Withering", 24176, UNKNOWN_SPELLID, TBC_PHASE_ONE
 itemrecipe("Design: Living Ruby Serpent", 24181, UNKNOWN_SPELLID);
 itemrecipe("Design: Talasite Owl", 24182, UNKNOWN_SPELLID, TBC_PHASE_ONE);
 itemrecipe("Design: Bright Living Ruby [TBC]", 24192, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Teardrop Living Ruby", 24195, UNKNOWN_SPELLID);
 itemrecipe("Design: Runed Living Ruby [TBC]", 24196, 31088, TBC_PHASE_ONE);
 itemrecipe("Design: Subtle Living Ruby [TBC]", 24197, 31090, TBC_PHASE_ONE);
 itemrecipe("Design: Rigid Dawnstone [TBC]", 24205, 31098, TBC_PHASE_ONE);
