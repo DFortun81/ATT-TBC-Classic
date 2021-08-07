@@ -1433,7 +1433,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		}),
 		
 		-- Bonfire Quests
-		n(-30, {	-- Alliance
+		n(FACTION_HEADER_ALLIANCE, {
 			["timeline"] = { "added 2.4.0.7994" },
 			["races"] = ALLIANCE_ONLY,
 			["groups"] = bubbleDown({ ["isYearly"] = true, ["races"] = ALLIANCE_ONLY, }, {
@@ -2161,7 +2161,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 			}),
 		}),
-		n(-31, {	-- Horde
+		n(FACTION_HEADER_HORDE, {
 			["timeline"] = { "added 2.4.0.7994" },
 			["races"] = HORDE_ONLY,
 			["groups"] = bubbleDown({ ["isYearly"] = true, ["races"] = HORDE_ONLY, }, {

@@ -10,7 +10,7 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 			IRONFORGE,
 		},
 		["groups"] = {
-			n(-30, {	-- Alliance
+			n(FACTION_HEADER_ALLIANCE, {
 				["races"] = ALLIANCE_ONLY,
 				["groups"] = {
 					q(8811, {	-- One Commendation Signet (1/2) [Stormwind]
@@ -764,7 +764,7 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 					-- #endif
 				},
 			}),
-			n(-31, {	-- Horde
+			n(FACTION_HEADER_HORDE, {
 				["races"] = HORDE_ONLY,
 				["groups"] = {
 					q(8815, {	-- One Commendation Signet (1/2) [Orgrimmar]

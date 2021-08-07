@@ -4,7 +4,7 @@
 -- https://classic.wowhead.com/npc=12796/raider-bork
 _.PvP =
 {
-	n(-30, {	-- Alliance
+	n(FACTION_HEADER_ALLIANCE, {
 		["races"] = ALLIANCE_ONLY,
 		["groups"] = {
 			n(QUESTS, {
@@ -666,7 +666,7 @@ _.PvP =
 			}),
 		},
 	}),
-	n(-31, {	-- Horde
+	n(FACTION_HEADER_HORDE, {
 		["races"] = HORDE_ONLY,
 		["groups"] = {
 			n(QUESTS, {
