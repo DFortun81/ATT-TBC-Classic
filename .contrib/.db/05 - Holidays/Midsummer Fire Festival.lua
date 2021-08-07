@@ -568,9 +568,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		}),
 		q(32497, {	-- Honor the Flame — Dread Wastes
 			["qg"] = 69522,	-- Dread Wastes Flame Guardian
-			["coord"] = { 56.1, 69.5, 422 },
+			["coord"] = { 56.1, 69.5, DREAD_WASTES },
 			["timeline"] = { "added 5.0.1" },
-			["maps"] = { 422 },	-- Dread Wastes
+			["maps"] = { DREAD_WASTES },
 			["isYearly"] = true,
 		}),
 		q(44573, {	-- Honor the Flame — Gorgrond
@@ -589,37 +589,37 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		}),
 		q(32498, {	-- Honor the Flame — Jade Forest
 			["qg"] = 69529,	-- Jade Forest Flame Guardian
-			["coord"] = { 47.2, 47.2, 371 },
+			["coord"] = { 47.2, 47.2, THE_JADE_FOREST },
 			["timeline"] = { "added 5.0.1" },
-			["maps"] = { 371 },	-- Jade Forest
+			["maps"] = { THE_JADE_FOREST },
 			["isYearly"] = true,
 		}),
 		q(32499, {	-- Honor the Flame — Krasarang Wilds
 			["qg"] = 69533,	-- Krasarang Wilds Flame Guardian
-			["coord"] = { 77.8, 3.60, 418 },
+			["coord"] = { 77.8, 3.60, KRASARANG_WILDS },
 			["timeline"] = { "added 5.0.1" },
-			["maps"] = { 418 },	-- Krasarang Wilds
+			["maps"] = { KRASARANG_WILDS },
 			["isYearly"] = true,
 		}),
 		q(32500, {	-- Honor the Flame — Kun-Lai Summit
 			["qg"] = 69535,	-- Kun-Lai Summit Flame Guardian
-			["coord"] = { 71.1, 90.9, 379 },
+			["coord"] = { 71.1, 90.9, KUN_LAI_SUMMIT },
 			["timeline"] = { "added 5.0.1" },
-			["maps"] = { 379 },	-- Kun-Lai Summit
+			["maps"] = { KUN_LAI_SUMMIT },
 			["isYearly"] = true,
 		}),
 		q(44572, {	-- Honor the Flame — Nagrand (WoD)
 			["qg"] = 114490,	-- Nagrand Flame Guardian
-			["coord"] = { 80.4, 47.6, 550 },
+			["coord"] = { 80.4, 47.6, DRAENOR_NAGRAND },
 			["timeline"] = { "added 6.0.1" },
-			["maps"] = { 550 },	-- Nagrand
+			["maps"] = { DRAENOR_NAGRAND },
 			["isYearly"] = true,
 		}),
 		q(44570, {	-- Honor the Flame — Spires of Arak
 			["qg"] = 114488,	-- Spires of Arak Flame Guardian
-			["coord"] = { 48.0, 44.6, 542 },
+			["coord"] = { 48.0, 44.6, SPIRES_OF_ARAK },
 			["timeline"] = { "added 6.0.1" },
-			["maps"] = { 542 },	-- Spires of Arak
+			["maps"] = { SPIRES_OF_ARAK },
 			["isYearly"] = true,
 		}),
 		q(44577, {	-- Honor the Flame — Stormheim
@@ -631,23 +631,23 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 		}),
 		q(44571, {	-- Honor the Flame — Talador
 			["qg"] = 114489,	-- Talador Flame Guardian
-			["coord"] = { 43.4, 71.8, 535 },
+			["coord"] = { 43.4, 71.8, TALADOR },
 			["timeline"] = { "added 6.0.1" },
-			["maps"] = { 535 },	-- Talador
+			["maps"] = { TALADOR },
 			["isYearly"] = true,
 		}),
 		q(32501, {	-- Honor the Flame — Townlong Steppes
 			["qg"] = 69536,	-- Townlong Steppes Flame Guardian
-			["coord"] = { 71.5, 56.3, 388 },
+			["coord"] = { 71.5, 56.3, TOWNLONG_STEPPES },
 			["timeline"] = { "added 5.0.1" },
-			["maps"] = { 388 },	-- Townlong Steppes
+			["maps"] = { TOWNLONG_STEPPES },
 			["isYearly"] = true,
 		}),
 		q(32502, {	-- Honor the Flame — Valley of the Four Winds
 			["qg"] = 69550,	-- Valley of the Four Winds Flame Guardian
-			["coord"] = { 51.8, 51.4, 376 },
+			["coord"] = { 51.8, 51.4, VALLEY_OF_THE_FOUR_WINDS },
 			["timeline"] = { "added 5.0.1" },
-			["maps"] = { 376 },	-- Valley of the Four Winds
+			["maps"] = { VALLEY_OF_THE_FOUR_WINDS },
 			["isYearly"] = true,
 		}),
 		q(44575, {	-- Honor the Flame — Val'sharah
@@ -1185,7 +1185,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				125,	-- Dalaran (Northrend)
 				-- #endif
 				-- #if AFTER MOP
-				504,	-- Isle of Thunder
+				ISLE_OF_THUNDER,
 				-- #endif
 			},
 			["timeline"] = { "added 2.4.0.7994" },
@@ -1226,7 +1226,7 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				125,	-- Dalaran (Northrend)
 				-- #endif
 				-- #if AFTER MOP
-				504,	-- Isle of Thunder
+				ISLE_OF_THUNDER,
 				-- #endif
 			},
 			["timeline"] = { "added 2.4.0.7994" },
@@ -1535,9 +1535,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(44583, {	-- Desecrate this Fire! — Frostfire Ridge
 					["provider"] = { "o", 259870 },	-- Horde Bonfire
-					["coord"] = { 72.8, 65.2, 525 },
+					["coord"] = { 72.8, 65.2, FROSTFIRE_RIDGE },
 					["timeline"] = { "added 6.0.1" },
-					["maps"] = { 525, },	-- Frostfire Ridge
+					["maps"] = { FROSTFIRE_RIDGE, },
 				}),
 				q(11774, {	-- Desecrate this Fire! — Ghostlands
 					["provider"] = { "o", 187962 },	-- Horde Bonfire
@@ -1655,9 +1655,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(44627, {	-- Desecrate this Fire! — Suramar
 					["provider"] = { "o", 259926 },	-- Horde Bonfire
-					["coord"] = { 30.3, 45.4, 680 },
+					["coord"] = { 30.3, 45.4, SURAMAR },
 					["timeline"] = { "added 7.0.1" },
-					["maps"] = { 680 },	-- Suramar
+					["maps"] = { SURAMAR },
 				}),
 				q(11781, {	-- Desecrate this Fire! — Swamp of Sorrows
 					["provider"] = { "o", 187969 },	-- Horde Bonfire
@@ -1728,9 +1728,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(32496, {	-- Desecrate this Fire! — Vale of Eternal Blossoms
 					["provider"] = { "o", 217852 },	-- Horde Bonfire
-					["coord"] = { 77.9, 33.9, 390 },
+					["coord"] = { 77.9, 33.9, VALE_OF_ETERNAL_BLOSSOMS },
 					["timeline"] = { "added 5.0.1" },
-					["maps"] = { 390, },	-- Vale of Eternal Blossoms
+					["maps"] = { VALE_OF_ETERNAL_BLOSSOMS },
 				}),
 				q(54749, {	-- Desecrate this Fire! — Vol'dun
 					["provider"] = { "o", 316801 },	-- Horde Bonfire
@@ -1986,9 +1986,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(44579, {	-- Honor the Flame — Shadowmoon Valley (WoD)
 					["qg"] = 114500,	-- Shadowmoon Valley Flame Warden
-					["coord"] = { 42.6, 36.0, 539 },
+					["coord"] = { 42.6, 36.0, DRAENOR_SHADOWMOON_VALLEY },
 					["timeline"] = { "added 6.0.1" },
-					["maps"] = { 539 },	-- Shadowmoon Valley
+					["maps"] = { DRAENOR_SHADOWMOON_VALLEY },
 				}),
 				q(13486, {	-- Honor the Flame — Sholazar Basin
 					["qg"] = 32802,	-- Sholazar Basin Flame Warden
@@ -2031,9 +2031,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(44613, {	-- Honor the Flame — Suramar
 					["qg"] = 114519,	-- Suramar Flame Warden
-					["coord"] = { 23.0, 58.4, 680 },
+					["coord"] = { 23.0, 58.4, SURAMAR },
 					["timeline"] = { "added 7.0.1" },
-					["maps"] = { 680 },	-- Suramar
+					["maps"] = { SURAMAR },
 				}),
 				q(28929, {	-- Honor the Flame — Swamp of Sorrows
 					["qg"] = 51602,	-- Swamp of Sorrows Flame Warden
@@ -2110,9 +2110,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(32510, {	-- Honor the Flame — Vale of Eternal Blossoms
 					["qg"] = 69572,	-- Vale of Eternal Blossoms Flame Warden
-					["coord"] = { 79.6, 37.2, 390 },
+					["coord"] = { 79.6, 37.2, VALE_OF_ETERNAL_BLOSSOMS },
 					["timeline"] = { "added 5.0.1" },
-					["maps"] = { 390 },	-- Vale of Eternal Blossoms
+					["maps"] = { VALE_OF_ETERNAL_BLOSSOMS },
 				}),
 				q(29031, {	-- Honor the Flame — Vashj'ir
 					["qg"] = 51697,	-- Vashj'ir Flame Guardian
@@ -2357,9 +2357,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(44582, {	-- Desecrate this Fire! — Shadowmoon Valley (WoD)
 					["provider"] = { "o", 259871 },	-- Alliance Bonfire
-					["coord"] = { 42.8, 35.9, 539 },
+					["coord"] = { 42.8, 35.9, DRAENOR_SHADOWMOON_VALLEY },
 					["timeline"] = { "added 6.0.1" },
-					["maps"] = { 539 },	-- Shadowmoon Valley
+					["maps"] = { DRAENOR_SHADOWMOON_VALLEY },
 				}),
 				q(13442, {	-- Desecrate this Fire! — Sholazar Basin
 					["provider"] = { "o", 194035 },	-- Alliance Bonfire
@@ -2408,9 +2408,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(44624, {	-- Desecrate this Fire! — Suramar
 					["provider"] = { "o", 259927 },	-- Alliance Bonfire
-					["coord"] = { 22.8, 58.2, 680 },
+					["coord"] = { 22.8, 58.2, SURAMAR },
 					["timeline"] = { "added 7.0.1" },
-					["maps"] = { 680 },	-- Suramar
+					["maps"] = { SURAMAR },
 				}),
 				q(28916, {	-- Desecrate this Fire! — Swamp of Sorrows
 					["provider"] = { "o", 207988 },	-- Alliance Bonfire
@@ -2478,9 +2478,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(32503, {	-- Desecrate this Fire! — Vale of Eternal Blossoms
 					["provider"] = { "o", 217851 },	-- Alliance Bonfire
-					["coord"] = { 79.8, 37.0, 390 },
+					["coord"] = { 79.8, 37.0, VALE_OF_ETERNAL_BLOSSOMS },
 					["timeline"] = { "added 5.0.1" },
-					["maps"] = { 390 },	-- Vale of Eternal Blossoms
+					["maps"] = { VALE_OF_ETERNAL_BLOSSOMS },
 				}),
 				q(11756, {	-- Desecrate this Fire! — Western Plaguelands
 					["provider"] = { "o", 187939 },	-- Alliance Bonfire
@@ -2633,9 +2633,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(44580, {	-- Honor the Flame — Frostfire Ridge
 					["qg"] = 114499,	-- Frostfire Ridge Flame Keeper
-					["coord"] = { 72.6, 65.0, 525 },
+					["coord"] = { 72.6, 65.0, FROSTFIRE_RIDGE },
 					["timeline"] = { "added 6.0.1" },
-					["maps"] = { 525 },	-- Frostfire Ridge
+					["maps"] = { FROSTFIRE_RIDGE },
 				}),
 				q(11850, {	-- Honor the Flame — Ghostlands
 					["qg"] = 25933,	-- Ghostlands Flame Keeper
@@ -2764,9 +2764,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(44614, {	-- Honor the Flame — Suramar
 					["qg"] = 114518,	-- Suramar Flame Keeper
-					["coord"] = { 30.4, 45.4, 680 },
+					["coord"] = { 30.4, 45.4, SURAMAR },
 					["timeline"] = { "added 7.0.1" },
-					["maps"] = { 680 },	-- Suramar
+					["maps"] = { SURAMAR },
 				}),
 				q(11857, {	-- Honor the Flame — Swamp of Sorrows
 					["qg"] = 25941,	-- Swamp of Sorrows Flame Keeper
@@ -2838,9 +2838,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				}),
 				q(32509, {	-- Honor the Flame — Vale of Eternal Blossoms
 					["qg"] = 69551,	-- Vale of Eternal Blossoms Flame Keeper
-					["coord"] = { 77.8, 33.1, 390 },
+					["coord"] = { 77.8, 33.1, VALE_OF_ETERNAL_BLOSSOMS },
 					["timeline"] = { "added 5.0.1" },
-					["maps"] = { 390 },	-- Vale of Eternal Blossoms
+					["maps"] = { VALE_OF_ETERNAL_BLOSSOMS },
 				}),
 				q(29031, {	-- Honor the Flame — Vashj'ir
 					["qg"] = 51697,	-- Vashj'ir Flame Guardian
