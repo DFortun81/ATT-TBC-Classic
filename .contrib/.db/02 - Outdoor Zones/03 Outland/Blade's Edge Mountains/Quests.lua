@@ -877,7 +877,11 @@ _.Zones =
 					["lvl"] = lvlsquish(65, 20, 65),
 					["groups"] = {
 						i(31456),	-- Gnomish Casting Boots
-						i(30690), 	-- Power Converter (Toy !)
+						i(30690, { 	-- Power Converter (Toy !)
+							-- #if ANYCLASSIC
+							["description"] = "It's an unlimited Firework Launcher that eventually becomes a Toy and is also a Star Wars reference. Keep it forever.",
+							-- #endif
+						}),
 						i(31458),	-- Razaani-Buster Leggings
 						i(31459),	-- Soul Saver's Chest Plate
 						i(31457),	-- Toshley's Station Hero's Hat
