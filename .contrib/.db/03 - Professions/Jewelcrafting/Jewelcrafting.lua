@@ -752,6 +752,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 42593
 				},
 				{
+					["name"] = "Gleaming Dawnstone",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 31099
+				},
+				{
 					["name"] = "Mystic Dawnstone",
 					["recipeID"] = 31101
 				},
