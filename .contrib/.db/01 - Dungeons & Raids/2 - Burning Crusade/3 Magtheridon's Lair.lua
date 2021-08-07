@@ -103,7 +103,7 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 					i(34846, {	-- Black Sack of Gems
 						-- #if ANYCLASSIC
 						-- #if BEFORE WRATH
-						["description"] = "Might not be available until Black Temple is released.",
+						["description"] = "The epic gems may not be available until Black Temple is released, however, some users have reported getting one out of this bag already.",
 						-- #endif
 						["timeline"] = { "added 2.4.0.7923" },
 						-- #endif
