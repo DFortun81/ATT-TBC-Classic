@@ -485,28 +485,31 @@ _.Instances = { tier(1, {	-- Classic
 					["sourceQuest"] = 4742,	-- Seal of Ascension (1/2)
 					["qg"] = 10299,	-- Scarshield Infiltrator <Scarshield Legion>
 					["description"] = "Ask your party to come with you to Dustwallow Marsh. You will not be able to solo this quest.\n\nOnly one person can complete this quest per Emberstrife cooldown. Your party will need to kill Emberstrife to reset the cooldown. (Respawn is about 5 minutes.)",
-					["cr"] = 10321,	-- Emberstrife
 					["lvl"] = 57,
 					["groups"] = {
+						objective(1, {	-- 0/1 Forged Seal of Ascension
+							["provider"] = { "i", 12324 },	-- Forged Seal of Ascension
+							["cost"] = {
+								{ "i", 12323, 1 },	-- Unforged Seal of Ascension
+								{ "i", 12300, 1 },	-- Orb of Draconic Energy
+							},
+							["cr"] = 10321,	-- Emberstrife
+						}),
 						{
 							["itemID"] = 12339,	-- Vaelan's Gift
-							["questID"] = 4743,	-- Seal of Ascension (2/2)
 							["groups"] = {
 								{
 									["itemID"] = 12323,	-- Unforged Seal of Ascension
-									["questID"] = 4743,	-- Seal of Ascension (2/2)
 									["description"] = "Use this once the dragon reaches 10-20% health.",
 								},
 								{
 									["itemID"] = 12300,	-- Orb of Draconic Energy
-									["questID"] = 4743,	-- Seal of Ascension (2/2)
-									["description"] = "Use this once the dragon reaches 10% health. Instruct your party NOT to kill Emberstrife",
+									["description"] = "Use this once the dragon reaches 10% health. Instruct your party NOT to kill Emberstrife.",
 								},
 							},
 						},
 						{
 							["itemID"] = 12344,	-- Seal of Ascension
-							["questID"] = 4743,	-- Seal of Ascension (2/2)
 							["description"] = "This item must be in your bags to open the door to UBRS.",
 						},
 					},
