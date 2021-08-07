@@ -78,7 +78,7 @@ _.Zones =
 						i(23799, {	-- Schematic: Adamantite Rifle
 							["isLimited"] = true,
 						}),
-						applyclassicphase(TBC_PHASE_THREE, i(23815, {	-- Schematic: Adamantite Shell Machine
+						applyclassicphase(TBC_PHASE_TWO, i(23815, {	-- Schematic: Adamantite Shell Machine
 							["isLimited"] = true,
 						})),
 						i(23816, {	-- Schematic: Fel Iron Toolbox
