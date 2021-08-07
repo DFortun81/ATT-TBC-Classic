@@ -97,16 +97,6 @@ local FESTIVAL_TALESPINNER_MAPS = {
 	-- #endif
 };
 
-local FIRE_EATER_ALLIANCE_ID = 25962;	-- Fire Eater (A)
-local FIRE_EATER_ALLIANCE_MAPS = {
-	
-};
-
-local FIRE_EATER_HORDE_ID = 25994;	-- Fire Eater (H)
-local FIRE_EATER_HORDE_MAPS = {
-	
-};
-
 -- #if AFTER WRATH
 local FLAME_STEAL_LEVEL_REQUIREMENT = 1;	-- Level requirement reduced to 1 after Wrath. (haha have fun with that!)
 -- #else
@@ -738,14 +728,12 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 			},
 		}),
 		q(11882, {	-- Playing with Fire (A)
-			["qg"] = FIRE_EATER_ALLIANCE_ID,
-			["maps"] = FIRE_EATER_HALLIANCE_MAPS,
+			["qg"] = 25962,	-- Fire Eater (A)
 			["timeline"] = { "added 2.4.0.7994" },
 			["races"] = ALLIANCE_ONLY,
 		}),
 		q(11915, {	-- Playing with Fire (H)
-			["qg"] = FIRE_EATER_HORDE_ID,
-			["maps"] = FIRE_EATER_HORDE_MAPS,
+			["qg"] = 25994,	-- Fire Eater (H)
 			["timeline"] = { "added 2.4.0.7994" },
 			["races"] = HORDE_ONLY,
 		}),
