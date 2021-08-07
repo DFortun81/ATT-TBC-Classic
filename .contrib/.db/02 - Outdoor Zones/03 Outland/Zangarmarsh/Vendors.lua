@@ -58,27 +58,37 @@ _.Zones =
 					["groups"] = {
 						i(31804),	-- Cenarion Expedition Tabard
 						i(33999),	-- Cenarion War Hippogryph (MOUNT!)
-						i(30623),	-- Reservoir Key [Revered]
-						i(29192),	-- Glyph of Ferocity
-						i(29194),	-- Glyph of Nature Warding
-						i(24417),	-- Scout's Arrow
-						i(31949),	-- Warden's Arrow
+						i(30623, {	-- Reservoir Key [Revered]
+							["timeline"] = { "removed 4.2.0" },
+						}),
+						i(29192, {	-- Glyph of Ferocity
+							["timeline"] = { "removed 5.0.4" },
+						}),
+						i(29194, {	-- Glyph of Nature Warding
+							["timeline"] = { "removed 5.0.4" },
+						}),
+						i(24417, {	-- Scout's Arrow
+							["timeline"] = { "removed 4.0.1" },
+						}),
+						i(31949, {	-- Warden's Arrow
+							["timeline"] = { "removed 4.0.1" },
+						}),
 						i(29172),	-- Ashyen's Gift
-						i(35403),	-- Crusader's Ornamented Gloves
-						i(35415),	-- Crusader's Scaled Legguards
+						applyclassicphase(TBC_PHASE_TWO, i(35403)),	-- Crusader's Ornamented Gloves
+						applyclassicphase(TBC_PHASE_TWO, i(35415)),	-- Crusader's Scaled Legguards
 						i(24183),	-- Design: Nightseye Panther
 						i(31402),	-- Design: The Natural Ward
-						i(35358),	-- Dragonhide Legguards
-						i(35329),	-- Dreadweave Hood
+						applyclassicphase(TBC_PHASE_TWO, i(35358)),	-- Dragonhide Legguards
+						applyclassicphase(TBC_PHASE_TWO, i(35329)),	-- Dreadweave Hood
 						i(29171),	-- Earthwarden
-						i(35347),	-- Evoker's Silk Trousers
+						applyclassicphase(TBC_PHASE_TWO, i(35347)),	-- Evoker's Silk Trousers
 						i(24429),	-- Expedition Flare
 						i(25835),	-- Explorer's Walking Stick
 						i(33149),	-- Formula: Enchant Cloak - Stealth
 						i(28271),	-- Formula: Enchant Gloves - Spell Strike
-						i(35365),	-- Kodohide Robe
-						i(35336),	-- Mooncloth Shoulderpads
-						i(35367),	-- Opportunist's Leather Helm
+						applyclassicphase(TBC_PHASE_TWO, i(35365)),	-- Kodohide Robe
+						applyclassicphase(TBC_PHASE_TWO, i(35336)),	-- Mooncloth Shoulderpads
+						applyclassicphase(TBC_PHASE_TWO, i(35367)),	-- Opportunist's Leather Helm
 						i(29720),	-- Pattern: Clefthide Leg Armor
 						i(25737),	-- Pattern: Heavy Clefthoof Boots
 						i(25736),	-- Pattern: Heavy Clefthoof Leggings
@@ -96,18 +106,18 @@ _.Zones =
 						i(22922),	-- Recipe: Major Nature Protection Potion
 						i(25869),	-- Recipe: Transmute Earthstorm Diamond
 						i(22918),	-- Recipe: Transmute Primal Water to Air
-						i(35342),	-- Satin Robe
-						i(35408),	-- Savage Plate Gauntlets
+						applyclassicphase(TBC_PHASE_TWO, i(35342)),	-- Satin Robe
+						applyclassicphase(TBC_PHASE_TWO, i(35408)),	-- Savage Plate Gauntlets
 						i(23814),	-- Schematic: Green Smoke Flare
-						i(35385),	-- Seer's Linked Spaulders
-						i(35387),	-- Seer's Mail Gauntlets
-						i(35394),	-- Seer's Ringmail Legguards
-						i(35379),	-- Stalker's Chain Leggings
+						applyclassicphase(TBC_PHASE_TWO, i(35385)),	-- Seer's Linked Spaulders
+						applyclassicphase(TBC_PHASE_TWO, i(35387)),	-- Seer's Mail Gauntlets
+						applyclassicphase(TBC_PHASE_TWO, i(35394)),	-- Seer's Ringmail Legguards
+						applyclassicphase(TBC_PHASE_TWO, i(35379)),	-- Stalker's Chain Leggings
 						i(29173),	-- Strength of the Untamed
 						i(25838),	-- Warden's Hauberk
 						i(29174),	-- Watcher's Cowl
 						i(29170),	-- Windcaller's Orb
-						i(35374),	-- Wyrmhide Spaulders
+						applyclassicphase(TBC_PHASE_TWO, i(35374)),	-- Wyrmhide Spaulders
 					},
 				}),
 				n(18015, {	-- Gambarinka <Tradesman>

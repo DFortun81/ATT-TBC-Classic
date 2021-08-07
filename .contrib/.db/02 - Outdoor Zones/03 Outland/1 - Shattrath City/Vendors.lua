@@ -631,39 +631,42 @@ _.Zones =
 						i(29177),	-- Adal's Command
 						i(29180),	-- Blessed Scale Girdle
 						i(29176),	-- Crest of the Sha'tar
-						i(35404),	-- Crusader's Ornamented Headguard
-						i(35416),	-- Crusader's Scaled Shoulders
+						applyclassicphase(TBC_PHASE_TWO, i(35404)),	-- Crusader's Ornamented Headguard
+						applyclassicphase(TBC_PHASE_TWO, i(35416)),	-- Crusader's Scaled Shoulders
 						i(33159),	-- Design: Blood of Amber
 						i(25904),	-- Design: Insightful Earthstorm Diamond
 						i(33155),	-- Design: Kailee's Rose
 						i(30826),	-- Design: Ring of Arcane Shielding
 						i(24182),	-- Design: Talasite Owl
-						i(35359),	-- Dragonhide Spaulders
-						i(35330),	-- Dreadweave Leggings
-						i(35345),	-- Evoker's Silk Handguards
+						applyclassicphase(TBC_PHASE_TWO, i(35359)),	-- Dragonhide Spaulders
+						applyclassicphase(TBC_PHASE_TWO, i(35330)),	-- Dreadweave Leggings
+						applyclassicphase(TBC_PHASE_TWO, i(35345)),	-- Evoker's Silk Handguards
 						i(28273),	-- Formula: Enchant Gloves - Major Healing
 						i(33153),	-- Formula: Enchant Gloves - Threat
 						i(22537),	-- Formula: Enchant Ring - Healing Power
 						i(28281),	-- Formula: Enchant Weapon - Major Healing
 						i(29175),	-- Gavel of Pure Light
-						i(35362),	-- Kodohide Helm
-						i(35333),	-- Mooncloth Cowl
-						i(35368),	-- Opportunist's Leather Legguards
+						applyclassicphase(TBC_PHASE_TWO, i(35362)),	-- Kodohide Helm
+						applyclassicphase(TBC_PHASE_TWO, i(35333)),	-- Mooncloth Cowl
+						applyclassicphase(TBC_PHASE_TWO, i(35368)),	-- Opportunist's Leather Legguards
 						i(29717),	-- Pattern: Drums of Battle
+						-- #if ANYCLASSIC
+						applyclassicphase(TBC_PHASE_FIVE, i(185926)),	-- Pattern: Greater Drums of Battle
+						-- #endif
 						i(13517),	-- Recipe: Alchemist Stone
 						i(31354),	-- Recipe: Flask of the Titans
 						i(22915),	-- Recipe: Transmute Primal Air to Fire
-						i(35341),	-- Satin Mantle
-						i(35407),	-- Savage Plate Chestpiece
-						i(35381),	-- Seer's Linked Armor
-						i(35388),	-- Seer's Mail Helm
-						i(35395),	-- Seer's Ringmail Shoulderpads
+						applyclassicphase(TBC_PHASE_TWO, i(35341)),	-- Satin Mantle
+						applyclassicphase(TBC_PHASE_TWO, i(35407)),	-- Savage Plate Chestpiece
+						applyclassicphase(TBC_PHASE_TWO, i(35381)),	-- Seer's Linked Armor
+						applyclassicphase(TBC_PHASE_TWO, i(35388)),	-- Seer's Mail Helm
+						applyclassicphase(TBC_PHASE_TWO, i(35395)),	-- Seer's Ringmail Shoulderpads
 						i(31781),	-- Sha'tar Tabard
-						i(35380),	-- Stalker's Chain Spaulders
+						applyclassicphase(TBC_PHASE_TWO, i(35380)),	-- Stalker's Chain Spaulders
 						i(30634, {	-- Warpforged Key
 							["timeline"] = { "removed 4.2.0.10000" },
 						}),
-						i(35375),	-- Wyrmhide Robe
+						applyclassicphase(TBC_PHASE_TWO, i(35375)),	-- Wyrmhide Robe
 						i(29179),	-- Xi'ri's Gift
 					},
 				}),
@@ -1051,40 +1054,46 @@ _.Zones =
 					["minReputation"] = { 1011, NEUTRAL },	-- Lower City, Neutral.
 					["groups"] = {
 						i(30633),	-- Auchenai Key
-						i(35405),	-- Crusader's Ornamented Leggings
-						i(35412),	-- Crusader's Scaled Chestpiece
+						applyclassicphase(TBC_PHASE_TWO, i(35405)),	-- Crusader's Ornamented Leggings
+						applyclassicphase(TBC_PHASE_TWO, i(35412)),	-- Crusader's Scaled Chestpiece
 						i(33157),	-- Design: Falling Star
 						i(24179),	-- Design: Felsteel Boar
 						i(24175),	-- Design: Pendant of Thawing
 						i(23138),	-- Design: Potent Flame Spessarite
-						i(35357),	-- Dragonhide Helm
-						i(35331),	-- Dreadweave Mantle
-						i(35344),	-- Evoker's Silk Cowl
+						applyclassicphase(TBC_PHASE_TWO, i(35357)),	-- Dragonhide Helm
+						applyclassicphase(TBC_PHASE_TWO, i(35331)),	-- Dreadweave Mantle
+						applyclassicphase(TBC_PHASE_TWO, i(35344)),	-- Evoker's Silk Cowl
 						i(33148),	-- Formula: Enchant Cloak - Dodge
 						applyclassicphase(TBC_PHASE_THREE, i(22538)),	-- Formula: Enchant Ring - Stats
 						i(30832),	-- Gavel of Unearthed Secrets
-						i(35361),	-- Kodohide Gloves
+						i(29199, {	-- Glyph of Shadow Warding
+							["timeline"] = { "removed 5.0.4" },
+						}),
+						i(30846, {	-- Glyph of the Outcast
+							["timeline"] = { "removed 5.0.4" },
+						}),
+						applyclassicphase(TBC_PHASE_TWO, i(35361)),	-- Kodohide Gloves
 						i(30836),	-- Leggings of the Skettis Exile
 						i(30841),	-- Lower City Prayerbook
 						i(31778),	-- Lower City Tabard
-						i(35335),	-- Mooncloth Mitts
-						i(35370),	-- Opportunist's Leather Tunic
+						applyclassicphase(TBC_PHASE_TWO, i(35335)),	-- Mooncloth Mitts
+						applyclassicphase(TBC_PHASE_TWO, i(35370)),	-- Opportunist's Leather Tunic
 						i(30833),	-- Pattern: Cloak of Arcane Evasion
-						i(34200),	-- Pattern: Quiver of a Thousand Feathers
+						applyclassicphase(TBC_PHASE_THREE, i(34200)),	-- Pattern: Quiver of a Thousand Feathers
+						i(22910),	-- Recipe: Elixir of Major Shadow Power
 						i(31357, {	-- Recipe: Flask of Chromatic Resistance
 							["timeline"] = { "removed 5.0.4" },
 						}),
-						i(22910),	-- Recipe: Elixir of Major Shadow Power
 						i(30835),	-- Salvager's Hauberk
-						i(35340),	-- Satin Leggings
-						i(35411),	-- Savage Plate Shoulders
-						i(35382),	-- Seer's Linked Gauntlets
-						i(35389),	-- Seer's Mail Leggings
-						i(35391),	-- Seer's Ringmail Chestguard
+						applyclassicphase(TBC_PHASE_TWO, i(35340)),	-- Satin Leggings
+						applyclassicphase(TBC_PHASE_TWO, i(35411)),	-- Savage Plate Shoulders
+						applyclassicphase(TBC_PHASE_TWO, i(35382)),	-- Seer's Linked Gauntlets
+						applyclassicphase(TBC_PHASE_TWO, i(35389)),	-- Seer's Mail Leggings
+						applyclassicphase(TBC_PHASE_TWO, i(35391)),	-- Seer's Ringmail Chestguard
 						i(30834),	-- Shapeshifter's Signet
-						i(35378),	-- Stalker's Chain Helm
+						applyclassicphase(TBC_PHASE_TWO, i(35378)),	-- Stalker's Chain Helm
 						i(30830),	-- Trident of the Outcast Tribe
-						i(35373),	-- Wyrmhide Legguards
+						applyclassicphase(TBC_PHASE_TWO, i(35373)),	-- Wyrmhide Legguards
 					},
 				}),
 				n(22208, {	-- Nasmara Moonsong <Mooncloth Tailoring Specialist>

@@ -1233,10 +1233,16 @@ profession(LEATHERWORKING, {
 					["name"] = "Leatherworker's Satchel",
 					["recipeID"] = 45100
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Netherscale Ammo Pouch",
+					["timeline"] = { "removed 4.0.1.10000" },
+					["recipeID"] = 44768
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Quiver of a Thousand Feathers",
+					["timeline"] = { "removed 4.0.1.10000" },
 					["recipeID"] = 44359
-				},
+				}),
 				{
 					["name"] = "Reinforced Mining Bag",
 					["recipeID"] = 35530
@@ -2057,9 +2063,6 @@ itemrecipe("Pattern: Drums of Speed", 34172, 35544, TBC_PHASE_ONE);
 itemrecipe("Pattern: Drums of Speed", 34173, 35544, TBC_PHASE_ONE);
 itemrecipe("Pattern: Drums of Restoration", 34174, 35539, TBC_PHASE_ONE);
 itemrecipe("Pattern: Drums of Restoration", 34175, 35539, TBC_PHASE_ONE);
-itemrecipe("Pattern: Quiver of a Thousand Feathers", 34200, 44359, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Pattern: Netherscale Ammo Pouch", 34201, 44768, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Pattern: Netherscale Ammo Pouch", 34218, 44768, TBC_PHASE_ONE, "removed 4.0.1.10000");
 itemrecipe("Pattern: Bag of Many Hides", 34491, 45117, TBC_PHASE_ONE);
 
 itemrecipe("Pattern: Reinforced Mining Bag", 30444, 35530, TBC_PHASE_ONE);
@@ -2075,6 +2078,9 @@ itemrecipe("Pattern: Boots of Utter Darkness", 30306, 36357, TBC_PHASE_TWO);
 itemrecipe("Pattern: Boots of the Crimson Hawk", 30307, 36358, TBC_PHASE_TWO);
 itemrecipe("Pattern: Hurricane Boots", 30308, 36359, TBC_PHASE_TWO);
 
+itemrecipe("Pattern: Netherscale Ammo Pouch", 34201, 44768, TBC_PHASE_THREE, "removed 4.0.1.10000");
+itemrecipe("Pattern: Netherscale Ammo Pouch", 34218, 44768, TBC_PHASE_THREE, "removed 4.0.1.10000");
+itemrecipe("Pattern: Quiver of a Thousand Feathers", 34200, 44359, TBC_PHASE_THREE, "removed 4.0.1.10000");
 itemrecipe("Pattern: Cloak of Darkness", 33124, 42546, TBC_PHASE_THREE);
 itemrecipe("Pattern: Shadowprowler's Chestguard", 33205, 42731, TBC_PHASE_THREE);
 

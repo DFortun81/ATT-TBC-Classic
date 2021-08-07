@@ -241,25 +241,29 @@ _.Zones =
 						i(32883, {	-- Felbane Slugs
 							["timeline"] = { "removed 4.0.1.10000" },
 						}),
-						i(29196),	-- Glyph of Fire Warding
-						i(29189),	-- Glyph of Renewal
+						i(29196, {	-- Glyph of Fire Warding
+							["timeline"] = { "removed 5.0.4" },
+						}),
+						i(29189, {	-- Glyph of Renewal
+							["timeline"] = { "removed 5.0.4" },
+						}),
 						i(29153),	-- Blade of the Archmage
-						i(35476),	-- Crusader's Ornamented Spaulders
-						i(35477),	-- Crusader's Scaled Gauntlets
+						applyclassicphase(TBC_PHASE_TWO, i(35476)),	-- Crusader's Ornamented Spaulders
+						applyclassicphase(TBC_PHASE_TWO, i(35477)),	-- Crusader's Scaled Gauntlets
 						i(24180),	-- Design: Dawnstone Crab
 						i(23142),	-- Design: Regal Deep Peridot (Cata+) / Design: Enduring Deep Peridot (TBC)
-						i(35469),	-- Dragonhide Robe
-						i(35464),	-- Dreadweave Robe
-						i(35465),	-- Evoker's Silk Amice
+						applyclassicphase(TBC_PHASE_TWO, i(35469)),	-- Dragonhide Robe
+						applyclassicphase(TBC_PHASE_TWO, i(35464)),	-- Dreadweave Robe
+						applyclassicphase(TBC_PHASE_TWO, i(35465)),	-- Evoker's Silk Amice
 						i(25825),	-- Footman's Longsword
 						i(22531),	-- Formula: Enchant Bracer - Superior Healing
 						i(22547),	-- Formula: Enchant Chest - Exceptional Stats
 						i(33150),	-- Formula: Enchant Cloak - Subtlety
 						i(29166),	-- Hellforged Halberd
 						i(29156),	-- Honor's Call
-						i(35470),	-- Kodohide Spaulders
-						i(35467),	-- Mooncloth Vestments
-						i(35468),	-- Opportunist's Leather Gloves
+						applyclassicphase(TBC_PHASE_TWO, i(35470)),	-- Kodohide Spaulders
+						applyclassicphase(TBC_PHASE_TWO, i(35467)),	-- Mooncloth Vestments
+						applyclassicphase(TBC_PHASE_TWO, i(35468)),	-- Opportunist's Leather Gloves
 						i(29719, {	-- Pattern: Cobrahide Leg Armor
 							["spellID"] = 35549,	-- Cobrahide Leg Armor
 							["requireSkill"] = LEATHERWORKING,
@@ -290,14 +294,14 @@ _.Zones =
 						i(25870),	-- Recipe: Transmute Skyfire Diamond
 						i(29169),	-- Ring of Convalescence
 						i(25826),	-- Sage's Band
-						i(35466),	-- Satin Hood
-						i(35478),	-- Savage Plate Helm
-						i(35474),	-- Seer's Linked Helm
-						i(35472),	-- Seer's Mail Armor
-						i(35473),	-- Seer's Ringmail Gloves
-						i(35475),	-- Stalker's Chain Gauntlets
+						applyclassicphase(TBC_PHASE_TWO, i(35466)),	-- Satin Hood
+						applyclassicphase(TBC_PHASE_TWO, i(35478)),	-- Savage Plate Helm
+						applyclassicphase(TBC_PHASE_TWO, i(35474)),	-- Seer's Linked Helm
+						applyclassicphase(TBC_PHASE_TWO, i(35472)),	-- Seer's Mail Armor
+						applyclassicphase(TBC_PHASE_TWO, i(35473)),	-- Seer's Ringmail Gloves
+						applyclassicphase(TBC_PHASE_TWO, i(35475)),	-- Stalker's Chain Gauntlets
 						i(29151),	-- Veteran's Musket
-						i(35471),	-- Wyrmhide Gloves
+						applyclassicphase(TBC_PHASE_TWO, i(35471)),	-- Wyrmhide Gloves
 						i(24008),	-- Dried Mushroom Rations
 						i(24007),	-- Footman's Waterskin
 					},
@@ -328,29 +332,33 @@ _.Zones =
 							["timeline"] = { "removed 4.2.0.10000" },
 							["races"] = ALLIANCE_ONLY,
 						}),
-						i(29197),	-- Glyph of Fire Warding
-						i(29190),	-- Glyph of Renewal
+						i(29197, {	-- Glyph of Fire Warding
+							["timeline"] = { "removed 5.0.4" },
+						}),
+						i(29190, {	-- Glyph of Renewal
+							["timeline"] = { "removed 5.0.4" },
+						}),
 						i(32882, {	-- Hellfire Shot
 							["timeline"] = { "removed 4.0.1.10000" },
 						}),
 						i(29168),	-- Ancestral Band
 						i(29167),	-- Blackened Spear
-						i(35406),	-- Crusader's Ornamented Spaulders
-						i(35413),	-- Crusader's Scaled Gauntlets
+						applyclassicphase(TBC_PHASE_TWO, i(35406)),	-- Crusader's Ornamented Spaulders
+						applyclassicphase(TBC_PHASE_TWO, i(35413)),	-- Crusader's Scaled Gauntlets
 						i(31358),	-- Design: Dawnstone Crab
 						i(31359),	-- Design: Regal Deep Peridot (Cata+) / Design: Enduring Deep Peridot (TBC)
-						i(35360),	-- Dragonhide Robe
-						i(35332),	-- Dreadweave Robe
-						i(35343),	-- Evoker's Silk Amice
+						applyclassicphase(TBC_PHASE_TWO, i(35360)),	-- Dragonhide Robe
+						applyclassicphase(TBC_PHASE_TWO, i(35332)),	-- Dreadweave Robe
+						applyclassicphase(TBC_PHASE_TWO, i(35343)),	-- Evoker's Silk Amice
 						i(25824),	-- Farseer's Band
 						i(24000),	-- Formula: Enchant Bracer - Superior Healing
 						i(24003),	-- Formula: Enchant Chest - Exceptional Stats
 						i(33151),	-- Formula: Enchant Cloak - Subtlety
 						i(25823),	-- Grunt's Waraxe
-						i(35364),	-- Kodohide Spaulders
+						applyclassicphase(TBC_PHASE_TWO, i(35364)),	-- Kodohide Spaulders
 						i(29152),	-- Marksman's Bow
-						i(35337),	-- Mooncloth Vestments
-						i(35366),	-- Opportunist's Leather Gloves
+						applyclassicphase(TBC_PHASE_TWO, i(35337)),	-- Mooncloth Vestments
+						applyclassicphase(TBC_PHASE_TWO, i(35366)),	-- Opportunist's Leather Gloves
 						i(31361, {	-- Pattern: Cobrahide Leg Armor
 							["spellID"] = 35549,	-- Cobrahide Leg Armor
 							["requireSkill"] = LEATHERWORKING,
@@ -379,15 +387,15 @@ _.Zones =
 						i(24002),	-- Plans: Felsteel Shield Spike
 						i(24001),	-- Recipe: Elixir of Major Agility
 						i(29232),	-- Recipe: Transmute Skyfire Diamond
-						i(35339),	-- Satin Hood
-						i(35409),	-- Savage Plate Helm
-						i(35383),	-- Seer's Linked Helm
-						i(35386),	-- Seer's Mail Armor
-						i(35392),	-- Seer's Ringmail Gloves
-						i(35377),	-- Stalker's Chain Gauntlets
+						applyclassicphase(TBC_PHASE_TWO, i(35339)),	-- Satin Hood
+						applyclassicphase(TBC_PHASE_TWO, i(35409)),	-- Savage Plate Helm
+						applyclassicphase(TBC_PHASE_TWO, i(35383)),	-- Seer's Linked Helm
+						applyclassicphase(TBC_PHASE_TWO, i(35386)),	-- Seer's Mail Armor
+						applyclassicphase(TBC_PHASE_TWO, i(35392)),	-- Seer's Ringmail Gloves
+						applyclassicphase(TBC_PHASE_TWO, i(35377)),	-- Stalker's Chain Gauntlets
 						i(29155),	-- Stormcaller
 						i(29165),	-- Warbringer
-						i(35371),	-- Wyrmhide Gloves
+						applyclassicphase(TBC_PHASE_TWO, i(35371)),	-- Wyrmhide Gloves
 						i(24009),	-- Dried Fruit Rations
 						i(24006),	-- Grunt's Waterskin
 					},
