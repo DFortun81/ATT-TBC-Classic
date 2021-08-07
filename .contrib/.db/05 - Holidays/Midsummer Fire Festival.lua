@@ -114,6 +114,93 @@ local FLAME_STEAL_REWARDS = {
 	-- #endif
 };
 
+local MERCHANT_GROUPS = {
+	i(116440, {	-- Burning Defender's Medallion (TOY!)
+		["cost"] = { { "i", 23247, 500 } },	-- Burning Blossom
+		["timeline"] = { "added 6.0.1.18594" },
+	}),
+	i(141649, {	-- Set of Matches (TOY!)
+		["cost"] = { { "i", 23247, 500 } },	-- Burning Blossom
+		["timeline"] = { "added 7.1.0.22731" },
+	}),
+	i(34686, {	-- Brazier of Dancing Flames (TOY!)
+		["cost"] = { { "i", 23247, 350 } },	-- Burning Blossom
+		["timeline"] = { "added 2.4.0.7994" },
+	}),
+	i(116435, {	-- Cozy Bonfire (TOY!)
+		["cost"] = { { "i", 23247, 350 } },	-- Burning Blossom
+		["timeline"] = { "added 6.0.1.18594" },
+	}),
+	i(166746, {	-- Fire Eater's Hearthstone (TOY!)
+		["cost"] = { { "i", 23247, 300 } },	-- Burning Blossom
+		["timeline"] = { "added 8.1.5.29701" },
+	}),
+	i(116439, {	-- Blazing Cindercrawler (Pet)
+		["cost"] = { { "i", 23247, 350 } },	-- Burning Blossom
+		["timeline"] = { "added 6.0.1.18594" },
+	}),
+	-- #if AFTER 2.4.0.7994
+	-- This item was originally exclusively available as a quest reward.
+	i(23083, {	-- Captured Flame (Pet)
+		["cost"] = { { "i", 23247, 350 } },	-- Burning Blossom
+	}),
+	-- #endif
+	i(141714, {	-- Igneous Flameling (Pet)
+		["cost"] = { { "i", 23247, 350 } },	-- Burning Blossom
+		["timeline"] = { "added 7.1.0.22731" },
+	}),
+	i(74278, {	-- Helm of the Fire Festival
+		["cost"] = { { "i", 23247, 350 } },	-- Burning Blossom
+		["timeline"] = { "added 4.3.0.15005" },
+	}),
+	-- #if AFTER 2.4.0.7994
+	-- This item was originally exclusively available as a quest reward.
+	i(23324, {	-- Mantle of the Fire Festival
+		["cost"] = { { "i", 23247, 100 } },	-- Burning Blossom
+	}),
+	-- #endif
+	i(34685, {	-- Vestment of Summer
+		["cost"] = { { "i", 23247, 100 } },	-- Burning Blossom
+		["timeline"] = { "added 2.4.0.7994" },
+	}),
+	i(34683, {	-- Sandals of Summer
+		["cost"] = { { "i", 23247, 200 } },	-- Burning Blossom
+		["timeline"] = { "added 2.4.0.7994" },
+	}),
+	i(34599, {	-- Juggling Torch
+		-- #if AFTER WRATH
+		["description"] = "You will need 10 of these torches to complete the |cffffff00Torch Juggler|r achievement.",
+		-- #endif
+		["cost"] = { { "i", 23247, 5 } },	-- Burning Blossom
+		["timeline"] = { "added 2.4.0.7994" },
+	}),
+	i(23215, {	-- Bag of Smorc Ingredients
+		["cost"] = { { "i", 23247, 5 } },	-- Burning Blossom
+		["timeline"] = { "added 2.4.0.7994" },
+	}),
+	-- #if AFTER 2.4.0.7994
+	i(23435, {	-- Elderberry Pie
+		["cost"] = { { "i", 23247, 5 } },	-- Burning Blossom
+	}),
+	i(23327, {	-- Fire-Toasted Bun
+		["cost"] = { { "i", 23247, 5 } },	-- Burning Blossom
+	}),
+	i(23326, {	-- Midsummer Sausage
+		["cost"] = { { "i", 23247, 5 } },	-- Burning Blossom
+	}),
+	i(23211, {	-- Toasted Smorc
+		["cost"] = { { "i", 23247, 5 } },	-- Burning Blossom
+	}),
+	i(23246, {	-- Fiery Festival Brew
+		["cost"] = { { "i", 23247, 5 } },	-- Burning Blossom
+	}),
+	-- #endif
+	i(34684, {	-- Handful of Summer Petals
+		["cost"] = { { "i", 23247, 2 } },	-- Burning Blossom
+		["timeline"] = { "added 2.4.0.7994" },
+	}),
+};
+
 _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire Festival
 	n(25740, {	-- Ahune
 		-- #if AFTER WRATH
@@ -303,7 +390,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				objective(3),	-- Flame of Stratholme
 				objective(4),	-- Flame of the Scholomance
 				-- #endif
+				-- #if BEFORE 2.4.0.7994
 				i(23083),	-- Captured Flame
+				-- #endif
 				i(23247),	-- Burning Blossom
 			},
 		}),
@@ -1269,7 +1358,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 			["lvl"] = 1,
 			-- #if BEFORE TBC
 			["icon"] = "Interface/Icons/Inv_Misc_SummerFest_BrazierGreen",
+			-- #endif
 			["groups"] = {
+				-- #if BEFORE TBC
 				objective(1, {	-- Flame of Azshara
 					["coord"] = { 41.5, 43.3, AZSHARA },
 				}),
@@ -1282,10 +1373,14 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				objective(4, {	-- Flame of Winterspring
 					["coord"] = { 30.6, 43.2, WINTERSPRING },
 				}),
-				i(23379),	-- Cinder Bracers
+				-- #endif
+				i(23379, {	-- Cinder Bracers
+					["timeline"] = { "removed 2.4.0" },
+				}),
+				-- #if BEFORE TBC
 				i(23247),	-- Burning Blossom
+				-- #endif
 			},
-			-- #endif
 		}),
 		q(9323, {	-- Wild Fires in the Eastern Kingdoms
 			["qg"] = FESTIVAL_FLAMEKEEPER_ID,
@@ -1316,7 +1411,9 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 				objective(4, {	-- Flame of Searing Gorge
 					["coord"] = { 33.0, 73.5, SEARING_GORGE },
 				}),
+				-- #if BEFORE 2.4.0.7994
 				i(23324),	-- Mantle of the Fire Festival
+				-- #endif
 				i(23247),	-- Burning Blossom
 			},
 			-- #endif
@@ -2777,6 +2874,57 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, n(-53, {	-- Midsummer Fire 
 					["maps"] = { 121 },	-- Zul'Drak
 				}),
 			}),
+		}),
+	}),
+	n(VENDORS, {
+		n(26123, {	-- Midsummer Supplier (Alliance Vendor)
+			["coords"] = {
+				-- #if AFTER CATA
+				{ 49.2, 71.8, STORMWIND_CITY },
+				{ 64.6, 26.6, IRONFORGE },
+				{ 62.0, 48.6, DARNASSUS },
+				{ 42.6, 25.6, THE_EXODAR },
+				-- #else
+				{ 38.0, 61.6, STORMWIND_CITY },
+				{ 64.8, 26.0, IRONFORGE },
+				{ 56.0, 92.2, TELDRASSIL },
+				{ 42.5, 26.0, THE_EXODAR },
+				-- #endif
+			},
+			["timeline"] = { "added 2.4.0.7897" },
+			["races"] = ALLIANCE_ONLY,
+			["maps"] = {
+				STORMWIND_CITY,
+				IRONFORGE,
+				DARNASSUS,
+				TELDRASSIL,
+				THE_EXODAR,
+			},
+			["groups"] = MERCHANT_GROUPS,
+		}),
+		n(26124, {	-- Midsummer Merchant (Horde Vendor)
+			["coords"] = {
+				-- #if AFTER CATA
+				{ 47.8, 37.4, ORGRIMMAR },
+				{ 19.8, 24.6, THUNDER_BLUFF },
+				{ 67.8, 11.2, UNDERCITY },
+				{ 70.6, 44.0, SILVERMOON_CITY },
+				-- #else
+				{ 47.4, 39.2, ORGRIMMAR },
+				{ 20.9, 24.2, THUNDER_BLUFF },
+				{ 68.1, 11.2, UNDERCITY },
+				{ 70.4, 44.3, SILVERMOON_CITY },
+				-- #endif
+			},
+			["timeline"] = { "added 2.4.0.7897" },
+			["races"] = HORDE_ONLY,
+			["maps"] = {
+				ORGRIMMAR,
+				THUNDER_BLUFF,
+				UNDERCITY,
+				SILVERMOON_CITY,
+			},
+			["groups"] = MERCHANT_GROUPS,
 		}),
 	}),
 }))};
