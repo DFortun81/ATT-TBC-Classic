@@ -943,10 +943,10 @@ profession(ENCHANTING, {
 					["name"] = "Battlemaster",
 					["recipeID"] = 28004
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Deathfrost",
 					["recipeID"] = 46578
-				},
+				}),
 				applyclassicphase(TBC_PHASE_FOUR, {
 					["name"] = "Executioner",
 					["recipeID"] = 42974
@@ -1301,7 +1301,7 @@ itemrecipe("Formula: Enchant Gloves - Threat", 33153, 25072, TBC_PHASE_ONE, true
 itemrecipe("Formula: Enchant Weapon - Greater Agility", 33165, 42620, TBC_PHASE_THREE);
 
 -- Technically a holiday?
-itemrecipe("Formula: Enchant Weapon - Deathfrost", 35498, 46578, TBC_PHASE_ONE);
+itemrecipe("Formula: Enchant Weapon - Deathfrost", 35498, 46578, TBC_PHASE_THREE);
 
 itemrecipe("Formula: Enchant Weapon - Executioner", 33307, 42974, TBC_PHASE_FOUR);
 
