@@ -10,18 +10,10 @@ _.Zones =
 				q(11665, {  -- Crocolisks in the City
 					["provider"] = { "n", 25580 },	-- Old Man Barlo
 					["coord"] = { 38.6, 12.8, TEROKKAR_FOREST },
-					["description"] = "One of five random fishing daily quests. The other four do not drop minipets.",
 					["isDaily"] = true,
 					["requireSkill"] = FISHING,
 					["g"] = {
-						i(35348, { -- Bag of Fishing Treasures
-							i(35350),	-- Chuck's Bucket
-							i(33818),	-- Muckbreath's Bucket
-							i(35349),	-- Snarly's Bucket
-							i(33816),	-- Toothy's Bucket
-							i(33820),	-- Weather-Beaten Fishing Hat
-							i(34837),	-- The 2 Ring
-						}),
+						i(35348),	-- Bag of Fishing Treasures
 						crit(1, {	-- Crocolisks in the City
 							["achievementID"] = 905,	-- Old Man Barlowned
 						}),
@@ -33,9 +25,7 @@ _.Zones =
 					["isDaily"] = true,
 					["requireSkill"] = FISHING,
 					["g"] = {
-						i(34863, {  -- Bag of Fishing Treasures
-							i(33820),  -- Weather-Beaten Fishing Hat
-						}),
+						i(34863),  -- Bag of Fishing Treasures
 						crit(3, {	-- Felblood Fillet
 							["achievementID"] = 905,	-- Old Man Barlowned
 						}),
@@ -47,9 +37,7 @@ _.Zones =
 					["isDaily"] = true,
 					["requireSkill"] = FISHING,
 					["g"] = {
-						i(34863, {  -- Bag of Fishing Treasures
-							i(33820),  -- Weather-Beaten Fishing Hat
-						}),
+						i(34863),  -- Bag of Fishing Treasures
 						crit(5, {	-- Shrimpin' Ain't Easy
 							["achievementID"] = 905,	-- Old Man Barlowned
 						}),
@@ -62,9 +50,7 @@ _.Zones =
 					["maps"] = { NAGRAND },
 					["isDaily"] = true,
 					["g"] = {
-						i(34863, {  -- Bag of Fishing Treasures
-							i(33820),  -- Weather-Beaten Fishing Hat
-						}),
+						i(34863),  -- Bag of Fishing Treasures
 						crit(4, {	-- The One That Got Away
 							["achievementID"] = 905,	-- Old Man Barlowned
 						}),
@@ -76,9 +62,7 @@ _.Zones =
 					["isDaily"] = true,
 					["requireSkill"] = FISHING,
 					["g"] = {
-						i(34863, {  -- Bag of Fishing Treasures
-							i(33820),  -- Weather-Beaten Fishing Hat
-						}),
+						i(34863),  -- Bag of Fishing Treasures
 						crit(2, {	-- Bait Bandits
 							["achievementID"] = 905,	-- Old Man Barlowned
 						}),
@@ -916,6 +900,30 @@ _.Zones =
 						{ 45.6, 26.4, TEROKKAR_FOREST },
 						{ 48.8, 27.8, TEROKKAR_FOREST },
 						{ 50.6, 29.2, TEROKKAR_FOREST },
+					},
+				}),
+			}),
+			n(REWARDS, {
+				i(35348, {	-- Bag of Fishing Treasures
+					["description"] = "This bag is exclusive to the Crocolisk in the City Daily Quest.",
+					["groups"] = {
+						i(34834),	-- Recipe: Captain Rumsey's Lager
+						i(34837),	-- The 2 Ring
+						i(35350),	-- Chuck's Bucket
+						i(33818),	-- Muckbreath's Bucket
+						i(35349),	-- Snarly's Bucket
+						i(33816),	-- Toothy's Bucket
+						i(33820),	-- Weather-Beaten Fishing Hat
+					},
+				}),
+				i(34863, {	-- Bag of Fishing Treasures
+					["description"] = "Shared reward bag for all the non-Croc dailies.",
+					["groups"] = {
+						i(34834),	-- Recipe: Captain Rumsey's Lager
+						i(34831),	-- Eye of the Sea
+						i(34859),	-- Razor Sharp Fillet Knife
+						i(34836),	-- Spun Truesilver Fishing Line
+						i(33820),	-- Weather-Beaten Fishing Hat
 					},
 				}),
 			}),
