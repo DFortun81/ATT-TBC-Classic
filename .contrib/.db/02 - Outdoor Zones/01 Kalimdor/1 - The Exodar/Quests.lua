@@ -23,22 +23,34 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 50,
 				}),
-				q(10354, {	-- A Donation of Silk
+				{	-- A Donation of Silk
 					["qg"] = 20604,	-- Dugiru <Alliance Cloth Quartermaster>
+					-- #if AFTER TBC
+					-- Blizzard did a dumb and moved the other quest from Darnassus.
+					["questID"] = 7798,		-- A Donation of Silk [DARN (TBC)]
+					-- #else
+					["questID"] = 10354,	-- A Donation of Silk [DARN (Classic)]
+					-- #endif
 					["cost"] = { { "i", 4306, 60 } },	-- Silk Cloth
 					["coord"] = { 63.5, 67.7, THE_EXODAR },
 					["timeline"] = { "removed 4.0.3.10000"},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 26,
-				}),
-				q(10352, {	-- A Donation of Wool
+				},
+				{	-- A Donation of Wool
 					["qg"] = 20604,	-- Dugiru <Alliance Cloth Quartermaster>
+					-- #if AFTER TBC
+					-- Blizzard did a dumb and moved the other quest from Darnassus.
+					["questID"] = 7792,		-- A Donation of Wool [DARN (TBC)]
+					-- #else
+					["questID"] = 10352,	-- A Donation of Wool [DARN (Classic)]
+					-- #endif
 					["cost"] = { { "i", 2592, 60 } },	-- Wool Cloth
 					["coord"] = { 63.5, 67.7, THE_EXODAR },
 					["timeline"] = { "removed 4.0.3.10000"},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 12,
-				}),
+				},
 				q(10358, {	-- Additional Runecloth
 					["qg"] = 20604,	-- Dugiru <Alliance Cloth Quartermaster>
 					["sourceQuest"] = 10357,	-- A Donation of Runecloth

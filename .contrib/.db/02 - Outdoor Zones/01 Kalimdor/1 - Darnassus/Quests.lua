@@ -8,32 +8,48 @@ _.Zones =
 			n(QUESTS, {
 				q(7799, {	-- A Donation of Mageweave
 					["qg"] = 14725,	-- Raedon Duskstriker
+					["coord"] = { 64.0, 23.0, DARNASSUS },
 					["cost"] = { { "i", 4338, 60 } },	-- Mageweave Cloth
+					["timeline"] = { "removed 4.0.3.10000"},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 40,
-					["coord"] = { 64.0, 23.0, DARNASSUS },
 				}),
 				q(7800, {	-- A Donation of Runecloth
 					["qg"] = 14725,	-- Raedon Duskstriker
+					["coord"] = { 64.0, 23.0, DARNASSUS },
 					["cost"] = { { "i", 14047, 60 } },	-- Runecloth
+					["timeline"] = { "removed 4.0.3.10000"},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 50,
-					["coord"] = { 64.0, 23.0, DARNASSUS },
 				}),
-				q(7798, {	-- A Donation of Silk
+				{	-- A Donation of Silk
 					["qg"] = 14725,	-- Raedon Duskstriker
+					-- #if AFTER TBC
+					-- Blizzard did a dumb and moved the other quest over to the Exodar.
+					["questID"] = 10354,	-- A Donation of Silk [DARN (TBC)]
+					-- #else
+					["questID"] = 7798,		-- A Donation of Silk [DARN (Classic)]
+					-- #endif
 					["cost"] = { { "i", 4306, 60 } },	-- Silk Cloth
+					["coord"] = { 64.0, 23.0, DARNASSUS },
+					["timeline"] = { "removed 4.0.3.10000"},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 26,
-					["coord"] = { 64.0, 23.0, DARNASSUS },
-				}),
-				q(7792, {	-- A Donation of Wool
+				},
+				{	-- A Donation of Wool
 					["qg"] = 14725,	-- Raedon Duskstriker
+					-- #if AFTER TBC
+					-- Blizzard did a dumb and moved the other quest over to the Exodar.
+					["questID"] = 10352,	-- A Donation of Wool [DARN (TBC)]
+					-- #else
+					["questID"] = 7792,		-- A Donation of Wool [DARN (Classic)]
+					-- #endif
 					["cost"] = { { "i", 2592, 60 } },	-- Wool Cloth
+					["coord"] = { 64.0, 23.0, DARNASSUS },
+					["timeline"] = { "removed 4.0.3.10000"},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 12,
-					["coord"] = { 64.0, 23.0, DARNASSUS },
-				}),
+				},
 				q(7801, {	-- Additional Runecloth
 					["qg"] = 14725,	-- Raedon Duskstriker
 					["sourceQuest"] = 7800,	-- A Donation of Runecloth
