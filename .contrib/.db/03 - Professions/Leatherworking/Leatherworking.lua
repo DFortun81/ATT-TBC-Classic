@@ -1195,6 +1195,7 @@ profession(LEATHERWORKING, {
 				},
 				{
 					["name"] = "Magister's Armor Kit",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 32458
 				},
 				{
@@ -1217,6 +1218,7 @@ profession(LEATHERWORKING, {
 				},
 				{
 					["name"] = "Vindicator's Armor Kit",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 32457
 				},
 			},
@@ -1429,10 +1431,12 @@ profession(LEATHERWORKING, {
 				},
 				{
 					["name"] = "Enchanted Clefthoof Gloves",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 35533
 				},
 				{
 					["name"] = "Enchanted Felscale Gloves",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 35526
 				},
 				{
@@ -1507,6 +1511,7 @@ profession(LEATHERWORKING, {
 				}),
 				{
 					["name"] = "Blastguard Belt",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 35537
 				},
 				{
@@ -1515,6 +1520,7 @@ profession(LEATHERWORKING, {
 				},
 				{
 					["name"] = "Flamescale Belt",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 35531
 				},
 				applyclassicphase(TBC_PHASE_TWO, {
@@ -1541,14 +1547,17 @@ profession(LEATHERWORKING, {
 			["groups"] = {
 				{
 					["name"] = "Blastguard Pants",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 35535
 				},
 				{
 					["name"] = "Enchanted Clefthoof Leggings",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 35532
 				},
 				{
 					["name"] = "Enchanted Felscale Leggings",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 35525
 				},
 				{
@@ -1561,6 +1570,7 @@ profession(LEATHERWORKING, {
 				},
 				{
 					["name"] = "Flamescale Leggings",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 35529
 				},
 				applyclassicphase(TBC_PHASE_THREE, {
@@ -1599,6 +1609,7 @@ profession(LEATHERWORKING, {
 			["groups"] = {
 				{
 					["name"] = "Blastguard Boots",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 35536
 				},
 				applyclassicphase(TBC_PHASE_TWO, {
@@ -1623,10 +1634,12 @@ profession(LEATHERWORKING, {
 				},
 				{
 					["name"] = "Enchanted Clefthoof Boots",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 35534
 				},
 				{
 					["name"] = "Enchanted Felscale Boots",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 35527
 				},
 				{
@@ -1639,6 +1652,7 @@ profession(LEATHERWORKING, {
 				},
 				{
 					["name"] = "Flamescale Boots",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 35528
 				},
 				{

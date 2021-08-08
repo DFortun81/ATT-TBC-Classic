@@ -1269,6 +1269,7 @@ profession(BLACKSMITHING, {
 				},
 				{
 					["name"] = "Flamebane Helm",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 29615,
 				},
 				{
@@ -1345,6 +1346,7 @@ profession(BLACKSMITHING, {
 				},
 				{
 					["name"] = "Flamebane Bracers",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 29614,
 				},
 				applyclassicphase(TBC_PHASE_THREE, {
@@ -1383,6 +1385,7 @@ profession(BLACKSMITHING, {
 				},
 				{
 					["name"] = "Flamebane Gloves",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 29616,
 				},
 				{
@@ -1425,6 +1428,7 @@ profession(BLACKSMITHING, {
 				},
 				{
 					["name"] = "Enchanted Adamantite Breastplate",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 29610,
 				},
 				{
@@ -1437,6 +1441,7 @@ profession(BLACKSMITHING, {
 				},
 				{
 					["name"] = "Flamebane Breastplate",
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 29617,
 				},
 				applyclassicphase(TBC_PHASE_FIVE, {
@@ -1471,6 +1476,7 @@ profession(BLACKSMITHING, {
 				}),
 				{
 					["name"] = "Enchanted Adamantite Belt",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 29608,
 				},
 				{
@@ -1497,6 +1503,7 @@ profession(BLACKSMITHING, {
 			["g"] = {
 				{
 				["name"] = "Enchanted Adamantite Leggings",
+				["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				["recipeID"] = 29613,
 				},
 				{
@@ -1535,6 +1542,7 @@ profession(BLACKSMITHING, {
 				}),
 				{
 					["name"] = "Enchanted Adamantite Boots",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 29611,
 				},
 				{
