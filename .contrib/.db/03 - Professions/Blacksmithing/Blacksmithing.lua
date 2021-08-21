@@ -2000,6 +2000,7 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		-- This wasn't implemented until TBC, it was NYI until then.
 		i(12698);	-- Plans: Dawnbringer Shoulders
 		recipe(16660),	-- Dawnbringer Shoulders
+		i(12625),	-- Dawnbringer Shoulders
 		-- #endif
 		
 		-- #if AFTER TBC
