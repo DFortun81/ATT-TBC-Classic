@@ -464,10 +464,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Regal Seaspray Emerald [CATA+] / Enduring Seaspray Emerald [TBC]",
 					["recipeID"] = 39739
 				}),
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Regal Talasite [CATA+] / Regal Nightseye [TBC]",
 					["recipeID"] = 46803
-				},
+				}),
 				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Steady Seaspray Emerald",
@@ -690,10 +690,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				}),
 				-- #endif
 				-- #if BEFORE CATA
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Regal Nightseye [TBC] / Regal Talasite [CATA+]",
 					["recipeID"] = 46803
-				},
+				}),
 				{
 					["name"] = "Royal Nightseye",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
