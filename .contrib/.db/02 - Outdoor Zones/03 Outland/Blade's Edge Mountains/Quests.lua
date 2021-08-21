@@ -1140,6 +1140,9 @@ _.Zones =
 						{ "i", 32356, 1 },	-- Essence of the Hawk
 					},
 					["lvl"] = 70,
+					["groups"] = {
+						i(32481),	-- Charm of Swift Flight
+					},
 				})),
 				q(10912, {	-- The Hound-Master
 					["qg"] = 22423,	-- Evergrove Druid
