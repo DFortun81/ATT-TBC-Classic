@@ -593,6 +593,23 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["name"] = "Purple Gems",
 			["categoryID"] = 860,
 			["groups"] = {
+				-- #if BEFORE CATA
+				{
+					["name"] = "Balanced Nightseye",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39463
+				},
+				{
+					["name"] = "Balanced Shadow Draenite",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39455
+				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Balanced Shadowsong Amethyst",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39729
+				}),
+				-- #endif
 				-- #if AFTER CATA
 				{
 					["name"] = "Glinting Nightseye [CATA+] / Glinting Noble Topaz [TBC]",
@@ -620,6 +637,21 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Glowing Shadowsong Amethyst [TBC] / Timeless Shadowsong Amethyst [CATA+]",
 					["recipeID"] = 39731
 				}),
+				{
+					["name"] = "Infused Nightseye",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39462
+				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Infused Shadowsong Amethyst",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39730
+				}),
+				{
+					["name"] = "Infused Shadow Draenite",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39458
+				},
 				-- #endif
 				{
 					["name"] = "Purified Jaggal Pearl",
@@ -651,9 +683,19 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 46803
 				},
 				{
+					["name"] = "Royal Nightseye",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 31105
+				},
+				{
 					["name"] = "Royal Shadow Draenite [TBC] / Purified Shadow Draenite [CATA+]",
 					["recipeID"] = 28927
 				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Royal Shadowsong Amethyst",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39732
+				}),
 				-- #endif
 				{
 					["name"] = "Shifting Nightseye",
