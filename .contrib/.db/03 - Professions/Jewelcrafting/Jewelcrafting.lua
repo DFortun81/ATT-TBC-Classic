@@ -775,6 +775,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39712
 				}),
+				{
+					["name"] = "Bright Living Ruby",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 31089
+				},
 				-- #endif
 				-- #if AFTER CATA
 				{
@@ -877,6 +882,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 31096
 				},
+				{
+					["name"] = "Brilliant Golden Draenite",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 28938
+				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Brilliant Lionseye",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
@@ -894,8 +904,28 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 31099
 				},
 				{
-					["name"] = "Smooth Golden Draenite [CATA+] / Gleaming Golden Draenite [TBC]",
+					["name"] = "Gleaming Golden Draenite [TBC] / Smooth Golden Draenite [CATA+]",
 					["recipeID"] = 28944
+				},
+				{
+					["name"] = "Gleaming Lionseye",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39722
+				},
+				{
+					["name"] = "Great Dawnstone",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39452
+				},
+				{
+					["name"] = "Great Golden Draenite",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39451
+				},
+				{
+					["name"] = "Great Lionseye",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39725
 				},
 				-- #endif
 				{
@@ -932,6 +962,13 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Smooth Dawnstone",
 					["recipeID"] = 31097
 				},
+				-- #if BEFORE CATA
+				{
+					["name"] = "Smooth Golden Draenite",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 34069
+				},
+				-- #endif
 				-- #if AFTER CATA
 				{
 					["name"] = "Smooth Golden Draenite [CATA+] / Gleaming Golden Draenite [TBC]",
@@ -965,6 +1002,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Thick Dawnstone",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 31100
+				},
+				{
+					["name"] = "Thick Lionseye",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39723
 				},
 				{
 					["name"] = "Thick Golden Draenite [TBC] / Subtle Golden Draenite [CATA+]",
@@ -5698,28 +5740,30 @@ local itemrecipe = function(name, itemID, spellID, spellIDAfterCata, timeline)
 	_.ItemDB[itemID] = applyclassicphase(TBC_PHASE_ONE, o);
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
-	if recipeCache and recipeCache[o.spellID] then
-		-- Grab the phase from the cache.
-		local u = recipeCacheU[o.spellID];
-		if u then
-			--[[
-			if o.u then
-				if o.u ~= u then
-					print("ITEM RECIPE U MISMATCH: ", name, o.spellID, o.u, " -> ", u);
+	if recipeCache then
+		if recipeCache[o.spellID] then
+			-- Grab the phase from the cache.
+			local u = recipeCacheU[o.spellID];
+			if u then
+				--[[
+				if o.u then
+					if o.u ~= u then
+						print("ITEM RECIPE U MISMATCH: ", name, o.spellID, o.u, " -> ", u);
+						o.u = u;
+					end
+				else
+					print("ITEM RECIPE U MISSING: ", name, o.spellID, u);
 					o.u = u;
 				end
-			else
-				print("ITEM RECIPE U MISSING: ", name, o.spellID, u);
+				]]--
+				-- The above code doesn't really matter, in this file, the phases are managed in the recipe section, not here.
 				o.u = u;
+			elseif o.u then
+				print("RECIPE MISSING U: ", name, o.spellID, o.u);
 			end
-			]]--
-			-- The above code doesn't really matter, in this file, the phases are managed in the recipe section, not here.
-			o.u = u;
-		elseif o.u then
-			print("RECIPE MISSING U: ", name, o.spellID, o.u);
+		else
+			print("MISSING RECIPE", name, o.spellID);
 		end
-	else
-		print("MISSING RECIPE", name, o.spellID);
 	end
 	return o;
 end
