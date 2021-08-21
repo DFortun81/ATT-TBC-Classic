@@ -284,11 +284,7 @@ _.Zones =
 							["spellID"] = 35554,	-- Nethercobra Leg Armor
 							["requireSkill"] = LEATHERWORKING,
 						}),
-						i(34218, {	-- Pattern: Netherscale Ammo Pouch
-							["spellID"] = 44768,	-- Netherscale Ammo Pouch
-							["requireSkill"] = LEATHERWORKING,
-							["timeline"] = { "removed 4.0.1.10000" },
-						}),
+						applyclassicphase(TBC_PHASE_THREE, i(34218)),	-- Pattern: Netherscale Ammo Pouch
 						i(23619),	-- Plans: Felsteel Shield Spike
 						i(22905),	-- Recipe: Elixir of Major Agility
 						i(25870),	-- Recipe: Transmute Skyfire Diamond
@@ -379,11 +375,7 @@ _.Zones =
 							["spellID"] = 35554,	-- Nethercobra Leg Armor
 							["requireSkill"] = LEATHERWORKING,
 						}),
-						i(34201, {	-- Pattern: Netherscale Ammo Pouch
-							["spellID"] = 44768,	-- Netherscale Ammo Pouch
-							["requireSkill"] = LEATHERWORKING,
-							["timeline"] = { "removed 4.0.1.10000" },
-						}),
+						applyclassicphase(TBC_PHASE_THREE, i(34201)),	-- Pattern: Netherscale Ammo Pouch
 						i(24002),	-- Plans: Felsteel Shield Spike
 						i(24001),	-- Recipe: Elixir of Major Agility
 						i(29232),	-- Recipe: Transmute Skyfire Diamond
