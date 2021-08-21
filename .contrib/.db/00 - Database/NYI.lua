@@ -525,98 +525,99 @@ _.NeverImplemented =
 	i(16336),	-- Sergeant Major's Cape
 	i(16337),	-- Sergeant Major's Cape
 	
-	-- Cloth
-	i(20706),	-- Cenarion Reservist's Pants
-	i(17589),	-- General's Dreadweave Belt
-	i(17587),	-- General's Dreadweave Bracers
-	i(17619),	-- General's Satin Bracers
-	i(17621),	-- General's Satin Cinch
-	i(16538),	-- General's Silk Cuffs
-	i(16537),	-- General's Silk Sash
-	i(17565),	-- Knight-Captain's Dreadweave Belt
-	i(17563),	-- Knight-Captain's Dreadweave Bracers
-	i(17597),	-- Knight-Captain's Satin Cord
-	i(17595),	-- Knight-Captain's Satin Cuffs
-	i(16370),	-- Knight-Captain's Silk Cuffs
-	i(16367),	-- Knight-Captain's Silk Sash
-	i(17574),	-- Legionnaire's Dreadweave Belt
-	i(17575),	-- Legionnaire's Dreadweave Bracers
-	i(17615),	-- Legionnaire's Satin Cuffs
-	i(17614),	-- Legionnaire's Satin Sash
-	i(16488),	-- Legionnaire's Silk Belt
-	i(4989),	-- Mage Dragon Robe
-	i(17582),	-- Marshal's Dreadweave Cuffs
-	i(17585),	-- Marshal's Dreadweave Sash
-	i(17606),	-- Marshal's Satin Bracers
-	i(17609),	-- Marshal's Satin Sash
-	i(16438),	-- Marshal's Silk Bracers
-	i(16439),	-- Marshal's Silk Sash
-	i(6478),	-- Rat Stompers
-	i(4990),	-- Scorched Bands
-	i(12107),	-- Whispersilk Leggings
-	i(13080),	-- Widow's Clutch
-	
-	-- Leather
-	i(7950),	-- Armor of Thero-shan
-	i(7952),	-- Boots of Thero-shan
-	i(12104),	-- Brindlethorn Tunic
-	i(5821),	-- Darkstalker Boots
-	i(16556),	-- General's Dragonhide Belt
-	i(16553),	-- General's Dragonhide Bracers
-	i(16559),	-- General's Leather Armsplints
-	i(16557),	-- General's Leather Girdle
-	i(7948),	-- Girdle of Thero-shan
-	i(7951),	-- Hands of Thero-shan
-	i(16395),	-- Knight-Captain's Dragonhide Armsplints
-	i(16399),	-- Knight-Captain's Dragonhide Girdle
-	i(16398),	-- Knight-Captain's Leather Belt
-	i(16394),	-- Knight-Captain's Leather Bracers
-	i(16493),	-- Legionnaire's Dragonhide Armguards
-	i(16495),	-- Legionnaire's Dragonhide Waistband
-	i(16500),	-- Legionnaire's Leather Girdle
-	i(7949),	-- Leggings of Thero-shan
-	i(7953),	-- Mask of Thero-shan
-	i(16445),	-- Marshal's Dragonhide Bracers
-	i(16447),	-- Marshal's Dragonhide Waistguard
-	i(16460),	-- Marshal's Leather Armsplints
-	i(16458),	-- Marshal's Leather Cinch
-	i(22273),	-- Moonshadow Hood
-	i(19986),	-- Pirate's Eye Patch
-	i(20524),	-- Shadowhide Leggings
-	i(21613),	-- Wormhide Boots
-	i(21614),	-- Wormhide Protector
-	
-	-- Mail
-	i(21584),	-- Bracers of Eternal Reckoning
-	i(13090),	-- Breastplate of the Chosen
-	i(18320),	-- Demonheart Spaulders
-	i(16572),	-- General's Chain Girdle
-	i(16570),	-- General's Chain Wristguards
-	i(16576),	-- General's Mail Bracers
-	i(16575),	-- General's Mail Waistband
-	i(18304),	-- Greenroot Mail
-	i(5822),	-- Hedgeseed Gauntlets
-	i(16402),	-- Knight-Captain's Chain Armguards
-	i(16400),	-- Knight-Captain's Chain Girdle
-	i(16517),	-- Legionnaire's Chain Bracers
-	i(16529),	-- Legionnaire's Chain Girdle
-	i(16461),	-- Marshal's Chain Bracers
-	i(16464),	-- Marshal's Chain Girdle
-	i(12105),	-- Pridemail Leggings
-	i(21612),	-- Wormscale Stompers
-	i(21588),	-- Wristguards of Elemental Fury
-	
-	-- Plate
-	i(12106),	-- Boulderskin Breastplate
-	i(16546),	-- General's Plate Armguards
-	i(16547),	-- General's Plate Girdle
-	i(16412),	-- Knight-Captain's Lamellar Armsplints
-	i(16411),	-- Knight-Captain's Lamellar Cinch
-	i(16469),	-- Marshal's Lamellar Armguards
-	i(16470),	-- Marshal's Lamellar Belt
-	i(16481),	-- Marshal's Plate Bracers
-	i(16482),	-- Marshal's Plate Girdle
-	i(21587),	-- Wristguards of Castigation
+	filter(4, {		-- Cloth
+		i(20706),	-- Cenarion Reservist's Pants
+		i(17589),	-- General's Dreadweave Belt
+		i(17587),	-- General's Dreadweave Bracers
+		i(17619),	-- General's Satin Bracers
+		i(17621),	-- General's Satin Cinch
+		i(16538),	-- General's Silk Cuffs
+		i(16537),	-- General's Silk Sash
+		i(17565),	-- Knight-Captain's Dreadweave Belt
+		i(17563),	-- Knight-Captain's Dreadweave Bracers
+		i(17597),	-- Knight-Captain's Satin Cord
+		i(17595),	-- Knight-Captain's Satin Cuffs
+		i(16370),	-- Knight-Captain's Silk Cuffs
+		i(16367),	-- Knight-Captain's Silk Sash
+		i(17574),	-- Legionnaire's Dreadweave Belt
+		i(17575),	-- Legionnaire's Dreadweave Bracers
+		i(17615),	-- Legionnaire's Satin Cuffs
+		i(17614),	-- Legionnaire's Satin Sash
+		i(16488),	-- Legionnaire's Silk Belt
+		i(4989),	-- Mage Dragon Robe
+		i(17582),	-- Marshal's Dreadweave Cuffs
+		i(17585),	-- Marshal's Dreadweave Sash
+		i(17606),	-- Marshal's Satin Bracers
+		i(17609),	-- Marshal's Satin Sash
+		i(16438),	-- Marshal's Silk Bracers
+		i(16439),	-- Marshal's Silk Sash
+		i(6478),	-- Rat Stompers
+		i(4990),	-- Scorched Bands
+		i(12107),	-- Whispersilk Leggings
+		i(13080),	-- Widow's Clutch
+	}),
+	filter(5, {		-- Leather
+		i(7950),	-- Armor of Thero-shan
+		i(7952),	-- Boots of Thero-shan
+		i(12104),	-- Brindlethorn Tunic
+		i(5821),	-- Darkstalker Boots
+		i(16556),	-- General's Dragonhide Belt
+		i(16553),	-- General's Dragonhide Bracers
+		i(16559),	-- General's Leather Armsplints
+		i(16557),	-- General's Leather Girdle
+		i(7948),	-- Girdle of Thero-shan
+		i(7951),	-- Hands of Thero-shan
+		i(16395),	-- Knight-Captain's Dragonhide Armsplints
+		i(16399),	-- Knight-Captain's Dragonhide Girdle
+		i(16398),	-- Knight-Captain's Leather Belt
+		i(16394),	-- Knight-Captain's Leather Bracers
+		i(16493),	-- Legionnaire's Dragonhide Armguards
+		i(16495),	-- Legionnaire's Dragonhide Waistband
+		i(16500),	-- Legionnaire's Leather Girdle
+		i(7949),	-- Leggings of Thero-shan
+		i(7953),	-- Mask of Thero-shan
+		i(16445),	-- Marshal's Dragonhide Bracers
+		i(16447),	-- Marshal's Dragonhide Waistguard
+		i(16460),	-- Marshal's Leather Armsplints
+		i(16458),	-- Marshal's Leather Cinch
+		i(22273),	-- Moonshadow Hood
+		i(19986),	-- Pirate's Eye Patch
+		i(20524),	-- Shadowhide Leggings
+		i(21613),	-- Wormhide Boots
+		i(21614),	-- Wormhide Protector
+	}),
+	filter(6, {		-- Mail
+		i(21584),	-- Bracers of Eternal Reckoning
+		i(13090),	-- Breastplate of the Chosen
+		i(18320),	-- Demonheart Spaulders
+		i(16572),	-- General's Chain Girdle
+		i(16570),	-- General's Chain Wristguards
+		i(16576),	-- General's Mail Bracers
+		i(16575),	-- General's Mail Waistband
+		i(18304),	-- Greenroot Mail
+		i(5822),	-- Hedgeseed Gauntlets
+		i(16402),	-- Knight-Captain's Chain Armguards
+		i(16400),	-- Knight-Captain's Chain Girdle
+		i(16517),	-- Legionnaire's Chain Bracers
+		i(16529),	-- Legionnaire's Chain Girdle
+		i(16461),	-- Marshal's Chain Bracers
+		i(16464),	-- Marshal's Chain Girdle
+		i(12105),	-- Pridemail Leggings
+		i(21612),	-- Wormscale Stompers
+		i(21588),	-- Wristguards of Elemental Fury
+	}),
+	filter(7, {		-- Plate
+		i(12106),	-- Boulderskin Breastplate
+		i(16546),	-- General's Plate Armguards
+		i(16547),	-- General's Plate Girdle
+		i(16412),	-- Knight-Captain's Lamellar Armsplints
+		i(16411),	-- Knight-Captain's Lamellar Cinch
+		i(16469),	-- Marshal's Lamellar Armguards
+		i(16470),	-- Marshal's Lamellar Belt
+		i(16481),	-- Marshal's Plate Bracers
+		i(16482),	-- Marshal's Plate Girdle
+		i(21587),	-- Wristguards of Castigation
+	}),
 	
 	-- Dagger
 	i(17142),	-- Shard of the Defiler
@@ -746,7 +747,7 @@ _.NeverImplemented =
 		i(23916),	-- Deprecated: Keanna's Will
 		i(23917),	-- Deprecated: Keanna's Will
 	}),
-	filter(1, {	-- Held in Off Hand
+	filter(1, {		-- Held in Off Hand
 		i(28366),	-- Test Orb
 	}),
 	filter(25, {	-- One-Handed Swords

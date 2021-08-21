@@ -2013,8 +2013,12 @@ _.Instances = { tier(1, bubbleDown({ ["u"] = PHASE_SIX }, {	-- Classic
 							i(23050),	-- Cloak of the Necropolis
 							i(23045),	-- Shroud of Dominion
 							i(23072, {	-- Fists of the Unrelenting
+								-- #if BEFORE TBC
 								["description"] = "These were made available after the TBC Prepatch.",
+								["u"] = NEVER_IMPLEMENTED,
+								-- #else
 								["u"] = TBC_PHASE_ONE,
+								-- #endif
 							}),
 							i(23047),	-- Eye of the Dead
 							i(23040),	-- Glyph of Deflection
