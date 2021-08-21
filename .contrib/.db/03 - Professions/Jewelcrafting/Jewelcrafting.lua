@@ -462,28 +462,28 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["name"] = "Orange Gems",
 			["categoryID"] = 859,
 			["groups"] = {
+				-- #if AFTER CATA
 				{
-					["name"] = "Deadly Flame Spessarite",
+					["name"] = "Deadly Flame Spessarite [CATA+] / Wicked Flame Spessarite [TBC]",
 					["recipeID"] = 39467
 				},
 				{
-					["name"] = "Deadly Noble Topaz",
+					["name"] = "Deadly Noble Topaz [CATA+] / Wicked Noble Topaz [TBC]",
 					["recipeID"] = 39471
 				},
-				-- #if AFTER CATA
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Deadly Pyrestone",
+					["name"] = "Deadly Pyrestone [CATA+] / Wicked Pyrestone [TBC]",
 					["recipeID"] = 39738
 				}),
 				-- #endif
 				-- #if BEFORE CATA
 				{
-					["name"] = "Glinting Noble Topaz [TBC] / Glinting Nightseye [CATA+]",
-					["recipeID"] = 31109
-				},
-				{
 					["name"] = "Glinting Flame Spessarite [TBC] / Glinting Shadow Draenite [CATA+]",
 					["recipeID"] = 28914
+				},
+				{
+					["name"] = "Glinting Noble Topaz [TBC] / Glinting Nightseye [CATA+]",
+					["recipeID"] = 31109
 				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Glinting Pyrestone [TBC] / Glinting Shadowsong Amethyst [CATA+]",
@@ -503,6 +503,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 39733
 				}),
 				-- #if BEFORE CATA
+				{
+					["name"] = "Luminous Flame Spessarite [TBC] / Reckless Flame Spessarite [CATA+]",
+					["recipeID"] = 28912
+				},
 				{
 					["name"] = "Luminous Noble Topaz [TBC] / Reckless Noble Topaz [CATA+]",
 					["recipeID"] = 31108
@@ -525,10 +529,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Potent Pyrestone",
 					["recipeID"] = 39734
 				}),
+				-- #if AFTER CATA
 				{
-					["name"] = "Reckless Flame Spessarite",
+					["name"] = "Reckless Flame Spessarite [CATA+] / Luminous Flame Spessarite [TBC]",
 					["recipeID"] = 28912
 				},
+				-- #endif
 				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Reckless Noble Topaz",
 					["timeline"] = { REMOVED_WITH_CATA },
@@ -557,8 +563,16 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Veiled Pyrestone [TBC] / Veiled Shadowsong Amethyst [CATA+]",
 					["recipeID"] = 39737
 				}),
+				{
+					["name"] = "Wicked Flame Spessarite [TBC] / Deadly Flame Spessarite [CATA+]",
+					["recipeID"] = 39467
+				},
+				{
+					["name"] = "Wicked Noble Topaz [TBC] / Deadly Noble Topaz [CATA+]",
+					["recipeID"] = 39471
+				},
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Wicked Pyrestone",
+					["name"] = "Wicked Pyrestone [TBC] / Deadly Pyrestone [CATA+]",
 					["recipeID"] = 39738
 				}),
 				-- #endif
