@@ -1138,10 +1138,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Living Ruby Pendant",
 					["recipeID"] = 31068
 				},
-				{
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Necklace of the Deep",
 					["recipeID"] = 40514
-				},
+				}),
 				{
 					["name"] = "Pendant of Frozen Flame",
 					["recipeID"] = 31062
@@ -1278,10 +1278,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Coronet of Verdant Flame",
 					["recipeID"] = 31077
 				},
-				{
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Crown of the Sea Witch",
 					["recipeID"] = 41418
-				}
+				}),
 			}
 		},
 		{
