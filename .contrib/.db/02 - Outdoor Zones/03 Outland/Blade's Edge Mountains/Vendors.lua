@@ -6,7 +6,7 @@ _.Zones =
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(BLADES_EDGE_MOUNTAINS, {
 			n(VENDORS, {
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, n(23245, {	-- Aether-tech Master
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, n(23245, {	-- Aether-tech Master
 					["description"] = "The Skyguard sends out a group to study the Bash'ir Crystalforge at Bash'ir Landing once every two hours.|nOnce the event is underway, you must protect the Skyguard from three waves of attacks.|nWave one: fight until the elite Bash'ir Flesh Fiend spawns, then kill it.|nWave two: Fight until the three Disruptor Towers spawn, then destroy them.|nWave three: Fight until The Grand Collector shows up. He will be unattackable initially, but once you have defeated enough of the Bash'ir, he will decide to kill you himself, and become attackable.|nOnce the Grand Collector has been dealt with, the Aether-tech Master will arrive and you may purchase his goods with Apexis Crystals.|r",
 					["coord"] = { 54.4, 10.8, BLADES_EDGE_MOUNTAINS },
 					["groups"] = {
@@ -102,7 +102,7 @@ _.Zones =
 						}),
 					},
 				}),
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, n(23428, {	-- Jho'nass <Ogri'la Quartermaster>
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, n(23428, {	-- Jho'nass <Ogri'la Quartermaster>
 					["coord"] = { 28.0, 58.6, BLADES_EDGE_MOUNTAINS },
 					["groups"] = {
 						i(32653, {	-- Apexis Cloak

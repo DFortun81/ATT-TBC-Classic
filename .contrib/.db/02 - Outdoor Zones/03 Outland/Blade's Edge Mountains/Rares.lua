@@ -6,7 +6,7 @@ _.Zones =
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(BLADES_EDGE_MOUNTAINS, {
 			n(RARES, {
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, n(23391, {	-- Bash'ir
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, n(23391, {	-- Bash'ir
 					["coords"] = {
 						{ 52.8, 13.0, BLADES_EDGE_MOUNTAINS },
 						{ 53.6, 16.6, BLADES_EDGE_MOUNTAINS },
@@ -18,7 +18,7 @@ _.Zones =
 						i(32572),	-- Apexis Crystal
 					},
 				})),
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, n(23390, {	-- Bash'ir's Harbinger
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, n(23390, {	-- Bash'ir's Harbinger
 					["coords"] = {
 						{ 51.6, 13.6, BLADES_EDGE_MOUNTAINS },
 						{ 53.0, 13.0, BLADES_EDGE_MOUNTAINS },
@@ -31,7 +31,7 @@ _.Zones =
 						i(32773),	-- Bash'ir's Skeleton Key
 					},
 				})),
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, n(23261, {	-- Furywing
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, n(23261, {	-- Furywing
 					["coord"] = { 66.7, 14.5, BLADES_EDGE_MOUNTAINS },
 					["cost"] = {
 						{ "i", 32569, 35 },	-- Apexis Shard
@@ -68,7 +68,7 @@ _.Zones =
 						i(31157),	-- Drakehide Tunic
 					},
 				}),
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, n(23281, {	-- Insidio
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, n(23281, {	-- Insidio
 					["coord"] = { 62.7, 7.3, BLADES_EDGE_MOUNTAINS },
 					["cost"] = {
 						{ "i", 32569, 35 },	-- Apexis Shard
@@ -97,7 +97,7 @@ _.Zones =
 						i(31162),	-- Felstone Mantle
 					},
 				}),
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, n(23282, {	-- Obsidia
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, n(23282, {	-- Obsidia
 					["coord"] = { 34.0, 54.7, BLADES_EDGE_MOUNTAINS },
 					["cost"] = {
 						{ "i", 32569, 35 },	-- Apexis Shard
@@ -107,7 +107,7 @@ _.Zones =
 						i(32682),	-- Obsidia Scale
 					},
 				})),
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, n(23061, {	-- Rivendark
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, n(23061, {	-- Rivendark
 					["coord"] = { 27.2, 64.9, BLADES_EDGE_MOUNTAINS },
 					["cost"] = {
 						{ "i", 32569, 35 },	-- Apexis Shard
@@ -117,7 +117,7 @@ _.Zones =
 						i(32681),	-- Onyx Scale of Rivendark
 					},
 				})),
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, n(23230, {	-- Shartuul [Was the boss of an event in BEM that was removed may better fit somewhere else]
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, n(23230, {	-- Shartuul [Was the boss of an event in BEM that was removed may better fit somewhere else]
 					["coord"] = { 31.85, 46.68, BLADES_EDGE_MOUNTAINS },
 					["cost"] = {
 						{ "i", 32602, 1 },	-- Crystalforged Darkrune

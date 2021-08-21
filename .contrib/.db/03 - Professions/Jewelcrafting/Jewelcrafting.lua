@@ -494,7 +494,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["categoryID"] = 859,
 			["groups"] = {
 				-- #if AFTER CATA
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, {
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, {
 					["name"] = "Deadly Flame Spessarite [CATA+] / Wicked Flame Spessarite [TBC]",
 					["recipeID"] = 39467
 				}),
@@ -584,7 +584,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 47055
 				}),
 				-- #if BEFORE CATA
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, {
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, {
 					["name"] = "Veiled Flame Spessarite [TBC] / Veiled Shadow Draenite [CATA+]",
 					["recipeID"] = 39466
 				}),
@@ -596,7 +596,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Veiled Pyrestone [TBC] / Veiled Shadowsong Amethyst [CATA+]",
 					["recipeID"] = 39737
 				}),
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, {
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, {
 					["name"] = "Wicked Flame Spessarite [TBC] / Deadly Flame Spessarite [CATA+]",
 					["recipeID"] = 39467
 				}),
@@ -621,7 +621,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39463
 				},
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, {
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, {
 					["name"] = "Balanced Shadow Draenite",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39455
@@ -669,7 +669,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39730
 				}),
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, {
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, {
 					["name"] = "Infused Shadow Draenite",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39458
@@ -767,7 +767,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Veiled Nightseye [CATA+] / Veiled Noble Topaz [TBC]",
 					["recipeID"] = 39470
 				},
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, {
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, {
 					["name"] = "Veiled Shadow Draenite [CATA+] / Veiled Flame Spessarite [TBC]",
 					["recipeID"] = 39466
 				}),
@@ -946,7 +946,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39452
 				},
-				applyclassicphase(TBC_PHASE_THREE_OGRILA, {
+				applyclassicphase(TBC_PHASE_TWO_OGRILA, {
 					["name"] = "Great Golden Draenite",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39451

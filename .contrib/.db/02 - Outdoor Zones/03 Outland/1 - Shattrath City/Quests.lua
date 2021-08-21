@@ -239,11 +239,11 @@ _.Zones =
 					["coord"] = { 49.8, 42.6, SHATTRATH_CITY },
 					["repeatable"] = true,
 				})),
-				applyclassicphase(TBC_PHASE_THREE_SKYGUARD, q(11096, {	-- Threat from Above
+				applyclassicphase(TBC_PHASE_TWO_SKYGUARD, q(11096, {	-- Threat from Above
 					["coord"] = { 64.0, 42.0, SHATTRATH_CITY },
 					["provider"] = { "n", 23449 },	-- Yuula
 				})),
-				applyclassicphase(TBC_PHASE_THREE_SKYGUARD, q(11098, {	-- To Skettis!
+				applyclassicphase(TBC_PHASE_TWO_SKYGUARD, q(11098, {	-- To Skettis!
 					["sourceQuest"] = 11096,	-- Threat From Above
 					["coord"] = { 64.0, 42.0, SHATTRATH_CITY },
 					["provider"] = { "n", 23449 },	-- Yuula
