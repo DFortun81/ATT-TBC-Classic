@@ -766,6 +766,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 31099
 				},
+				-- #if BEFORE CATA
+				{
+					["name"] = "Smooth Golden Draenite [CATA+] / Gleaming Golden Draenite [TBC]",
+					["recipeID"] = 28944
+				},
+				-- #endif
 				{
 					["name"] = "Mystic Dawnstone",
 					["recipeID"] = 31101
@@ -784,6 +790,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				}),
 				-- #if BEFORE CATA
 				{
+					["name"] = "Rigid Dawnstone [TBC] / Rigid Star of Elune [CATA+]",
+					["recipeID"] = 31098
+				},
+				{
 					["name"] = "Rigid Golden Draenite [TBC] / Rigid Azure Moonstone [CATA+]",
 					["recipeID"] = 28948
 				},
@@ -791,19 +801,17 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Rigid Lionseye [TBC] / Rigid Empyrean Sapphire [CATA+]",
 					["recipeID"] = 39721
 				}),
-				{
-					["name"] = "Rigid Dawnstone [TBC] / Rigid Star of Elune [CATA+]",
-					["recipeID"] = 31098
-				},
 				-- #endif
 				{
 					["name"] = "Smooth Dawnstone",
 					["recipeID"] = 31097
 				},
+				-- #if AFTER CATA
 				{
-					["name"] = "Smooth Golden Draenite",
+					["name"] = "Smooth Golden Draenite [CATA+] / Gleaming Golden Draenite [TBC]",
 					["recipeID"] = 28944
 				},
+				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Smooth Lionseye",
 					["recipeID"] = 39720
