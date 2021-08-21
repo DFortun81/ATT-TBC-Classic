@@ -880,6 +880,9 @@ holiday = function(id, t)								-- Create an HOLIDAY Object
 	return struct("holidayID", id, t);
 end
 ho = holiday;											-- Create an HOLIDAY Object (alternative shortcut)
+illusion = function(id, t)								-- Create an ILLUSION Object (only necessary for illusions without itemIDs)
+	return struct("illusionID", id, t);
+end
 item = function(id, t)									-- Create an ITEM Object
 	return struct("itemID", id, t);
 end
@@ -912,6 +915,9 @@ inst = function(id, t)									-- Create an INSTANT Object
 	-- #else
 	return struct("encounterID", id, t);
 	-- #endif
+end
+ill = function(id, t)									-- Create an ILLUSION Object
+	return struct("illusionID", id, t);
 end
 map = function(id, t)									-- Create a MAP Object
 	return struct("mapID", id, t);

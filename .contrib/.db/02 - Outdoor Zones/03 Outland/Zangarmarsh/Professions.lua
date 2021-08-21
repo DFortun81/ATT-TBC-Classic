@@ -6,6 +6,9 @@ _.Zones =
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(ZANGARMARSH, {
 			prof(FISHING, {
+				i(35313, {	-- Bloated Barbed Gill Trout
+					i(34866),	-- Giant Freshwater Shrimp
+				}),
 				o(182952, {	-- Steam Pump Flotsam
 					["model"] = 219411,
 					["groups"] = {

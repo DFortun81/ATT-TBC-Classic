@@ -7,12 +7,31 @@ _.Zones =
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(TEROKKAR_FOREST, {
 			n(QUESTS, {
-				q(11665, {  -- Crocolisks in the City
-					["provider"] = { "n", 25580 },	-- Old Man Barlo
+				q(11666, {	-- Bait Bandits
+					["qg"] = 25580,	-- Old Man Barlo
 					["coord"] = { 38.6, 12.8, TEROKKAR_FOREST },
-					["isDaily"] = true,
 					["requireSkill"] = FISHING,
-					["g"] = {
+					["isDaily"] = true,
+					["groups"] = {
+						objective(1, {	-- 0/1 Blackfin Darter
+							["provider"] = { "i", 34865 },	-- Blackfin Darter
+						}),
+						i(34863),  -- Bag of Fishing Treasures
+						crit(2, {	-- Bait Bandits
+							["achievementID"] = 905,	-- Old Man Barlowned
+						}),
+					},
+				}),
+				q(11665, {  -- Crocolisks in the City
+					["qg"] = 25580,	-- Old Man Barlo
+					["coord"] = { 38.6, 12.8, TEROKKAR_FOREST },
+					["requireSkill"] = FISHING,
+					["maps"] = { ORGRIMMAR, STORMWIND_CITY },
+					["isDaily"] = true,
+					["groups"] = {
+						objective(1, {	-- 0/1 Baby Crocolisk
+							["provider"] = { "i", 34864 },	-- Baby Crocolisk
+						}),
 						i(35348),	-- Bag of Fishing Treasures
 						crit(1, {	-- Crocolisks in the City
 							["achievementID"] = 905,	-- Old Man Barlowned
@@ -20,11 +39,15 @@ _.Zones =
 					},
 				}),
 				q(11669, {	-- Felblood Fillet
-					["provider"] = { "n", 25580 },	-- Old Man Barlo
+					["qg"] = 25580,	-- Old Man Barlo
 					["coord"] = { 38.6, 12.8, TEROKKAR_FOREST },
-					["isDaily"] = true,
 					["requireSkill"] = FISHING,
-					["g"] = {
+					["maps"] = { HELLFIRE_PENINSULA, SHADOWMOON_VALLEY },
+					["isDaily"] = true,
+					["groups"] = {
+						objective(1, {	-- 0/1 Monstrous Felblood Snapper
+							["provider"] = { "i", 34867 },	-- Monstrous Felblood Snapper
+						}),
 						i(34863),  -- Bag of Fishing Treasures
 						crit(3, {	-- Felblood Fillet
 							["achievementID"] = 905,	-- Old Man Barlowned
@@ -32,11 +55,15 @@ _.Zones =
 					},
 				}),
 				q(11668, {	-- Shrimpin' Ain't Easy
-					["provider"] = { "n", 25580 },	-- Old Man Barlo
+					["qg"] = 25580,	-- Old Man Barlo
 					["coord"] = { 38.6, 12.8, TEROKKAR_FOREST },
-					["isDaily"] = true,
 					["requireSkill"] = FISHING,
-					["g"] = {
+					["maps"] = { ZANGARMARSH },
+					["isDaily"] = true,
+					["groups"] = {
+						objective(1, {	-- 0/10 Giant Freshwater Shrimp
+							["provider"] = { "i", 34866 },	-- Giant Freshwater Shrimp
+						}),
 						i(34863),  -- Bag of Fishing Treasures
 						crit(5, {	-- Shrimpin' Ain't Easy
 							["achievementID"] = 905,	-- Old Man Barlowned
@@ -44,26 +71,17 @@ _.Zones =
 					},
 				}),
 				q(11667, {	-- The One That Got Away
-					["provider"] = { "n", 25580 },	-- Old Man Barlo
+					["qg"] = 25580,	-- Old Man Barlo
 					["coord"] = { 38.6, 12.8, TEROKKAR_FOREST },
 					["requireSkill"] = FISHING,
 					["maps"] = { NAGRAND },
 					["isDaily"] = true,
-					["g"] = {
+					["groups"] = {
+						objective(1, {	-- 0/1 World's Largest Mudfish
+							["provider"] = { "i", 34868 },	-- World's Largest Mudfish
+						}),
 						i(34863),  -- Bag of Fishing Treasures
 						crit(4, {	-- The One That Got Away
-							["achievementID"] = 905,	-- Old Man Barlowned
-						}),
-					},
-				}),
-				q(11666, {	-- Bait Bandits
-					["provider"] = { "n", 25580 },	-- Old Man Barlo
-					["coord"] = { 38.6, 12.8, TEROKKAR_FOREST },
-					["isDaily"] = true,
-					["requireSkill"] = FISHING,
-					["g"] = {
-						i(34863),  -- Bag of Fishing Treasures
-						crit(2, {	-- Bait Bandits
 							["achievementID"] = 905,	-- Old Man Barlowned
 						}),
 					},
