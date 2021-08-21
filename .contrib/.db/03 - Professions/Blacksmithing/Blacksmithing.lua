@@ -1281,12 +1281,12 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 38479,
 				},
 				{
-					["name"] = "Ragesteel Helm",
-					["recipeID"] = 29643,
-				},
-				{
 					["name"] = "Oathkeepers Helm",
 					["recipeID"] = 29668,
+				},
+				{
+					["name"] = "Ragesteel Helm",
+					["recipeID"] = 29643,
 				},
 				{
 					["name"] = "Storm Helm",
@@ -1368,16 +1368,16 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 29605,
 				},
 				{
-					["name"] = "Felfury Gauntlets",
-					["recipeID"] = 29658,
-				},
-				{
 					["name"] = "Fel Iron Chain Gloves",
 					["recipeID"] = 29552,
 				},
 				{
 					["name"] = "Fel Iron Plate Gloves",
 					["recipeID"] = 29545,
+				},
+				{
+					["name"] = "Felfury Gauntlets",
+					["recipeID"] = 29658,
 				},
 				{
 					["name"] = "Felsteel Gloves",
@@ -1502,9 +1502,9 @@ profession(BLACKSMITHING, {
 			["categoryID"] = 224,
 			["g"] = {
 				{
-				["name"] = "Enchanted Adamantite Leggings",
-				["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
-				["recipeID"] = 29613,
+					["name"] = "Enchanted Adamantite Leggings",
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
+					["recipeID"] = 29613,
 				},
 				{
 					["name"] = "Fel Iron Plate Pants",
@@ -1619,10 +1619,12 @@ profession(BLACKSMITHING, {
 					["name"] = "Felsteel Reaper",
 					["recipeID"] = 29695,
 				},
+				-- #if BEFORE MOP
 				{
 					["name"] = "Felsteel Whisper Knives",
 					["recipeID"] = 34983,
 				},
+				-- #endif
 				{
 					["name"] = "Hammer of Righteous Might",
 					["recipeID"] = 43846,

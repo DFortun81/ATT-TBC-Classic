@@ -40,41 +40,75 @@ profession(BLACKSMITHING, {
 						["name"] = "Black Planar Edge",
 						["recipeID"] = 34542,
 						["requireSkill"] = 17041,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Bloodmoon",
 						["recipeID"] = 36261,
 						["requireSkill"] = 17041,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Lunar Crescent",
 						["recipeID"] = 34543,
 						["requireSkill"] = 17041,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Mooncleaver",
 						["recipeID"] = 34544,
 						["requireSkill"] = 17041,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Skyforged Great Axe",
 						["recipeID"] = 36135,
 						["requireSkill"] = 17041,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+							"added 7.1.5.23360",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Stormforged Axe",
 						["recipeID"] = 36134,
 						["requireSkill"] = 17041,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+							"added 7.1.5.23360",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "The Planar Edge",
 						["recipeID"] = 34541,
 						["requireSkill"] = 17041,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Wicked Edge of the Planes",
 						["recipeID"] = 36260,
 						["requireSkill"] = 17041,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 				},
 			}),
@@ -115,44 +149,78 @@ profession(BLACKSMITHING, {
 					},
 					-- #endif
 					applyclassicphase(TBC_PHASE_ONE,{
-						["name"] = "Deepthunder",
+						["name"] = "Deep Thunder",
 						["recipeID"] = 34548,
 						["requireSkill"] = 17040,
-					}),
-					applyclassicphase(TBC_PHASE_ONE,{
-						["name"] = "Drakefist Hammer",
-						["recipeID"] = 34545,
-						["requireSkill"] = 17040,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Dragonmaw",
 						["recipeID"] = 34546,
 						["requireSkill"] = 17040,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Dragonstrike",
 						["recipeID"] = 36262,
 						["requireSkill"] = 17040,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Drakefist Hammer",
+						["recipeID"] = 34545,
+						["requireSkill"] = 17040,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Great Earthforged Hammer",
 						["recipeID"] = 36137,
 						["requireSkill"] = 17040,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+							"added 7.1.5.23360",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Lavaforged Warhammer",
 						["recipeID"] = 36136,
 						["requireSkill"] = 17040,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+							"added 7.1.5.23360",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Stormherald",
 						["recipeID"] = 36263,
 						["requireSkill"] = 17040,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Thunder",
 						["recipeID"] = 34547,
 						["requireSkill"] = 17040,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 				},
 			}),
@@ -200,42 +268,76 @@ profession(BLACKSMITHING, {
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Blazefury",
 						["recipeID"] = 36258,
-						["requireSkill"] = 17039
+						["requireSkill"] = 17039,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Blazeguard",
 						["recipeID"] = 34537,
-						["requireSkill"] = 17039
+						["requireSkill"] = 17039,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Fireguard",
 						["recipeID"] = 34535,
-						["requireSkill"] = 17039
+						["requireSkill"] = 17039,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Lionheart Blade",
 						["recipeID"] = 34538,
-						["requireSkill"] = 17039
+						["requireSkill"] = 17039,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Lionheart Champion",
 						["recipeID"] = 34540,
-						["requireSkill"] = 17039
+						["requireSkill"] = 17039,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Lionheart Executioner",
 						["recipeID"] = 36259,
-						["requireSkill"] = 17039
+						["requireSkill"] = 17039,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Stoneforged Claymore",
 						["recipeID"] = 36133,
-						["requireSkill"] = 17039
+						["requireSkill"] = 17039,
+						["timeline"] = {
+							"added 2.1.0.6692",
+							"removed 4.0.1.13287",
+							"added 7.1.5.23360",
+						},
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Windforged Rapier",
 						["recipeID"] = 36131,
-						["requireSkill"] = 17039
+						["requireSkill"] = 17039,
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+							"added 7.1.5.23360",
+						},
 					}),
 				},
 			}),

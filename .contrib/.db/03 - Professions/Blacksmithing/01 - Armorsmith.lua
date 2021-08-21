@@ -143,13 +143,18 @@ profession(BLACKSMITHING, {
 					},
 					-- #endif
 					applyclassicphase(TBC_PHASE_ONE,{
-						["name"] = "Bulwark of Ancient Kings",
-						["recipeID"] = 36257,
+						["name"] = "Breastplate of Kings",
+						["recipeID"] = 34533,
 						["requireSkill"] = 9788,
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
 						["name"] = "Bulwark of Kings",
 						["recipeID"] = 34534,
+						["requireSkill"] = 9788,
+					}),
+					applyclassicphase(TBC_PHASE_ONE,{
+						["name"] = "Bulwark of the Ancient Kings",
+						["recipeID"] = 36257,
 						["requireSkill"] = 9788,
 					}),
 					applyclassicphase(TBC_PHASE_ONE,{
