@@ -658,33 +658,48 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Bold Living Ruby",
 					["recipeID"] = 31084
 				},
+				-- #if BEFORE CATA
+				{
+					["name"] = "Bright Blood Garnet [TBC] / Delicate Blood Garnet [CATA+]",
+					["recipeID"] = 34590
+				},
+				-- #endif
+				-- #if AFTER CATA
+				{
+					["name"] = "Brilliant Blood Garnet [CATA+] / Runed Blood Garnet [TBC]",
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 28906
+				},
+				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Bright Crimson Spinel",
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39712
 				}),
+				-- #if AFTER CATA
 				{
-					["name"] = "Brilliant Blood Garnet",
+					["name"] = "Brilliant Blood Garnet [CATA+] / Teardrop Blood Garnet [TBC]",
 					["recipeID"] = 28903
 				},
-				-- #if AFTER CATA
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Brilliant Crimson Spinel",
+					["name"] = "Brilliant Crimson Spinel [CATA+] / Runed Crimson Spinel [TBC]",
 					["recipeID"] = 39711
 				}),
-				-- #endif
 				{
-					["name"] = "Brilliant Living Ruby",
+					["name"] = "Brilliant Living Ruby [CATA+] / Runed Living Ruby [TBC]",
 					["recipeID"] = 31088
 				},
+				-- #endif
 				{
 					["name"] = "Crimson Sun",
 					["recipeID"] = 42589
 				},
+				-- #if AFTER CATA
 				{
-					["name"] = "Delicate Blood Garnet",
+					["name"] = "Delicate Blood Garnet [CATA+] / Bright Blood Garnet [TBC]",
 					["recipeID"] = 34590
 				},
+				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Delicate Crimson Spinel",
 					["recipeID"] = 39706
@@ -711,13 +726,18 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				},
 				-- #if BEFORE CATA
 				{
-					["name"] = "Runed Blood Garnet",
+					["name"] = "Runed Blood Garnet [TBC] / Brilliant Blood Garnet [CATA+]",
+					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 28906
 				},
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Runed Crimson Spinel",
+					["name"] = "Runed Crimson Spinel [TBC] / Brilliant Crimson Spinel [CATA+]",
 					["recipeID"] = 39711
 				}),
+				{
+					["name"] = "Runed Living Ruby [TBC] / Brilliant Living Ruby [CATA+]",
+					["recipeID"] = 31088
+				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Subtle Crimson Spinel [TBC] / Subtle Lionseye [CATA+]",
 					["recipeID"] = 39713
@@ -725,6 +745,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				{
 					["name"] = "Subtle Living Ruby [TBC] / Subtle Dawnstone [CATA+]",
 					["recipeID"] = 31090
+				},
+				{
+					["name"] = "Teardrop Blood Garnet [TBC] / Brilliant Blood Garnet [CATA+]",
+					["recipeID"] = 28903
 				},
 				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
@@ -5759,7 +5783,7 @@ itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"
 itemrecipe({"Design: Enduring Talasite [TBC]", "Design: Regal Talasite [CATA+]"}, 24217, 31110, 46803);
 itemrecipe({"Design: Great Golden Draenite [TBC]", "Design: Rigid Azure Moonstone [CATA+]"}, 31870, 39451, 28948);
 itemrecipe({"Design: Reckless Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 35323, 46404, 31108);
-itemrecipe({"Design: Runed Blood Garnet [TBC]", "Design: Brilliant Blood Garnet[CATA+]"}, 23133, 28906, 28903);
+itemrecipe({"Design: Runed Blood Garnet [TBC]", "Design: Brilliant Blood Garnet [CATA+]"}, 23133, 28906, 28903);
 
 -- Recipes Removed with Cata
 itemrecipe({"Design: Balanced Nightseye [TBC]", "Design: Shifting Nightseye [CATA+]"}, 31876, 39463, 31103, REMOVED_WITH_CATA);
