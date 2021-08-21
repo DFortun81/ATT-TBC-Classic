@@ -397,6 +397,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Dazzling Talasite [TBC] / Purified Nightseye [CATA+]",
 					["recipeID"] = 31112
 				},
+				{
+					["name"] = "Enduring Deep Peridot [TBC] / Regal Deep Peridot [CATA+]",
+					["recipeID"] = 28918
+				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Enduring Seaspray Emerald [TBC] / Regal Seaspray Emerald [CATA+]",
 					["recipeID"] = 39739
@@ -434,20 +438,20 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Radiant Talasite",
 					["recipeID"] = 31111
 				},
+				-- #if AFTER CATA
 				{
-					["name"] = "Regal Deep Peridot",
+					["name"] = "Regal Deep Peridot [CATA+] / Enduring Deep Peridot [TBC]",
 					["recipeID"] = 28918
 				},
-				-- #if AFTER CATA
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Regal Seaspray Emerald [CATA+] / Enduring Seaspray Emerald [TBC]",
 					["recipeID"] = 39739
 				}),
-				-- #endif
 				{
-					["name"] = "Regal Talasite",
+					["name"] = "Regal Talasite [CATA+] / Regal Nightseye [TBC]",
 					["recipeID"] = 46803
 				},
+				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Steady Seaspray Emerald",
 					["recipeID"] = 47054
@@ -635,6 +639,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				}),
 				-- #endif
 				-- #if BEFORE CATA
+				{
+					["name"] = "Regal Nightseye [TBC] / Regal Talasite [CATA+]",
+					["recipeID"] = 46803
+				},
 				{
 					["name"] = "Royal Shadow Draenite [TBC] / Purified Shadow Draenite [CATA+]",
 					["recipeID"] = 28927
