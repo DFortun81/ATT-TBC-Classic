@@ -332,18 +332,20 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Falling Star",
 					["recipeID"] = 42590
 				},
+				-- #if AFTER CATA
 				{
-					["name"] = "Rigid Azure Moonstone",
+					["name"] = "Rigid Azure Moonstone [CATA+] / Rigid Golden Draenite [TBC]",
 					["recipeID"] = 28948
 				},
-				{
-					["name"] = "Rigid Empyrean Sapphire",
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Rigid Empyrean Sapphire [CATA+] / Rigid Lionseye [TBC]",
 					["recipeID"] = 39721
-				},
+				}),
 				{
-					["name"] = "Rigid Star of Elune",
+					["name"] = "Rigid Star of Elune [CATA+] / Rigid Dawnstone [TBC]",
 					["recipeID"] = 31098
 				},
+				-- #endif
 				{
 					["name"] = "Solid Azure Moonstone",
 					["recipeID"] = 28950
@@ -360,10 +362,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Sparkling Azure Moonstone",
 					["recipeID"] = 28953
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE,{
 					["name"] = "Sparkling Empyrean Sapphire",
 					["recipeID"] = 39716
-				},
+				}),
 				{
 					["name"] = "Sparkling Star of Elune",
 					["recipeID"] = 31149
@@ -716,6 +718,14 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Runed Crimson Spinel",
 					["recipeID"] = 39711
 				}),
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Subtle Crimson Spinel [TBC] / Subtle Lionseye [CATA+]",
+					["recipeID"] = 39713
+				}),
+				{
+					["name"] = "Subtle Living Ruby [TBC] / Subtle Dawnstone [CATA+]",
+					["recipeID"] = 31090
+				},
 				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Teardrop Crimson Spinel",
@@ -772,6 +782,20 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Quick Lionseye",
 					["recipeID"] = 47056
 				}),
+				-- #if BEFORE CATA
+				{
+					["name"] = "Rigid Golden Draenite [TBC] / Rigid Azure Moonstone [CATA+]",
+					["recipeID"] = 28948
+				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Rigid Lionseye [TBC] / Rigid Empyrean Sapphire [CATA+]",
+					["recipeID"] = 39721
+				}),
+				{
+					["name"] = "Rigid Dawnstone [TBC] / Rigid Star of Elune [CATA+]",
+					["recipeID"] = 31098
+				},
+				-- #endif
 				{
 					["name"] = "Smooth Dawnstone",
 					["recipeID"] = 31097
@@ -780,31 +804,39 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Smooth Golden Draenite",
 					["recipeID"] = 28944
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Smooth Lionseye",
 					["recipeID"] = 39720
-				},
+				}),
 				{
 					["name"] = "Stone of Blades",
 					["recipeID"] = 42591
 				},
+				-- #if AFTER CATA
 				{
-					["name"] = "Subtle Dawnstone",
+					["name"] = "Subtle Dawnstone [CATA+] / Subtle Living Ruby [TBC]",
 					["recipeID"] = 31090
 				},
 				{
-					["name"] = "Subtle Golden Draenite",
+					["name"] = "Subtle Golden Draenite [CATA+] / Thick Golden Draenite [TBC]",
 					["recipeID"] = 28947
 				},
-				{
-					["name"] = "Subtle Lionseye",
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Subtle Lionseye [CATA+] / Subtle Crimson Spinel [TBC]",
 					["recipeID"] = 39713
-				},
+				}),
+				-- #endif
 				{
 					["name"] = "Thick Dawnstone",
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 31100
 				},
+				-- #if BEFORE Cata
+				{
+					["name"] = "Thick Golden Draenite [TBC] / Subtle Golden Draenite [CATA+]",
+					["recipeID"] = 28947
+				},
+				-- #endif
 			}
 		},
 		{
@@ -5478,12 +5510,19 @@ local recipeCache = {
 	[25614]=1,	-- Design: Silver Rose Pendant
 	[32810]=1,	-- Design: Primal Stone Statue
 };
+local recipeCacheU = {};
 local function cacheRecipes(g)
 	if g and type(g) == "table" then
 		if g.groups then cacheRecipes(g.groups); end
 		if g.g then cacheRecipes(g.g); end
-		if g.recipeID then recipeCache[g.recipeID] = true; end
-		if g.spellID then recipeCache[g.spellID] = true; end
+		if g.recipeID then
+			recipeCache[g.recipeID] = true;
+			if g.u then recipeCacheU[g.recipeID] = g.u; end
+		end
+		if g.spellID then
+			recipeCache[g.spellID] = true;
+			if g.u then recipeCacheU[g.spellID] = g.u; end
+		end
 		for i,o in ipairs(g) do
 			cacheRecipes(o);
 		end
@@ -5525,7 +5564,29 @@ local itemrecipe = function(name, itemID, spellID, spellIDAfterCata, timeline)
 	_.ItemDB[itemID] = applyclassicphase(TBC_PHASE_ONE, o);
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
-	if recipeCache and not recipeCache[o.spellID] then print("MISSING RECIPE", name, o.spellID); end
+	if recipeCache and recipeCache[o.spellID] then
+		-- Grab the phase from the cache.
+		local u = recipeCacheU[o.spellID];
+		if u then
+			--[[
+			if o.u then
+				if o.u ~= u then
+					print("ITEM RECIPE U MISMATCH: ", name, o.spellID, o.u, " -> ", u);
+					o.u = u;
+				end
+			else
+				print("ITEM RECIPE U MISSING: ", name, o.spellID, u);
+				o.u = u;
+			end
+			]]--
+			-- The above code doesn't really matter, in this file, the phases are managed in the recipe section, not here.
+			o.u = u;
+		elseif o.u then
+			print("RECIPE MISSING U: ", name, o.spellID, o.u);
+		end
+	else
+		print("MISSING RECIPE", name, o.spellID);
+	end
 	return o;
 end
 
