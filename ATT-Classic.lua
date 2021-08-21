@@ -2700,6 +2700,13 @@ local function RefreshSkills()
 		if not header then
 			local spellID = app.SpellNameToSpellID[skillName];
 			if spellID then
+				local spellName = GetSpellInfo(spellID);
+				for _,s in pairs(app.SkillIDToSpellID) do
+					if GetSpellInfo(s) == spellName then
+						spellID = s;
+						break;
+					end
+				end
 				activeSkills[spellID] = { skillRank, skillMaxRank };
 			else
 				-- print(skillName, header, isExpanded, skillRank, numTempPoints, skillModifier, skillMaxRank, isAbandonable, stepCost, rankCost, minLevel, skillCostType, skillDescription);
@@ -5982,21 +5989,25 @@ app.SpellNameToSpellID = setmetatable(L.ALT_PROFESSION_TEXT_TO_ID, {
 		for specID,spellID in pairs(app.SpecializationSpellIDs) do
 			app.GetSpellName(spellID);
 		end
-		local numSpellTabs, offset, lastSpellName, currentSpellRank = GetNumSpellTabs(), select(4, GetSpellTabInfo(1)), "", 1;
-		for spellTabIndex=2,numSpellTabs do
+		local numSpellTabs, offset, lastSpellName, currentSpellRank, lastSpellRank = GetNumSpellTabs(), 1, "", 1, 1;
+		for spellTabIndex=1,numSpellTabs do
 			local numSpells = select(4, GetSpellTabInfo(spellTabIndex));
 			for spellIndex=1,numSpells do
-				local spellName, _, _, _, _, _, spellID = GetSpellInfo(offset + spellIndex, BOOKTYPE_SPELL);
-				if lastSpellName == spellName then
-					currentSpellRank = currentSpellRank + 1;
-				else
-					lastSpellName = spellName;
-					currentSpellRank = 1;
+				local spellName, _, _, _, _, _, spellID = GetSpellInfo(offset, BOOKTYPE_SPELL);
+				currentSpellRank = GetSpellRank(spellID);
+				if not currentSpellRank then
+					if lastSpellName == spellName then
+						currentSpellRank = lastSpellRank + 1;
+					else
+						lastSpellName = spellName;
+						currentSpellRank = 1;
+					end
 				end
 				app.GetSpellName(spellID, currentSpellRank);
 				rawset(app.SpellNameToSpellID, spellName, spellID);
+				lastSpellRank = currentSpellRank;
+				offset = offset + 1;
 			end
-			offset = offset + numSpells;
 		end
 		return rawget(t, key);
 	end
@@ -6037,7 +6048,10 @@ local spellFields = {
 		return app.CollectibleRecipes;
 	end,
 	["collectedAsSpell"] = function(t)
-		if app.CurrentCharacter.Spells[t.spellID] then return 1; end
+		if app.CurrentCharacter.Spells[t.spellID] then
+			ATTAccountWideData.Spells[t.spellID] = 1;
+			return 1;
+		end
 		if app.AccountWideRecipes and ATTAccountWideData.Spells[t.spellID] then return 2; end
 		if app.IsSpellKnown(t.spellID, t.rank, GetRelativeValue(t, "requireSkill") == 261) then
 			app.CurrentCharacter.Spells[t.spellID] = 1;
@@ -11117,6 +11131,14 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 				end
 				
 				if craftSkillID ~= 0 then
+					local spellName = GetSpellInfo(craftSkillID);
+					for _,spellID in pairs(app.SkillIDToSpellID) do
+						if GetSpellInfo(spellID) == spellName then
+							craftSkillID = spellID;
+							break;
+						end
+					end
+					
 					local numberOfCrafts, spellID = GetNumCrafts();
 					for craftIndex = 1,numberOfCrafts do
 						spellID = 0;
@@ -11165,6 +11187,13 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 				end
 				
 				if tradeSkillID ~= 0 then
+					local spellName = GetSpellInfo(tradeSkillID);
+					for _,spellID in pairs(app.SkillIDToSpellID) do
+						if GetSpellInfo(spellID) == spellName then
+							tradeSkillID = spellID;
+							break;
+						end
+					end
 					local numTradeSkills = GetNumTradeSkills();
 					for skillIndex = 1,numTradeSkills do
 						local skillName, skillType, numAvailable, isExpanded = GetTradeSkillInfo(skillIndex);
@@ -11360,6 +11389,7 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 				if app.Settings:GetTooltipSetting("Auto:ProfessionList") then
 					self:SetVisible(true);
 				end
+				RefreshSkills();
 				self:RefreshRecipes();
 			elseif e == "NEW_RECIPE_LEARNED" or e == "LEARNED_SPELL_IN_TAB" then
 				local spellID = ...;
