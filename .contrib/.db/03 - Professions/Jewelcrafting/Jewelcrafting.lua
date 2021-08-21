@@ -405,6 +405,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Enduring Seaspray Emerald [TBC] / Regal Seaspray Emerald [CATA+]",
 					["recipeID"] = 39739
 				}),
+				{
+					["name"] = "Enduring Talasite",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 31110
+				},
 				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Forceful Seaspray Emerald",
@@ -515,12 +520,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Luminous Noble Topaz [TBC] / Reckless Noble Topaz [CATA+]",
 					["recipeID"] = 31108
 				},
-				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Luminous Pyrestone",
+					["name"] = "Luminous Pyrestone",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39735
 				}),
+				-- #endif
 				{
 					["name"] = "Potent Flame Spessarite",
 					["recipeID"] = 28915
@@ -539,11 +544,13 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 28912
 				},
 				-- #endif
+				-- #if BEFORE CATA
 				applyclassicphase(TBC_PHASE_FIVE, {
-					["name"] = "Reckless Noble Topaz",
+					["name"] = "Reckless Noble Topaz",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 46404,
 				}),
+				-- #endif
 				-- #if AFTER CATA
 				{
 					["name"] = "Reckless Noble Topaz [CATA+] / Luminous Noble Topaz [TBC]",
@@ -721,19 +728,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Bright Blood Garnet [TBC] / Delicate Blood Garnet [CATA+]",
 					["recipeID"] = 34590
 				},
-				-- #endif
-				-- #if AFTER CATA
-				{
-					["name"] = "Brilliant Blood Garnet [CATA+] / Runed Blood Garnet [TBC]",
-					["timeline"] = { REMOVED_WITH_CATA },
-					["recipeID"] = 28906
-				},
-				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Bright Crimson Spinel",
+					["name"] = "Bright Crimson Spinel",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39712
 				}),
+				-- #endif
 				-- #if AFTER CATA
 				{
 					["name"] = "Brilliant Blood Garnet [CATA+] / Teardrop Blood Garnet [TBC]",
@@ -784,7 +784,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				},
 				-- #if BEFORE CATA
 				{
-					["name"] = "Runed Blood Garnet [TBC] / Brilliant Blood Garnet [CATA+]",
+					["name"] = "Runed Blood Garnet",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 28906
 				},
@@ -808,17 +808,17 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Teardrop Blood Garnet [TBC] / Brilliant Blood Garnet [CATA+]",
 					["recipeID"] = 28903
 				},
-				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Teardrop Crimson Spinel",
+					["name"] = "Teardrop Crimson Spinel",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39710
 				}),
 				{
-					["name"] = "Teardrop Living Ruby",
+					["name"] = "Teardrop Living Ruby",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 31087
 				},
+				-- #endif
 			}
 		},
 		{
@@ -829,26 +829,28 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Blood of Amber",
 					["recipeID"] = 42592
 				},
+				-- #if BEFORE CATA
 				{
-					["name"] = "Brilliant Dawnstone",
+					["name"] = "Brilliant Dawnstone",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 31096
 				},
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Brilliant Lionseye",
+					["name"] = "Brilliant Lionseye",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39719
 				}),
+				-- #endif
 				{
 					["name"] = "Facet of Eternity",
 					["recipeID"] = 42593
 				},
+				-- #if BEFORE CATA
 				{
-					["name"] = "Gleaming Dawnstone",
+					["name"] = "Gleaming Dawnstone",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 31099
 				},
-				-- #if BEFORE CATA
 				{
 					["name"] = "Smooth Golden Draenite [CATA+] / Gleaming Golden Draenite [TBC]",
 					["recipeID"] = 28944
@@ -916,12 +918,12 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 39713
 				}),
 				-- #endif
+				-- #if BEFORE CATA
 				{
-					["name"] = "Thick Dawnstone",
+					["name"] = "Thick Dawnstone",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 31100
 				},
-				-- #if BEFORE Cata
 				{
 					["name"] = "Thick Golden Draenite [TBC] / Subtle Golden Draenite [CATA+]",
 					["recipeID"] = 28947
