@@ -1093,10 +1093,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["name"] = "Necklaces",
 			["categoryID"] = 864,
 			["groups"] = {
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Amulet of Flowing Life",
 					["recipeID"] = 46126
-				},
+				}),
 				{
 					["name"] = "Braided Eternium Chain",
 					["recipeID"] = 31070
@@ -1113,10 +1113,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Eye of the Night",
 					["recipeID"] = 31071
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Hard Khorium Choker",
 					["recipeID"] = 46127
-				},
+				}),
 				{
 					["name"] = "Living Ruby Pendant",
 					["recipeID"] = 31068
@@ -1133,10 +1133,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Pendant of Shadow's End",
 					["recipeID"] = 31065
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Pendant of Sunfire",
 					["recipeID"] = 46125
-				},
+				}),
 				{
 					["name"] = "Pendant of Thawing",
 					["recipeID"] = 31063
@@ -1144,6 +1144,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				{
 					["name"] = "Pendant of the Null Rune",
 					["recipeID"] = 31066
+				},
+				{
+					["name"] = "Pendant of Withering",
+					["recipeID"] = 31064
 				},
 				{
 					["name"] = "Thick Adamantite Necklace",
@@ -1191,10 +1195,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Golden Draenite Ring",
 					["recipeID"] = 31049
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Hard Khorium Band",
 					["recipeID"] = 46124
-				},
+				}),
 				{
 					["name"] = "Heavy Adamantite Ring",
 					["recipeID"] = 31052
@@ -1219,22 +1223,18 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Khorium Inferno Band",
 					["recipeID"] = 31055
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Loop of Forged Power",
 					["recipeID"] = 46122
-				},
-				{
-					["name"] = "Pendant of Withering",
-					["recipeID"] = 31064
-				},
+				}),
 				{
 					["name"] = "Ring of Arcane Shielding",
 					["recipeID"] = 37855
 				},
-				{
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Ring of Flowing Life",
 					["recipeID"] = 46123
-				},
+				}),
 				{
 					["name"] = "The Black Pearl",
 					["recipeID"] = 41415
