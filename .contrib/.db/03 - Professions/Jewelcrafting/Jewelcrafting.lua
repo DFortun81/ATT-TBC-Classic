@@ -390,7 +390,15 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["groups"] = {
 				-- #if BEFORE CATA
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Enduring Seaspray Emerald",
+					["name"] = "Dazzling Seaspray Emerald [TBC] / Purified Shadowsong Amethyst [CATA+]",
+					["recipeID"] = 39741
+				}),
+				{
+					["name"] = "Dazzling Talasite [TBC] / Purified Nightseye [CATA+]",
+					["recipeID"] = 31112
+				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Enduring Seaspray Emerald [TBC] / Regal Seaspray Emerald [CATA+]",
 					["recipeID"] = 39739
 				}),
 				-- #endif
@@ -432,7 +440,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				},
 				-- #if AFTER CATA
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Regal Seaspray Emerald",
+					["name"] = "Regal Seaspray Emerald [CATA+] / Enduring Seaspray Emerald [TBC]",
 					["recipeID"] = 39739
 				}),
 				-- #endif
@@ -466,6 +474,20 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Deadly Pyrestone",
 					["recipeID"] = 39738
+				}),
+				-- #endif
+				-- #if BEFORE CATA
+				{
+					["name"] = "Glinting Noble Topaz [TBC] / Glinting Nightseye [CATA+]",
+					["recipeID"] = 31109
+				},
+				{
+					["name"] = "Glinting Flame Spessarite [TBC] / Glinting Shadow Draenite [CATA+]",
+					["recipeID"] = 28914
+				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Glinting Pyrestone [TBC] / Glinting Shadowsong Amethyst [CATA+]",
+					["recipeID"] = 39736
 				}),
 				-- #endif
 				{
@@ -524,11 +546,15 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				}),
 				-- #if BEFORE CATA
 				{
-					["name"] = "Veiled Noble Topaz",
+					["name"] = "Veiled Flame Spessarite [TBC] / Veiled Shadow Draenite [CATA+]",
+					["recipeID"] = 39466
+				},
+				{
+					["name"] = "Veiled Noble Topaz [TBC] / Veiled Nightseye [CATA+]",
 					["recipeID"] = 39470
 				},
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Veiled Pyrestone",
+					["name"] = "Veiled Pyrestone [TBC] / Veiled Shadowsong Amethyst [CATA+]",
 					["recipeID"] = 39737
 				}),
 				applyclassicphase(TBC_PHASE_THREE, {
@@ -542,25 +568,31 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["name"] = "Purple Gems",
 			["categoryID"] = 860,
 			["groups"] = {
+				-- #if AFTER CATA
 				{
-					["name"] = "Glinting Nightseye",
+					["name"] = "Glinting Nightseye [CATA+] / Glinting Noble Topaz [TBC]",
 					["recipeID"] = 31109
 				},
 				{
-					["name"] = "Glinting Shadow Draenite",
+					["name"] = "Glinting Shadow Draenite [CATA+] / Glinting Flame Spessarite [TBC]",
 					["recipeID"] = 28914
 				},
-				{
-					["name"] = "Glinting Shadowsong Amethyst",
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Glinting Shadowsong Amethyst [CATA+] / Glinting Pyrestone [TBC]",
 					["recipeID"] = 39736
-				},
+				}),
+				-- #endif
 				-- #if BEFORE CATA
 				{
-					["name"] = "Glowing Nightseye",
+					["name"] = "Glowing Nightseye [TBC] / Timeless Nightseye [CATA+]",
 					["recipeID"] = 31104
 				},
+				{
+					["name"] = "Glowing Shadow Draenite [TBC] / Timeless Shadow Draenite [CATA+]",
+					["recipeID"] = 28925
+				},
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Glowing Shadowsong Amethyst",
+					["name"] = "Glowing Shadowsong Amethyst [TBC] / Timeless Shadowsong Amethyst [CATA+]",
 					["recipeID"] = 39731
 				}),
 				-- #endif
@@ -568,22 +600,32 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Purified Jaggal Pearl",
 					["recipeID"] = 41420
 				},
+				-- #if AFTER CATA
 				{
-					["name"] = "Purified Nightseye",
+					["name"] = "Purified Nightseye [CATA+] / Dazzling Talasite [TBC]",
 					["recipeID"] = 31112
 				},
 				{
-					["name"] = "Purified Shadow Draenite",
+					["name"] = "Purified Shadow Draenite [CATA+] / Royal Shadow Draenite [TBC]",
 					["recipeID"] = 28927
 				},
+				-- #endif
 				{
 					["name"] = "Purified Shadow Pearl",
 					["recipeID"] = 41429
 				},
-				{
-					["name"] = "Purified Shadowsong Amethyst",
+				-- #if AFTER CATA
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Purified Shadowsong Amethyst [CATA+] / Dazzling Seaspray Emerald [TBC]",
 					["recipeID"] = 39741
+				}),
+				-- #endif
+				-- #if BEFORE CATA
+				{
+					["name"] = "Royal Shadow Draenite [TBC] / Purified Shadow Draenite [CATA+]",
+					["recipeID"] = 28927
 				},
+				-- #endif
 				{
 					["name"] = "Shifting Nightseye",
 					["recipeID"] = 31103
@@ -592,10 +634,10 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Shifting Shadow Draenite",
 					["recipeID"] = 28933
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Shifting Shadowsong Amethyst",
 					["recipeID"] = 39728
-				},
+				}),
 				{
 					["name"] = "Sovereign Nightseye",
 					["recipeID"] = 31102
@@ -610,33 +652,27 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				}),
 				-- #if AFTER CATA
 				{
-					["name"] = "Timeless Nightseye",
+					["name"] = "Timeless Nightseye [CATA+] / Glowing Nightseye [TBC]",
 					["recipeID"] = 31104
 				},
-				-- #endif
 				{
-					["name"] = "Timeless Shadow Draenite",
+					["name"] = "Timeless Shadow Draenite [CATA+] / Glowing Shadow Draenite [TBC]",
 					["recipeID"] = 28925
 				},
-				-- #if AFTER CATA
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Timeless Shadowsong Amethyst",
+					["name"] = "Timeless Shadowsong Amethyst [CATA+] / Glowing Shadowsong Amethyst [TBC]",
 					["recipeID"] = 39731
 				}),
-				-- #endif
-				-- #if AFTER CATA
 				{
-					["name"] = "Veiled Nightseye",
+					["name"] = "Veiled Nightseye [CATA+] / Veiled Noble Topaz [TBC]",
 					["recipeID"] = 39470
 				},
-				-- #endif
 				{
-					["name"] = "Veiled Shadow Draenite",
+					["name"] = "Veiled Shadow Draenite [CATA+] / Veiled Flame Spessarite [TBC]",
 					["recipeID"] = 39466
 				},
-				-- #if AFTER CATA
 				applyclassicphase(TBC_PHASE_THREE, {
-					["name"] = "Veiled Shadowsong Amethyst",
+					["name"] = "Veiled Shadowsong Amethyst [CATA+] / Veiled Pyrestone [TBC]",
 					["recipeID"] = 39737
 				}),
 				-- #endif
