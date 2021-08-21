@@ -1118,6 +1118,9 @@ _.Zones =
 					["coord"] = { 48.8, 41.8, SHATTRATH_CITY },
 					["minReputation"] = { 1077, NEUTRAL },	-- Shattered Sun Offensive, Neutral.
 					["groups"] = {
+						-- #if BEFORE CATA
+						i(35238),	-- Design: Balanced Shadowsong Amethyst [TBC] / Design: Shifting Shadowsong Amethyst [CATA+]
+						-- #endif
 						i(35244),	-- Design: Bold Crimson Spinel
 						-- #if BEFORE CATA
 						i(35245),	-- Design: Bright Crimson Spinel [TBC] / Design: Delicate Crimson Spinel [CATA+]
@@ -1125,6 +1128,11 @@ _.Zones =
 						i(35255),	-- Design: Brilliant Lionseye [TBC] / Design: Brilliant Crimson Spinel [CATA+]
 						-- #if AFTER CATA
 						i(35248),	-- Design: Brilliant Crimson Spinel [CATA+] / Design: Runed Crimson Spinel [TBC]
+						-- #endif
+						-- #if BEFORE CATA
+						i(35251),	-- Design: Dazzling Seaspray Emerald [TBC] / Design: Purified Shadowsong Amethyst [CATA+]
+						-- #endif
+						-- #if AFTER CATA
 						i(35271),	-- Design: Deadly Pyrestone [CATA+] / Design: Wicked Pyrestone [TBC]
 						-- #endif
 						i(35246),	-- Design: Delicate Crimson Spinel
@@ -1137,30 +1145,32 @@ _.Zones =
 						i(35247),	-- Design: Flashing Crimson Spinel
 						i(35769),	-- Design: Forceful Seaspray Emerald
 						i(35325),	-- Design: Forceful Talasite
-						i(35266),	-- Design: Glinting Shadowsong Amethyst
-						i(35240, {	-- Design: Glinting Shadowsong Amethyst
-							["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
+						-- #if BEFORE CATA
+						i(35256),	-- Design: Gleaming Lionseye [TBC] / Design: Smooth Lionseye [CATA+]
+						i(35266),	-- Design: Glinting Pyrestone [TBC] / Design: Glinting Shadowsong Amethyst [CATA+]
+						-- #endif
+						-- #if AFTER CATA
+						i(35266),	-- Design: Glinting Shadowsong Amethyst [CATA+] / Design: Glinting Pyrestone [TBC]
+						i(35240),	-- Design: Glinting Shadowsong Amethyst [CATA+] / Design: Infused Shadowsong Amethyst [TBC]
+						-- #endif
 						-- #if BEFORE CATA
 						i(35239),	-- Design: Glowing Shadowsong Amethyst [TBC] / Design: Timeless Shadowsong Amethyst [CATA+]
+						i(35257),	-- Design: Great Lionseye [TBC] / Design: Rigid Empyrean Sapphire [CATA+]
+						i(35240),	-- Design: Infused Shadowsong Amethyst [TBC] / Design: Glinting Shadowsong Amethyst [CATA+]
 						-- #endif
 						i(35267),	-- Design: Inscribed Pyrestone
 						i(35253),	-- Design: Jagged Seaspray Emerald
 						-- #if BEFORE CATA
+						i(35262),	-- Design: Lustrous Empyrean Sapphire [TBC] / Design: Sparkling Empyrean Sapphire [CATA+]
 						i(35268),	-- Design: Luminous Pyrestone [TBC] / Design: Reckless Pyrestone [CATA+]
 						-- #endif
 						i(35258),	-- Design: Mystic Lionseye
 						i(35269),	-- Design: Potent Pyrestone
-						i(35251),	-- Design: Purified Shadowsong Amethyst
-						i(35241, {	-- Design: Purified Shadowsong Amethyst
-							["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
-						i(37504, {	-- Design: Purified Shadowsong Amethyst
-							["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
+						-- #if AFTER CATA
+						i(35251),	-- Design: Purified Shadowsong Amethyst [CATA+] / Design: Dazzling Seaspray Emerald [TBC]
+						i(35241),	-- Design: Purified Shadowsong Amethyst [CATA+] / Design: Royal Shadowsong Amethyst [TBC]
+						-- #endif
+						i(37504),	-- Design: Purified Shadowsong Amethyst
 						i(35322),	-- Design: Quick Dawnstone
 						i(35768),	-- Design: Quick Lionseye
 						i(35254),	-- Design: Radiant Seaspray Emerald
@@ -1170,38 +1180,32 @@ _.Zones =
 						i(35268),	-- Design: Reckless Pyrestone [CATA+] / Design: Luminous Pyrestone [TBC]
 						i(35252),	-- Design: Regal Seaspray Emerald [CATA+] / Design: Enduring Seaspray Emerald [TBC]
 						-- #endif
-						i(35259),	-- Design: Rigid Empyrean Sapphire
-						i(35257, {	-- Design: Rigid Empyrean Sapphire
-							["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
+						i(35259),	-- Design: Rigid Lionseye [TBC] / Design: Rigid Empyrean Sapphire [CATA+]
+						-- #if AFTER CATA
+						i(35257),	-- Design: Rigid Empyrean Sapphire [CATA+] / Design: Great Lionseye [TBC]
+						-- #endif
 						-- #if BEFORE CATA
+						i(35241),	-- Design: Royal Shadowsong Amethyst [TBC] / Design: Purified Shadowsong Amethyst [CATA+]
 						i(35248),	-- Design: Runed Crimson Spinel [TBC] / Design: Brilliant Crimson Spinel [CATA+]
 						-- #endif
 						i(35242),	-- Design: Shifting Shadowsong Amethyst
-						i(35238, {	-- Design: Shifting Shadowsong Amethyst
-							["spellID"] = 0,	-- This is now available via 35242, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
+						-- #if AFTER CATA
+						i(35238),	-- Design: Shifting Shadowsong Amethyst [CATA+] / Design: Balanced Shadowsong Amethyst [TBC]
+						-- #endif
 						i(35260),	-- Design: Smooth Lionseye
-						i(35256, {	-- Design: Smooth Lionseye
-							["spellID"] = 0,	-- This is now available via 35260, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
+						-- #if AFTER CATA
+						i(35256),	-- Design: Smooth Lionseye [CATA+] / Design: Gleaming Lionseye [TBC]
+						-- #endif
 						i(35263),	-- Design: Solid Empyrean Sapphire
 						i(35243),	-- Design: Sovereign Shadowsong Amethyst
 						i(35264),	-- Design: Sparkling Empyrean Sapphire
-						i(35262, {	-- Design: Sparkling Empyrean Sapphire
-							["spellID"] = 0,	-- This is now available via 35264, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
+						-- #if AFTER CATA
+						i(35262),	-- Design: Sparkling Empyrean Sapphire [CATA+] / Design: Lustrous Empyrean Sapphire [TBC]
+						-- #endif
 						i(35766),	-- Design: Steady Seaspray Emerald
 						i(35265),	-- Design: Stormy Empyrean Sapphire
-						i(35249),	-- Design: Subtle Lionseye
-						i(35261, {	-- Design: Subtle Lionseye
-							["spellID"] = 0,	-- This is now available via 35249, need to delink the old plans from the recipe
-								["u"] = REMOVED_FROM_GAME,
-						}),
+						i(35249),	-- Design: Subtle Crimson Spinel [TBC] / Design: Subtle Lionseye [CATA+]
+						i(35261),	-- Design: Thick Lionseye [TBC] / Design: Subtle Lionseye [CATA+] (both)
 						-- #if AFTER CATA
 						i(35239),	-- Design: Timeless Shadowsong Amethyst [CATA+] / Design: Glowing Shadowsong Amethyst [TBC]
 						-- #endif
@@ -1219,13 +1223,18 @@ _.Zones =
 						i(29129),	-- Anchorite's Robes
 						i(29130),	-- Auchenai Staff
 						-- #if BEFORE CATA
-						i(23143),	-- Design: Dazzling Deep Peridot [TBC] / Purified Shadow Draenite [CATA+]
+						i(23143),	-- Design: Dazzling Deep Peridot [TBC] / Design: Purified Shadow Draenite [CATA+]
 						i(23149),	-- Design: Gleaming Golden Draenite [TBC] / Design: Smooth Golden Draenite [CATA+]
 						-- #endif
 						i(24177),	-- Design: Pendant of Shadow's End
-						i(23145),	-- Design: Purified Shadow Draenite
 						-- #if AFTER CATA
-						i(23143),	-- Purified Shadow Draenite [CATA+] / Design: Dazzling Deep Peridot [TBC]
+						i(23143),	-- Design: Purified Shadow Draenite [CATA+] / Design: Dazzling Deep Peridot [TBC]
+						i(23145),	-- Design: Purified Shadow Draenite [CATA+] / Design: Royal Shadow Draenite [TBC]
+						-- #endif
+						-- #if BEFORE CATA
+						i(23145),	-- Design: Royal Shadow Draenite [TBC] / Design: Purified Shadow Draenite [CATA+]
+						-- #endif
+						-- #if AFTER CATA
 						i(23149),	-- Design: Smooth Golden Draenite [CATA+] / Design: Gleaming Golden Draenite [TBC]
 						-- #endif
 						i(29128),	-- Lightwarden's Band

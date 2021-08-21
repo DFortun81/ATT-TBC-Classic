@@ -333,6 +333,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 42590
 				},
 				-- #if BEFORE CATA
+				{
+					["name"] = "Lustrous Azure Moonstone",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 28957
+				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Lustrous Empyrean Sapphire",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
@@ -401,6 +406,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["categoryID"] = 858,
 			["groups"] = {
 				-- #if BEFORE CATA
+				{
+					["name"] = "Dazzling Deep Peridot",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 28924
+				},
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Dazzling Seaspray Emerald [TBC] / Purified Shadowsong Amethyst [CATA+]",
 					["recipeID"] = 39741
@@ -683,6 +693,13 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Purified Shadow Pearl",
 					["recipeID"] = 41429
 				},
+				-- #if BEFORE CATA
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Purified Shadowsong Amethyst",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 48789
+				}),
+				-- #endif
 				-- #if AFTER CATA
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Purified Shadowsong Amethyst [CATA+] / Dazzling Seaspray Emerald [TBC]",
@@ -5784,6 +5801,7 @@ end
 itemrecipe("Design: Amulet of Flowing Life", 35202, 46126);
 itemrecipe("Design: Amulet of the Moon", 20854, 25339);
 itemrecipe("Design: Arcane Khorium Band", 24162, 31057);
+itemrecipe("Design: Black Diamond Crab", 21955, 26912);
 itemrecipe("Design: Black Pearl Panther", 21941, 26875);
 itemrecipe("Design: Blazing Citrine Ring", 20973, 25617);
 itemrecipe("Design: Blazing Eternium Band", 24165, 31061);
@@ -5793,12 +5811,14 @@ itemrecipe("Design: Bold Crimson Spinel", 35244, 39705);
 itemrecipe("Design: Bold Living Ruby", 24193, 31084);
 itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867);
 itemrecipe("Design: Braided Eternium Chain", 24168, 31070);
-itemrecipe("Design: Brilliant Living Ruby", 35305, 31088);
 itemrecipe("Design: Brutal Earthstorm Diamond", 25906, 32869);
 itemrecipe("Design: Chain of the Twilight Owl", 24171, 31076);
+itemrecipe("Design: Chaotic Skyfire Diamond", 34689, 44794);
 itemrecipe("Design: Circlet of Arcane Might", 24173, 31078);
+itemrecipe("Design: Citrine Pendant of Golden Healing", 20976, 25622);
 itemrecipe("Design: Coronet of Verdant Flame", 24172, 31077);
 itemrecipe("Design: Crimson Sun", 33156, 42589);
+itemrecipe("Design: Dark Iron Scorpid", 21956, 26914);
 itemrecipe("Design: Dawnstone Crab - Alliance", 24180, 31080);
 itemrecipe("Design: Dawnstone Crab - Horde", 31358, 31080);
 itemrecipe("Design: Delicate Blood Garnet", 23134, 34590);
@@ -5810,8 +5830,12 @@ itemrecipe("Design: Destructive Skyfire Diamond", 25907, 32871);
 itemrecipe("Design: Don Julio's Heart", 33305, 42558);
 itemrecipe("Design: Ember Skyfire Diamond", 35505, 46601);
 itemrecipe("Design: Embrace of the Dawn", 24170, 31072);
+itemrecipe("Design: Emerald Crown of Destruction", 21952, 26906);
+itemrecipe("Design: Emerald Owl", 21953, 26909);
+itemrecipe("Design: Enigmatic Skyfire Diamond", 25910, 32874);
 itemrecipe("Design: Eternal Earthstorm Diamond", 35502, 46597);
 itemrecipe("Design: Eye of the Night", 24169, 31071);
+itemrecipe("Design: Facet of Eternity", 33160, 42593);
 itemrecipe("Design: Falling Star", 33157, 42590);
 itemrecipe("Design: Felsteel Boar", 24179, 31079);
 itemrecipe("Design: Figurine - Crimson Serpent", 35697, 46777);
@@ -5825,6 +5849,8 @@ itemrecipe("Design: Flashing Living Ruby", 24198, 31091);
 itemrecipe("Design: Forceful Seaspray Emerald", 35765, 47053);
 itemrecipe("Design: Forceful Seaspray Emerald", 35769, 47053);
 itemrecipe("Design: Forceful Talasite", 35325, 46405);
+itemrecipe("Design: Gem Studded Band", 21947, 26896);
+itemrecipe("Design: Golden Hare", 21940, 26873);
 itemrecipe("Design: Hard Khorium Band", 35200, 46124);
 itemrecipe("Design: Hard Khorium Choker", 35203, 46127);
 itemrecipe("Design: Heavy Felsteel Ring", 24163, 31058);
@@ -5833,25 +5859,33 @@ itemrecipe("Design: Heavy Golden Necklace of Battle", 20856, 25320);
 itemrecipe("Design: Inscribed Noble Topaz", 24213, 31106);
 itemrecipe("Design: Inscribed Pyrestone", 32303, 39733);
 itemrecipe("Design: Inscribed Pyrestone", 35267, 39733);
+itemrecipe("Design: Insightful Earthstorm Diamond", 25904, 32870);
+itemrecipe("Design: Jade Pendant of Blasting", 20974, 25618);
 itemrecipe("Design: Jagged Seaspray Emerald", 32312, 39742);
 itemrecipe("Design: Jagged Seaspray Emerald", 35253, 39742);
 itemrecipe("Design: Jagged Talasite", 24220, 31113);
 itemrecipe("Design: Kailee's Rose", 33155, 42588);
 itemrecipe("Design: Khorium Band of Frost", 24159, 31054);
 itemrecipe("Design: Khorium Band of Leaves", 24161, 31056);
+itemrecipe("Design: Khorium Band of Shadows", 24158, 31053);
 itemrecipe("Design: Khorium Inferno Band", 24160, 31055);
 itemrecipe("Design: Living Ruby Pendant", 24167, 31068);
+itemrecipe("Design: Living Ruby Serpent", 24181, 31081);
 itemrecipe("Design: Loop of Forged Power", 35198, 46122);
+itemrecipe("Design: Mystic Dawnstone", 24208, 31101);
 itemrecipe("Design: Mystic Lionseye", 32295, 39724);
 itemrecipe("Design: Mystic Lionseye", 35258, 39724);
 itemrecipe("Design: Mystical Skyfire Diamond", 25909, 32872);
+itemrecipe("Design: Necklace of the Diamond Tower", 21957, 26915);
 itemrecipe("Design: Nightseye Panther", 24183, 31083);
 itemrecipe("Design: Opal Necklace of Impact", 21948, 26897);
+itemrecipe("Design: Pendant of Frozen Flame", 24174, 31062);
 itemrecipe("Design: Pendant of Shadow's End", 24177, 31065);
 itemrecipe("Design: Pendant of Sunfire", 35201, 46125);
 itemrecipe("Design: Pendant of Thawing", 24175, 31063);
 itemrecipe("Design: Pendant of the Agate Shield", 20970, 25610);
 itemrecipe("Design: Pendant of the Null Rune", 24178, 31066);
+itemrecipe("Design: Pendant of Withering", 24176, 31064);
 itemrecipe("Design: Potent Flame Spessarite", 23138, 28915);
 itemrecipe("Design: Potent Noble Topaz", 24214, 31107);
 itemrecipe("Design: Potent Pyrestone", 32304, 39734);
@@ -5867,13 +5901,18 @@ itemrecipe("Design: Reckless Pyrestone", 35762, 47055);
 itemrecipe("Design: Reckless Pyrestone", 35767, 47055);
 itemrecipe("Design: Regal Talasite", 35708, 46803);
 itemrecipe("Design: Relentless Earthstorm Diamond", 33622, 39961);
+itemrecipe("Design: Ring of Arcane Shielding", 30826, 37855);
+itemrecipe("Design: Ring of Bitter Shadows", 21954, 26910);
 itemrecipe("Design: Ring of Flowing Life", 35199, 46123);
 itemrecipe("Design: Ruby Crown of Restoration", 21942, 26878);
+itemrecipe("Design: Ruby Serpent", 21949, 26900);
 itemrecipe("Design: Shifting Nightseye", 24210, 31103);
 itemrecipe("Design: Shifting Shadow Draenite", 23146, 28933);
 itemrecipe("Design: Shifting Shadowsong Amethyst", 32298, 39728);
+itemrecipe("Design: Shifting Shadowsong Amethyst", 35242, 39728);
 itemrecipe("Design: Smooth Dawnstone", 24204, 31097);
 itemrecipe("Design: Smooth Lionseye", 32291, 39720);
+itemrecipe("Design: Smooth Lionseye", 35260, 39720);
 itemrecipe("Design: Solid Empyrean Sapphire", 32286, 39715);
 itemrecipe("Design: Solid Empyrean Sapphire", 35263, 39715);
 itemrecipe("Design: Solid Star of Elune", 24199, 31092);
@@ -5881,48 +5920,58 @@ itemrecipe("Design: Solid Star of Elune", 35304, 31092);
 itemrecipe("Design: Sovereign Nightseye", 24209, 31102);
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 32297, 39727);
 itemrecipe("Design: Sovereign Shadowsong Amethyst", 35243, 39727);
-itemrecipe("Design: Sparkling Azure Moonstone", 23155, 28953);
 itemrecipe("Design: Sparkling Empyrean Sapphire", 32287, 39716);
+itemrecipe("Design: Sparkling Empyrean Sapphire", 35264, 39716);
 itemrecipe("Design: Sparkling Star of Elune", 24200, 31149);
 itemrecipe("Design: Steady Seaspray Emerald", 35764, 47054);
 itemrecipe("Design: Steady Seaspray Emerald", 35766, 47054);
+itemrecipe("Design: Steady Talasite", 33783, 43493);
+itemrecipe("Design: Stone of Blades", 33158, 42591);
 itemrecipe("Design: Stormy Azure Moonstone", 23154, 28955);
 itemrecipe("Design: Stormy Empyrean Sapphire", 32289, 39718);
 itemrecipe("Design: Stormy Empyrean Sapphire", 35265, 39718);
 itemrecipe("Design: Stormy Star of Elune", 24202, 31095);
 itemrecipe("Design: Subtle Lionseye", 32284, 39713);
 itemrecipe("Design: Swift Skyfire Diamond", 25908, 32873);
+itemrecipe("Design: Talasite Owl", 24182, 31082);
 itemrecipe("Design: Tenacious Earthstorm Diamond", 25905, 32868);
+itemrecipe("Design: The Aquamarine Ward", 21945, 26887);
 itemrecipe("Design: The Frozen Eye", 31401, 38503);
 itemrecipe("Design: The Jade Eye", 20975, 25619);
 itemrecipe("Design: The Natural Ward", 31402, 38504);
 itemrecipe("Design: Thick Felsteel Necklace", 24166, 31067);
 itemrecipe("Design: Thundering Skyfire Diamond", 32411, 39963);
+itemrecipe("Design: Truesilver Boar", 21944, 26882);
 itemrecipe("Design: Truesilver Crab", 21943, 26881);
 itemrecipe("Design: Wicked Moonstone Ring", 20855, 25323);
--- itemrecipe("", ITEMID, SPELLID);
--- itemrecipe("", ITEMID, SPELLID);
--- itemrecipe("", ITEMID, SPELLID);
 
 -- Recipes Renamed with Cata
 itemrecipe({"Design: Dazzling Seaspray Emerald [TBC]", "Design: Purified Shadowsong Amethyst [CATA+]"}, 32311, 39741);
+itemrecipe({"Design: Dazzling Seaspray Emerald [TBC]", "Design: Purified Shadowsong Amethyst [CATA+]"}, 35251, 39741);
 itemrecipe({"Design: Dazzling Talasite [TBC]", "Design: Purified Nightseye [CATA+]"}, 24219, 31112);
 itemrecipe({"Design: Enduring Deep Peridot [TBC - Alliance]", "Design: Regal Deep Peridot [CATA+ - Alliance]"}, 23142, 28918);
 itemrecipe({"Design: Enduring Deep Peridot [TBC - Horde]", "Design: Regal Deep Peridot [CATA+ - Horde]"}, 31359, 28918);
 itemrecipe({"Design: Enduring Seaspray Emerald [TBC]", "Design: Regal Seaspray Emerald [CATA+]"}, 32309, 39739);
 itemrecipe({"Design: Enduring Seaspray Emerald [TBC]", "Design: Regal Seaspray Emerald [CATA+]"}, 35252, 39739);
+itemrecipe({"Design: Gleaming Golden Draenite [TBC]","Design: Smooth Golden Draenite [CATA+]"}, 23149, 28944);
 itemrecipe({"Design: Glinting Noble Topaz [TBC]", "Design: Glinting Nightseye [CATA+]"}, 24216, 31109);
 itemrecipe({"Design: Glinting Pyrestone [TBC]", "Design: Glinting Shadowsong Amethyst [CATA+]"}, 32306, 39736);
+itemrecipe({"Design: Glinting Pyrestone [TBC]", "Design: Glinting Shadowsong Amethyst [CATA+]"}, 35266, 39736);
 itemrecipe({"Design: Glowing Nightseye [TBC]", "Design: Timeless Nightseye [CATA+]"}, 24211, 31104);
 itemrecipe({"Design: Glowing Shadowsong Amethyst [TBC]", "Design: Timeless Shadowsong Amethyst [CATA+]"}, 35239, 39731);
 itemrecipe({"Design: Luminous Flame Spessarite [TBC]", "Design: Reckless Flame Spessarite [CATA+]"}, 23136, 28912);
 itemrecipe({"Design: Luminous Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 24215, 31108);
+itemrecipe({"Design: Regal Nightseye [TBC]", "Design: Regal Talasite [CATA+]"}, 35708, 46803);
 itemrecipe({"Design: Rigid Dawnstone [TBC]", "Design: Rigid Star of Elune [CATA+]"}, 24205, 31098);
 itemrecipe({"Design: Rigid Dawnstone [TBC]", "Design: Rigid Star of Elune [CATA+]"}, 35307, 31098);
 itemrecipe({"Design: Rigid Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CATA+]"}, 32292, 39721);
+itemrecipe({"Design: Rigid Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CATA+]"}, 35259, 39721);
+itemrecipe({"Design: Royal Shadow Draenite [TBC]", "Design: Purified Shadow Draenite [CATA+]"}, 23145, 28927);
 itemrecipe({"Design: Runed Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32282, 39711);
 itemrecipe({"Design: Runed Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 35248, 39711);
 itemrecipe({"Design: Runed Living Ruby [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 24196, 31088);
+itemrecipe({"Design: Runed Living Ruby [TBC]", "Design: Brilliant Living Ruby [CATA+]"}, 35305, 31088);
+itemrecipe({"Design: Subtle Crimson Spinel [TBC]", "Design: Subtle Lionseye [CATA+]"}, 35249, 39713);
 itemrecipe({"Design: Subtle Living Ruby [TBC]", "Design: Subtle Dawnstone [CATA+]"}, 24197, 31090);
 itemrecipe({"Design: Thick Golden Draenite [TBC]", "Design: Subtle Golden Draenite [CATA+]"}, 23150, 28947);
 itemrecipe({"Design: Veiled Flame Spessarite [TBC]","Design: Veiled Shadow Draenite [CATA+]"}, 31873, 39466);
@@ -5933,13 +5982,11 @@ itemrecipe({"Design: Wicked Flame Spessarite [TBC]","Design: Deadly Flame Spessa
 itemrecipe({"Design: Wicked Noble Topaz [TBC]", "Design: Deadly Noble Topaz [CATA+]"}, 31879, 39471);
 itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"}, 32308, 39738);
 itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"}, 35271, 39738);
--- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
--- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
--- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID);
 
 -- Recipes that got new Spell IDs with Cata?!
 itemrecipe({"Design: Enduring Talasite [TBC]", "Design: Regal Talasite [CATA+]"}, 24217, 31110, 46803);
 itemrecipe({"Design: Great Golden Draenite [TBC]", "Design: Rigid Azure Moonstone [CATA+]"}, 31870, 39451, 28948);
+itemrecipe({"Design: Lustrous Azure Moonstone [TBC]", "Design: Sparkling Azure Moonstone [CATA+]"}, 23155, 28957, 28953);
 itemrecipe({"Design: Reckless Noble Topaz [TBC]", "Design: Reckless Noble Topaz [CATA+]"}, 35323, 46404, 31108);
 itemrecipe({"Design: Runed Blood Garnet [TBC]", "Design: Brilliant Blood Garnet [CATA+]"}, 23133, 28906, 28903);
 
@@ -5964,6 +6011,7 @@ itemrecipe({"Design: Luminous Pyrestone [TBC]", "Design: Reckless Pyrestone [CAT
 itemrecipe({"Design: Luminous Pyrestone [TBC]", "Design: Reckless Pyrestone [CATA+]"}, 35268, 39735, 47055, REMOVED_WITH_CATA);
 itemrecipe({"Design: Lustrous Empyrean Sapphire [TBC]", "Design: Sparkling Empyrean Sapphire [CATA+]"}, 32288, 39717, 39716, REMOVED_WITH_CATA);
 itemrecipe({"Design: Lustrous Star of Elune [TBC]", "Design: Sparkling Star of Elune [CATA+]"}, 24201, 31094, 31149, REMOVED_WITH_CATA);
+itemrecipe({"Design: Purified Shadowsong Amethyst [TBC]", "Design: Purified Shadowsong Amethyst [CATA+]"}, 37504, 48789, 39741, REMOVED_WITH_CATA);	-- Kept the same name, very weird.
 itemrecipe({"Design: Royal Nightseye [TBC]", "Design: Purified Nightseye [CATA+]"}, 24212, 31105, 31112, REMOVED_WITH_CATA);
 itemrecipe({"Design: Royal Shadowsong Amethyst [TBC]", "Design: Purified Shadowsong Amethyst [CATA+]"}, 32302, 39732, 39741, REMOVED_WITH_CATA);
 itemrecipe({"Design: Teardrop Crimson Spinel [TBC]", "Design: Brilliant Crimson Spinel [CATA+]"}, 32281, 39710, 39711, REMOVED_WITH_CATA);
@@ -5973,248 +6021,29 @@ itemrecipe({"Design: Thick Lionseye [TBC]", "Design: Subtle Lionseye [CATA+]"}, 
 
 -- Recipes that were only removed as a Recipe Item in Cata, but still available from a trainer? Cata was a god damned mystery.
 itemrecipe({"Design: Balanced Shadow Draenite [TBC]", "Design: Shifting Shadow Draenite [CATA+]"}, 31871, 39455, 28933, REMOVED_WITH_CATA);
+itemrecipe({"Design: Balanced Shadowsong Amethyst [TBC]", "Design: Shifting Shadowsong Amethyst [CATA+]"}, 35238, 39729, 39728, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bright Blood Garnet [TBC]", "Design: Delicate Blood Garnet [CATA+]"}, 28596, 34590, 34590, REMOVED_WITH_CATA);
 itemrecipe({"Design: Bold Blood Garnet [TBC]", "Design: Bold Blood Garnet [CATA+]"}, 23131, 28905, 28905, REMOVED_WITH_CATA);
 itemrecipe({"Design: Brilliant Golden Draenite [TBC]", "Design: Brilliant Blood Garnet [CATA+]"}, 23148, 28938, 28903, REMOVED_WITH_CATA);
+itemrecipe({"Design: Dazzling Deep Peridot [TBC]", "Design: Purified Shadow Draenite [CATA+]"}, 23143, 28924, 28927, REMOVED_WITH_CATA);
+itemrecipe({"Design: Gleaming Lionseye [TBC]", "Design: Smooth Lionseye [CATA+]"}, 35256, 39722, 39720, REMOVED_WITH_CATA);
 itemrecipe({"Design: Glinting Flame Spessarite [TBC]", "Design: Glinting Shadow Draenite [CATA+]"}, 23137, 28914, 28914, REMOVED_WITH_CATA);
+itemrecipe({"Design: Great Lionseye [TBC]", "Design: Rigid Empyrean Sapphire [CATA+]"}, 35257, 39725, 39721, REMOVED_WITH_CATA);
 itemrecipe({"Design: Infused Shadow Draenite [TBC]", "Design: Shifting Shadow Draenite [CATA+]"}, 31872, 39458, 28933, REMOVED_WITH_CATA);
+itemrecipe({"Design: Infused Shadowsong Amethyst [TBC] / Design: Glinting Shadowsong Amethyst [CATA+]"}, 35240, 39730, 39736, REMOVED_WITH_CATA);
 itemrecipe({"Design: Inscribed Flame Spessarite [TBC]", "Design: Inscribed Flame Spessarite [CATA+]"}, 23135, 28910, 28910, REMOVED_WITH_CATA);
 itemrecipe({"Design: Jagged Deep Peridot [TBC]", "Design: Jagged Deep Peridot [CATA+]"}, 23141, 28917, 28917, REMOVED_WITH_CATA);
+itemrecipe({"Design: Lustrous Empyrean Sapphire [TBC]", "Design: Sparkling Empyrean Sapphire [CATA+]"}, 35262, 39717, 39716, REMOVED_WITH_CATA);
 itemrecipe({"Design: Radiant Deep Peridot [TBC]", "Design: Radiant Deep Peridot [CATA+]"}, 23140, 28916, 28916, REMOVED_WITH_CATA);
 itemrecipe({"Design: Rigid Golden Draenite [TBC]", "Design: Rigid Azure Moonstone [CATA+]"}, 23151, 28948, 28948, REMOVED_WITH_CATA);
+itemrecipe({"Design: Royal Shadowsong Amethyst [TBC]", "Design: Purified Shadowsong Amethyst [CATA+]"}, 35241, 39732, 39741, REMOVED_WITH_CATA);
 itemrecipe({"Design: Smooth Golden Draenite [TBC]", "Design: Smooth Golden Draenite [CATA+]"}, 28291, 34069, 28944, REMOVED_WITH_CATA);
 itemrecipe({"Design: Solid Azure Moonstone [TBC]", "Design: Solid Azure Moonstone [CATA+]"}, 23152, 28950, 28950, REMOVED_WITH_CATA);
 itemrecipe({"Design: Sovereign Shadow Draenite [TBC]", "Design: Sovereign Shadow Draenite [CATA+]"}, 23147, 28936, 28936, REMOVED_WITH_CATA);
 itemrecipe({"Design: Sparkling Azure Moonstone [TBC]", "Design: Sparkling Azure Moonstone [CATA+]"}, 23153, 28953, 28953, REMOVED_WITH_CATA);
 itemrecipe({"Design: Teardrop Blood Garnet [TBC]", "Design: Brilliant Blood Garnet [CATA+]"}, 23130, 28903, 28903, REMOVED_WITH_CATA);
+itemrecipe({"Design: Thick Lionseye [TBC]", "Design: Subtle Lionseye [CATA+]"}, 35261, 39723, 39713, REMOVED_WITH_CATA);
 itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Draenite [CATA+]"}, 23144, 28925, 28925, REMOVED_WITH_CATA);
-
--- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID, AFTERCATA, REMOVED_WITH_CATA);
--- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID, AFTERCATA, REMOVED_WITH_CATA);
--- itemrecipe({" [TBC]", " [CATA+]"}, ITEMID, SPELLID, AFTERCATA, REMOVED_WITH_CATA);
-
-
---[[
--- From the Isle of QD:
-i(35266),	-- Design: Glinting Shadowsong Amethyst
-i(35240, {	-- Design: Glinting Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-i(35251),	-- Design: Purified Shadowsong Amethyst
-i(35241, {	-- Design: Purified Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-i(37504, {	-- Design: Purified Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-i(35259),	-- Design: Rigid Empyrean Sapphire
-i(35257, {	-- Design: Rigid Empyrean Sapphire
-	["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-i(35242),	-- Design: Shifting Shadowsong Amethyst
-i(35238, {	-- Design: Shifting Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35242, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-i(35260),	-- Design: Smooth Lionseye
-i(35256, {	-- Design: Smooth Lionseye
-	["spellID"] = 0,	-- This is now available via 35260, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-i(35264),	-- Design: Sparkling Empyrean Sapphire
-i(35262, {	-- Design: Sparkling Empyrean Sapphire
-	["spellID"] = 0,	-- This is now available via 35262, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-i(35249),	-- Design: Subtle Lionseye
-i(35261, {	-- Design: Subtle Lionseye
-	["spellID"] = 0,	-- This is now available via 35261, need to delink the old plans from the recipe
-	["u"] = REMOVED_FROM_GAME,
-}),
-
-
-
--- From Shattrath... Oh god please why
-i(35266),	-- Design: Glinting Shadowsong Amethyst
-i(35240, {	-- Design: Glinting Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35266, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35251),	-- Design: Purified Shadowsong Amethyst
-i(35241, {	-- Design: Purified Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(37504, {	-- Design: Purified Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35251, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35259),	-- Design: Rigid Empyrean Sapphire
-i(35257, {	-- Design: Rigid Empyrean Sapphire
-	["spellID"] = 0,	-- This is now available via 35259, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35242),	-- Design: Shifting Shadowsong Amethyst
-i(35238, {	-- Design: Shifting Shadowsong Amethyst
-	["spellID"] = 0,	-- This is now available via 35242, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35260),	-- Design: Smooth Lionseye
-i(35256, {	-- Design: Smooth Lionseye
-	["spellID"] = 0,	-- This is now available via 35260, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35264),	-- Design: Sparkling Empyrean Sapphire
-i(35262, {	-- Design: Sparkling Empyrean Sapphire
-	["spellID"] = 0,	-- This is now available via 35264, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(35249),	-- Design: Subtle Lionseye
-i(35261, {	-- Design: Subtle Lionseye
-	["spellID"] = 0,	-- This is now available via 35249, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-
-
-i(23145),	-- Design: Purified Shadow Draenite
-i(23143, {	-- Design: Purified Shadow Draenite
-	["spellID"] = 0,	-- This is now available via 23145, need to delink the old plans from the recipe
-		["u"] = REMOVED_FROM_GAME,
-}),
-i(23149),	-- Design: Smooth Golden Draenite
-
-i(25904),	-- Design: Insightful Earthstorm Diamond
-i(30826),	-- Design: Ring of Arcane Shielding
-i(24182),	-- Design: Talasite Owl
-i(23133),	-- Design: Brilliant Blood Garnet
-i(24176),	-- Design: Pendant of Withering
-
-
-
-
-itemrecipe("Design: Silver Rose Pendant", 20972, 25614, TBC_PHASE_ONE);
-itemrecipe("Design: Blazing Citrine Ring", 20973, 25617, TBC_PHASE_ONE);
-itemrecipe("Design: Jade Pendant of Blasting", 20974, UNKNOWN_SPELLID);
-itemrecipe("Design: The Jade Eye", 20975, 25619, TBC_PHASE_ONE);
-itemrecipe("Design: Citrine Pendant of Golden Healing", 20976, UNKNOWN_SPELLID);
-itemrecipe("Design: Arcanite Sword Pendant", 21793, 26918, PHASE_1_IDENTIFIER);
-itemrecipe("Design: Golden Hare", 21940, UNKNOWN_SPELLID);
-itemrecipe("Design: Black Pearl Panther", 21941, 26875, TBC_PHASE_ONE);
-itemrecipe("Design: Ruby Crown of Restoration", 21942, 26878, TBC_PHASE_ONE);
-itemrecipe("Design: Truesilver Crab", 21943, 26881, TBC_PHASE_ONE);
-itemrecipe("Design: Truesilver Boar", 21944, UNKNOWN_SPELLID);
-itemrecipe("Design: The Aquamarine Ward", 21945, UNKNOWN_SPELLID);
-itemrecipe("Design: Gem Studded Band", 21947, UNKNOWN_SPELLID);
-itemrecipe("Design: Opal Necklace of Impact", 21948, 26897, TBC_PHASE_ONE);
-itemrecipe("Design: Ruby Serpent", 21949, UNKNOWN_SPELLID);
-itemrecipe("Design: Cut Emerald - Deprecated", 21950, UNKNOWN_SPELLID);
-itemrecipe("Design: Cut Azerothian Diamond", 21951, UNKNOWN_SPELLID);
-itemrecipe("Design: Emerald Crown of Destruction", 21952, UNKNOWN_SPELLID);
-itemrecipe("Design: Emerald Owl", 21953, UNKNOWN_SPELLID);
-itemrecipe("Design: Ring of Bitter Shadows", 21954, UNKNOWN_SPELLID);
-itemrecipe("Design: Black Diamond Crab", 21955, UNKNOWN_SPELLID);
-itemrecipe("Design: Dark Iron Scorpid", 21956, UNKNOWN_SPELLID);
-itemrecipe("Design: Necklace of the Diamond Tower", 21957, UNKNOWN_SPELLID);
-itemrecipe("Design: Arcanite Sword Pendant", 21958, UNKNOWN_SPELLID);
-itemrecipe("Design: Blood Crown", 21959, 26920, TBC_PHASE_ONE);
-itemrecipe("Design: Teardrop Blood Garnet [TBC]", 23130, 28903, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Bold Blood Garnet [TBC]", 23131, 28905, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Inscribed Flame Spessarite [TBC]", 23135, 28910, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Glinting Flame Spessarite [TBC]", 23137, 28914, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Radiant Deep Peridot [TBC]", 23140, 28916, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Jagged Deep Peridot [TBC]", 23141, 28917, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Enduring Deep Peridot [TBC - Alliance]", 23142, 28918, TBC_PHASE_ONE);
-itemrecipe("Design: Dazzling Deep Peridot", 23143, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Glowing Shadow Draenite [TBC]", 23144, 28925, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Royal Shadow Draenite", 23145, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Sovereign Shadow Draenite [TBC]", 23147, 28936, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Brilliant Golden Draenite [TBC]", 23148, 28938, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Gleaming Golden Draenite", 23149, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Thick Golden Draenite", 23150, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Rigid Golden Draenite [TBC]", 23151, 28948, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Solid Azure Moonstone [TBC]", 23152, 28950, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Lustrous Azure Moonstone", 23155, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Khorium Band of Shadows", 24158, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Pendant of Frozen Flame", 24174, UNKNOWN_SPELLID);
-itemrecipe("Design: Pendant of Withering", 24176, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Living Ruby Serpent", 24181, UNKNOWN_SPELLID);
-itemrecipe("Design: Talasite Owl", 24182, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Bright Living Ruby [TBC]", 24192, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Runed Living Ruby [TBC]", 24196, 31088, TBC_PHASE_ONE);
-itemrecipe("Design: Subtle Living Ruby [TBC]", 24197, 31090, TBC_PHASE_ONE);
-itemrecipe("Design: Rigid Dawnstone [TBC]", 24205, 31098, TBC_PHASE_ONE);
-itemrecipe("Design: Mystic Dawnstone", 24208, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Glowing Nightseye [TBC]", 24211, 31104, TBC_PHASE_ONE);
-itemrecipe("Design: Royal Nightseye [TBC]", 24212, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Glinting Noble Topaz [TBC]", 24216, 31109, TBC_PHASE_ONE);
-itemrecipe("Design: Enduring Talasite [TBC]", 24217, 31110, TBC_PHASE_ONE);
-itemrecipe("Design: Dazzling Talasite [TBC]", 24219, 31112, TBC_PHASE_ONE);
-itemrecipe("Design: Primal Stone Statue", 25888, 32810, TBC_PHASE_ONE);
-itemrecipe("Design: Powerful Earthstorm Diamond", 25902, 32866, TBC_PHASE_ONE);
-itemrecipe("Design: Bracing Earthstorm Diamond", 25903, 32867, TBC_PHASE_ONE);
-itemrecipe("Design: Insightful Earthstorm Diamond", 25904, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Enigmatic Skyfire Diamond", 25910, UNKNOWN_SPELLID);
-itemrecipe("Design: Smooth Golden Draenite [TBC]", 28291, 34069, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Bright Blood Garnet [TBC]", 28596, 34590, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Ring of Arcane Shielding", 30826, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Enduring Deep Peridot [TBC - Horde]", 31359, 28918, TBC_PHASE_ONE);
-itemrecipe("Design: Infused Nightseye [TBC]", 31877, 0, PHASE_2_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Wicked Noble Topaz [TBC]", 31879, 39471, TBC_PHASE_ONE);
-itemrecipe("Design: Subtle Lionseye", 32284, 39713, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Sparkling Empyrean Sapphire", 32287, 39716, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Lustrous Empyrean Sapphire [TBC]", 32288, 39717, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Smooth Lionseye", 32291, 39720, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Rigid Lionseye [TBC]", 32292, 39721, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Gleaming Lionseye [TBC]", 32293, 39722, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Thick Lionseye [TBC]", 32294, 39723, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Great Lionseye [TBC]", 32296, 39725, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Shifting Shadowsong Amethyst", 32298, 39728, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Balanced Shadowsong Amethyst [TBC]", 32299, 39729, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Infused Shadowsong Amethyst [TBC]", 32300, 39730, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Royal Shadowsong Amethyst [TBC]", 32302, 39732, PHASE_19_IDENTIFIER, "removed 4.0.1.10000");
-itemrecipe("Design: Glinting Pyrestone [TBC]", 32306, 39736, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Dazzling Seaspray Emerald [TBC]", 32311, 39741, PHASE_19_IDENTIFIER);
-itemrecipe("Design: Stone of Blades", 33158, UNKNOWN_SPELLID);
-itemrecipe("Design: Facet of Eternity", 33160, UNKNOWN_SPELLID);
-itemrecipe("Design: Steady Talasite", 33783, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Chaotic Skyfire Diamond", 34221, UNKNOWN_SPELLID);
-itemrecipe("Design: Chaotic Skyfire Diamond", 34689, UNKNOWN_SPELLID, TBC_PHASE_ONE);
-itemrecipe("Design: Loop of Forged Power", 35198, 46122, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Ring of Flowing Life", 35199, 46123, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Hard Khorium Band", 35200, 46124, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Pendant of Sunfire", 35201, 46125, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Amulet of Flowing Life", 35202, 46126, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Hard Khorium Choker", 35203, 46127, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Balanced Shadowsong Amethyst", 35238, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Infused Shadowsong Amethyst", 35240, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Royal Shadowsong Amethyst", 35241, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Shifting Shadowsong Amethyst", 35242, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Subtle Crimson Spinel", 35249, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Dazzling Seaspray Emerald", 35251, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Gleaming Lionseye", 35256, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Great Lionseye", 35257, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Rigid Lionseye", 35259, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Smooth Lionseye", 35260, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Thick Lionseye", 35261, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Lustrous Empyrean Sapphire", 35262, 0, PHASE_2_IDENTIFIER);
-itemrecipe("Design: Sparkling Empyrean Sapphire", 35264, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Glinting Pyrestone", 35266, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Runed Living Ruby", 35305, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Bright Living Ruby [TBC]", 35306, 31089, TBC_PHASE_ONE, "removed 4.0.1.10000");
-itemrecipe("Design: Rigid Dawnstone", 35307, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Amulet of Flowing Life", 35533, UNKNOWN_SPELLID);
-itemrecipe("Design: Hard Khorium Band", 35534, UNKNOWN_SPELLID);
-itemrecipe("Design: Hard Khorium Choker", 35535, UNKNOWN_SPELLID);
-itemrecipe("Design: Loop of Forged Power", 35536, UNKNOWN_SPELLID);
-itemrecipe("Design: Pendant of Sunfire", 35537, UNKNOWN_SPELLID);
-itemrecipe("Design: Ring of Flowing Life", 35538, UNKNOWN_SPELLID);
-itemrecipe("Design: Regal Nightseye", 35708, UNKNOWN_SPELLID, PHASE_21_IDENTIFIER);
-itemrecipe("Design: Purified Shadowsong Amethyst", 37504, 0, PHASE_2_IDENTIFIER);
-]]--
 
 
 -- #if AFTER WRATH
@@ -6506,6 +6335,9 @@ neverimplemented(i(21793));	-- Arcanite Sword Pendant
 neverimplemented(itemrecipe("Design: Blood Crown", 21959, 26920));
 neverimplemented(recipe(26920));	-- Blood Crown
 neverimplemented(i(21780));	-- Blood Crown
+neverimplemented(itemrecipe("Design: Chaotic Skyfire Diamond", 34221, 44794));	-- A BOP version was added instead.
+neverimplemented(itemrecipe("Design: Cut Emerald - Deprecated", 21950));
+neverimplemented(itemrecipe("Design: Cut Azerothian Diamond", 21951));
 neverimplemented(itemrecipe("Design: Primal Stone Statue", 25888, 32810));
 neverimplemented(recipe(32810));	-- Primal Stone Statue
 neverimplemented(itemrecipe("Design: Relentless Earthstorm Diamond", 32412, 39961));	-- Originally Consortium Quartermaster, never made it out of Beta. A Different version was added later.
@@ -6514,6 +6346,14 @@ neverimplemented(i(25884));	-- Primal Stone Statue
 neverimplemented(itemrecipe("Design: Silver Rose Pendant", 20972, 25614));
 neverimplemented(recipe(25614));	-- Silver Rose Pendant
 neverimplemented(i(20956));	-- Silver Rose Pendant
+
+-- These were BOP versions of the Sunwell recipes that may have only been available with Wrath.
+neverimplemented(itemrecipe("Design: Amulet of Flowing Life", 35533, 46126));
+neverimplemented(itemrecipe("Design: Hard Khorium Band", 35534, 46124));
+neverimplemented(itemrecipe("Design: Hard Khorium Choker", 35535, 46127));
+neverimplemented(itemrecipe("Design: Loop of Forged Power", 35536, 46122));
+neverimplemented(itemrecipe("Design: Pendant of Sunfire", 35537, 46125));
+neverimplemented(itemrecipe("Design: Ring of Flowing Life", 35538, 46123));
 -- #endif
 
 -- #if AFTER CATA
