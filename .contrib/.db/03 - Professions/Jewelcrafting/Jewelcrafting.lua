@@ -332,6 +332,18 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Falling Star",
 					["recipeID"] = 42590
 				},
+				-- #if BEFORE CATA
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Lustrous Empyrean Sapphire",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 39717
+				}),
+				{
+					["name"] = "Lustrous Star of Elune",	-- NOTE: Actually removed from the game completely.
+					["timeline"] = { REMOVED_WITH_CATA },
+					["recipeID"] = 31094
+				},
+				-- #endif
 				-- #if AFTER CATA
 				{
 					["name"] = "Rigid Azure Moonstone [CATA+] / Rigid Golden Draenite [TBC]",
@@ -907,11 +919,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Gleaming Golden Draenite [TBC] / Smooth Golden Draenite [CATA+]",
 					["recipeID"] = 28944
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Gleaming Lionseye",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39722
-				},
+				}),
 				{
 					["name"] = "Great Dawnstone",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
@@ -922,11 +934,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39451
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Great Lionseye",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39725
-				},
+				}),
 				-- #endif
 				{
 					["name"] = "Mystic Dawnstone",
@@ -1003,11 +1015,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 31100
 				},
-				{
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Thick Lionseye",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 39723
-				},
+				}),
 				{
 					["name"] = "Thick Golden Draenite [TBC] / Subtle Golden Draenite [CATA+]",
 					["recipeID"] = 28947
