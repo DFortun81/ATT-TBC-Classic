@@ -742,6 +742,7 @@ _.Craftables = { tier(1, {	-- Classic
 				}),
 			},
 		}),
+		-- #if BEFORE 4.0.1
 		category(1, {	-- Bullets
 			i(8068),	-- Crafted Heavy Shot
 			i(8067),	-- Crafted Light Shot
@@ -750,6 +751,7 @@ _.Craftables = { tier(1, {	-- Classic
 			i(10513),	-- Mithril Gyro-Shot
 			i(15997),	-- Thorium Shells
 		}),
+		-- #endif
 		category(188, {	-- Devices
 			i(4392),	-- Advanced Target Dummy
 			i(6533),	-- Aquadynamic Fish Attractor

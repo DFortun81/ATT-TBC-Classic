@@ -21,6 +21,25 @@ profession(ENGINEERING, {
 						["coord"] = { 59.6, 49.8, WINTERSPRING },
 						["cr"] = 14742,	-- Zap Farflinger
 					},
+					{
+						["name"] = "Goblin Jumper Cables XL",
+						["recipeID"] = 23078
+					},
+					applyclassicphase(TBC_PHASE_ONE, {
+						["name"] = "Goblin Rocket Launcher",
+						["recipeID"] = 30563
+					}),
+					{
+						["name"] = "Pet Bombling",
+						["description"] = "While this recipe does not have a requirement for Goblin Engineering, you cannot learn this recipe without Goblin Engineering and switching to Goblin from Gnomish is not possible in Classic.",
+						["recipeID"] = 15628
+					},
+				}
+			},
+			{
+				["name"] = "Goggles",
+				["categoryID"] = 185,
+				["g"] = {
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Foreman's Enchanted Helmet",
 						["recipeID"] = 30565
@@ -34,25 +53,12 @@ profession(ENGINEERING, {
 						["recipeID"] = 12718
 					},
 					{
-						["name"] = "Goblin Jumper Cables XL",
-						["recipeID"] = 23078
-					},
-					{
 						["name"] = "Goblin Mining Helmet",
 						["recipeID"] = 12717
 					},
 					{
 						["name"] = "Goblin Rocket Helmet",
 						["recipeID"] = 12758
-					},
-					applyclassicphase(TBC_PHASE_ONE, {
-						["name"] = "Goblin Rocket Launcher",
-						["recipeID"] = 30563
-					}),
-					{
-						["name"] = "Pet Bombling",
-						["description"] = "While this recipe does not have a requirement for Goblin Engineering, you cannot learn this recipe without Goblin Engineering and switching to Goblin from Gnomish is not possible in Classic.",
-						["recipeID"] = 15628
 					},
 				}
 			},

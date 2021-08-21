@@ -701,19 +701,19 @@ profession(ENGINEERING, {
 					["name"] = "Cogspinner Goggles",
 					["recipeID"] = 30316
 				},
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Deathblow X11 Goggles",
 					["recipeID"] = 41317
 				}),
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Destruction Holo-gogs",
 					["recipeID"] = 41320
 				}),
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Furious Gizmatic Goggles",
 					["recipeID"] = 40274
 				}),
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Gadgetstorm Goggles",
 					["recipeID"] = 41315
 				}),
@@ -731,7 +731,7 @@ profession(ENGINEERING, {
 					["name"] = "Hyper-Vision Goggles",
 					["recipeID"] = 30325
 				},
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Justicebringer 2000 Specs",
 					["recipeID"] = 41311
 				}),
@@ -745,11 +745,11 @@ profession(ENGINEERING, {
 					["classes"] = { SHAMAN },
 					["recipeID"] = 46112
 				}),
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Living Replicator Specs",
 					["recipeID"] = 41316
 				}),
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Magnified Moon Specs",
 					["recipeID"] = 41319
 				}),
@@ -762,7 +762,7 @@ profession(ENGINEERING, {
 					["name"] = "Power Amplification Goggles",
 					["recipeID"] = 30317
 				},
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Powerheal 4000 Lens",
 					["recipeID"] = 41321
 				}),
@@ -781,7 +781,7 @@ profession(ENGINEERING, {
 					["classes"] = { ROGUE, MONK, DRUID },
 					["recipeID"] = 46116
 				}),
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Surestrike Goggles v2.0",
 					["recipeID"] = 41314
 				}),
@@ -790,7 +790,7 @@ profession(ENGINEERING, {
 					["classes"] = { HUNTER, SHAMAN },
 					["recipeID"] = 46113
 				}),
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Tankatronic Goggles",
 					["recipeID"] = 41312
 				}),
@@ -798,7 +798,7 @@ profession(ENGINEERING, {
 					["name"] = "Ultra-Spectropic Detection Goggles",
 					["recipeID"] = 30318
 				},
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Wonderheal XT40 Shades",
 					["recipeID"] = 41318
 				}),
