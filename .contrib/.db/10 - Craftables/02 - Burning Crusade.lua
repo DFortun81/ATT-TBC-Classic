@@ -641,7 +641,336 @@ _.Craftables = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 		},
 	}),
 	prof(LEATHERWORKING, {
-	
+		prof(10656, {	-- Dragonscale Leatherworking
+			["description"] = "These items can only be crafted by Leatherworkers who have completed the associated quest.",
+			["groups"] = {
+				category(932, {	-- Chest
+					applyclassicphase(TBC_PHASE_ONE, i(29515, {	-- Ebon Netherscale Breastplate
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+					-- #if BEFORE CATA
+					applyclassicphase(TBC_PHASE_ONE, i(29975)),	-- Golden Dragonstrike Breastplate
+					-- #endif
+					applyclassicphase(TBC_PHASE_ONE, i(29519, {	-- Netherstrike Breastplate
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+				}),
+				category(933, {	-- Bracers
+					applyclassicphase(TBC_PHASE_ONE, i(29517, {	-- Ebon Netherscale Bracers
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+					applyclassicphase(TBC_PHASE_ONE, i(29521, {	-- Netherstrike Bracers
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+				}),
+				category(935, {	-- Belts
+					applyclassicphase(TBC_PHASE_ONE, i(29516, {	-- Ebon Netherscale Belt
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+					applyclassicphase(TBC_PHASE_ONE, i(29520, {	-- Netherstrike Belt
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+				}),
+				-- #if BEFORE CATA
+				category(936, {	-- Pants
+					applyclassicphase(TBC_PHASE_ONE, i(29971)),	-- Dragonstrike Leggings
+				}),
+				-- #endif
+			},
+		}),
+		prof(10658, {	-- Elemental Leatherworking
+			["description"] = "These items can only be crafted by Leatherworkers who have completed the associated quest.",
+			["groups"] = {
+				category(932, {	-- Chest
+					-- #if BEFORE CATA
+					applyclassicphase(TBC_PHASE_ONE, i(29973)),	-- Primalstorm Breastplate
+					-- #endif
+					applyclassicphase(TBC_PHASE_ONE, i(29525, {	-- Primalstrike Vest
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+				}),
+				category(933, {	-- Bracers
+					applyclassicphase(TBC_PHASE_ONE, i(29527, {	-- Primalstrike Bracers
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+				}),
+				category(935, {	-- Belts
+					applyclassicphase(TBC_PHASE_ONE, i(29526, {	-- Primalstrike Belt
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+				}),
+				-- #if BEFORE CATA
+				category(936, {	-- Pants
+					applyclassicphase(TBC_PHASE_ONE, i(29964)),	-- Blackstorm Leggings
+				}),
+				-- #endif
+			},
+		}),
+		prof(10660, {	-- Tribal Leatherworking
+			["description"] = "These items can only be crafted by Leatherworkers who have completed the associated quest.",
+			["groups"] = {
+				category(932, {	-- Chest
+					-- #if BEFORE CATA
+					applyclassicphase(TBC_PHASE_ONE, i(29974)),	-- Living Crystal Breastplate
+					-- #endif
+					applyclassicphase(TBC_PHASE_ONE, i(29522, {	-- Windhawk Hauberk
+						["timeline"] = {
+							"added 2.0.1.6180",
+							"removed 4.0.1.13287",
+						},
+					})),
+				}),
+				category(933, {	-- Bracers
+					applyclassicphase(TBC_PHASE_ONE, i(29523, {	-- Windhawk Bracers
+						["timeline"] = {
+							"added 2.1.0.6655",
+							"removed 4.0.1.13287",
+						},
+					})),
+				}),
+				category(935, {	-- Belts
+					applyclassicphase(TBC_PHASE_ONE, i(29524, {	-- Windhawk Belt
+						["timeline"] = {
+							"added 2.1.0.6655",
+							"removed 4.0.1.13287",
+						},
+					})),
+				}),
+				-- #if BEFORE CATA
+				category(936, {	-- Pants
+					applyclassicphase(TBC_PHASE_ONE, i(29970)),	-- Wildfeather Leggings
+				}),
+				-- #endif
+			},
+		}),
+		category(927, {	-- Materials
+			i(23793),	-- Heavy Knothide Leather
+			i(21887),	-- Knothide Leather
+		}),
+		category(928, {	-- Armor Kits
+			i(29488, {	-- Arcane Armor Kit
+				["timeline"] = { "removed 5.0.4.10000" },
+			}),
+			i(29534),	-- Clefthide Leg Armor
+			i(29533),	-- Cobrahide Leg Armor
+			i(25679),	-- Comfortable Insoles
+			i(29485, {	-- Flame Armor Kit
+				["timeline"] = { "removed 5.0.4.10000" },
+			}),
+			i(29486, {	-- Frost Armor Kit
+				["timeline"] = { "removed 5.0.4.10000" },
+			}),
+			i(34207),	-- Glove Reinforcements
+			i(34330),	-- Heavy Knothide Armor Kit
+			i(25650),	-- Knothide Armor Kit
+			i(25652),	-- Magister's Armor Kit
+			i(29487, {	-- Nature Armor Kit
+				["timeline"] = { "removed 5.0.4.10000" },
+			}),
+			i(29536),	-- Nethercleft Leg Armor
+			i(29535),	-- Nethercobra Leg Armor
+			i(29483, {	-- Shadow Armor Kit
+				["timeline"] = { "removed 5.0.4.10000" },
+			}),
+			i(25651),	-- Vindicator's Armor Kit
+		}),
+		category(929, {	-- Bags
+			i(34490),	-- Bag of Many Hides
+			applyclassicphase(TBC_PHASE_THREE, i(34099, {	-- Knothide Ammo Pouch
+				["timeline"] = {
+					"added 2.3.0.7382",
+					"removed 4.0.1.13287",
+				},
+			})),
+			applyclassicphase(TBC_PHASE_THREE, i(34100, {	-- Knothide Quiver
+				["timeline"] = {
+					"added 2.3.0.7382",
+					"removed 4.0.1.13287",
+				},
+			})),
+			i(34482),	-- Leatherworker's Satchel
+			applyclassicphase(TBC_PHASE_THREE, i(34106, {	-- Netherscale Ammo Pouch
+				["timeline"] = {
+					"added 2.3.0.7382",
+					"removed 4.0.1.13287",
+				},
+			})),
+			applyclassicphase(TBC_PHASE_THREE, i(34105, {	-- Quiver of a Thousand Feathers
+				["timeline"] = {
+					"added 2.3.0.7382",
+					"removed 4.0.1.13287",
+				},
+			})),
+			i(29540),	-- Reinforced Mining Bag
+		}),
+		category(930, {	-- Helms
+			i(29502),	-- Cobrascale Hood
+			i(29505),	-- Hood of Primal Life
+			i(29508),	-- Living Dragonscale Helm
+			i(29510),	-- Netherdrake Helm
+			i(25681),	-- Stylin' Adventure Hat
+			i(25683),	-- Stylin' Crimson Hat
+			i(25682),	-- Stylin' Jungle Hat
+			i(25680),	-- Stylin' Purple Hat
+			i(29504),	-- Windscale Hood
+		}),
+		category(931, {	-- Shoulders
+			applyclassicphase(TBC_PHASE_THREE, i(32579)),	-- Living Earth Shoulders
+			applyclassicphase(TBC_PHASE_THREE, i(32583)),	-- Shoulderpads of Renewed Life
+			applyclassicphase(TBC_PHASE_THREE, i(32575)),	-- Shoulders of Lightning Reflexes
+			applyclassicphase(TBC_PHASE_THREE, i(32581)),	-- Swiftstrike Shoulders
+		}),
+		category(932, {	-- Chest
+			applyclassicphase(TBC_PHASE_FIVE, i(34369)),	-- Carapace of Sun and Shadow
+			applyclassicphase(TBC_PHASE_FIVE, i(34373)),	-- Embrace of the Phoenix
+			i(25657),	-- Felscale Breastplate
+			i(25696),	-- Felstalker Breastplate
+			-- #if AFTER CATA
+			applyclassicphase(TBC_PHASE_ONE, i(29975)),	-- Golden Dragonstrike Breastplate
+			-- #endif
+			i(25689),	-- Heavy Clefthoof Vest
+			applyclassicphase(TBC_PHASE_FIVE, i(34371)),	-- Leather Chestguard of the Sun
+			-- #if AFTER CATA
+			applyclassicphase(TBC_PHASE_ONE, i(29974)),	-- Living Crystal Breastplate
+			applyclassicphase(TBC_PHASE_ONE, i(29973)),	-- Primalstorm Breastplate
+			-- #endif
+			i(25660),	-- Scaled Draenic Vest
+			applyclassicphase(TBC_PHASE_THREE, i(33204)),	-- Shadowprowler's Chestguard
+			applyclassicphase(TBC_PHASE_FIVE, i(34375)),	-- Sun-Drenched Scale Chestguard
+			i(25671),	-- Thick Draenic Vest
+			i(29514),	-- Thick Netherscale Breastplate
+			i(25676),	-- Wild Draenish Vest
+		}),
+		category(933, {	-- Bracers
+			applyclassicphase(TBC_PHASE_THREE, i(32574)),	-- Bindings of Lightning Reflexes
+			applyclassicphase(TBC_PHASE_THREE, i(32582)),	-- Bracers of Renewed Life
+			applyclassicphase(TBC_PHASE_THREE, i(32399)),	-- Bracers of Shackled Souls
+			i(25697),	-- Felstalker Bracers
+			applyclassicphase(TBC_PHASE_THREE, i(32577)),	-- Living Earth Bindings
+			applyclassicphase(TBC_PHASE_THREE, i(32395)),	-- Redeemed Soul Wristguards
+			applyclassicphase(TBC_PHASE_THREE, i(32580)),	-- Swiftstrike Bracers
+		}),
+		category(934, {	-- Gloves
+			i(29503),	-- Cobrascale Gloves
+			i(29496),	-- Enchanted Clefthoof Gloves
+			i(29490),	-- Enchanted Felscale Gloves
+			i(25685),	-- Fel Leather Gloves
+			i(25654),	-- Felscale Gloves
+			applyclassicphase(TBC_PHASE_FIVE, i(34374)),	-- Fletcher's Gloves of the Phoenix
+			applyclassicphase(TBC_PHASE_FIVE, i(34370)),	-- Gloves of Immortal Dusk
+			i(29506),	-- Gloves of the Living Touch
+			applyclassicphase(TBC_PHASE_FIVE, i(34372)),	-- Leather Gauntlets of the Sun
+			i(29511),	-- Netherdrake Gloves
+			i(25661),	-- Scaled Draenic Gloves
+			applyclassicphase(TBC_PHASE_FIVE, i(34376)),	-- Sun-Drenched Scale Gloves
+			i(25669),	-- Thick Draenic Gloves
+			i(25674),	-- Wild Draenish Gloves
+			i(29507),	-- Windslayer Wraps
+			i(29509),	-- Windstrike Gloves
+		}),
+		category(935, {	-- Belts
+			applyclassicphase(TBC_PHASE_TWO, i(30040)),	-- Belt of Deep Shadow
+			applyclassicphase(TBC_PHASE_TWO, i(30042)),	-- Belt of Natural Power
+			applyclassicphase(TBC_PHASE_TWO, i(30046)),	-- Belt of the Black Eagle
+			i(29500),	-- Blastguard Belt
+			i(25695),	-- Felstalker Belt
+			i(29494),	-- Flamescale Belt
+			applyclassicphase(TBC_PHASE_TWO, i(30044)),	-- Monsoon Belt
+			i(25694),	-- Netherfury Belt
+			applyclassicphase(TBC_PHASE_THREE, i(32393)),	-- Redeemed Soul Cinch
+			applyclassicphase(TBC_PHASE_THREE, i(32397)),	-- Waistguard of Shackled Souls
+		}),
+		category(936, {	-- Pants
+			-- #if AFTER CATA
+			applyclassicphase(TBC_PHASE_ONE, i(29964)),	-- Blackstorm Leggings
+			-- #endif
+			i(29498),	-- Blastguard Pants
+			-- #if AFTER CATA
+			applyclassicphase(TBC_PHASE_ONE, i(29971)),	-- Dragonstrike Leggings
+			-- #endif
+			i(29495),	-- Enchanted Clefthoof Leggings
+			i(29489),	-- Enchanted Felscale Leggings
+			i(25687),	-- Fel Leather Leggings
+			i(25656),	-- Felscale Pants
+			i(29492),	-- Flamescale Leggings
+			applyclassicphase(TBC_PHASE_THREE, i(32400)),	-- Greaves of Shackled Souls
+			i(25690),	-- Heavy Clefthoof Leggings
+			i(25692),	-- Netherfury Leggings
+			applyclassicphase(TBC_PHASE_THREE, i(32396)),	-- Redeemed Soul Legguards
+			i(25662),	-- Scaled Draenic Pants
+			i(25670),	-- Thick Draenic Pants
+			i(25675),	-- Wild Draenish Leggings
+			-- #if AFTER CATA
+			applyclassicphase(TBC_PHASE_ONE, i(29970)),	-- Wildfeather Leggings
+			-- #endif
+		}),
+		category(937, {	-- Boots
+			i(29499),	-- Blastguard Boots
+			applyclassicphase(TBC_PHASE_TWO, i(30041)),	-- Boots of Natural Grace
+			applyclassicphase(TBC_PHASE_THREE, i(32398)),	-- Boots of Shackled Souls
+			applyclassicphase(TBC_PHASE_TWO, i(30045)),	-- Boots of the Crimson Hawk
+			applyclassicphase(TBC_PHASE_TWO, i(30039)),	-- Boots of Utter Darkness
+			i(29512),	-- Earthen Netherscale Boots
+			i(29497),	-- Enchanted Clefthoof Boots
+			i(29491),	-- Enchanted Felscale Boots
+			i(25686),	-- Fel Leather Boots
+			i(25655),	-- Felscale Boots
+			i(29493),	-- Flamescale Boots
+			i(25691),	-- Heavy Clefthoof Boots
+			applyclassicphase(TBC_PHASE_TWO, i(30043)),	-- Hurricane Boots
+			i(25693),	-- Netherfury Boots
+			applyclassicphase(TBC_PHASE_THREE, i(32394)),	-- Redeemed Soul Moccasins
+			i(25659),	-- Scaled Draenic Boots
+			i(25668),	-- Thick Draenic Boots
+			i(25673),	-- Wild Draenish Boots
+		}),
+		category(938, {	-- Cloaks
+			applyclassicphase(TBC_PHASE_THREE, i(33122)),	-- Cloak of Darkness
+		}),
+		category(939, {	-- Special
+			i(25653),	-- Riding Crop
+		}),
+		category(940, {	-- Drums
+			i(29529),	-- Drums of Battle
+			i(29532),	-- Drums of Panic
+			i(29531),	-- Drums of Restoration
+			i(29530),	-- Drums of Speed
+			i(29528),	-- Drums of War
+			-- #if ANYCLASSIC
+			applyclassicphase(TBC_PHASE_FIVE, i(185848)),	-- Greater Drums of Battle
+			applyclassicphase(TBC_PHASE_FIVE, i(185849)),	-- Greater Drums of Panic
+			applyclassicphase(TBC_PHASE_FIVE, i(185850)),	-- Greater Drums of Restoration
+			applyclassicphase(TBC_PHASE_FIVE, i(185851)),	-- Greater Drums of Speed
+			applyclassicphase(TBC_PHASE_FIVE, i(185852)),	-- Greater Drums of War
+			-- #endif
+		}),
 	}),
 	prof(MINING, {
 		["description"] = "The following items can be gathered by Miners out in the world.",

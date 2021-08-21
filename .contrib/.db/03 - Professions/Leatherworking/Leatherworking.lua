@@ -1231,6 +1231,16 @@ profession(LEATHERWORKING, {
 					["name"] = "Bag of Many Hides",
 					["recipeID"] = 45117
 				},
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Knothide Ammo Pouch",
+					["timeline"] = { "removed 4.0.1.10000" },
+					["recipeID"] = 44343
+				}),
+				applyclassicphase(TBC_PHASE_THREE, {
+					["name"] = "Knothide Quiver",
+					["timeline"] = { "removed 4.0.1.10000" },
+					["recipeID"] = 44344
+				}),
 				{
 					["name"] = "Leatherworker's Satchel",
 					["recipeID"] = 45100
@@ -1354,8 +1364,6 @@ profession(LEATHERWORKING, {
 					["name"] = "Living Crystal Breastplate",
 					["recipeID"] = 36078,
 				},
-				-- #endif
-				-- #if AFTER CATA
 				{
 					["name"] = "Primalstorm Breastplate",
 					["recipeID"] = 36077
@@ -1545,11 +1553,23 @@ profession(LEATHERWORKING, {
 			["name"] = "Pants",
 			["categoryID"] = 936,
 			["groups"] = {
+				-- #if AFTER CATA
+				applyclassicphase(TBC_PHASE_ONE, {
+					["name"] = "Blackstorm Leggings",
+					["recipeID"] = 36074,
+				}),
+				-- #endif
 				{
 					["name"] = "Blastguard Pants",
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
 					["recipeID"] = 35535
 				},
+				-- #if AFTER CATA
+				applyclassicphase(TBC_PHASE_ONE, {
+					["name"] = "Dragonstrike Leggings",
+					["recipeID"] = 36076,
+				}),
+				-- #endif
 				{
 					["name"] = "Enchanted Clefthoof Leggings",
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
@@ -1600,7 +1620,13 @@ profession(LEATHERWORKING, {
 				{
 					["name"] = "Wild Draenish Leggings",
 					["recipeID"] = 32480
-				}
+				},
+				-- #if AFTER CATA
+				applyclassicphase(TBC_PHASE_ONE, {
+					["name"] = "Wildfeather Leggings",
+					["recipeID"] = 36075,
+				}),
+				-- #endif
 			}
 		},
 		{
@@ -1729,6 +1755,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Drums of War",
 					["recipeID"] = 35540
 				},
+				-- #if ANYCLASSIC
 				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Greater Drums of Battle",
 					["recipeID"] = 351771
@@ -1749,6 +1776,7 @@ profession(LEATHERWORKING, {
 					["name"] = "Greater Drums of War",
 					["recipeID"] = 351766
 				}),
+				-- #endif
 			},
 		},
 	})),
