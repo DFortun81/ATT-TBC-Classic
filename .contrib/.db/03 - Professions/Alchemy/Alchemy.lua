@@ -796,10 +796,6 @@ profession(ALCHEMY, {
 					["name"] = "Guardian's Alchemist Stone",
 					["recipeID"] = 47046
 				}),
-				{
-					["name"] = "Mercurial Stone",
-					["recipeID"] = 38070
-				},
 				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Redeemer's Alchemist Stone",
 					["recipeID"] = 47049
@@ -808,6 +804,16 @@ profession(ALCHEMY, {
 					["name"] = "Sorcerer's Alchemist Stone",
 					["recipeID"] = 47048
 				}),
+			}
+		},
+		{
+			["name"] = "Materials",
+			["categoryID"] = 644,
+			["groups"] = {
+				{
+					["name"] = "Mercurial Stone",
+					["recipeID"] = 38070
+				},
 			}
 		},
 	})),
