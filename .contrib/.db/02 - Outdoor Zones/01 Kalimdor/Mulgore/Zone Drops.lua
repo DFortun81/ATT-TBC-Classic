@@ -151,14 +151,6 @@ _.Zones =
 						2969,	-- Wiry Swoop
 					},
 				}),
-				i(4751, {	-- Windfury Talon
-					["questID"] = 743,	-- Dangers of the Windfury
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2962,	-- Windfury Harpy
-						2963,	-- Windfury Wind Witch
-					},
-				}),
 			}),
 		}),
 	}),

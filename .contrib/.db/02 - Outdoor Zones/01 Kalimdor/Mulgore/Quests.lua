@@ -48,7 +48,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 4850, 1 },	-- Bristleback Attack Plans
 					},
-					["g"] = {
+					["groups"] = {
 						i(4911),	-- Thick Bark Buckler
 					},
 				}),
@@ -60,7 +60,7 @@ _.Zones =
 						{ "i", 10459, 1 },	-- Chief Sharptusk Thornmantle's Head
 					},
 					["lvl"] = 3,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 10459,	-- Chief Sharptusk Thornmantle's Head
 							["questID"] = 3376,	-- Break Sharptusk!
@@ -125,34 +125,34 @@ _.Zones =
 					["qg"] = 2985,	-- Ruul Eagletalon
 					["coord"] = { 47.4, 62.0, MULGORE },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4751, 8 },	-- Windfury Talon
-					},
 					["lvl"] = 5,
+					["groups"] = {
+						objective(1, {	-- 0/8 Windfury Talon
+							["provider"] = { "i", 4751 },	-- Windfury Talon
+							["crs"] = {
+								2962,	-- Windfury Harpy
+								2963,	-- Windfury Wind Witch
+							},
+						}),
+					},
 				}),
 				q(746, {	-- Dwarven Digging
 					["qg"] = 2993,	-- Baine Bloodhoof
 					["coord"] = { 47.5, 60.2, MULGORE },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4703, 6 },	-- Broken Tools
-					},
 					["lvl"] = 6,
-					["g"] = {
-						{
-							["itemID"] = 4702,	-- Prospector's Pick
+					["groups"] = {
+						objective(1, {	-- 0/6 Broken Tools
+							["provider"] = { "i", 4703 },	-- Broken Tools
+							["cost"] = {
+								{ "i", 4702, 1 },	-- Prospector's Pick
+							},
 							["coord"] = { 34, 46, MULGORE },
 							["crs"] = {
 								2990,	-- Bael'dun Appraiser
 								2989,	-- Bael'dun Digger
 							},
-							["groups"] = {
-								{
-									["itemID"] = 4703,	-- Broken Tools
-									["questID"] = 746,	-- Dwarven Digging
-								},
-							},
-						},
+						}),
 						i(4969),	-- Fortified Bindings
 						i(4970),	-- Rough-hewn Kodo Leggings
 						i(4702),	-- Prospector's Pick
@@ -190,6 +190,26 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 3,
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(11129, {	-- Kyle's Gone Missing!
+					["qg"] = 23618,	-- Ahab Wheathoof <The Old Rancher>
+					["coord"] = { 48.2, 53.4, MULGORE },
+					["races"] = HORDE_ONLY,
+					["lvl"] = lvlsquish(5, 1, 5),
+					["groups"] = {
+						objective(1, {	-- 0/1 Kyle Fed
+							["providers"] = {
+								{ "i", 33009 },	-- Tender Strider Meat
+								{ "n", 23616 },	-- Kyle the Frenzied
+							},
+							["coord"] = { 48.6, 62.2, MULGORE },
+							["crs"] = {
+								2956,	-- Adult Plainstrider
+								2957,	-- Elder Plainstrider
+								3068,	-- Mazzranache
+							},
+						}),
+					},
+				})),
 				q(766, {	-- Mazzranache
 					["qg"] = 3055,	-- Maur Raincaller
 					["coord"] = { 47, 57, MULGORE },
@@ -201,7 +221,7 @@ _.Zones =
 						{ "i", 4807, 1 },	-- Swoop Gizzard
 					},
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						i(4972),	-- Cliff Runner Boots
 						i(4973),	-- Plains Hunter Wristguards
 					},
@@ -224,7 +244,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 4770, 12 },	-- Bristleback Belt
 					},
-					["g"] = {
+					["groups"] = {
 						i(1382),	-- Rock Mace
 						i(1383),	-- Stone Tomahawk
 						i(2137),	-- Whittling Knife
@@ -259,7 +279,7 @@ _.Zones =
 						{ "i", 4823, 1 },	-- Water of the Seers
 					},
 					["lvl"] = 3,
-					["g"] = {
+					["groups"] = {
 						i(4906),	-- Rainwalker Boots
 						i(4958),	-- Sun-beaten Cloak
 					},
@@ -296,7 +316,7 @@ _.Zones =
 						{ "i", 4841, 1 },	-- Horn of Arra'chea
 					},
 					["lvl"] = 3,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4841,	-- Horn of Arra'chea
 							["questID"] = 776,	-- Rites of the Earthmother (3/3)
@@ -328,7 +348,7 @@ _.Zones =
 					["qg"] = 2993,	-- Baine Bloodhoof
 					["coord"] = { 47.5, 60.2, MULGORE },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(4960),	-- Flash Pellet
 					},
 				}),
@@ -351,7 +371,7 @@ _.Zones =
 						{ "i", 4819, 1 },	-- Fizsprocket's Clipboard
 					},
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4819,	-- Fizsprocket's Clipboard
 							["questID"] = 765,	-- Supervisor Fizsprocket
@@ -422,7 +442,7 @@ _.Zones =
 						{ "i", 4849, 8 },	-- Battleboar Flank
 						{ "i", 4848, 8 },	-- Battleboar Snout
 					},
-					["g"] = {
+					["groups"] = {
 						i(6059),	-- Nomadic Vest
 					},
 				}),
@@ -431,7 +451,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["cr"] = 3056,	-- Ghost Howl
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						i(4971),	-- Skorn's Hammer
 						i(3079),	-- Skorn's Rifle
 					},
@@ -444,7 +464,7 @@ _.Zones =
 						{ "i", 4740, 7 },	-- Plainstrider Feather
 						{ "i", 4739, 7 },	-- Plainstrider Meat
 					},
-					["g"] = {
+					["groups"] = {
 						i(4954),	-- Nomadic Belt
 						i(4910),	-- Painted Chain Gloves
 					},
@@ -457,7 +477,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 4742, 10 },	-- Mountain Cougar Pelt
 					},
-					["g"] = {
+					["groups"] = {
 						i(4908),	-- Nomadic Bracers
 						i(4913),	-- Painted Chain Belt
 					},
@@ -532,7 +552,7 @@ _.Zones =
 						{ "i", 5415, 1 },	-- Thunderhorn Cleansing Totem
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5415,	-- Thunderhorn Cleansing Totem
 							["questID"] = 758,	-- Thunderhorn Cleansing
@@ -582,7 +602,7 @@ _.Zones =
 						5847,	-- Welcome! [Tirisfal Glades]
 					},
 					["races"] = HORDE_ONLY,
-					["g"] = bubbleDown({ ["u"] = REMOVED_FROM_GAME }, {
+					["groups"] = bubbleDown({ ["u"] = REMOVED_FROM_GAME }, {
 						i(13584),	-- Diablo Stone
 						i(13583),	-- Panda Collar
 						i(13582),	-- Zergling Leash
@@ -597,7 +617,7 @@ _.Zones =
 						{ "i", 5416, 1 },	-- Wildmane Cleansing Totem
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5416,	-- Wildmane Cleansing Totem
 							["questID"] = 760,	-- Wildmane Cleansing
@@ -626,7 +646,7 @@ _.Zones =
 						{ "i", 5411, 1 },	-- Winterhoof Cleansing Totem
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5411,	-- Winterhoof Cleansing Totem
 							["questID"] = 754,	-- Winterhoof Cleansing
