@@ -70,7 +70,7 @@ _.Instances = { tier(1, {	-- Classic
 							{ 45.2, 23.3, MULGORE },
 							{ 75, 31, THUNDER_BLUFF },
 						},
-						["maps"] = { MULGORE, THUNDER_BLUFF },
+						["maps"] = { THUNDER_BLUFF },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 9739, 1 },	-- Gem of Anacondra
@@ -92,7 +92,7 @@ _.Instances = { tier(1, {	-- Classic
 							{ 45.8, 22.6, MULGORE },
 							{ 74.7, 30.2, THUNDER_BLUFF },
 						},
-						["maps"] = { MULGORE, THUNDER_BLUFF },
+						["maps"] = { THUNDER_BLUFF },
 						["races"] = HORDE_ONLY,
 						["lvl"] = 10,
 					},
@@ -100,7 +100,7 @@ _.Instances = { tier(1, {	-- Classic
 						["questID"] = 962,	-- Serpentbloom
 						["qg"] = 3419,	-- Apothecary Zamah <Royal Apothecary Society>
 						["coord"] = { 34.4, 21.1, MULGORE },
-						["maps"] = { MULGORE, THUNDER_BLUFF },
+						["maps"] = { THUNDER_BLUFF },
 						["races"] = HORDE_ONLY,
 						["cost"] = {
 							{ "i", 5339, 10 },	-- Serpentbloom
