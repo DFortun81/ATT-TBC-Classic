@@ -23,7 +23,6 @@ _.Zones =
 					["groups"] = {
 						{
 							["itemID"] = 4854,	-- Demon Scarred Cloak
-							["questID"] = 770,	-- The Demon Scarred Cloak
 							["races"] = HORDE_ONLY,
 						},
 					},

@@ -449,7 +449,6 @@ _.Zones =
 				q(770, {	-- The Demon Scarred Cloak
 					["provider"] = { "i", 4854 },	-- Demon Scarred Cloak
 					["races"] = HORDE_ONLY,
-					["cr"] = 3056,	-- Ghost Howl
 					["lvl"] = 6,
 					["groups"] = {
 						i(4971),	-- Skorn's Hammer
