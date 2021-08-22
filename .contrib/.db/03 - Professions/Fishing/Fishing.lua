@@ -111,7 +111,7 @@ profession(FISHING, {
 				{ "i", 16969, 1 },	-- Savage Coast Blue Sailfin
 			},
 			["groups"] = {
-				recipe(18248),	-- Fishing (Artisan)
+				recipe(18248, { ["rank"] = 4 }),	-- Fishing (Artisan)
 			},
 		}),
 		q(8225, {	-- Rare Fish - Brownell's Blue Striped Racer
@@ -197,16 +197,11 @@ local itemrecipe = function(itemID, spellID, timeline, classicphase)
 	return o;
 end
 
--- Classic Recipes
-itemrecipe(16083, 0--[[7732]], "removed 3.1.0.9767");	-- Expert Fishing - The Bass and You
-itemrecipe(27532, 0--[[7732]], "removed 3.1.0.9767");	-- Master Fishing - The Art of Angling
+itemrecipe(16083, 7732, "removed 3.1.0.9767").rank = 3;	-- Expert Fishing - The Bass and You
 
--- TBC Recipes
--- #if ANYCLASSIC
+-- #if AFTER TBC
+itemrecipe(27532, 33095, "removed 3.1.0.9767", TBC_PHASE_ONE).rank = 5;	-- Master Fishing - The Art of Angling
 itemrecipe(34109, 43308, "added 2.3.0.7382", TBC_PHASE_ONE);	-- Weather-Beaten Journal
--- #else
--- NOTE: This will need to be checked, on Retail it doesn't show as collected.
-itemrecipe(34109, 0--[[43308]], "added 2.3.0.7382", TBC_PHASE_ONE);	-- Weather-Beaten Journal
 -- #endif
 
 -- These items never made it in.

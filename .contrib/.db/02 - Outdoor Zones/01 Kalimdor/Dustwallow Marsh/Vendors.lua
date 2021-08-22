@@ -10,7 +10,7 @@ _.Zones =
 					["coord"] = { 36.4, 30.4, DUSTWALLOW_MARSH, },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(16084),	-- Expert First Aid - Under Wraps
+						i(16084, { ["rank"] = 3 }),	-- Expert First Aid - Under Wraps
 						i(16112),	-- Manual: Heavy Silk Bandage
 						i(16113),	-- Manual: Mageweave Bandage
 					},

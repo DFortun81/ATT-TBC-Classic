@@ -130,7 +130,7 @@ _.Zones =
 				n(2626, {	-- Old Man Heming <Fisherman>
 					["coord"] = { 27.4, 77.1, STRANGLETHORN_VALE },
 					["groups"] = {
-						i(16083),	-- Expert Fishing - The Bass and You
+						i(16083, { ["rank"] = 3 }),	-- Expert Fishing - The Bass and You
 					},
 				}),
 				n(2699, {	-- Rikqiz <Leatherworking Supplies>

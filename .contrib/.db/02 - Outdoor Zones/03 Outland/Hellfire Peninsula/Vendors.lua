@@ -93,7 +93,7 @@ _.Zones =
 					["groups"] = {
 						i(21993),	-- Manual: Heavy Netherweave Bandage
 						i(21992),	-- Manual: Netherweave Bandage
-						i(22012),	-- Master First Aid - Doctor in the House
+						i(22012, { ["rank"] = 5 }),	-- Master First Aid - Doctor in the House
 					},
 				}),
 				n(18267, {	-- Battlecryer Blackeye
@@ -140,13 +140,19 @@ _.Zones =
 					},
 				}),
 				-- #endif
+				n(18988, {	-- Baxter <Chef>
+					["coord"] = { 56.8, 37.4, HELLFIRE_PENINSULA },
+					["groups"] = {
+						i(27736, { ["rank"] = 5 }),	-- Master Cookbook
+					},
+				}),
 				n(18990, {	-- Burko <Medic>
 					["coord"] = { 22.4, 39.4, HELLFIRE_PENINSULA },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(21993),	-- Manual: Heavy Netherweave Bandage
 						i(21992),	-- Manual: Netherweave Bandage
-						i(22012),	-- Master First Aid - Doctor in the House
+						i(22012, { ["rank"] = 5 }),	-- Master First Aid - Doctor in the House
 					},
 				}),
 				n(16585, {	-- Cookie One-Eye <Food & Drink>
@@ -189,6 +195,12 @@ _.Zones =
 						i(30745, {	-- Heavy Toolbox
 							["isLimited"] = true,
 						}),
+					},
+				}),
+				n(18987, {	-- Gaston <Chef>
+					["coord"] = { 54.0, 63.6, HELLFIRE_PENINSULA },
+					["groups"] = {
+						i(27736, { ["rank"] = 5 }),	-- Master Cookbook
 					},
 				}),
 				-- #if AFTER WRATH

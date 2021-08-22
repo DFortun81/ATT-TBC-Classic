@@ -1,7 +1,7 @@
 -- Reassign the pointer to the recipe function to automatically mark the removal date.
 local oldRecipe = recipe;
-recipe = function(recipeID)
-	local o = oldRecipe(recipeID);
+recipe = function(recipeID, t)
+	local o = oldRecipe(recipeID, t);
 	o.timeline = { "removed 8.0.1.10000" };
 	return o;
 end
@@ -99,6 +99,7 @@ profession(FIRST_AID, {
 			},
 			["lvl"] = lvlsquish(35, 15, 35),
 			["groups"] = {
+				recipe(10846, { ["rank"] = 4 }),	-- First Aid (Artisan)
 				i(49193, {	-- Alliance Trauma Certification
 					["timeline"] = { "added 3.2.0.10192" },
 				}),
@@ -122,6 +123,7 @@ profession(FIRST_AID, {
 			},
 			["lvl"] = lvlsquish(35, 15, 35),
 			["groups"] = {
+				recipe(10846, { ["rank"] = 4 }),	-- First Aid (Artisan)
 				i(49192, {	-- Horde Trauma Certification
 					["timeline"] = { "added 3.2.0.10192" },
 				}),
@@ -293,7 +295,7 @@ local itemrecipe = function(itemID, spellID, timeline, classicphase)
 end
 
 -- Classic Recipes
-itemrecipe(16084, 0--[[7924]], "removed 3.1.0.9767");	-- Expert First Aid - Under Wraps
+itemrecipe(16084, 7924, "removed 3.1.0.9767").rank = 3;	-- Expert First Aid - Under Wraps
 itemrecipe(16112, 7929, "removed 3.1.0.9767");	-- Manual: Heavy Silk Bandage
 itemrecipe(16113, 10840, "removed 3.1.0.9767");	-- Manual: Mageweave Bandage
 itemrecipe(19442, 23787);	-- Formula: Powerful Anti-Venom
@@ -303,7 +305,7 @@ itemrecipe(6454, 7935);	-- Manual: Strong Anti-Venom
 -- TBC Recipes
 itemrecipe(21993, 27033, "removed 3.1.0.9767", TBC_PHASE_ONE);	-- Manual: Heavy Netherweave Bandage
 itemrecipe(21992, 27032, "removed 3.1.0.9767", TBC_PHASE_ONE);	-- Manual: Netherweave Bandage
-itemrecipe(22012, 0--[[27029]], "removed 3.1.0.9767", TBC_PHASE_ONE);	-- Master First Aid - Doctor in the House
+itemrecipe(22012, 27028, "removed 3.1.0.9767", TBC_PHASE_ONE).rank = 5;	-- Master First Aid - Doctor in the House
 -- #endif
 
 -- #if AFTER WRATH

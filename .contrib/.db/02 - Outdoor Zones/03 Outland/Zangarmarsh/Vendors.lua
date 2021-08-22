@@ -172,6 +172,7 @@ _.Zones =
 				n(18911, {	-- Juno Dufrain <Fishing Trainer>
 					["coord"] = { 78.0, 66.0, ZANGARMARSH },
 					["groups"] = {
+						i(27532, { ["rank"] = 5 }),	-- Master Fishing - The Art of Angling
 						i(27696),	-- Recipe: Blackened Sporefish
 					},
 				}),
@@ -247,6 +248,12 @@ _.Zones =
 						i(25548, {	-- Tallstalk Mushroom
 							["cost"] = { { "i", 24245, 1 }, },	-- 1x Glowcap
 						}),
+					},
+				}),
+				n(18993, {	-- Naka <Cooking Supplies>
+					["coord"] = { 78.5, 63.0, ZANGARMARSH },
+					["groups"] = {
+						i(27736, { ["rank"] = 5 }),	-- Master Cookbook
 					},
 				}),
 				n(18017, {	-- Seer Janidi <Reagents>

@@ -85,7 +85,7 @@ _.Zones =
 					["coord"] = { 26.2, 69.8, DESOLACE },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(16072),	-- Expert Cookbook
+						i(16072, { ["rank"] = 3 }),	-- Expert Cookbook
 						i(17062),	-- Recipe: Mithril Head Trout
 						i(6369),	-- Recipe: Rockscale Cod
 						i(21219),	-- Recipe: Sagefish Delight

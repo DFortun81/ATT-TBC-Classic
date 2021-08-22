@@ -3144,7 +3144,7 @@ itemrecipe("Recipe: Sagefish Delight", 21219, 25954);
 itemrecipe("Recipe: Runn Tum Tuber Surprise", 18267, 22761, PHASE_ONE_DIREMAUL);
 itemrecipe("Recipe: Heavy Crocolisk Stew", 20075, 24418);
 itemrecipe("Recipe: Dirge's Kickin' Chimaerok Chops", 21025, 25659, PHASE_FIVE);
-itemrecipe("Expert Cookbook", 16072, 0--[[3413]], nil, true);
+itemrecipe("Expert Cookbook", 16072, 3413, nil, true).rank = 3;
 
 -- #if AFTER TBC
 -- TBC Recipes
@@ -3180,7 +3180,7 @@ itemrecipe("Recipe: Spicy Hot Talbuk", 33873, 43765, TBC_PHASE_ONE);
 itemrecipe("Recipe: Kibler's Bits", 33875, 43772, TBC_PHASE_ONE);
 itemrecipe("Recipe: Delicious Chocolate Cake", 33925, 43779, TBC_PHASE_ONE);
 itemrecipe("Recipe: Captain Rumsey's Lager", 34834, 45695, TBC_PHASE_ONE);
-itemrecipe("Master Cookbook", 27736, 0--[[33359]], TBC_PHASE_ONE, true);
+itemrecipe("Master Cookbook", 27736, 33359, TBC_PHASE_ONE, true).rank = 5;
 -- #endif
 
 -- #if AFTER WRATH

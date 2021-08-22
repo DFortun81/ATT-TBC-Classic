@@ -47,7 +47,7 @@ _.Zones =
 					["coord"] = { 49.5, 67.1, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(16072),	-- Expert Cookbook
+						i(16072, { ["rank"] = 3 }),	-- Expert Cookbook
 					},
 				}),
 				n(3960, {	-- Ulthaan <Butcher>

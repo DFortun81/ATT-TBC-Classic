@@ -17,7 +17,7 @@ _.Zones =
 					["coord"] = { 27.0, 58.8, ARATHI_HIGHLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(16084),	-- Expert First Aid - Under Wraps
+						i(16084, { ["rank"] = 3 }),	-- Expert First Aid - Under Wraps
 						i(16112),	-- Manual: Heavy Silk Bandage
 						i(16113),	-- Manual: Mageweave Bandage
 					},
