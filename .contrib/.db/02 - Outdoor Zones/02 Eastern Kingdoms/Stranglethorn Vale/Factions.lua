@@ -15,7 +15,7 @@ local OnTooltipForBloodsail = [[function(t)
 			local repPerKill = isHuman and 5.5 or 5;
 			local x, n = math.ceil((41999 - reputation) / repPerKill), math.ceil(21000 / repPerKill);
 			GameTooltip:AddDoubleLine("Kill Jazzrik.", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
-			GameTooltip:AddDoubleLine(" 5.75 - 8 Minute respawn", ((x * 5.75) / 60.0) .. " - " .. ((x * 8) / 60.0) .. " Hours to go!", 1, 1, 1);
+			GameTooltip:AddDoubleLine(" 5.75 - 8 Minute respawn", math.floor((x * 5.75) / 60.0) .. " - " .. math.ceil((x * 8) / 60.0) .. " Hours to go!", 1, 1, 1);
 		end
 	end
 end]];
