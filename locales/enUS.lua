@@ -179,6 +179,7 @@ app.L = {
 		-- Non-Equipment
 		[100] = MOUNTS,											-- Mounts
 		[104] = AUCTION_CATEGORY_QUEST_ITEMS, 					-- Quest Items
+		[105] = TRACKER_FILTER_ACHIEVEMENTS,					-- Achievements
 		[113] = INVTYPE_BAG, 									-- Bags
 		[200] = AUCTION_CATEGORY_RECIPES,						-- Recipes
 	};
@@ -215,6 +216,7 @@ app.L = {
 		[53] = "Interface\\Icons\\INV_Trinket_Naxxramas05",					-- Trinket
 		[57] = "Interface\\Icons\\inv_fishingpole_01",						-- Fishing Poles
 		[100] = "Interface\\Icons\\ability_mount_fireravengodmountgreen",	-- Mounts
+		[105] = app.asset("Category_Achievements"),							-- Achievements
 		[113] = "Interface\\Icons\\INV_Misc_Bag_08",						-- Bag
 		[200] = "Interface\\Icons\\inv_scroll_05",							-- Recipes
 	},
@@ -296,6 +298,9 @@ app.L = {
 		[-540] = "Interface\\Icons\\inv_stone_02",									-- The Scourge Invasion
 		[-541] = "Interface\\Icons\\spell_holiday_tow_spicecloud",					-- The Silithyst Must Flow
 		[-542] = "Interface\\Icons\\achievement_dungeon_outland_dungeonmaster",		-- The Opening of the Dark Portal
+		
+		-- Custom Achievement Section, just for Pre-Wrath content.
+		[-200001] = "Interface\\Icons\\Spell_shadow_brainwash",						-- Insane in the Membrane (Pre-Wrath)
 	};
 	["HEADER_NAMES"] = {
 		[0] = ZONE.." "..BATTLE_PET_SOURCE_1, 									-- Zone Drop
@@ -384,6 +389,9 @@ app.L = {
 		[-542] = "The Opening of the Dark Portal",
 -- Factions / Cities
 		[-10066] = "Legendary",
+		
+		-- Custom Achievement Section, just for Pre-Wrath content.
+		[-200001] = "Insane in the Membrane",									-- Insane in the Membrane
 	},
 	["HEADER_DESCRIPTIONS"] = {
 		[-5] = "A specific holiday may need to be active for you to complete the referenced Things within this section.",

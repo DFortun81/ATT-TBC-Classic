@@ -8212,7 +8212,7 @@ function app:GetDataCache()
 			db.g = app.Categories.WorldDrops;
 			table.insert(g, db);
 		end
-
+		
 		-- PvP
 		if app.Categories.PvP then
 			db = {};
@@ -8359,6 +8359,15 @@ function app:GetDataCache()
 		db.text = "Quests";
 		table.insert(g, db);
 		]]--
+		
+		-- Achievements
+		if app.Categories.Achievements then
+			db = app.CreateFilter(105);
+			db.g = app.Categories.Achievements;
+			db.description = "This section isn't a thing until Wrath, but by popular demand and my own insanity, I've added this section so you can track your progress for at least one of the big ticket achievements if you have the stomach for it.";
+			db.expanded = false;
+			table.insert(g, db);
+		end
 		
 		-- Track Deaths!
 		table.insert(g, app:CreateDeathClass());
