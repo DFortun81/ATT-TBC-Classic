@@ -47,9 +47,15 @@ _.Instances = { tier(2, applyclassicphase(TBC_PHASE_ONE, {	-- Burning Crusade
 							["timeline"] = { "removed 2.3.0.10000" },
 							-- #endif
 						}),
-						title(53, {	-- Champion of the Naaru
+						-- #if BEFORE WRATH
+						title(36, {	-- Champion of the Naaru
 							["timeline"] = { "removed 3.0.2" },
 						}),
+						-- #else
+						title(53, {	-- %, Champion of the Naaru
+							["timeline"] = { "removed 3.0.2" },
+						}),
+						-- #endif
 					},
 				}),
 				q(13430, {	-- Trial of the Naaru: Magtheridon
