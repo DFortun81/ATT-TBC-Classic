@@ -83,6 +83,7 @@ local GeneralSettingsBase = {
 		["AccountMode"] = false,
 		["DebugMode"] = false,
 		["FactionMode"] = false,
+		["AccountWide:Achievements"] = false,
 		["AccountWide:Deaths"] = true,
 		["AccountWide:Exploration"] = false,
 		["AccountWide:FlightPaths"] = true,
@@ -90,6 +91,7 @@ local GeneralSettingsBase = {
 		["AccountWide:Quests"] = false,
 		["AccountWide:Recipes"] = true,
 		["AccountWide:Reputations"] = true,
+		["Thing:Achievements"] = true,
 		["Thing:Deaths"] = true,
 		["Thing:Exploration"] = true,
 		["Thing:FlightPaths"] = true,
@@ -417,6 +419,7 @@ settings.UpdateMode = function(self)
 		app.SeasonalItemFilter = app.NoFilter;
 		app.VisibilityFilter = app.NoFilter;
 
+		app.AccountWideAchievements = true;
 		app.AccountWideDeaths = true;
 		app.AccountWideExploration = true;
 		app.AccountWideFlightPaths = true;
@@ -425,6 +428,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideRecipes = true;
 		app.AccountWideReputations = true;
 
+		app.CollectibleAchievements = true;
 		app.CollectibleExploration = true;
 		app.CollectibleFlightPaths = true;
 		app.CollectibleLoot = true;
@@ -441,6 +445,7 @@ settings.UpdateMode = function(self)
 			app.SeasonalItemFilter = app.NoFilter;
 		end
 
+		app.AccountWideAchievements = self:Get("AccountWide:Achievements");
 		app.AccountWideDeaths = self:Get("AccountWide:Deaths");
 		app.AccountWideExploration = self:Get("AccountWide:Exploration");
 		app.AccountWideFlightPaths = self:Get("AccountWide:FlightPaths");
@@ -449,6 +454,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideRecipes = self:Get("AccountWide:Recipes");
 		app.AccountWideReputations = self:Get("AccountWide:Reputations");
 
+		app.CollectibleAchievements = self:Get("Thing:Achievements");
 		app.CollectibleExploration = self:Get("Thing:Exploration");
 		app.CollectibleFlightPaths = self:Get("Thing:FlightPaths");
 		app.CollectibleLoot = self:Get("Thing:Loot");
@@ -697,6 +703,44 @@ ThingsLabel.OnRefresh = function(self)
 	end
 end;
 
+local AchievementsCheckBox = settings:CreateCheckBox(TRACKER_FILTER_ACHIEVEMENTS,
+function(self)
+	self:SetChecked(settings:Get("Thing:Achievements"));
+	if settings:Get("DebugMode") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("Thing:Achievements", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+AchievementsCheckBox:SetATTTooltip("Enable this option to track achievements.\n\nNOTE: At this time, they are not officially implemented in WoW's API, but ATT can kinda make its own until then.");
+AchievementsCheckBox:SetPoint("TOPLEFT", ThingsLabel, "BOTTOMLEFT", 0, -8);
+
+local AchievementsAccountWideCheckBox = settings:CreateCheckBox("Account Wide",
+function(self)
+	self:SetChecked(settings:Get("AccountWide:Achievements"));
+	if settings:Get("DebugMode") or not settings:Get("Thing:Achievements") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("AccountWide:Achievements", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+AchievementsAccountWideCheckBox:SetATTTooltip("This behaviour is dependent on whether an achievement supports detection account wide or not. Unchecking this option just tells the achievement that you only want to check your current character. Some achievements are exclusively per-character.");
+AchievementsAccountWideCheckBox:SetPoint("TOPLEFT", AchievementsCheckBox, "TOPLEFT", 220, 0);
+
 local DeathsCheckBox = settings:CreateCheckBox("Deaths / Soul Fragments",
 function(self)
 	self:SetChecked(settings:Get("Thing:Deaths"));
@@ -714,7 +758,7 @@ function(self)
 	app:RefreshData();
 end);
 DeathsCheckBox:SetATTTooltip("Enable this option to track each time one of your characters die and show it as a Collectible section within the addon.\n\nNOTE: If you turn this off, we'll still track it, but we simply will not show the statistic unless you're in Debug Mode.");
-DeathsCheckBox:SetPoint("TOPLEFT", ThingsLabel, "BOTTOMLEFT", 0, -8);
+DeathsCheckBox:SetPoint("TOPLEFT", AchievementsCheckBox, "BOTTOMLEFT", 0, 4);
 
 local DeathsAccountWideCheckBox = settings:CreateCheckBox("Account Wide",
 function(self)

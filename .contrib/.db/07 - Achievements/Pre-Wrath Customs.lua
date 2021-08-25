@@ -2,7 +2,7 @@
 --    A C H I E V E M E N T S    M O D U L E    --
 --------------------------------------------------
 local INSANE_IN_THE_MEMBRANE_OnUpdate = [[function(t)
-	local collectible = _.CollectibleReputations;
+	local collectible = _.CollectibleAchievements;
 	if collectible then
 		if not t.shendralar then
 			local f = _.SearchForField("factionID", 809);
