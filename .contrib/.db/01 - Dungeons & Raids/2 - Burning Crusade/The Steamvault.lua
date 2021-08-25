@@ -212,6 +212,7 @@ _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 							i(29673, {	-- Pattern: Frost Armor Kit
 								["timeline"] = { "removed 5.0.4.10000" },
 							}),
+							i(30828),	-- Vial of Underworld Loam
 						},
 					}),
 					e(574, {	-- Mekgineer Steamrigger

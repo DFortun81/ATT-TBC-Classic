@@ -2,7 +2,7 @@
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
 _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
-	inst(252, { 	-- Sethekk Halls
+	inst(252, {	-- Sethekk Halls
 		["coord"] = { 44.93, 65.61, TEROKKAR_FOREST },	-- Sethekk Halls, Terokkar Forest
 		["maps"] = {
 			AUCHINDOUN_SETHEKK_HALLS,	-- Veil Sethekk
@@ -98,14 +98,12 @@ _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 					["timeline"] = { "removed 4.0.1" },
 					["maps"] = { ZANGARMARSH },
 					["classes"] = { DRUID },
-					["cost"] = {
-						i(32462, {	-- Morthis' Materials (Provided)
+					["lvl"] = lvlsquish(70, 30, 70),
+					["groups"] = {
+						i(32462, {	-- Morthis' Materials
 							i(32454),	-- Arthorn's Research
 							i(32449),	-- Essence-Infused Moonstone
 						}),
-					},
-					["lvl"] = lvlsquish(70, 30, 70),
-					["groups"] = {
 						-- #if BEFORE 4.0.1
 						recipe(40123),	-- Swift Flight Form
 						-- #endif

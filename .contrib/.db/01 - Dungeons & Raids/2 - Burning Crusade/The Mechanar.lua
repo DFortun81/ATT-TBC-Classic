@@ -56,7 +56,7 @@ _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 					["cr"] = 19710,	-- Gatewatcher Iron-Hand
 				}),
 				-- #endif
-				i(21906, { 	-- Pattern: Arcanoweave Boots
+				i(21906, {	-- Pattern: Arcanoweave Boots
 					["cr"] = 19168,	-- Sunseeker Astromage
 				}),
 				i(22920, {	-- Recipe: Major Fire Protection Potion

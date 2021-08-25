@@ -272,4 +272,4 @@ _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_TWO, {
 }))};
 
 -- Remove the Phase from Coilfang Armaments
-COILFANG_ARMAMENTS.u = nil;
+COILFANG_ARMAMENTS.u = TBC_PHASE_ONE;

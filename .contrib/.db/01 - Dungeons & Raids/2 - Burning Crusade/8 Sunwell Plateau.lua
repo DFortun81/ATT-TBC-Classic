@@ -251,8 +251,8 @@ _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_FIVE, {
 					25741,	-- M'uru
 				},
 				["groups"] = {
-					i(175160, {	-- Holy Relic
-						["races"] = { VULPERA },	-- part of Vulpera's "Bag of Tricks" racial.  TODO: figure out if there's a way to track its collection status
+					i(175160, {	-- Holy Relic (Bag of Tricks addition)
+						["races"] = { VULPERA },
 						["questID"] = 59036,
 						["timeline"] = {
 							"created 8.3.0.33115",

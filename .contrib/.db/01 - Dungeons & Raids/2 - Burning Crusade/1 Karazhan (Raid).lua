@@ -618,7 +618,7 @@ _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 				}),
 			})),
 			n(VENDORS, {
-				n(16388, { 	-- Koren
+				n(16388, {	-- Koren
 					["description"] = "This vendor is located in the Livery Stables.",
 					["groups"] = {
 						i(31395),	-- Plans: Iceguard Helm
@@ -626,12 +626,12 @@ _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 						i(31394),	-- Plans: Iceguard Leggings
 					},
 				}),
-				n(17518, { 	-- Ythyar
+				n(17518, {	-- Ythyar
 					["description"] = "This vendor is located in the Guardian's Library.",
 					["groups"] = {
 						i(25903),	-- Design: Bracing Earthstorm Diamond
 						i(25902),	-- Design: Powerful Earthstorm Diamond
-						i(22535, { 	-- Formula: Enchant Ring - Striking
+						i(22535, {	-- Formula: Enchant Ring - Striking
 							-- #if AFTER BFA
 							["description"] = "This grey item is now needed for the second half of the secret involving the battle pet Baa'l.",
 							-- #endif

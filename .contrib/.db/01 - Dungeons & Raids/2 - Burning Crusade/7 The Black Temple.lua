@@ -29,14 +29,14 @@ _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_THREE, {
 				q(10957, {	-- Redemption of the Ashtongue (UNTESTED, NEEDS CONFIRMATION)
 					["qg"] = 23158,	-- Seer Kanai
 					["sourceQuest"] = 10958,	-- Seek Out the Ashtongue
-					["coord"] = { 62.0, 50.2 },
+					["coord"] = { 62.0, 50.2, THE_BLACK_TEMPLE },
 				}),
 				q(10959, {	-- The Fall of the Betrayer (UNTESTED, NEEDS CONFIRMATION)
 					["qg"] = 23158,	-- Seer Kanai
 					["sourceQuest"] = 10957,	-- Redemption of the Ashtongue
-					["coord"] = { 62.0, 50.2 },
+					["coord"] = { 62.0, 50.2, THE_BLACK_TEMPLE },
 					["groups"] = {
-						i(32757),	-- 	Blessed Medallion of Karabor
+						i(32757),	-- Blessed Medallion of Karabor
 					},
 				}),
 			}),
