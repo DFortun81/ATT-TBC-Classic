@@ -8213,15 +8213,6 @@ function app:GetDataCache()
 			table.insert(g, db);
 		end
 		
-		-- PvP
-		if app.Categories.PvP then
-			db = {};
-			db.text = PVP;
-			db.icon = app.asset("Category_PvP");
-			db.g = app.Categories.PvP;
-			table.insert(g, db);
-		end
-		
 		-- Craftables
 		if app.Categories.Craftables then
 			db = {};
@@ -8232,6 +8223,101 @@ function app:GetDataCache()
 			db.g = app.Categories.Craftables;
 			table.insert(g, db);
 		end
+		
+		-- Professions
+		if app.Categories.Professions then
+			db = {};
+			db.expanded = false;
+			db.text = TRADE_SKILLS;
+			db.icon = app.asset("Category_Professions");
+			db.description = "This section will only show your character's professions outside of Account and Debug Mode.";
+			db.g = app.Categories.Professions;
+			table.insert(g, db);
+		end
+		
+		-- Skills
+		if app.Categories.Skills then
+			db = {};
+			db.expanded = false;
+			db.text = SKILLS;
+			db.icon = "Interface\\ICONS\\SPELL_NATURE_THUNDERCLAP";
+			db.g = app.Categories.Skills;
+			table.insert(g, db);
+		end
+		
+		-- PvP
+		if app.Categories.PvP then
+			db = {};
+			db.text = PVP;
+			db.icon = app.asset("Category_PvP");
+			db.g = app.Categories.PvP;
+			table.insert(g, db);
+		end
+		
+		-- Factions (Dynamic)
+		local factionsCategory = app.CreateNPC(-8, {});
+		factionsCategory.g = {};
+		factionsCategory.factions = {};
+		factionsCategory.expanded = false;
+		table.insert(g, factionsCategory);
+		
+		-- Flight Paths (Dynamic)
+		local flightPathsCategory = {};
+		flightPathsCategory.g = {};
+		flightPathsCategory.fps = {};
+		flightPathsCategory.expanded = false;
+		flightPathsCategory.icon = app.asset("Category_FlightPaths");
+		flightPathsCategory.text = "Flight Paths";
+		table.insert(g, flightPathsCategory);
+		
+		-- Holidays
+		if app.Categories.Holidays then
+			db = app.CreateNPC(-5, app.Categories.Holidays);
+			db.description = "These events occur at consistent dates around the year based on and themed around real world holiday events.";
+			db.expanded = false;
+			table.insert(g, db);
+		end
+		
+		-- World Events
+		if app.Categories.WorldEvents then
+			db = {};
+			db.text = BATTLE_PET_SOURCE_7;
+			db.description = "These events occur at different times in the game's timeline, typically as one time server wide events. Special celebrations such as Anniversary events and such may be found within this category.";
+			db.icon = app.asset("Category_Event");
+			db.g = app.Categories.WorldEvents;
+			db.expanded = false;
+			table.insert(g, db);
+		end
+		
+		-- Achievements
+		if app.Categories.Achievements then
+			db = app.CreateFilter(105);
+			db.g = app.Categories.Achievements;
+			db.description = "This section isn't a thing until Wrath, but by popular demand and my own insanity, I've added this section so you can track your progress for at least one of the big ticket achievements if you have the stomach for it.";
+			db.expanded = false;
+			table.insert(g, db);
+		end
+		
+		-- Track Deaths!
+		table.insert(g, app:CreateDeathClass());
+		
+		-- Yourself.
+		table.insert(g, app.CreateUnit("player", {
+			["description"] = "Awarded for logging in.\n\nGood job! YOU DID IT!\n\nOnly visible while in Debug Mode.",
+			["races"] = { app.RaceIndex },
+			["c"] = { app.ClassIndex },
+			["r"] = app.FactionID,
+			["collected"] = 1,
+			["nmr"] = false,
+			["OnUpdate"] = function(self)
+				self.lvl = app.Level;
+				if app.Settings:Get("DebugMode") then
+					self.collectible = true;
+				else
+					self.collectible = false;
+				end
+			end
+		}));
 		
 		-- Items (Dynamic)
 		--[[
@@ -8268,62 +8354,6 @@ function app:GetDataCache()
 		table.insert(g, db);
 		]]--
 		
-		-- Factions (Dynamic)
-		local factionsCategory = app.CreateNPC(-8, {});
-		factionsCategory.g = {};
-		factionsCategory.factions = {};
-		factionsCategory.expanded = false;
-		table.insert(g, factionsCategory);
-		
-		-- Flight Paths (Dynamic)
-		local flightPathsCategory = {};
-		flightPathsCategory.g = {};
-		flightPathsCategory.fps = {};
-		flightPathsCategory.expanded = false;
-		flightPathsCategory.icon = app.asset("Category_FlightPaths");
-		flightPathsCategory.text = "Flight Paths";
-		table.insert(g, flightPathsCategory);
-		
-		-- Professions
-		if app.Categories.Professions then
-			db = {};
-			db.expanded = false;
-			db.text = TRADE_SKILLS;
-			db.icon = app.asset("Category_Professions");
-			db.description = "This section will only show your character's professions outside of Account and Debug Mode.";
-			db.g = app.Categories.Professions;
-			table.insert(g, db);
-		end
-		
-		-- Skills
-		if app.Categories.Skills then
-			db = {};
-			db.expanded = false;
-			db.text = SKILLS;
-			db.icon = "Interface\\ICONS\\SPELL_NATURE_THUNDERCLAP";
-			db.g = app.Categories.Skills;
-			table.insert(g, db);
-		end
-		
-		-- Holidays
-		if app.Categories.Holidays then
-			db = app.CreateNPC(-5, app.Categories.Holidays);
-			db.description = "These events occur at consistent dates around the year based on and themed around real world holiday events.";
-			db.expanded = false;
-			table.insert(g, db);
-		end
-		
-		-- World Events
-		if app.Categories.WorldEvents then
-			db = {};
-			db.text = BATTLE_PET_SOURCE_7;
-			db.description = "These events occur at different times in the game's timeline, typically as one time server wide events. Special celebrations such as Anniversary events and such may be found within this category.";
-			db.icon = app.asset("Category_Event");
-			db.g = app.Categories.WorldEvents;
-			db.expanded = false;
-			table.insert(g, db);
-		end
-		
 		-- NPCs (Dynamic)
 		--[[
 		db = {};
@@ -8359,36 +8389,6 @@ function app:GetDataCache()
 		db.text = "Quests";
 		table.insert(g, db);
 		]]--
-		
-		-- Achievements
-		if app.Categories.Achievements then
-			db = app.CreateFilter(105);
-			db.g = app.Categories.Achievements;
-			db.description = "This section isn't a thing until Wrath, but by popular demand and my own insanity, I've added this section so you can track your progress for at least one of the big ticket achievements if you have the stomach for it.";
-			db.expanded = false;
-			table.insert(g, db);
-		end
-		
-		-- Track Deaths!
-		table.insert(g, app:CreateDeathClass());
-		
-		-- Yourself.
-		table.insert(g, app.CreateUnit("player", {
-			["description"] = "Awarded for logging in.\n\nGood job! YOU DID IT!\n\nOnly visible while in Debug Mode.",
-			["races"] = { app.RaceIndex },
-			["c"] = { app.ClassIndex },
-			["r"] = app.FactionID,
-			["collected"] = 1,
-			["nmr"] = false,
-			["OnUpdate"] = function(self)
-				self.lvl = app.Level;
-				if app.Settings:Get("DebugMode") then
-					self.collectible = true;
-				else
-					self.collectible = false;
-				end
-			end
-		}));
 		
 		-- The Main Window's Data
 		app.refreshDataForce = true;
