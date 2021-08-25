@@ -47,15 +47,9 @@ _.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 							["timeline"] = { "removed 2.3.0.10000" },
 							-- #endif
 						}),
-						-- #if BEFORE WRATH
 						title(36, {	-- Champion of the Naaru
 							["timeline"] = { "removed 3.0.2" },
 						}),
-						-- #else
-						title(53, {	-- %, Champion of the Naaru
-							["timeline"] = { "removed 3.0.2" },
-						}),
-						-- #endif
 					},
 				}),
 				q(13430, {	-- Trial of the Naaru: Magtheridon
