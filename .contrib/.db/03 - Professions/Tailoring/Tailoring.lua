@@ -37,7 +37,7 @@ profession(TAILORING, {
 		},
 	})),
 	-- #endif
-	tier(1, {	-- Classic
+	tier(CLASSIC_TIER, {
 		-- #if AFTER SHADOWLANDS
 		{
 			["name"] = "Optional Reagents",
@@ -1149,7 +1149,7 @@ profession(TAILORING, {
 		},
 		-- #endif
 	}),
-	applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
+	applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
 		-- #if AFTER SHADOWLANDS
 		{
 			["name"] = "Optional Reagents",
@@ -1630,7 +1630,7 @@ profession(TAILORING, {
 		}
 		-- #endif
 	})),
-	applyclassicphase(WRATH_PHASE_ONE, tier(3, {	-- Wrath of the Lich King
+	applyclassicphase(WRATH_PHASE_ONE, tier(WOTLK_TIER, {
 		-- #if AFTER SHADOWLANDS
 		{
 			["name"] = "Optional Reagents",
@@ -2146,7 +2146,7 @@ profession(TAILORING, {
 		},
 		-- #endif
 	})),
-	applyclassicphase(CATA_PHASE_ONE, tier(4, {	-- Cataclysm
+	applyclassicphase(CATA_PHASE_ONE, tier(CATA_TIER, {
 		-- #if AFTER SHADOWLANDS
 		{
 			["name"] = "Optional Reagents",
@@ -2534,7 +2534,7 @@ profession(TAILORING, {
 		},
 		-- #endif
 	})),
-	applyclassicphase(MOP_PHASE_ONE, tier(5, {	-- Mists of Pandaria
+	applyclassicphase(MOP_PHASE_ONE, tier(MOP_TIER, {
 		-- #if AFTER SHADOWLANDS
 		{
 			["name"] = "Optional Reagents",
@@ -3244,7 +3244,7 @@ profession(TAILORING, {
 			}),
 		}),
 	})),
-	applyclassicphase(WOD_PHASE_ONE, tier(6, {	-- Warlords of Draenor
+	applyclassicphase(WOD_PHASE_ONE, tier(WOD_TIER, {
 		-- #if AFTER SHADOWLANDS
 		{
 			["name"] = "Optional Reagents",
@@ -3436,7 +3436,7 @@ profession(TAILORING, {
 		},
 		-- #endif
 	})),
-	applyclassicphase(LEGION_PHASE_ONE, tier(7, {	-- Legion
+	applyclassicphase(LEGION_PHASE_ONE, tier(LEGION_TIER, {
 		-- #if AFTER SHADOWLANDS
 		{
 			["name"] = "Optional Reagents",
@@ -3961,7 +3961,7 @@ profession(TAILORING, {
 		},
 		-- #endif
 	})),
-	applyclassicphase(BFA_PHASE_ONE, tier(8, {	-- BFA
+	applyclassicphase(BFA_PHASE_ONE, tier(BFA_TIER, {
 		{
 			["name"] = "Embroidery",
 			["categoryID"] = 1116,
@@ -4815,7 +4815,7 @@ profession(TAILORING, {
 			},
 		}),
 	})),
-	applyclassicphase(SHADOWLANDS_PHASE_ONE, tier(9, {	-- Shadowlands
+	applyclassicphase(SHADOWLANDS_PHASE_ONE, tier(SL_TIER, {
 		applytraining({
 			-- All Quest Recipes marked unobtainable(training) because they are only learned temporarily
 			-- for world quests then disappear from the spellbook after the quest is completed.

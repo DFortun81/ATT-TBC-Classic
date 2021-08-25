@@ -25,8 +25,8 @@ local legendary = function(itemID, creatureID)
 		-- #endif
 	end
 end;
-_.Instances = { tier(2, applyclassicphase(TBC_PHASE_TWO, {	-- Burning Crusade
-	inst(749, { 	-- The Eye
+_.Instances = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_TWO, {
+	inst(749, {	-- The Eye
 		["coord"] = { 73.73, 63.71, NETHERSTORM },	-- The Eye, Netherstorm
 		["mapID"] = TEMPEST_KEEP_THE_EYE,
 		-- #if BEFORE WRATH

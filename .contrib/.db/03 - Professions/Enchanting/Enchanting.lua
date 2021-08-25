@@ -1,5 +1,5 @@
 profession(ENCHANTING, {
-	tier(1, {	-- Classic
+	tier(CLASSIC_TIER, {
 		{
 			["name"] = "Rods",
 			["categoryID"] = 697,
@@ -678,7 +678,7 @@ profession(ENCHANTING, {
 			}
 		}
 	}),
-	applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
+	applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
 		applyclassicphase(LEGION_PHASE_ONE, {
 			["name"] = "Illusions",
 			["categoryID"] = 705,
@@ -1061,25 +1061,25 @@ profession(ENCHANTING, {
 			}
 		}
 	})),
-	applyclassicphase(WRATH_PHASE_ONE, tier(3, {	-- Wrath of the Lich King
+	applyclassicphase(WRATH_PHASE_ONE, tier(WOTLK_TIER, {
 		
 	})),
-	applyclassicphase(CATA_PHASE_ONE, tier(4, {	-- Cataclysm
+	applyclassicphase(CATA_PHASE_ONE, tier(CATA_TIER, {
 		
 	})),
-	applyclassicphase(MOP_PHASE_ONE, tier(5, {	-- Mists of Pandaria
+	applyclassicphase(MOP_PHASE_ONE, tier(MOP_TIER, {
 		
 	})),
-	applyclassicphase(WOD_PHASE_ONE, tier(6, {	-- Warlords of Draenor
+	applyclassicphase(WOD_PHASE_ONE, tier(WOD_TIER, {
 		
 	})),
-	applyclassicphase(LEGION_PHASE_ONE, tier(7, {	-- Legion
+	applyclassicphase(LEGION_PHASE_ONE, tier(LEGION_TIER, {
 		
 	})),
-	applyclassicphase(BFA_PHASE_ONE, tier(8, {	-- BFA
+	applyclassicphase(BFA_PHASE_ONE, tier(BFA_TIER, {
 		
 	})),
-	applyclassicphase(SHADOWLANDS_PHASE_ONE, tier(8, {	-- Shadowlands
+	applyclassicphase(SHADOWLANDS_PHASE_ONE, tier(SL_TIER, {
 		
 	})),
 });

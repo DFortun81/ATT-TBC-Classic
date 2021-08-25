@@ -1,7 +1,7 @@
 -----------------------------------------------------
 --       W O R L D   D R O P S   M O D U L E       --
 -----------------------------------------------------
-_.WorldDrops = { tier(1, {	-- Classic
+_.WorldDrops = { tier(CLASSIC_TIER, {
 	filter(3, {	-- Cloaks
 		i(9938),	-- Abjurer's Cloak
 		i(10258),	-- Adventurer's Cape

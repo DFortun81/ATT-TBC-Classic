@@ -1,7 +1,7 @@
 -----------------------------------------------------
 --       W O R L D   D R O P S   M O D U L E       --
 -----------------------------------------------------
-_.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(2, {	-- Burning Crusade
+_.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
 	category(251, {	-- Helms
 		i(31145),	-- Headdress of the Sleeper
 		i(31222),	-- Headdress of Inner Rage
