@@ -4,6 +4,7 @@
 _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 	map(ZULGURUB, {
 		["description"] = "Over a thousand years ago the powerful Gurubashi Empire was torn apart by a massive civil war. An influential group of troll priests, known as the Atal'ai, called forth the avatar of an ancient and terrible blood god named Hakkar the Soulflayer. Though the priests were defeated and ultimately exiled, the great troll empire collapsed upon itself. The exiled priests fled far to the north, into the Swamp of Sorrows, where they erected a great temple to Hakkar in order to prepare for his arrival into the physical world.",
+		["timeline"] = { "removed 4.0.3" },
 		["isRaid"] = true,
 		["lvl"] = 58,
 		["groups"] = {
@@ -832,23 +833,15 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 					["qg"] = 14910,	-- Exzhal <Servitor of Rastakhan>
 					["coord"] = { 15.3, 15.5, STRANGLETHORN_VALE },
 					["maps"] = { STRANGLETHORN_VALE },
-					["cost"] = {
-						{ "i", 19880, 1 },	-- Gurubashi Head Collection
-					},
 					["lvl"] = 58,
 					["groups"] = {
-						{
-							["itemID"] = 19883,	-- Sacred Cord
+						objective(1, {	-- 0/1 Gurubashi Head Collection
+							["provider"] = { "i", 19880 },	-- Gurubashi Head Collection
 							["cost"] = {
+								{ "i", 19883, 1 },	-- Sacred Cord
 								{ "i", 19881, 5 },	-- Channeler's Head
 							},
-							["groups"] = {
-								{
-									["itemID"] = 19880,	-- Gurubashi Head Collection
-									["questID"] = 8201,	-- A Collection of Heads
-								},
-							},
-						},
+						}),
 						i(20216),	-- Belt of Preserved Heads
 						i(20215),	-- Belt of Shriveled Heads
 						i(20213),	-- Belt of Shrunken Heads
@@ -927,7 +920,7 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 						i(19949),	-- Zandalarian Hero Medallion
 					},
 				}),
-				un(PHASE_SIX, q(9210, {	-- The Savage Guard - Arcanum of Focus
+				applyclassicphase(PHASE_SIX, q(9210, {	-- The Savage Guard - Arcanum of Focus
 					["qg"] = 15042,		-- Zanza the Restless
 					["repeatable"] = true,
 					["cost"] = {
@@ -935,10 +928,10 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 					},
 					["lvl"] = 58,
 					["groups"] = {
-						un(PHASE_SIX, i(22635)),	-- Savage Guard
+						i(22635),	-- Savage Guard
 					},
 				})),
-				un(PHASE_SIX, q(9208, {	-- The Savage Guard - Arcanum of Protection
+				applyclassicphase(PHASE_SIX, q(9208, {	-- The Savage Guard - Arcanum of Protection
 					["qg"] = 15042,		-- Zanza the Restless
 					["repeatable"] = true,
 					["cost"] = {
@@ -946,10 +939,10 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 					},
 					["lvl"] = 58,
 					["groups"] = {
-						un(PHASE_SIX, i(22635)),	-- Savage Guard
+						i(22635),	-- Savage Guard
 					},
 				})),
-				un(PHASE_SIX, q(9209, {	-- The Savage Guard - Arcanum of Rapidity
+				applyclassicphase(PHASE_SIX, q(9209, {	-- The Savage Guard - Arcanum of Rapidity
 					["qg"] = 15042,	-- Zanza the Restless
 					["repeatable"] = true,
 					["cost"] = {
@@ -957,7 +950,7 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 					},
 					["lvl"] = 58,
 					["groups"] = {
-						un(PHASE_SIX, i(22635)),	-- Savage Guard
+						i(22635),	-- Savage Guard
 					},
 				})),
 				q(8243, {	-- Zanza's Potent Potables
@@ -997,8 +990,8 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 					["coord"] = { 15.1, 16.0, STRANGLETHORN_VALE },
 					["maps"] = { STRANGLETHORN_VALE },
 					["groups"] = {
-						un(PHASE_FIVE, i(20757)),	-- Formula: Brilliant Mana Oil
-						un(PHASE_FIVE, i(20756)),	-- Formula: Brilliant Wizard Oil
+						applyclassicphase(PHASE_FIVE, i(20757)),	-- Formula: Brilliant Mana Oil
+						applyclassicphase(PHASE_FIVE, i(20756)),	-- Formula: Brilliant Wizard Oil
 						i(19772),	-- Pattern: Blood Tiger Breastplate
 						i(19773),	-- Pattern: Blood Tiger Shoulders
 						i(19766),	-- Pattern: Bloodvine Boots
@@ -1077,7 +1070,6 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 					},
 				}),
 				i(19881, {	-- Channeler's Head
-					["questID"] = 8201,	-- A Collection of Heads
 					["crs"] = {
 						14509,	-- High Priest Thekal
 						14507,	-- High Priest Venoxis
@@ -1410,10 +1402,7 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 				i(19920),	-- Primalist's Band
 			}),
 			n(14507, {	-- High Priest Venoxis
-				un(PHASE_FIVE, {
-					["itemID"] = 22216,	-- Venoxis's Venom Sac
-					["questID"] = 9023,	-- The Perfect Poison
-				}),
+				applyclassicphase(PHASE_FIVE, i(22216)),	-- Venoxis's Venom Sac
 				i(19903),	-- Fang of Venoxis
 				i(19900),	-- Zulian Stone Axe
 				i(19907),	-- Zulian Tigerhide Cloak
@@ -1540,10 +1529,7 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_FOUR, {
 				i(22637),	-- Primal Hakkari Idol
 			}),
 			n(14834, {	-- Hakkar the Soulflayer
-				{
-					["itemID"] = 19802,	-- Heart of Hakkar
-					["questID"] = 8183,	-- The Heart of Hakkar
-				},
+				i(19802),	-- Heart of Hakkar
 				i(19862),	-- Aegis of the Blood God
 				i(19852),	-- Ancient Hakkari Manslayer
 				i(19864),	-- Bloodcaller

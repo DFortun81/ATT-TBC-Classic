@@ -26,7 +26,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_THREE, {
 				q(7782, {	-- The Lord of Blackrock
 					-- #if BEFORE CATA
 					["qg"] = 1748,	-- Highlord Bolvar Fordragon
-					["coord"] = { 78, 18, STORMWIND_CITY },
+					["coord"] = { 78.0, 18.0, STORMWIND_CITY },
 					-- #else
 					-- #if AFTER LEGION
 					["qg"] = 107574,	-- Anduin Wrynn
@@ -38,7 +38,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_THREE, {
 					["sourceQuest"] = 7781,	-- The Lord of Blackrock
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(19366), 	-- Master Dragonslayer's Orb
+						i(19366),	-- Master Dragonslayer's Orb
 						i(19383),	-- Master Dragonslayer's Medallion
 						i(19384),	-- Master Dragonslayer's Ring
 					},
