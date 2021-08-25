@@ -799,8 +799,12 @@ battlepet = function(id, t)								-- Create a BATTLE PET Object (Battle Pet == 
 	t.u = WRATH_PHASE_ONE;
 	return t;
 end
+pet = battlepet;										-- Create a BATTLE PET Object (alternative shortcut)
 p = battlepet;											-- Create a BATTLE PET Object (alternative shortcut)
-pet = p;												-- Create a BATTLE PET Object (alternative shortcut)
+battlepettype = function(id, t)							-- Create a BATTLE PET TYPE Object
+	return struct("petTypeID", id, t);
+end
+bpt = battlepettype;									-- Create a BATTLE PET TYPE Object (alternative shortcut)
 cat = function(id, t)									-- Create a CATEGORY Object.
 	return struct("categoryID", id, t);
 end
