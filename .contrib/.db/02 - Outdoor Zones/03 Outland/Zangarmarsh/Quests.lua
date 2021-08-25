@@ -204,18 +204,6 @@ _.Zones =
 						i(27730),	-- Watcher's Cloak of Vigilance
 					},
 				}),
-				applyclassicphase(TBC_PHASE_TWO_SWIFTFLIGHTFORM, q(11011, {	-- Eternal Vigilance
-					["qg"] = 22832,	-- Morthis Whisperwing <Druid of the Talon>
-					["sourceQuest"] = 11001,	-- Vanquish the Raven God
-					["coord"] = { 80.2, 65.2, ZANGARMARSH },
-					["timeline"] = { "removed 4.0.1" },
-					["maps"] = { ZANGARMARSH },
-					["classes"] = { DRUID },
-					["lvl"] = lvlsquish(70, 30, 70),
-					["groups"] = {
-						i(32449),	-- Essence-Infused Moonstone
-					},
-				})),
 				q(9752,  {	-- Escape from Umbrafen
 					["qg"] = 17969,	-- Kayra Longmane
 					["coord"] = { 83.4, 85.5, ZANGARMARSH },
