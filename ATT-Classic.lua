@@ -2247,6 +2247,7 @@ fieldCache["mapID"] = {};
 fieldCache["objectID"] = {};
 fieldCache["questID"] = {};
 fieldCache["requireSkill"] = {};
+fieldCache["speciesID"] = {};
 fieldCache["spellID"] = {};
 fieldCache["tierID"] = {};
 fieldCache["titleID"] = {};
@@ -2300,6 +2301,9 @@ fieldConverters = {
 	end,
 	["requireSkill"] = function(group, value)
 		CacheField(group, "requireSkill", value);
+	end,
+	["speciesID"] = function(group, value)
+		CacheField(group, "speciesID", value);
 	end,
 	["spellID"] = function(group, value)
 		CacheField(group, "spellID", value);
@@ -3031,6 +3035,98 @@ app.BaseObjectFields = function(fields)
 	end
 };
 end
+
+-- Battle Pet Lib
+(function()
+local fields = {
+	["key"] = function(t)
+		return "speciesID";
+	end,
+	["filterID"] = function(t)
+		return 101;
+	end,
+	["collectible"] = function(t)
+		return app.CollectibleBattlePets;
+	end,
+	["collected"] = function(t)
+		if t.itemID then
+			if GetItemCount(t.itemID, true) > 0 then
+				app.CurrentCharacter.BattlePets[t.speciesID] = 1;
+				ATTAccountWideData.BattlePets[t.speciesID] = 1;
+				return 1;
+			elseif app.CurrentCharacter.BattlePets[t.speciesID] == 1 then
+				app.CurrentCharacter.BattlePets[t.speciesID] = nil;
+				ATTAccountWideData.BattlePets[t.speciesID] = nil;
+				for guid,characterData in pairs(ATTCharacterData) do
+					if characterData.BattlePets[t.speciesID] then
+						ATTAccountWideData.BattlePets[t.speciesID] = 1;
+					end
+				end
+			end
+			if app.AccountWideBattlePets and ATTAccountWideData.BattlePets[t.speciesID] then
+				return 2;
+			end
+		end
+	end,
+	["text"] = function(t)
+		return "|cff0070dd" .. (t.name or RETRIEVING_DATA) .. "|r";
+	end,
+	["icon"] = function(t)
+		if t.itemID then
+			return select(5, GetItemInfoInstant(t.itemID)) or "Interface\\Icons\\INV_Misc_QuestionMark";
+		end
+		return "Interface\\Icons\\INV_Misc_QuestionMark";
+		--return select(2, C_PetJournal.GetPetInfoBySpeciesID(t.speciesID));
+	end,
+	--[[
+	["description"] = function(t)
+		return select(6, C_PetJournal.GetPetInfoBySpeciesID(t.speciesID));
+	end,
+	["displayID"] = function(t)
+		return select(12, C_PetJournal.GetPetInfoBySpeciesID(t.speciesID));
+	end,
+	["petTypeID"] = function(t)
+		return select(3, C_PetJournal.GetPetInfoBySpeciesID(t.speciesID));
+	end,
+	]]--
+	["name"] = function(t)
+		return select(1, GetItemInfo(t.itemID));
+		--return select(1, C_PetJournal.GetPetInfoBySpeciesID(t.speciesID));
+	end,
+	["link"] = function(t)
+		if t.itemID then
+			local link = select(2, GetItemInfo(t.itemID));
+			if link then
+				t.link = link;
+				return link;
+			end
+		end
+	end,
+	["tsm"] = function(t)
+		return string.format("p:%d:1:3", t.speciesID);
+	end,
+};
+app.BaseSpecies = app.BaseObjectFields(fields);
+app.CreateSpecies = function(id, t)
+	return setmetatable(constructor(id, t, "speciesID"), app.BaseSpecies);
+end
+
+app.BasePetType = app.BaseObjectFields({
+	["key"] = function(t)
+		return "petTypeID";
+	end,
+	["text"] = function(t)
+		return _G["BATTLE_PET_NAME_" .. t.petTypeID];
+	end,
+	["icon"] = function(t)
+		-- return "Interface/Icons/Icon_PetFamily_"..PET_TYPE_SUFFIX[t.petTypeID];
+		return app.asset("Icon_PetFamily_"..PET_TYPE_SUFFIX[t.petTypeID]);
+	end,
+});
+app.CreatePetType = function(id, t)
+	return setmetatable(constructor(id, t, "petTypeID"), app.BasePetType);
+end
+end)();
 
 -- Category Lib
 (function()
@@ -8298,6 +8394,18 @@ function app:GetDataCache()
 			table.insert(g, db);
 		end
 		
+		-- Battle Pets
+		local battlePetsCategory = {};
+		battlePetsCategory.g = {};
+		battlePetsCategory.battlepets = {};
+		for _,petTypeID in ipairs({9,8,5,2,7,3,1,6,10,4}) do
+			table.insert(battlePetsCategory.g, app.CreatePetType(petTypeID));
+		end
+		battlePetsCategory.expanded = false;
+		battlePetsCategory.text = AUCTION_CATEGORY_BATTLE_PETS;
+		battlePetsCategory.icon = app.asset("Category_PetJournal");
+		table.insert(g, battlePetsCategory);
+		
 		-- Track Deaths!
 		table.insert(g, app:CreateDeathClass());
 		
@@ -8466,6 +8574,44 @@ function app:GetDataCache()
 		BuildGroups(allData, allData.g);
 		app:GetWindow("Unsorted").data = allData;
 		CacheFields(allData);
+		
+		-- Update Battle Pet data.
+		battlePetsCategory.OnUpdate = function(self)
+			local petTypes = {};
+			for i,petType in ipairs(self.g) do
+				if petType.petTypeID and petType.key == "petTypeID" then
+					petTypes[petType.petTypeID] = petType;
+					if not petType.g then
+						petType.g = {};
+					end
+				end
+			end
+			for i,_ in pairs(fieldCache["speciesID"]) do
+				if not self.battlepets[i] then
+					local battlepet = app.CreateSpecies(tonumber(i));
+					for j,o in ipairs(_) do
+						if o.key == "speciesID" then
+							for key,value in pairs(o) do rawset(battlepet, key, value); end
+						end
+					end
+					self.battlepets[i] = battlepet;
+					battlepet.progress = nil;
+					battlepet.total = nil;
+					battlepet.g = nil;
+					battlepet.parent = battlepet.petTypeID and petTypes[battlepet.petTypeID] or self;
+					tinsert(battlepet.parent.g, battlepet);
+				end
+			end
+			insertionSort(self.g, function(a, b)
+				return a.text < b.text;
+			end);
+			for i,petType in pairs(petTypes) do
+				insertionSort(petType.g, function(a, b)
+					return a.text < b.text;
+				end);
+			end
+		end
+		battlePetsCategory:OnUpdate();
 		
 		-- Update Faction data.
 		factionsCategory.OnUpdate = function(self)
@@ -11723,8 +11869,9 @@ app.events.VARIABLES_LOADED = function()
 	if not currentCharacter.raceID and app.RaceIndex then currentCharacter.raceID = app.RaceIndex; end
 	if not currentCharacter.class and class then currentCharacter.class = class; end
 	if not currentCharacter.race and race then currentCharacter.race = race; end
-	if not currentCharacter.Deaths then currentCharacter.Deaths = 0; end
 	if not currentCharacter.ActiveSkills then currentCharacter.ActiveSkills = {}; end
+	if not currentCharacter.BattlePets then currentCharacter.BattlePets = {}; end
+	if not currentCharacter.Deaths then currentCharacter.Deaths = 0; end
 	if not currentCharacter.Factions then currentCharacter.Factions = {}; end
 	if not currentCharacter.FlightPaths then currentCharacter.FlightPaths = {}; end
 	if not currentCharacter.Lockouts then currentCharacter.Lockouts = {}; end
@@ -11855,6 +12002,7 @@ app.events.VARIABLES_LOADED = function()
 		accountWideData = {};
 		ATTAccountWideData = accountWideData;
 	end
+	if not accountWideData.BattlePets then accountWideData.BattlePets = {}; end
 	if not accountWideData.Deaths then accountWideData.Deaths = 0; end
 	if not accountWideData.Factions then accountWideData.Factions = {}; end
 	if not accountWideData.FlightPaths then accountWideData.FlightPaths = {}; end

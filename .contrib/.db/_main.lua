@@ -796,7 +796,7 @@ ach = function(id, altID, t)							-- Create an ACHIEVEMENT Object
 end
 battlepet = function(id, t)								-- Create a BATTLE PET Object (Battle Pet == Species == Pet)
 	t = struct("speciesID", id, t);
-	t.u = WRATH_PHASE_ONE;
+	if not t.itemID then t.u = WRATH_PHASE_ONE; end
 	return t;
 end
 pet = battlepet;										-- Create a BATTLE PET Object (alternative shortcut)

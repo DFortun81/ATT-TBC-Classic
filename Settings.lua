@@ -84,6 +84,7 @@ local GeneralSettingsBase = {
 		["DebugMode"] = false,
 		["FactionMode"] = false,
 		["AccountWide:Achievements"] = false,
+		["AccountWide:BattlePets"] = true,
 		["AccountWide:Deaths"] = true,
 		["AccountWide:Exploration"] = false,
 		["AccountWide:FlightPaths"] = true,
@@ -92,6 +93,7 @@ local GeneralSettingsBase = {
 		["AccountWide:Recipes"] = true,
 		["AccountWide:Reputations"] = true,
 		["Thing:Achievements"] = true,
+		["Thing:BattlePets"] = true,
 		["Thing:Deaths"] = true,
 		["Thing:Exploration"] = true,
 		["Thing:FlightPaths"] = true,
@@ -420,6 +422,7 @@ settings.UpdateMode = function(self)
 		app.VisibilityFilter = app.NoFilter;
 
 		app.AccountWideAchievements = true;
+		app.AccountWideBattlePets = true;
 		app.AccountWideDeaths = true;
 		app.AccountWideExploration = true;
 		app.AccountWideFlightPaths = true;
@@ -429,6 +432,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideReputations = true;
 
 		app.CollectibleAchievements = true;
+		app.CollectibleBattlePets = true;
 		app.CollectibleExploration = true;
 		app.CollectibleFlightPaths = true;
 		app.CollectibleLoot = true;
@@ -446,6 +450,7 @@ settings.UpdateMode = function(self)
 		end
 
 		app.AccountWideAchievements = self:Get("AccountWide:Achievements");
+		app.AccountWideBattlePets = self:Get("AccountWide:BattlePets");
 		app.AccountWideDeaths = self:Get("AccountWide:Deaths");
 		app.AccountWideExploration = self:Get("AccountWide:Exploration");
 		app.AccountWideFlightPaths = self:Get("AccountWide:FlightPaths");
@@ -455,6 +460,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideReputations = self:Get("AccountWide:Reputations");
 
 		app.CollectibleAchievements = self:Get("Thing:Achievements");
+		app.CollectibleBattlePets = self:Get("Thing:BattlePets");
 		app.CollectibleExploration = self:Get("Thing:Exploration");
 		app.CollectibleFlightPaths = self:Get("Thing:FlightPaths");
 		app.CollectibleLoot = self:Get("Thing:Loot");
@@ -741,6 +747,44 @@ end);
 AchievementsAccountWideCheckBox:SetATTTooltip("This behaviour is dependent on whether an achievement supports detection account wide or not. Unchecking this option just tells the achievement that you only want to check your current character. Some achievements are exclusively per-character.");
 AchievementsAccountWideCheckBox:SetPoint("TOPLEFT", AchievementsCheckBox, "TOPLEFT", 220, 0);
 
+local BattlePetsCheckBox = settings:CreateCheckBox(AUCTION_CATEGORY_BATTLE_PETS,
+function(self)
+	self:SetChecked(settings:Get("Thing:BattlePets"));
+	if settings:Get("DebugMode") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("Thing:BattlePets", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+BattlePetsCheckBox:SetATTTooltip("Enable this option to track battle & companion pets.\n\nNOTE: At this time, you cannot use them for battling, but they can follow you around and be all cute and stuff.\n\nGotta Horde 'em all!");
+BattlePetsCheckBox:SetPoint("TOPLEFT", AchievementsCheckBox, "BOTTOMLEFT", 0, 4);
+
+local BattlePetsAccountWideCheckBox = settings:CreateCheckBox("Account Wide",
+function(self)
+	self:SetChecked(settings:Get("AccountWide:BattlePets"));
+	if settings:Get("DebugMode") or not settings:Get("Thing:BattlePets") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("AccountWide:BattlePets", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+BattlePetsAccountWideCheckBox:SetATTTooltip("Companion pets can be collected on multiple characters and realistically would require that you have an insane amount of bag space in order to collect them all on one character.\n\nWe recommend you keep this turned on, but you do you fam.");
+BattlePetsAccountWideCheckBox:SetPoint("TOPLEFT", BattlePetsCheckBox, "TOPLEFT", 220, 0);
+
 local DeathsCheckBox = settings:CreateCheckBox("Deaths / Soul Fragments",
 function(self)
 	self:SetChecked(settings:Get("Thing:Deaths"));
@@ -758,7 +802,7 @@ function(self)
 	app:RefreshData();
 end);
 DeathsCheckBox:SetATTTooltip("Enable this option to track each time one of your characters die and show it as a Collectible section within the addon.\n\nNOTE: If you turn this off, we'll still track it, but we simply will not show the statistic unless you're in Debug Mode.");
-DeathsCheckBox:SetPoint("TOPLEFT", AchievementsCheckBox, "BOTTOMLEFT", 0, 4);
+DeathsCheckBox:SetPoint("TOPLEFT", BattlePetsCheckBox, "BOTTOMLEFT", 0, 4);
 
 local DeathsAccountWideCheckBox = settings:CreateCheckBox("Account Wide",
 function(self)
