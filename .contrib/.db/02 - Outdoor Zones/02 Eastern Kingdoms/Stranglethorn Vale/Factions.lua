@@ -16,6 +16,28 @@ local OnTooltipForBloodsail = [[function(t)
 			local x, n = math.ceil((41999 - reputation) / repPerKill), math.ceil(21000 / repPerKill);
 			GameTooltip:AddDoubleLine("Kill Jazzrik.", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 			GameTooltip:AddDoubleLine(" 5.75 - 8 Minute respawn", math.floor((x * 5.75) / 60.0) .. " - " .. math.ceil((x * 8) / 60.0) .. " Hours to go!", 1, 1, 1);
+			if not t.eventful then
+				t.eventful = true;
+				if DBM then
+					local f = CreateFrame("FRAME", nil, UIParent);
+					f:SetScript("OnEvent", function(self, e, ...)
+						(rawget(self, e) or print)(CombatLogGetCurrentEventInfo());
+					end);
+					f.COMBAT_LOG_EVENT_UNFILTERED = function(ts, subevent, ...)
+						if subevent == "UNIT_DIED" then
+							local guid = select(6, ...);
+							if select(6, strsplit("-",guid)) == "9179" then
+								DBM:CreatePizzaTimer(345, "Respawn (min)");
+								DBM:CreatePizzaTimer(482, "Respawn (max)");
+							end
+						end
+					end
+					f:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
+					f:SetPoint("BOTTOMLEFT", UIParent, "TOPLEFT", 0, 0);
+					f:SetSize(1, 1);
+					f:Hide();
+				end
+			end
 		end
 	end
 end]];
