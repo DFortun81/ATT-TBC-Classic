@@ -49,10 +49,10 @@ _.WorldEvents = { n(-539,	-- The Scepter of the Shifting Sands
 					["lvl"] = 60,
 					["groups"] = {
 						ach(416, {	-- Scarab Lord (Achievement)
-							["timeline"] = { "added 3.0.1.28000" },	-- Added in Wrath of the Lich King Prepatch
+							["timeline"] = { "added 3.0.1.28000", "removed 4.0.3" },	-- Added in Wrath of the Lich King Prepatch
 						}),
 						title(33, {	-- Scarab Lord Crieve
-							["timeline"] = { "added 2.0.3.28000" },	-- Added in Burning Crusade Prepatch
+							["timeline"] = { "added 2.0.3.28000", "removed 4.0.3" },	-- Added in Burning Crusade Prepatch
 						}),
 						i(21176),	-- Black Qiraji Resonating Crystal
 					},
