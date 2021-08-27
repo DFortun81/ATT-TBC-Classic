@@ -1,9 +1,8 @@
 --------------------------------------------
 --       E V E N T S    M O D U L E       --
 --------------------------------------------
-_.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
-{
-	n(-538, {	-- The Ahn'Qiraj War Effort
+_.WorldEvents = { n(-538,	-- The Ahn'Qiraj War Effort
+	applyclassicphase(PHASE_FIVE_WAR_EFFORT, bubbleDown({ ["timeline"] = { "removed 2.0.1" } }, {
 		["description"] = "When Phase 5 is eventually released, the Ruins of Ahn'Qiraj and Temple of Ahn'Qiraj will not be immediately available. Instead, server communities will have to undertake a massive war effort to open the raids by gathering supplies to prepare for the war and completing an epic questline that ultimately culminates in the banging of a gong to open the gates and release the horrors within upon the world.\n\nOnce both factions have finished their contribution, there is a 5-day grace period where. Afterwards, there is a server-wide 10 hour event which spans several zones in Kalimdor the moment someone bangs the gong.\n\nHow quickly Ahn'Qiraj opens depends on the server and its faction balance.\n\nWe recommend delaying the War Effort as long as possible to allow for the most number of people to obtain the Scarab Lord mount as everyone that finishes The Scepter of the Shifting Sands quest line will be granted the same rewards!",
 		["maps"] = {
 			ORGRIMMAR,
@@ -22,7 +21,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 55.2, 64.7, STORMWIND_CITY },
 							{ 59.3, 64.1, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Stormwind",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -39,7 +40,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 55.2, 64.7, STORMWIND_CITY },
 							{ 59.3, 64.1, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Stormwind",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -55,7 +58,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 43.2, 46.5, IRONFORGE },
 							{ 61.0, 77.1, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Ironforge",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -72,7 +77,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 43.2, 46.5, IRONFORGE },
 							{ 61.0, 77.1, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Ironforge",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -88,7 +95,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 38.2, 38.7, DARNASSUS },
 							{ 59.1, 65.5, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Darnassus",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -105,7 +114,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 38.2, 38.7, DARNASSUS },
 							{ 59.1, 65.5, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Darnassus",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -121,7 +132,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 63.3, 73.7, IRONFORGE },
 							{ 69.7, 46.0, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Gnomeregan",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -138,7 +151,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 63.3, 73.7, IRONFORGE },
 							{ 69.7, 46.0, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Gnomeregan",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -154,7 +169,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 55.2, 64.7, STORMWIND_CITY },
 							{ 59.3, 64.1, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Stormwind",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -171,7 +188,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 55.2, 64.7, STORMWIND_CITY },
 							{ 59.3, 64.1, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Stormwind",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -187,7 +206,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 43.2, 46.5, IRONFORGE },
 							{ 61.0, 77.1, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Ironforge",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -204,7 +225,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 43.2, 46.5, IRONFORGE },
 							{ 61.0, 77.1, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Ironforge",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -220,7 +243,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 38.2, 38.7, DARNASSUS },
 							{ 59.1, 65.5, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Darnassus",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -237,7 +262,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 38.2, 38.7, DARNASSUS },
 							{ 59.1, 65.5, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Darnassus",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -253,7 +280,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 63.3, 73.7, IRONFORGE },
 							{ 69.7, 46.0, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Gnomeregan",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -270,7 +299,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 63.3, 73.7, IRONFORGE },
 							{ 69.7, 46.0, IRONFORGE },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Gnomeregan",
+						-- #endif
 						["races"] = ALLIANCE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -755,12 +786,12 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 					}),
 					-- #if AFTER TBC
 					-- They added this War Effort Quest after the TBC Prepatch... long after the event was over. Why though?
-					applyclassicphase(TBC_PHASE_ONE, q(10501, {	-- The Alliance Needs Your Help! [The Exodar]
+					q(10501, {	-- The Alliance Needs Your Help! [The Exodar]
 						["qg"] = 21156,	-- Master Sergeant Thelaana <War Effort Recruiter>
 						["isBreadcrumb"] = true,
 						["races"] = ALLIANCE_ONLY,
 						["lvl"] = 10,
-					})),
+					}),
 					-- #endif
 				},
 			}),
@@ -776,7 +807,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 42.5, 38.7, ORGRIMMAR },
 							{ 30.0, 72.2, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Orgrimmar",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -793,7 +826,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 42.5, 38.7, ORGRIMMAR },
 							{ 30.0, 72.2, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Orgrimmar",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -809,7 +844,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 61.9, 45.3, UNDERCITY },
 							{ 28.8, 65.7, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Undercity",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -826,7 +863,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 61.9, 45.3, UNDERCITY },
 							{ 28.8, 65.7, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Undercity",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -842,7 +881,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 42.4, 57.0, THUNDER_BLUFF },
 							{ 33.1, 71.5, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Thunder Bluff",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -859,7 +900,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 42.4, 57.0, THUNDER_BLUFF },
 							{ 33.1, 71.5, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Thunder Bluff",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -875,7 +918,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 33.4, 75.4, ORGRIMMAR },
 							{ 46.3, 35.1, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Darkspear",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -892,7 +937,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 33.4, 75.4, ORGRIMMAR },
 							{ 46.3, 35.1, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 5 reputation with Darkspear",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -908,7 +955,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 42.5, 38.7, ORGRIMMAR },
 							{ 30.0, 72.2, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Orgrimmar",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -925,7 +974,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 42.5, 38.7, ORGRIMMAR },
 							{ 30.0, 72.2, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Orgrimmar",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -941,7 +992,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 61.9, 45.3, UNDERCITY },
 							{ 28.8, 65.7, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Undercity",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -958,7 +1011,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 61.9, 45.3, UNDERCITY },
 							{ 28.8, 65.7, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Undercity",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -974,7 +1029,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 42.4, 57.0, THUNDER_BLUFF },
 							{ 33.1, 71.5, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Thunder Bluff",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -991,7 +1048,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 42.4, 57.0, THUNDER_BLUFF },
 							{ 33.1, 71.5, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Thunder Bluff",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -1007,7 +1066,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 33.4, 75.4, ORGRIMMAR },
 							{ 46.3, 35.1, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Darkspear",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -1024,7 +1085,9 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 							{ 33.4, 75.4, ORGRIMMAR },
 							{ 46.3, 35.1, ORGRIMMAR },
 						},
+						-- #if BEFORE TBC
 						["description"] = "Grants 150 reputation with Darkspear",
+						-- #endif
 						["races"] = HORDE_ONLY,
 						["repeatable"] = true,
 						["cost"] = {
@@ -1509,12 +1572,12 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 					}),
 					-- #if AFTER TBC
 					-- They added this War Effort Quest after the TBC Prepatch... long after the event was over. Why though?
-					applyclassicphase(TBC_PHASE_ONE, q(10500, {	-- The Horde Needs Your Help! [Silvermoon City]
+					q(10500, {	-- The Horde Needs Your Help! [Silvermoon City]
 						["qg"] = 21155,	-- Senior Sergeant Eveningshade <War Effort Recruiter>
 						["isBreadcrumb"] = true,
 						["races"] = HORDE_ONLY,
 						["lvl"] = 10,
-					})),
+					}),
 					-- #endif
 				},
 			}),
@@ -1542,5 +1605,5 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_FIVE_WAR_EFFORT },
 				}),
 			}),
 		},
-	}),
-});
+	}))),
+};
