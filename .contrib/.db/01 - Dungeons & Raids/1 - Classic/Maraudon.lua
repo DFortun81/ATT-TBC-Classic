@@ -2,8 +2,11 @@
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
 _.Instances = { tier(CLASSIC_TIER, {
-	map(MARAUDON, {
+	inst(232, {	-- Maraudon
+		-- #if ANYCLASSIC
 		["description"] = "Protected by the fierce Maraudine centaur, Maraudon is one of the most sacred sites within Desolace. The great temple/cavern is the burial place of Zaetar, one of two immortal sons born to the demigod, Cenarius. Legend holds that Zaetar and the earth elemental princess, Theradras, sired the misbegotten centaur race. It is said that upon their emergence, the barbaric centaur turned on their father and killed him. Some believe that Theradras, in her grief, trapped Zaetar's spirit within the winding cavern - used its energies for some malign purpose. The subterranean tunnels are populated by the vicious, long-dead ghosts of the Centaur Khans, as well as Theradras' own raging, elemental minions.",
+		-- #endif
+		["mapID"] = MARAUDON,
 		["lvl"] = 41,
 		["groups"] = {
 			n(QUESTS, {
@@ -216,41 +219,13 @@ _.Instances = { tier(CLASSIC_TIER, {
 				},
 			}),
 			n(ZONEDROPS, {
-				{
-					["itemID"] = 17684,	-- Theradric Crystal Carving
-					["questID"] = 7028,	-- Twisted Evils
-				},
-			}),
-			n(-71, {	-- The Wicked Grotto [Purple]
-				--["coord"] = { 51.68, 24.73, DESOLACE },	-- Maraudon [Purple], Foulspore Cavern [Desolace]
-				["groups"] = {
-					n(12236, {	-- Lord Vyletongue
-						{
-							["itemID"] = 17703,	-- Celebrian Diamond
-							["questID"] = 7044,	-- Legends of Maraudon
-						},
-						i(17752),	-- Satyr's Lash
-						i(17755),	-- Satyrmane Sash
-						i(17754),	-- Infernal Trickster Leggings
-					}),
-					n(12237, {		-- Meshlok the Harvester
-						["description"] = "This is a rare that is not always present.",
-						["groups"] = {
-							i(17741),	-- Nature's Embrace
-							i(17742),	-- Fungus Shroud Armor
-							i(17767),	-- Bloomsprout Headpiece
-						},
-					}),
-				},
+				i(17684),	-- Theradric Crystal Carving
 			}),
 			n(-70, {	-- Foulspore Cavern [Orange]
 				--["coord"] = { 78.01, 55.68, DESOLACE },	-- Maraudon [Orange], The Wicked Grotto [Desolace]
 				["groups"] = {
 					n(13282, {	-- Noxxion
-						{
-							["itemID"] = 17702,	-- Celebrian Rod
-							["questID"] = 7044,	-- Legends of Maraudon
-						},
+						i(17702),	-- Celebrian Rod
 						i(17745),	-- Noxious Shooter
 						i(17746),	-- Noxxion's Shackles
 						i(17744),	-- Heart of Noxxion
@@ -268,12 +243,34 @@ _.Instances = { tier(CLASSIC_TIER, {
 					}),
 				},
 			}),
+			n(-71, {	-- The Wicked Grotto [Purple]
+				--["coord"] = { 51.68, 24.73, DESOLACE },	-- Maraudon [Purple], Foulspore Cavern [Desolace]
+				["groups"] = {
+					n(12236, {	-- Lord Vyletongue
+						i(17703),	-- Celebrian Diamond
+						i(17752),	-- Satyr's Lash
+						i(17755),	-- Satyrmane Sash
+						i(17754),	-- Infernal Trickster Leggings
+					}),
+					n(12237, {		-- Meshlok the Harvester
+						["description"] = "This is a rare that is not always present.",
+						["coord"] = { 24.0, 75.0, MARAUDON },
+						["groups"] = {
+							i(17741),	-- Nature's Embrace
+							i(17742),	-- Fungus Shroud Armor
+							i(17767),	-- Bloomsprout Headpiece
+						},
+					}),
+				},
+			}),
 			n(-69, {	-- Maraudon Portal
-				["sourceQuest"] = 7046,	-- The Scepter of Celebras
 				--["coord"] = { 44.49, 77.14, DESOLACE },	-- Maraudon [Falls], Foulspore Cavern [Desolace]
+				-- #if BEFORE 3.0.8
+				["sourceQuest"] = 7046,	-- The Scepter of Celebras
 				["cost"] = {
 					{ "i", 17191, 1 },	-- Scepter of Celebras
 				},
+				-- #endif
 				["groups"] = {
 					n(12203, {	-- Landslide
 						un(NEVER_IMPLEMENTED, i(17733)), 	-- Fist of Stone

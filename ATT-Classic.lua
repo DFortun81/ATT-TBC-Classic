@@ -6296,9 +6296,6 @@ local fields = {
 	["key"] = function(t)
 		return "titleID";
 	end,
-	["filterID"] = function(t)
-		return 110;
-	end,
 	["icon"] = function(t)
 		return "Interface\\Icons\\INV_Misc_Horn_01";
 	end,

@@ -17,7 +17,7 @@ local NETHERWIND_CROWN = i(16914);	-- Netherwind Crown
 local STORMRAGE_COVER = i(16900);	-- Stormrage Cover
 
 _.Instances = { tier(CLASSIC_TIER, {
-	inst(760, { 	-- Onyxia's Lair
+	inst(760, {	-- Onyxia's Lair
 		["description"] = "Onyxia is the daughter of the mighty dragon Deathwing, and sister of the scheming Nefarian, Lord of Blackrock Spire.\n\nIt is said that Onyxia delights in corrupting the mortal races by meddling in their political affairs. To this end it is believed that she takes on various humanoid forms and uses her charm and power to influence delicate matters between the different races. Some believe that Onyxia has even assumed an alias once used by her father - the title of the royal House Prestor. When not meddling in mortal concerns, Onyxia resides in a fiery cave below the Dragonmurk, a dismal swamp located within Dustwallow Marsh. There she is guarded by her kin, the remaining members of the insidious black dragonflight.",
 		-- #if BEFORE WRATH
 		["sourceQuests"] = {
@@ -113,9 +113,9 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(18406),	-- Onyxia Blood Talisman
 					},
 				})),
-				q(7507, bubbleDown({ ["timeline"] = REMOVED_WITH_RERELEASE }, {	-- Foror's Compendium
-					["provider"] = { "i", 18401 },	-- Foror's Compendium of Dragon Slaying
-					["description"] = "You get this quest by looting Foror's Compendium from bosses in Dire Maul.\n\nYou can also buy it on the Auction House for a hefty price!",
+				q(7507, bubbleDown({ ["timeline"] = REMOVED_WITH_RERELEASE }, {	-- Nostro's Compendium
+					["provider"] = { "i", 18401 },	-- Nostro's Compendium of Dragon Slaying
+					["description"] = "You get this quest by looting Nostro's Compendium from bosses in Dire Maul.\n\nYou can also buy it on the Auction House for a hefty price!",
 					["classes"] = { WARRIOR, PALADIN },
 					["maps"] = { DIRE_MAUL },
 					["lvl"] = lvlsquish(60, 30, 60),
@@ -125,7 +125,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 				})),
 				q(7636, bubbleDown({ ["timeline"] = REMOVED_WITH_CATA }, {	-- Stave of the Ancients
 					["qg"] = 14524,	-- Vartrus the Ancient
-					["sourceQuest"] = 7633, 	-- An Introduction
+					["sourceQuest"] = 7633,	-- An Introduction
 					["description"] = "You must defeat the 4 demons listed below by yourself with no pet in order to complete this quest.",
 					["coord"] = { 47, 24.48, FELWOOD },
 					["classes"] = { HUNTER },
@@ -191,7 +191,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 				})),
 				q(7508, bubbleDown({ ["timeline"] = REMOVED_WITH_RERELEASE }, {	-- The Forging of Quel'Serrar
 					["qg"] = 14368,	-- Lorekeeper Lydros
-					["sourceQuest"] = 7507,	-- Foror's Compendium
+					["sourceQuest"] = 7507,	-- Nostro's Compendium
 					["maps"] = { DIRE_MAUL },
 					["classes"] = { WARRIOR, PALADIN },
 					["cost"] = {

@@ -76,6 +76,7 @@ COSMIC = 947;	-- Confirmed!
 
 -- Kalimdor
 KALIMDOR = 1414;	-- Confirmed!
+AHNQIRAJ_THE_FALLEN_KINGDOM = 327;
 ASHENVALE = 1440;	-- Confirmed!
 AZSHARA = 1447;	-- Confirmed!
 CAVERNS_OF_TIME = 75;
