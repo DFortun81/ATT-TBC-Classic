@@ -1,19 +1,13 @@
 --------------------------------------------
 --       E V E N T S    M O D U L E       --
 --------------------------------------------
-_.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
-{
-	n(-539, {	-- The Scepter of the Shifting Sands
+_.WorldEvents = { n(-539,	-- The Scepter of the Shifting Sands
+	applyclassicphase(PHASE_FIVE, bubbleDown({ ["timeline"] = { "removed 4.0.3" } }, {
 		["description"] = "In addition to all players on a realm working towards completing the War Effort, one player had to create the Scepter of the Shifting Sands - a very difficult task that could only be solved by a server's top guild back when the questline was added. After the war effort was finished and the army of the Alliance and the Horde arrived in Silithus, the Scepter of the Shifting Sands could be used on the Scarab Gong. Doing so resulted in the opening of Ahn'Qiraj. The first player to bang the Scarab Gong on each server would be rewarded with the Scarab Lord title (in Burning Crusade, the title will not be available in Classic!) and the Black Qiraji Resonating Crystal mount. Anyone else who followed them within 10 hours was rewarded with the title as well.\n\nAlthough it is still possible to complete the questline for the Scepter of the Shifting Sands after the gates have been opened on your server, doing so will not reward neither the Black Qiraji Resonating Crystal nor the Scarab Lord title.",
 		["maps"] = {
 			CAVERNS_OF_TIME,
-			--AZSHARA,
-			--FERALAS,
-			--SILITHUS,
-			--SILVERPINE_FOREST,
-			--TANARIS,
+			TANARIS,
 		},
-		["u"] = PHASE_FIVE,
 		["lvl"] = 60,
 		["groups"] = {
 			n(QUESTS, {
@@ -22,6 +16,7 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["sourceQuest"] = 8305,	-- Long Forgotten Memories
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu, Neutral
 					["coord"] = { 28.7, 89.1, SILITHUS },
+					["maps"] = { SILITHUS },
 					["lvl"] = 60,
 				}),
 				q(8303, {	-- Anachronos
@@ -29,6 +24,7 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["sourceQuest"] = 8301,	-- The Path of the Righteous
 					["coord"] = { 49.5, 36.4, SILITHUS },
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu, Neutral
+					["maps"] = { SILITHUS },
 					["cost"] = {
 						{ "i", 20415, 1 },	-- The War of the Shifting Sands
 					},
@@ -39,60 +35,50 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["sourceQuest"] = 8555,	-- The Charge of the Dragonflights
 					["qg"] = 15481,	-- Spirit of Azuregos
 					["coord"] = { 57.0, 85.6, AZSHARA },
+					["maps"] = { AZSHARA },
 					["lvl"] = 60,
 				}),
-				q(8743, {	-- Bang a Gong!
+				applyclassicphase(PHASE_FIVE_GONG, q(8743, {	-- Bang a Gong!
 					["provider"] = { "o", 180717 },	-- The Scarab Gong
 					["sourceQuest"] = 8742,	-- The Might of Kalimdor
 					["coord"] = { 25.7, 90.9, SILITHUS },
+					["maps"] = { SILITHUS },
 					["cost"] = {
 						{ "i", 21175, 1 },	-- The Scepter of the Shifting Sands
 					},
-					["u"] = PHASE_FIVE_GONG,
 					["lvl"] = 60,
 					["groups"] = {
 						ach(416, {	-- Scarab Lord (Achievement)
 							["timeline"] = { "added 3.0.1.28000" },	-- Added in Wrath of the Lich King Prepatch
-							["u"] = WRATH_PHASE_ONE,
 						}),
 						title(33, {	-- Scarab Lord Crieve
-							["timeline"] = { "added 2.0.3.28000" },	-- Added in Burning Crusade
-							["u"] = TBC_PHASE_ONE,
+							["timeline"] = { "added 2.0.3.28000" },	-- Added in Burning Crusade Prepatch
 						}),
-						i(21176, {	-- Black Qiraji Resonating Crystal
-							["u"] = PHASE_FIVE_GONG,
-						}),
+						i(21176),	-- Black Qiraji Resonating Crystal
 					},
-				}),
+				})),
 				q(8606, {	-- Decoy!
 					["qg"] = 11811,	-- Narain Soothfancy
 					["sourceQuest"] = 8598,	-- rAnS0m
 					["coord"] = { 65.2, 18.6, TANARIS },
-					["cr"] = 15554,	-- Number Two
+					["maps"] = { WINTERSPRING },
 					["lvl"] = 60,
 					["groups"] = {
-						{
-							["itemID"] = 21042,	-- Narain's Special Kit
-							["groups"] = {
-								{
-									["itemID"] = 21037,	-- Crude Map
-									["questID"] = 8606,	-- Decoy!
-								},
-								{
-									["itemID"] = 21039,	-- Narain's Turban
-									["questID"] = 8606,	-- Decoy!
-								},
-								{
-									["itemID"] = 21040,	-- Narain's Robe
-									["questID"] = 8606,	-- Decoy!
-								},
-								{
-									["itemID"] = 21041,	-- Bag of Gold
-									["questID"] = 8606,	-- Decoy!
-									["coord"] = { 65, 72, WINTERSPRING },
-								},
+						objective(1, {	-- Who Does Number Two Work For?
+							["provider"] = { "n", 15554 },	-- Number Two
+							["coord"] = { 65, 72, WINTERSPRING },
+							["cost"] = {
+								{ "i", 21041, 1 },	-- Bag of Gold
+								{ "i", 21039, 1 },	-- Narain's Turban
+								{ "i", 21040, 1 },	-- Narain's Robe
 							},
-						},
+						}),
+						i(21042, {	-- Narain's Special Kit
+							i(21037),	-- Crude Map
+							i(21041),	-- Bag of Gold
+							i(21039),	-- Narain's Turban
+							i(21040),	-- Narain's Robe
+						}),
 					},
 				}),
 				q(8597, {	-- Draconic for Dummies
@@ -110,7 +96,7 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 						{ "i", 8150, 20 },	-- Deeprock Salt
 					},
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
 						i(21025),	-- Recipe: Dirge's Kickin' Chimaerok Chops
 					},
 				}),
@@ -139,23 +125,17 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 				q(8730, {	-- Nefarius's Corruption
 					["qg"] = 13020,	-- Vaelastrasz the Corrupt
 					["sourceQuest"] = 8555,	-- The Charge of the Dragonflights
-					["cost"] = {
-						{ "i", 21138, 1 },	-- Red Scepter Shard
-					},
 					["maps"] = { BLACKWING_LAIR },
 					["lvl"] = 60,
 					["groups"] = {
-						{
-							["itemID"] = 21142,	-- From the Desk of Lord Victor Nefarius
-							["questID"] = 8730,	-- Nefarius's Corruption
+						objective(1, {	-- 0/1 Red Scepter Shard
+							["provider"] = { "i", 21138 },	-- Red Scepter Shard
+							["cr"] = 11583,	-- Nefarian
+						}),
+						i(21142, {	-- From the Desk of Lord Victor Nefarius
 							["description"] = "You get this if you don't manage to kill Nefarian in time after starting the quest from Vaelastrasz.",
 							["cr"] = 11583,	-- Nefarian
-						},
-						{
-							["itemID"] = 21138,	-- Red Scepter Shard
-							["questID"] = 8730,	-- Nefarius's Corruption
-							["cr"] = 11583,	-- Nefarian
-						},
+						}),
 						i(21529),	-- Amulet of Shadow Shielding
 						i(21530),	-- Onyx Embedded Leggings
 					},
@@ -170,17 +150,13 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["qg"] = 15180,	-- Baristolth of the Shifting Sands
 					["sourceQuest"] = 8286,	-- What Tomorrow Brings
 					["coord"] = { 49.5, 36.4, SILITHUS },
-					["maps"] = { BLACKWING_LAIR },
-					["cost"] = {
-						{ "i", 20383, 1 },	-- Head of the Broodlord Lashlayer
-					},
+					["maps"] = { BLACKWING_LAIR, SILITHUS },
 					["lvl"] = 60,
 					["groups"] = {
-						{
-							["itemID"] = 20383,	-- Head of the Broodlord Lashlayer
-							["questID"] = 8288,	-- Only One May Rise
+						objective(1, {	-- 0/1 Head of the Broodlord Lashlayer
+							["provider"] = { "i", 20383 },	-- Head of the Broodlord Lashlayer
 							["cr"] = 12017,	-- Broodlord Lashlayer
-						},
+						}),
 					},
 				}),
 				q(8598, {	-- rAnS0m
@@ -207,21 +183,17 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["sourceQuest"] = 8577,	-- Stewvul, Ex-B.F.F.
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu
 					["coord"] = { 46.2, 86.7, SILVERPINE_FOREST },
-					["maps"] = { MOLTEN_CORE },
+					["maps"] = { MOLTEN_CORE, SILVERPINE_FOREST },
 					["cost"] = {
 						{ "i", 20951, 1 },	-- Narain's Scrying Goggles
 					},
 					["lvl"] = 60,
-					--[[
-					["groups"] = {
-						i(18253),	-- Major Rejuvenation Potion
-					},
-					]]--
 				}),
 				q(8577, {	-- Stewvul, Ex-B.F.F.
 					["qg"] = 11811,	-- Narain Soothfancy
 					["sourceQuest"] = 8576,	-- Translating the Ledger
 					["coord"] = { 65.2, 18.6, TANARIS },
+					["maps"] = { SILVERPINE_FOREST },
 					["lvl"] = 60,
 				}),
 				q(8741, {	-- The Champion Returns
@@ -229,6 +201,7 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["sourceQuest"] = 8736,	-- The Nightmare Manifests
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu, Neutral
 					["coord"] = { 36.18, 41.79, MOONGLADE },
+					["maps"] = { MOONGLADE },
 					["cost"] = {
 						{ "i", 21139, 1 },	-- Green Scepter Shard
 					},
@@ -261,6 +234,7 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["qg"] = 15180,	-- Baristolth of the Shifting Sands
 					["sourceQuest"] = 8301,	-- The Path of the Righteous
 					["coord"] = { 49.5, 36.4, SILITHUS },
+					["maps"] = { SILITHUS },
 					["repeatable"] = true,
 					["cost"] = {
 						{ "i", 20384, 200 },	-- Silithid Carapace Fragment
@@ -274,17 +248,17 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["qg"] = 8125,	-- Dirge Quikcleave <Butcher>
 					["sourceQuest"] = 8584,	-- Never Ask Me About My Business
 					["coord"] = { 52.6, 28.1, TANARIS },
+					["maps"] = { FERALAS },
 					["cost"] = {
-						{ "i", 21027, 1 },	-- Lakmaeran's Carcass
 						{ "i", 21024, 20 },	-- Chimaerok Tenderloin
 					},
 					["lvl"] = 60,
 					["groups"] = {
-						{
-							["itemID"] = 21027,	-- Lakmaeran's Carcass
-							["cr"] = 12803,	-- Lord Lakmaeran
+						objective(1, {	-- 0/1 Lakmaeran's Carcass
+							["provider"] = { "i", 21027 },	-- Lakmaeran's Carcass
 							["coord"] = { 29.8, 72.6, FERALAS },
-						},
+							["cr"] = 12803,	-- Lord Lakmaeran
+						}),
 					},
 				}),
 				q(8742, {	-- The Might of Kalimdor
@@ -296,7 +270,7 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					},
 					["coord"] = { 65, 50, TANARIS },
 					["lvl"] = 60,
-					["g"] = {
+					["groups"] = {
 						i(21175),	-- The Scepter of the Shifting Sands
 					},
 				}),
@@ -306,6 +280,7 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["description"] = "You do NOT want to kill Eranikus or allow Remulos to die.",
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu, Neutral
 					["coord"] = { 36.18, 41.79, MOONGLADE },
+					["maps"] = { MOONGLADE },
 					["lvl"] = 60,
 					["groups"] = {
 						i(21531),	-- Drake Tooth Necklace
@@ -317,72 +292,64 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["sourceQuest"] = 8734,	-- Tyrande and Remulos
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu, Neutral
 					["coord"] = { 36.18, 41.79, MOONGLADE },
-					["cost"] = {
-						{ "i", 21147, 1 },	-- Fragment of the Nightmare's Corruption
-						{ "i", 21149, 1 },	-- Fragment of the Nightmare's Corruption
-						{ "i", 21148, 1 },	-- Fragment of the Nightmare's Corruption
-						{ "i", 21146, 1 },	-- Fragment of the Nightmare's Corruption
-					},
+					["maps"] = { MOONGLADE, ASHENVALE, DUSKWOOD, FERALAS, THE_HINTERLANDS },
 					["lvl"] = 60,
 					["groups"] = {
-						{
-							["itemID"] = 21147,	-- Fragment of the Nightmare's Corruption
-							["questID"] = 8735,	-- The Nightmare's Corruption
+						objective(1, {	-- 0/1 Fragment of the Nightmare's Corruption (Ashenvale)
+							["provider"] = { "i", 21147 },	-- Fragment of the Nightmare's Corruption
 							["coord"] = { 91.6, 39.0, ASHENVALE },
 							["crs"] = {
 								12474,	-- Emeraldon Boughguard
 								12475,	-- Emeraldon Tree Warder
 								12476,	-- Emeraldon Oracle
 							},
-						},
-						{
-							["itemID"] = 21149,	-- Fragment of the Nightmare's Corruption
-							["questID"] = 8735,	-- The Nightmare's Corruption
+						}),
+						objective(2, {	-- 0/1 Fragment of the Nightmare's Corruption (Duskwood)
+							["provider"] = { "i", 21149 },	-- Fragment of the Nightmare's Corruption
 							["description"] = "It is recommended that you bring at least 30 players and they should be experienced raiders.",
 							["coord"] = { 48, 33, DUSKWOOD },
-							["crs"] = {
-								15625,	-- Twilight Corrupter
-							},
-						},
-						{
-							["itemID"] = 21148,	-- Fragment of the Nightmare's Corruption
-							["questID"] = 8735,	-- The Nightmare's Corruption
+							["cr"] = 15625,	-- Twilight Corrupter
+						}),
+						objective(3, {	-- 0/1 Fragment of the Nightmare's Corruption (Feralas)
+							["provider"] = { "i", 21148 },	-- Fragment of the Nightmare's Corruption
 							["coord"] = { 50.4, 15.9, FERALAS },
 							["crs"] = {
 								5320,	-- Jademir Boughguard
 								5319,	-- Jademir Tree Warder
 								5317,	-- Jademir Oracle
 							},
-						},
-						{
-							["itemID"] = 21146,	-- Fragment of the Nightmare's Corruption
-							["questID"] = 8735,	-- The Nightmare's Corruption
+						}),
+						objective(4, {	-- 0/1 Fragment of the Nightmare's Corruption (Hinterlands)
+							["provider"] = { "i", 21146 },	-- Fragment of the Nightmare's Corruption
 							["coord"] = { 61.6, 27.7, THE_HINTERLANDS },
 							["crs"] = {
 								12477,	-- Verdantine Boughguard
 								12479,	-- Verdantine Tree Warder
 								12478,	-- Verdantine Oracle
 							},
-						},
+						}),
 					},
 				}),
 				q(8620, {	-- The Only Prescription
 					["qg"] = 11811,	-- Narain Soothfancy
 					["sourceQuest"] = 8606,	-- Decoy!
 					["coord"] = { 65.2, 18.6, TANARIS },
-					["cost"] = {
-						{ "i", 21111, 1 },	-- Draconic For Dummies: Volume II
-					},
 					["maps"] = {
 						BLACKWING_LAIR,
 						ONYXIAS_LAIR,
-						MOLTEN_CORE
+						MOLTEN_CORE,
+						BLASTED_LANDS,
+						DUSTWALLOW_MARSH,
+						WINTERSPRING,
+						UNDERCITY,
+						STORMWIND_CITY,
 					},
 					["lvl"] = 60,
-					["g"] = {
-						{
-							["itemID"] = 21112,	-- Magical Book Binding
+					["groups"] = {
+						objective(1, {	-- 0/1 	Draconic For Dummies: Volume II
+							["provider"] = { "i", 21111 },	-- Draconic For Dummies: Volume II
 							["cost"] = {
+								{ "i", 21112, 1 },	-- Magical Book Binding
 								{ "i", 21103, 1 },	-- Draconic for Dummies [Chapter I] (Doctor Weavil)
 								{ "i", 21104, 1 },	-- Draconic for Dummies [Chapter II] (Blasted Lands Demons)
 								{ "i", 21105, 1 },	-- Draconic for Dummies [Chapter III] (Winterspring Demons)
@@ -392,22 +359,14 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 								{ "i", 21109, 1 },	-- Draconic for Dummies [Chapter VII] (Blackwing Lair)
 								{ "i", 21110, 1 },	-- Draconic for Dummies [Chapter VIII] (Ragnaros)
 							},
-							["groups"] = {
-								{
-									["itemID"] = 21111,	-- Draconic For Dummies: Volume II
-									["questID"] = 8620,	-- The Only Prescription
-								},
-							},
-						},
+						}),
 						{
 							["itemID"] = 21103,	-- Draconic for Dummies [Chapter I]
-							["questID"] = 8620,	-- The Only Prescription
-							["cr"] = 15552,	-- Doctor Weavil
 							["coord"] = { 77.8, 17.0, DUSTWALLOW_MARSH },
+							["cr"] = 15552,	-- Doctor Weavil
 						},
 						{
 							["itemID"] = 21104,	-- Draconic for Dummies [Chapter II]
-							["questID"] = 8620,	-- The Only Prescription
 							["coord"] = { 44.6, 56.0, BLASTED_LANDS },
 							["crs"] = {
 								12396,	-- Doomguard Commander
@@ -417,8 +376,6 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 						},
 						{
 							["itemID"] = 21105,	-- Draconic for Dummies [Chapter III]
-							["questID"] = 8620,	-- The Only Prescription
-							
 							["coords"] = {
 								{ 65.0, 80.2, WINTERSPRING },
 								{ 51.6, 84.4, WINTERSPRING },
@@ -432,27 +389,22 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 						},
 						{
 							["itemID"] = 21106,	-- Draconic for Dummies [Chapter IV]
-							["questID"] = 8620,	-- The Only Prescription
 							["coord"] = { 77, 38, UNDERCITY },
 						},
 						{
 							["itemID"] = 21107,	-- Draconic for Dummies [Chapter V]
-							["questID"] = 8620,	-- The Only Prescription
 							["coord"] = { 72, 6, STORMWIND_CITY },
 						},
 						{
 							["itemID"] = 21108,	-- Draconic for Dummies [Chapter VI]
-							["questID"] = 8620,	-- The Only Prescription
 							["cr"] = 10184,	-- Onyxia
 						},
 						{
 							["itemID"] = 21109,	-- Draconic for Dummies [Chapter VII]
-							["questID"] = 8620,	-- The Only Prescription
 							["description"] = "Located in Blackwing Lair on one of the tables on the ramp after the first wyrmguard overseer pull.",
 						},
 						{
 							["itemID"] = 21110,	-- Draconic for Dummies [Chapter VIII]
-							["questID"] = 8620,	-- The Only Prescription
 							["cr"] = 11502,	-- Ragnaros
 						},
 						i(21517),	-- Gnomish Turban of Psychic Might
@@ -462,6 +414,7 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["qg"] = 15180,	-- Baristolth of the Shifting Sands
 					["sourceQuest"] = 8288,	-- Only One May Rise
 					["coord"] = { 49.5, 36.4, SILITHUS },
+					["maps"] = { SILITHUS },
 					["cost"] = {
 						{ "i", 20402, 1 },	-- Agent of Nozdormu
 						{ "i", 20384, 200 },	-- Silithid Carapace Fragment
@@ -475,23 +428,18 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["qg"] = 11811,	-- Narain Soothfancy
 					["sourceQuest"] = 8728,	-- The Good News and The Bad News
 					["coord"] = { 65.2, 18.6, TANARIS },
-					["cost"] = {
-						{ "i", 21137, 1 },	-- Blue Scepter Shard
-					},
+					["maps"] = { AZSHARA },
 					["lvl"] = 60,
-					["g"] = {
-						{
-							["itemID"] = 21136,	-- Arcanite Buoy
+					["groups"] = {
+						objective(1, {	-- 0/1 Blue Scepter Shard
+							["provider"] = { "i", 21137 },	-- Blue Scepter Shard
+							["description"] = "This summons a 40 man raid boss.",
 							["coord"] = { 65, 55, AZSHARA },
 							["cr"] = 15571,	-- Maws
-							["description"] = "This summons a 40 man raid boss.",
-							["groups"] = {
-								{
-									["itemID"] = 21137,	-- Blue Scepter Shard
-									["questID"] = 8729,	-- The Wrath of Neptulon
-								},
+							["cost"] = {
+								{ "i", 21136, 1 },	-- Arcanite Buoy
 							},
-						},
+						}),
 						i(21526),	-- Band of Icy Depths
 						i(21527),	-- Darkwater Robes
 					},
@@ -506,16 +454,12 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["qg"] = 15693,	-- Jonathan the Revelator
 					["sourceQuest"] = 8742,	-- The Might of Kalimdor
 					["coord"] = { 25.9, 91.0, SILITHUS },
+					["maps"] = { SILITHUS },
 					["lvl"] = 60,
 					["groups"] = {
-						--[[
-						{
-							["achievementID"] = 5533,	-- Veteran of the Shifting Sands
-							["timeline"] = {
-								"added 4.0.3.28000",	-- Added in Cataclysm Prepatch
-							},
-						},
-						]]--
+						ach(5533, {	-- Veteran of the Shifting Sands
+							["timeline"] = { "added 4.0.3.28000" },	-- Added in Cataclysm Prepatch
+						}),
 						i(21523),	-- Fang of Korialstrasz
 						i(21522),	-- Shadowsong's Sorrow
 						i(21521),	-- Runesword of the Red
@@ -527,12 +471,14 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 					["sourceQuest"] = 8733,	-- Eranikus, Tyrant of the Dream
 					["minReputation"] = { 910, NEUTRAL },	-- Brood of Nozdormu, Neutral
 					["coord"] = { 37.5, 47.9, TELDRASSIL },
+					["maps"] = { TELDRASSIL },
 					["lvl"] = 60,
 				}),
 				q(8286, {	-- What Tomorrow Brings
 					["qg"] = 15180,	-- Baristolth of the Shifting Sands
 					["description"] = "This quest line is a prerequisite for the Ahn'Qiraj scepter line used to open the doors to Ahn'Qiraj.",
 					["coord"] = { 49.5, 36.4, SILITHUS },
+					["maps"] = { SILITHUS },
 					["lvl"] = 60,
 				}),
 			}),
@@ -540,5 +486,5 @@ _.WorldEvents = bubbleDown({["u"] = PHASE_FIVE },
 				i(20402),	-- Agent of Nozdormu
 			}),
 		},
-	}),
-});
+	})
+))};
