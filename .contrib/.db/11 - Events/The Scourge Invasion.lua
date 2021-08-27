@@ -5,9 +5,8 @@
 local MAJOR_HEALING_POTION = i(13446);	-- Major Healing Potion
 local MAJOR_MANA_POTION =    i(13444);	-- Major Mana Potion
 
-_.WorldEvents = bubbleDown({ ["u"] = PHASE_SIX_SCOURGE_INVASION },
-{
-	n(-540, {	-- The Scourge Invasion
+_.WorldEvents = { n(-540, -- The Scourge Invasion
+	applyclassicphase(PHASE_SIX_SCOURGE_INVASION, bubbleDown({ ["timeline"] = { "removed 2.0.1" } }, {
 		["description"] = "The Scourge Invasion was a world event in Patch 1.11 that heralded the opening of Naxxramas, the citadel of the dreaded Kel'Thuzad.\n\nSeveral regions of Azeroth came under attack by Scourge forces. Members of the Argent Dawn organized a worldwide counter to the Scourge invasion, keeping an eye out for any necropolis sightings and passing on their information to all adventurers willing to aid them in their struggle.\n\nWith each victory against the Scourge, the defense grows stronger. As more and more invasion attempts are beaten back by the defenders, the Argent Dawn will be able to bestow increasingly more powerful blessings upon those fighting the invaders. If the mortal races focus on clearing the Scourge camps all over the world that have sprung up beneath each necropolis, perhaps the invasion can effectively be halted or even repelled. Those who wish to take up arms against the undead invaders should speak with a representative of the Argent Dawn to learn what regions need help and how the defense is holding up.",
 		["maps"] = {
 			AZSHARA,
@@ -604,30 +603,12 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_SIX_SCOURGE_INVASION },
 				},
 				["groups"] = {
 					i(22484),	-- Necrotic Rune
-					{
-						["itemID"] = 22970,	-- A Bloodstained Envelope
-						["questID"] = 9301,	-- Envelope from the Front
-					},
-					{
-						["itemID"] = 22972,	-- A Careworn Note
-						["questID"] = 9299,	-- Note from the Front
-					},
-					{
-						["itemID"] = 22973,	-- A Crumpled Missive
-						["questID"] = 9302,	-- Missive from the Front
-					},
-					{
-						["itemID"] = 22974,	-- A Ragged Page
-						["questID"] = 9300,	-- Page from the Front
-					},
-					{
-						["itemID"] = 22975,	-- A Smudged Document
-						["questID"] = 9304,	-- Document from the Front
-					},
-					{
-						["itemID"] = 22977,	-- A Torn Letter
-						["questID"] = 9295,	-- Letter from the Front
-					},
+					i(22970),	-- A Bloodstained Envelope
+					i(22972),	-- A Careworn Note
+					i(22973),	-- A Crumpled Missive
+					i(22974),	-- A Ragged Page
+					i(22975),	-- A Smudged Document
+					i(22977),	-- A Torn Letter
 				},
 			}),
 			n(RARES, {
@@ -655,9 +636,11 @@ _.WorldEvents = bubbleDown({ ["u"] = PHASE_SIX_SCOURGE_INVASION },
 				},
 			}),
 		},
-	}),
-});
+	}))),
+};
 
 -- Wipe out the unobtainable states.
+MAJOR_HEALING_POTION.timeline = nil;
 MAJOR_HEALING_POTION.u = nil;
+MAJOR_MANA_POTION.timeline = nil;
 MAJOR_MANA_POTION.u = nil;
