@@ -6,7 +6,7 @@ _.Zones =
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(TEROKKAR_FOREST, {
 			n(VENDORS, {
-				n(23367, {	-- Grella <Skyguard Quartermaster>
+				applyclassicphase(TBC_PHASE_TWO_SKYGUARD, n(23367, {	-- Grella <Skyguard Quartermaster>
 					["coord"] = { 64.3, 66.2, TEROKKAR_FOREST },
 					["groups"] = {
 						i(32771),	-- Airman's Ribbon Gallantry
@@ -21,7 +21,7 @@ _.Zones =
 						i(32539),	-- Skyguard's Drape
 						i(32538),	-- Skywitch's Drape
 					},
-				}),
+				})),
 				n(19296, {	-- Innkeeper Biribi <Innkeeper>
 					["coord"] = { 56.6, 53.2, TEROKKAR_FOREST },
 					["races"] = ALLIANCE_ONLY,
