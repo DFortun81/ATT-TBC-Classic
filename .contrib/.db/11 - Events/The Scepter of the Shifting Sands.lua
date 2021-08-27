@@ -458,7 +458,7 @@ _.WorldEvents = { n(-539,	-- The Scepter of the Shifting Sands
 					["lvl"] = 60,
 					["groups"] = {
 						ach(5533, {	-- Veteran of the Shifting Sands
-							["timeline"] = { "added 4.0.3.28000" },	-- Added in Cataclysm Prepatch
+							["timeline"] = { "added 4.0.3.28000", "removed 4.0.3" },	-- Added in Cataclysm Prepatch
 						}),
 						i(21523),	-- Fang of Korialstrasz
 						i(21522),	-- Shadowsong's Sorrow
