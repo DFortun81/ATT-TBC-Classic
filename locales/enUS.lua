@@ -294,11 +294,15 @@ app.L = {
 		[-388] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",					-- Main Gate (Stratholme)
 		[-389] = "Interface\\Icons\\INV_MISC_KEY_13",								-- Service Entrance (Stratholme)
 		[-420] = "Interface\\Icons\\INV_Chest_Plate03",								-- Tier 0.5 Sets
+		[-534] = "Interface\\Icons\\inv_misc_gift_01",								-- Collector's Edition
 		[-538] = "Interface\\Icons\\inv_box_01",									-- The Ahn'Qiraj War Effort
 		[-539] = "Interface\\Icons\\Inv_hammer_25",									-- The Scepter of the Shifting Sands
 		[-540] = "Interface\\Icons\\inv_stone_02",									-- The Scourge Invasion
 		[-541] = "Interface\\Icons\\spell_holiday_tow_spicecloud",					-- The Silithyst Must Flow
 		[-542] = "Interface\\Icons\\achievement_dungeon_outland_dungeonmaster",		-- The Opening of the Dark Portal
+		
+		[-578] = app.asset("Expansion_CLASSIC"),									-- World of Warcraft 15th Anniversary
+		[-579] = app.asset("Expansion_TBC"),										-- Dark Portal Pass
 		
 		-- Custom Achievement Section, just for Pre-Wrath content.
 		[-200001] = "Interface\\Icons\\Spell_shadow_brainwash",						-- Insane in the Membrane (Pre-Wrath)
@@ -383,11 +387,21 @@ app.L = {
 		[-420] = "Tier 0.5 Sets",												-- Tier 0.5 Sets
 
 -- Blizzard Events and Anniversaries
+		[-534] = "Collector's Edition",
 		[-538] = "The Ahn'Qiraj War Effort",
 		[-539] = "The Scepter of the Shifting Sands",
 		[-540] = "The Scourge Invasion",
 		[-541] = "The Silithyst Must Flow",
 		[-542] = "The Opening of the Dark Portal",
+		[-552] = "Warcraft 3 Spoils of War Edition",
+		[-564] = "Starcraft II: Wings of Liberty",
+		[-565] = "Starcraft II: Heart of the Swarm",
+		[-566] = "Diablo III",
+		[-568] = "Overwatch: Origins",
+		[-575] = "Diablo III: Reaper of Souls",
+		[-576] = "StarCraft II: Legacy of the Void",
+		[-578] = "World of Warcraft 15th Anniversary",
+		[-579] = "Dark Portal Pass",
 -- Factions / Cities
 		[-10066] = "Legendary",
 		

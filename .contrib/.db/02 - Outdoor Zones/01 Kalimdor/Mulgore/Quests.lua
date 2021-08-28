@@ -593,20 +593,6 @@ _.Zones =
 						{ "i", 9581, 1 },	-- Verdant Note
 					},
 				}),
-				un(REMOVED_FROM_GAME, q(5844, {	-- Welcome!
-					["provider"] = { "i", 14650 },	-- Camp Narache Gift Voucher
-					["altQuests"] = {
-						5843,	-- Welcome! [Durotar]
-						5844,	-- Welcome! [Mulgore]
-						5847,	-- Welcome! [Tirisfal Glades]
-					},
-					["races"] = HORDE_ONLY,
-					["groups"] = bubbleDown({ ["u"] = REMOVED_FROM_GAME }, {
-						i(13584),	-- Diablo Stone
-						i(13583),	-- Panda Collar
-						i(13582),	-- Zergling Leash
-					}),
-				})),
 				q(760, {	-- Wildmane Cleansing
 					["qg"] = 2948,	-- Mull Thunderhorn
 					["sourceQuest"] = 759,	-- Wildmane Totem

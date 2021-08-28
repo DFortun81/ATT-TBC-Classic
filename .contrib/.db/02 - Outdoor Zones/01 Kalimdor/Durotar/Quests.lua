@@ -834,20 +834,6 @@ _.Zones =
 					["classes"] = { WARLOCK },
 					["races"] = HORDE_ONLY,
 				}),
-				un(REMOVED_FROM_GAME, q(5843, {	-- Welcome!
-					["provider"] = { "i", 14649 },	-- Valley of Trials Gift Voucher
-					["altQuests"] = {
-						5843,	-- Welcome! [Durotar]
-						5844,	-- Welcome! [Mulgore]
-						5847,	-- Welcome! [Tirisfal Glades]
-					},
-					["races"] = HORDE_ONLY,
-					["g"] = bubbleDown({ ["u"] = REMOVED_FROM_GAME }, {
-						i(13584),	-- Diablo Stone
-						i(13583),	-- Panda Collar
-						i(13582),	-- Zergling Leash
-					}),
-				})),
 				q(834, {	-- Winds in the Desert
 					["qg"] = 3293,	-- Rezlak
 					["coord"] = { 46.38, 22.94, DUROTAR },

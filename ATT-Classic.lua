@@ -8382,6 +8382,17 @@ function app:GetDataCache()
 			table.insert(g, db);
 		end
 		
+		-- Promotions
+		if app.Categories.Promotions then
+			db = {};
+			db.text = BATTLE_PET_SOURCE_8;
+			db.description = "This section is for real world promotions that seeped extremely rare content into the game prior to some of them appearing within the In-Game Shop.";
+			db.icon = app.asset("Category_InGameShop");
+			db.g = app.Categories.Promotions;
+			db.expanded = false;
+			table.insert(g, db);
+		end
+		
 		-- Achievements
 		if app.Categories.Achievements then
 			db = app.CreateFilter(105);
@@ -8587,9 +8598,12 @@ function app:GetDataCache()
 				if not self.battlepets[i] then
 					local battlepet = app.CreateSpecies(tonumber(i));
 					for j,o in ipairs(_) do
+						--[[
 						if o.key == "speciesID" then
 							for key,value in pairs(o) do rawset(battlepet, key, value); end
 						end
+						]]--
+						for key,value in pairs(o) do rawset(battlepet, key, value); end
 					end
 					self.battlepets[i] = battlepet;
 					battlepet.progress = nil;

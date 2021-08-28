@@ -677,19 +677,6 @@ _.Zones =
 						i(3444),	-- Tiller's Vest
 					},
 				}),
-				un(REMOVED_FROM_GAME, q(5847, {	-- Welcome!
-					["provider"] = { "i", 14651 },	-- Deathknell Gift Voucher
-					["altQuests"] = {
-						5843,	-- Welcome! [Durotar]
-						5844,	-- Welcome! [Mulgore]
-						5847,	-- Welcome! [Tirisfal Glades]
-					},
-					["g"] = bubbleDown({ ["u"] = REMOVED_FROM_GAME }, {
-						i(13584),	-- Diablo Stone
-						i(13583),	-- Panda Collar
-						i(13582),	-- Zergling Leash
-					}),
-				})),
 			}),
 		}),
 	}),
