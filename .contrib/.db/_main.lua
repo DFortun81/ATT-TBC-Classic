@@ -308,6 +308,7 @@ SL_TIER = 9;
 -- Unobtainable Filters
 NEVER_IMPLEMENTED = 1;
 REMOVED_FROM_GAME = 2;
+BLIZZARD_BALANCE = 3;
 
 -- Classic Phases
 PHASE_ONE = 11;

@@ -1499,7 +1499,7 @@ table.insert(settings.MostRecentTab.objects, GeneralUnobtainableFiltersLabel);
 -- General Unobtainable Filters
 yoffset = -4;
 last = GeneralUnobtainableFiltersLabel;
-for i,u in ipairs({ 1, 2  }) do
+for i,u in ipairs({ 1, 2, 3 }) do
 	local filter = settings:CreateCheckBox(reasons[u][3] or tostring(u), UnobtainableOnRefresh, UnobtainableFilterOnClick);
 	filter:SetATTTooltip(reasons[u][2]);
 	filter:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, yoffset);
