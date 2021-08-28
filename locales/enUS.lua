@@ -297,6 +297,7 @@ app.L = {
 		[-388] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",					-- Main Gate (Stratholme)
 		[-389] = "Interface\\Icons\\INV_MISC_KEY_13",								-- Service Entrance (Stratholme)
 		[-420] = "Interface\\Icons\\INV_Chest_Plate03",								-- Tier 0.5 Sets
+		[-533] = "Interface\\Icons\\Inv_misc_rune_01",								-- Hearthstone Promotion
 		[-534] = "Interface\\Icons\\inv_misc_gift_01",								-- Collector's Edition
 		[-535] = "Interface\\Icons\\inv_misc_ticket_tarot_stack_01",				-- Trading Card Game
 		[-538] = "Interface\\Icons\\inv_box_01",									-- The Ahn'Qiraj War Effort
