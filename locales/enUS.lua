@@ -179,6 +179,7 @@ app.L = {
 		-- Non-Equipment
 		[100] = MOUNTS,											-- Mounts
 		[101] = AUCTION_CATEGORY_BATTLE_PETS,					-- Battle Pets
+		[102] = TOY,											-- Toys
 		[104] = AUCTION_CATEGORY_QUEST_ITEMS, 					-- Quest Items
 		[105] = TRACKER_FILTER_ACHIEVEMENTS,					-- Achievements
 		[113] = INVTYPE_BAG, 									-- Bags
@@ -193,7 +194,7 @@ app.L = {
 		[6] = "Interface\\Icons\\inv_chest_chain_05",						-- Mail Armor
 		[7] = "Interface\\Icons\\inv_chest_plate01",						-- Plate Armor
 		[8] = "Interface\\Icons\\inv_shield_06",							-- Shield
-		[9] = "Interface\\Icons\\inv_misc_tournaments_tabard_gnome",		-- Tabards
+		[9] = "Interface\\Icons\\inv_shirt_guildtabard_01",					-- Tabards
 		[10] = "Interface\\Icons\\inv_shirt_grey_01",						-- Shirts
 		[20] = "Interface\\Icons\\inv_weapon_shortblade_01",				-- Daggers
 		[21] = "Interface\\Icons\\inv_axe_17",								-- 1H Axes
@@ -216,7 +217,9 @@ app.L = {
 		[52] = "Interface\\Icons\\INV_Jewelry_Ring_04",						-- Finger
 		[53] = "Interface\\Icons\\INV_Trinket_Naxxramas05",					-- Trinket
 		[57] = "Interface\\Icons\\inv_fishingpole_01",						-- Fishing Poles
-		[100] = "Interface\\Icons\\ability_mount_fireravengodmountgreen",	-- Mounts
+		[100] = app.asset("Category_Mounts"),								-- Mounts
+		[101] = app.asset("Category_PetJournal"),							-- Battle Pets
+		[102] = app.asset("Category_ToyBox"),								-- Toys
 		[105] = app.asset("Category_Achievements"),							-- Achievements
 		[113] = "Interface\\Icons\\INV_Misc_Bag_08",						-- Bag
 		[200] = "Interface\\Icons\\inv_scroll_05",							-- Recipes
@@ -388,6 +391,7 @@ app.L = {
 
 -- Blizzard Events and Anniversaries
 		[-534] = "Collector's Edition",
+		[-535] = BATTLE_PET_SOURCE_9,											-- Trading Card Game
 		[-538] = "The Ahn'Qiraj War Effort",
 		[-539] = "The Scepter of the Shifting Sands",
 		[-540] = "The Scourge Invasion",
