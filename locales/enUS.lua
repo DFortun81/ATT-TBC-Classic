@@ -410,6 +410,7 @@ app.L = {
 		[-565] = "Starcraft II: Heart of the Swarm",
 		[-566] = "Diablo III",
 		[-568] = "Overwatch: Origins",
+		[-573] = SCROLL_OF_RESURRECTION,										-- Scroll of Resurrection
 		[-575] = "Diablo III: Reaper of Souls",
 		[-576] = "StarCraft II: Legacy of the Void",
 		[-578] = "World of Warcraft 15th Anniversary",
