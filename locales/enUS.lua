@@ -393,6 +393,7 @@ app.L = {
 		[-420] = "Tier 0.5 Sets",												-- Tier 0.5 Sets
 
 -- Blizzard Events and Anniversaries
+		[-533] = "Hearthstone Promotion",
 		[-534] = "Collector's Edition",
 		[-535] = BATTLE_PET_SOURCE_9,											-- Trading Card Game
 		[-538] = "The Ahn'Qiraj War Effort",
