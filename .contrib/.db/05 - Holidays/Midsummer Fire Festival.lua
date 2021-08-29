@@ -1883,13 +1883,28 @@ _.Holidays = { applyholiday(MIDSUMMER_FIRE_FESTIVAL, {
 					i(23323),	-- Crown of the Fire Festival
 				},
 			}),
-			-- q(11696),	-- Ahune is Here!
-			-- q(11955),	-- Ahune, the Frost Lord
+			q(11696, {	-- Ahune is Here!
+				["qg"] = 25710,	-- Numa Cloudsister
+				["sourceQuest"] = 11955,	-- Ahune, the Frost Lord
+				["timeline"] = { "added 2.4.0.7994" },
+				["maps"] = { COILFANG_RESERVOIR_SLAVE_PENS },
+				["lvl"] = lvlsquish(65, 15, 15),
+			}),
+			q(11955, {	-- Ahune, the Frost Lord
+				["qg"] = EARTHEN_RING_ELDER_ID,
+				["sourceQuest"] = 11891,	-- An Innocent Disguise
+				["coords"] = EARTHEN_RING_ELDER_COORDS,
+				["timeline"] = { "added 2.4.0.7994" },
+				["maps"] = EARTHEN_RING_ELDER_MAPS,
+				["isBreadcrumb"] = true,
+				["lvl"] = lvlsquish(65, 15, 15),
+			}),
 			q(11891, {	-- An Innocent Disguise
 				["qg"] = 25324,		 -- Earthen Ring Guide
 				["sourceQuest"] = 11886,	-- Unusual Activity
 				["description"] = "Use your Totemic Beacon to summon the quest giver.",
 				["coord"] = { 10.2, 15.3, ASHENVALE },
+				["timeline"] = { "added 2.4.0.7994" },
 				["maps"] = { ASHENVALE },
 				["cost"] = {
 					{ "i", 35828, 1 },	-- Totemic Beacon
