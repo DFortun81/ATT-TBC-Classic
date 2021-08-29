@@ -257,36 +257,27 @@ _.Holidays = bubbleDown({ ["u"] = FEAST_OF_WINTER_VEIL },
 			{	-- You're a Mean One...
 				["qg"] = 13636,	-- Strange Snowman
 				["allianceQuestID"] = 7043,	-- You're a Mean One... (Alliance)
-				["isYearly"] = true,
 				["hordeQuestID"] = 6983,	-- You're a Mean One... (Horde)
-				["isYearly"] = true,
 				["sourceQuests"] = {
 					7042,	-- Stolen Winter Veil Treats (Alliance)
 					6963,	-- Stolen Winter Veil Treats (Horde)
 				},
 				["coord"] = { 35.4, 72.6, ALTERAC_MOUNTAINS },
-				["cost"] = {
-					{ "i", 17662, 1 },	-- Stolen Treats
-				},
+				["isYearly"] = true,
 				["lvl"] = 30,
 				["groups"] = {
-					{
-						["itemID"] = 17662,	-- Stolen Treats
-						["allianceQuestID"] = 7043,	-- You're a Mean One... (Alliance)
-						["isYearly"] = true,
-						["hordeQuestID"] = 6983,	-- You're a Mean One... (Horde)
-						["isYearly"] = true,
+					objective(1, {	-- 0/1 Stolen Treats
+						["provider"] = { "i", 17662 },	-- Stolen Treats
 						["cr"] = 13602,	-- The Abominable Greench
-					},
+					}),
 				},
 			},
-			{
+			{	-- Winter's Presents
+				["qg"] = 15732,	-- Wonderform Operator <Smokywood Pastures>
 				["allianceQuestID"] = 8827,	-- Winter's Presents (Alliance)
-				["isBreadcrumb"] = true,
-				["isYearly"] = true,
 				["hordeQuestID"] = 8828,	-- Winter's Presents (Horde)
 				["isBreadcrumb"] = true,
-				["qg"] = 15732,	-- Wonderform Operator <Smokywood Pastures>
+				["isYearly"] = true,
 			},
 		}),
 		n(VENDORS, {
