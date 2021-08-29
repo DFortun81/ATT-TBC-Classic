@@ -297,9 +297,12 @@ app.L = {
 		[-388] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",					-- Main Gate (Stratholme)
 		[-389] = "Interface\\Icons\\INV_MISC_KEY_13",								-- Service Entrance (Stratholme)
 		[-420] = "Interface\\Icons\\INV_Chest_Plate03",								-- Tier 0.5 Sets
-		[-533] = "Interface\\Icons\\Inv_misc_rune_01",								-- Hearthstone Promotion
+		[-531] = "Interface\\Icons\\inv_jewelry_amulet_03",							-- Spirit of Competition
+		[-532] = "Interface\\Icons\\ability_shaman_stormstrike",					-- Heroes of the Storm
+		[-533] = "Interface\\Icons\\Inv_misc_rune_01",								-- Hearthstone
 		[-534] = "Interface\\Icons\\inv_misc_gift_01",								-- Collector's Edition
 		[-535] = "Interface\\Icons\\inv_misc_ticket_tarot_stack_01",				-- Trading Card Game
+		[-537] = app.asset("diabloanniversary_achievement"),						-- Diablo 20th Anniversary
 		[-538] = "Interface\\Icons\\inv_box_01",									-- The Ahn'Qiraj War Effort
 		[-539] = "Interface\\Icons\\Inv_hammer_25",									-- The Scepter of the Shifting Sands
 		[-540] = "Interface\\Icons\\inv_stone_02",									-- The Scourge Invasion
@@ -307,9 +310,10 @@ app.L = {
 		[-542] = "Interface\\Icons\\achievement_dungeon_outland_dungeonmaster",		-- The Opening of the Dark Portal
 		[-545] = app.asset("inv_misc_blizzcon09_poster"),							-- Blizzcon
 		[-546] = app.asset("achievement_reputation_08"),							-- Recruit A Friend
-		
+		[-553] = "Interface\\Icons\\INV_Drink_10",									-- iCoke
+		[-577] = "Interface\\Icons\\INV_MISC_FILM_01",								-- Warcraft Movie
 		[-578] = app.asset("Expansion_CLASSIC"),									-- World of Warcraft 15th Anniversary
-		[-579] = app.asset("Expansion_TBC"),										-- Dark Portal Pass
+		[-579] = "Interface\\Icons\\achievement_dungeon_outland_dungeonmaster",		-- Dark Portal Pass
 		
 		-- Custom Achievement Section, just for Pre-Wrath content.
 		[-200001] = "Interface\\Icons\\Spell_shadow_brainwash",						-- Insane in the Membrane (Pre-Wrath)
@@ -354,9 +358,10 @@ app.L = {
 		[-60] = "Pilgrim's Bounty",												-- Pilgrim's Bounty
 		[-61] = "Feast of Winter Veil",											-- Feast of Winter Veil
 		[-62] = "Stranglethorn Fishing Extravaganza",
+		
 		[-69] = "Maraudon Portal",												-- Maraudon Portal
-		[-70] = "Foulspore Cavern [Orange]",									-- Foulspore Cavern [Orange]
-		[-71] = "The Wicked Grotto [Purple]",									-- The Wicked Grotto [Purple]
+		[-70] = DUNGEON_FLOOR_DESOLACE22 .. " [Orange]",						-- Foulspore Cavern [Orange]
+		[-71] = DUNGEON_FLOOR_DESOLACE21 .. " [Purple]",						-- The Wicked Grotto [Purple]
 		[-77] = SPECIAL, 														-- Special
 		[-78] = "Timed Event",
 		[-79] = "First Chest",
@@ -388,15 +393,18 @@ app.L = {
 		[-369] = DUNGEON_FLOOR_NAXXRAMAS3,					 					-- The Military Quarter
 		[-370] = DUNGEON_FLOOR_NAXXRAMAS4, 										-- The Plague Quarter
 		[-371] = DUNGEON_FLOOR_NAXXRAMAS6, 										-- The Upper Necropolis
-		[-383] = GetItemSubClassInfo(2,14),										-- Miscellaneous (Holidays)
+		[-383] = MISCELLANEOUS,													-- Miscellaneous (Holidays)
 		[-388] = "Main Gate",													-- Main Gate (Stratholme)
 		[-389] = "Service Entrance",											-- Service Entrance (Stratholme)
 		[-420] = "Tier 0.5 Sets",												-- Tier 0.5 Sets
 
 -- Blizzard Events and Anniversaries
-		[-533] = "Hearthstone Promotion",
+		[-531] = "Spirit of Competition",
+		[-532] = "Heroes of the Storm",
+		[-533] = "Hearthstone",
 		[-534] = "Collector's Edition",
 		[-535] = BATTLE_PET_SOURCE_9,											-- Trading Card Game
+		[-537] = "Diablo 20th Anniversary",
 		[-538] = "The Ahn'Qiraj War Effort",
 		[-539] = "The Scepter of the Shifting Sands",
 		[-540] = "The Scourge Invasion",
@@ -407,13 +415,18 @@ app.L = {
 		[-546] = REFER_A_FRIEND,												-- Recruit A Friend
 		
 		[-552] = "Warcraft 3 Spoils of War Edition",
+		[-553] = "iCoke",
+		
 		[-564] = "Starcraft II: Wings of Liberty",
 		[-565] = "Starcraft II: Heart of the Swarm",
 		[-566] = "Diablo III",
 		[-568] = "Overwatch: Origins",
+		
 		[-573] = SCROLL_OF_RESURRECTION,										-- Scroll of Resurrection
+		[-574] = "Diablo III Annual Pass",
 		[-575] = "Diablo III: Reaper of Souls",
 		[-576] = "StarCraft II: Legacy of the Void",
+		[-577] = "Warcraft Movie",
 		[-578] = "World of Warcraft 15th Anniversary",
 		[-579] = "Dark Portal Pass",
 -- Factions / Cities
