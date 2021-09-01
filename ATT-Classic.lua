@@ -1560,6 +1560,13 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 					end
 				end
 				if #regroup > 0 then
+					if app.Settings:GetTooltipSetting("Lore") then
+						for i,j in ipairs(regroup) do
+							if j.lore and j[paramA] and j[paramA] == paramB then
+								tinsert(info, 1, { left = j.lore, wrap = true, color = "ff66ccff" });
+							end
+						end
+					end
 					if app.Settings:GetTooltipSetting("Descriptions") then
 						for i,j in ipairs(regroup) do
 							if j.description and j[paramA] and j[paramA] == paramB then
@@ -1921,6 +1928,10 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 					group.progress = group.progress + 1;
 				end
 			end
+		end
+		
+		if group.lore and app.Settings:GetTooltipSetting("Lore") and not (paramA == "titleID") then
+			tinsert(info, 1, { left = group.lore, wrap = true, color = "ff66ccff" });
 		end
 		
 		if group.description and app.Settings:GetTooltipSetting("Descriptions") and not (paramA == "titleID") then
@@ -7789,6 +7800,16 @@ local function RowOnEnter(self)
 				counter = counter + 1;
 			end
 		end
+		if reference.lore and app.Settings:GetTooltipSetting("Lore") and not reference.itemID then
+			local found = false;
+			for i=1,GameTooltip:NumLines() do
+				if _G["GameTooltipTextLeft"..i]:GetText() == reference.lore then
+					found = true;
+					break;
+				end
+			end
+			if not found then GameTooltip:AddLine(reference.lore, 0.4, 0.8, 1, 1); end
+		end
 		if reference.description and app.Settings:GetTooltipSetting("Descriptions") and not reference.itemID then
 			local found = false;
 			for i=1,GameTooltip:NumLines() do
@@ -7804,8 +7825,8 @@ local function RowOnEnter(self)
 				local objectified = false;
 				local questLogIndex = GetQuestLogIndexByID(reference.questID);
 				if questLogIndex then
-					local description, objective = GetQuestLogQuestText(questLogIndex);
-					if description and app.Settings:GetTooltipSetting("Descriptions") then GameTooltip:AddLine(description, 0.4, 0.8, 1, 1); end
+					local lore, objective = GetQuestLogQuestText(questLogIndex);
+					if lore and app.Settings:GetTooltipSetting("Lore") then GameTooltip:AddLine(lore, 0.4, 0.8, 1, 1); end
 					if objective and app.Settings:GetTooltipSetting("Objectives") then
 						GameTooltip:AddLine(QUEST_OBJECTIVES, 1, 1, 1, 1);
 						GameTooltip:AddLine(objective, 0.4, 0.8, 1, 1);

@@ -122,6 +122,7 @@ local TooltipSettingsBase = {
 		["Enabled"] = true,
 		["KnownBy"] = true,
 		["Locations"] = 5,
+		["Lore"] = true,
 		["MainListScale"] = 1,
 		["MiniListScale"] = 1,
 		["MinimapButton"] = true,
@@ -1894,6 +1895,7 @@ local ids = {
 	["flightPathID"] = "Flight Path ID",
 	["itemID"] = "Item ID",
 	["itemString"] = "Item String",
+	["Lore"] = "Lore",
 	["mapID"] = "Map ID",
 	["modelID"] = "Model ID",
 	["objectID"] = "Object ID",
@@ -1920,7 +1922,7 @@ for _,id in pairs({"artID", "creatureID","creatures","Coordinates","currencyID",
 	last = filter;
 end
 last = nil;
-for _,id in pairs({"itemID","itemString","mapID","modelID","objectID","Objectives","questID","QuestGivers","spellID"}) do
+for _,id in pairs({"itemID","itemString","Lore","mapID","modelID","objectID","Objectives","questID","QuestGivers","spellID"}) do
 	local filter = settings:CreateCheckBox(ids[id],
 	function(self)
 		self:SetChecked(settings:GetTooltipSetting(id));
