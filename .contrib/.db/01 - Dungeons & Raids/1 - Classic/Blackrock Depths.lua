@@ -3,7 +3,7 @@
 -----------------------------------------------------
 _.Instances = { tier(CLASSIC_TIER, {
 	map(BLACKROCK_DEPTHS, {
-		["description"] = "Once the capital city of the Dark Iron dwarves, this volcanic labyrinth now serves as the seat of power for Ragnaros the Firelord. Ragnaros has uncovered the secret to creating life from stone and plans to build an army of unstoppable golems to aid him in conquering the whole of Blackrock Mountain. Obsessed with defeating Nefarian and his draconic minions, Ragnaros will go to any extreme to achieve final victory.",
+		["lore"] = "Once the capital city of the Dark Iron dwarves, this volcanic labyrinth now serves as the seat of power for Ragnaros the Firelord. Ragnaros has uncovered the secret to creating life from stone and plans to build an army of unstoppable golems to aid him in conquering the whole of Blackrock Mountain. Obsessed with defeating Nefarian and his draconic minions, Ragnaros will go to any extreme to achieve final victory.",
 		["lvl"] = 48,
 		["groups"] = {
 			n(FACTIONS, {
@@ -899,7 +899,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 				},
 			})),
 			n(10096, {	-- Ring of Law
-				["description"] = "Approaching the center of the ring will start an event, and the High Justice will appear and approach one of the gates and release three waves of non-elite enemies, followed by one of six possible mini-bosses.",
+				["lore"] = "Approaching the center of the ring will start an event, and the High Justice will appear and approach one of the gates and release three waves of non-elite enemies, followed by one of six possible mini-bosses.",
 				["cr"] = 10096,	-- High Justice Grimstone
 				["groups"] = {
 					n(9031, { 	-- Anub'shiah

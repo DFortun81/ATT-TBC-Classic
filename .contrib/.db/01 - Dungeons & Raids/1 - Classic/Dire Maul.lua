@@ -3,7 +3,7 @@
 -----------------------------------------------------
 _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 	map(DIRE_MAUL, {
-		["description"] = "Dire Maul is a three-wing instance found in north-central Feralas. It was once a proud Highborne city called Eldre'Thalas, but now lies in ruins, overrun by ogres, satyrs, and undead. Only a tiny remnant of the original Highborne population remains in the form of a murderous sect called the Shen'dralar.",
+		["lore"] = "Dire Maul is a three-wing instance found in north-central Feralas. It was once a proud Highborne city called Eldre'Thalas, but now lies in ruins, overrun by ogres, satyrs, and undead. Only a tiny remnant of the original Highborne population remains in the form of a murderous sect called the Shen'dralar.",
 		["lvl"] = 44,
 		["groups"] = {
 			n(FACTIONS, {

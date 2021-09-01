@@ -4,7 +4,7 @@
 
 _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_SIX, {
 	map(NAXXRAMAS, {
-		["description"] = "An ancient Nerubian ziggurat, Naxxramas was torn free from the ground by agents of the Lich King to serve as Kel'Thuzad's base of operations as he spreads the plague throughout Lordaeron.\n\nDue to Kel'Thuzad fighting a war against the Scarlet Crusade, the Argent Dawn, the Forsaken and the humans of the Alliance, as well as constant incursions of adventurers from every race and nation into the Scourge-controlled Plaguelands on a daily basis, his forces have been severely taxed to maintain the security of his necropolis. But now that the gates of Naxxramas are open, Kel'Thuzad's new forces are rapidly sweeping away all opposition to the Scourge.",
+		["lore"] = "An ancient Nerubian ziggurat, Naxxramas was torn free from the ground by agents of the Lich King to serve as Kel'Thuzad's base of operations as he spreads the plague throughout Lordaeron.\n\nDue to Kel'Thuzad fighting a war against the Scarlet Crusade, the Argent Dawn, the Forsaken and the humans of the Alliance, as well as constant incursions of adventurers from every race and nation into the Scourge-controlled Plaguelands on a daily basis, his forces have been severely taxed to maintain the security of his necropolis. But now that the gates of Naxxramas are open, Kel'Thuzad's new forces are rapidly sweeping away all opposition to the Scourge.",
 		["sourceQuest"] = 9121,	-- The Dread Citadel - Naxxramas [Honored]
 		["isRaid"] = true,
 		["lvl"] = 60,
@@ -13,7 +13,7 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_SIX, {
 				["classes"] = { PRIEST, MAGE, WARLOCK, DRUID },
 				["title"] = "Atiesh, Greatstaff of the Guardian",
 				["icon"] = "Interface\\Icons\\INV_Staff_Medivh",
-				["description"] = "Atiesh is one of the most coveted legendaries in the game. In addition to being Best-In-Slot for some specs, it also provides a Unique Party-Wide Bufff:\n\nWarlock: 33 Spell Power and Healing\nMage: 2% Crit\nPriest: 62 Healing\nDruid: 11 Mp5",
+				["lore"] = "Atiesh is one of the most coveted legendaries in the game. In addition to being Best-In-Slot for some specs, it also provides a Unique Party-Wide Bufff:\n\nWarlock: 33 Spell Power and Healing\nMage: 2% Crit\nPriest: 62 Healing\nDruid: 11 Mp5",
 				["maps"] = { CAVERNS_OF_TIME },
 				["isRaid"] = true,
 				["groups"] = {
@@ -1849,7 +1849,7 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_SIX, {
 				["icon"] = "Interface\\Icons\\Spell_Shadow_UnholyStrength",
 				["groups"] = {
 					n(16365, {	-- Master Craftsman Omarion <Brotherhood of the Light>
-						["description"] = "Omarion is an artisan blacksmithing, leatherworking, and tailoring craftsman. Unfortunately he was gravely injured inside Naxxramas and doesn't have much time left. He is willing to teach other master crafters his knowledge so it doesn't die with him.\n\nOmarion can teach the following plans and patterns to master craftsmen who have the required reputation with the Argent Dawn.",
+						["lore"] = "Omarion is an artisan blacksmithing, leatherworking, and tailoring craftsman. Unfortunately he was gravely injured inside Naxxramas and doesn't have much time left. He is willing to teach other master crafters his knowledge so it doesn't die with him.\n\nOmarion can teach the following plans and patterns to master craftsmen who have the required reputation with the Argent Dawn.",
 						["groups"] = {
 							i(22719, {	-- Omarion's Handbook
 								["questID"] = 9233,	-- Omarion's Handbook [Quest]
@@ -1945,7 +1945,7 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_SIX, {
 							i(22350),	-- Desecrated Tunic
 							un(NEVER_IMPLEMENTED, {
 								["itemID"] = 13262,	-- Ashbringer
-								["description"] = "This is here so that you can quickly compare the Corrupted Ashbringer with the original Ashbringer model. It was never available to players.\n\nThis weapon was eventually turned into an Artifact weapon with an updated model for the Legion expansion for Retribution Paladins.",
+								["lore"] = "This is here so that you can quickly compare the Corrupted Ashbringer with the original Ashbringer model. It was never available to players.\n\nThis weapon was eventually turned into an Artifact weapon with an updated model for the Legion expansion for Retribution Paladins.",
 								["collectible"] = false,
 							}),
 							i(22691),	-- Corrupted Ashbringer

@@ -3,7 +3,7 @@
 -----------------------------------------------------
 _.Instances = { tier(CLASSIC_TIER, {
 	map(ULDAMAN, {
-		["description"] = "Uldaman is an ancient Titan vault buried deep within the Khaz Mountains, accessible from the Badlands. Partially excavated, it has since fallen into the hands of the Dark Iron dwarves who seek to corrupt its riches for their master, Ragnaros.",
+		["lore"] = "Uldaman is an ancient Titan vault buried deep within the Khaz Mountains, accessible from the Badlands. Partially excavated, it has since fallen into the hands of the Dark Iron dwarves who seek to corrupt its riches for their master, Ragnaros.",
 		["lvl"] = 35,
 		["groups"] = {
 			n(QUESTS, {
