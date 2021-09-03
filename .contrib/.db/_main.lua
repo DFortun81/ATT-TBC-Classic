@@ -748,7 +748,7 @@ merge = function(...)
 	end
 	return t;
 end
-function unpack (t, i)
+unpack = function(t, i)
   i = i or 1
   if t[i] ~= nil then
 	return t[i], unpack(t, i + 1)

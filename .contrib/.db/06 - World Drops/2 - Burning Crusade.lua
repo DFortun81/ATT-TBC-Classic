@@ -2665,11 +2665,6 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(55, {	-- Consumable
 		
 	}),
-	filter(100, {	-- Mount
-		i(33183),	-- Old Magic Broom
-		i(33182),	-- Swift Flying Broom
-		i(33184),	-- Swift Magic Broom
-	}),
 	filter(101, {	-- Battle Pet
 		
 	}),
