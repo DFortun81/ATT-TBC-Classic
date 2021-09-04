@@ -8,7 +8,7 @@ _.Zones =
 			n(VENDORS, {
 				-- #if AFTER TBC
 				n(3546, {	-- Bernie Heisten <Food & Drink>
-					["coord"] = { 63.5, 17.0, BLASTED_LANDS },
+					["coord"] = { 59.4, 14.9, BLASTED_LANDS },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						applyclassicphase(TBC_PHASE_ONE, i(23848, {	-- Nethergarde Bitter
