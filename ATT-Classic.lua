@@ -1228,6 +1228,28 @@ ResolveSymbolicLink = function(o)
 					-- Select the direct parent object.
 					table.insert(searchResults, o.parent);
 				end
+			elseif cmd == "fill" then
+				-- Instruction to fill with identical content cached elsewhere for this group
+				local cache = app.SearchForField(o.key, o[o.key]);
+				if cache then
+					for k,s in ipairs(cache) do
+						local ref = ResolveSymbolicLink(s);
+						if ref then
+							if s.g then
+								for i,m in ipairs(s.g) do
+									table.insert(searchResults, m);
+								end
+							end
+							for i,m in ipairs(ref) do
+								table.insert(searchResults, m);
+							end
+						else
+							table.insert(searchResults, s);
+						end
+					end
+				else
+					print("Failed to select ", sym[2], sym[3]);
+				end
 			elseif cmd == "pop" then
 				-- Instruction to "pop" all of the group values up one level.
 				local orig = searchResults;
