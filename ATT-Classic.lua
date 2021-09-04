@@ -6677,7 +6677,11 @@ UpdateGroup = function(parent, group)
 					end
 				elseif group.itemID and app.CollectibleLoot and group.f then
 					visible = true;
+				elseif app.Settings:Get("DebugMode") then
+					visible = true;
 				end
+			elseif app.Settings:Get("DebugMode") then
+				visible = true;
 			else
 				visible = false;
 			end
