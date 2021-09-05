@@ -1,7 +1,10 @@
 local OnTooltipForArathiBasin = [[function(t)
 	local reputation = t.reputation;
-	if reputation > 0 and reputation < 42000 then
+	if reputation >= 0 and reputation < 42000 then
 		local isHuman = _.RaceIndex == 1;
+		local repPerConcertedEffort = isHuman and 110 or 100;
+		local x, n = math.ceil((42000 - reputation) / repPerConcertedEffort), math.ceil(42000 / repPerConcertedEffort);
+		GameTooltip:AddDoubleLine("Concerted Efforts", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 		local repPerResourceTick = isHuman and 11 or 10;
 		local x, n = math.ceil((42000 - reputation) / repPerResourceTick), math.ceil(42000 / repPerResourceTick);
 		GameTooltip:AddDoubleLine("Total Resources", ((n - x) * 200) .. " / " .. (n * 200) .. " (" .. (x * 200) .. ")", 1, 1, 1);

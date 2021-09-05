@@ -30,6 +30,19 @@ local HORDE_BATTLE_FOR_WSG_TIER_2 = {	-- Repeatables
 	8434,	-- Battle of Warsong Gulch
 	8435,	-- Battle of Warsong Gulch
 };
+local OnTooltipForWarsongGulch = [[function(t)
+	local reputation = t.reputation;
+	if reputation >= 0 and reputation < 42000 then
+		local isHuman = _.RaceIndex == 1;
+		local repPerConcertedEffort = isHuman and 110 or 100;
+		local x, n = math.ceil((42000 - reputation) / repPerConcertedEffort), math.ceil(42000 / repPerConcertedEffort);
+		GameTooltip:AddDoubleLine("Concerted Efforts", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		local repPerFlagCapture = isHuman and 38.5 or 35;
+		local x, n = math.ceil((42000 - reputation) / repPerFlagCapture), math.ceil(42000 / repPerFlagCapture);
+		GameTooltip:AddDoubleLine("Flags Captured", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		GameTooltip:AddLine(" Each capture is worth " .. repPerFlagCapture .. " rep, +10 on WSG Weekend.", 1, 1, 1);
+	end
+end]];
 _.PvP =
 {
 	n(-304, {	-- Battlegrounds
@@ -37,10 +50,12 @@ _.PvP =
 			n(FACTIONS, {
 				faction(890, {	-- Silverwing Sentinels
 					["icon"] = "Interface\\Icons\\ability_racial_shadowmeld",
+					["OnTooltip"] = OnTooltipForWarsongGulch,
 					["races"] = ALLIANCE_ONLY,
 				}),
 				faction(889, {	-- Warsong Outriders
 					["icon"] = "Interface\\Icons\\Ability_Warrior_WarCry",
+					["OnTooltip"] = OnTooltipForWarsongGulch,
 					["races"] = HORDE_ONLY,
 				}),
 			}),
