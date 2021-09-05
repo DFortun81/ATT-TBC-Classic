@@ -1,13 +1,24 @@
 -----------------------------------------------------
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
+local OnTooltipForShendralar = [[function(t)
+	local reputation = t.reputation;
+	if reputation < 42000 then
+		local isHuman = _.RaceIndex == 1;
+		local repPerTurnIn = isHuman and 220 or 200;
+		local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
+		GameTooltip:AddDoubleLine("Libram Turn Ins", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+	end
+end]];
 _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 	map(DIRE_MAUL, {
 		["lore"] = "Dire Maul is a three-wing instance found in north-central Feralas. It was once a proud Highborne city called Eldre'Thalas, but now lies in ruins, overrun by ogres, satyrs, and undead. Only a tiny remnant of the original Highborne population remains in the form of a murderous sect called the Shen'dralar.",
 		["lvl"] = 44,
 		["groups"] = {
 			n(FACTIONS, {
-				faction(809),	-- Shen'dralar
+				faction(809, {	-- Shen'dralar
+					["OnTooltip"] = OnTooltipForShendralar,
+				}),
 			}),
 			n(QUESTS, {
 				q(1193, {	-- A Broken Trap
