@@ -1,3 +1,14 @@
+local OnTooltipForArathiBasin = [[function(t)
+	local reputation = t.reputation;
+	if reputation > 0 and reputation < 42000 then
+		local isHuman = _.RaceIndex == 1;
+		local repPerResourceTick = isHuman and 11 or 10;
+		local x, n = math.ceil((42000 - reputation) / repPerResourceTick), math.ceil(42000 / repPerResourceTick);
+		GameTooltip:AddDoubleLine("Total Resources", ((n - x) * 200) .. " / " .. (n * 200) .. " (" .. (x * 200) .. ")", 1, 1, 1);
+		GameTooltip:AddDoubleLine("Resource Ticks", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		GameTooltip:AddLine(" Every 200 or 150 Resources during AB Weekend.", 1, 1, 1);
+	end
+end]];
 _.PvP =
 {
 	n(-304, {	-- Battlegrounds
@@ -6,9 +17,11 @@ _.PvP =
 			["groups"] = {
 				n(FACTIONS, {
 					faction(510, {	-- The Defilers
+						["OnTooltip"] = OnTooltipForArathiBasin,
 						["races"] = HORDE_ONLY,
 					}),
 					faction(509, {	-- The League of Arathor
+						["OnTooltip"] = OnTooltipForArathiBasin,
 						["races"] = ALLIANCE_ONLY,
 					}),
 				}),

@@ -25,10 +25,11 @@ local OnTooltipForDarkmoonFaire = [[function(t)
 	local reputation = t.reputation;
 	if reputation < 42000 then
 		local isHuman = _.RaceIndex == 1;
-		local repPerDeckTurnIn = isHuman and 385 or 350;
 -- #if AFTER TBC
+		local repPerDeckTurnIn = isHuman and 385 or 350;
 		local repPerTierTurnIn = isHuman and 275 or 250;
 -- #else
+		local repPerDeckTurnIn = isHuman and 165 or 150;
 		local repPerTierTurnIn = isHuman and 110 or 100;
 -- #endif
 		local tierOneMaxRep = ]] .. TIER_ONE_MAX_REPUTATION[2] .. [[;
