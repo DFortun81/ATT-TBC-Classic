@@ -5,7 +5,11 @@ local OnTooltipForShendralar = [[function(t)
 	local reputation = t.reputation;
 	if reputation < 42000 then
 		local isHuman = _.RaceIndex == 1;
+-- #if AFTER TBC
+		local repPerTurnIn = isHuman and 550 or 500;
+-- #else
 		local repPerTurnIn = isHuman and 220 or 200;
+-- #endif
 		local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
 		GameTooltip:AddDoubleLine("Libram Turn Ins", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 	end
