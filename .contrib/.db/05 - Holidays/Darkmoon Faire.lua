@@ -14,17 +14,57 @@ local TIER_ONE_MAX_REPUTATION = { 909, NEUTRAL + 500 };	-- Darkmoon Faire, must 
 local TIER_TWO_MAX_REPUTATION = { 909, NEUTRAL + 1100 };	-- Darkmoon Faire, must be less than 1100 over Neutral
 local TIER_THREE_MAX_REPUTATION = { 909, NEUTRAL + 1700 };	-- Darkmoon Faire, must be less than 1700 over Neutral
 local TIER_FOUR_MAX_REPUTATION = { 909, NEUTRAL + 2500 };	-- Darkmoon Faire, must be less than 2500 over Neutral
-local TIER_FIVE_MAX_REPUTATION = { 909, FRIENDLY + 2000 };	-- Darkmoon Faire, must be less than 3000 over Friendly
+local TIER_FIVE_MAX_REPUTATION = { 909, FRIENDLY + 2000 };	-- Darkmoon Faire, must be less than 2000 over Friendly
 local DECK_MAX_REPUTATION = { 909, EXALTED + 999 };	-- Darkmoon Faire, must be less than Exalted 999/1000.
 
 -- This is what every online guide ever says, but they're incorrect.
 -- The "More" quests appear to be infinitely repeatable, with 0 reputation gains.
 -- local TIER_FIVE_MAX_REPUTATION = { 909, HONORED - 1 };	-- Darkmoon Faire, must be less than Honored
 
+local OnTooltipForDarkmoonFaire = [[function(t)
+	local reputation = t.reputation;
+	if reputation < 42000 then
+		local isHuman = _.RaceIndex == 1;
+		local repPerDeckTurnIn = isHuman and 385 or 350;
+-- #if AFTER TBC
+		local repPerTierTurnIn = isHuman and 275 or 250;
+-- #else
+		local repPerTierTurnIn = isHuman and 110 or 100;
+-- #endif
+		local tierOneMaxRep = ]] .. TIER_ONE_MAX_REPUTATION[2] .. [[;
+		if reputation < tierOneMaxRep then
+			local x, n = math.ceil((tierOneMaxRep - reputation) / repPerDeckTurnIn), math.ceil(tierOneMaxRep / repPerDeckTurnIn);
+			GameTooltip:AddDoubleLine("Complete Tier 1 Quests", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		end
+		local tierTwoMaxRep = ]] .. TIER_TWO_MAX_REPUTATION[2] .. [[;
+		if reputation >= tierOneMaxRep and reputation < tierTwoMaxRep then
+			local x, n = math.ceil((tierTwoMaxRep - reputation) / repPerDeckTurnIn), math.ceil(tierTwoMaxRep / repPerDeckTurnIn);
+			GameTooltip:AddDoubleLine("Complete Tier 2 Quests", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		end
+		local tierThreeMaxRep = ]] .. TIER_THREE_MAX_REPUTATION[2] .. [[;
+		if reputation >= tierTwoMaxRep and reputation < tierThreeMaxRep then
+			local x, n = math.ceil((tierThreeMaxRep - reputation) / repPerDeckTurnIn), math.ceil(tierThreeMaxRep / repPerDeckTurnIn);
+			GameTooltip:AddDoubleLine("Complete Tier 3 Quests", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		end
+		local tierFourMaxRep = ]] .. TIER_FOUR_MAX_REPUTATION[2] .. [[;
+		if reputation >= tierThreeMaxRep and reputation < tierFourMaxRep then
+			local x, n = math.ceil((tierFourMaxRep - reputation) / repPerDeckTurnIn), math.ceil(tierFourMaxRep / repPerDeckTurnIn);
+			GameTooltip:AddDoubleLine("Complete Tier 4 Quests", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		end
+		local tierFiveMaxRep = ]] .. TIER_FIVE_MAX_REPUTATION[2] .. [[;
+		if reputation >= tierFourMaxRep and reputation < tierFiveMaxRep then
+			local x, n = math.ceil((tierFiveMaxRep - reputation) / repPerDeckTurnIn), math.ceil(tierFiveMaxRep / repPerDeckTurnIn);
+			GameTooltip:AddDoubleLine("Complete Tier 5 Quests", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		end
+		local x, n = math.ceil((42000 - reputation) / repPerDeckTurnIn), math.ceil(42000 / repPerDeckTurnIn);
+		GameTooltip:AddDoubleLine("Turn in Decks.", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+	end
+end]];
 _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 {
 	faction(909, {	-- Darkmoon Faire
 		["icon"] = asset("dmf"),
+		["OnTooltip"] = OnTooltipForDarkmoonFaire,
 		["maps"] = {
 			ELWYNN_FOREST,
 			MULGORE,
@@ -853,44 +893,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					},
 				}),
 			}),
-			n(VENDORS, {
-				n(14860, {	-- Flik
-					["coords"] = {
-						{ 36.4, 36.0, MULGORE },
-						{ 37.6, 39.6, MULGORE },
-						{ 42.8, 66.6, ELWYNN_FOREST },
-						{ 41.4, 69.8, ELWYNN_FOREST },
-						{ 43.6, 71.0, ELWYNN_FOREST },
-						-- #if AFTER TBC
-						{ 34.3, 35.1, TERROKAR_FOREST },
-						{ 35.8, 33.8, TERROKAR_FOREST },
-						-- #endif
-					},
-					["groups"] = {
-						HEAVY_LEATHER_BALL,
-						i(11026),	-- Tree Frog Box
-						i(11027),	-- Wood Frog Box
-					},
-				}),
-				n(14846, {	-- Lhara <Darkmoon Faire Exotic Goods>
-					["coords"] = {
-						{ 36.4, 38.0, MULGORE },
-						{ 41.2, 69.8, ELWYNN_FOREST },
-						-- #if AFTER TBC
-						{ 34.3, 34.4, TERROKAR_FOREST },
-						-- #endif
-					},
-					["groups"] = {
-						BIG_STICK,
-						DARING_DIRK,
-						i(19303),	-- Darkmoon Necklace
-						i(19302),	-- Darkmoon Ring
-						DENSE_SHORTBOW,
-						FINE_SHORTBOW,
-						STURDY_RECURVE,
-						SLYVAN_SHORTBOW,
-					},
-				}),
+			n(REWARDS, {
 				i(19422, {	-- Darkmoon Faire Fortune
 					["description"] = "This is a reward from completing the Sayge's Fortune. The answers you select to get your buff do not affect the contents of this container.\n\nSayge offers a buff if you answer his questions correctly.\n\n1:1 +10% Damage\n1:2  +25 Magical Resistance\n1:3 +10% Armor\n2:1 +10% Spirit\n2:2 +10% Int\n2:3  +25 Magical Resistance\n3:1 +10% Stamina\n3:2 +10% Strength\n3:3 +10% Agility\n4:1 +10% Int\n4:2 +10% Spirit\n4:3 +10% Armor",
 					["cr"] = 14822,	-- Sayge
@@ -932,6 +935,45 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19452),	-- Sayge's Fortune #27
 						i(19453),	-- Sayge's Fortune #28
 						i(19454),	-- Sayge's Fortune #29
+					},
+				}),
+			}),
+			n(VENDORS, {
+				n(14860, {	-- Flik
+					["coords"] = {
+						{ 36.4, 36.0, MULGORE },
+						{ 37.6, 39.6, MULGORE },
+						{ 42.8, 66.6, ELWYNN_FOREST },
+						{ 41.4, 69.8, ELWYNN_FOREST },
+						{ 43.6, 71.0, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.3, 35.1, TERROKAR_FOREST },
+						{ 35.8, 33.8, TERROKAR_FOREST },
+						-- #endif
+					},
+					["groups"] = {
+						HEAVY_LEATHER_BALL,
+						i(11026),	-- Tree Frog Box
+						i(11027),	-- Wood Frog Box
+					},
+				}),
+				n(14846, {	-- Lhara <Darkmoon Faire Exotic Goods>
+					["coords"] = {
+						{ 36.4, 38.0, MULGORE },
+						{ 41.2, 69.8, ELWYNN_FOREST },
+						-- #if AFTER TBC
+						{ 34.3, 34.4, TERROKAR_FOREST },
+						-- #endif
+					},
+					["groups"] = {
+						BIG_STICK,
+						DARING_DIRK,
+						i(19303),	-- Darkmoon Necklace
+						i(19302),	-- Darkmoon Ring
+						DENSE_SHORTBOW,
+						FINE_SHORTBOW,
+						STURDY_RECURVE,
+						SLYVAN_SHORTBOW,
 					},
 				}),
 			}),
