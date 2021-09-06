@@ -1232,21 +1232,25 @@ ResolveSymbolicLink = function(o)
 				-- Instruction to fill with identical content cached elsewhere for this group
 				local cache = app.SearchForField(o.key, o[o.key]);
 				if cache then
+					o.symbolizing = true;
 					for k,s in ipairs(cache) do
-						local ref = ResolveSymbolicLink(s);
-						if ref then
-							if s.g then
-								for i,m in ipairs(s.g) do
+						if not s.symbolizing then
+							local ref = ResolveSymbolicLink(s);
+							if ref then
+								if s.g then
+									for i,m in ipairs(s.g) do
+										table.insert(searchResults, m);
+									end
+								end
+								for i,m in ipairs(ref) do
 									table.insert(searchResults, m);
 								end
+							else
+								table.insert(searchResults, s);
 							end
-							for i,m in ipairs(ref) do
-								table.insert(searchResults, m);
-							end
-						else
-							table.insert(searchResults, s);
 						end
 					end
+					o.symbolizing = nil;
 				else
 					print("Failed to select ", sym[2], sym[3]);
 				end
