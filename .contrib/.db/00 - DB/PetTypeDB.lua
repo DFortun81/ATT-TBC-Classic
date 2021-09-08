@@ -169,6 +169,9 @@ _.ItemSpeciesDB = {
 	[163560] = {
 		["petTypeID"] = 2,
 	},
+	[12529] = {
+		["petTypeID"] = 8,
+	},
 	[68673] = {
 		["petTypeID"] = 8,
 	},

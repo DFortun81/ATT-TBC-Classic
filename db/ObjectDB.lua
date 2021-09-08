@@ -263,6 +263,7 @@ select(2, ...).ObjectNames = {
 	[185165] = "Legion Communicator",
 	[185166] = "Wanted Poster",
 	[185168] = "Reinforced Fel Iron Chest",
+	[186267] = "Pumpkin Shrine",
 	[186426] = "Wanted Poster",
 	[186887] = "Large Jack-o'-Lantern",
 	[187559] = "Horde Bonfire",
