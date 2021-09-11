@@ -620,11 +620,6 @@ _.Zones =
 						recipe(688),	-- Summon Imp
 					},
 				}),
-				un(NEVER_IMPLEMENTED, q(7962, {	-- Wabbit Pelts
-					["g"] = {
-						i(13913),	-- 22 Pound Lobster
-					},
-				})),
 				q(176, {	-- Wanted: "Hogger"
 					["providers"] = {
 						{ "o", 68 },	-- Wanted Poster
@@ -650,10 +645,6 @@ _.Zones =
 						i(6215),	-- Balanced Fighting Stick
 					},
 				}),
-				un(NEVER_IMPLEMENTED, q(7961, {	-- Waskily Wabbits!
-					i(3300),	-- Rabbit's Foot
-					i(8497),	-- Rabbit Crate (Snowshoe)
-				})),
 				q(239, {	-- Westbrook Garrison Needs Help!
 					["qg"] = 240,	-- Marshal Dughan
 					["sourceQuest"] = 76,	-- The Jasperlode Mine
@@ -687,3 +678,13 @@ _.Zones =
 		}),
 	}),
 };
+
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	n(QUESTS, {
+		q(7962),	-- Wabbit Pelts
+			-- i(13913),	-- 22 Pound Lobster
+		q(7961),	-- Waskily Wabbits!
+			-- i(3300),	-- Rabbit's Foot
+			-- i(8497),	-- Rabbit Crate (Snowshoe)
+	}),
+});

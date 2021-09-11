@@ -46,6 +46,13 @@ _.Zones =
 						i(18787),	-- Swift Gray Ram
 					},
 				}),
+				n(1263, {	-- Yarlyn Amberstill
+					["coord"] = { 63.2, 50.8, DUN_MOROGH },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(8497),	-- Rabbit Crate (Snowshoe)
+					},
+				}),
 			}),
 		}),
 	}),
