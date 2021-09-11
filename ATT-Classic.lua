@@ -3113,7 +3113,7 @@ local fields = {
 				app.CurrentCharacter.BattlePets[t.speciesID] = nil;
 				ATTAccountWideData.BattlePets[t.speciesID] = nil;
 				for guid,characterData in pairs(ATTCharacterData) do
-					if characterData.BattlePets[t.speciesID] then
+					if characterData.BattlePets and characterData.BattlePets[t.speciesID] then
 						ATTAccountWideData.BattlePets[t.speciesID] = 1;
 					end
 				end
@@ -9360,6 +9360,26 @@ app:GetWindow("Attuned", UIParent, function(self)
 						end
 						SendGuildMessage(message);
 						self:Reset();
+						
+						--[[
+						local s, count = "", 0;
+						for i,o in ipairs(self.data.guildMembersHeader.g) do
+							for j,p in ipairs(o.g) do
+								if p.guid then
+									if count > 0 then
+										s = s .. "\n";
+									end
+									s = s .. i .. "\\t" .. p.guid .. "\\t" .. p.name;
+									if p.classID then
+										s = s .. "\\t" .. p.classID;
+									end
+									count = count + 1;
+								end
+							end
+						end
+						
+						app:ShowPopupDialogWithMultiLineEditBox(s);
+						]]--
 						return true;
 					end,
 					['OnUpdate'] = app.AlwaysShowUpdate,
