@@ -8,6 +8,7 @@ _.Zones =
 			n(RARES, {
 				n(1920, {	-- Dalaran Spellscribe
 					["coord"] = { 63.4, 65.2, SILVERPINE_FOREST },
+					["races"] = HORDE_ONLY,
 					["groups"] = {
 						i(8491),	-- Cat Carrier (Black Tabby)
 						i(4437),	-- Channeler's Staff

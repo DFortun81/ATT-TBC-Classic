@@ -23,6 +23,7 @@ _.Zones =
 					["cr"] = 2415,	-- Warden Belamoore
 				}),
 				i(8491, {	-- Cat Carrier (Black Tabby)
+					["races"] = HORDE_ONLY,
 					["crs"] = {
 						2271,	-- Dalaran Shield Guard
 						2358,	-- Dalaran Summoner
