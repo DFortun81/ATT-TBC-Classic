@@ -635,7 +635,7 @@ _.Craftables = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 			i(23746),	-- Adamantite Rifle
 			i(23742),	-- Fel Iron Musket
 			i(23747),	-- Felsteel Boomstick
-			applyclassicphase(TBC_PHASE_THREE, i(32756)),	-- Gyro-Balanced Khorium Destroyer
+			applyclassicphase(TBC_PHASE_TWO, i(32756)),	-- Gyro-Balanced Khorium Destroyer
 			i(23748),	-- Ornate Khorium Rifle
 		}),
 		category(755, {	-- Scopes

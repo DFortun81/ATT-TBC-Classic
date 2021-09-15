@@ -873,7 +873,7 @@ profession(ENGINEERING, {
 					["name"] = "Felsteel Boomstick",
 					["recipeID"] = 30314
 				},
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Gyro-balanced Khorium Destroyer",
 					["recipeID"] = 41307
 				}),
