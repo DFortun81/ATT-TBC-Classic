@@ -703,18 +703,22 @@ profession(ENGINEERING, {
 				},
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Deathblow X11 Goggles",
+					["classes"] = { ROGUE, MONK, DRUID },
 					["recipeID"] = 41317
 				}),
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Destruction Holo-gogs",
+					["classes"] = { PRIEST, MAGE, WARLOCK },
 					["recipeID"] = 41320
 				}),
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Furious Gizmatic Goggles",
+					["classes"] = { WARRIOR, PALADIN, DEATHKNIGHT },
 					["recipeID"] = 40274
 				}),
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Gadgetstorm Goggles",
+					["classes"] = { SHAMAN },
 					["recipeID"] = 41315
 				}),
 				applyclassicphase(TBC_PHASE_FIVE, {
@@ -733,6 +737,7 @@ profession(ENGINEERING, {
 				},
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Justicebringer 2000 Specs",
+					["classes"] = { PALADIN },
 					["recipeID"] = 41311
 				}),
 				applyclassicphase(TBC_PHASE_FIVE, {
@@ -747,10 +752,12 @@ profession(ENGINEERING, {
 				}),
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Living Replicator Specs",
+					["classes"] = { SHAMAN },
 					["recipeID"] = 41316
 				}),
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Magnified Moon Specs",
+					["classes"] = { DRUID },
 					["recipeID"] = 41319
 				}),
 				applyclassicphase(TBC_PHASE_FIVE, {
@@ -764,6 +771,7 @@ profession(ENGINEERING, {
 				},
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Powerheal 4000 Lens",
+					["classes"] = { PRIEST },
 					["recipeID"] = 41321
 				}),
 				applyclassicphase(TBC_PHASE_FIVE, {
@@ -783,6 +791,7 @@ profession(ENGINEERING, {
 				}),
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Surestrike Goggles v2.0",
+					["classes"] = { HUNTER, SHAMAN },
 					["recipeID"] = 41314
 				}),
 				applyclassicphase(TBC_PHASE_FIVE, {
@@ -792,6 +801,7 @@ profession(ENGINEERING, {
 				}),
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Tankatronic Goggles",
+					["classes"] = { WARRIOR, PALADIN, DEATHKNIGHT },
 					["recipeID"] = 41312
 				}),
 				{
@@ -800,6 +810,7 @@ profession(ENGINEERING, {
 				},
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Wonderheal XT40 Shades",
+					["classes"] = { DRUID },
 					["recipeID"] = 41318
 				}),
 				applyclassicphase(TBC_PHASE_FIVE, {
