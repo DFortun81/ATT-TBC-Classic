@@ -1223,15 +1223,12 @@ _.Zones =
 						i(29129),	-- Anchorite's Robes
 						i(29130),	-- Auchenai Staff
 						-- #if BEFORE CATA
-						i(23143),	-- Design: Dazzling Deep Peridot [TBC] / Design: Purified Shadow Draenite [CATA+]
 						i(23149),	-- Design: Gleaming Golden Draenite [TBC] / Design: Smooth Golden Draenite [CATA+]
 						-- #endif
 						i(24177),	-- Design: Pendant of Shadow's End
 						-- #if AFTER CATA
-						i(23143),	-- Design: Purified Shadow Draenite [CATA+] / Design: Dazzling Deep Peridot [TBC]
 						i(23145),	-- Design: Purified Shadow Draenite [CATA+] / Design: Royal Shadow Draenite [TBC]
-						-- #endif
-						-- #if BEFORE CATA
+						-- #else
 						i(23145),	-- Design: Royal Shadow Draenite [TBC] / Design: Purified Shadow Draenite [CATA+]
 						-- #endif
 						-- #if AFTER CATA
@@ -1265,10 +1262,14 @@ _.Zones =
 					["groups"] = {
 						-- #if AFTER CATA
 						i(23133),	-- Design: Brilliant Blood Garnet [CATA+] / Design: Runed Blood Garnet [TBC]
+						-- #else
+						i(23143),	-- Design: Dazzling Deep Peridot [TBC] / Design: Purified Shadow Draenite [CATA+]
 						-- #endif
 						i(24176),	-- Design: Pendant of Withering
 						-- #if BEFORE CATA
 						i(23133),	-- Design: Runed Blood Garnet [TBC] / Design: Brilliant Blood Garnet [CATA+]
+						-- #else
+						i(23143),	-- Design: Dazzling Deep Peridot [TBC] / Design: Purified Shadow Draenite [CATA+]
 						-- #endif
 						i(29134),	-- Gauntlets of the Chosen
 						i(29701),	-- Pattern: Enchanted Clefthoof Boots
