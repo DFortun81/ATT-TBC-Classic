@@ -1,6 +1,29 @@
 --------------------------------------------------
 --    A C H I E V E M E N T S    M O D U L E    --
 --------------------------------------------------
+local INSANE_IN_THE_MEMBRANE_OnClick = [[function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local dmf = _.CreateFaction(t.dmf.factionID);
+		dmf.OnTooltip = t.dmf.OnTooltip;
+		local bloodsail = _.CreateFaction(t.bloodsail.factionID);
+		bloodsail.minReputation = { t.bloodsail.factionID, ]] .. HONORED .. [[ };
+		bloodsail.OnTooltip = t.bloodsail.OnTooltip;
+		local template = {
+			bloodsail,
+			t.bb,
+			t.everlook,
+			t.gadgetzan,
+			t.ratchet,
+			dmf,
+			t.ravenholdt,
+			t.shendralar,
+		};
+		local clone = _.CreateMiniListForGroup(_.CreateNPC(t[t.key], template)).data;
+		clone.description = t.description;
+		return true;
+	end
+end]];
 local INSANE_IN_THE_MEMBRANE_OnUpdate = [[function(t)
 	local collectible = _.CollectibleAchievements;
 	if collectible then
@@ -83,14 +106,15 @@ local INSANE_IN_THE_MEMBRANE_OnTooltip = [[function(t)
 		GameTooltip:AddDoubleLine(" |T" .. t.everlook.icon .. ":0|t " .. t.everlook.text, _.L[t.everlook.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 		GameTooltip:AddDoubleLine(" |T" .. t.gadgetzan.icon .. ":0|t " .. t.gadgetzan.text, _.L[t.gadgetzan.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 		GameTooltip:AddDoubleLine(" |T" .. t.ratchet.icon .. ":0|t " .. t.ratchet.text, _.L[t.ratchet.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
-		GameTooltip:AddDoubleLine(" |T" .. t.ravenholdt.icon .. ":0|t " .. t.ravenholdt.text, _.L[t.ravenholdt.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 		GameTooltip:AddDoubleLine(" |T" .. t.dmf.icon .. ":0|t " .. t.dmf.text, _.L[t.dmf.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+		GameTooltip:AddDoubleLine(" |T" .. t.ravenholdt.icon .. ":0|t " .. t.ravenholdt.text, _.L[t.ravenholdt.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 		GameTooltip:AddDoubleLine(" |T" .. t.shendralar.icon .. ":0|t " .. t.shendralar.text, _.L[t.shendralar.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 	end
 end]];
 _.Achievements =
 {
 	n(-200001, {	-- Insane in the Membrane
+		["OnClick"] = INSANE_IN_THE_MEMBRANE_OnClick,
 		["OnTooltip"] = INSANE_IN_THE_MEMBRANE_OnTooltip,
 		["OnUpdate"] = INSANE_IN_THE_MEMBRANE_OnUpdate,
 		["description"] = "Insane in the Membrane is a Feat of Strength that rewards the title <The Insane>. This feat requires you to become honored with the Bloodsail Buccaneers and exalted with the Steamwheedle Cartel (Booty Bay, Everlook, Gadgetzan, Ratchet), Ravenholdt, Darkmoon Faire, and the Shen'dralar. It does not require that all of these reputation levels be reached at the same time, however, this may not be a thing until the achievement itself is introduced. Raising reputation with these factions is typically very difficult, time-consuming, and costly.",
