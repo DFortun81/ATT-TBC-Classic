@@ -7211,6 +7211,7 @@ local function CreateMiniListForGroup(group)
 		end
 		popout:Toggle(true);
 	end
+	return popout;
 end
 local function ClearRowData(self)
 	self.ref = nil;
