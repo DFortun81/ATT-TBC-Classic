@@ -409,7 +409,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				{
 					["name"] = "Dazzling Deep Peridot",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
-					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 					["recipeID"] = 28924
 				},
 				applyclassicphase(TBC_PHASE_THREE, {
@@ -836,6 +836,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				{
 					["name"] = "Delicate Blood Garnet [CATA+] / Bright Blood Garnet [TBC]",
 					["recipeID"] = 34590
+				},
+				-- #else
+				{
+					["name"] = "Delicate Blood Garnet [TBC] / Removed with Cata",
+					["recipeID"] = 28907
 				},
 				-- #endif
 				applyclassicphase(TBC_PHASE_THREE, {
@@ -5830,7 +5835,6 @@ itemrecipe("Design: Crimson Sun", 33156, 42589);
 itemrecipe("Design: Dark Iron Scorpid", 21956, 26914);
 itemrecipe("Design: Dawnstone Crab - Alliance", 24180, 31080);
 itemrecipe("Design: Dawnstone Crab - Horde", 31358, 31080);
-itemrecipe("Design: Delicate Blood Garnet", 23134, 34590);
 itemrecipe("Design: Delicate Crimson Spinel", 32277, 39706);
 itemrecipe("Design: Delicate Crimson Spinel", 35246, 39706);
 itemrecipe("Design: Delicate Eternium Ring", 24164, 31060);
@@ -5993,6 +5997,7 @@ itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"
 itemrecipe({"Design: Wicked Pyrestone [TBC]", "Design: Deadly Pyrestone [CATA+]"}, 35271, 39738);
 
 -- Recipes that got new Spell IDs with Cata?!
+itemrecipe("Design: Delicate Blood Garnet", 23134, 28907, 34590);
 itemrecipe({"Design: Enduring Talasite [TBC]", "Design: Regal Talasite [CATA+]"}, 24217, 31110, 46803);
 itemrecipe({"Design: Great Golden Draenite [TBC]", "Design: Rigid Azure Moonstone [CATA+]"}, 31870, 39451, 28948);
 itemrecipe({"Design: Lustrous Azure Moonstone [TBC]", "Design: Sparkling Azure Moonstone [CATA+]"}, 23155, 28957, 28953);
