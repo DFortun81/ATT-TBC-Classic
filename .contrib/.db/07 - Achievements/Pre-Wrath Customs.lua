@@ -114,10 +114,14 @@ end]];
 local REPUTATIONS_OnClick = [[function(row, button)
 	if button == "RightButton" then
 		local t = row.ref;
-		local template = nil;
+		local template = {};
 		for i,o in ipairs(_:GetDataCache().g) do
 			if o.headerID == -8 then
-				template = o.g;
+				for j,p in ipairs(o.g) do
+					if (not p.minReputation or (p.minReputation[1] == p.factionID and p.minReputation[2] >= 41999)) and (not p.maxReputation or (p.maxReputation[1] ~= p.factionID and p.reputation >= 0)) then
+						table.insert(template, p);
+					end
+				end
 			end
 		end
 		
@@ -134,7 +138,7 @@ local REPUTATIONS_OnUpdate = [[function(t)
 		local count = 0;
 		local factions = _.SearchForFieldContainer("factionID");
 		for achID,g in pairs(factions) do
-			if g[1].collected then
+			if g[1].standing == 8 then
 				count = count + 1;
 			end
 		end
@@ -167,7 +171,7 @@ local REPUTATIONS_OnTooltip = [[function(t)
 		for i,o in ipairs(_:GetDataCache().g) do
 			if o.headerID == -8 then
 				for j,p in ipairs(o.g) do
-					if p.visible then
+					if p.visible and (not p.minReputation or (p.minReputation[1] == p.factionID and p.minReputation[2] >= 41999)) and (not p.maxReputation or (p.maxReputation[1] ~= p.factionID and p.reputation >= 0)) then
 						GameTooltip:AddDoubleLine(" |T" .. p.icon .. ":0|t " .. p.text, _.L[p.standing >= 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 					end
 				end
@@ -270,7 +274,7 @@ _.Achievements =
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 35,
 	})),
-	applyclassicphase(TBC_PHASE_THREE, n(-200014, {	-- 40 Exalted Reputations
+	applyclassicphase(WRATH_PHASE_ONE, n(-200014, {	-- 40 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
