@@ -10,7 +10,11 @@ local OnUpdateForBloodsail = [[function(t)
 			if f and #f > 0 then t.dressing = f[1]; end
 		end
 		if t.dressing.collected then repForDressing = 0; end
+-- #if AFTER TBC
 		local repForAdmiral = isHuman and 550 or 500;
+-- #else
+		local repForAdmiral = isHuman and 220 or 200;
+-- #endif
 		if not t.admiral then
 			local f = _.SearchForField("questID", 4621);
 			if f and #f > 0 then t.admiral = f[1]; end

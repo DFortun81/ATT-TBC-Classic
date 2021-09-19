@@ -216,16 +216,16 @@ _.Achievements =
 		["OnUpdate"] = RIDING_SKILL_OnUpdate,
 		["rank"] = 2,
 	}),
-	n(-200004, {	-- Into the Wild Blue Yonder
+	applyclassicphase(TBC_PHASE_ONE, n(-200004, {	-- Into the Wild Blue Yonder
 		["spellID"] = 34090,	-- Expert Riding
 		["OnUpdate"] = RIDING_SKILL_OnUpdate,
 		["rank"] = 3,
-	}),
-	n(-200005, {	-- Breaking the Sound Barrier
+	})),
+	applyclassicphase(TBC_PHASE_ONE, n(-200005, {	-- Breaking the Sound Barrier
 		["spellID"] = 34091,	-- Artisan Riding
 		["OnUpdate"] = RIDING_SKILL_OnUpdate,
 		["rank"] = 4,
-	}),
+	})),
 	n(-200006, {	-- Somebody Likes Me
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
@@ -256,18 +256,18 @@ _.Achievements =
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 20,
 	}),
-	n(-200011, {	-- 25 Exalted Reputations
+	applyclassicphase(TBC_PHASE_ONE, n(-200011, {	-- 25 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 25,
-	}),
-	n(-200012, {	-- 30 Exalted Reputations
+	})),
+	applyclassicphase(TBC_PHASE_ONE, n(-200012, {	-- 30 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 30,
-	}),
+	})),
 	applyclassicphase(TBC_PHASE_TWO, n(-200013, {	-- 35 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
