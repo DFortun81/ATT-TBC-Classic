@@ -1,6 +1,24 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+local OnUpdateForBloodsail = [[function(t)
+	if t.collectible then
+		local isHuman = _.RaceIndex == 1;
+		local repForDressing = isHuman and 11 or 10;
+		if not t.dressing then
+			local f = _.SearchForField("questID", 9272);
+			if f and #f > 0 then t.dressing = f[1]; end
+		end
+		if t.dressing.collected then repForDressing = 0; end
+		local repForAdmiral = isHuman and 550 or 500;
+		if not t.admiral then
+			local f = _.SearchForField("questID", 4621);
+			if f and #f > 0 then t.admiral = f[1]; end
+		end
+		if t.admiral.collected then repForAdmiral = 0; end
+		t.minReputation[2] = math.max(t.reputation, 41999) + repForDressing + repForAdmiral;
+	end
+end]];
 local OnTooltipForBloodsail = [[function(t)
 	local reputation = t.reputation;
 	if reputation < 42000 then
@@ -39,6 +57,9 @@ local OnTooltipForBloodsail = [[function(t)
 				end
 			end
 		end
+	else
+		if not t.dressing.collected then GameTooltip:AddLine("Complete 'Dressing the Part'."); end
+		if not t.admiral.collected then GameTooltip:AddLine("Complete 'Avast Ye Admiral'."); end
 	end
 end]];
 _.Zones =
@@ -50,6 +71,7 @@ _.Zones =
 					["icon"] = icon("INV_Misc_Bandana_03"),
 					["minReputation"] = { 87, EXALTED - 1 },	-- Bloodsail Buccaneers, must be 20999 into Revered.
 					["OnTooltip"] = OnTooltipForBloodsail,
+					["OnUpdate"] = OnUpdateForBloodsail,
 					["maps"] = { BADLANDS },
 					["crs"] = { 9179 },	-- Jazzrik
 				}),
