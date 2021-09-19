@@ -111,6 +111,70 @@ local INSANE_IN_THE_MEMBRANE_OnTooltip = [[function(t)
 		GameTooltip:AddDoubleLine(" |T" .. t.shendralar.icon .. ":0|t " .. t.shendralar.text, _.L[t.shendralar.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 	end
 end]];
+local REPUTATIONS_OnClick = [[function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local template = nil;
+		for i,o in ipairs(_:GetDataCache().g) do
+			if o.headerID == -8 then
+				template = o.g;
+			end
+		end
+		
+		local clone = _.CreateMiniListForGroup(_.CreateNPC(t[t.key], template)).data;
+		clone.OnTooltip = t.OnTooltip;
+		clone.OnUpdate = t.OnUpdate;
+		clone.rank = t.rank;
+		return true;
+	end
+end]];
+local REPUTATIONS_OnUpdate = [[function(t)
+	local collectible = _.CollectibleAchievements;
+	if collectible then
+		local count = 0;
+		local factions = _.SearchForFieldContainer("factionID");
+		for achID,g in pairs(factions) do
+			if g[1].collected then
+				count = count + 1;
+			end
+		end
+		if t.rank > 1 then
+			t.progress = math.min(count, t.rank);
+			t.total = t.rank;
+			
+			local parent = t.parent;
+			parent.total = (parent.total or 0) + t.total;
+			parent.progress = (parent.progress or 0) + t.progress;
+			t.visible = t.progress < t.total or _.CollectedItemVisibilityFilter(t);
+		else
+			t.collected = count >= 1;
+			t.collectible = collectible;
+			t.visible = not t.collected or _.CollectedItemVisibilityFilter(t);
+		end
+	else
+		t.collected = nil;
+		t.collectible = nil;
+		t.progress = nil;
+		t.total = nil;
+		t.visible = false;
+	end
+	return true;
+end]];
+local REPUTATIONS_OnTooltip = [[function(t)
+	GameTooltip:AddLine("Raise " .. t.rank .. " reputations to Exalted.");
+	if t.total and t.progress < t.total and t.rank >= 25 then
+		GameTooltip:AddLine(" ");
+		for i,o in ipairs(_:GetDataCache().g) do
+			if o.headerID == -8 then
+				for j,p in ipairs(o.g) do
+					if p.visible then
+						GameTooltip:AddDoubleLine(" |T" .. p.icon .. ":0|t " .. p.text, _.L[p.standing >= 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+					end
+				end
+			end
+		end
+	end
+end]];
 local RIDING_SKILL_OnUpdate = [[function(t)
 	local collectible = _.CollectibleAchievements;
 	t.collectible = collectible;
@@ -158,4 +222,58 @@ _.Achievements =
 		["OnUpdate"] = RIDING_SKILL_OnUpdate,
 		["rank"] = 4,
 	}),
+	n(-200006, {	-- Somebody Likes Me
+		["OnClick"] = REPUTATIONS_OnClick,
+		["OnTooltip"] = REPUTATIONS_OnTooltip,
+		["OnUpdate"] = REPUTATIONS_OnUpdate,
+		["rank"] = 1,
+	}),
+	n(-200007, {	-- 5 Exalted Reputations
+		["OnClick"] = REPUTATIONS_OnClick,
+		["OnTooltip"] = REPUTATIONS_OnTooltip,
+		["OnUpdate"] = REPUTATIONS_OnUpdate,
+		["rank"] = 5,
+	}),
+	n(-200008, {	-- 10 Exalted Reputations
+		["OnClick"] = REPUTATIONS_OnClick,
+		["OnTooltip"] = REPUTATIONS_OnTooltip,
+		["OnUpdate"] = REPUTATIONS_OnUpdate,
+		["rank"] = 10,
+	}),
+	n(-200009, {	-- 15 Exalted Reputations
+		["OnClick"] = REPUTATIONS_OnClick,
+		["OnTooltip"] = REPUTATIONS_OnTooltip,
+		["OnUpdate"] = REPUTATIONS_OnUpdate,
+		["rank"] = 15,
+	}),
+	n(-200010, {	-- 20 Exalted Reputations
+		["OnClick"] = REPUTATIONS_OnClick,
+		["OnTooltip"] = REPUTATIONS_OnTooltip,
+		["OnUpdate"] = REPUTATIONS_OnUpdate,
+		["rank"] = 20,
+	}),
+	n(-200011, {	-- 25 Exalted Reputations
+		["OnClick"] = REPUTATIONS_OnClick,
+		["OnTooltip"] = REPUTATIONS_OnTooltip,
+		["OnUpdate"] = REPUTATIONS_OnUpdate,
+		["rank"] = 25,
+	}),
+	n(-200012, {	-- 30 Exalted Reputations
+		["OnClick"] = REPUTATIONS_OnClick,
+		["OnTooltip"] = REPUTATIONS_OnTooltip,
+		["OnUpdate"] = REPUTATIONS_OnUpdate,
+		["rank"] = 30,
+	}),
+	applyclassicphase(TBC_PHASE_TWO, n(-200013, {	-- 35 Exalted Reputations
+		["OnClick"] = REPUTATIONS_OnClick,
+		["OnTooltip"] = REPUTATIONS_OnTooltip,
+		["OnUpdate"] = REPUTATIONS_OnUpdate,
+		["rank"] = 35,
+	})),
+	applyclassicphase(TBC_PHASE_THREE, n(-200014, {	-- 40 Exalted Reputations
+		["OnClick"] = REPUTATIONS_OnClick,
+		["OnTooltip"] = REPUTATIONS_OnTooltip,
+		["OnUpdate"] = REPUTATIONS_OnUpdate,
+		["rank"] = 40,
+	})),
 };
