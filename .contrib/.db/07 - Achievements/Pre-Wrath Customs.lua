@@ -111,6 +111,25 @@ local INSANE_IN_THE_MEMBRANE_OnTooltip = [[function(t)
 		GameTooltip:AddDoubleLine(" |T" .. t.shendralar.icon .. ":0|t " .. t.shendralar.text, _.L[t.shendralar.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 	end
 end]];
+local RIDING_SKILL_OnUpdate = [[function(t)
+	local collectible = _.CollectibleAchievements;
+	t.collectible = collectible;
+	if collectible then
+		if _.IsSpellKnown(t.spellID, t.rank) then
+			_.CurrentCharacter.Spells[t.spellID] = 1;
+			ATTAccountWideData.Spells[t.spellID] = 1;
+			t.collected = 1;
+			return;
+		else
+			t.collected = nil;
+			_.CurrentCharacter.Spells[t.spellID] = nil;
+			if _.AccountWideRecipes and ATTAccountWideData.Spells[t.spellID] then
+				t.collected = 2;
+				return;
+			end
+		end
+	end
+end]];
 _.Achievements =
 {
 	n(-200001, {	-- Insane in the Membrane
@@ -118,5 +137,25 @@ _.Achievements =
 		["OnTooltip"] = INSANE_IN_THE_MEMBRANE_OnTooltip,
 		["OnUpdate"] = INSANE_IN_THE_MEMBRANE_OnUpdate,
 		["description"] = "Insane in the Membrane is a Feat of Strength that rewards the title <The Insane>. This feat requires you to become honored with the Bloodsail Buccaneers and exalted with the Steamwheedle Cartel (Booty Bay, Everlook, Gadgetzan, Ratchet), Ravenholdt, Darkmoon Faire, and the Shen'dralar. It does not require that all of these reputation levels be reached at the same time, however, this may not be a thing until the achievement itself is introduced. Raising reputation with these factions is typically very difficult, time-consuming, and costly.",
+	}),
+	n(-200002, {	-- Giddy Up!
+		["spellID"] = 33388,	-- Apprentice Riding
+		["OnUpdate"] = RIDING_SKILL_OnUpdate,
+		["rank"] = 1,
+	}),
+	n(-200003, {	-- Fast and Furious
+		["spellID"] = 33391,	-- Journeyman Riding
+		["OnUpdate"] = RIDING_SKILL_OnUpdate,
+		["rank"] = 2,
+	}),
+	n(-200004, {	-- Into the Wild Blue Yonder
+		["spellID"] = 34090,	-- Expert Riding
+		["OnUpdate"] = RIDING_SKILL_OnUpdate,
+		["rank"] = 3,
+	}),
+	n(-200005, {	-- Breaking the Sound Barrier
+		["spellID"] = 34091,	-- Artisan Riding
+		["OnUpdate"] = RIDING_SKILL_OnUpdate,
+		["rank"] = 4,
 	}),
 };

@@ -319,6 +319,10 @@ app.L = {
 		
 		-- Custom Achievement Section, just for Pre-Wrath content.
 		[-200001] = "Interface\\Icons\\Spell_shadow_brainwash",						-- Insane in the Membrane (Pre-Wrath)
+		[-200002] = "Interface\\Icons\\ability_mount_ridinghorse",					-- Giddy Up!
+		[-200003] = "Interface\\Icons\\ability_mount_blackpanther",					-- Fast and Furious
+		[-200004] = "Interface\\Icons\\ability_mount_gryphon_01",					-- Into the Wild Blue Yonder
+		[-200005] = "Interface\\Icons\\ability_mount_rocketmount",					-- Breaking the Sound Barrier
 	};
 	["HEADER_NAMES"] = {
 		[0] = ZONE.." "..BATTLE_PET_SOURCE_1, 									-- Zone Drop
@@ -437,7 +441,11 @@ app.L = {
 		[-10066] = "Legendary",
 		
 		-- Custom Achievement Section, just for Pre-Wrath content.
-		[-200001] = "Insane in the Membrane",									-- Insane in the Membrane
+		[-200001] = "Insane in the Membrane",
+		[-200002] = "Giddy Up!",
+		[-200003] = "Fast and Furious",
+		[-200004] = "Into the Wild Blue Yonder",
+		[-200005] = "Breaking the Sound Barrier",
 	},
 	["HEADER_DESCRIPTIONS"] = {
 		[-5] = "A specific holiday may need to be active for you to complete the referenced Things within this section.",
