@@ -38,13 +38,6 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["cr"] = 16323,	-- Phantasmal Seeker
 				}),
-				i(22570, {	-- Plagued Blood Sample
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						16347,	-- Starving Ghostclaw
-						16353,	-- Mistbat
-					},
-				}),
 				i(22579, {	-- Plagued Murloc Spine
 					["races"] = HORDE_ONLY,
 					["crs"] = {
