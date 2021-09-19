@@ -2503,6 +2503,7 @@ local function SearchForField(field, id)
 		return SearchForFieldRecursively(app:GetDataCache(), field, id), field, id;
 	end
 end
+app.SearchForFieldContainer = SearchForFieldContainer;
 app.SearchForField = SearchForField;
 
 -- Item Information Lib
