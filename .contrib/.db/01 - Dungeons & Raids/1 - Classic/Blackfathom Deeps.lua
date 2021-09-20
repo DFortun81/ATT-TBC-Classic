@@ -192,6 +192,13 @@ _.Instances = { tier(CLASSIC_TIER, {
 						4831,	-- Lady Sarevess
 					},
 				}),
+				i(6995, {	-- Corrupted Kor Gem
+					["crs"] = {
+						4803,	-- Blackfathom Oracle
+						4805,	-- Blackfathom Sea Witch
+						4802,	-- Blackfathom Tide Priestess
+					},
+				}),
 				i(3414, {	-- Crested Scepter
 					["crs"] = {
 						4978,	-- Aku'mai Servant

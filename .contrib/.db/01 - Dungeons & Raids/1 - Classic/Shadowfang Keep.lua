@@ -166,6 +166,14 @@ _.Instances = { tier(CLASSIC_TIER, {
 			n(3914, {	-- Rethilgore <The Cell Keeper>
 				i(5254),	-- Rugged Spaulders
 			}),
+			o(182011, {	-- Crate of Ingots
+				["timeline"] = { "added 2.2.0.7272", "removed 4.0.3.10000" },
+				["groups"] = {
+					i(24224, {	-- Crate of Bloodforged Ingots
+						["timeline"] = { "added 2.2.0.7272", "removed 4.0.3.10000" },
+					}),
+				},
+			}),
 			n(3864, {	-- Fel Steed/Shadow Charger
 				i(6341),	-- Eerie Stable Lantern
 				i(932),	-- Fel Steed Saddlebags
