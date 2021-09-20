@@ -10058,6 +10058,75 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 		UpdateWindow(self, true, got);
 	end
 end);
+app:GetWindow("Dailies", UIParent, function(self)
+	if self:IsVisible() then
+		if not self.initialized then
+			self.initialized = true;
+			self.dirty = true;
+			
+			-- Item Filter
+			local actions = {
+				['text'] = "Dailies",
+				['icon'] = app.asset("Achievement_Dungeon_HEROIC_GloryoftheRaider"), 
+				["description"] = "You can search the ATT Database for all Dailies.",
+				['visible'] = true, 
+				['expanded'] = true,
+				['back'] = 1,
+				['OnUpdate'] = function(data)
+					if not self.dirty then return nil; end
+					self.dirty = nil;
+					
+					local g = {};
+					if not data.results then
+						data.results = app:BuildSearchResponse(app:GetWindow("Prime").data.g, "isDaily", 1);
+					end
+					if #data.results > 0 then
+						for i,result in ipairs(data.results) do
+							table.insert(g, result);
+						end
+					end
+					data.g = g;
+					if #g > 0 then
+						for i,entry in ipairs(g) do
+							entry.indent = nil;
+						end
+						data.indent = 0;
+						data.visible = true;
+						BuildGroups(data, data.g);
+						app.UpdateGroups(data, data.g);
+						if not data.expanded then
+							data.expanded = true;
+							ExpandGroupsRecursively(data, true);
+						end
+					end
+					
+					-- Update the groups without forcing Debug Mode.
+					local incompleteFilter = app.ShowIncompleteThings;
+					app.ShowIncompleteThings = app.Filter;
+					BuildGroups(self.data, self.data.g);
+					UpdateWindow(self, true);
+					app.ShowIncompleteThings = incompleteFilter;
+				end,
+				['g'] = {},
+			};
+			
+			self.Reset = function()
+				self.data = actions;
+			end
+			
+			-- Setup Event Handlers and register for events
+			self:SetScript("OnEvent", function(self, e, ...)
+				self.dirty = true;
+				self:Update();
+			end);
+			self:Reset();
+		end
+		
+		-- Update the window and all of its row data
+		if self.data.OnUpdate then self.data.OnUpdate(self.data, self); end
+		UpdateWindow(self, true);
+	end
+end);
 app:GetWindow("ItemFilter", UIParent, function(self)
 	if self:IsVisible() then
 		if not self.initialized then
