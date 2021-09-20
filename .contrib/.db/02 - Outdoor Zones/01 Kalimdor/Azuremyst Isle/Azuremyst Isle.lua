@@ -1,0 +1,1 @@
+-- #IMPORT: 02 - Outdoor Zones\\01 Kalimdor\\Azuremyst Isle\\Azuremyst Isle.lua

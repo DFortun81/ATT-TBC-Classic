@@ -58,12 +58,21 @@ _.Zones =
 				q(3861, {	-- CLUCK!
 					["qg"] = 620,	-- Chicken
 					["description"] = "Simply target any Chicken and spam /chicken at it until it emotes at you. This will take about 100 emotes. (make a macro!)\n\nOnce it does, type /cheer with it targetted.\n\nThe Chicken will never turn friendly for a Horde player, even if they get the emote.",
-					["maps"] = { TIRISFALL_GLADES, DUSKWOOD, ELWYNN_FOREST, DUSTWALLOW_MARSH, WESTFALL, REDRIDGE_MOUNTAINS },
-					["races"] = ALLIANCE_ONLY,
-					["repeatable"] = true,
-					["cost"] = {
-						{ "i", 11109, 1 },	-- Special Chicken Feed
+					["maps"] = {
+						-- #if AFTER TBC
+						AZUREMYST_ISLE,
+						-- #endif
+						DUSKWOOD,
+						DUSTWALLOW_MARSH,
+						ELWYNN_FOREST,
+						HILLSBRAD_FOOTHILLS,
+						THE_BARRENS,
+						REDRIDGE_MOUNTAINS,
+						TIRISFAL_GLADES,
+						WESTFALL,
 					},
+					["repeatable"] = true,
+					["cost"] = { { "i", 11109, 1 } },	-- Special Chicken Feed
 					["groups"] = {
 						i(11110),	-- Chicken Egg
 					},
