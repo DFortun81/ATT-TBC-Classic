@@ -1,9 +1,13 @@
 --------------------------------------------
 --     H O L I D A Y S  M O D U L E       --
 --------------------------------------------
-_.Holidays = bubbleDown({ ["u"] = HARVEST_FESTIVAL },
-{
-	n(-57, {	-- Harvest Festival
+_.Holidays = { applyholiday(HARVEST_FESTIVAL, {
+	-- #if ANYCLASSIC
+	["npcID"] = -57,
+	-- #else
+	["holidayID"] = 235442,
+	-- #endif
+	["groups"] = {
 		n(-4, {	-- Free Festival Food
 			["description"] = "This is some of the best food and water you can get for leveling! It does disappear 15 minutes after log out though, so pick this up at the start of your session and game until you run out.",
 			["groups"] = {
@@ -18,42 +22,36 @@ _.Holidays = bubbleDown({ ["u"] = HARVEST_FESTIVAL },
 			i(19697),	-- Bounty of the Harvest
 		}),
 		n(QUESTS, {
-			{
-				["questID"] = 8150,	-- Honoring a Hero
+			q(8150, {	-- Honoring a Hero
 				["qg"] = 15012,	-- Javnir Nashak
 				["coord"] = { 46.0, 13.6, DUROTAR },
-				["maps"] = { DUROTAR },
+				["maps"] = { DUROTAR, ASHENVALE },
 				["races"] = HORDE_ONLY,
 				["isYearly"] = true,
 				["lvl"] = 30,
 				["groups"] = {
-					{
-						["itemID"] = 19851,	-- Grom's Tribute
-						["questID"] = 8150,	-- Honoring a Hero
+					objective(1, {	-- Grom's Tribute
+						["provider"] = { "i", 19851 },	-- Grom's Tribute
 						["coord"] = { 83, 79, ASHENVALE },
-						["isYearly"] = true,
-					},
+					}),
 					i(20010),	-- The Horde's Hellscream
 				},
-			},
-			{
-				["questID"] = 8149,	-- Honoring a Hero
+			}),
+			q(8149, {	-- Honoring a Hero
 				["qg"] = 15011,	-- Wagner Hammerstrike
 				["coord"] = { 52.6, 36.0, DUN_MOROGH },
-				["maps"] = { DUN_MOROGH },
+				["maps"] = { DUN_MOROGH, WESTERN_PLAGUELANDS },
 				["races"] = ALLIANCE_ONLY,
 				["isYearly"] = true,
 				["lvl"] = 30,
 				["groups"] = {
-					{
-						["itemID"] = 19850,	-- Uther's Tribute
-						["questID"] = 8149,	-- Honoring a Hero
+					objective(1, {	-- Uther's Tribute
+						["provider"] = { "i", 19850 },	-- Uther's Tribute
 						["coord"] = { 51.0, 82.0, WESTERN_PLAGUELANDS },
-						["isYearly"] = true,
-					},
+					}),
 					i(20009),	-- For the Light!
 				},
-			},
+			}),
 		}),
 		n(VENDORS, {
 			["crs"] = {
@@ -68,5 +66,5 @@ _.Holidays = bubbleDown({ ["u"] = HARVEST_FESTIVAL },
 				i(9315),	-- Yellow Rose Firework
 			},
 		}),
-	}),
-});
+	},
+})};

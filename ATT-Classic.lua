@@ -5927,6 +5927,18 @@ local fields = {
 					return objective.text;
 				end
 			end
+			if t.providers then
+				for k,v in ipairs(t.providers) do
+					if v[2] > 0 then
+						if v[1] == "o" then
+							return app.ObjectNames[v[2]] or RETRIEVING_DATA;
+						elseif v[1] == "i" then
+							return select(1, GetItemInfo(v[2])) or RETRIEVING_DATA;
+						end
+					end
+				end
+			end
+			if t.spellID then return select(1, GetSpellInfo(t.spellID)); end
 			return RETRIEVING_DATA;
 		end
 		return "INVALID: Must be relative to a Quest Object.";
@@ -5991,6 +6003,13 @@ local fields = {
 		-- If the parent is collected, return immediately.
 		local collected = t.parent.collected;
 		if collected then return collected; end
+		
+		-- If the player isn't on that quest, return.
+		local index = GetQuestLogIndexByID(t.parent.questID);
+		if index == 0 then return 0; end
+		
+		-- If the player completed the quest, return.
+		if select(6, GetQuestLogTitle(index)) then return 1; end
 		
 		-- Check to see if the objective was completed.
 		local questID = t.questID;
