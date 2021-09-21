@@ -6004,16 +6004,16 @@ local fields = {
 		local collected = t.parent.collected;
 		if collected then return collected; end
 		
-		-- If the player isn't on that quest, return.
-		local index = GetQuestLogIndexByID(t.parent.questID);
-		if index == 0 then return 0; end
-		
-		-- If the player completed the quest, return.
-		if select(6, GetQuestLogTitle(index)) then return 1; end
-		
 		-- Check to see if the objective was completed.
 		local questID = t.questID;
 		if questID then
+			-- If the player isn't on that quest, return.
+			local index = GetQuestLogIndexByID(questID);
+			if index == 0 then return 0; end
+			
+			-- If the player completed the quest, return.
+			if select(6, GetQuestLogTitle(index)) then return 1; end
+			
 			local objectives = C_QuestLog.GetQuestObjectives(questID);
 			if objectives then
 				local objective = objectives[t.objectiveID];
