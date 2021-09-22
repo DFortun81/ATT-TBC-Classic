@@ -4767,12 +4767,14 @@ local itemFields = {
 		local id = t.itemID;
 		local results = app.SearchForField("itemIDAsCost", id, true);
 		if results and #results > 0 then
-			for _,ref in pairs(results) do
-				if ref.itemID ~= id and app.RecursiveGroupRequirementsFilter(ref) then
-					if ref.key == "difficultyID" or ref.key == "instanceID" or ref.key == "mapID" or ref.key == "headerID" then
-						return app.CollectibleQuests;
-					elseif ref.collectible or (ref.total and ref.total > 0) then
-						return true;
+			if not t.parent or not t.parent.saved then
+				for _,ref in pairs(results) do
+					if ref.itemID ~= id and app.RecursiveGroupRequirementsFilter(ref) then
+						if ref.key == "difficultyID" or ref.key == "instanceID" or ref.key == "mapID" or ref.key == "headerID" then
+							return app.CollectibleQuests;
+						elseif (not ref.collectible or not ref.collected) and (not ref.total or ref.total > 0) then
+							return true;
+						end
 					end
 				end
 			end
