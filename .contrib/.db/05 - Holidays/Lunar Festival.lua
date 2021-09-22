@@ -4,7 +4,7 @@
 _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 {
 	n(-47, {	-- Lunar Festival
-		n(-297, {	-- Mailbox
+		n(MAILBOX, {
 			i(21746, {	-- Lucky Red Envelope
 				i(21744),	-- Lucky Rocket Cluster
 				i(21745), 	-- Elder's Moonstone

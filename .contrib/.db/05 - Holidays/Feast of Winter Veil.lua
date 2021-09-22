@@ -30,7 +30,7 @@ _.Holidays = bubbleDown({ ["u"] = FEAST_OF_WINTER_VEIL },
 				},
 			}),
 		}),
-		n(-297, {	-- Mailbox
+		n(MAILBOX, {
 			i(17724),	-- Pattern: Green Holiday Shirt
 			i(17712),	-- Winter Veil Disguise Kit
 		}),
