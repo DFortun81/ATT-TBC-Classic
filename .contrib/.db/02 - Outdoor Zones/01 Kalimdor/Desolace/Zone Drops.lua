@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(DESOLACE, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(6249, {	-- Aged Kodo Hide
 					["questID"] = 1459,	-- Reagents for Reclaimers Inc. (2/4)
 					["races"] = ALLIANCE_ONLY,

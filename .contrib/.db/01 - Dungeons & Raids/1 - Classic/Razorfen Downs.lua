@@ -77,7 +77,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["lvl"] = 32,
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(10573),	-- Boneslasher
 				i(10582),	-- Briar Tredders
 				i(10574),	-- Corpseshroud

@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(WINTERSPRING, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				-- #if AFTER CATA
 				-- Originally a zone drop of Azshara, was moved to Winterspring after.
 				applyclassicphase(TBC_PHASE_ONE, i(34535)),	-- Azure Whelpling

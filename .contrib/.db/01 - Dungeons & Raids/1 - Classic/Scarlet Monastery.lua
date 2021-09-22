@@ -45,7 +45,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(7759),	-- Archon Chestpiece
 				i(7728),	-- Beguiler Robes
 				i(7753),	-- Bloodspiller

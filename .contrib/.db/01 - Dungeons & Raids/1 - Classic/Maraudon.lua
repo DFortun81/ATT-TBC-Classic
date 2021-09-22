@@ -218,7 +218,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				},
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(17684),	-- Theradric Crystal Carving
 			}),
 			n(-70, {	-- Foulspore Cavern [Orange]

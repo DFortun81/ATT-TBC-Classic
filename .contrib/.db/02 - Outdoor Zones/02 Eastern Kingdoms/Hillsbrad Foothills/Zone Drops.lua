@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(EASTERN_KINGDOMS, {
 		m(HILLSBRAD_FOOTHILLS, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(3668, {	-- Assassin's Contract
 					["questID"] = 522,	-- Assassin's Contract
 					["cr"] = 2434,	-- Shadowy Assassin

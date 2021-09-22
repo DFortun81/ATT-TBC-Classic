@@ -156,7 +156,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(1454, {	-- Axe of the Enforcer
 					["crs"] = {
 						4825,	-- Aku'mai Snapjaw

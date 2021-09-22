@@ -85,7 +85,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(10401, {	-- Blackened Defias Gloves
 					["crs"] = {
 						634,	-- Defias Overseer

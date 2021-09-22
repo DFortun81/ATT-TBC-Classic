@@ -1629,7 +1629,7 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_SIX, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				{
 					["itemID"] = 22708,	-- Fate of Ramaladni
 					["questID"] = 9229,	-- The Fate of Ramaladni

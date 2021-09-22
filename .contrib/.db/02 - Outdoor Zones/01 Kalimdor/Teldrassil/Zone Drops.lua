@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(TELDRASSIL, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(5204, {	-- Bloodfeather Belt
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {

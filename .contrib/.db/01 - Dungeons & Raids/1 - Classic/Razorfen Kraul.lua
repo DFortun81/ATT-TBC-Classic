@@ -93,7 +93,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(5880, {	-- Crate With Holes
 					["cr"] = 4781,	-- Snufflenose Gopher
 					["cost"] = {

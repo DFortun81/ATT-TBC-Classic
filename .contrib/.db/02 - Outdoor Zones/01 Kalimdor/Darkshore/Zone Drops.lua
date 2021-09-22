@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(DARKSHORE, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(5338, {	-- Ancient Moonstone Seal
 					["questID"] = 956,	-- Bashal'Aran (3/4)
 					["races"] = ALLIANCE_ONLY,

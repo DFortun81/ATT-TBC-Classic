@@ -311,7 +311,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["lvl"] = 20,
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(9282, {	-- Blue Punch Card
 					["description"] = "Use this at the terminal closest to the dormitories.",
 					["groups"] = {

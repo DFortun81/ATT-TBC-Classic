@@ -349,7 +349,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["lvl"] = 47,
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				{
 					["itemID"] = 11318,	-- Atal'ai Haze
 					["crs"] = {

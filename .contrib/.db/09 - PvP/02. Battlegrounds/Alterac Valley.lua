@@ -896,7 +896,7 @@ _.PvP =
 						},
 					}),
 				}),
-				n(ZONEDROPS, {
+				n(ZONE_DROPS, {
 					i(17422),	-- Armor Scraps
 					i(18228),	-- Autographed Picture of Foror & Tigule
 					i(18206),	-- Dwarf Spine

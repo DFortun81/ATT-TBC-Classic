@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(EASTERN_KINGDOMS, {
 		m(DUN_MOROGH, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(2886),	-- Crag Boar Rib
 				i(6753, {	-- Feather Charm
 					["questID"] = 1599,	-- Beginnings

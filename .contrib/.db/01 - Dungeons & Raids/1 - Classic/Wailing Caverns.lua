@@ -161,7 +161,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(6443, {	-- Deviate Hide
 					["description"] = "Drops from Deviate creatures in the Wailing Caverns.",
 					["questID"] = 1486,	-- Deviate Hides

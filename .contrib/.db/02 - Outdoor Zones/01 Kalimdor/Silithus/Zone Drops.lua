@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(SILITHUS, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(20461, {	-- Brann Bronzebeard's Lost Letter
 					["questID"] = 8308,	-- Brann Bronzebeard's Lost Letter
 					["crs"] = {

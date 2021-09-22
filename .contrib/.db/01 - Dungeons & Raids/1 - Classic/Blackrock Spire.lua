@@ -795,7 +795,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["lvl"] = 57,
 				},
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				un(PHASE_FIVE, {
 					["itemID"] = 22138,	-- Blackrock Bracer
 					["questID"] = 8994,	-- Final Preparations

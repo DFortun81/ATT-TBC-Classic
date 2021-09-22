@@ -430,7 +430,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					},
 				},
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(18365, {	-- A Thoroughly Read Copy of "Nat Pagle's Guide to Extreme Anglin'."
 					["description"] = "This item is utterly worthless, however there was a rumor that this item could be used to obtain the original Ashbringer via fishing.\n\nThis can be found in various places throughout all the wings of Dire Maul.\n\nDire Maul North: Southwest corner of Guard Fengus's courtyard or next to King Gordok and Cho'Rush the Observer.\n\nDire Maul East: Eastern wall of the garden, the ledge above the garden, next to Lethtendris, or next to Alzzin the Wildshaper.\n\nDire Maul West: By the southern generator in Immol'thar's room.",
 				}),
@@ -529,7 +529,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 			n(-12, {	-- Warpwood Quarter [East - Demon]
 				["description"] = "This part of the instance can be accessed from the eastern-most portal. (right side)",
 				["groups"] = {
-					n(ZONEDROPS, {
+					n(ZONE_DROPS, {
 						i(18296, {	-- Marksman Bands
 							["crs"] = {
 								11454,	-- Wildspawn Betrayer
@@ -797,7 +797,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 							i(18487),	-- Pattern: Mooncloth Robe
 						}),
 					}),
-					n(ZONEDROPS, {
+					n(ZONE_DROPS, {
 						i(18289, {	-- Barbed Thorn Necklace
 							["crs"] = {
 								11461,	-- Warpwood Guardian

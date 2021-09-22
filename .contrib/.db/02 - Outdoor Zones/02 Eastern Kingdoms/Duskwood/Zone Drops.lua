@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(EASTERN_KINGDOMS, {
 		m(DUSKWOOD, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(885, {	-- Black Metal Axe
 					["cr"] = 3,	-- Flesh Eater
 				}),

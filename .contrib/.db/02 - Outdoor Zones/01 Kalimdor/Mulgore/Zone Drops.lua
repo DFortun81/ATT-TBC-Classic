@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(MULGORE, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(4752, {	-- Azure Feather
 					["questID"] = 744,	-- Preparation for Ceremony
 					["races"] = HORDE_ONLY,

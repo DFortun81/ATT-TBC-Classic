@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(FELWOOD, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(11503, {	-- Blood Amber
 					["allianceQuestID"] = 4101,	-- Cleansing Felwood
 					["hordeQuestID"] = 4102,	-- Cleansing Felwood

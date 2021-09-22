@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(DUSTWALLOW_MARSH, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(5959, {	-- Acidic Venom Sac
 					["races"] = HORDE_ONLY,
 					["crs"] = {

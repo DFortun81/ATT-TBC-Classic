@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(UNGORO_CRATER, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(11107, {	-- A Small Pack
 					["coord"] = { 63.1, 68.5, UNGORO_CRATER },
 					["groups"] = {

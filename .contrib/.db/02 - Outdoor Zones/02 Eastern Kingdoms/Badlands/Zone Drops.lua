@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(EASTERN_KINGDOMS, {
 		m(BADLANDS, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(8052, {	-- An'Alleum Power Stone
 					["questID"] = 2418,	-- Power Stones
 					["maps"] = { ULDAMAN },

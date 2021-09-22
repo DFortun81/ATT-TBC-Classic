@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(DUROTAR, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(4882, {	-- Benedict's Key
 					["cr"] = 3192,	-- Lieutenant Benedict
 					["coord"] = { 59.6, 58.2, DUROTAR },

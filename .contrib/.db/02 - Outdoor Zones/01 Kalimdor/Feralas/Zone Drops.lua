@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(FERALAS, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(21024, {	-- Chimaerok Tenderloin
 					["crs"] = {
 						12801,	-- Arcane Chimaerok

@@ -766,7 +766,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["lvl"] = 48,
 				},
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				{
 					["itemID"] = 11468,	-- Dark Iron Fanny Pack
 					["questID"] = 4286,	-- The Good Stuff

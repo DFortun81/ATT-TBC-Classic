@@ -112,7 +112,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(14396, {	-- Incantations from the Nether
 					["questID"] = 5725,	-- The Power to Destroy...
 					["races"] = HORDE_ONLY,

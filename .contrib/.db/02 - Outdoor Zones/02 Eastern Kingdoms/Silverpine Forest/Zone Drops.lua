@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(EASTERN_KINGDOMS, {
 		m(SILVERPINE_FOREST, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(3317, {	-- A Talking Head
 					["races"] = HORDE_ONLY,
 					["crs"] = {

@@ -247,7 +247,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["lvl"] = 37,
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				{
 					["itemID"] = 7733,	-- Staff of Prehistoria
 					["cost"] = {

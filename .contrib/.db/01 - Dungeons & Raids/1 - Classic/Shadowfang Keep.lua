@@ -145,7 +145,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(1935),	-- Assassin's Blade
 				i(3194),	-- Black Malice
 				i(2205),	-- Duskbringer

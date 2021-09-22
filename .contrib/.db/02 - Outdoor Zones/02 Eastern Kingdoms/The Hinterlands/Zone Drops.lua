@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(EASTERN_KINGDOMS, {
 		m(THE_HINTERLANDS, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(16214, {	-- Formula: Enchant Bracer - Greater Intellect
 					["cr"] = 2642,	-- Vilebranch Shadowcaster
 				}),

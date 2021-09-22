@@ -83,7 +83,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(1076),	-- Defias Renegade Ring
 				{
 					["itemID"] = 2909,	-- Red Wool Bandana

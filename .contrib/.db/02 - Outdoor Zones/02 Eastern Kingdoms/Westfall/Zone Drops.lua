@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(EASTERN_KINGDOMS, {
 		m(WESTFALL, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(826, {  -- Brutish Riverpaw Axe
 					["cr"] = 124,	-- Riverpaw Brute
 				}),

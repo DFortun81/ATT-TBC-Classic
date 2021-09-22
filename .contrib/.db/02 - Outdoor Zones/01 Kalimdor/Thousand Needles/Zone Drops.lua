@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(THOUSAND_NEEDLES, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(1493, {	-- Heavy Marauder Scimitar
 					["cr"] = 4099,	-- Galak Marauder
 				}),

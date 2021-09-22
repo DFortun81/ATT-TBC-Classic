@@ -5,7 +5,7 @@ _.Zones =
 {
 	m(EASTERN_KINGDOMS, {
 		m(SEARING_GORGE, {
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				i(10511, {	-- Golem Oil
 					["questID"] = 3442,	-- The Flawless Flame
 					["crs"] = {

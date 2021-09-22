@@ -430,7 +430,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 			}),
-			n(ZONEDROPS, {
+			n(ZONE_DROPS, {
 				un(PHASE_SIX, i(22526)),	-- Bone Fragments
 				i(16255, {	-- Formula: Enchant 2H Weapon - Major Spirit
 					["cr"] = 10469,	-- Scholomance Adept
