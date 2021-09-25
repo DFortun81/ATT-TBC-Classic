@@ -2280,6 +2280,7 @@ local fieldCache = {};
 local CacheField, CacheFields;
 local _cache;
 (function()
+local currentMaps = {};
 local fieldCache_g,fieldCache_f, fieldConverters;
 CacheField = function(group, field, value)
 	fieldCache_g = rawget(fieldCache, field);
@@ -2306,13 +2307,31 @@ fieldCache["speciesID"] = {};
 fieldCache["spellID"] = {};
 fieldCache["tierID"] = {};
 fieldCache["titleID"] = {};
+local cacheCreatureID = function(group, value)
+	if value > 0 then
+		CacheField(group, "creatureID", value);
+	end
+end;
+local cacheMapID = function(group, mapID)
+	if not currentMaps[mapID] or currentMaps[mapID] == 0 then
+		currentMaps[mapID] = 1;
+		CacheField(group, "mapID", mapID);
+	else
+		currentMaps[mapID] = currentMaps[mapID] + 1;
+	end
+end;
+local cacheObjectID = function(group, value)
+	-- WARNING: DEV ONLY START
+	if not app.ObjectNames[value] then
+		print("Object Missing Name ", value);
+		app.ObjectNames[value] = "Object #" .. value;
+	end
+	-- WARNING: DEV ONLY END
+	CacheField(group, "objectID", value);
+end;
 fieldConverters = {
 	-- Simple Converters
-	["creatureID"] = function(group, value)
-		if value > 0 then
-			CacheField(group, "creatureID", value);
-		end
-	end,
+	["creatureID"] = cacheCreatureID,
 	["currencyID"] = function(group, value)
 		CacheField(group, "currencyID", value);
 	end,
@@ -2334,23 +2353,9 @@ fieldConverters = {
 	["itemID"] = function(group, value)
 		CacheField(group, "itemID", value);
 	end,
-	["mapID"] = function(group, value)
-		CacheField(group, "mapID", value);
-	end,
-	["npcID"] = function(group, value)
-		if value > 0 then
-			CacheField(group, "creatureID", value);
-		end
-	end,
-	["objectID"] = function(group, value)
-		-- WARNING: DEV ONLY START
-		if not app.ObjectNames[value] then
-			print("Object Missing Name ", value);
-			app.ObjectNames[value] = "Object #" .. value;
-		end
-		-- WARNING: DEV ONLY END
-		CacheField(group, "objectID", value);
-	end,
+	["mapID"] = cacheMapID,
+	["npcID"] = cacheCreatureID,
+	["objectID"] = cacheObjectID,
 	["questID"] = function(group, value)
 		CacheField(group, "questID", value);
 	end,
@@ -2371,21 +2376,14 @@ fieldConverters = {
 	end,
 	
 	-- Complex Converters
-	["g"] = function(group, value)
-		for i,subgroup in ipairs(value) do
-			CacheFields(subgroup);
-		end
-	end,
 	["crs"] = function(group, value)
-		_cache = rawget(fieldConverters, "creatureID");
 		for i,creatureID in ipairs(value) do
-			_cache(group, creatureID);
+			cacheCreatureID(group, creatureID);
 		end
 	end,
 	["qgs"] = function(group, value)
-		_cache = rawget(fieldConverters, "creatureID");
 		for i,questGiverID in ipairs(value) do
-			_cache(group, questGiverID);
+			cacheCreatureID(group, questGiverID);
 		end
 	end,
 	["altQuests"] = function(group, value)
@@ -2398,25 +2396,26 @@ fieldConverters = {
 		for k,v in pairs(value) do
 			if v[2] > 0 then
 				if v[1] == "n" then
-					CacheField(group, "creatureID", v[2]);
+					cacheCreatureID(group, v[2]);
 				elseif v[1] == "i" then
 					CacheField(group, "itemIDAsCost", v[2]);
 				elseif v[1] == "o" then
-					-- WARNING: DEV ONLY START
-					if not app.ObjectNames[v[2]] then
-						print("Object Missing Name ", v[2]);
-						app.ObjectNames[v[2]] = "Object #" .. v[2];
-					end
-					-- WARNING: DEV ONLY END
-					rawget(fieldConverters, "objectID")(group, v[2]);
+					cacheObjectID(group, v[2]);
 				end
 			end
 		end
 	end,
 	["maps"] = function(group, value)
-		_cache = rawget(fieldConverters, "mapID");
 		for i,mapID in ipairs(value) do
-			_cache(group, mapID);
+			cacheMapID(group, mapID);
+		end
+	end,
+	["coord"] = function(group, coord)
+		if coord[3] then cacheMapID(group, coord[3]); end
+	end,
+	["coords"] = function(group, value)
+		for i,coord in ipairs(value) do
+			if coord[3] then cacheMapID(group, coord[3]); end
 		end
 	end,
 	["cost"] = function(group, value)
@@ -2427,7 +2426,7 @@ fieldConverters = {
 				if v[1] == "i" and v[2] > 0 then
 					CacheField(group, "itemIDAsCost", v[2]);
 				elseif v[1] == "o" and v[2] > 0 then
-					CacheField(group, "objectID", v[2]);
+					cacheObjectID(group, v[2]);
 				end
 			end
 		end
@@ -2448,16 +2447,57 @@ fieldConverters = {
 		end
 	end,
 };
+local uncacheMap = function(mapID)
+	currentMaps[mapID] = (currentMaps[mapID] or 0) - 1;
+end;
+local mapKeyConverters = {
+	["mapID"] = uncacheMap,
+	["maps"] = function(maps)
+		for _,mapID in ipairs(maps) do
+			uncacheMap(mapID);
+		end
+	end,
+	["coord"] = function(coord)
+		if coord[3] then uncacheMap(coord[3]); end
+	end,
+	["coords"] = function(coords)
+		for i,coord in ipairs(coords) do
+			if coord[3] then uncacheMap(coord[3]); end
+		end
+	end,
+};
 CacheFields = function(group)
 	local n = 0;
-	local clone = {};
+	local clone, mapKeys, key, value, hasG = {};
 	for key,value in pairs(group) do
-		n = n + 1
-		rawset(clone, n, key);
+		if key == "g" then
+			hasG = true;
+		else
+			n = n + 1
+			rawset(clone, n, key);
+		end
 	end
 	for i=1,n,1 do
-		_cache = rawget(fieldConverters, rawget(clone, i));
-		if _cache then _cache(group, rawget(group, rawget(clone, i))); end
+		key = rawget(clone, i);
+		_cache = rawget(fieldConverters, key);
+		if _cache then
+			value = rawget(group, key);
+			_cache(group, value);
+			if rawget(mapKeyConverters, key) then
+				if not mapKeys then mapKeys = {}; end
+				mapKeys[key] = value;
+			end
+		end
+	end
+	if hasG then
+		for i,subgroup in ipairs(rawget(group, "g")) do
+			CacheFields(subgroup);
+		end
+	end
+	if mapKeys then
+		for key,value in pairs(mapKeys) do
+			rawget(mapKeyConverters, key)(value);
+		end
 	end
 end
 end)();
