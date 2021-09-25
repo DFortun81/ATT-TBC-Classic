@@ -895,10 +895,17 @@ _.Zones =
 						i(32694),	-- Overseer's Badge
 					},
 				})),
-				applyclassicphase(TBC_PHASE_THREE, q(10946, {	-- Ruse of the Ashtongue
-					["sourceQuests"] = { 10944 },	-- The Secret Compromised
-					["provider"] = { "n", 21700 },	-- Akama
+				applyclassicphase(TBC_PHASE_TWO, q(10946, {	-- Ruse of the Ashtongue
+					["qg"] = 21700,	-- Akama
+					["sourceQuest"] = 10944,	-- The Secret Compromised
 					["coord"] = { 58.0, 48.2, SHADOWMOON_VALLEY },
+					["maps"] = { TEMPEST_KEEP_THE_EYE },
+					["groups"] = {
+						objective(1, {
+							["provider"] = { "i", 31946 },	-- Ashtongue Cowl
+							["cr"] = 19514,	-- A'lar
+						}),
+					},
 				})),
 				q(10811, {	-- Seek Out Neltharaku
 					["provider"] = { "n", 22113 },	-- Mordenai
