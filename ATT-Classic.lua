@@ -9863,7 +9863,10 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 								if group.headerID ~= -17 then clone = app.CreateNPC(-17, { g = { clone } }); end
 							end
 						elseif group.key == "questID" then
-							if group.headerID ~= -17 then clone = app.CreateNPC(-17, { g = { clone } }); end
+							clone = app.CreateNPC(-17, { g = { clone } });
+						elseif group.key == "npcID" and group.parent.headerID == -2 then
+							clone = app.CreateNPC(-2, { g = { clone } });
+							clone.OnTooltip = group.parent.OnTooltip;
 						end
 						if holidayID then clone = app.CreateHoliday(holidayID, { g = { clone } }); end
 						MergeObject(holidaysHeader.g, clone);
