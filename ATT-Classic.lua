@@ -9930,6 +9930,8 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 						MergeObject(explorationHeader.g, clone);
 					elseif group.key == "flightPathID" then
 						MergeObject(flightPathsHeader.g, clone);
+					elseif group.key == "itemID" and GetRelativeField(group, "headerID", 0) then
+						MergeObject(zoneDropsHeader.g, clone);
 					else
 						MergeObject(groups, clone);
 					end
