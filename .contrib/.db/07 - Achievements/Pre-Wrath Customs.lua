@@ -274,7 +274,7 @@ _.Achievements =
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 35,
 	})),
-	applyclassicphase(WRATH_PHASE_ONE, n(-200014, {	-- 40 Exalted Reputations
+	applyclassicphase(TBC_PHASE_FIVE, n(-200014, {	-- 40 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,

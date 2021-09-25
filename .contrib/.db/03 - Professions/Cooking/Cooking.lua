@@ -403,98 +403,83 @@ profession(COOKING, {
 			["categoryID"] = 58,
 			["groups"] = {
 				-- #if AFTER WRATH
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Bread of the Dead [Day of the Dead]
+				applyholiday(DAY_OF_THE_DEAD, {	-- Bread of the Dead [Day of the Dead]
 					["name"] = "Bread of the Dead",
 					["timeline"] = { "added 3.2.2.10505" },
 					["recipeID"] = 65454,
-					["u"] = DAY_OF_THE_DEAD,
 				}),
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Candied Sweet Potato [A - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Candied Sweet Potato [A - Pilgrim's Bounty]
 					["recipeID"] = 62051,	-- Candied Sweet Potato
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = ALLIANCE_ONLY,
 				}),
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Candied Sweet Potato [H - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Candied Sweet Potato [H - Pilgrim's Bounty]
 					["recipeID"] = 66034,	-- Candied Sweet Potato
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = HORDE_ONLY,
 				}),
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Cranberry Chutney [A - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Cranberry Chutney [A - Pilgrim's Bounty]
 					["recipeID"] = 62049,	-- Cranberry Chutney
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = ALLIANCE_ONLY,
 				}),
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Cranberry Chutney [H - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Cranberry Chutney [H - Pilgrim's Bounty]
 					["recipeID"] = 66035,	-- Cranberry Chutney
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = HORDE_ONLY,
 				}),
 				-- #endif
 				-- #if BEFORE MOP
-				{	-- Egg Nog [Winter Veil]
+				applyholiday(FEAST_OF_WINTER_VEIL, {	-- Egg Nog [Winter Veil]
 					["name"] = "Egg Nog",
 					["recipeID"] = 21144,
-					["u"] = FEAST_OF_WINTER_VEIL,
-				},
+				}),
 				-- #endif
-				{	-- Gingerbread Cookie [Winter Veil]
+				applyholiday(FEAST_OF_WINTER_VEIL, {	-- Gingerbread Cookie [Winter Veil]
 					["name"] = "Gingerbread Cookie",
 					["recipeID"] = 21143,
-					["u"] = FEAST_OF_WINTER_VEIL,
-				},
+				}),
 				-- #if AFTER TBC
-				applyclassicphase(TBC_PHASE_ONE, {	-- Hot Apple Cider [Winter Veil]
+				applyholiday(FEAST_OF_WINTER_VEIL, {	-- Hot Apple Cider [Winter Veil]
 					["recipeID"] = 45022,	-- Hot Apple Cider
-					["u"] = FEAST_OF_WINTER_VEIL,
 				}),
 				-- #endif
 				-- #if AFTER WRATH
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Pumpkin Pie [A - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Pumpkin Pie [A - Pilgrim's Bounty]
 					["recipeID"] = 62044,	-- Pumpkin Pie
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = ALLIANCE_ONLY,
 				}),
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Pumpkin Pie [H - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Pumpkin Pie [H - Pilgrim's Bounty]
 					["recipeID"] = 66036,	-- Pumpkin Pie
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = HORDE_ONLY,
 				}),
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Slow-Roasted Turkey [A - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Slow-Roasted Turkey [A - Pilgrim's Bounty]
 					["recipeID"] = 62045,	-- Slow-Roasted Turkey
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = ALLIANCE_ONLY,
 				}),
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Slow-Roasted Turkey [H - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Slow-Roasted Turkey [H - Pilgrim's Bounty]
 					["recipeID"] = 66037,	-- Slow-Roasted Turkey
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = HORDE_ONLY,
 				}),
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Spice Bread Stuffing [A - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Spice Bread Stuffing [A - Pilgrim's Bounty]
 					["recipeID"] = 62050,	-- Spice Bread Stuffing
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = ALLIANCE_ONLY,
 				}),
-				applyclassicphase(WRATH_PHASE_ONE, {	-- Spice Bread Stuffing [H - Pilgrim's Bounty]
+				applyholiday(PILGRIMS_BOUNTY, {	-- Spice Bread Stuffing [H - Pilgrim's Bounty]
 					["recipeID"] = 66038,	-- Spice Bread Stuffing
 					["timeline"] = { "added 3.10.10505" },
-					["u"] = PILGRIMS_BOUNTY,
 					["races"] = HORDE_ONLY,
 				}),
 				-- #endif
 				-- #if AFTER MOP
-				{	-- Winter Veil Egg Nog [Winter Veil]
+				applyholiday(FEAST_OF_WINTER_VEIL, {	-- Winter Veil Egg Nog [Winter Veil]
 					["recipeID"] = 21144,	-- Winter Veil Egg Nog
-					["u"] = FEAST_OF_WINTER_VEIL,
-				},
+				}),
 				-- #endif
 			}
 		},
