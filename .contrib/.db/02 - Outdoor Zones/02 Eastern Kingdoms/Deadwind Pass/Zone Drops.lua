@@ -9,18 +9,6 @@ _.Zones =
 				i(16246, {	-- Formula: Enchant Bracer - Superior Strength
 					["cr"] = 7372,	-- Deadwind Warlock
 				}),
-				-- #if AFTER TBC
-				i(24480, {	-- Ghostly Essence
-					["timeline"] = { "removed 7.1.0.1233" },
-					["crs"] = {
-						12378,	-- Damned Soul
-						7370,	-- Restless Shade
-						12379,	-- Unliving Caretaker
-						-- 12380,	-- Unliving Resident -- NOTE: This was removed as a drop source sometime during TBC.
-						12377,	-- Wailing Spectre
-					},
-				}),
-				-- #endif
 			}),
 		}),
 	}),

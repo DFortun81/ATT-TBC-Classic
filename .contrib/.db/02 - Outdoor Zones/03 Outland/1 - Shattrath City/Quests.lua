@@ -492,23 +492,20 @@ _.Zones =
 						i(29460),	-- Ethereum Prison Key
 					},
 				}),
-				q(11500, {	-- Wanted: Sisters of Torment
+				applyclassicphase(TBC_PHASE_FIVE, q(11500, {	-- Wanted: Sisters of Torment
 					["provider"] = { "n", 24370 },	-- Nether-Stalker Mah'duun
 					["maps"] = { MAGISTERS_TERRACE },
-					-- #if ANYCLASSIC
-					["u"] = TBC_PHASE_FIVE,
-					-- #endif
 					["isDaily"] = true,
 					["g"] = {
 						i(29460),	-- Ethereum Prison Key
 					},
-				}),
+				})),
 				q(11385, {	-- Wanted: Sunseeker Channelers
-					["g"] = {
-						i(29460),	-- Ethereum Prison Key
-					},
 					["provider"] = { "n", 24370 },	-- Nether-Stalker Mah'duun
 					["isDaily"] = true,
+					["g"] = {
+						i(29460),	-- Ethereum Prison Key
+					},
 				}),
 				q(11387, {	-- Wanted: Tempest-Forge Destroyers
 					["provider"] = { "n", 24370 },	-- Nether-Stalker Mah'duun
