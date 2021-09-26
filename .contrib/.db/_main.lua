@@ -260,6 +260,7 @@ for _,v in pairs(HORDE_ONLY) do table.insert(ALL_RACES,v) end
 -- Headers
 ACHIEVEMENTS = -4;
 COMMON_BOSS_DROPS = -1;
+COMMON_VENDOR_ITEMS = -3;
 DISCOVERY = -37;
 EXPLORATION = -15;
 FACTIONS = -8;

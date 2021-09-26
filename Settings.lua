@@ -158,6 +158,7 @@ local UnobtainableSettingsBase = {
 	__index = {
 		[1] = false,	-- Never Implemented
 		[2] = false,	-- Removed From Game
+		[3] = false,	-- Blizzard Balance
 
 		-- Seasonal Filters
 		[1000] = false,	-- Brewfest
@@ -171,6 +172,7 @@ local UnobtainableSettingsBase = {
 		[1008] = false,	-- Midsummer Fire Festival
 		[1010] = false,	-- Noblegarden
 		[1011] = false,	-- Pirate's Day
+		[1013] = false,	-- Pilgrim's Bounty
 	},
 };
 local OnClickForTab = function(self)
@@ -1482,7 +1484,7 @@ table.insert(settings.MostRecentTab.objects, SeasonalHolidayFiltersLabel);
 
 -- Seasonal Filters
 last, xoffset, yoffset = SeasonalHolidayFiltersLabel, 0, -4;
-for i,u in ipairs({ 1000, 1001, 1002, 1012, 1003, 1004, 1005, 1006, 1007, 1008, 1010, 1011 }) do
+for i,u in ipairs({ 1000, 1001, 1002, 1012, 1003, 1004, 1005, 1006, 1007, 1008, 1010, 1011, 1013 }) do
 	local filter = settings:CreateCheckBox(reasons[u][3] or tostring(u), UnobtainableOnRefresh, UnobtainableFilterOnClick);
 	filter:SetATTTooltip(reasons[u][2]);
 	filter:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, yoffset);
