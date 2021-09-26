@@ -10,16 +10,10 @@ profession(ENGINEERING, {
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Dimensional Ripper - Area 52",
 						["recipeID"] = 36954,
-						["description"] = "Speak to Kablamm Farflinger in Netherstorm at 32, 63 to learn this recipe.",
-						["coord"] = { 32, 63, NETHERSTORM },
-						["cr"] = 21493,	-- Kablamm Farflinger
 					}),
 					{
 						["name"] = "Dimensional Ripper - Everlook",
 						["recipeID"] = 23486,
-						["description"] = "Speak to Zap Farflinger in Winterspring at 59.6, 49.8 to learn this recipe.",
-						["coord"] = { 59.6, 49.8, WINTERSPRING },
-						["cr"] = 14742,	-- Zap Farflinger
 					},
 					{
 						["name"] = "Goblin Jumper Cables XL",

@@ -62,16 +62,10 @@ profession(ENGINEERING, {
 					{
 						["name"] = "Ultrasafe Transporter - Gadgetzan",
 						["recipeID"] = 23489,
-						["description"] = "Speak to Jhordy Lapforge in Gadgetzan at 52.17, 27.88 to learn this recipe.",
-						["coord"] = { 52.17, 27.88, TANARIS },
-						["cr"] = 14743,	-- Jhordy Lapforge
 					},
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Ultrasafe Transporter - Toshley's Station",
 						["recipeID"] = 36955,
-						["description"] = "Speak to Smiles O'Byron in Blade's Edge Mountains at 60.2, 65.2 to learn this recipe.",
-						["coord"] = { 60.2, 65.2, BLADES_EDGE_MOUNTAINS },
-						["cr"] = 21494,	-- Smiles O'Byron
 					}),
 					{
 						["name"] = "World Enlarger",

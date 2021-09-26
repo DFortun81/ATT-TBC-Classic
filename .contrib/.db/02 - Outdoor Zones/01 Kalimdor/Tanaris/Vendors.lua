@@ -53,6 +53,14 @@ _.Zones =
 						i(16767),	-- Recipe: Undermine Clam Chowder
 					},
 				}),
+				n(14743, {	-- Jhordy Lapforge
+					["requireSkill"] = 20219,	-- Gnomish Engineering
+					["description"] = "Gnomish Engineers can speak to Smiles to learn the recipe.",
+					["coord"] = { 52.17, 27.88, TANARIS },
+					["groups"] = {
+						recipe(23489),	-- Ultrasafe Transporter - Gadgetzan
+					},
+				}),
 				n(5411, {	-- Krinkle Goodsteel <Blacksmithing Supplies>
 					["coord"] = { 51.5, 28.8, TANARIS },
 					["groups"] = {

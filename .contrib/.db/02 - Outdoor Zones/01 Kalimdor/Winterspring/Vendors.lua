@@ -61,6 +61,14 @@ _.Zones =
 						i(18652),	-- Schematic: Gyrofreeze Ice Reflector
 					},
 				}),
+				n(14742,  {	-- Zap Farflinger
+					["requireSkill"] = 20222,	-- Goblin Engineering
+					["description"] = "Goblin Engineers can speak to Zap Farflinger to learn the recipe.",
+					["coord"] = { 59.6, 49.8, WINTERSPRING },
+					["g"] = {
+						recipe(23486),	-- Dimensional Ripper - Everlook
+					},
+				}),
 			}),
 		}),
 	}),
