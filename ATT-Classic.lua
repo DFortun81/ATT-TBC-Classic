@@ -4812,7 +4812,9 @@ local itemFields = {
 					if ref.itemID ~= id and app.RecursiveGroupRequirementsFilter(ref) then
 						if ref.key == "difficultyID" or ref.key == "instanceID" or ref.key == "mapID" or ref.key == "headerID" then
 							return app.CollectibleQuests;
-						elseif (not ref.collectible or not ref.collected) and (not ref.total or ref.total > 0) then
+						elseif ref.collectible and not ref.collected then
+							return true;
+						elseif ref.total and ref.total > 0 then
 							return true;
 						end
 					end
@@ -4855,7 +4857,21 @@ local itemFields = {
 						if app.CollectibleQuests and GetItemCount(id, true) == 0 then
 							return false;
 						end
-					elseif (ref.collectible and not ref.collected) or (ref.total and ref.total > 0 and not GetRelativeField(t, "parent", ref) and ref.progress < ref.total) then
+					elseif ref.collectible and not ref.collected then
+						if ref.cost then
+							for k,v in ipairs(ref.cost) do
+								if v[2] == id and v[1] == "i" then
+									if GetItemCount(id, true) >= (v[3] or 1) then
+										partial = true;
+									else
+										return false;
+									end
+								end
+							end
+						else
+							return false;
+						end
+					elseif (ref.total and ref.total > 0 and not GetRelativeField(t, "parent", ref) and ref.progress < ref.total) then
 						if ref.cost then
 							for k,v in ipairs(ref.cost) do
 								if v[2] == id and v[1] == "i" then
