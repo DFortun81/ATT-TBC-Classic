@@ -907,9 +907,10 @@ item = function(id, t)									-- Create an ITEM Object
 end
 i = item;												-- Create an ITEM Object (alternative shortcut)
 inst = function(id, t)									-- Create an INSTANT Object
-	-- #if BEFORE WRATH
-	-- Not yet supported in classic.
 	if t then
+		t.instanceID = id;
+		-- #if BEFORE WRATH
+		-- Not yet supported in classic.
 		if t.groups or t.g then
 			-- Convert to a MAP ID.
 			if t.mapID then
@@ -929,11 +930,11 @@ inst = function(id, t)									-- Create an INSTANT Object
 		else
 			return { ["npcID"] = -1, ["g"] = t };
 		end
-		
+		-- #endif
+		return t;
+	else
+		return struct("instanceID", id, t);
 	end
-	-- #else
-	return struct("encounterID", id, t);
-	-- #endif
 end
 ill = function(id, t)									-- Create an ILLUSION Object
 	return struct("illusionID", id, t);

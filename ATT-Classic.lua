@@ -2411,11 +2411,13 @@ fieldConverters = {
 		end
 	end,
 	["coord"] = function(group, coord)
-		if coord[3] then cacheMapID(group, coord[3]); end
+		if coord[3] and not group.instanceID then cacheMapID(group, coord[3]); end
 	end,
 	["coords"] = function(group, value)
-		for i,coord in ipairs(value) do
-			if coord[3] then cacheMapID(group, coord[3]); end
+		if not group.instanceID then
+			for i,coord in ipairs(value) do
+				if coord[3] then cacheMapID(group, coord[3]); end
+			end
 		end
 	end,
 	["cost"] = function(group, value)
@@ -2447,22 +2449,24 @@ fieldConverters = {
 		end
 	end,
 };
-local uncacheMap = function(mapID)
+local uncacheMap = function(group, mapID)
 	currentMaps[mapID] = (currentMaps[mapID] or 0) - 1;
 end;
 local mapKeyConverters = {
 	["mapID"] = uncacheMap,
-	["maps"] = function(maps)
+	["maps"] = function(group, maps)
 		for _,mapID in ipairs(maps) do
-			uncacheMap(mapID);
+			uncacheMap(group, mapID);
 		end
 	end,
-	["coord"] = function(coord)
-		if coord[3] then uncacheMap(coord[3]); end
+	["coord"] = function(group, coord)
+		if coord[3] and not group.instanceID then uncacheMap(group, coord[3]); end
 	end,
-	["coords"] = function(coords)
-		for i,coord in ipairs(coords) do
-			if coord[3] then uncacheMap(coord[3]); end
+	["coords"] = function(group, coords)
+		if not group.instanceID then
+			for i,coord in ipairs(coords) do
+				if coord[3] then uncacheMap(group, coord[3]); end
+			end
 		end
 	end,
 };
@@ -2496,7 +2500,7 @@ CacheFields = function(group)
 	end
 	if mapKeys then
 		for key,value in pairs(mapKeys) do
-			rawget(mapKeyConverters, key)(value);
+			rawget(mapKeyConverters, key)(group, value);
 		end
 	end
 end
@@ -5509,6 +5513,46 @@ app.CreateMap = function(id, t)
 		end
 	end
 	return map;
+end
+
+local instanceFields = {
+	["key"] = function(t)
+		return "instanceID";
+	end,
+	["text"] = function(t)
+		return rawget(t, "isRaid") and ("|cffff8000" .. t.name .. "|r") or t.name;
+	end,
+	["name"] = function(t)
+		return app.GetMapName(t.mapID);
+	end,
+	["icon"] = function(t)
+		return app.asset("Category_Zones");
+	end,
+	["back"] = function(t)
+		if app.CurrentMapID == t.mapID or (t.maps and contains(t.maps, app.CurrentMapID)) then
+			return 1;
+		end
+	end,
+	["mapID"] = function(t)
+		return t.maps and t.maps[1];
+	end,
+	["lvl"] = function(t)
+		return select(1, C_Map_GetMapLevels(t.mapID));
+	end,
+	["locks"] = function(t)
+		local locks = app.CurrentCharacter.Lockouts[t.name];
+		if locks then
+			rawset(t, "locks", locks);
+			return locks;
+		end
+	end,
+	["saved"] = function(t)
+		return t.locks;
+	end,
+};
+app.BaseInstance = app.BaseObjectFields(instanceFields);
+app.CreateInstance = function(id, t)
+	return setmetatable(constructor(id, t, "instanceID"), app.BaseInstance);
 end
 
 app.events.MAP_EXPLORATION_UPDATED = function(...)
