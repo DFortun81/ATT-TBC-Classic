@@ -989,6 +989,26 @@ end
 recipe = function(id, t)								-- Create a RECIPE Object
 	return struct("recipeID", id, t);
 end
+root = function(category, g)							-- Create a ROOT CATEGORY Object
+	local o = _[category];
+	if not o then
+		if #g > 0 and g[1] then
+			o = g;
+		else
+			o = { g };
+		end
+		_[category] = o;
+	else
+		if #g > 0 and g[1] then
+			for i,t in ipairs(g) do
+				table.insert(o, t);
+			end
+		else
+			table.insert(o, g);
+		end
+	end
+	return o;
+end
 spell = function(id, t)									-- Create a SPELL Object
 	return struct("spellID", id, t);
 end
