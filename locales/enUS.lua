@@ -501,6 +501,7 @@ app.L = {
 		["Auchindoun: Sethekk Halls"] = "Sethekk Halls";
 		["Auchindoun: Shadow Labyrinth"] = "Shadow Labyrinth";
 		["Auchindoun: The Shadow Labyrinth"] = "Shadow Labyrinth";
+		["Coilfang: Serpentshrine Cavern"] = "Serpentshrine Cavern";
 		["Coilfang: Slave Pens"] = "The Slave Pens";
 		["Coilfang: The Slave Pens"] = "The Slave Pens";
 		["Coilfang: The Steamvault"] = "The Steamvault";
