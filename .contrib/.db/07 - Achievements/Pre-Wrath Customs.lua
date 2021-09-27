@@ -153,6 +153,9 @@ local REPUTATIONS_OnUpdate = [[function(t)
 		else
 			t.collected = count >= 1;
 			t.collectible = collectible;
+			local parent = t.parent;
+			parent.total = (parent.total or 0) + 1;
+			if t.collected then parent.progress = (parent.progress or 0) + 1; end
 			t.visible = (not t.collected or _.CollectedItemVisibilityFilter(t)) and _.FilterItemClass_UnobtainableItem(t);
 		end
 	else
