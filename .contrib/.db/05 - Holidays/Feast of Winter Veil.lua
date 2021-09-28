@@ -1,6 +1,7 @@
 --------------------------------------------
 --     H O L I D A Y S  M O D U L E       --
 --------------------------------------------
+local HUGE_SNOWBALL = i(35557);	-- Huge Snowball
 _.Holidays = { applyholiday(FEAST_OF_WINTER_VEIL, {
 	-- #if ANYCLASSIC
 	["npcID"] = -61,
@@ -8,6 +9,21 @@ _.Holidays = { applyholiday(FEAST_OF_WINTER_VEIL, {
 	["holidayID"] = 235485,
 	-- #endif
 	["groups"] = {
+		-- #if AFTER 7.3.0.24727
+		filter(BATTLE_PETS, {
+			n(128156, {	-- Globe Yeti
+				["description"] = "This pet spawns inside the globe located in Orgrimmar or Ironforge, and since 2019 its spawn rate has been greatly increased. Only one yeti is up at a time. When it spawns it will be a Level 1-3 Yeti by itself so be prepared. If you have a hard time competing with others for the pet you can make a macro that does the following:\n\n|cFFFFFFFF/tar globe yeti|r\n\n Spam this macro along with an |cFFFFFFFFInteract With Target|r key bind.\n\nYou can also try doing it while in War Mode since there are usually less people.",
+				["timeline"] = { "added 7.3.0.24727" },
+				["maps"] = {
+					ORGRIMMAR,
+					IRONFORGE,
+				},
+				["groups"] = {
+					p(2114),	-- Globe Yeti
+				},
+			}),
+		}),
+		-- #endif
 		n(COMMON_BOSS_DROPS, {
 			-- #if AFTER LEGION
 			i(139300, {	-- Finely-Tailored Green Holiday Hat
@@ -234,7 +250,9 @@ _.Holidays = { applyholiday(FEAST_OF_WINTER_VEIL, {
 		}),
 		n(MAILBOX, {
 			i(17724),	-- Pattern: Green Holiday Shirt
-			i(17712),	-- Winter Veil Disguise Kit
+			i(17712, {	-- Winter Veil Disguise Kit
+				["description"] = "Greatfather Winter will mail this toy to you 24 hours after you complete the 'A Smokywood Pastures Thank You!' quest.",
+			}),
 		}),
 		n(QUESTS, {
 			q(8744, { 	-- A Carefully Wrapped Present
@@ -492,5 +510,30 @@ _.Holidays = { applyholiday(FEAST_OF_WINTER_VEIL, {
 				},
 			}),
 		}),
+		n(ZONE_DROPS, {
+			o(178609, {	-- Holiday Snow
+				i(17202),	-- Snowball
+			}),
+			o(243911, {	-- Snow Mound
+				["timeline"] = { "added 6.2.2.20395" },
+				["maps"] = { FROSTFIRE_RIDGE },
+				["groups"] = {
+					i(128770, {	-- Grumpling
+						["timeline"] = { "added 6.2.2.20395" },
+					}),
+					HUGE_SNOWBALL,
+					i(128632, {	-- Savage Snowball
+						["timeline"] = { "added 6.2.2.20395" },
+					}),
+					i(17202),	-- Snowball
+					i(128648, {	-- Yellow Snowball
+						["timeline"] = { "added 6.2.2.20395" },
+					}),
+				},
+			}),
+		}),
 	},
 })};
+
+-- Remove the holiday flag.
+HUGE_SNOWBALL.u = nil;
