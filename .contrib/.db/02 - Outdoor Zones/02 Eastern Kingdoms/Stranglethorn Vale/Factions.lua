@@ -25,7 +25,7 @@ local OnUpdateForBloodsail = [[function(t)
 end]];
 local OnTooltipForBloodsail = [[function(t)
 	local reputation = t.reputation;
-	if reputation < 42000 then
+	if reputation < 41999 then
 		local isHuman = _.RaceIndex == 1;
 		GameTooltip:AddLine("Reminder: Do all of the Goblin quests prior to starting this grind.", 1, 0.5, 0.5);
 		GameTooltip:AddLine("Do NOT turn in the Bloodsail quests if you intend to get to Exalted!", 1, 0.5, 0.5);
@@ -62,8 +62,8 @@ local OnTooltipForBloodsail = [[function(t)
 			end
 		end
 	else
-		if not t.dressing.collected then GameTooltip:AddLine("Complete 'Dressing the Part'."); end
-		if not t.admiral.collected then GameTooltip:AddLine("Complete 'Avast Ye Admiral'."); end
+		if not t.dressing.collected then GameTooltip:AddLine("Complete 'Dressing the Part'.", 1, 1, 1); end
+		if not t.admiral.collected then GameTooltip:AddLine("Complete 'Avast Ye Admiral'.", 1, 1, 1); end
 	end
 end]];
 _.Zones =
