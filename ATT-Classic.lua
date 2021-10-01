@@ -9970,7 +9970,7 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 						end
 						if holidayID then clone = app.CreateHoliday(holidayID, { g = { clone } }); end
 						MergeObject(holidaysHeader.g, clone);
-					elseif group.key == "mapID" then
+					elseif group.key == "mapID" or group.key == "instanceID" then
 						header.key = group.key;
 						header[group.key] = group[group.key];
 						MergeObject({header}, clone);
