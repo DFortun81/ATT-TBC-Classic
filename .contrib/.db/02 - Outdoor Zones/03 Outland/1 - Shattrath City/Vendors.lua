@@ -1022,7 +1022,7 @@ _.Zones =
 				-- #endif
 				-- #if BEFORE 4.0.1
 				n(19186, {	-- Kylene <Barmaid>
-					["description"] = "Speak to her and tell her she's quite the cook to learn these recipes.\n\nNOTE: It's believed that she will not train the Trout-related recipes until Phase 2.",
+					["description"] = "Speak to her and tell her she's quite the cook to learn these recipes.",
 					["coord"] = { 75.6, 32.6, SHATTRATH_CITY },
 					["groups"] = applyclassicphase(TBC_PHASE_TWO, bubbleDown({ ["requireSkill"] = COOKING }, {
 						recipe(42302),	-- Fisherman's Feast
