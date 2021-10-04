@@ -8980,13 +8980,27 @@ function app:GetDataCache()
 					tinsert(title.parent.g, title);
 				end
 			end
+			if not headers[-32] then
+				local searchResults = SearchForField("headerID", -32);
+				if searchResults and #searchResults > 0 then
+					header = app.CreateNPC(-32);
+					headers[-32] = header;
+					tinsert(self.g, header);
+					header.parent = self;
+					header.u = searchResults[1].u;
+					header.g = searchResults[1].g;
+					header.ignoreSort = true;
+				end
+			end
 			insertionSort(self.g, function(a, b)
 				return a.text < b.text;
 			end);
 			for i,header in pairs(headers) do
-				insertionSort(header.g, function(a, b)
-					return a.text < b.text;
-				end);
+				if not header.ignoreSort then
+					insertionSort(header.g, function(a, b)
+						return a.text < b.text;
+					end);
+				end
 			end
 		end
 		titlesCategory:OnUpdate();
