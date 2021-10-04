@@ -8797,6 +8797,33 @@ function app:GetDataCache()
 						end
 						]]--
 						for key,value in pairs(o) do rawset(battlepet, key, value); end
+						if o.parent and not o.sourceQuests then
+							local questID = GetRelativeValue(o, "questID");
+							if questID then
+								if not battlepet.sourceQuests then
+									battlepet.sourceQuests = {};
+								end
+								if not contains(battlepet.sourceQuests, questID) then
+									tinsert(battlepet.sourceQuests, questID);
+								end
+							else
+								local sourceQuests = GetRelativeValue(o, "sourceQuests");
+								if sourceQuests then
+									if not battlepet.sourceQuests then
+										battlepet.sourceQuests = {};
+										for k,questID in ipairs(sourceQuests) do
+											tinsert(battlepet.sourceQuests, questID);
+										end
+									else
+										for k,questID in ipairs(sourceQuests) do
+											if not contains(battlepet.sourceQuests, questID) then
+												tinsert(battlepet.sourceQuests, questID);
+											end
+										end
+									end
+								end
+							end
+						end
 					end
 					self.battlepets[i] = battlepet;
 					battlepet.progress = nil;
