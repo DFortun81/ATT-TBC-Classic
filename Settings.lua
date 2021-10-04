@@ -93,6 +93,7 @@ local GeneralSettingsBase = {
 		["AccountWide:Quests"] = false,
 		["AccountWide:Recipes"] = true,
 		["AccountWide:Reputations"] = true,
+		["AccountWide:Titles"] = true,
 		["Thing:Achievements"] = true,
 		["Thing:BattlePets"] = true,
 		["Thing:Deaths"] = true,
@@ -101,6 +102,7 @@ local GeneralSettingsBase = {
 		["Thing:Quests"] = true,
 		["Thing:Recipes"] = true,
 		["Thing:Reputations"] = true,
+		["Thing:Titles"] = true,
 		["Show:CompletedGroups"] = false,
 		["Show:CollectedThings"] = false,
 	},
@@ -434,6 +436,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideQuests = true;
 		app.AccountWideRecipes = true;
 		app.AccountWideReputations = true;
+		app.AccountWideTitles = true;
 
 		app.CollectibleAchievements = true;
 		app.CollectibleBattlePets = true;
@@ -444,6 +447,7 @@ settings.UpdateMode = function(self)
 		app.CollectibleQuests = true;
 		app.CollectibleRecipes = true;
 		app.CollectibleReputations = true;
+		app.CollectibleTitles = true;
 	else
 		app.VisibilityFilter = app.ObjectVisibilityFilter;
 		app.GroupFilter = app.FilterItemClass;
@@ -462,6 +466,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideQuests = self:Get("AccountWide:Quests");
 		app.AccountWideRecipes = self:Get("AccountWide:Recipes");
 		app.AccountWideReputations = self:Get("AccountWide:Reputations");
+		app.AccountWideTitles = self:Get("AccountWide:Titles");
 
 		app.CollectibleAchievements = self:Get("Thing:Achievements");
 		app.CollectibleBattlePets = self:Get("Thing:BattlePets");
@@ -472,6 +477,7 @@ settings.UpdateMode = function(self)
 		app.CollectibleQuests = self:Get("Thing:Quests");
 		app.CollectibleRecipes = self:Get("Thing:Recipes");
 		app.CollectibleReputations = self:Get("Thing:Reputations");
+		app.CollectibleTitles = self:Get("Thing:Titles");
 
 		if self:Get("AccountMode") then
 			app.ItemTypeFilter = app.NoFilter;
@@ -1034,6 +1040,44 @@ function(self)
 end);
 ReputationsAccountWideCheckBox:SetATTTooltip("Reputations are not normally tracked account wide in Blizzard's database, but we can do that.");
 ReputationsAccountWideCheckBox:SetPoint("TOPLEFT", ReputationsCheckBox, "TOPLEFT", 220, 0);
+
+local TitlesCheckBox = settings:CreateCheckBox(PAPERDOLL_SIDEBAR_TITLES,
+function(self)
+	self:SetChecked(settings:Get("Thing:Titles"));
+	if settings:Get("DebugMode") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("Thing:Titles", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+TitlesCheckBox:SetATTTooltip("Enable this option to track character titles.");
+TitlesCheckBox:SetPoint("TOPLEFT", ReputationsCheckBox, "BOTTOMLEFT", 0, 4);
+
+local TitlesAccountWideCheckBox = settings:CreateCheckBox("Account Wide",
+function(self)
+	self:SetChecked(settings:Get("AccountWide:Titles"));
+	if settings:Get("DebugMode") or not settings:Get("Thing:Titles") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("AccountWide:Titles", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+TitlesAccountWideCheckBox:SetATTTooltip("Titles are not normally tracked account wide in Blizzard's database, but we can do that.");
+TitlesAccountWideCheckBox:SetPoint("TOPLEFT", TitlesCheckBox, "TOPLEFT", 220, 0);
 
 local ShowMinimapButtonCheckBox = settings:CreateCheckBox("Show the Minimap Button",
 function(self)

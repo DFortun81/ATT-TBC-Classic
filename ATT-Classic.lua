@@ -8607,6 +8607,15 @@ function app:GetDataCache()
 		battlePetsCategory.icon = app.asset("Category_PetJournal");
 		table.insert(g, battlePetsCategory);
 		
+		-- Titles
+		local titlesCategory = {};
+		titlesCategory.g = {};
+		titlesCategory.titles = {};
+		titlesCategory.expanded = false;
+		titlesCategory.text = PAPERDOLL_SIDEBAR_TITLES;
+		titlesCategory.icon = app.asset("Category_Titles");
+		table.insert(g, titlesCategory);
+		
 		-- Track Deaths!
 		table.insert(g, app:CreateDeathClass());
 		
@@ -8905,6 +8914,82 @@ function app:GetDataCache()
 			end);
 		end;
 		flightPathsCategory:OnUpdate();
+		
+		-- Update Title data.
+		titlesCategory.OnUpdate = function(self)
+			local headers = {};
+			for i,header in ipairs(self.g) do
+				if header.headerID and header.key == "headerID" then
+					headers[header.headerID] = header;
+					if not header.g then
+						header.g = {};
+					end
+				end
+			end
+			for i,_ in pairs(fieldCache["titleID"]) do
+				if not self.titles[i] then
+					local title, header = app.CreateTitle(tonumber(i)), self;
+					for j,o in ipairs(_) do
+						for key,value in pairs(o) do rawset(title, key, value); end
+						if o.parent then
+							if not o.sourceQuests then
+								local questID = GetRelativeValue(o, "questID");
+								if questID then
+									if not title.sourceQuests then
+										title.sourceQuests = {};
+									end
+									if not contains(title.sourceQuests, questID) then
+										tinsert(title.sourceQuests, questID);
+									end
+								else
+									local sourceQuests = GetRelativeValue(o, "sourceQuests");
+									if sourceQuests then
+										if not title.sourceQuests then
+											title.sourceQuests = {};
+											for k,questID in ipairs(sourceQuests) do
+												tinsert(title.sourceQuests, questID);
+											end
+										else
+											for k,questID in ipairs(sourceQuests) do
+												if not contains(title.sourceQuests, questID) then
+													tinsert(title.sourceQuests, questID);
+												end
+											end
+										end
+									end
+								end
+							end
+							local headerID = GetRelativeValue(o, "headerID");
+							if headerID then
+								header = headers[headerID];
+								if not header then
+									header = app.CreateNPC(headerID);
+									headers[headerID] = header;
+									tinsert(self.g, header);
+									header.parent = self;
+									header.g = {};
+								end
+							end
+						end
+					end
+					self.titles[i] = title;
+					title.progress = nil;
+					title.total = nil;
+					title.g = nil;
+					title.parent = header;
+					tinsert(title.parent.g, title);
+				end
+			end
+			insertionSort(self.g, function(a, b)
+				return a.text < b.text;
+			end);
+			for i,header in pairs(headers) do
+				insertionSort(header.g, function(a, b)
+					return a.text < b.text;
+				end);
+			end
+		end
+		titlesCategory:OnUpdate();
 		
 		-- Check for Vendors missing Coordinates
 		--[[
