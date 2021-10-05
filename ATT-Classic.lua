@@ -130,6 +130,15 @@ local insertionSort = function(t, compare)
 		end
 	end
 end
+local sortByTextSafely = function(a, b)
+	if a and a.text then
+		if b and b.text then
+			return a.text <= b.text;
+		end
+		return true;
+	end
+	return false;
+end;
 
 -- Data Lib
 local attData;
@@ -2199,9 +2208,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 				end
 			end
 			if #knownBy > 0 then
-				insertionSort(knownBy, function(a, b)
-					return a.text < b.text;
-				end);
+				insertionSort(knownBy, sortByTextSafely);
 				local desc = "Known by ";
 				for i,character in ipairs(knownBy) do
 					if i > 1 then desc = desc .. ", "; end
@@ -5538,15 +5545,7 @@ app.CreateMap = function(id, t)
 			end
 		end
 		if explorationHeader and explorationHeader.g then
-			insertionSort(explorationHeader.g, function(a, b)
-				if a and a.text then
-					if b and b.text then
-						return a.text <= b.text;
-					end
-					return true;
-				end
-				return false;
-			end);
+			insertionSort(explorationHeader.g, sortByTextSafely);
 		end
 	end
 	return map;
@@ -8893,13 +8892,9 @@ function app:GetDataCache()
 					end
 				end
 			end
-			insertionSort(self.g, function(a, b)
-				return a.text < b.text;
-			end);
+			insertionSort(self.g, sortByTextSafely);
 			for i,petType in pairs(petTypes) do
-				insertionSort(petType.g, function(a, b)
-					return a.text < b.text;
-				end);
+				insertionSort(petType.g, sortByTextSafely);
 			end
 		end
 		battlePetsCategory:OnUpdate();
@@ -8924,9 +8919,7 @@ function app:GetDataCache()
 					end
 				end
 			end
-			insertionSort(self.g, function(a, b)
-				return a.text < b.text;
-			end);
+			insertionSort(self.g, sortByTextSafely);
 		end
 		factionsCategory:OnUpdate();
 		
@@ -8960,9 +8953,7 @@ function app:GetDataCache()
 					end
 				end
 			end
-			insertionSort(self.g, function(a, b)
-				return a.text < b.text;
-			end);
+			insertionSort(self.g, sortByTextSafely);
 		end;
 		flightPathsCategory:OnUpdate();
 		
@@ -9043,14 +9034,10 @@ function app:GetDataCache()
 					header.ignoreSort = true;
 				end
 			end
-			insertionSort(self.g, function(a, b)
-				return a.text < b.text;
-			end);
+			insertionSort(self.g, sortByTextSafely);
 			for i,header in pairs(headers) do
 				if not header.ignoreSort then
-					insertionSort(header.g, function(a, b)
-						return a.text < b.text;
-					end);
+					insertionSort(header.g, sortByTextSafely);
 				end
 			end
 		end
@@ -9168,13 +9155,9 @@ function app:GetDataCache()
 					end
 				end
 			end
-			insertionSort(self.g, function(a, b)
-				return a.text < b.text;
-			end);
+			insertionSort(self.g, sortByTextSafely);
 			for i,header in pairs(headers) do
-				insertionSort(header.g, function(a, b)
-					return a.text < b.text;
-				end);
+				insertionSort(header.g, sortByTextSafely);
 			end
 		end
 		toyCategory:OnUpdate();
