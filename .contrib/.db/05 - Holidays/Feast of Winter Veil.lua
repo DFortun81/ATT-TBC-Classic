@@ -533,6 +533,7 @@ _.Holidays = { applyholiday(FEAST_OF_WINTER_VEIL, {
 			}),
 		}),
 		i(37710),	-- Crashin' Thrashin' Racer Controller
+		i(34425),	-- Clockwork Rocket Bot
 	},
 })};
 
