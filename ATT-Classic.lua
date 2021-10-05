@@ -8646,6 +8646,15 @@ function app:GetDataCache()
 		battlePetsCategory.icon = app.asset("Category_PetJournal");
 		table.insert(g, battlePetsCategory);
 		
+		-- Mounts
+		local mountsCategory = {};
+		mountsCategory.g = {};
+		mountsCategory.mounts = {};
+		mountsCategory.expanded = false;
+		mountsCategory.text = MOUNTS;
+		mountsCategory.icon = app.asset("Category_Mounts");
+		table.insert(g, mountsCategory);
+		
 		-- Titles
 		local titlesCategory = {};
 		titlesCategory.g = {};
@@ -8833,6 +8842,128 @@ function app:GetDataCache()
 		app:GetWindow("Unsorted").data = allData;
 		CacheFields(allData);
 		
+		local buildCategoryEntry = function(self, headers, searchResults, inst)
+			local header = self;
+			for j,o in ipairs(searchResults) do
+				for key,value in pairs(o) do rawset(inst, key, value); end
+				if o.parent then
+					if not o.sourceQuests then
+						local questID = GetRelativeValue(o, "questID");
+						if questID then
+							if not inst.sourceQuests then
+								inst.sourceQuests = {};
+							end
+							if not contains(inst.sourceQuests, questID) then
+								tinsert(inst.sourceQuests, questID);
+							end
+						else
+							local sourceQuests = GetRelativeValue(o, "sourceQuests");
+							if sourceQuests then
+								if not inst.sourceQuests then
+									inst.sourceQuests = {};
+									for k,questID in ipairs(sourceQuests) do
+										tinsert(inst.sourceQuests, questID);
+									end
+								else
+									for k,questID in ipairs(sourceQuests) do
+										if not contains(inst.sourceQuests, questID) then
+											tinsert(inst.sourceQuests, questID);
+										end
+									end
+								end
+							end
+						end
+					end
+					
+					if GetRelativeValue(o, "isHolidayCategory") then
+						header = headers["holiday"];
+						if not header then
+							header = app.CreateNPC(-5);
+							headers["holiday"] = header;
+							tinsert(self.g, header);
+							header.parent = self;
+							header.g = {};
+						end
+					elseif GetRelativeValue(o, "isPromotionCategory") then
+						header = headers["promo"];
+						if not header then
+							header = {};
+							header.text = BATTLE_PET_SOURCE_8;
+							header.icon = app.asset("Category_Promo");
+							headers["promo"] = header;
+							tinsert(self.g, header);
+							header.parent = self;
+							header.g = {};
+						end
+					elseif o.parent.headerID == 0 or o.parent.headerID == -1 or o.parent.headerID == -82 or GetRelativeValue(o, "isWorldDropCategory") then
+						header = headers["drop"];
+						if not header then
+							header = {};
+							header.text = BATTLE_PET_SOURCE_1;
+							header.icon = app.asset("Category_WorldDrops");
+							headers["drop"] = header;
+							tinsert(self.g, header);
+							header.parent = self;
+							header.g = {};
+						end
+					elseif o.parent.key == "npcID" then
+						if GetRelativeValue(o, "headerID") == -2 then
+							header = headers[-2];
+							if not header then
+								header = app.CreateNPC(-2);
+								headers[-2] = header;
+								tinsert(self.g, header);
+								header.parent = self;
+								header.g = {};
+							end
+						else
+							header = headers["drop"];
+							if not header then
+								header = {};
+								header.text = BATTLE_PET_SOURCE_1;
+								header.icon = app.asset("Category_WorldDrops");
+								headers["drop"] = header;
+								tinsert(self.g, header);
+								header.parent = self;
+								header.g = {};
+							end
+						end
+					elseif o.parent.key == "categoryID" then
+						header = headers["crafted"];
+						if not header then
+							header = {};
+							header.text = LOOT_JOURNAL_LEGENDARIES_SOURCE_CRAFTED_ITEM;
+							header.icon = app.asset("Category_Crafting");
+							headers["crafted"] = header;
+							tinsert(self.g, header);
+							header.parent = self;
+							header.g = {};
+						end
+					else
+						local headerID = GetRelativeValue(o, "headerID");
+						if headerID then
+							header = headers[headerID];
+							if not header then
+								header = app.CreateNPC(headerID);
+								headers[headerID] = header;
+								tinsert(self.g, header);
+								header.parent = self;
+								header.g = {};
+							end
+						end
+					end
+				end
+			end
+			inst.parent = header;
+			inst.progress = nil;
+			inst.total = nil;
+			inst.g = nil;
+			if not inst.u or inst.u ~= 1 then
+				tinsert(inst.parent.g, inst);
+			end
+			return inst;
+		end
+		
 		-- Update Battle Pet data.
 		battlePetsCategory.OnUpdate = function(self)
 			local petTypes = {};
@@ -8957,6 +9088,29 @@ function app:GetDataCache()
 		end;
 		flightPathsCategory:OnUpdate();
 		
+		-- Update Mount data.
+		mountsCategory.OnUpdate = function(self)
+			local headers = {};
+			for i,header in ipairs(self.g) do
+				if header.headerID and header.key == "headerID" then
+					headers[header.headerID] = header;
+					if not header.g then
+						header.g = {};
+					end
+				end
+			end
+			for i,_ in pairs(fieldCache["itemID"]) do
+				if _[1].f and _[1].f == 100 and not self.mounts[i] then
+					self.mounts[i] = buildCategoryEntry(self, headers, _, app.CreateItem(tonumber(i)));
+				end
+			end
+			insertionSort(self.g, sortByTextSafely);
+			for i,header in pairs(headers) do
+				insertionSort(header.g, sortByTextSafely);
+			end
+		end
+		mountsCategory:OnUpdate();
+		
 		-- Update Title data.
 		titlesCategory.OnUpdate = function(self)
 			local headers = {};
@@ -8970,56 +9124,7 @@ function app:GetDataCache()
 			end
 			for i,_ in pairs(fieldCache["titleID"]) do
 				if not self.titles[i] then
-					local title, header = app.CreateTitle(tonumber(i)), self;
-					for j,o in ipairs(_) do
-						for key,value in pairs(o) do rawset(title, key, value); end
-						if o.parent then
-							if not o.sourceQuests then
-								local questID = GetRelativeValue(o, "questID");
-								if questID then
-									if not title.sourceQuests then
-										title.sourceQuests = {};
-									end
-									if not contains(title.sourceQuests, questID) then
-										tinsert(title.sourceQuests, questID);
-									end
-								else
-									local sourceQuests = GetRelativeValue(o, "sourceQuests");
-									if sourceQuests then
-										if not title.sourceQuests then
-											title.sourceQuests = {};
-											for k,questID in ipairs(sourceQuests) do
-												tinsert(title.sourceQuests, questID);
-											end
-										else
-											for k,questID in ipairs(sourceQuests) do
-												if not contains(title.sourceQuests, questID) then
-													tinsert(title.sourceQuests, questID);
-												end
-											end
-										end
-									end
-								end
-							end
-							local headerID = GetRelativeValue(o, "headerID");
-							if headerID then
-								header = headers[headerID];
-								if not header then
-									header = app.CreateNPC(headerID);
-									headers[headerID] = header;
-									tinsert(self.g, header);
-									header.parent = self;
-									header.g = {};
-								end
-							end
-						end
-					end
-					self.titles[i] = title;
-					title.progress = nil;
-					title.total = nil;
-					title.g = nil;
-					title.parent = header;
-					tinsert(title.parent.g, title);
+					self.titles[i] = buildCategoryEntry(self, headers, _, app.CreateTitle(tonumber(i)));
 				end
 			end
 			if not headers[-32] then
@@ -9056,103 +9161,7 @@ function app:GetDataCache()
 			end
 			for i,_ in pairs(fieldCache["toyID"]) do
 				if not self.toys[i] then
-					local toy, header = app.CreateToy(tonumber(i)), self;
-					for j,o in ipairs(_) do
-						for key,value in pairs(o) do rawset(toy, key, value); end
-						if o.parent then
-							if not o.sourceQuests then
-								local questID = GetRelativeValue(o, "questID");
-								if questID then
-									if not toy.sourceQuests then
-										toy.sourceQuests = {};
-									end
-									if not contains(toy.sourceQuests, questID) then
-										tinsert(toy.sourceQuests, questID);
-									end
-								else
-									local sourceQuests = GetRelativeValue(o, "sourceQuests");
-									if sourceQuests then
-										if not toy.sourceQuests then
-											toy.sourceQuests = {};
-											for k,questID in ipairs(sourceQuests) do
-												tinsert(toy.sourceQuests, questID);
-											end
-										else
-											for k,questID in ipairs(sourceQuests) do
-												if not contains(toy.sourceQuests, questID) then
-													tinsert(toy.sourceQuests, questID);
-												end
-											end
-										end
-									end
-								end
-							end
-							
-							if o.parent.key == "categoryID" then
-								header = headers["crafted"];
-								if not header then
-									header = {};
-									header.text = LOOT_JOURNAL_LEGENDARIES_SOURCE_CRAFTED_ITEM;
-									header.icon = app.asset("Category_Crafting");
-									headers["crafted"] = header;
-									tinsert(self.g, header);
-									header.parent = self;
-									header.g = {};
-								end
-							elseif GetRelativeValue(o, "isHolidayCategory") then
-								header = headers["holiday"];
-								if not header then
-									header = app.CreateNPC(-5);
-									headers["holiday"] = header;
-									tinsert(self.g, header);
-									header.parent = self;
-									header.g = {};
-								end
-							elseif o.parent.key == "npcID" or o.parent.headerID == -1 or GetRelativeValue(o, "isWorldDropCategory") then
-								header = headers["drop"];
-								if not header then
-									header = {};
-									header.text = BATTLE_PET_SOURCE_1;
-									header.icon = app.asset("Category_WorldDrops");
-									headers["drop"] = header;
-									tinsert(self.g, header);
-									header.parent = self;
-									header.g = {};
-								end
-							elseif GetRelativeValue(o, "isPromotionCategory") then
-								header = headers["promo"];
-								if not header then
-									header = {};
-									header.text = BATTLE_PET_SOURCE_8;
-									header.icon = app.asset("Category_Promo");
-									headers["promo"] = header;
-									tinsert(self.g, header);
-									header.parent = self;
-									header.g = {};
-								end
-							else
-								local headerID = GetRelativeValue(o, "headerID");
-								if headerID then
-									header = headers[headerID];
-									if not header then
-										header = app.CreateNPC(headerID);
-										headers[headerID] = header;
-										tinsert(self.g, header);
-										header.parent = self;
-										header.g = {};
-									end
-								end
-							end
-						end
-					end
-					self.toys[i] = toy;
-					toy.progress = nil;
-					toy.total = nil;
-					toy.g = nil;
-					toy.parent = header;
-					if not toy.u or toy.u ~= 1 then
-						tinsert(toy.parent.g, toy);
-					end
+					self.toys[i] = buildCategoryEntry(self, headers, _, app.CreateToy(tonumber(i)));
 				end
 			end
 			insertionSort(self.g, sortByTextSafely);
