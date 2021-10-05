@@ -94,6 +94,7 @@ local GeneralSettingsBase = {
 		["AccountWide:Recipes"] = true,
 		["AccountWide:Reputations"] = true,
 		["AccountWide:Titles"] = true,
+		["AccountWide:Toys"] = true,
 		["Thing:Achievements"] = true,
 		["Thing:BattlePets"] = true,
 		["Thing:Deaths"] = true,
@@ -103,6 +104,7 @@ local GeneralSettingsBase = {
 		["Thing:Recipes"] = true,
 		["Thing:Reputations"] = true,
 		["Thing:Titles"] = true,
+		["Thing:Toys"] = true,
 		["Show:CompletedGroups"] = false,
 		["Show:CollectedThings"] = false,
 	},
@@ -437,6 +439,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideRecipes = true;
 		app.AccountWideReputations = true;
 		app.AccountWideTitles = true;
+		app.AccountWideToys = true;
 
 		app.CollectibleAchievements = true;
 		app.CollectibleBattlePets = true;
@@ -448,6 +451,7 @@ settings.UpdateMode = function(self)
 		app.CollectibleRecipes = true;
 		app.CollectibleReputations = true;
 		app.CollectibleTitles = true;
+		app.CollectibleToys = true;
 	else
 		app.VisibilityFilter = app.ObjectVisibilityFilter;
 		app.GroupFilter = app.FilterItemClass;
@@ -467,6 +471,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideRecipes = self:Get("AccountWide:Recipes");
 		app.AccountWideReputations = self:Get("AccountWide:Reputations");
 		app.AccountWideTitles = self:Get("AccountWide:Titles");
+		app.AccountWideToys = self:Get("AccountWide:Toys");
 
 		app.CollectibleAchievements = self:Get("Thing:Achievements");
 		app.CollectibleBattlePets = self:Get("Thing:BattlePets");
@@ -478,6 +483,7 @@ settings.UpdateMode = function(self)
 		app.CollectibleRecipes = self:Get("Thing:Recipes");
 		app.CollectibleReputations = self:Get("Thing:Reputations");
 		app.CollectibleTitles = self:Get("Thing:Titles");
+		app.CollectibleToys = self:Get("Thing:Toys");
 
 		if self:Get("AccountMode") then
 			app.ItemTypeFilter = app.NoFilter;
@@ -1078,6 +1084,44 @@ function(self)
 end);
 TitlesAccountWideCheckBox:SetATTTooltip("Titles are not normally tracked account wide in Blizzard's database, but we can do that.");
 TitlesAccountWideCheckBox:SetPoint("TOPLEFT", TitlesCheckBox, "TOPLEFT", 220, 0);
+
+local ToysCheckBox = settings:CreateCheckBox(TOY_BOX,
+function(self)
+	self:SetChecked(settings:Get("Thing:Toys"));
+	if settings:Get("DebugMode") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("Thing:Toys", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+ToysCheckBox:SetATTTooltip("Enable this option to track items that currently act as a toy or become a collectible toy in the future.");
+ToysCheckBox:SetPoint("TOPLEFT", TitlesCheckBox, "BOTTOMLEFT", 0, 4);
+
+local ToysAccountWideCheckBox = settings:CreateCheckBox("Account Wide",
+function(self)
+	self:SetChecked(settings:Get("AccountWide:Toys"));
+	if settings:Get("DebugMode") or not settings:Get("Thing:Toys") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("AccountWide:Toys", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+ToysAccountWideCheckBox:SetATTTooltip("Toys are not normally tracked account wide in Blizzard's database, but we can do that.");
+ToysAccountWideCheckBox:SetPoint("TOPLEFT", ToysCheckBox, "TOPLEFT", 220, 0);
 
 local ShowMinimapButtonCheckBox = settings:CreateCheckBox("Show the Minimap Button",
 function(self)

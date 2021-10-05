@@ -6,6 +6,7 @@ _.Holidays =
 	n(-383, {	-- Miscellaneous
 		-- TODO: Valentine's Day Holiday
 		i(22206),	-- Bouquet of Red Roses
+		i(34480),	-- Romantic Picnic Basket
 		
 		-- TODO: Easter Holiday
 		-- Brightly Colored Egg

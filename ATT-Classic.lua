@@ -1059,7 +1059,11 @@ CreateObject = function(t)
 					t = app.CreateSpell(t.spellID, t);
 				end
 			elseif t.itemID then
-				t = app.CreateItem(t.itemID, t);
+				if t.isToy then
+					t = app.CreateToy(t.itemID, t);
+				else
+					t = app.CreateItem(t.itemID, t);
+				end
 			elseif t.classID then
 				t = app.CreateCharacterClass(t.classID, t);
 			elseif t.npcID or t.creatureID then
@@ -2307,6 +2311,7 @@ fieldCache["speciesID"] = {};
 fieldCache["spellID"] = {};
 fieldCache["tierID"] = {};
 fieldCache["titleID"] = {};
+fieldCache["toyID"] = {};
 local cacheCreatureID = function(group, value)
 	if value > 0 then
 		CacheField(group, "creatureID", value);
@@ -2351,6 +2356,7 @@ fieldConverters = {
 		CacheField(group, "headerID", value);
 	end,
 	["itemID"] = function(group, value)
+		if group.isToy then CacheField(group, "toyID", value); end
 		CacheField(group, "itemID", value);
 	end,
 	["mapID"] = cacheMapID,
@@ -4989,6 +4995,37 @@ app.CreateItem = function(id, t)
 		end
 	end
 	return setmetatable(constructor(id, t, "itemID"), app.BaseItem);
+end
+
+local fields = RawCloneData(itemFields);
+fields.collectible = function(t)
+	return app.CollectibleToys;
+end
+fields.collected = function(t)
+	if t.itemID then
+		if GetItemCount(t.itemID, true) > 0 then
+			app.CurrentCharacter.Toys[t.itemID] = 1;
+			ATTAccountWideData.Toys[t.itemID] = 1;
+			return 1;
+		elseif app.CurrentCharacter.Toys[t.itemID] == 1 then
+			app.CurrentCharacter.Toys[t.itemID] = nil;
+			ATTAccountWideData.Toys[t.itemID] = nil;
+			for guid,characterData in pairs(ATTCharacterData) do
+				if characterData.Toys and characterData.Toys[t.itemID] then
+					ATTAccountWideData.Toys[t.itemID] = 1;
+				end
+			end
+		end
+		if app.AccountWideToys and ATTAccountWideData.Toys[t.itemID] then
+			return 2;
+		end
+	end
+end
+fields.isToy = function(t) return true; end
+
+app.BaseToy = app.BaseObjectFields(fields);
+app.CreateToy = function(id, t)
+	return setmetatable(constructor(id, t, "itemID"), app.BaseToy);
 end
 
 local HarvestedItemDatabase = {};
@@ -8493,6 +8530,7 @@ function app:GetDataCache()
 		-- World Drops
 		if app.Categories.WorldDrops then
 			db = {};
+			db.isWorldDropCategory = true;
 			db.text = TRANSMOG_SOURCE_4;
 			db.icon = app.asset("Category_WorldDrops");
 			db.g = app.Categories.WorldDrops;
@@ -8560,6 +8598,7 @@ function app:GetDataCache()
 		if app.Categories.Holidays then
 			db = app.CreateNPC(-5, app.Categories.Holidays);
 			db.description = "These events occur at consistent dates around the year based on and themed around real world holiday events.";
+			db.isHolidayCategory = true;
 			db.expanded = false;
 			table.insert(g, db);
 		end
@@ -8578,9 +8617,10 @@ function app:GetDataCache()
 		-- Promotions
 		if app.Categories.Promotions then
 			db = {};
+			db.isPromotionCategory = true;
 			db.text = BATTLE_PET_SOURCE_8;
 			db.description = "This section is for real world promotions that seeped extremely rare content into the game prior to some of them appearing within the In-Game Shop.";
-			db.icon = app.asset("Category_InGameShop");
+			db.icon = app.asset("Category_Promo");
 			db.g = app.Categories.Promotions;
 			db.expanded = false;
 			table.insert(g, db);
@@ -8615,6 +8655,15 @@ function app:GetDataCache()
 		titlesCategory.text = PAPERDOLL_SIDEBAR_TITLES;
 		titlesCategory.icon = app.asset("Category_Titles");
 		table.insert(g, titlesCategory);
+		
+		-- Toys
+		local toyCategory = {};
+		toyCategory.g = {};
+		toyCategory.toys = {};
+		toyCategory.expanded = false;
+		toyCategory.text = TOY_BOX;
+		toyCategory.icon = app.asset("Category_ToyBox");
+		table.insert(g, toyCategory);
 		
 		-- Track Deaths!
 		table.insert(g, app:CreateDeathClass());
@@ -8839,7 +8888,9 @@ function app:GetDataCache()
 					battlepet.total = nil;
 					battlepet.g = nil;
 					battlepet.parent = battlepet.petTypeID and petTypes[battlepet.petTypeID] or self;
-					tinsert(battlepet.parent.g, battlepet);
+					if not battlepet.u or battlepet.u ~= 1 then
+						tinsert(battlepet.parent.g, battlepet);
+					end
 				end
 			end
 			insertionSort(self.g, function(a, b)
@@ -9004,6 +9055,129 @@ function app:GetDataCache()
 			end
 		end
 		titlesCategory:OnUpdate();
+		
+		-- Update Toy data.
+		toyCategory.OnUpdate = function(self)
+			local headers = {};
+			for i,header in ipairs(self.g) do
+				if header.headerID and header.key == "headerID" then
+					headers[header.headerID] = header;
+					if not header.g then
+						header.g = {};
+					end
+				end
+			end
+			for i,_ in pairs(fieldCache["toyID"]) do
+				if not self.toys[i] then
+					local toy, header = app.CreateToy(tonumber(i)), self;
+					for j,o in ipairs(_) do
+						for key,value in pairs(o) do rawset(toy, key, value); end
+						if o.parent then
+							if not o.sourceQuests then
+								local questID = GetRelativeValue(o, "questID");
+								if questID then
+									if not toy.sourceQuests then
+										toy.sourceQuests = {};
+									end
+									if not contains(toy.sourceQuests, questID) then
+										tinsert(toy.sourceQuests, questID);
+									end
+								else
+									local sourceQuests = GetRelativeValue(o, "sourceQuests");
+									if sourceQuests then
+										if not toy.sourceQuests then
+											toy.sourceQuests = {};
+											for k,questID in ipairs(sourceQuests) do
+												tinsert(toy.sourceQuests, questID);
+											end
+										else
+											for k,questID in ipairs(sourceQuests) do
+												if not contains(toy.sourceQuests, questID) then
+													tinsert(toy.sourceQuests, questID);
+												end
+											end
+										end
+									end
+								end
+							end
+							
+							if o.parent.key == "categoryID" then
+								header = headers["crafted"];
+								if not header then
+									header = {};
+									header.text = LOOT_JOURNAL_LEGENDARIES_SOURCE_CRAFTED_ITEM;
+									header.icon = app.asset("Category_Crafting");
+									headers["crafted"] = header;
+									tinsert(self.g, header);
+									header.parent = self;
+									header.g = {};
+								end
+							elseif GetRelativeValue(o, "isHolidayCategory") then
+								header = headers["holiday"];
+								if not header then
+									header = app.CreateNPC(-5);
+									headers["holiday"] = header;
+									tinsert(self.g, header);
+									header.parent = self;
+									header.g = {};
+								end
+							elseif o.parent.key == "npcID" or o.parent.headerID == -1 or GetRelativeValue(o, "isWorldDropCategory") then
+								header = headers["drop"];
+								if not header then
+									header = {};
+									header.text = BATTLE_PET_SOURCE_1;
+									header.icon = app.asset("Category_WorldDrops");
+									headers["drop"] = header;
+									tinsert(self.g, header);
+									header.parent = self;
+									header.g = {};
+								end
+							elseif GetRelativeValue(o, "isPromotionCategory") then
+								header = headers["promo"];
+								if not header then
+									header = {};
+									header.text = BATTLE_PET_SOURCE_8;
+									header.icon = app.asset("Category_Promo");
+									headers["promo"] = header;
+									tinsert(self.g, header);
+									header.parent = self;
+									header.g = {};
+								end
+							else
+								local headerID = GetRelativeValue(o, "headerID");
+								if headerID then
+									header = headers[headerID];
+									if not header then
+										header = app.CreateNPC(headerID);
+										headers[headerID] = header;
+										tinsert(self.g, header);
+										header.parent = self;
+										header.g = {};
+									end
+								end
+							end
+						end
+					end
+					self.toys[i] = toy;
+					toy.progress = nil;
+					toy.total = nil;
+					toy.g = nil;
+					toy.parent = header;
+					if not toy.u or toy.u ~= 1 then
+						tinsert(toy.parent.g, toy);
+					end
+				end
+			end
+			insertionSort(self.g, function(a, b)
+				return a.text < b.text;
+			end);
+			for i,header in pairs(headers) do
+				insertionSort(header.g, function(a, b)
+					return a.text < b.text;
+				end);
+			end
+		end
+		toyCategory:OnUpdate();
 		
 		-- Check for Vendors missing Coordinates
 		--[[
@@ -12303,6 +12477,7 @@ app.events.VARIABLES_LOADED = function()
 	if not currentCharacter.Spells then currentCharacter.Spells = {}; end
 	if not currentCharacter.SpellRanks then currentCharacter.SpellRanks = {}; end
 	if not currentCharacter.Titles then currentCharacter.Titles = {}; end
+	if not currentCharacter.Toys then currentCharacter.Toys = {}; end
 	currentCharacter.lastPlayed = time();
 	app.CurrentCharacter = currentCharacter;
 	
@@ -12433,6 +12608,7 @@ app.events.VARIABLES_LOADED = function()
 	if not accountWideData.Quests then accountWideData.Quests = {}; end
 	if not accountWideData.Spells then accountWideData.Spells = {}; end
 	if not accountWideData.Titles then accountWideData.Titles = {}; end
+	if not accountWideData.Toys then accountWideData.Toys = {}; end
 	
 	-- Convert over the deprecated account wide tables.
 	local data = GetDataMember("Deaths");
