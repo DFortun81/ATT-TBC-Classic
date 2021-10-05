@@ -960,7 +960,7 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
 		i(29739),	-- Arcane Tome
 		i(29740),	-- Fel Armament
 	}),
-	category(106, {	-- Tarrot Cards
+	applyclassicphase(TBC_PHASE_THREE, category(106, {	-- Tarrot Cards
 		-- Blessings Deck
 		i(31882),	-- Ace of Blessings
 		i(31889),	-- Two of Blessings
@@ -997,7 +997,7 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
 		i(31898),	-- Six of Storms
 		i(31896),	-- Seven of Storms
 		i(31893),	-- Eight of Storms
-	}),
+	})),
 	filter(200, {	-- Recipes
 		cl(DRUID, {
 			{
