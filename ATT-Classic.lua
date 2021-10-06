@@ -8572,6 +8572,7 @@ function app:GetDataCache()
 		if app.Categories.PvP then
 			db = {};
 			db.text = PVP;
+			db.isPVPCategory = true;
 			db.icon = app.asset("Category_PvP");
 			db.g = app.Categories.PvP;
 			table.insert(g, db);
@@ -8894,6 +8895,17 @@ function app:GetDataCache()
 								header.text = BATTLE_PET_SOURCE_8;
 								header.icon = app.asset("Category_Promo");
 								headers["promo"] = header;
+								tinsert(self.g, header);
+								header.parent = self;
+								header.g = {};
+							end
+						elseif GetRelativeValue(o, "isPVPCategory") then
+							header = headers["pvp"];
+							if not header then
+								header = {};
+								header.text = PVP;
+								header.icon = app.asset("Category_PvP");
+								headers["pvp"] = header;
 								tinsert(self.g, header);
 								header.parent = self;
 								header.g = {};

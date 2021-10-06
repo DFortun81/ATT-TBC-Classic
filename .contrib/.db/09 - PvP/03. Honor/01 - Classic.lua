@@ -579,10 +579,88 @@ _.PvP =
 					["description"] = "Found within the Champion's Hall in Stormwind.",
 					["maps"] = { STORMWIND_CITY },
 					["groups"] = {
-						i(18241),	-- Black War Steed Bridle
-						i(18244),	-- Black War Ram
-						i(18243),	-- Black Battlestrider
-						i(18242),	-- Reins of the Black War Tiger
+						i(29465, {	-- Black Battlestrider
+							["timeline"] = { "added 2.0.1.6180" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(29467, {	-- Black War Ram
+							["timeline"] = { "added 2.0.1.6180" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(29468, {	-- Black War Steed Bridle
+							["timeline"] = { "added 2.0.1.6180" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(29471, {	-- Reins of the Black War Tiger
+							["timeline"] = { "added 2.0.1.6180" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(35906, {	-- Reins of the Black War Elekk
+							["timeline"] = { "added 2.4.0.7994" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(18243, {	-- Black Battlestrider
+							["timeline"] = { "removed 2.0.1.6180" },
+						}),
+						i(18244, {	-- Black War Ram
+							["timeline"] = { "removed 2.0.1.6180" },
+						}),
+						i(18241, {	-- Black War Steed Bridle
+							["timeline"] = { "removed 2.0.1.6180" },
+						}),
+						i(18242, {	-- Reins of the Black War Tiger
+							["timeline"] = { "removed 2.0.1.6180" },
+						}),
 					},
 				}),
 				n(12781, {	-- Master Sergeant Biggins <Officer Accessories Quartermaster>
@@ -1224,10 +1302,88 @@ _.PvP =
 					["description"] = "Found within the Champion's Hall in Orgrimmar.",
 					["maps"] = { ORGRIMMAR },
 					["groups"] = {
-						i(18247),	-- Black War Kodo
-						i(18245),	-- Horn of the Black War Wolf
-						i(18248),	-- Red Skeletal Warhorse
-						i(18246),	-- Whistle of the Black War Raptor
+						i(29466, {	-- Black War Kodo
+							["timeline"] = { "added 2.0.1.6180" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(29469, {	-- Horn of the Black War Wolf
+							["timeline"] = { "added 2.0.1.6180" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(29470, {	-- Red Skeletal Warhorse
+							["timeline"] = { "added 2.0.1.6180" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(34129, {	-- Swift Warstrider
+							["timeline"] = { "added 2.3.0.7382" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(29472, {	-- Whistle of the Black War Raptor
+							["timeline"] = { "added 2.0.1.6180" },
+							["cost"] = {
+								-- #if AFTER 7.0.3.22248
+								{ "i", 137642, 15 },	-- Mark of Honor
+								-- #elseif AFTER 4.0
+								{ "c", 1901, 2000 },	-- 2000 Honor Points
+								-- #else
+								{ "i", 20560, 30 },	-- Alterac Valley Mark of Honor
+								{ "i", 20559, 30 },	-- Arathi Basin Mark of Honor
+								{ "i", 20558, 30 },	-- Warsong Gulch Mark of Honor
+								-- #endif
+							},
+						}),
+						i(18247, {	-- Black War Kodo
+							["timeline"] = { "removed 2.0.1.6180" },
+						}),
+						i(18245, {	-- Horn of the Black War Wolf
+							["timeline"] = { "removed 2.0.1.6180" },
+						}),
+						i(18248, {	-- Red Skeletal Warhorse
+							["timeline"] = { "removed 2.0.1.6180" },
+						}),
+						i(18246, {	-- Whistle of the Black War Raptor
+							["timeline"] = { "removed 2.0.1.6180" },
+						}),
 					},
 				}),
 				n(12799, {	-- Sergeant Ba'sha <Accessories Quartermaster>
