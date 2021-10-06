@@ -8845,78 +8845,60 @@ function app:GetDataCache()
 		local buildCategoryEntry = function(self, headers, searchResults, inst)
 			local header = self;
 			for j,o in ipairs(searchResults) do
-				for key,value in pairs(o) do rawset(inst, key, value); end
-				if o.parent then
-					if not o.sourceQuests then
-						local questID = GetRelativeValue(o, "questID");
-						if questID then
-							if not inst.sourceQuests then
-								inst.sourceQuests = {};
-							end
-							if not contains(inst.sourceQuests, questID) then
-								tinsert(inst.sourceQuests, questID);
-							end
-						else
-							local sourceQuests = GetRelativeValue(o, "sourceQuests");
-							if sourceQuests then
+				if o.u and o.u == 1 then
+					return nil;
+				else
+					for key,value in pairs(o) do rawset(inst, key, value); end
+					if o.parent then
+						if not o.sourceQuests then
+							local questID = GetRelativeValue(o, "questID");
+							if questID then
 								if not inst.sourceQuests then
 									inst.sourceQuests = {};
-									for k,questID in ipairs(sourceQuests) do
-										tinsert(inst.sourceQuests, questID);
-									end
-								else
-									for k,questID in ipairs(sourceQuests) do
-										if not contains(inst.sourceQuests, questID) then
+								end
+								if not contains(inst.sourceQuests, questID) then
+									tinsert(inst.sourceQuests, questID);
+								end
+							else
+								local sourceQuests = GetRelativeValue(o, "sourceQuests");
+								if sourceQuests then
+									if not inst.sourceQuests then
+										inst.sourceQuests = {};
+										for k,questID in ipairs(sourceQuests) do
 											tinsert(inst.sourceQuests, questID);
+										end
+									else
+										for k,questID in ipairs(sourceQuests) do
+											if not contains(inst.sourceQuests, questID) then
+												tinsert(inst.sourceQuests, questID);
+											end
 										end
 									end
 								end
 							end
 						end
-					end
-					
-					if GetRelativeValue(o, "isHolidayCategory") then
-						header = headers["holiday"];
-						if not header then
-							header = app.CreateNPC(-5);
-							headers["holiday"] = header;
-							tinsert(self.g, header);
-							header.parent = self;
-							header.g = {};
-						end
-					elseif GetRelativeValue(o, "isPromotionCategory") then
-						header = headers["promo"];
-						if not header then
-							header = {};
-							header.text = BATTLE_PET_SOURCE_8;
-							header.icon = app.asset("Category_Promo");
-							headers["promo"] = header;
-							tinsert(self.g, header);
-							header.parent = self;
-							header.g = {};
-						end
-					elseif o.parent.headerID == 0 or o.parent.headerID == -1 or o.parent.headerID == -82 or GetRelativeValue(o, "isWorldDropCategory") then
-						header = headers["drop"];
-						if not header then
-							header = {};
-							header.text = BATTLE_PET_SOURCE_1;
-							header.icon = app.asset("Category_WorldDrops");
-							headers["drop"] = header;
-							tinsert(self.g, header);
-							header.parent = self;
-							header.g = {};
-						end
-					elseif o.parent.key == "npcID" then
-						if GetRelativeValue(o, "headerID") == -2 then
-							header = headers[-2];
+						
+						if GetRelativeValue(o, "isHolidayCategory") then
+							header = headers["holiday"];
 							if not header then
-								header = app.CreateNPC(-2);
-								headers[-2] = header;
+								header = app.CreateNPC(-5);
+								headers["holiday"] = header;
 								tinsert(self.g, header);
 								header.parent = self;
 								header.g = {};
 							end
-						else
+						elseif GetRelativeValue(o, "isPromotionCategory") then
+							header = headers["promo"];
+							if not header then
+								header = {};
+								header.text = BATTLE_PET_SOURCE_8;
+								header.icon = app.asset("Category_Promo");
+								headers["promo"] = header;
+								tinsert(self.g, header);
+								header.parent = self;
+								header.g = {};
+							end
+						elseif o.parent.headerID == 0 or o.parent.headerID == -1 or o.parent.headerID == -82 or GetRelativeValue(o, "isWorldDropCategory") then
 							header = headers["drop"];
 							if not header then
 								header = {};
@@ -8927,28 +8909,50 @@ function app:GetDataCache()
 								header.parent = self;
 								header.g = {};
 							end
-						end
-					elseif o.parent.key == "categoryID" then
-						header = headers["crafted"];
-						if not header then
-							header = {};
-							header.text = LOOT_JOURNAL_LEGENDARIES_SOURCE_CRAFTED_ITEM;
-							header.icon = app.asset("Category_Crafting");
-							headers["crafted"] = header;
-							tinsert(self.g, header);
-							header.parent = self;
-							header.g = {};
-						end
-					else
-						local headerID = GetRelativeValue(o, "headerID");
-						if headerID then
-							header = headers[headerID];
+						elseif o.parent.key == "npcID" then
+							if GetRelativeValue(o, "headerID") == -2 then
+								header = headers[-2];
+								if not header then
+									header = app.CreateNPC(-2);
+									headers[-2] = header;
+									tinsert(self.g, header);
+									header.parent = self;
+									header.g = {};
+								end
+							else
+								header = headers["drop"];
+								if not header then
+									header = {};
+									header.text = BATTLE_PET_SOURCE_1;
+									header.icon = app.asset("Category_WorldDrops");
+									headers["drop"] = header;
+									tinsert(self.g, header);
+									header.parent = self;
+									header.g = {};
+								end
+							end
+						elseif o.parent.key == "categoryID" then
+							header = headers["crafted"];
 							if not header then
-								header = app.CreateNPC(headerID);
-								headers[headerID] = header;
+								header = {};
+								header.text = LOOT_JOURNAL_LEGENDARIES_SOURCE_CRAFTED_ITEM;
+								header.icon = app.asset("Category_Crafting");
+								headers["crafted"] = header;
 								tinsert(self.g, header);
 								header.parent = self;
 								header.g = {};
+							end
+						else
+							local headerID = GetRelativeValue(o, "headerID");
+							if headerID then
+								header = headers[headerID];
+								if not header then
+									header = app.CreateNPC(headerID);
+									headers[headerID] = header;
+									tinsert(self.g, header);
+									header.parent = self;
+									header.g = {};
+								end
 							end
 						end
 					end
@@ -8958,9 +8962,7 @@ function app:GetDataCache()
 			inst.progress = nil;
 			inst.total = nil;
 			inst.g = nil;
-			if not inst.u or inst.u ~= 1 then
-				tinsert(inst.parent.g, inst);
-			end
+			tinsert(inst.parent.g, inst);
 			return inst;
 		end
 		
