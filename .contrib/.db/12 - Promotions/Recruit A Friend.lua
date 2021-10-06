@@ -107,6 +107,7 @@ _.Promotions =
 		}),
 	})),
 };
+
 _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	n(QUESTS, {
 		q(57850),	-- Storied Partnerships
@@ -114,5 +115,8 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		q(57853, {	-- Battleforged Team
 			["_drop"] = { "g" },	-- drop MoH to remove this quest from the popout
 		}),
+	}),
+	filter(100, {	-- Mounts
+		i(37598),	-- Swift Zhevra OLD
 	}),
 });
