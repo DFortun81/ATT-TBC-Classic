@@ -146,17 +146,30 @@ local REPUTATIONS_OnUpdate = [[function(t)
 			t.progress = math.min(count, t.rank);
 			t.total = t.rank;
 			
-			local parent = t.parent;
-			parent.total = (parent.total or 0) + t.total;
-			parent.progress = (parent.progress or 0) + t.progress;
-			t.visible = (t.progress < t.total or _.CollectedItemVisibilityFilter(t)) and _.FilterItemClass_UnobtainableItem(t);
+			if _.GroupFilter(t) then
+				local parent = t.parent;
+				parent.total = (parent.total or 0) + t.total;
+				parent.progress = (parent.progress or 0) + t.progress;
+				t.visible = (t.progress < t.total or _.CollectedItemVisibilityFilter(t));
+				print("DO IT")
+			else
+				print("DONT DO IT")
+				t.visible = false;
+			end
 		else
 			t.collected = count >= 1;
 			t.collectible = collectible;
-			local parent = t.parent;
-			parent.total = (parent.total or 0) + 1;
-			if t.collected then parent.progress = (parent.progress or 0) + 1; end
-			t.visible = (not t.collected or _.CollectedItemVisibilityFilter(t)) and _.FilterItemClass_UnobtainableItem(t);
+			
+			if _.GroupFilter(t) then
+				local parent = t.parent;
+				parent.total = (parent.total or 0) + 1;
+				if t.collected then parent.progress = (parent.progress or 0) + 1; end
+				t.visible = (not t.collected or _.CollectedItemVisibilityFilter(t));
+				print("DO IT")
+			else
+				t.visible = false;
+				print("DONT DO IT")
+			end
 		end
 	else
 		t.collected = nil;
@@ -190,13 +203,11 @@ local RIDING_SKILL_OnUpdate = [[function(t)
 			_.CurrentCharacter.Spells[t.spellID] = 1;
 			ATTAccountWideData.Spells[t.spellID] = 1;
 			t.collected = 1;
-			return;
 		else
 			t.collected = nil;
 			_.CurrentCharacter.Spells[t.spellID] = nil;
 			if _.AccountWideRecipes and ATTAccountWideData.Spells[t.spellID] then
 				t.collected = 2;
-				return;
 			end
 		end
 	end
