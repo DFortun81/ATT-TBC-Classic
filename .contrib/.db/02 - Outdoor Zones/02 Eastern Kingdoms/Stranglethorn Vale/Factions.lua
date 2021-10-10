@@ -100,6 +100,10 @@ _.Zones =
 				faction(21, { 	-- Booty Bay
 					["icon"] = icon("INV_Misc_Coin_01"),
 					["OnTooltip"] = OnTooltipForBootyBay,
+					["maps"] = {
+						TANARIS,
+						THE_BARRENS,
+					},
 				}),
 			}),
 		}),

@@ -27,6 +27,10 @@ _.Zones =
 				faction(577, { 	-- Everlook
 					["icon"] = icon("INV_Misc_Coin_01"),
 					["OnTooltip"] = OnTooltipForEverlook,
+					["maps"] = {
+						TANARIS,
+						THE_BARRENS,
+					},
 				}),
 				faction(576, {	-- Timbermaw Hold
 					["maps"] = { FELWOOD },

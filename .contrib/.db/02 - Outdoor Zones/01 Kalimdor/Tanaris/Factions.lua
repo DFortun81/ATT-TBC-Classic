@@ -34,6 +34,7 @@ _.Zones =
 				faction(369, { 	-- Gadgetzan
 					["icon"] = icon("INV_Misc_Coin_01"),
 					["OnTooltip"] = OnTooltipForGadgetzhan,
+					["maps"] = { THE_BARRENS },
 				}),
 			}),
 		}),

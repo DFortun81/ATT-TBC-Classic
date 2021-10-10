@@ -34,6 +34,7 @@ _.Zones =
 				faction(470, { 	-- Ratchet
 					["icon"] = icon("INV_Misc_Coin_01"),
 					["OnTooltip"] = OnTooltipForRatchet,
+					["maps"] = { TANARIS },
 				}),
 			}),
 		}),
