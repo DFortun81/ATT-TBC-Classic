@@ -2208,7 +2208,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 				end
 			end
 			if #knownBy > 0 then
-				insertionSort(knownBy, sortByTextSafely);
+				insertionSort(knownBy, function(a, b) return a.name < b.name; end);
 				local desc = "Known by ";
 				for i,character in ipairs(knownBy) do
 					if i > 1 then desc = desc .. ", "; end
