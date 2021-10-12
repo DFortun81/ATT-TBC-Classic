@@ -2926,6 +2926,7 @@ local EXTERMINATOR = {
 	["Player-4372-01091DE4"] = true,	-- Tacolock
 	["Player-4372-00451B8E"] = true,	-- Tinybit
 	["Player-4372-00E5AE25"] = true,	-- Villeinia
+	["Player-4372-0066A25C"] = true,	-- Viran
 	["Player-4372-00D96703"] = true,	-- Worfin
 };
 local GOLD_TYCOON = {
