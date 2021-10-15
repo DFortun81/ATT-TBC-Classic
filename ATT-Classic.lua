@@ -2899,6 +2899,7 @@ local EXTERMINATOR = {
 	["Player-4372-0046DDA0"] = true,	-- Firasia
 	["Player-4372-004A7A3F"] = true,	-- Fortress
 	["Player-4372-00CF7821"] = true,	-- Glas
+	["Player-4372-00E7DEC4"] = true,	-- Gnubs
 	["Player-4372-0108DCC1"] = true,	-- Grotesque
 	["Player-4372-00E8CC3C"] = true,	-- Hairyplodder
 	["Player-4372-00D38E94"] = true,	-- Havachant
