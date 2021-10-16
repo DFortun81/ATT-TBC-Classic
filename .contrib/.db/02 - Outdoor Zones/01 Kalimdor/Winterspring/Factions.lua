@@ -19,6 +19,26 @@ local OnTooltipForEverlook = [[function(t)
 		GameTooltip:AddLine(" * PROTIP: Ratchet is faster.", 1, 1, 1);
 	end
 end]];
+local OnTooltipForWintersaberTrainers = [[function(t)
+	local reputation = t.reputation;
+	if reputation < 42000 then
+		local isHuman = _.RaceIndex == 1;
+		local repPerKill = isHuman and 275 or 250;
+		if reputation < 1500 then
+			local x, n = math.ceil((1500 - t.reputation) / repPerKill), math.ceil(1500 / repPerKill);
+			GameTooltip:AddDoubleLine("Complete Frostsaber Provisions (to 1500)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		else
+			local x, n = math.ceil((42000 - t.reputation) / repPerKill), math.ceil(42000 / repPerKill);
+			GameTooltip:AddDoubleLine("Complete Winterfall Intrusion", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+			
+			if reputation >= ]] .. HONORED .. [[ then
+				repPerKill = isHuman and 385 or 350;
+				local x, n = math.ceil((42000 - t.reputation) / repPerKill), math.ceil(42000 / repPerKill);
+				GameTooltip:AddDoubleLine("Complete Rampaging Giants", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+			end
+		end
+	end
+end]];
 _.Zones =
 {
 	m(KALIMDOR, {
@@ -36,6 +56,7 @@ _.Zones =
 					["maps"] = { FELWOOD },
 				}),
 				faction(589, {	-- Wintersaber Trainers
+					["OnTooltip"] = OnTooltipForWintersaberTrainers,
 					["races"] = ALLIANCE_ONLY,
 				}),
 			}),
