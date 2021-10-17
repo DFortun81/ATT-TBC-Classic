@@ -243,6 +243,14 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 58,
+					["groups"] = {
+						objective(1, {	-- 0/4 Frostmaul Giant slain
+							["provider"] = { "n", 7428 },	-- Frostmaul Giant
+						}),
+						objective(2, {	-- 0/4 Frostmaul Preserver slain
+							["provider"] = { "n", 7429 },	-- Frostmaul Preserver
+						}),
+					},
 				}),
 				q(5252, {	-- Remorseful Highborne
 					["qg"] = 10684,	-- Remorseful Highborne
@@ -437,6 +445,14 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 58,
+					["groups"] = {
+						objective(1, {	-- 0/5 Winterfall Shaman slain
+							["provider"] = { "n", 7439 },	-- Winterfall Shaman
+						}),
+						objective(2, {	-- 0/5 Winterfall Ursa slain
+							["provider"] = { "n", 7438 },	-- Winterfall Ursa
+						}),
+					},
 				}),
 				q(8471, {	-- Winterfall Ritual Totem
 					["provider"] = { "i", 20742 },	-- Winterfall Ritual Totem
