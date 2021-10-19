@@ -731,9 +731,10 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						i(18464),	-- Gordok Nose Ring
 					}),
 					n(14325, {	-- Captain Kromcrush
-						["description"] = "In order to get to this boss, you must use the Inner Door Key or have an engineer open the door using a Seaforium Charge.",
+						["description"] = "In order to get to this boss, you must use the Inner Door Key or have an engineer open the door using a Seaforium Charge.\n\nUse the Gordok Ogre Suit to skip him. (talk to him)",
 						["cost"] = {
 							{ "i", 18268, 1 },	-- Gordok Inner Door Key
+							{ "i", 18258, 1 },	-- Gordok Ogre Suit
 						},
 						["groups"] = {
 							i(18502),	-- Monstrous Glaive
