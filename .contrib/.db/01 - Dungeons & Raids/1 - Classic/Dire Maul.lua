@@ -676,6 +676,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						i(18458),	-- Modest Wristguards
 						i(18497),	-- Sublime Wristguards
 						i(18464),	-- Gordok Nose Ring
+						i(18268),	-- Gordok Inner Door Key
 					}),
 					n(14322, {	-- Stomper Kreeg
 						i(18425),	-- Kreeg's Mug
@@ -730,10 +731,16 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						i(18464),	-- Gordok Nose Ring
 					}),
 					n(14325, {	-- Captain Kromcrush
-						i(18502),	-- Monstrous Glaive
-						i(18503),	-- Kromcrush's Chestplate
-						i(18505),	-- Mugger's Belt
-						i(18507),	-- Boots of the Full Moon
+						["description"] = "In order to get to this boss, you must use the Inner Door Key or have an engineer open the door using a Seaforium Charge.",
+						["cost"] = {
+							{ "i", 18268, 1 },	-- Gordok Inner Door Key
+						},
+						["groups"] = {
+							i(18502),	-- Monstrous Glaive
+							i(18503),	-- Kromcrush's Chestplate
+							i(18505),	-- Mugger's Belt
+							i(18507),	-- Boots of the Full Moon
+						},
 					}),
 					n(14324, {	-- Cho'Rush the Observer
 						i(18484),	-- Cho'Rush's Blade
