@@ -23,11 +23,13 @@ profession(ENGINEERING, {
 						["name"] = "Goblin Rocket Launcher",
 						["recipeID"] = 30563
 					}),
+					-- #if BEFORE WRATH
 					{
 						["name"] = "Pet Bombling",
 						["description"] = "While this recipe does not have a requirement for Goblin Engineering, you cannot learn this recipe without Goblin Engineering and switching to Goblin from Gnomish is not possible in Classic.",
 						["recipeID"] = 15628
 					},
+					-- #endif
 				}
 			},
 			{

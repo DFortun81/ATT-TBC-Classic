@@ -696,19 +696,29 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			["groups"] = {
 				category(188, {	-- Devices
 					i(18645),	-- Gnomish Alarm-o-Bot
-					i(10725),	-- Gnomish Battle Chicken
-					i(10645),	-- Gnomish Death Ray
+					i(10725, {	-- Gnomish Battle Chicken
+						["requireSkill"] = 20219,	-- Gnomish Engineering (BOP - Required)
+					}),
+					i(10645, {	-- Gnomish Death Ray
+						["requireSkill"] = 20219,	-- Gnomish Engineering (BOP - Required)
+					}),
 					i(10721),	-- Gnomish Harm Prevention Belt
 					i(10726),	-- Gnomish Mind Control Cap
 					i(10720),	-- Gnomish Net-o-Matic Projector
 					i(10724),	-- Gnomish Rocket Boots
 					i(10716),	-- Gnomish Shrink Ray
-					i(11826),	-- Lil' Smoky
+					-- #if BEFORE WRATH
+					i(11826, {	-- Lil' Smoky
+						["requireSkill"] = 20219,	-- Gnomish Engineering (BOP - Required, until Wrath)
+					}),
+					-- #endif
 					i(18986),	-- Ultrasafe Transporter: Gadgetzan
 					i(18660),	-- World Enlarger
 				}),
 				category(185, {	-- Goggles
-					i(10545),	-- Gnomish Goggles
+					i(10545, {	-- Gnomish Goggles
+						["requireSkill"] = 20219,	-- Gnomish Engineering (BOP - Required)
+					}),
 				}),
 				category(183, {	-- Parts
 					i(10713, {	-- Plans: Inlaid Mithril Cylinder
@@ -722,15 +732,27 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			["groups"] = {
 				category(188, {	-- Devices
 					i(18984),	-- Dimensional Ripper - Everlook
-					i(10543),	-- Goblin Construction Helmet
+					i(10543, {	-- Goblin Construction Helmet
+						["requireSkill"] = 20222,	-- Goblin Engineering (BOP - Required)
+					}),
 					i(18587),	-- Goblin Jumper Cables XL
-					i(10542),	-- Goblin Mining Helmet
+					i(10542, {	-- Goblin Mining Helmet
+						["requireSkill"] = 20222,	-- Goblin Engineering (BOP - Required)
+					}),
 					i(10588),	-- Goblin Rocket Helmet
-					i(11825),	-- Pet Bombling
+					-- #if BEFORE WRATH
+					i(11825, {	-- Pet Bombling
+						["requireSkill"] = 20222,	-- Goblin Engineering (BOP - Required, until Wrath)
+					}),
+					-- #endif
 				}),
 				category(184, {	-- Explosives
-					i(10587),	-- Goblin Bomb Dispenser
-					i(10727),	-- Goblin Dragon Gun
+					i(10587, {	-- Goblin Bomb Dispenser
+						["requireSkill"] = 20222,	-- Goblin Engineering (BOP - Required)
+					}),
+					i(10727, {	-- Goblin Dragon Gun
+						["requireSkill"] = 20222,	-- Goblin Engineering (BOP - Required)
+					}),
 					i(10577),	-- Goblin Mortar
 					i(10646),	-- Goblin Sapper Charge
 					i(10586),	-- The Big One
@@ -768,6 +790,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(18638),	-- Hyper-Radiant Flame Reflector
 			i(4386),	-- Ice Deflector
 			i(15996),	-- Lifelike Mechanical Toad
+			-- #if AFTER WRATH
+			i(11826),	-- Lil' Smoky
+			-- #endif
 			i(18637),	-- Major Recombobulator
 			i(16023),	-- Masterwork Target Dummy
 			i(4396),	-- Mechanical Dragonling
@@ -777,6 +802,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(10576),	-- Mithril Mechanical Dragonling
 			i(5507),	-- Ornate Spyglass
 			i(10518),	-- Parachute Cloak
+			-- #if AFTER WRATH
+			i(11825),	-- Pet Bombling
+			-- #endif
 			i(6712),	-- Practice Lock
 			i(15846),	-- Salt Shaker
 			i(17716),	-- Snowmaster 9000

@@ -99,6 +99,12 @@ profession(ENGINEERING, {
 					["name"] = "Lifelike Mechanical Toad",
 					["recipeID"] = 19793
 				},
+				-- #if AFTER WRATH
+				{
+					["name"] = "Lil' Smoky",
+					["recipeID"] = 15633
+				},
+				-- #endif
 				applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["name"] = "Major Recombobulator",
 					["recipeID"] = 23079,
@@ -139,6 +145,12 @@ profession(ENGINEERING, {
 					["name"] = "Parachute Cloak",
 					["recipeID"] = 12616
 				},
+				-- #if AFTER WRATH
+				{
+					["name"] = "Pet Bombling",
+					["recipeID"] = 15628
+				},
+				-- #endif
 				{
 					["name"] = "Practice Lock",
 					["recipeID"] = 8334

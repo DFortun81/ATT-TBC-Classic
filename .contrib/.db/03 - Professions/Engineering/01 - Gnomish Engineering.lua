@@ -50,11 +50,13 @@ profession(ENGINEERING, {
 						["name"] = "Gnomish Shrink Ray",
 						["recipeID"] = 12899
 					},
+					-- #if BEFORE WRATH
 					{
 						["name"] = "Lil' Smoky",
 						["description"] = "While this recipe does not have a requirement for Gnomish Engineering, you cannot learn this recipe without Gnomish Engineering and switching to Gnomish from Goblin is not possible in Classic.",
 						["recipeID"] = 15633
 					},
+					-- #endif
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Nigh-Invulnerability Belt",
 						["recipeID"] = 30570
