@@ -443,7 +443,6 @@ _.Craftables = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 			i(23523),	-- Khorium Pants
 			applyclassicphase(TBC_PHASE_THREE, i(32404)),	-- Shadesteel Greaves
 			i(31367),	-- Wildguard Leggings
-			
 		}),
 		category(225, {	-- Boots
 			applyclassicphase(TBC_PHASE_TWO, i(30033)),	-- Boots of the Protector
