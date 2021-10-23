@@ -649,14 +649,14 @@ _.Craftables = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 			i(23765),	-- Khorium Scope
 			i(23766),	-- Stabilized Eternium Scope
 		}),
-		category(756, {	-- Mounts
-			i(34060),	-- Flying Machine
-			i(34061),	-- Turbo-Charged Flying Machine
-		}),
 		category(757, {	-- Fireworks
 			i(23771),	-- Green Smoke Flare
 			i(25886),	-- Purple Smoke Flare
 			i(23768),	-- White Smoke Flare
+		}),
+		category(756, {	-- Mounts
+			i(34060),	-- Flying Machine
+			i(34061),	-- Turbo-Charged Flying Machine
 		}),
 	}),
 	prof(FIRST_AID, {
@@ -698,6 +698,57 @@ _.Craftables = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 			i(24401),	-- Unidentified Plant Parts
 		},
 	}),
+	-- #if AFTER WRATH
+	prof(INSCRIPTION, {
+		n(-491, {	-- Tarot Cards
+			i(44317, {	-- Greater Darkmoon Card
+				-- Blessings Deck
+				i(31882),	-- Ace of Blessings
+				i(31889),	-- Two of Blessings
+				i(31888),	-- Three of Blessings
+				i(31885),	-- Four of Blessings
+				i(31884),	-- Five of Blessings
+				i(31887),	-- Six of Blessings
+				i(31886),	-- Seven of Blessings
+				i(31883),	-- Eight of Blessings
+
+				-- Furies Deck
+				i(31901),	-- Ace of Furies
+				i(31909),	-- Two of Furies
+				i(31908),	-- Three of Furies
+				i(31904),	-- Four of Furies
+				i(31903),	-- Five of Furies
+				i(31906),	-- Six of Furies
+				i(31905),	-- Seven of Furies
+				i(31902),	-- Eight of Furies
+
+				-- Lunacy Deck
+				i(31910),	-- Ace of Lunacy
+				i(31918),	-- Two of Lunacy
+				i(31917),	-- Three of Lunacy
+				i(31913),	-- Four of Lunacy
+				i(31912),	-- Five of Lunacy
+				i(31916),	-- Six of Lunacy
+				i(31915),	-- Seven of Lunacy
+				i(31911),	-- Eight of Lunacy
+
+				-- Storms Deck
+				i(31892),	-- Ace of Storms
+				i(31900),	-- Two of Storms
+				i(31899),	-- Three of Storms
+				i(31895),	-- Four of Storms
+				i(31894),	-- Five of Storms
+				i(31898),	-- Six of Storms
+				i(31896),	-- Seven of Storms
+				i(31893),	-- Eight of Storms
+			}),
+		}),
+		filter(1, {	-- Off-hand
+			i(43667),	-- Book of Clever Tricks
+			i(43666),	-- Hellfire Tome
+		}),
+	}),
+	-- #endif
 	prof(JEWELCRAFTING, {
 		category(868, {	-- Reagents
 			i(31079),	-- Mercurial Adamantite
@@ -1235,6 +1286,16 @@ _.Craftables = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 			applyclassicphase(TBC_PHASE_THREE, i(32584)),	-- Swiftheal Wraps
 			i(24249),	-- Unyielding Bracers
 		}),
+		category(1008, {	-- Gloves
+			i(30838),	-- Flameheart Gloves
+			applyclassicphase(TBC_PHASE_FIVE, i(34367)),	-- Hands of Eternal Light
+			i(21851),	-- Netherweave Gloves
+			i(21863),	-- Soulcloth Gloves
+			-- #if AFTER 4.0.1.12984
+			i(21847),	-- Spellfire Gloves
+			-- #endif
+			applyclassicphase(TBC_PHASE_FIVE, i(34366)),	-- Sunfire Handwraps
+		}),
 		category(1007, {	-- Belts
 			applyclassicphase(TBC_PHASE_TWO, i(30038)),	-- Belt of Blasting
 			applyclassicphase(TBC_PHASE_TWO, i(30036)),	-- Belt of the Long Road
@@ -1249,16 +1310,6 @@ _.Craftables = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 			i(21846),	-- Spellfire Belt
 			-- #endif
 			i(24255),	-- Unyielding Girdle
-		}),
-		category(1008, {	-- Gloves
-			i(30838),	-- Flameheart Gloves
-			applyclassicphase(TBC_PHASE_FIVE, i(34367)),	-- Hands of Eternal Light
-			i(21851),	-- Netherweave Gloves
-			i(21863),	-- Soulcloth Gloves
-			-- #if AFTER 4.0.1.12984
-			i(21847),	-- Spellfire Gloves
-			-- #endif
-			applyclassicphase(TBC_PHASE_FIVE, i(34366)),	-- Sunfire Handwraps
 		}),
 		category(1009, {	-- Pants
 			i(24263),	-- Battlecast Pants
