@@ -1120,6 +1120,100 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(3819),	-- Wintersbite [Herbalism 195]
 		},
 	}),
+	-- #if AFTER TBC
+	prof(JEWELCRAFTING, {
+		filter(52, {	-- Finger
+			i(20964),	-- Aquamarine Signet
+			i(20958),	-- Blazing Citrine Ring
+			i(20906),	-- Braided Copper Ring
+			i(30804),	-- Bronze Band of Force
+			i(20961),	-- Citrine Ring of Rapid Healing
+			i(30422),	-- Diamond Focus Ring
+			i(20818),	-- Elegant Silver Ring
+			i(29160),	-- Emerald Lion Ring
+			i(20960),	-- Engraved Truesilver Ring
+			i(21753),	-- Gem Studded Band
+			i(20823),	-- Gloom Band
+			i(29159),	-- Glowing Thorium Band
+			i(20955),	-- Golden Dragon Ring
+			i(29157),	-- Golden Ring of Power
+			i(21932),	-- Heavy Cooper Ring
+			i(30420),	-- Heavy Jade Ring
+			i(20826),	-- Heavy Silver Ring
+			i(20821),	-- Inlaid Malachite Ring
+			i(21775),	-- Onslaught Ring
+			i(30421),	-- Red Ring of Destruction
+			i(21778),	-- Ring of Bitter Shadows
+			i(20827),	-- Ring of Silver Might
+			i(20828),	-- Ring of Twilight Shadows
+			i(21768),	-- Sapphire Signet
+			i(21767),	-- Simple Opal Ring
+			i(20820),	-- Simple Pearl Ring
+			i(20907),	-- Solid Bronze Ring
+			i(21754),	-- The Aquamarine Ward
+			i(20959),	-- The Jade Eye
+			i(25439),	-- Tigerseye Band
+			i(29158),	-- Truesilver Commander's Ring
+			i(21765),	-- Truesilver Healing Ring
+			i(20833),	-- Wicked Moonstone Ring
+			i(21931),	-- Woven Copper Ring
+		}),
+		filter(51, {	-- Neck
+			i(20830),	-- Amulet of the Moon
+			applyclassicphase(WRATH_PHASE_ONE, i(45627, {	-- Amulet of Truesight
+				["timeline"] = { "added 3.1.0.9614" },
+			})),
+			i(21755),	-- Aquamarine Pendant of the Warrior
+			i(20909),	-- Barbaric Iron Collar
+			i(30419),	-- Brilliant Necklace
+			i(31154),	-- Bronze Torc
+			i(20967),	-- Citrine Pendant of Golden Healing
+			i(20831),	-- Heavy Golden Necklace of Battle
+			i(20966),	-- Jade Pendant of Blasting
+			i(21791),	-- Living Emerald Pendant
+			i(25438),	-- Malachite Pendant
+			i(21792),	-- Necklace of the Diamond Tower
+			i(21766),	-- Opal Necklace of Impact
+			i(21934),	-- Ornate Tigerseye Necklace
+			i(20950),	-- Pendant of the Agate Shield
+			i(21764),	-- Ruby Pendant of Fire
+			i(21790),	-- Sapphire Pendant of Winter Night
+			i(21933),	-- Thick Bronze Necklace
+		}),
+		category(168, {	-- Materials
+			i(20817),	-- Bronze Setting
+			i(20816),	-- Delicate Copper Wire
+			i(20963),	-- Mithril Filigree
+			i(21752),	-- Thorium Setting
+		}),
+		category(167, {	-- Crowns
+			i(21774),	-- Emerald Crown of Destruction
+			i(20832),	-- Moonsoul Crown
+			i(20969),	-- Ruby Crown of Restoration
+		}),
+		filter(53, {	-- Trinket
+			i(21784),	-- Figurine - Black Diamond Crab
+			i(21758),	-- Figurine - Black Pearl Panther
+			i(21789),	-- Figurine - Dark Iron Scorpid
+			i(21777),	-- Figurine - Emerald Owl
+			i(21756),	-- Figurine - Golden Hare
+			i(21748),	-- Figurine - Jade Owl
+			i(21769),	-- Figurine - Ruby Serpent
+			i(21763),	-- Figurine - Truesilver Boar
+			i(21760),	-- Figurine - Truesilver Crab
+		}),
+		filter(34, {	-- Fist Weapons
+			i(20954),	-- Heavy Iron Knuckles
+		}),
+		filter(50, {	-- Miscellaneous
+			i(25880),	-- Coarse Stone Statue
+			i(25883),	-- Dense Stone Statue
+			i(25881),	-- Heavy Stone Statue
+			i(25498),	-- Rough Stone Statue
+			i(25882),	-- Solid Stone Statue
+		}),
+	}),
+	-- #endif
 	prof(LEATHERWORKING, {
 		prof(10656, {	-- Dragonscale Leatherworking
 			["description"] = "These items can only be crafted by Leatherworkers who have completed the associated quest.",
