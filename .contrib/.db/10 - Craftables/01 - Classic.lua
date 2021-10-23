@@ -711,6 +711,13 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		prof(20219, {	-- Gnomish Engineering
 			["description"] = "These items can only be crafted by Engineers who have completed the Gnomish Engineering quest chain.",
 			["groups"] = {
+				-- #if BEFORE WRATH
+				filter(BATTLE_PETS, {
+					i(11826, {	-- Lil' Smoky
+						["requireSkill"] = 20219,	-- Gnomish Engineering (BOP - Required, until Wrath)
+					}),
+				}),
+				-- #endif
 				category(188, {	-- Devices
 					i(18645),	-- Gnomish Alarm-o-Bot
 					i(10725, {	-- Gnomish Battle Chicken
@@ -724,13 +731,6 @@ _.Craftables = { tier(CLASSIC_TIER, {
 					i(10720),	-- Gnomish Net-o-Matic Projector
 					i(10724),	-- Gnomish Rocket Boots
 					i(10716),	-- Gnomish Shrink Ray
-					-- #if BEFORE WRATH
-					i(11826, {	-- Lil' Smoky
-						["requireSkill"] = 20219,	-- Gnomish Engineering (BOP - Required, until Wrath)
-					}),
-					-- #endif
-					i(18986),	-- Ultrasafe Transporter: Gadgetzan
-					i(18660),	-- World Enlarger
 				}),
 				category(185, {	-- Goggles
 					i(10545, {	-- Gnomish Goggles
@@ -742,13 +742,23 @@ _.Craftables = { tier(CLASSIC_TIER, {
 						["description"] = "This recipe is crafted by Gnomish Engineers and given to Blacksmiths to learn so that the Blacksmith can craft the item needed by the Engineer.\n\nIf you are missing this recipe, ask a Gnomish Engineer to craft it for you.",
 					}),
 				}),
+				filter(102, {	-- Toys
+					i(18986),	-- Ultrasafe Transporter: Gadgetzan
+					i(18660),	-- World Enlarger
+				}),
 			},
 		}),
 		prof(20222, {	-- Goblin Engineering
 			["description"] = "These items can only be crafted by Engineers who have completed the Goblin Engineering quest chain.",
 			["groups"] = {
+				-- #if BEFORE WRATH
+				filter(BATTLE_PETS, {
+					i(11825, {	-- Pet Bombling
+						["requireSkill"] = 20222,	-- Goblin Engineering (BOP - Required, until Wrath)
+					}),
+				}),
+				-- #endif
 				category(188, {	-- Devices
-					i(18984),	-- Dimensional Ripper - Everlook
 					i(10543, {	-- Goblin Construction Helmet
 						["requireSkill"] = 20222,	-- Goblin Engineering (BOP - Required)
 					}),
@@ -757,11 +767,6 @@ _.Craftables = { tier(CLASSIC_TIER, {
 						["requireSkill"] = 20222,	-- Goblin Engineering (BOP - Required)
 					}),
 					i(10588),	-- Goblin Rocket Helmet
-					-- #if BEFORE WRATH
-					i(11825, {	-- Pet Bombling
-						["requireSkill"] = 20222,	-- Goblin Engineering (BOP - Required, until Wrath)
-					}),
-					-- #endif
 				}),
 				category(184, {	-- Explosives
 					i(10587, {	-- Goblin Bomb Dispenser
@@ -779,7 +784,21 @@ _.Craftables = { tier(CLASSIC_TIER, {
 						["description"] = "This recipe is crafted by Goblin Engineers and given to Alchemists to learn so that the Alchemist can craft the item needed by the Engineer.\n\nIf you are missing this recipe, ask a Goblin Engineer to craft it for you.",
 					}),
 				}),
+				filter(102, {	-- Toys
+					i(18984),	-- Dimensional Ripper - Everlook
+				}),
 			},
+		}),
+		filter(BATTLE_PETS, {
+			i(15996),	-- Lifelike Mechanical Toad*
+			-- #if AFTER WRATH
+			i(11826),	-- Lil' Smoky
+			-- #endif
+			i(4401),	-- Mechanical Squirrel Box*
+			-- #if AFTER WRATH
+			i(11825),	-- Pet Bombling
+			-- #endif
+			i(21277),	-- Tranquil Mechanical Yeti*
 		}),
 		-- #if BEFORE 4.0.1
 		category(1, {	-- Bullets
@@ -804,30 +823,25 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(7148),	-- Goblin Jumper Cables
 			i(7189),	-- Goblin Rocket Boots
 			i(18634),	-- Gyrofreeze Ice Reflector
-			i(18638),	-- Hyper-Radiant Flame Reflector
+			i(45631, {	-- High-Powered Flashlight
+				["timeline"] = { "added 3.1.0.9614" },
+			}),
+			i(18638, {	-- Hyper-Radiant Flame Reflector
+				["timeline"] = { "removed 6.0.2" },
+			}),
 			i(4386),	-- Ice Deflector
-			i(15996),	-- Lifelike Mechanical Toad
-			-- #if AFTER WRATH
-			i(11826),	-- Lil' Smoky
-			-- #endif
 			i(18637),	-- Major Recombobulator
 			i(16023),	-- Masterwork Target Dummy
 			i(4396),	-- Mechanical Dragonling
 			i(11590),	-- Mechanical Repair Kit
-			i(4401),	-- Mechanical Squirrel Box
 			i(4381),	-- Minor Recombobulator
 			i(10576),	-- Mithril Mechanical Dragonling
 			i(5507),	-- Ornate Spyglass
 			i(10518),	-- Parachute Cloak
-			-- #if AFTER WRATH
-			i(11825),	-- Pet Bombling
-			-- #endif
 			i(6712),	-- Practice Lock
 			i(15846),	-- Salt Shaker
-			i(17716),	-- Snowmaster 9000
 			applyclassicphase(TBC_PHASE_ONE, i(22728)),	-- Steam Tonk Controller
 			i(4366),	-- Target Dummy
-			i(21277),	-- Tranquil Mechanical Yeti
 			i(18639),	-- Ultra-Flash Shadow Reflector
 			i(16009),	-- Voice Amplification Modulator
 		}),
@@ -879,8 +893,12 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(19026),	-- Snake Burst Firework
 		}),
 		category(185, {	-- Goggles
-			applyclassicphase(PHASE_FOUR, i(19999)),	-- Bloodvine Goggles
-			applyclassicphase(PHASE_FOUR, i(19998)),	-- Bloodvine Lens
+			applyclassicphase(PHASE_FOUR, i(19999, {	-- Bloodvine Goggles
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			applyclassicphase(PHASE_FOUR, i(19998, {	-- Bloodvine Lens
+				["timeline"] = { "removed 4.0.3" },
+			})),
 			i(10499),	-- Bright-Eye Goggles
 			i(10501),	-- Catseye Ultra Goggles
 			i(4393),	-- Craftsman's Monocle
@@ -899,7 +917,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(18282),	-- Core Marksman Rifle
 			i(16004),	-- Dark Iron Rifle
 			i(4369),	-- Deadly Blunderbuss
-			i(16007),	-- Flawless Arcanite Rifle
+			i(16007, {	-- Flawless Arcanite Rifle
+				["timeline"] = { "removed 4.0.3" },
+			}),
 			i(4372),	-- Lovingly Crafted Boomstick
 			i(10508),	-- Mithril Blunderbuss
 			i(10510),	-- Mithril Heavy-Bore Rifle
@@ -946,6 +966,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		category(191, {	-- Tools
 			i(6219),	-- Arclight Spanner
 			i(10498),	-- Gyromatic Micro-Adjustor
+		}),
+		filter(102, {	-- Toys
+			i(17716),	-- Snowmaster 9000
 		}),
 	}),
 	prof(FIRST_AID, {

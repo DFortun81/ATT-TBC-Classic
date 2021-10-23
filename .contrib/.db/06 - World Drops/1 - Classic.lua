@@ -3131,7 +3131,7 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		i(8628),	-- Reins of the Spotted Nightsaber
 		i(2415),	-- White Stallion
 	}),
-	filter(101, {	-- Battle Pet
+	filter(BATTLE_PETS, {
 		i(21168),	-- Baby Shark
 		i(11903),	-- Cat Carrier (Corrupted Kitten)
 	}),

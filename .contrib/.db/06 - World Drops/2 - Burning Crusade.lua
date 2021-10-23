@@ -2665,7 +2665,7 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(55, {	-- Consumable
 		
 	}),
-	filter(101, {	-- Battle Pet
+	filter(BATTLE_PETS, {
 		
 	}),
 	-- #if BEFORE 3.0.0

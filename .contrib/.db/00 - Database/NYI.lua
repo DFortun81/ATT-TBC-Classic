@@ -934,7 +934,7 @@ _.NeverImplemented =
 		i(27853),	-- Crazy Raptor 150
 		i(28482),	-- Great Elite Elekk
 	}),
-	filter(101, {	-- Pet Battle
+	filter(BATTLE_PETS, {
 		-- #if BEFORE 7.0.3
 		i(23712),	-- White Tiger Cub -- later reused for Ash'ana.
 		-- #endif

@@ -6,7 +6,7 @@ _.Zones =
 {
 	m(OUTLAND, {
 		m(BLADES_EDGE_MOUNTAINS, {
-			filter(101, {	-- Pet Battle
+			filter(BATTLE_PETS, {
 				p(1164, {	-- Cogblade Raptor
 					["crs"] = { 68841 },	-- Cogblade Raptor
 				}),
