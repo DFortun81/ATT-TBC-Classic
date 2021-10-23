@@ -57,9 +57,11 @@ _.Craftables = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 		}),
 		category(635, {	-- Flasks
 			i(22861),	-- Flask of Blinding Light
+			-- #if BEFORE 5.0.1.20000
 			applyclassicphase(TBC_PHASE_THREE, i(33208, {	-- Flask of Chromatic Wonder
 				["timeline"] = { "removed 5.0.1.20000" },
 			})),
+			-- #endif
 			i(22851),	-- Flask of Fortification
 			i(22853),	-- Flask of Mighty Versatility
 			i(22866),	-- Flask of Pure Death
@@ -76,10 +78,15 @@ _.Craftables = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 			applyclassicphase(TBC_PHASE_FIVE, i(35748)),	-- Guardian's Alchemist Stone
 			applyclassicphase(TBC_PHASE_FIVE, i(35750)),	-- Redeemer's Alchemist Stone
 			applyclassicphase(TBC_PHASE_FIVE, i(35749)),	-- Sorcerer's Alchemist Stone
+			-- #if AFTER 3.1.0
+			i(31080),	-- Mercurial Stone
+			-- #endif
 		}),
+		-- #if BEFORE 3.1.0
 		category(644, {	-- Materials
 			i(31080),	-- Mercurial Stone
 		}),
+		-- #endif
 	}),
 	prof(BLACKSMITHING, {
 		prof(9788, {	-- Armorsmith
