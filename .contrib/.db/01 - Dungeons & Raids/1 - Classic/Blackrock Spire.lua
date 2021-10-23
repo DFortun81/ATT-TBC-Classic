@@ -1042,6 +1042,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 				n(9736, {	-- Quartermaster Zigris
+					applyclassicphase(TBC_PHASE_ONE, i(21955)),	-- Design: Black Diamond Crab
 					i(12835),	-- Plans: Annihilator
 					i(13253),	-- Hands of Power
 					i(13252),	-- Cloudrunner Girdle

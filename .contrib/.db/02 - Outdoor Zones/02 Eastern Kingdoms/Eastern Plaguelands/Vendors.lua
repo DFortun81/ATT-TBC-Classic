@@ -9,6 +9,7 @@ _.Zones =
 				n(12941, {	-- Jase Farlane <Trade Supplies>
 					["coord"] = { 80.6, 57.6, EASTERN_PLAGUELANDS },
 					["groups"] = {
+						applyclassicphase(TBC_PHASE_ONE, i(21954)),	-- Design: Ring of Bitter Shadows
 						i(15756),	-- Pattern: Runic Leather Headband
 					},
 				}),

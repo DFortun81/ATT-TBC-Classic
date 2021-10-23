@@ -29,6 +29,7 @@ _.Zones =
 				n(11189, {	-- Qia <Trade Goods Supplies>
 					["coord"] = { 61.2, 37.2, WINTERSPRING },
 					["groups"] = {
+						applyclassicphase(TBC_PHASE_ONE, i(21957)),	-- Design: Necklace of the Diamond Tower
 						i(14468),	-- Pattern: Runecloth Bag
 						i(14481),	-- Pattern: Runecloth Gloves
 						i(14526),	-- Pattern: Mooncloth

@@ -6343,7 +6343,7 @@ recipeCache = nil;	-- Disable the cache validation.
 
 -- #if AFTER TBC
 -- Recipes created with Burning Crusade, but never implemented. :(
-neverimplemented(itemrecipe("Design: Arcanite Sword Pendant", 21793, 26918));
+neverimplemented(itemrecipe("Design: Arcanite Sword Pendant", 21958, 26918));
 neverimplemented(recipe(26918));	-- Arcanite Sword Pendant
 neverimplemented(i(21793));	-- Arcanite Sword Pendant
 neverimplemented(itemrecipe("Design: Blood Crown", 21959, 26920));

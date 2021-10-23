@@ -1058,6 +1058,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["races"] = ALLIANCE_ONLY,
 					["sourceQuest"] = 4264,	-- A Crumpled Up Note
 				},
+				applyclassicphase(TBC_PHASE_ONE, i(21956)),	-- Design: Dark Iron Scorpid
 				i(11823), 	-- Luminary Kilt
 				i(11822), 	-- Omnicast Boots
 				i(11669),	-- Naglering

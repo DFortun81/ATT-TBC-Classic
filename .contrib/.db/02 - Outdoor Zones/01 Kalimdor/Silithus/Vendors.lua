@@ -40,6 +40,7 @@ _.Zones =
 				n(15179, {	-- Mishta <General Trade Goods Vendor>
 					["coord"] = { 49.8, 36.4, SILITHUS },
 					["groups"] = {
+						applyclassicphase(TBC_PHASE_ONE, i(21952)),	-- Design: Emerald Crown of Destruction
 						un(PHASE_FIVE, i(22310)),	-- Pattern: Cenarion Herb Bag
 						un(PHASE_FIVE_CATCH_UP, i(22683)),	-- Pattern: Gaea's Embrace
 						un(PHASE_FIVE, i(22312)),	-- Pattern: Satchel of Cenarius
