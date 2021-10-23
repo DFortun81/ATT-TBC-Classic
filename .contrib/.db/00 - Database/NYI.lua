@@ -318,7 +318,6 @@ _.NeverImplemented =
 		i(16315),	-- Sergeant Major's Cape
 		i(16336),	-- Sergeant Major's Cape
 		i(16337),	-- Sergeant Major's Cape
-		i(8195),	-- Nightscape Cloak
 	}),
 	filter(4, {		-- Cloth
 		i(14363),	-- Deprecated Runic Cloth Pants
@@ -473,7 +472,6 @@ _.NeverImplemented =
 		i(6733),	-- Ironforge Gauntlets
 		i(7925),	-- Mithril Scale Gloves
 		i(16664),	-- Ornate Bracers
-		i(2867),	-- Rough Bronze Bracers
 		i(17769),	-- Sagebrush Spaulders
 		i(12616),	-- Savage Mail Boots
 		i(12617),	-- Savage Mail Shoulders

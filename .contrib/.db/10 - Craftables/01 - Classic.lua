@@ -948,11 +948,21 @@ _.Craftables = { tier(CLASSIC_TIER, {
 	}),
 	prof(FISHING, {
 		filter(23, {	-- 1H Maces
-			i(19808),	-- Rockhide Strongfish
-			i(6360),	-- Steelscale Crushfish
+			applyholiday(STRANGLETHORN_FISHING_EXTRAVAGANZA, i(19808, {	-- Rockhide Strongfish
+				["description"] = "Can be caught in schools of Tastyfish in Stranglethorn Vale during the Stranglethorn Fishing Extravaganza.",
+			})),
+			i(6360, {	-- Steelscale Crushfish
+				-- #if AFTER CATA
+				["description"] = "Can be caught in Darkmoon Island, Hillsbrad Foothills, Northern Stranglethorn, and Wetlands in open water.",
+				-- #else
+				["description"] = "Can be caught in Hillsbrad Foothills, Stranglethorn Vale and the Wetlands in open water.",
+				-- #endif
+			}),
 		}),
 		filter(52, {	-- Finger
-			i(8350),	-- The 1 Ring
+			i(8350, {	-- The 1 Ring
+				["description"] = "Interestingly enough, you can fish this out of the lava in Ironforge. I guess the gnomes failed their quest...",
+			}),
 		}),
 		filter(1, {		-- Held in Off-hand
 			i(6292),	-- 10 Pound Mud Snapper
@@ -1038,7 +1048,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(8836),	-- Arthas' Tears [Herbalism 220]
 			i(13468),	-- Black Lotus [Herbalism 300]
 			i(8839),	-- Blindweed [Herbalism 235]
-			applyclassicphase(PHASE_FOUR, i(19726)),	-- Bloodvine [Herbalism 210] [ZG Only]
+			applyclassicphase(PHASE_FOUR, i(19726, {	-- Bloodvine [Herbalism 210] [ZG Only]
+				["timeline"] = { "removed 4.0.3" },
+			})),
 			i(2450),	-- Briarthorn [Herbalism 70]
 			i(2453),	-- Bruiseweed [Herbalism 100]
 			i(13463),	-- Dreamfoil [Herbalism 270]
@@ -1460,7 +1472,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(15423),	-- Chimera Leather
 			i(17012),	-- Core Leather
 			i(6470),	-- Deviate Scale
-			applyclassicphase(PHASE_FOUR, i(20381)),	-- Dreamscale
+			applyclassicphase(PHASE_FOUR, i(20381, {	-- Dreamscale
+				["timeline"] = { "removed 4.0.3" },
+			})),
 			i(15417),	-- Devilsaur Leather
 			i(15422),	-- Frostsaber Leather
 			i(15412),	-- Green Dragonscale
@@ -1476,9 +1490,15 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(2319),	-- Medium Leather
 			i(11512),	-- Patch of Tainted Skin
 			i(6471),	-- Perfect Deviate Scale
-			applyclassicphase(PHASE_FOUR, i(19767)),	-- Primal Bat Leather
-			applyclassicphase(PHASE_FOUR, i(19768)),	-- Primal Tiger Leather
-			i(12731),	-- Pristine Hide of the Beast
+			applyclassicphase(PHASE_FOUR, i(19767, {	-- Primal Bat Leather
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			applyclassicphase(PHASE_FOUR, i(19768, {	-- Primal Tiger Leather
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			i(12731, {	-- Pristine Hide of the Beast
+				["timeline"] = { "removed 6.0.2" },
+			}),
 			i(15414),	-- Red Dragonscale
 			i(7287),	-- Red Whelp Scale
 			i(8171),	-- Rugged Hide
@@ -1748,3 +1768,11 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		}),
 	}),
 })};
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	prof(LEATHERWORKING, {
+		i(8195),	-- Nightscape Cloak	(Pattern never actually went live)
+	}),
+	prof(BLACKSMITHING, {
+		i(2867),	-- Rough Bronze Bracers (crafted by NYI pattern) (prof)
+	}),
+});

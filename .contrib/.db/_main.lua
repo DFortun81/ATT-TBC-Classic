@@ -963,6 +963,13 @@ obj = function(id, t)									-- Create a WORLD OBJECT Object (an interactable, 
 	return struct("objectID", id, t);
 end
 o = obj;												-- Create a WORLD OBJECT Object (alternative shortcut)
+petbattle = function(t)									-- Flag all nested content as requiring Pet Battle gameplay
+	-- #if ANYCLASSIC
+	return t;
+	-- #else
+	return bubbleDown({ ["pb"] = true }, t);
+	-- #endif
+end
 prof = function(skillID, t)								-- Create a PROFESSION Object
 	return struct("professionID", skillID, t);
 end
@@ -970,6 +977,13 @@ profession = function(skillID, t)						-- Create a PROFESSION Container. (NOTE: 
 	local p = prof(skillID, t);
 	_.Professions = { p };
 	return p;
+end
+pvp = function(t)										-- Flag all nested content as requiring PvP gameplay
+	-- #if ANYCLASSIC
+	return t;
+	-- #else
+	return bubbleDown({ ["pvp"] = true }, t);
+	-- #endif
 end
 pvprank = function(id, t)								-- Create a PVP Rank Object.
 	return struct("pvpRankID", id, t);
