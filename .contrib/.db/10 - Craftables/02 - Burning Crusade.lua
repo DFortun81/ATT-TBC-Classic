@@ -379,7 +379,7 @@ _.Craftables = { tier(TBC_TIER, applyclassicphase(TBC_PHASE_ONE, {
 			i(23516),	-- Flamebane Helm
 			i(23535),	-- Helm of the Stalwart Defender
 			i(31371),	-- Iceguard Helm
-			i(23536),	-- Oathkeepers Helm
+			i(23536),	-- Oathkeeper's Helm
 			i(23521),	-- Ragesteel Helm
 			i(23534),	-- Storm Helm
 			i(31368),	-- Wildguard Helm
