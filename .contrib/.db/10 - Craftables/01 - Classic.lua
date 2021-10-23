@@ -660,12 +660,29 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		}),
 	}),
 	prof(ENCHANTING, {
+		-- #if AFTER 7.0.3.22248
+		applyclassicphase(LEGION_PHASE_ONE, filter(103, {	-- Illusions
+			i(138787, {	-- Tome of Illusions: Azeroth
+				ill(803),	-- Fiery Weapon
+				ill(1899),	-- Unholy Weapon
+				ill(5863),	-- Coldlight
+			}),
+		})),
+		-- #endif
 		category(697, {	-- Rods
-			i(16207),	-- Runed Arcanite Rod
+			i(16207, {	-- Runed Arcanite Rod
+				["timeline"] = { "removed 5.0.1" },
+			}),
 			i(6218),	-- Runed Copper Rod
-			i(11130),	-- Runed Golden Rod
-			i(6339),	-- Runed Silver Rod
-			i(11145),	-- Runed Truesilver Rod
+			i(11130, {	-- Runed Golden Rod
+				["timeline"] = { "removed 5.0.1" },
+			}),
+			i(6339, {	-- Runed Silver Rod
+				["timeline"] = { "removed 5.0.1" },
+			}),
+			i(11145, {	-- Runed Truesilver Rod
+				["timeline"] = { "removed 5.0.1" },
+			}),
 		}),
 		category(701, {	-- Reagents
 			i(12810),	-- Enchanted Leather
@@ -681,13 +698,13 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(11811),	-- Smoking Heart of the Mountain
 		}),
 		applyclassicphase(PHASE_FIVE, category(699, {	-- Oils
-			applyclassicphase(PHASE_FIVE, i(20748)),	-- Brilliant Mana Oil
-			applyclassicphase(PHASE_FIVE, i(20749)),	-- Brilliant Wizard Oil
-			applyclassicphase(PHASE_FIVE, i(20747)),	-- Lesser Mana Oil
-			applyclassicphase(PHASE_FIVE, i(20746)),	-- Lesser Wizard Oil
-			applyclassicphase(PHASE_FIVE, i(20745)),	-- Minor Mana Oil
-			applyclassicphase(PHASE_FIVE, i(20744)),	-- Minor Wizard Oil
-			applyclassicphase(PHASE_FIVE, i(20750)),	-- Wizard Oil
+			i(20748),	-- Brilliant Mana Oil
+			i(20749),	-- Brilliant Wizard Oil
+			i(20747),	-- Lesser Mana Oil
+			i(20746),	-- Lesser Wizard Oil
+			i(20745),	-- Minor Mana Oil
+			i(20744),	-- Minor Wizard Oil
+			i(20750),	-- Wizard Oil
 		})),
 	}),
 	prof(ENGINEERING, {
