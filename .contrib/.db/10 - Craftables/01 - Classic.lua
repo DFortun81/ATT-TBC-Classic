@@ -133,18 +133,20 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		}),
 	}),
 	prof(BLACKSMITHING, {
+		-- #if BEFORE TBC
 		prof(9788, {	-- Armorsmith
 			["description"] = "These items can only be crafted by Blacksmiths who have completed the Art of the Armorsmith quest chain.",
 			["groups"] = {
 				category(218, {	-- Helms
 					applyclassicphase(PHASE_THREE, i(19148)),	-- Dark Iron Helm
-					applyclassicphase(PHASE_THREE, i(12620)),	-- Enchanted Thorium Helm
+					applyclassicphase(PHASE_THREE, i(12620, {	-- Enchanted Thorium Helm
+						["timeline"] = { "removed 4.0.1" },
+					})),
 					i(12636),	-- Helm of the Great Chief
 					i(12640),	-- Lionheart Helm
 					i(12633),	-- Whitesoul Helm
 				}),
 				category(219, {	-- Shoulders
-					applyclassicphase(TBC_PHASE_ONE, i(12625)),	-- Dawnbringer Shoulders
 					i(16988),	-- Fiery Chain Shoulders
 				}),
 				category(222, {	-- Bracers
@@ -152,17 +154,27 @@ _.Craftables = { tier(CLASSIC_TIER, {
 				}),
 				category(221, {	-- Gauntlets
 					applyclassicphase(PHASE_THREE, i(19164)),	-- Dark Iron Gauntlets
-					i(12631),	-- Fiery Plate Gauntlets
+					i(12631, {	-- Fiery Plate Gauntlets
+						["timeline"] = { "removed 4.0.3" },
+					}),
 					i(12632),	-- Storm Gauntlets
 					i(12639),	-- Stronghold Gauntlets
-					i(7938),	-- Truesilver Gauntlets
+					i(7938, {	-- Truesilver Gauntlets
+						["timeline"] = { "removed 4.0.1" },
+					}),
 				}),
 				category(220, {	-- Chest
 					i(11604),	-- Dark Iron Plate
-					i(12628),	-- Demon Forged Breastplate
-					applyclassicphase(PHASE_THREE, i(12618)),	-- Enchanted Thorium Breastplate
+					i(12628, {	-- Demon Forged Breastplate
+						["timeline"] = { "removed 4.0.3" },
+					}),
+					applyclassicphase(PHASE_THREE, i(12618, {	-- Enchanted Thorium Breastplate
+						["timeline"] = { "removed 4.0.1" },
+					})),
 					i(12641),	-- Invulnerable Mail
-					i(7939),	-- Truesilver Breastplate
+					i(7939, {	-- Truesilver Breastplate
+						["timeline"] = { "removed 4.0.3" },
+					}),
 					i(12624),	-- Wildthorn Mail
 				}),
 				category(223, {	-- Belts
@@ -170,7 +182,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 				}),
 				category(224, {	-- Legs
 					i(17013),	-- Dark Iron Leggings
-					applyclassicphase(PHASE_THREE, i(12619)),	-- Enchanted Thorium Leggings
+					applyclassicphase(PHASE_THREE, i(12619, {	-- Enchanted Thorium Leggings
+						["timeline"] = { "removed 4.0.3" },
+					})),
 					applyclassicphase(PHASE_FIVE, i(22385)),	-- Titanic Leggings
 				}),
 				category(225, {	-- Boots
@@ -195,9 +209,13 @@ _.Craftables = { tier(CLASSIC_TIER, {
 					["description"] = "These items can only be crafted by Master Hammersmith specialized Weaponsmiths.",
 					["groups"] = {
 						applyclassicphase(PHASE_THREE, i(19170)),	-- Ebon Hand
-						i(12776),	-- Enchanted Battlehammer
+						i(12776, {	-- Enchanted Battlehammer
+							["timeline"] = { "removed 4.0.3" },
+						}),
 						i(12796),	-- Hammer of the Titans
-						i(12794),	-- Masterwork Stormhammer
+						i(12794, {	-- Masterwork Stormhammer
+							["timeline"] = { "removed 6.0.2" },
+						}),
 						applyclassicphase(PHASE_FIVE, i(22384)),	-- Persuader
 						i(12781),	-- Serenity
 					},
@@ -231,12 +249,6 @@ _.Craftables = { tier(CLASSIC_TIER, {
 					["groups"] = {
 						applyclassicphase(PHASE_THREE, i(19166)),	-- Black Amnesty
 						applyclassicphase(PHASE_THREE, i(19167)),	-- Blackfury
-						i(12769, {	-- Bleakwood Hew
-							["timeline"] = {
-								"created 1.11.1.5462",	-- Was originally never implemented.
-								"added 7.1.5.23360",
-							},
-						}),
 						i(7959, {	-- Blight
 							["timeline"] = {
 								"added 1.11.1.5462",
@@ -244,40 +256,41 @@ _.Craftables = { tier(CLASSIC_TIER, {
 								"added 7.1.5.23360",
 							},
 						}),
-						i(12795, {	-- Blood Talon
-							["timeline"] = {
-								"created 1.12.1.6898",	-- Was originally never implemented.
-								"added 7.1.5.23360",
-							},
-						}),
 						i(11608),	-- Dark Iron Pulverizer
 						i(11607),	-- Dark Iron Sunderer
-						i(12802, {	-- Darkspear
-							["timeline"] = {
-								"created 1.12.1.6898",	-- Was originally never implemented.
-								"added 7.1.5.23360",
-							},
-						}),
 						i(12783),	-- Heartseeker
 						i(7961),	-- Phantom Blade
-						i(7954),	-- The Shatterer
-						i(7960),	-- Truesilver Champion
+						i(7954, {	-- The Shatterer
+							["timeline"] = { "removed 4.0.2" },
+						}),
+						i(7960, {	-- Truesilver Champion
+							["timeline"] = { "removed 4.0.2" },
+						}),
 					},
 				}),
 			},
 		}),
+		-- #endif
 		category(215, {	-- Materials
-			i(16206),	-- Arcanite Rod
+			i(16206, {	-- Arcanite Rod
+				["timeline"] = { "removed 5.0.1" },
+			}),
 			i(3478),	-- Coarse Grinding Stone
 			i(12644),	-- Dense Grinding Stone
-			i(11128),	-- Golden Rod
+			i(11128, {	-- Golden Rod
+				["timeline"] = { "removed 5.0.1" },
+			}),
 			i(3486),	-- Heavy Grinding Stone
 			i(9060),	-- Inlaid Mithril Cylinder
 			i(7071),	-- Iron Buckle
 			i(3470),	-- Rough Grinding Stone
-			i(6338),	-- Silver Rod
+			i(6338, {	-- Silver Rod
+				["timeline"] = { "removed 5.0.1" },
+			}),
 			i(7966),	-- Solid Grinding Stone
-			i(11144),	-- Truesilver Rod
+			i(11144, {	-- Truesilver Rod
+				["timeline"] = { "removed 5.0.1" },
+			}),
 		}),
 		category(216, {	-- Weapon Mods
 			i(2863),	-- Coarse Sharpening Stone
@@ -302,64 +315,194 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		}),
 		filter(20, {	-- Daggers
 			i(3848),	-- Big Bronze Knife
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_THREE, i(19166)),	-- Black Amnesty
+			-- #endif
 			i(7166),	-- Copper Dagger
 			i(3490),	-- Deadly Bronze Poniard
 			i(7947),	-- Ebon Shiv
 			i(12259),	-- Glinting Steel Dagger
+			-- #if AFTER TBC
+			i(12783),	-- Heartseeker
+			-- #endif
 			i(5540),	-- Pearl-Handled Dagger
 			i(12260),	-- Searing Golden Blade
 		}),
 		filter(21, {	-- 1H Axes
+			-- #if AFTER TBC
+			i(12798),	-- Annihilator
+			-- #endif
 			i(7942),	-- Blue Glittering Axe
 			i(2849),	-- Bronze Axe
 			i(2845),	-- Copper Axe
+			-- #if AFTER TBC
+			i(12774),	-- Dawn's Edge
+			i(17016),	-- Dark Iron Destroyer
+			-- #endif
 			i(17704),	-- Edge of Winter
 			i(7941),	-- Heavy Mithril Axe
 			i(12773),	-- Ornate Thorium Handaxe
 			i(3489),	-- Thick War Axe
 		}),
 		filter(22, {	-- 2H Axes
+			-- #if AFTER TBC
+			i(12784),	-- Arcanite Reaper
+			-- #endif
+			-- #if AFTER 7.1.5.23360
+			i(12769, {	-- Bleakwood Hew
+				["timeline"] = {
+					"created 1.11.1.5462",	-- Was originally never implemented.
+					"added 7.1.5.23360",
+				},
+			}),
+			-- #endif
 			i(7958),	-- Bronze Battle Axe
 			i(3488),	-- Copper Battle Axe
+			-- #if AFTER TBC
+			i(11607),	-- Dark Iron Sunderer
+			-- #endif
 			i(12775),	-- Huge Thorium Battleaxe
 			i(3855),	-- Massive Iron Axe
+			-- #if AFTER TBC
+			i(19169),	-- Nightfall
+			-- #endif
 			i(3856),	-- Shadow Crescent Axe
 		}),
 		filter(23, {	-- 1H Maces
 			i(7945),	-- Big Black Mace
 			i(2848),	-- Bronze Mace
 			i(2844),	-- Copper Mace
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_THREE, i(19170)),	-- Ebon Hand
+			-- #endif
 			i(3491),	-- Heavy Bronze Mace
 			i(5541),	-- Iridescent Hammer
+			-- #if AFTER TBC
+			i(12794, {	-- Masterwork Stormhammer
+				["timeline"] = { "removed 6.0.2" },
+			}),
+			-- #endif
 			i(3492),	-- Mighty Iron Hammer
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_FIVE, i(22384)),	-- Persuader
+			-- #endif
 			i(7946),	-- Runed Mithril Hammer
+			-- #if AFTER TBC
+			i(12781),	-- Serenity
+			i(7954, {	-- The Shatterer
+				["timeline"] = { "removed 4.0.2" },
+			}),
+			-- #endif
 			i(12792),	-- Volcanic Hammer
 		}),
 		filter(24, {	-- 2H Maces
 			i(7956),	-- Bronze Warhammer
+			-- #if AFTER TBC
+			i(11608),	-- Dark Iron Pulverizer
+			i(12776, {	-- Enchanted Battlehammer
+				["timeline"] = { "removed 4.0.3" },
+			}),
+			-- #endif
 			i(3852),	-- Golden Iron Destroyer
+			-- #if AFTER TBC
 			i(12796),	-- Hammer of the Titans
+			-- #endif
 			i(6214),	-- Heavy Copper Maul
 			i(3851),	-- Solid Iron Maul
 			i(17193),	-- Sulfuron Hammer
 		}),
 		filter(25, {	-- 1H Swords
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_THREE, i(19168)),	-- Blackguard
+			i(12777, {	-- Blazing Rapier
+				["timeline"] = {
+					"added 1.11.1.5462",
+					"removed 4.0.1.13287",
+					"added 7.1.5.23360",
+				},
+			}),
+			-- #endif
 			i(2850),	-- Bronze Shortsword
 			i(2847),	-- Copper Shortsword
+			-- #if AFTER TBC
+			i(17015),	-- Dark Iron Reaver
+			-- #endif
 			i(7944),	-- Dazzling Mithril Rapier
+			-- #if AFTER TBC
+			i(12797),	-- Frostguard
+			-- #endif
 			i(3849),	-- Hardened Iron Shortsword
+			i(33791),	-- Heavy Copper Longsword
 			i(3850),	-- Jade Serpentblade
+			-- #if AFTER TBC
+			i(30071, {	-- Light Earthforged Blade
+				["timeline"] = {
+					"added 2.0.1.6180",
+					"removed 4.0.1.13287",
+					"added 7.1.5.23360",
+				},
+			}),
+			i(7961),	-- Phantom Blade
+			applyclassicphase(PHASE_FIVE, i(22383)),	-- Sageblade
+			-- #endif
 			i(7943),	-- Wicked Mithril Blade
 		}),
 		filter(26, {	-- 2H Swords
+			-- #if AFTER TBC
+			i(12790, {	-- Arcanite Champion
+				["timeline"] = {
+					"added 1.11.1.5462",
+					"removed 4.0.1.13287",
+					"added 7.1.5.23360",
+				},
+			}),
+			-- #endif
 			i(7957),	-- Bronze Greatsword
 			i(7955),	-- Copper Claymore
+			-- #if AFTER TBC
+			i(12782),	-- Corruption
+			-- #endif
 			i(3854),	-- Frost Tiger Blade
 			i(3487),	-- Heavy Copper Broadsword
 			i(3853),	-- Moonsteel Broadsword
+			-- #if AFTER TBC
+			i(7960, {	-- Truesilver Champion
+				["timeline"] = { "removed 4.0.2" },
+			}),
+			-- #endif
 		}),
+		-- #if AFTER 7.1.5.23360
+		filter(34, {	-- Fist Weapons
+			i(12795, {	-- Blood Talon
+				["timeline"] = {
+					"created 1.12.1.6898",	-- Was originally never implemented.
+					"added 7.1.5.23360",
+				},
+			}),
+		}),
+		-- #endif
+		-- #if AFTER TBC
+		filter(29, {	-- Polearms
+			applyclassicphase(PHASE_THREE, i(19167)),	-- Blackfury
+			i(7959, {	-- Blight
+				["timeline"] = {
+					"added 1.11.1.5462",
+					"removed 4.0.1.13287",
+					"added 7.1.5.23360",
+				},
+			}),
+			-- #if AFTER 7.1.5.23360
+			i(12802, {	-- Darkspear
+				["timeline"] = {
+					"created 1.12.1.6898",	-- Was originally never implemented.
+					"added 7.1.5.23360",
+				},
+			}),
+			-- #endif
+		}),
+		-- #endif
 		filter(8, {		-- Shields
-			applyclassicphase(PHASE_FIVE, i(22198)),	-- Jagged Obsidian Shield (AQ)
+			applyclassicphase(PHASE_FIVE, i(22198)),	-- Jagged Obsidian Shield
 		}),
 		-- #if BEFORE MOP
 		filter(26, {	-- Thrown
@@ -385,38 +528,132 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		-- #endif
 		category(218, {	-- Helms
 			i(7915),	-- Barbaric Iron Helm
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_THREE, i(19148)),	-- Dark Iron Helm
+			-- #endif
 			applyclassicphase(PHASE_FOUR, i(20551)),	-- Darkrune Helm
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_THREE, i(12620, {	-- Enchanted Thorium Helm
+				["timeline"] = { "removed 4.0.1" },
+			})),
+			-- #endif
 			i(3837),	-- Golden Scale Coif
 			i(3836),	-- Green Iron Helm
 			i(7934),	-- Heavy Mithril Helm
+			-- #if AFTER TBC
+			i(12636),	-- Helm of the Great Chief
+			-- #endif
 			i(12427),	-- Imperial Plate Helm
+			-- #if AFTER TBC
+			i(12640),	-- Lionheart Helm
+			-- #endif
 			i(7931),	-- Mithril Coif
-			i(7937),	-- Ornate Mithril Helm
+			i(7937, {	-- Ornate Mithril Helm
+				["timeline"] = { "removed 4.0.1" },
+			}),
 			i(12417),	-- Radiant Circlet
 			i(12612),	-- Runic Plate Helm
 			i(7922),	-- Steel Plate Helm
 			i(12410),	-- Thorium Helm
+			-- #if AFTER TBC
+			i(12633),	-- Whitesoul Helm
+			-- #endif
 		}),
 		category(219, {	-- Shoulders
 			i(7913),	-- Barbaric Iron Shoulders
-			applyclassicphase(PHASE_FOUR, i(19691)),	-- Bloodsoul Shoulders
+			applyclassicphase(PHASE_FOUR, i(19691, {	-- Bloodsoul Shoulders
+				["timeline"] = { "removed 4.0.3" },
+			})),
 			i(11605),	-- Dark Iron Shoulders
-			applyclassicphase(PHASE_FOUR, i(19695)),	-- Darksoul Shoulders
+			applyclassicphase(PHASE_FOUR, i(19695, {	-- Darksoul Shoulders
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			-- #if AFTER TBC
+			applyclassicphase(TBC_PHASE_ONE, i(12625)),	-- Dawnbringer Shoulders
+			i(16988),	-- Fiery Chain Shoulders
+			-- #endif
 			i(3841),	-- Golden Scale Shoulders
 			i(3840),	-- Green Iron Shoulders
 			i(7918),	-- Heavy Mithril Shoulder
 			i(12428),	-- Imperial Plate Shoulders
 			i(7932),	-- Mithril Scale Shoulders
-			i(7928),	-- Ornate Mithril Shoulder
+			i(7928, {	-- Ornate Mithril Shoulder
+				["timeline"] = { "removed 4.0.1" },
+			}),
 			i(3480),	-- Rough Bronze Shoulders
 			i(12610),	-- Runic Plate Shoulders
 			i(3481),	-- Silvered Bronze Shoulders
 		}),
+		category(220, {	-- Chest
+			i(7914),	-- Barbaric Iron Breastplate
+			i(163964, {	-- Barbaric Iron Hauberk
+				["timeline"] = { "added 8.0.1" },
+			}),
+			applyclassicphase(PHASE_FOUR, i(19690, {	-- Bloodsoul Breastplate
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			i(3471),	-- Copper Chain Vest
+			i(11606),	-- Dark Iron Mail / Dark Iron Plate
+			-- #if AFTER TBC
+			i(11604),	-- Dark Iron Plate
+			-- #endif
+			applyclassicphase(PHASE_FOUR, i(20550)),	-- Darkrune Breastplate
+			applyclassicphase(PHASE_FOUR, i(19693, {	-- Darksoul Breastplate
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			-- #if AFTER TBC
+			i(12628, {	-- Demon Forged Breastplate
+				["timeline"] = { "removed 4.0.3" },
+			}),
+			applyclassicphase(PHASE_THREE, i(12618, {	-- Enchanted Thorium Breastplate
+				["timeline"] = { "removed 4.0.1" },
+			})),
+			-- #endif
+			i(3845),	-- Golden Scale Cuirass
+			i(3844),	-- Green Iron Hauberk
+			i(7930),	-- Heavy Mithril Breastplate
+			applyclassicphase(PHASE_SIX, i(22669, {	-- Icebane Breastplate
+				["timeline"] = { "removed 3.0.1" },
+			})),
+			i(12422),	-- Imperial Plate Chest
+			-- #if AFTER TBC
+			i(12641),	-- Invulnerable Mail
+			-- #endif
+			i(6731),	-- Ironforge Breastplate
+			applyclassicphase(PHASE_FIVE_CATCH_UP, i(22762)),	-- Ironvine Breastplate
+			applyclassicphase(PHASE_FIVE, i(22191)),	-- Obsidian Mail Tunic
+			i(7935, {	-- Ornate Mithril Breastplate
+				["timeline"] = { "removed 4.0.1" },
+			}),
+			i(12415),	-- Radiant Breastplate
+			i(2866),	-- Rough Bronze Cuirass
+			i(2864),	-- Runed Copper Breastplate
+			i(10421),	-- Rough Copper Vest
+			i(12613, {	-- Runic Breastplate
+				["timeline"] = { "removed 4.0.3" },
+			}),
+			i(2870),	-- Shining Silver Breastplate
+			i(2869),	-- Silvered Bronze Breastplate
+			i(7963),	-- Steel Breastplate
+			applyclassicphase(PHASE_FIVE, i(22196)),	-- Thick Obsidian Breastplate
+			i(12405),	-- Thorium Armor
+			-- #if AFTER TBC
+			i(7939, {	-- Truesilver Breastplate
+				["timeline"] = { "removed 4.0.3" },
+			}),
+			i(12624),	-- Wildthorn Mail
+			-- #endif
+		}),
 		category(222, {	-- Bracers
 			i(2853),	-- Copper Bracers
+			-- #if AFTER TBC
+			i(17014),	-- Dark Iron Bracers
+			-- #endif
 			i(6040),	-- Golden Scale Bracers
 			i(3835),	-- Green Iron Bracers
-			applyclassicphase(PHASE_SIX, i(22671)),	-- Icebane Bracers
+			applyclassicphase(PHASE_SIX, i(22671, {	-- Icebane Bracers
+				["timeline"] = { "removed 3.0.1" },
+			})),
 			i(12425),	-- Imperial Plate Bracers
 			i(7924),	-- Mithril Scale Bracers
 			i(2868),	-- Patterned Bronze Bracers
@@ -426,49 +663,50 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		category(221, {	-- Gauntlets
 			i(7917),	-- Barbaric Iron Gloves
 			applyclassicphase(PHASE_FIVE, i(22194)),	-- Black Grasp of the Destroyer
-			applyclassicphase(PHASE_FOUR, i(19692)),	-- Bloodsoul Gauntlets
+			applyclassicphase(PHASE_FOUR, i(19692, {	-- Bloodsoul Gauntlets
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_THREE, i(19164)),	-- Dark Iron Gauntlets
+			-- #endif
 			applyclassicphase(PHASE_FOUR, i(20549)),	-- Darkrune Gauntlets
+			-- #if AFTER TBC
+			i(12631, {	-- Fiery Plate Gauntlets
+				["timeline"] = { "removed 4.0.3" },
+			}),
+			-- #endif
 			i(3474),	-- Gemmed Copper Gauntlets
 			applyclassicphase(PHASE_THREE, i(19057)),	-- Gloves of the Dawn
-			i(9366),	-- Golden Scale Gauntlets
+			i(9366, {	-- Golden Scale Gauntlets
+				["timeline"] = { "removed 4.0.1" },
+			}),
 			i(3485),	-- Green Iron Gauntlets
 			i(7919),	-- Heavy Mithril Gauntlet
-			applyclassicphase(PHASE_SIX, i(22670)),	-- Icebane Gauntlets
-			applyclassicphase(PHASE_FIVE_CATCH_UP, i(22763)),	-- Ironvine Gloves
-			i(7927),	-- Ornate Mithril Gloves
+			applyclassicphase(PHASE_SIX, i(22670, {	-- Icebane Gauntlets
+				["timeline"] = { "removed 3.0.1" },
+			})),
+			applyclassicphase(PHASE_FIVE_CATCH_UP, i(22763, {	-- Ironvine Gloves
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			i(7927, {	-- Ornate Mithril Gloves
+				["timeline"] = { "removed 4.0.1" },
+			}),
 			i(12418),	-- Radiant Gloves
 			i(3472),	-- Runed Copper Gauntlets
 			i(3483),	-- Silvered Bronze Gauntlets
-		}),
-		category(220, {	-- Chest
-			i(7914),	-- Barbaric Iron Breastplate
-			applyclassicphase(PHASE_FOUR, i(19690)),	-- Bloodsoul Breastplate
-			i(3471),	-- Copper Chain Vest
-			i(11606),	-- Dark Iron Mail
-			applyclassicphase(PHASE_FOUR, i(20550)),	-- Darkrune Breastplate
-			applyclassicphase(PHASE_FOUR, i(19693)),	-- Darksoul Breastplate
-			i(3845),	-- Golden Scale Cuirass
-			i(3844),	-- Green Iron Hauberk
-			i(7930),	-- Heavy Mithril Breastplate
-			applyclassicphase(PHASE_SIX, i(22669)),	-- Icebane Breastplate
-			i(12422),	-- Imperial Plate Chest
-			i(6731),	-- Ironforge Breastplate
-			applyclassicphase(PHASE_FIVE_CATCH_UP, i(22762)),	-- Ironvine Breastplate
-			applyclassicphase(PHASE_FIVE, i(22191)),	-- Obsidian Mail Tunic
-			i(7935),	-- Ornate Mithril Breastplate
-			i(12415),	-- Radiant Breastplate
-			i(2866),	-- Rough Bronze Cuirass
-			i(2864),	-- Runed Copper Breastplate
-			i(10421),	-- Rough Copper Vest
-			i(12613),	-- Runic Breastplate
-			i(2870),	-- Shining Silver Breastplate
-			i(2869),	-- Silvered Bronze Breastplate
-			i(7963),	-- Steel Breastplate
-			applyclassicphase(PHASE_FIVE, i(22196)),	-- Thick Obsidian Breastplate
-			i(12405),	-- Thorium Armor
+			-- #if AFTER TBC
+			i(12632),	-- Storm Gauntlets
+			i(12639),	-- Stronghold Gauntlets
+			i(7938, {	-- Truesilver Gauntlets
+				["timeline"] = { "removed 4.0.1" },
+			}),
+			-- #endif
 		}),
 		category(223, {	-- Belts
 			i(2851),	-- Copper Chain Belt
+			-- #if AFTER TBC
+			i(16989),	-- Fiery Chain Girdle
+			-- #endif
 			applyclassicphase(PHASE_THREE, i(19051)),	-- Girdle of the Dawn
 			applyclassicphase(PHASE_FIVE, i(22197)),	-- Heavy Obsidian Belt
 			applyclassicphase(PHASE_THREE, i(19043)),	-- Heavy Timbermaw Belt
@@ -481,30 +719,52 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		}),
 		category(224, {	-- Legs
 			i(2852),	-- Copper Chain Pants
-			applyclassicphase(PHASE_FOUR, i(19694)),	-- Darksoul Leggings
+			-- #if AFTER TBC
+			i(17013),	-- Dark Iron Leggings
+			-- #endif
+			applyclassicphase(PHASE_FOUR, i(19694, {	-- Darksoul Leggings
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_THREE, i(12619, {	-- Enchanted Thorium Leggings
+				["timeline"] = { "removed 4.0.3" },
+			})),
+			-- #endif
 			i(3843),	-- Golden Scale Leggings
 			i(3842),	-- Green Iron Leggings
 			i(7921),	-- Heavy Mithril Pants
 			i(12429),	-- Imperial Plate Leggings
 			i(7920),	-- Mithril Scale Pants
-			i(7929),	-- Orcish War Leggings
-			i(7926),	-- Ornate Mithril Pants
+			i(7929, {	-- Orcish War Leggings
+				["timeline"] = { "removed 4.0.3" },
+			}),
+			i(7926, {	-- Ornate Mithril Pants
+				["timeline"] = { "removed 4.0.1" },
+			}),
 			i(12420),	-- Radiant Leggings
 			i(2865),	-- Rough Bronze Leggings
 			i(3473),	-- Runed Copper Pants
 			i(12614),	-- Runic Plate Leggings
 			i(10423),	-- Silvered Bronze Leggings
 			i(12414),	-- Thorium Leggings
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_FIVE, i(22385)),	-- Titanic Leggings
+			-- #endif
 		}),
 		category(225, {	-- Boots
 			i(7916),	-- Barbaric Iron Boots
 			i(3469),	-- Copper Chain Boots
+			-- #if AFTER TBC
+			applyclassicphase(PHASE_FOUR, i(20039)),	-- Dark Iron Boots
+			-- #endif
 			i(3847),	-- Golden Scale Boots
 			i(3484),	-- Green Iron Boots
 			i(7933),	-- Heavy Mithril Boots
 			applyclassicphase(PHASE_THREE, i(19048)),	-- Heavy Timbermaw Boots
 			i(12426),	-- Imperial Plate Boots
-			i(7936),	-- Ornate Mithril Boots
+			i(7936, {	-- Ornate Mithril Boots
+				["timeline"] = { "removed 4.0.1" },
+			}),
 			i(3846),	-- Polished Steel Boots
 			i(12419),	-- Radiant Boots
 			i(6350),	-- Rough Bronze Boots
@@ -2278,11 +2538,34 @@ _.Craftables = { tier(CLASSIC_TIER, {
 	}),
 })};
 _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	prof(BLACKSMITHING, {
+		-- #if BEFORE 7.1.5.23360
+		i(12769, {	-- Bleakwood Hew
+			["timeline"] = {
+				"created 1.11.1.5462",	-- Was originally never implemented.
+				"added 7.1.5.23360",
+			},
+		}),
+		i(12795, {	-- Blood Talon
+			["timeline"] = {
+				"created 1.12.1.6898",	-- Was originally never implemented.
+				"added 7.1.5.23360",
+			},
+		}),
+		i(12802, {	-- Darkspear
+			["timeline"] = {
+				"created 1.12.1.6898",	-- Was originally never implemented.
+				"added 7.1.5.23360",
+			},
+		}),
+		-- #endif
+		-- #if BEFORE TBC
+		i(12625),	-- Dawnbringer Shoulders
+		-- #endif
+		i(2867),	-- Rough Bronze Bracers (crafted by NYI pattern) (prof)
+	}),
 	prof(LEATHERWORKING, {
 		i(8195),	-- Nightscape Cloak	(Pattern never actually went live)
 		i(15141),	-- Onyxia Scale Breastplate
-	}),
-	prof(BLACKSMITHING, {
-		i(2867),	-- Rough Bronze Bracers (crafted by NYI pattern) (prof)
 	}),
 });
