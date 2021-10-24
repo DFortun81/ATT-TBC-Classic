@@ -611,7 +611,7 @@ app.L = {
 	["UNOBTAINABLE_ITEM_REASONS"] = {
 		[1] = {1, "|CFFFF0000This was never available to players.|r", "Never Implemented"},
 		[2] = {1, "|CFFFF0000This has been removed from the game.|r", "Removed From Game"},
-		[3] = {2, "|CFFFF6666This is only available through some sort of paywall.|r", "Blizzard Balance", nil, nil, "\n \n|CFFFFAAAAThe act of encouraging the use of real money in the Classic version of the game is widely frowned upon. Participate in this content at your own risk.|r" },
+		[3] = {2, "|CFFFF0000This is locked behind a paywall such as the in-game shop, another Blizzard product, or the Recruit-A-Friend service.|r", "Blizzard Balance", nil, nil, "\n \n|CFFFFAAAAThe act of encouraging the use of real money in the Classic version of the game is widely frowned upon. Participate in this content at your own risk.|r" },
 
 		-- Future Content Releases
 		[11] = {2, "|CFFAAFFAAThis was not available until Phase 1 of WoW Classic.|r", "Phase 1", 1130100, 11301, "\n \n|CFFFFAAAAIncluded Molten Core and Onyxia's Lair.|r" },
