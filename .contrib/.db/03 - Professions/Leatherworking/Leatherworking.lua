@@ -2187,7 +2187,6 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		itemrecipe("Pattern: Warbear Woolies", 15754, 19080),
 		itemrecipe("Pattern: Nightscape Cloak", 8388, 10550),
 		itemrecipe("Pattern: Onyxia Scale Breastplate", 15780, 19106);
-		i(15141),	-- Onyxia Scale Breastplate
 		
 		-- #if AFTER TBC
 		itemrecipe("Pattern: Bindings of Lightning Reflexes", 35517),
