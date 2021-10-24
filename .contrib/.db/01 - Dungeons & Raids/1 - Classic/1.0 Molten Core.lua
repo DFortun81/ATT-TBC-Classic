@@ -12,7 +12,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 		["sourceQuest"] = 7848,	-- Attunement to the Core
 		-- #endif
 		["sharedLockout"] = 1,
-		["crs"] = { 14387 },	-- Lothos Riftwaker
 		["isRaid"] = true,
 		["lvl"] = lvlsquish(50, 25, 50),
 		["groups"] = {
@@ -20,7 +19,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 				faction(749, { 	-- Hydraxian Waterlords
 					["qg"] = 13278,	-- Duke Hydraxis
 					["coord"] = { 79.2, 73.6, AZSHARA },
-					["maps"] = { AZSHARA },
 				}),
 			}),
 			n(QUESTS, {
@@ -28,7 +26,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 13278,	-- Duke Hydraxis
 					["sourceQuest"] = 6824,	-- Hands of the Enemy
 					["coord"] = { 79.2, 73.6, AZSHARA },
-					["maps"] = { AZSHARA },
 					["lvl"] = 55,
 					["groups"] = {
 						i(18399),	-- Ocean's Breeze
@@ -40,14 +37,12 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["sourceQuest"] = 6822,	-- The Molten Core
 					["coord"] = { 79.2, 73.6, AZSHARA },
 					["minReputation"] = { 749, HONORED },	-- Hydraxian Waterlords, Honored.
-					["maps"] = { AZSHARA },
 					["lvl"] = 55,
 				})),
 				q(7633, bubbleDown({ ["timeline"] = REMOVED_WITH_CATA }, {	-- An Introduction
 					["qg"] = 14524,	-- Vartrus the Ancient
 					["sourceQuest"] = 7632,	-- The Ancient Leaf
 					["coord"] = { 47, 24.48, FELWOOD },
-					["maps"] = { FELWOOD },
 					["classes"] = { HUNTER },
 					["lvl"] = 60,
 				})),
@@ -58,16 +53,15 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["description"] = "Complete this quest to be able to quickly teleport to Molten Core by simply talking to Lothos.",
 					-- #else
 					["description"] = "This quest is no longer required to enter Molten Core - you can now speak to Lothos and have him transport you inside without doing the attunement.",
-					["coord"] = { 54.2, 83.3, BLACKROCK_MOUNTAIN },
 					-- #endif
-					["maps"] = {
-						BLACKROCK_DEPTHS,
-						BLACKROCK_MOUNTAIN,
-					},
-					["cost"] = {
-						{ "i", 18412, 1 },	-- Core Fragment
-					},
+					["coord"] = { 54.2, 83.3, BLACKROCK_MOUNTAIN },
+					["maps"] = { BLACKROCK_DEPTHS },
 					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/1 Core Fragment
+							["provider"] = { "i", 18412 },	-- Core Fragment
+						}),
+					},
 				}),
 				q(7785, {	-- Examine the Vessel
 					["qg"] = 14347,	-- Highlord Demitrian
@@ -79,7 +73,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					-- #else
 					["coord"] = { 21.7, 8.6, SILITHUS },
 					-- #endif
-					["maps"] = { SILITHUS },
 					["lvl"] = 60,
 					["cost"] = {
 						{ "i", 18563, 1 },	-- Bindings of the Windseeker [Left]
@@ -93,34 +86,53 @@ _.Instances = { tier(CLASSIC_TIER, {
 						6805,	-- Stormers and Rumblers
 					},
 					["coord"] = { 79.2, 73.6, AZSHARA },
-					["maps"] = { AZSHARA, BLACKROCK_SPIRE },
-					["cost"] = {
-						{ "i", 17322, 1 },	-- Eye of the Emberseer
-					},
+					["maps"] = { BLACKROCK_SPIRE },
 					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/1 Eye of the Emberseer
+							["provider"] = { "i", 17322 },	-- Eye of the Emberseer
+						}),
+					},
 				})),
 				q(6824, bubbleDown({ ["timeline"] = REMOVED_WITH_WRATH }, {	-- Hands of the Enemy
 					["qg"] = 13278,	-- Duke Hydraxis
 					["sourceQuest"] = 6823,	-- Agent of Hydraxis
 					["coord"] = { 79.2, 73.6, AZSHARA },
-					["maps"] = { AZSHARA },
-					["cost"] = {
-						{ "i", 17331, 1 },	-- Hand of Gehennas
-						{ "i", 17329, 1 },	-- Hand of Lucifron
-						{ "i", 17332, 1 },	-- Hand of Shazzrah
-						{ "i", 17330, 1 },	-- Hand of Sulfuron
-					},
 					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/1 Hand of Shazzrah
+							["provider"] = { "i", 17332 },	-- Hand of Shazzrah
+						}),
+						objective(2, {	-- 0/1 Hand of Lucifron
+							["provider"] = { "i", 17329 },	-- Hand of Lucifron
+						}),
+						objective(3, {	-- 0/1 Hand of Gehennas
+							["provider"] = { "i", 17331 },	-- Hand of Gehennas
+						}),
+						objective(4, {	-- 0/1 Hand of Sulfuron
+							["provider"] = { "i", 17330 },	-- Hand of Sulfuron
+						}),
+					},
 				})),
 				q(6804, bubbleDown({ ["timeline"] = REMOVED_WITH_WRATH }, {	-- Poisoned Water
 					["qg"] = 13278,	-- Duke Hydraxis
 					["coord"] = { 79.2, 73.6, AZSHARA },
-					["maps"] = { AZSHARA, EASTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 17310, 1 },	-- Aspect of Neptulon
-						{ "i", 17309, 12 },	-- Discordant Bracers
-					},
+					["maps"] = { EASTERN_PLAGUELANDS },
 					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/12 Discordant Bracers
+							["provider"] = { "i", 17309 },	-- Discordant Bracers
+							["cost"] = {
+								{ "i", 17310, 1 },	-- Aspect of Neptulon
+							},
+							["crs"] = {
+								8521,	-- Blighted Horror
+								8519,	-- Blighted Surge
+								8522,	-- Plague Monstrosity
+								8520,	-- Plague Ravager
+							},
+						}),
+					},
 				})),
 				q(7787, {	-- Rise, Thunderfury!
 					["qg"] = 14347,	-- Highlord Demitrian
@@ -128,7 +140,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["sourceQuest"] = 7786,	-- Thunderaan the Windseeker
 					["classes"] = { WARRIOR, PALADIN, ROGUE, HUNTER, DEATHKNIGHT, DEMONHUNTER, MAGE, MONK, WARLOCK },
 					["coord"] = { 21.7, 8.6, SILITHUS },
-					["maps"] = { SILITHUS },
 					["lvl"] = 60,
 					["groups"] = {
 						ach(428, {	-- Thunderfury, Blessed Blade of the Windseeker
@@ -140,14 +151,21 @@ _.Instances = { tier(CLASSIC_TIER, {
 				q(6805, bubbleDown({ ["timeline"] = REMOVED_WITH_WRATH }, {	-- Stormers and Rumblers
 					["qg"] = 13278,	-- Duke Hydraxis
 					["coord"] = { 79.2, 73.6, AZSHARA },
-					["maps"] = { AZSHARA, SILITHUS },
+					["maps"] = { SILITHUS },
 					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/15 Dust Stormer slain
+							["provider"] = { "n", 11744 },	-- Dust Stormer
+						}),
+						objective(2, {	-- 0/15 Desert Rumbler slain
+							["provider"] = { "n", 11746 },	-- Desert Rumbler
+						}),
+					},
 				})),
 				q(7632, bubbleDown({ ["timeline"] = REMOVED_WITH_CATA }, {	-- The Ancient Leaf
 					["qg"] = 14524,	-- Vartrus the Ancient
 					["description"] = "To find Vartrus go to the Irontree Woods in Felwood, there is an island in the middle of the green sludge with a little hill on it, go up the hill and Vartrus will appear to you.",
 					["coord"] = { 47, 24.48, FELWOOD },
-					["maps"] = { FELWOOD },
 					["classes"] = { HUNTER },
 					["cost"] = {
 						{ "i", 18703, 1 },	-- Ancient Petrified Leaf
@@ -158,8 +176,21 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 13278,	-- Duke Hydraxis
 					["sourceQuest"] = 6821,	-- Eye of the Emberseer
 					["coord"] = { 79.2, 73.6, AZSHARA },
-					["maps"] = { AZSHARA },
 					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/1 Molten Giant slain
+							["provider"] = { "n", 11658 },	-- Molten Giant
+						}),
+						objective(2, {	-- 0/1 Firelord slain
+							["provider"] = { "n", 11668 },	-- Firelord
+						}),
+						objective(3, {	-- 0/1 Ancient Core Hound slain
+							["provider"] = { "n", 11673 },	-- Ancient Core Hound
+						}),
+						objective(4, {	-- 0/1 Lava Surger slain
+							["provider"] = { "n", 12101 },	-- Lava Surger
+						}),
+					},
 				})),
 				q(7786, {	-- Thunderaan the Windseeker
 					["qg"] = 14347,	-- Highlord Demitrian
@@ -170,16 +201,29 @@ _.Instances = { tier(CLASSIC_TIER, {
 					-- #else
 					["coord"] = { 21.7, 8.6, SILITHUS },
 					-- #endif
-					["maps"] = { SILITHUS },
 					["classes"] = { WARRIOR, PALADIN, ROGUE, HUNTER, DEATHKNIGHT, DEMONHUNTER, MAGE, MONK, WARLOCK },
+					-- #if NOT ANYCLASSIC
 					["cost"] = {
 						{ "i", 17771, 10 },	-- Elementium Bar x10
 						{ "i", 18563, 1 },	-- Bindings of the Windseeker [Left]
 						{ "i", 18564, 1 },	-- Bindings of the Windseeker [Right]
 						{ "i", 19017, 1 },	-- Essence of the Firelord
 					},
+					-- #endif
 					["lvl"] = 60,
 					["groups"] = {
+						objective(1, {	-- 0/10 Elementium Bar
+							["provider"] = { "i", 17771 },	-- Elementium Bar
+						}),
+						objective(2, {	-- 0/1 Essence of the Firelord
+							["provider"] = { "i", 19017 },	-- Essence of the Firelord
+						}),
+						objective(3, {	-- 0/1 Bindings of the Windseeker [Left]
+							["provider"] = { "i", 18563 },	-- Bindings of the Windseeker [Left]
+						}),
+						objective(4, {	-- 0/1 Bindings of the Windseeker [Right]
+							["provider"] = { "i", 18564 },	-- Bindings of the Windseeker [Right]
+						}),
 						n(14435, {	-- Prince Thunderaan <The Wind Seeker>
 							["description"] = "This is a 40-man raid boss.",
 							-- #if ANYCLASSIC
@@ -210,13 +254,12 @@ _.Instances = { tier(CLASSIC_TIER, {
 				}),
 			}),
 			n(ZONE_DROPS, {
-				i(20951, {	-- Narain's Scrying Goggles
+				applyclassicphase(PHASE_FIVE, i(20951, {	-- Narain's Scrying Goggles
+					-- #if BEFORE CATA
 					["description"] = "For this to drop, you must be on the Scrying Goggles? No Problem! quest.",
-					["timeline"] = REMOVED_WITH_CATA,
-					-- #if ANYCLASSIC
-					["u"] = PHASE_FIVE,
 					-- #endif
-				}),
+					["timeline"] = REMOVED_WITH_CATA,
+				})),
 				i(16802),	-- Arcanist Belt (Mage)
 				i(16799),	-- Arcanist Bindings (Mage)
 				i(16864),	-- Belt of Might (Warrior)
@@ -600,7 +643,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 						["timeline"] = REMOVED_WITH_CATA,
 						["classes"] = { PRIEST },
 					}),
-					i(18803),	-- Finkle's Lava Dredger
+					i(18803),	-- Hyperthermically Insulated Lava Dredger / Finkle's Lava Dredger
 					i(18805),	-- Core Hound Tooth
 					i(19139),	-- Fireguard Shoulders
 					i(18810),	-- Wild Growth Spaulders

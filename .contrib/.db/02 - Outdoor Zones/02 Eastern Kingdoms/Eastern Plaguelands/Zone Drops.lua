@@ -129,15 +129,6 @@ _.Zones =
 				applyclassicphase(PHASE_FIVE, i(22228, {	-- Brilliant Sword of Zealotry
 					["cr"] = 9448,	-- Scarlet Praetorian
 				})),
-				i(17309, {	-- Discordant Bracers
-					["questID"] = 6804,	-- Poisoned Water
-					["crs"] = {
-						8521,	-- Blighted Horror
-						8519,	-- Blighted Surge
-						8522,	-- Plague Monstrosity
-						8520,	-- Plague Ravager
-					},
-				}),
 				i(16242, {	-- Formula: Enchant Chest - Major Mana
 					["cr"] = 9452,	-- Scarlet Enchanter
 				}),
