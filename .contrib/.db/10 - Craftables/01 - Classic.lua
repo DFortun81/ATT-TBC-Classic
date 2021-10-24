@@ -1694,7 +1694,12 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(10033),	-- Red Mageweave Headband
 			i(13866),	-- Runecloth Headband
 			i(4323),	-- Shadow Hood
-			i(10025),	-- Shadoweave Mask
+			i(10025, {	-- Shadoweave Mask
+				-- #if AFTER 7.3.0
+				["description"] = "Required for the |cff3399ffLucid Nightmare|r riddle mount.",
+				-- #endif
+				["timeline"] = { "removed 4.0.3", "added 7.3.0" },
+			}),
 			i(7050),	-- Silk Headband
 			applyclassicphase(PHASE_FIVE_CATCH_UP, i(22757)),	-- Sylvan Crown
 			i(10008),	-- White Bandit Mask
@@ -1722,7 +1727,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(2578),	-- Barbaric Linen Vest
 			i(10001),	-- Black Mageweave Robe
 			i(9998),	-- Black Mageweave Vest
-			applyclassicphase(PHASE_FOUR, i(19682)),	-- Bloodvine Vest
+			applyclassicphase(PHASE_FOUR, i(19682, {	-- Bloodvine Vest
+				["timeline"] = { "removed 4.0.3" },
+			})),
 			i(6242),	-- Blue Linen Robe
 			i(6240),	-- Blue Linen Vest
 			i(6263),	-- Blue Overalls
@@ -1741,7 +1748,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(13868),	-- Frostweave Robe
 			i(13869),	-- Frostweave Tunic
 			i(14141),	-- Ghostweave Vest
-			applyclassicphase(PHASE_SIX, i(22652)),	-- Glacial Vest
+			applyclassicphase(PHASE_SIX, i(22652, {	-- Glacial Vest
+				["timeline"] = { "removed 3.0.1" },
+			})),
 			i(2585),	-- Gray Woolen Robe
 			i(6264),	-- Greater Adept's Robe
 			i(7065),	-- Green Silk Armor
@@ -1754,9 +1763,15 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(10007),	-- Red Mageweave Vest
 			i(7054),	-- Robe of Power
 			i(14152),	-- Robe of the Archmage
-			i(14153),	-- Robe of the Void
-			i(14136),	-- Robe of Winter Night
-			i(5770),	-- Robes of Arcana
+			i(14153, {	-- Robe of the Void
+				["timeline"] = { "removed 5.0.4.15890" },
+			}),
+			i(14136, {	-- Robe of Winter Night
+				["timeline"] = { "removed 4.0.3", "added 8.1.5" },
+			}),
+			i(5770, {	-- Robes of Arcana
+				["timeline"] = { "removed 4.0.3", "added 8.1.5" },
+			}),
 			i(13858),	-- Runecloth Robe
 			i(13857),	-- Runecloth Tunic
 			i(10004),	-- Shadoweave Robe
@@ -1772,12 +1787,49 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		}),
 		category(237, {	-- Bracers
 			i(18263),	-- Flarecore Wraps
-			applyclassicphase(PHASE_SIX, i(22655)),	-- Glacial Wrists
+			applyclassicphase(PHASE_SIX, i(22655, {	-- Glacial Wrists
+				["timeline"] = { "removed 3.0.1" },
+			})),
 			i(4308),	-- Green Linen Bracers
+		}),
+		category(239, {	-- Gloves
+			i(4319),	-- Azure Silk Gloves
+			i(10003),	-- Black Mageweave Gloves
+			i(14101),	-- Brightcloth Gloves
+			i(14043),	-- Cindercloth Gloves
+			i(7064),	-- Crimson Silk Gloves
+			i(10019),	-- Dreamweave Gloves
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18407, {	-- Felcloth Gloves
+				["timeline"] = { "removed 4.0.3", "added 8.1.5" },
+			})),
+			i(16979),	-- Flarecore Gloves
+			i(13870),	-- Frostweave Gloves
+			i(14142),	-- Ghostweave Gloves
+			applyclassicphase(PHASE_SIX, i(22654, {	-- Glacial Gloves
+				["timeline"] = { "removed 3.0.1" },
+			})),
+			i(4318),	-- Gloves of Meditation
+			i(14146),	-- Gloves of Spell Mastery
+			i(7047),	-- Hands of Darkness
+			i(4307),	-- Heavy Linen Gloves
+			i(4310),	-- Heavy Woolen Gloves
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18408, {	-- Inferno Gloves
+				["timeline"] = { "removed 4.0.3", "added 8.1.5" },
+			})),
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18409, {	-- Mooncloth Gloves
+				["timeline"] = { "removed 4.0.3", "added 8.1.5" },
+			})),
+			i(4331),	-- Phoenix Gloves
+			i(10018),	-- Red Mageweave Gloves
+			i(13863),	-- Runecloth Gloves
+			i(10023),	-- Shadoweave Gloves
+			i(7049),	-- Truefaith Gloves
 		}),
 		category(238, {	-- Belts
 			i(7052),	-- Azure Silk Belt
-			applyclassicphase(PHASE_ONE_DIREMAUL, i(18405)),	-- Belt of the Archmage
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18405, {	-- Belt of the Archmage
+				["timeline"] = { "removed 4.0.3", "added 8.1.5" },
+			})),
 			i(7055),	-- Crimson Silk Belt
 			i(7061),	-- Earthen Silk Belt
 			i(14143),	-- Ghostweave Belt
@@ -1788,35 +1840,12 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(4329),	-- Star Belt
 			applyclassicphase(PHASE_THREE, i(19047)),	-- Wisdom of the Timbermaw
 		}),
-		category(239, {	-- Gloves
-			i(4319),	-- Azure Silk Gloves
-			i(10003),	-- Black Mageweave Gloves
-			i(14101),	-- Brightcloth Gloves
-			i(14043),	-- Cindercloth Gloves
-			i(7064),	-- Crimson Silk Gloves
-			i(10019),	-- Dreamweave Gloves
-			applyclassicphase(PHASE_ONE_DIREMAUL, i(18407)),	-- Felcloth Gloves
-			i(16979),	-- Flarecore Gloves
-			i(13870),	-- Frostweave Gloves
-			i(14142),	-- Ghostweave Gloves
-			applyclassicphase(PHASE_SIX, i(22654)),	-- Glacial Gloves
-			i(4318),	-- Gloves of Meditation
-			i(14146),	-- Gloves of Spell Mastery
-			i(7047),	-- Hands of Darkness
-			i(4307),	-- Heavy Linen Gloves
-			i(4310),	-- Heavy Woolen Gloves
-			applyclassicphase(PHASE_ONE_DIREMAUL, i(18408)),	-- Inferno Gloves
-			applyclassicphase(PHASE_ONE_DIREMAUL, i(18409)),	-- Mooncloth Gloves
-			i(4331),	-- Phoenix Gloves
-			i(10018),	-- Red Mageweave Gloves
-			i(13863),	-- Runecloth Gloves
-			i(10023),	-- Shadoweave Gloves
-			i(7049),	-- Truefaith Gloves
-		}),
 		category(240, {	-- Pants
 			i(7046),	-- Azure Silk Pants
 			i(9999),	-- Black Mageweave Leggings
-			applyclassicphase(PHASE_FOUR, i(19683)),	-- Bloodvine Leggings
+			applyclassicphase(PHASE_FOUR, i(19683, {	-- Bloodvine Leggings
+				["timeline"] = { "removed 4.0.3" },
+			})),
 			i(14104),	-- Brightcloth Pants
 			i(4343),	-- Brown Linen Pants
 			i(14045),	-- Cindercloth Pants
@@ -1842,7 +1871,9 @@ _.Craftables = { tier(CLASSIC_TIER, {
 		category(241, {	-- Boots
 			applyclassicphase(PHASE_THREE, i(19056)),	-- Argent Boots
 			i(10026),	-- Black Mageweave Boots
-			applyclassicphase(PHASE_FOUR, i(19684)),	-- Bloodvine Boots
+			applyclassicphase(PHASE_FOUR, i(19684, {	-- Bloodvine Boots
+				["timeline"] = { "removed 4.0.3" },
+			})),
 			i(4325),	-- Boots of the Enchanter
 			i(10044),	-- Cindercloth Boots
 			i(14108),	-- Felcloth Boots
@@ -1863,10 +1894,14 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(14103),	-- Brightcloth Cloak
 			i(14044),	-- Cindercloth Cloak
 			i(14134),	-- Cloak of Fire
-			applyclassicphase(PHASE_ONE_DIREMAUL, i(18413)),	-- Cloak of Warding
+			applyclassicphase(PHASE_ONE_DIREMAUL, i(18413, {	-- Cloak of Warding
+				["timeline"] = { "removed 4.0.3", "added 8.1.5" },
+			})),
 			i(7056),	-- Crimson Silk Cloak
 			applyclassicphase(PHASE_FIVE_CATCH_UP, i(22660)),	-- Gaea's Embrace
-			applyclassicphase(PHASE_SIX, i(22658)),	-- Glacial Cloak
+			applyclassicphase(PHASE_SIX, i(22658, {	-- Glacial Cloak
+				["timeline"] = { "removed 3.0.1" },
+			})),
 			i(4311),	-- Heavy Woolen Cloak
 			i(4327),	-- Icy Cloak
 			i(2570),	-- Linen Cloak
