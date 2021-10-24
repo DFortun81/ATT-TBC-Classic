@@ -168,7 +168,7 @@ _.Zones =
 					["classes"] = { WARRIOR },
 					["cr"] = 2269,	-- Hillsbrad Miner
 				}),
-				un(PHASE_FIVE, i(22229, {	-- Soul Ashes of the Banished
+				applyclassicphase(PHASE_FIVE, i(22229, {	-- Soul Ashes of the Banished
 					["crs"] = {
 						7071,	-- Cursed Paladin
 						7072,	-- Cursed Justicar

@@ -796,10 +796,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 				},
 			}),
 			n(ZONE_DROPS, {
-				un(PHASE_FIVE, {
-					["itemID"] = 22138,	-- Blackrock Bracer
-					["questID"] = 8994,	-- Final Preparations
-				}),
+				applyclassicphase(PHASE_FIVE, i(22138)),	-- Blackrock Bracer
 				{
 					["itemID"] = 16786,	-- Black Dragonspawn Eye
 					["questID"] = 6569,	-- Oculus Illusions
@@ -854,9 +851,8 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(16717),	-- Wildheart Gloves
 				i(13260),	-- Wind Dancer Boots
 				i(13371),	-- Father Flame
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["itemID"] = 21982,	-- Ogre Warbeads
-					["questID"] = 8949,	-- Falrin's Vendetta
 					["crs"] = {
 						9196,	-- Highlord Omokk
 						10584,	-- Urok Doomhowl
@@ -1113,20 +1109,14 @@ _.Instances = { tier(CLASSIC_TIER, {
 				},
 				["groups"] = {
 					n(9816, { 	-- Pyroguard Emberseer
-						{
-							["itemID"] = 17322,	-- Eye of the Emberseer
-							["questID"] = 6821,	-- Eye of the Emberseer
-						},
-						un(PHASE_FIVE, {
-							["itemID"] = 21988,	-- Ember of Emberseer
-							["questID"] = 8961,	-- Three Kings of Flame
-						}),
+						applyclassicphase(PHASE_FIVE, i(21988)),	-- Ember of Emberseer
+						i(17322),	-- Eye of the Emberseer
 						i(12929),	-- Emberfury Talisman
 						i(12905), 	-- Wildfire Cape
 						i(12927),	-- Truestrike Shoulders
 						i(16672),	-- Gauntlets of Elements
 						i(12926),	-- Flaming Band
-						un(PHASE_SIX, {
+						applyclassicphase(PHASE_SIX, {
 							["itemID"] = 23320,		-- Tablet of Flame Shock VI
 							["spellID"] = 29228,	-- Flame Shock VI
 							["classes"] = { SHAMAN },

@@ -126,7 +126,7 @@ _.Zones =
 						{ 74.8, 83.5, EASTERN_PLAGUELANDS },
 					},
 				}),
-				un(PHASE_FIVE, i(22228, {	-- Brilliant Sword of Zealotry
+				applyclassicphase(PHASE_FIVE, i(22228, {	-- Brilliant Sword of Zealotry
 					["cr"] = 9448,	-- Scarlet Praetorian
 				})),
 				i(17309, {	-- Discordant Bracers
@@ -209,19 +209,6 @@ _.Zones =
 				i(16056, {	-- Schematic: Flawless Arcanite Rifle
 					["cr"] = 8561,	-- Mossflayer Shadowhunter
 				}),
-				un(PHASE_FIVE, i(21935, {	-- Stable Ectoplasm
-					["questID"] = 8924,	-- Hunting for Ectoplasm
-					["crs"] = {
-						8542,	-- Death Singer
-						8539,	-- Eyeless Watcher
-						8541,	-- Hate Shrieker
-						8540,	-- Torn Screamer
-						8538,	-- Unseen Servant
-					},
-					["cost"] = {
-						{ "i", 21946, 1 },	-- Ectoplasmic Distiller
-					},
-				})),
 				i(13853, {	-- Slab of Carrion Worm Meat
 					["questID"] = 5544,	-- Carrion Grubbage
 					["crs"] = {

@@ -456,9 +456,8 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 				i(18333),	-- Libram of Focus
 				i(18334),	-- Libram of Protection
 				i(18332),	-- Libram of Rapidity
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["itemID"] = 21982,	-- Ogre Warbeads
-					["questID"] = 8949,	-- Falrin's Vendetta
 					["crs"] = {
 						11441,	-- Gordok Brute
 						14351,	-- Gordok Bushwacker
@@ -831,8 +830,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 								11472,	-- Eldreth Spirit
 							},
 						}),
-						un(PHASE_FIVE, i(22224, {	-- Jeering Spectre's Essence
-							["questID"] = 8950,	-- The Instigator's Enchantment
+						applyclassicphase(PHASE_FIVE, i(22224, {	-- Jeering Spectre's Essence
 							["crs"] = {
 								11471,	-- Eldreth Apparition
 								11475,	-- Eldreth Phantasm

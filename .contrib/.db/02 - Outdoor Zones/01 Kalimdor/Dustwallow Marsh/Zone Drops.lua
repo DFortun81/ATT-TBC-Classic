@@ -24,7 +24,7 @@ _.Zones =
 					},
 					["u"] = TBC_PHASE_ONE,
 				}),
-				un(PHASE_FIVE, i(22094, {	-- Bloodkelp
+				applyclassicphase(PHASE_FIVE, i(22094, {	-- Bloodkelp
 					["crs"] = {
 						4368,	-- Strashaz Myrmidon
 						4366,	-- Strashaz Serpent Guard

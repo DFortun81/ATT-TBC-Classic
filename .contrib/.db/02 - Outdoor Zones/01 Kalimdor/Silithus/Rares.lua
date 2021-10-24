@@ -75,7 +75,7 @@ _.Zones =
 						n(15206, {	-- The Duke of Cynders <Abyssal Council>
 							["cost"] = { { "i", 20432, 1 } },	-- Signet of Beckoning: Fire
 							["groups"] = {
-								un(PHASE_FIVE, i(21989)),	-- Cinder of Cynders
+								applyclassicphase(PHASE_FIVE, i(21989)),	-- Cinder of Cynders
 								i(20666),	-- Hardened Steel Warhammer
 								i(20664),	-- Abyssal Cloth Sash
 								i(20665),	-- Abyssal Leather Leggings

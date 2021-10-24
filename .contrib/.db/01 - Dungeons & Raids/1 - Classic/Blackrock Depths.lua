@@ -888,10 +888,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					{ "i", 21986, 1 },	-- Banner of Provocation
 				},
 				["groups"] = {
-					{
-						["itemID"] = 22047,	-- Top Piece of Lord Valthalak's Amulet
-						["questID"] = 9015,	-- The Challenge
-					},
+					i(22047),	-- Top Piece of Lord Valthalak's Amulet
 					i(22305), 	-- Ironweave Mantle
 					i(22317), 	-- Lefty's Brass Knuckle
 					i(22318), 	-- Malgen's Long Bow
@@ -949,10 +946,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(11749), 	-- Searingscale Leggings
 			}),
 			n(9017, {	-- Lord Incendius
-				un(PHASE_FIVE, {
-					["itemID"] = 21987,	-- Incendicite of Incendius
-					["questID"] = 8961,	-- Three Kings of Flame
-				}),
+				applyclassicphase(PHASE_FIVE, i(21987)),	-- Incendicite of Incendius
 				{
 					["itemID"] = 11126,	-- Tablet of Kurniya
 					["questID"] = 3907,	-- Disharmony of Fire

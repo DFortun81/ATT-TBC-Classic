@@ -22,16 +22,6 @@ _.Zones =
 				i(16223, {	-- Formula: Enchant Weapon - Icy Chill
 					["cr"] = 7524,	-- Anguished Highborne
 				}),
-				un(PHASE_FIVE, i(21936, {	-- Frozen Ectoplasm
-					["questID"] = 8924,	-- Hunting for Ectoplasm
-					["crs"] = {
-						7524,	-- Anguished Highborne
-						7523,	-- Suffering Highborne
-					},
-					["cost"] = {
-						{ "i", 21946, 1 },	-- Ectoplasmic Distiller
-					},
-				})),
 				i(18704, {	-- Mature Blue Dragon Sinew
 					["questID"] = 7634,	-- Ancient Sinew Wrapped Lamina
 					["classes"] = { HUNTER },
@@ -71,7 +61,7 @@ _.Zones =
 				i(16054, {	-- Schematic: Arcanite Dragonling
 					["cr"] = 7437,	-- Cobalt Mageweaver
 				}),
-				un(PHASE_FIVE, i(22227, {	-- Starbreeze Village Relic
+				applyclassicphase(PHASE_FIVE, i(22227, {	-- Starbreeze Village Relic
 					["crs"] = {
 						7428,	-- Frostmaul Giant
 						7429,	-- Frostmaul Preserver

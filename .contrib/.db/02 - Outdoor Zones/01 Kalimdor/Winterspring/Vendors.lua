@@ -42,7 +42,6 @@ _.Zones =
 					["groups"] = {
 						{
 							["itemID"] = 21939,	-- Fel Elemental Rod
-							["questID"] = 8928,	-- A Shifty Merchant
 							["cost"] = {
 								{ "g", 400000 },	-- 40g
 							},

@@ -58,8 +58,7 @@ _.Zones =
 				i(13476, {	-- Recipe: Mighty Rage Potion
 					["cr"] = 7027,	-- Blackrock Slayer
 				}),
-				un(PHASE_FIVE, i(22338, {	-- Volcanic Ash
-					["questID"] = 8921,	-- The Ectoplasmic Distiller
+				applyclassicphase(PHASE_FIVE, i(22338, {	-- Volcanic Ash
 					["cr"] = 10078,	-- Terrorspark
 				})),
 			}),

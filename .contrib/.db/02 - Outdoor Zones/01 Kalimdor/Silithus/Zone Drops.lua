@@ -28,7 +28,7 @@ _.Zones =
 						11725,	-- Hive'Zora Waywatcher
 					},
 				}),
-				un(PHASE_FIVE, i(22226, {	-- Druidical Remains
+				applyclassicphase(PHASE_FIVE, i(22226, {	-- Druidical Remains
 					["crs"] = {
 						11730,	-- Hive'Regal Ambusher
 						11731,	-- Hive'Regal Burrower
@@ -93,16 +93,6 @@ _.Zones =
 					["questID"] = 8277,	-- Deadly Desert Venom
 					["cr"] = 11738,	-- Sand Skitterer
 				}),
-				un(PHASE_FIVE, i(21937, {	-- Scorched Ectoplasm
-					["questID"] = 8924,	-- Hunting for Ectoplasm
-					["crs"] = {
-						12178,	-- Tortured Druid
-						12179,	-- Tortured Sentinel
-					},
-					["cost"] = {
-						{ "i", 21946, 1 },	-- Ectoplasmic Distiller
-					},
-				})),
 				i(22381, {	-- Silithus Venom Sample
 					["crs"] = {
 						11739,	-- Rock Stalker

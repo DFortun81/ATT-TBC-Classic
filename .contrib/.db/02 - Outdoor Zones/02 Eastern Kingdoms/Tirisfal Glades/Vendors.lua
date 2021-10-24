@@ -26,7 +26,6 @@ _.Zones =
 					["groups"] = {
 						{
 							["itemID"] = 22014,	-- Hallowed Brazier
-							["questID"] = 8961,	-- Three Kings of Flame
 							["minReputation"] = { 529, HONORED },	-- Argent Dawn
 							["cost"] = {
 								{ "g", 1500000 },	-- 150g
