@@ -14,7 +14,7 @@ _.Zones =
 					},
 				}),
 				n(8924, {	-- The Behemoth
-					i(19259),	-- Two of Warlords
+					applyclassicphase(PHASE_THREE, i(19259)),	-- Two of Warlords
 					i(11603),	-- Vilerend Slicer
 				}),
 			}),

@@ -604,7 +604,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						i(18305),	-- Breakwater Legguards
 						i(18307),	-- Riptide Shoes
 						i(18322),	-- Waterspout Boots
-						un(PHASE_THREE, i(19268)),	-- Ace of Elementals
+						applyclassicphase(PHASE_THREE, i(19268)),	-- Ace of Elementals
 					}),
 					n(11490, {	-- Zevrim Thornhoof
 						i(18323),	-- Satyr's Bow
@@ -759,7 +759,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						i(18524),	-- Leggings of Destruction
 						i(18521),	-- Grimy Metal Boots
 						i(18522),	-- Band of the Ogre King
-						un(PHASE_THREE, i(19258)),	-- Ace of Warlords
+						applyclassicphase(PHASE_THREE, i(19258)),	-- Ace of Warlords
 					}),
 					n(14353, {	-- Mizzle the Crafty
 						["description"] = "Speak with Mizzle after killing |cFFFFD700King Gordok|r to spawn the Tribute Chest.",

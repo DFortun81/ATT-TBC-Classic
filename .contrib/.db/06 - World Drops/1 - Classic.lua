@@ -2646,37 +2646,37 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 		i(4500),	-- Traveler's Backpack
 	}),
 	category(106, {	-- Tarot Cards
-		un(PHASE_THREE, i(19230)),	-- Two of Beasts
-		un(PHASE_THREE, i(19231)),	-- Three of Beasts
-		un(PHASE_THREE, i(19232)),	-- Four of Beasts
-		un(PHASE_THREE, i(19233)),	-- Five of Beasts
-		un(PHASE_THREE, i(19234)),	-- Six of Beasts
-		un(PHASE_THREE, i(19235)),	-- Seven of Beasts
-		un(PHASE_THREE, i(19236)),	-- Eight of Beasts
+		applyclassicphase(PHASE_THREE, i(19230)),	-- Two of Beasts
+		applyclassicphase(PHASE_THREE, i(19231)),	-- Three of Beasts
+		applyclassicphase(PHASE_THREE, i(19232)),	-- Four of Beasts
+		applyclassicphase(PHASE_THREE, i(19233)),	-- Five of Beasts
+		applyclassicphase(PHASE_THREE, i(19234)),	-- Six of Beasts
+		applyclassicphase(PHASE_THREE, i(19235)),	-- Seven of Beasts
+		applyclassicphase(PHASE_THREE, i(19236)),	-- Eight of Beasts
 
-		un(PHASE_THREE, i(19269)),	-- Two of Elementals
-		un(PHASE_THREE, i(19270)),	-- Three of Elementals
-		un(PHASE_THREE, i(19271)),	-- Four of Elementals
-		un(PHASE_THREE, i(19272)),	-- Five of Elementals
-		un(PHASE_THREE, i(19273)),	-- Six of Elementals
-		un(PHASE_THREE, i(19274)),	-- Seven of Elementals
-		un(PHASE_THREE, i(19275)),	-- Eight of Elementals
+		applyclassicphase(PHASE_THREE, i(19269)),	-- Two of Elementals
+		applyclassicphase(PHASE_THREE, i(19270)),	-- Three of Elementals
+		applyclassicphase(PHASE_THREE, i(19271)),	-- Four of Elementals
+		applyclassicphase(PHASE_THREE, i(19272)),	-- Five of Elementals
+		applyclassicphase(PHASE_THREE, i(19273)),	-- Six of Elementals
+		applyclassicphase(PHASE_THREE, i(19274)),	-- Seven of Elementals
+		applyclassicphase(PHASE_THREE, i(19275)),	-- Eight of Elementals
 
-		un(PHASE_THREE, i(19278)),	-- Two of Portals
-		un(PHASE_THREE, i(19279)),	-- Three of Portals
-		un(PHASE_THREE, i(19280)),	-- Four of Portals
-		un(PHASE_THREE, i(19281)),	-- Five of Portals
-		un(PHASE_THREE, i(19282)),	-- Six of Portals
-		un(PHASE_THREE, i(19283)),	-- Seven of Portals
-		un(PHASE_THREE, i(19284)),	-- Eight of Portals
+		applyclassicphase(PHASE_THREE, i(19278)),	-- Two of Portals
+		applyclassicphase(PHASE_THREE, i(19279)),	-- Three of Portals
+		applyclassicphase(PHASE_THREE, i(19280)),	-- Four of Portals
+		applyclassicphase(PHASE_THREE, i(19281)),	-- Five of Portals
+		applyclassicphase(PHASE_THREE, i(19282)),	-- Six of Portals
+		applyclassicphase(PHASE_THREE, i(19283)),	-- Seven of Portals
+		applyclassicphase(PHASE_THREE, i(19284)),	-- Eight of Portals
 
-		un(PHASE_THREE, i(19259)),	-- Two of Warlords
-		un(PHASE_THREE, i(19260)),	-- Three of Warlords
-		un(PHASE_THREE, i(19261)),	-- Four of Warlords
-		un(PHASE_THREE, i(19262)),	-- Five of Warlords
-		un(PHASE_THREE, i(19263)),	-- Six of Warlords
-		un(PHASE_THREE, i(19264)),	-- Seven of Warlords
-		un(PHASE_THREE, i(19265)),	-- Eight of Warlords
+		applyclassicphase(PHASE_THREE, i(19259)),	-- Two of Warlords
+		applyclassicphase(PHASE_THREE, i(19260)),	-- Three of Warlords
+		applyclassicphase(PHASE_THREE, i(19261)),	-- Four of Warlords
+		applyclassicphase(PHASE_THREE, i(19262)),	-- Five of Warlords
+		applyclassicphase(PHASE_THREE, i(19263)),	-- Six of Warlords
+		applyclassicphase(PHASE_THREE, i(19264)),	-- Seven of Warlords
+		applyclassicphase(PHASE_THREE, i(19265)),	-- Eight of Warlords
 	}),
 	filter(200, {	-- Recipes
 		cl(DRUID, {

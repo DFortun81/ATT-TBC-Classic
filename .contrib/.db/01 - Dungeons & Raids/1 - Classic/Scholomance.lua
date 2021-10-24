@@ -717,7 +717,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					i(13950),	-- Detention Strap
 					i(13398),	-- Boots of the Shrieker
 					un(PHASE_FIVE, i(22433)),	-- Don Mauricio's Band of Domination
-					un(PHASE_THREE, i(19276)),	-- Ace of Portals
+					applyclassicphase(PHASE_THREE, i(19276)),	-- Ace of Portals
 				},
 			}),
 		},

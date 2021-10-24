@@ -1120,6 +1120,88 @@ _.Craftables = { tier(CLASSIC_TIER, {
 			i(3819),	-- Wintersbite [Herbalism 195]
 		},
 	}),
+	-- #if AFTER WRATH
+	prof(INSCRIPTION, {
+		filter(111, {	-- Glyphs
+			i(89868, {	-- Glyph of the Cheetah
+				["questID"] = 62677,
+				["classes"] = { DRUID },
+			}),
+		}),
+		category(106, {	-- Tarot Cards
+			i(44161, {	-- Arcane Tarot
+				i(44165),	-- Ace of Mages
+				i(44144),	-- Two of Mages
+				i(44145),	-- Three of Mages
+				i(44146),	-- Four of Mages
+				i(44147),	-- Five of Mages
+			}),
+			i(44316, {	-- Darkmoon Card
+				i(19227),	-- Ace of Beasts
+				i(19230),	-- Two of Beasts
+				i(19231),	-- Three of Beasts
+				i(19232),	-- Four of Beasts
+				i(19233),	-- Five of Beasts
+				i(19234),	-- Six of Beasts
+				i(19235),	-- Seven of Beasts
+				i(19236),	-- Eight of Beasts
+				i(19268),	-- Ace of Elementals
+				i(19269),	-- Two of Elementals
+				i(19270),	-- Three of Elementals
+				i(19271),	-- Four of Elementals
+				i(19272),	-- Five of Elementals
+				i(19273),	-- Six of Elementals
+				i(19274),	-- Seven of Elementals
+				i(19275),	-- Eight of Elementals
+				i(19276),	-- Ace of Portals
+				i(19278),	-- Two of Portals
+				i(19279),	-- Three of Portals
+				i(19280),	-- Four of Portals
+				i(19281),	-- Five of Portals
+				i(19282),	-- Six of Portals
+				i(19283),	-- Seven of Portals
+				i(19284),	-- Eight of Portals
+				i(19258),	-- Ace of Warlords
+				i(19259),	-- Two of Warlords
+				i(19260),	-- Three of Warlords
+				i(19261),	-- Four of Warlords
+				i(19262),	-- Five of Warlords
+				i(19263),	-- Six of Warlords
+				i(19264),	-- Seven of Warlords
+				i(19265),	-- Eight of Warlords
+			}),
+			i(37168, {	-- Mysterious Tarot
+				i(37140),	-- Ace of Rogues
+				i(37143),	-- Two of Rogues
+				i(37156),	-- Three of Rogues
+			}),
+			i(44163, {	-- Shadowy Tarot
+				i(44143),	-- Ace of Demons
+				i(44154),	-- Two of Demons
+				i(44155),	-- Three of Demons
+				i(44156),	-- Four of Demons
+				i(44157),	-- Five of Demons
+			}),
+			i(44142, {	-- Strange Tarot
+				i(37145),	-- Ace of Swords
+				i(37147),	-- Two of Swords
+				i(37159),	-- Three of Swords
+				i(37160),	-- Four of Swords
+			}),
+		}),
+		filter(1, {	-- Off-hand
+			i(43661),	-- Book of Stars
+			i(43655),	-- Book of Survival
+			i(43660),	-- Fire Eater's Guide
+			i(43664),	-- Manual of Clouds
+			i(43515),	-- Mystic Tome
+			i(43657),	-- Royal Guide of Escape Routes
+			i(43663),	-- Stormbound Tome
+			i(43656),	-- Tome of Kings
+			i(43654),	-- Tome of the Dawn
+		}),
+	}),
+	-- #endif
 	-- #if AFTER TBC
 	prof(JEWELCRAFTING, {
 		filter(52, {	-- Finger

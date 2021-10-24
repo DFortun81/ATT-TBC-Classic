@@ -378,14 +378,14 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7907,  {	-- Darkmoon Beast Deck
+				applyclassicphase(PHASE_THREE, q(7907,  {	-- Darkmoon Beast Deck
 					["provider"] = { "i", 19228 },  -- Beasts Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
 					["g"] = {
 						i(19288),	-- Darkmoon Card: Blue Dragon
 					},
-				}),
+				})),
 				applyclassicphase(TBC_PHASE_THREE, q(10938,  {	-- Darkmoon Blessings Deck
 					["provider"] = { "i", 31890 },  -- Blessings Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
@@ -394,14 +394,22 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(31856),	-- Darkmoon Card: Crusade
 					},
 				})),
-				q(7929,  {	-- Darkmoon Elementals Deck
+				applyclassicphase(WRATH_PHASE_ONE, q(13325, {	-- Darkmoon Chaos Deck
+					["provider"] = { "i", 44276 },	-- Chaos Deck
+					["maxReputation"] = DECK_MAX_REPUTATION,
+					["repeatable"] = true,
+					["g"] = {
+						i(42989),	-- Darkmoon Card: Berserker!
+					},
+				})),
+				applyclassicphase(PHASE_THREE, q(7929,  {	-- Darkmoon Elementals Deck
 					["provider"] = { "i", 19267 },  -- Elementals Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
 					["g"] = {
 						i(19289),	-- Darkmoon Card: Maelstrom
 					},
-				}),
+				})),
 				applyclassicphase(TBC_PHASE_THREE, q(10940,  {	-- Darkmoon Furies Deck
 					["provider"] = { "i", 31907 },  -- Furies Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
@@ -418,14 +426,14 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(31859),	-- Darkmoon Card: Madness
 					},
 				})),
-				q(7927,  {	-- Darkmoon Portals Deck
+				applyclassicphase(PHASE_THREE, q(7927,  {	-- Darkmoon Portals Deck
 					["provider"] = { "i", 19277 },  -- Portals Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
 					["g"] = {
 						i(19290),	-- Darkmoon Card: Twisting Nether
 					},
-				}),
+				})),
 				applyclassicphase(TBC_PHASE_THREE, q(10939,  {	-- Darkmoon Storms Deck
 					["provider"] = { "i", 31891 },  -- Storms Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
@@ -434,14 +442,14 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(31857),	-- Darkmoon Card: Wrath
 					},
 				})),
-				q(7928,  {	-- Darkmoon Warlords Deck
+				applyclassicphase(PHASE_THREE, q(7928,  {	-- Darkmoon Warlords Deck
 					["provider"] = { "i", 19257 },  -- Warlords Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
 					["g"] = {
 						i(19287),	-- Darkmoon Card: Heroism
 					},
-				}),
+				})),
 				q(7903,  {	-- Evil Bat Eyes [Tier 5]
 					["qg"] = 14829,  -- Yebb Neblegear
 					["coords"] = {
@@ -975,7 +983,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 				}),
 			}),
 			category(3, {	-- Tarot Decks
-				i(19228, {	-- Beasts Deck
+				applyclassicphase(PHASE_THREE, i(19228, {	-- Beasts Deck
 					["cost"] = {
 						{ "i", 19227, 1 },	-- Ace of Beasts
 						{ "i", 19230, 1 },	-- Two of Beasts
@@ -986,8 +994,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 19235, 1 },	-- Seven of Beasts
 						{ "i", 19236, 1 },	-- Eight of Beasts
 					},
-					["lvl"] = 55,
-				}),
+				})),
 				applyclassicphase(TBC_PHASE_THREE, i(31890, {	-- Blessings Deck
 					["cost"] = {
 						{ "i", 31882, 1 },	-- Ace of Blessings
@@ -1000,7 +1007,16 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 31883, 1 },	-- Eight of Blessings
 					},
 				})),
-				i(19267, {	-- Elementals Deck
+				applyclassicphase(WRATH_PHASE_ONE, i(44158, {	-- Demons Deck
+					["cost"] = {
+						{ "i", 44143, 1 },	-- Ace of Demons
+						{ "i", 44154, 1 },	-- Two of Demons
+						{ "i", 44155, 1 },	-- Three of Demons
+						{ "i", 44156, 1 },	-- Four of Demons
+						{ "i", 44157, 1 },	-- Five of Demons
+					},
+				})),
+				applyclassicphase(PHASE_THREE, i(19267, {	-- Elementals Deck
 					["cost"] = {
 						{ "i", 19268, 1 },	-- Ace of Elementals
 						{ "i", 19269, 1 },	-- Two of Elementals
@@ -1011,8 +1027,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 19274, 1 },	-- Seven of Elementals
 						{ "i", 19275, 1 },	-- Eight of Elementals
 					},
-					["lvl"] = 55,
-				}),
+				})),
 				applyclassicphase(TBC_PHASE_THREE, i(31907, {	-- Furies Deck
 					["cost"] = {
 						{ "i", 31901, 1 },	-- Ace of Furies
@@ -1037,7 +1052,16 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 31911, 1 },	-- Eight of Lunacy
 					},
 				})),
-				i(19277, {	-- Portals Deck
+				applyclassicphase(WRATH_PHASE_ONE, i(44148, {	-- Mages Deck
+					["cost"] = {
+						{ "i", 44165, 1 },	-- Ace of Mages
+						{ "i", 44144, 1 },	-- Two of Mages
+						{ "i", 44145, 1 },	-- Three of Mages
+						{ "i", 44146, 1 },	-- Four of Mages
+						{ "i", 44147, 1 },	-- Five of Mages
+					},
+				})),
+				applyclassicphase(PHASE_THREE, i(19277, {	-- Portals Deck
 					["cost"] = {
 						{ "i", 19276, 1 },	-- Ace of Portals
 						{ "i", 19278, 1 },	-- Two of Portals
@@ -1048,8 +1072,14 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 19283, 1 },	-- Seven of Portals
 						{ "i", 19284, 1 },	-- Eight of Portals
 					},
-					["lvl"] = 55,
-				}),
+				})),
+				applyclassicphase(WRATH_PHASE_ONE, i(37163, {	-- Rogues Deck
+					["cost"] = {
+						{ "i", 37140, 1 },	-- Ace of Rogues
+						{ "i", 37143, 1 },	-- Two of Rogues
+						{ "i", 37156, 1 },	-- Three of Rogues
+					},
+				})),
 				applyclassicphase(TBC_PHASE_THREE, i(31891, {	-- Storms Deck
 					["cost"] = {
 						{ "i", 31892, 1 },	-- Ace of Storms
@@ -1062,7 +1092,15 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 31893, 1 },	-- Eight of Storms
 					},
 				})),
-				i(19257, {	-- Warlords Deck
+				applyclassicphase(WRATH_PHASE_ONE, i(37164, {	-- Swords Deck
+					["cost"] = {
+						{ "i", 37145, 1 },	-- Ace of Swords
+						{ "i", 37147, 1 },	-- Two of Swords
+						{ "i", 37159, 1 },	-- Three of Swords
+						{ "i", 37160, 1 },	-- Four of Swords
+					},
+				})),
+				applyclassicphase(PHASE_THREE, i(19257, {	-- Warlords Deck
 					["cost"] = {
 						{ "i", 19258, 1 },	-- Ace of Warlords
 						{ "i", 19259, 1 },	-- Two of Warlords
@@ -1073,8 +1111,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 19264, 1 },	-- Seven of Warlords
 						{ "i", 19265, 1 },	-- Eight of Warlords
 					},
-					["lvl"] = 55,
-				}),
+				})),
 			}),
 		},
 	}),

@@ -61,7 +61,7 @@ _.Zones =
 						i(18678),	-- Tempestria's Frozen Necklace
 						i(21548),	-- Pattern: Stormshroud Gloves
 						i(7091),	-- Pattern: Truefaith Gloves
-						un(PHASE_THREE, i(19268)),	-- Ace of Elementals
+						applyclassicphase(PHASE_THREE, i(19268)),	-- Ace of Elementals
 					},
 				}),
 				n(10200, {	-- Rak'shiri

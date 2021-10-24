@@ -13,7 +13,7 @@ _.Zones =
 						{ 59.8, 46.4, BLASTED_LANDS },
 					},
 					["groups"] = {
-						i(19260),	-- Three of Warlords
+						applyclassicphase(PHASE_THREE, i(19260)),	-- Three of Warlords
 					},
 				}),
 				n(8301, {	-- Clack the Reaver

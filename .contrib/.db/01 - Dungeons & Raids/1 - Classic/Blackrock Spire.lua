@@ -1228,8 +1228,8 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(12963),	-- Blademaster Leggings
 						i(12965),	-- Spiritshroud Leggings
 						i(12964),	-- Tristam Legguards
-						un(PHASE_FIVE, i(22311)),	-- Ironweave Boots
-						un(PHASE_THREE, i(19227)),	-- Ace of Beasts
+						applyclassicphase(PHASE_FIVE, i(22311)),	-- Ironweave Boots
+						applyclassicphase(PHASE_THREE, i(19227)),	-- Ace of Beasts
 						prof(SKINNING, {
 							["description"] = "You must have 315 Skinning skill. This can only be accomplished with the Zulian Slicer or Finkle's Skinner.",
 							["groups"] = {
