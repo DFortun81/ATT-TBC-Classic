@@ -842,6 +842,11 @@ local function GetRelativeValue(group, field)
 		return group[field] or GetRelativeValue(group.parent, field);
 	end
 end
+local function GetDeepestRelativeValue(group, field)
+	if group then
+		return GetDeepestRelativeValue(group.parent, field) or group[field];
+	end
+end
 
 -- Quest Completion Lib
 local DirtyQuests = {};
@@ -8612,6 +8617,7 @@ function app:GetDataCache()
 			db.description = "These events occur at different times in the game's timeline, typically as one time server wide events. Special celebrations such as Anniversary events and such may be found within this category.";
 			db.icon = app.asset("Category_Event");
 			db.g = app.Categories.WorldEvents;
+			db.isEventCategory = true;
 			db.expanded = false;
 			table.insert(g, db);
 		end
@@ -8912,6 +8918,17 @@ function app:GetDataCache()
 								header.parent = self;
 								header.g = {};
 							end
+						elseif GetRelativeValue(o, "isEventCategory") then
+							header = headers["event"];
+							if not header then
+								header = {};
+								header.text = BATTLE_PET_SOURCE_7;
+								header.icon = app.asset("Category_Event");
+								headers["event"] = header;
+								tinsert(self.g, header);
+								header.parent = self;
+								header.g = {};
+							end
 						elseif o.parent.headerID == 0 or o.parent.headerID == -1 or o.parent.headerID == -82 or GetRelativeValue(o, "isWorldDropCategory") then
 							header = headers["drop"];
 							if not header then
@@ -8957,7 +8974,7 @@ function app:GetDataCache()
 								header.g = {};
 							end
 						else
-							local headerID = GetRelativeValue(o, "headerID");
+							local headerID = GetDeepestRelativeValue(o, "headerID");
 							if headerID then
 								header = headers[headerID];
 								if not header then
@@ -9124,6 +9141,13 @@ function app:GetDataCache()
 			for i,header in pairs(headers) do
 				insertionSort(header.g, sortByTextSafely);
 			end
+			for i=#self.g,1,-1 do
+				header = self.g[i];
+				if header.g and #header.g < 1 and header.headerID and header.key == "headerID" then
+					headers[header.headerID] = nil;
+					table.remove(self.g, i);
+				end
+			end
 		end
 		mountsCategory:OnUpdate();
 		
@@ -9161,6 +9185,13 @@ function app:GetDataCache()
 					insertionSort(header.g, sortByTextSafely);
 				end
 			end
+			for i=#self.g,1,-1 do
+				header = self.g[i];
+				if header.g and #header.g < 1 and header.headerID and header.key == "headerID" then
+					headers[header.headerID] = nil;
+					table.remove(self.g, i);
+				end
+			end
 		end
 		titlesCategory:OnUpdate();
 		
@@ -9183,6 +9214,13 @@ function app:GetDataCache()
 			insertionSort(self.g, sortByTextSafely);
 			for i,header in pairs(headers) do
 				insertionSort(header.g, sortByTextSafely);
+			end
+			for i=#self.g,1,-1 do
+				header = self.g[i];
+				if header.g and #header.g < 1 and header.headerID and header.key == "headerID" then
+					headers[header.headerID] = nil;
+					table.remove(self.g, i);
+				end
 			end
 		end
 		toyCategory:OnUpdate();
