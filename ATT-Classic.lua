@@ -2429,7 +2429,7 @@ fieldConverters = {
 		end
 	end,
 	["coord"] = function(group, coord)
-		if coord[3] and not group.instanceID then cacheMapID(group, coord[3]); end
+		if coord[3] and not group.instanceID and not group.objectiveID then cacheMapID(group, coord[3]); end
 	end,
 	["coords"] = function(group, value)
 		if not group.instanceID then
@@ -6139,6 +6139,9 @@ local fields = {
 		return t.parent.repeatable;
 	end,
 	["collectible"] = function(t)
+		if not t.questID then
+			return false;
+		end
 		return C_QuestLog.IsOnQuest(t.questID);
 	end,
 	["trackable"] = function(t)
