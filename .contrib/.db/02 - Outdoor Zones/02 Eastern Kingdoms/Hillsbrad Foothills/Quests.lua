@@ -261,15 +261,15 @@ _.Zones =
 					["qg"] = 2229,	-- Krusk
 					["sourceQuest"] = 533,	-- Infiltration
 					["coord"] = { 63.24, 20.68, HILLSBRAD_FOOTHILLS },
+					["maps"] = { ALTERAC_MOUNTAINS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
 					["groups"] = {
-						{
-							["itemID"] = 3704,	-- Rusted Iron Key
-							["questID"] = 503,	-- Gol'dir
-							["cr"] = 2431,	-- Jailor Borhuin
+						objective(1, {	-- 0/1 Rusted Iron Key
+							["provider"] = { "i", 3704 },	-- Rusted Iron Key
 							["coord"] = { 61.8, 40.6, ALTERAC_MOUNTAINS },
-						},
+							["cr"] = 2431,	-- Jailor Borhuin
+						}),
 					},
 				}),
 				q(552, {	-- Helcular's Revenge
