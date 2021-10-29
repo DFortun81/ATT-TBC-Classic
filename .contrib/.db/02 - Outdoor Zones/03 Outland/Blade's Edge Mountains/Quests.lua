@@ -881,6 +881,7 @@ _.Zones =
 							-- #if ANYCLASSIC
 							["description"] = "It's an unlimited Firework Launcher that eventually becomes a Toy and is also a Star Wars reference. Keep it forever.",
 							-- #endif
+							["races"] = ALLIANCE_ONLY,
 						}),
 						i(31458),	-- Razaani-Buster Leggings
 						i(31459),	-- Soul Saver's Chest Plate

@@ -59,7 +59,9 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 37,
 					["g"] = {
-						i(11474),	-- Sprite Darter Egg
+						i(11474, {	-- Sprite Darter Egg
+							["races"] = ALLIANCE_ONLY,
+						}),
 					},
 				}),
 				q(7844, {	-- Cannibalistic Cousins
