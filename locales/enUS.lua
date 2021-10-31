@@ -244,6 +244,7 @@ app.L = {
 
 	-- These need to be localized manually.
 	["ACHIEVEMENT_ICONS"] = {
+		[306] = "Interface\\Icons\\inv_misc_fish_06",				-- Master Angler of Azeroth
 		[522] = app.asset("achievement_reputation_01"),				-- Somebody Likes Me
 		[523] = app.asset("achievement_reputation_01"),				-- 5 Exalted Reputations
 		[524] = app.asset("achievement_reputation_02"),				-- 10 Exalted Reputations
@@ -260,6 +261,7 @@ app.L = {
 		[2336] = "Interface\\Icons\\Spell_shadow_brainwash",		-- Insane in the Membrane
 	},
 	["ACHIEVEMENT_NAMES"] = {
+		[306] = "Master Angler of Azeroth",
 		[522] = "Somebody Likes Me",
 		[523] = "5 Exalted Reputations",
 		[524] = "10 Exalted Reputations",
@@ -673,7 +675,7 @@ app.L = {
 		[1010] = {4, "|CFF00FFDEThis requires the Noblegarden Holiday to be Active.|r", "Noblegarden" },
 		[1013] = {4, "|CFF00FFDEThis requires the Pilgrim's Bounty Holiday to be Active.|r", "Pilgrim's Bounty" },
 		[1011] = {4, "|CFF00FFDEThis requires the Pirate's Day Holiday to be Active.|r", "Pirate's Day" },
-		[1015] = {4, "|CFF00FFDEThis requires the Stranglethorn Fishing Extravaganza to be active.|r", "Stranglethorn Fishing Extravaganza"},
+		[1015] = {4, "|CFF00FFDEThis requires the Stranglethorn Fishing Extravaganza to be active.|r", "Stranglethorn Fishing"},
 		[1016] = {4, "|CFFFF0000This requires the Timewalking Event to be active.\nOnly dungeon content released during the active Timewalking expansion will be available.|r", "Timewalking"},
 		[1017] = {4, "|CFF00FFDEThis requires the WoW Anniversary Event to be active.|r", "WoW Anniversary"},
 	};

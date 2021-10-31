@@ -1580,7 +1580,7 @@ table.insert(settings.MostRecentTab.objects, SeasonalHolidayFiltersLabel);
 
 -- Seasonal Filters
 last, xoffset, yoffset = SeasonalHolidayFiltersLabel, 0, -4;
-for i,u in ipairs({ 1000, 1001, 1002, 1012, 1003, 1004, 1005, 1006, 1007, 1008, 1010, 1011, 1013 }) do
+for i,u in ipairs({ 1000, 1001, 1002, 1012, 1003, 1004, 1005, 1006, 1007, 1008, 1010, 1011, 1013, 1015 }) do
 	local filter = settings:CreateCheckBox(reasons[u][3] or tostring(u), UnobtainableOnRefresh, UnobtainableFilterOnClick);
 	filter:SetATTTooltip(reasons[u][2]);
 	filter:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, yoffset);
