@@ -3156,6 +3156,82 @@ app.BaseObjectFields = function(fields)
 };
 end
 
+-- Achievement Lib
+(function()
+local IsAchievementCollected = function(achievementID)
+	if app.CurrentCharacter.Achievements[achievementID] then return 1; end
+	if app.AccountWideAchievements and ATTAccountWideData.Achievements[achievementID] then return 2; end
+end
+local SetAchievementCollected = function(achievementID, collected)
+	if collected then
+		app.CurrentCharacter.Achievements[achievementID] = 1;
+		ATTAccountWideData.Achievements[achievementID] = 1;
+	elseif app.CurrentCharacter.Achievements[achievementID] then
+		app.CurrentCharacter.Achievements[achievementID] = nil;
+		ATTAccountWideData.Achievements[achievementID] = nil;
+		for guid,characterData in pairs(ATTCharacterData) do
+			if characterData.Achievements and characterData.Achievements[achievementID] then
+				ATTAccountWideData.Achievements[achievementID] = 1;
+				break;
+			end
+		end
+	end
+end
+local fields = {
+	["key"] = function(t)
+		return "achievementID";
+	end,
+	["text"] = function(t)
+		return t.name;
+	end,
+	["name"] = function(t)
+		local name = L.ACHIEVEMENT_NAMES[t.achievementID];
+		if name then return name; end
+		if t.providers then
+			for k,v in ipairs(t.providers) do
+				if v[2] > 0 then
+					if v[1] == "o" then
+						return app.ObjectNames[v[2]] or RETRIEVING_DATA;
+					elseif v[1] == "i" then
+						return select(1, GetItemInfo(v[2])) or RETRIEVING_DATA;
+					end
+				end
+			end
+		end
+		if t.spellID then return select(1, GetSpellInfo(t.spellID)); end
+		return RETRIEVING_DATA;
+	end,
+	["icon"] = function(t)
+		local icon = L.ACHIEVEMENT_ICONS[t.achievementID];
+		if icon then return icon; end
+		if t.providers then
+			for k,v in ipairs(t.providers) do
+				if v[2] > 0 then
+					if v[1] == "o" then
+						return app.ObjectIcons[v[2]] or "Interface\\Worldmap\\Gear_64Grey";
+					elseif v[1] == "i" then
+						return select(5, GetItemInfoInstant(v[2])) or "Interface\\Worldmap\\Gear_64Grey";
+					end
+				end
+			end
+		end
+		if t.spellID then return select(3, GetSpellInfo(t.spellID)); end
+		return t.parent.icon or "Interface\\Worldmap\\Gear_64Grey";
+	end,
+	["collectible"] = function(t)
+		return app.CollectibleAchievements;
+	end,
+	["collected"] = function(t)
+		return IsAchievementCollected(t.achievementID);
+	end,
+	["SetAchievementCollected"] = function() return SetAchievementCollected; end,
+};
+app.BaseAchievement = app.BaseObjectFields(fields);
+app.CreateAchievement = function(id, t)
+	return setmetatable(constructor(id, t, "achievementID"), app.BaseAchievement);
+end
+end)();
+
 -- Battle Pet Lib
 (function()
 local fields = {
@@ -7897,6 +7973,7 @@ local function RowOnEnter(self)
 		if reference.b and app.Settings:GetTooltipSetting("binding") then GameTooltip:AddDoubleLine("Binding", tostring(reference.b)); end
 		if reference.requireSkill then GameTooltip:AddDoubleLine(L["REQUIRES"], GetSpellInfo(app.SkillIDToSpellID[reference.requireSkill] or 0) or RETRIEVING_DATA); end
 		if reference.f and reference.f > 0 and app.Settings:GetTooltipSetting("filterID") then GameTooltip:AddDoubleLine(L["FILTER_ID"], tostring(L["FILTER_ID_TYPES"][reference.f])); end
+		if reference.achievementID and app.Settings:GetTooltipSetting("achievementID") then GameTooltip:AddDoubleLine(L["ACHIEVEMENT_ID"], tostring(reference.achievementID)); end
 		if app.Settings:GetTooltipSetting("creatureID") then 
 			if reference.creatureID then
 				GameTooltip:AddDoubleLine(L["CREATURE_ID"], tostring(reference.creatureID));
@@ -12516,6 +12593,7 @@ app.events.VARIABLES_LOADED = function()
 	if not currentCharacter.raceID and app.RaceIndex then currentCharacter.raceID = app.RaceIndex; end
 	if not currentCharacter.class and class then currentCharacter.class = class; end
 	if not currentCharacter.race and race then currentCharacter.race = race; end
+	if not currentCharacter.Achievements then currentCharacter.Achievements = {}; end
 	if not currentCharacter.ActiveSkills then currentCharacter.ActiveSkills = {}; end
 	if not currentCharacter.BattlePets then currentCharacter.BattlePets = {}; end
 	if not currentCharacter.Deaths then currentCharacter.Deaths = 0; end
@@ -12650,6 +12728,7 @@ app.events.VARIABLES_LOADED = function()
 		accountWideData = {};
 		ATTAccountWideData = accountWideData;
 	end
+	if not accountWideData.Achievements then accountWideData.Achievements = {}; end
 	if not accountWideData.BattlePets then accountWideData.BattlePets = {}; end
 	if not accountWideData.Deaths then accountWideData.Deaths = 0; end
 	if not accountWideData.Factions then accountWideData.Factions = {}; end

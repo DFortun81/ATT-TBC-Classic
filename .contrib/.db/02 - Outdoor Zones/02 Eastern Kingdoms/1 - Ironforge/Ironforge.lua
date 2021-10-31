@@ -1,10 +1,53 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
-_.Zones =
-{
-	m(EASTERN_KINGDOMS, {
-		m(IRONFORGE, {
+root("Zones", m(EASTERN_KINGDOMS, {
+	m(IRONFORGE, {
+		["lore"] = "Ironforge is the capital city of the dwarves, proud members of the Alliance. It is the ancestral home of the Bronzebeard dwarves. King Bronzebeard rules the kingdom of Khaz Modan from the throne room within the city. The Great Forge area gave the city its name.\n\nCarved into the stone heart of Khaz Modan, the mighty city of Ironforge is a testament to the dwarves' strength and resilience. The city is perhaps the most intricate of the Alliance cities, boasting many small passageways, shops built into the rock walls, and cavernous rooms. The feel of the city is a bustling, rowdy, and somewhat industrial one. However, it is predominantly safe-feeling and cozy; fires roar in the hearths of the inns and shops, and much dwarven laughing and frivolity is to be heard. Also, unlike Stormwind and Darnassus, the city is actually a massive cavern carved into the earth by the dwarves; the ceiling and floor are both hard stone.\n\nMainly because of the Deeprun Tram, linking Ironforge and Stormwind City, and the district of Tinker Town, Ironforge is one of the most racially diverse cities in the Alliance world. Dwarves predominate, of course, but you will find plenty of gnomes even outside of Tinker Town, and probably as many humans. You will find almost no night elves however, as they probably prefer more natural and open spaced environments.",
+		["isRaid"] = true,
+		["groups"] = {
+			n(ACHIEVEMENTS, {
+				ach(5847, applyclassicphase(CATA_PHASE_ONE, {	-- Fish or Cut Bait: Ironforge
+					["timeline"] = { "added 4.2.0" },
+					["requireSkill"] = FISHING,
+					["races"] = ALLIANCE_ONLY,
+				})),
+				ach(1837, applyclassicphase(TBC_PHASE_ONE, {	-- Old Ironjaw
+					["provider"] = { "i", 34484 },	-- Old Ironjaw
+					["requireSkill"] = FISHING,
+					-- #if BEFORE WRATH
+					["description"] = "Fish up Old Ironjaw in Ironforge.",
+					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, GetItemCount(34484, true) > 0); end]],
+					-- #endif
+				})),
+			}),
+			n(FACTIONS, {
+				faction(54, {	-- Gnomeregan Exiles
+					["icon"] = asset("Achievement_Character_Gnome_Male"),
+					["races"] = ALLIANCE_ONLY,
+				}),
+				faction(47, {	-- Ironforge
+					["icon"] = asset("Achievement_Character_Dwarf_Male"),
+					["races"] = ALLIANCE_ONLY,
+				}),
+			}),
+			applyclassicphase(TBC_PHASE_ONE, prof(FISHING, {
+				i(34864),	-- Baby Crocolisk
+				i(34484, {	-- Old Ironjaw
+					-- #if BEFORE WRATH
+					["description"] = "Keep this in your bank until Achievements are added otherwise you'll need to fish it up again. Fair warning!",
+					-- #else
+					["description"] = "Keep this in your bank until Transmog is added otherwise you'll need to fish it up again. Fair warning!",
+					-- #endif
+				}),
+			})),
+			n(FLIGHT_PATHS, {
+				fp(6, {	-- Ironforge, Dun Morogh
+					["cr"] = 1573,	-- Gryth Thurden <Gryphon Master>
+					["coord"] = { 55.6, 48.0, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+				}),
+			}),
 			n(QUESTS, {
 				q(7809, {	-- A Donation of Mageweave
 					["qg"] = 14724,	-- Bubulo Acerbus
@@ -615,6 +658,137 @@ _.Zones =
 					},
 				}),
 			}),
-		}),
+			n(VENDORS, {
+				n(5128, {	-- Bombus Finespindle <Leatherworking Supplies>
+					["coord"] = { 40.0, 33.4, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(18731, {	-- Pattern: Heavy Leather Ball
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				n(5163, {	-- Burbik Gearspanner <Trade Supplies>
+					["coord"] = { 46.6, 27.2, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						-- #if AFTER TBC
+						i(21948, {	-- Design: Opal Necklace of Impact
+							["isLimited"] = true,
+						}),
+						i(20975, {	-- Design: The Jade Eye
+							["isLimited"] = true,
+						}),
+						-- #endif
+					},
+				}),
+				n(5160, {	-- Emrul Riknussun <Cooking Supplier>
+					["coord"] = { 60.6, 38.2, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(21099),	-- Recipe: Smoked Sagefish
+						i(21219),	-- Recipe: Sagefish Delight
+					},
+				}),
+				n(5175, {	-- Gearcutter Cogspinner <Engineering Supplies>
+					["coord"] = { 67.9, 42.6, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(18649, {	-- Schematic: Blue Firework
+							["isLimited"] = true,
+						}),
+						i(7560, {	-- Schematic: Gnomish Universal Remote
+							["isLimited"] = true,
+						}),
+						i(22729, {	-- Schematic: Steam Tonk Controller
+							["isLimited"] = true,
+							["u"] = TBC_PHASE_ONE,
+						}),
+						i(16041, {	-- Schematic: Thorium Grenade
+							["isLimited"] = true,
+						}),
+						i(16042, {	-- Schematic: Thorium Widget
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				n(8681, {	-- Outfitter Eric <Speciality Tailoring Supplies>
+					["coord"] = { 43.2, 29.2, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(10314, {	-- Pattern: Lavender Mageweave Shirt
+							["isLimited"] = true,
+						}),
+						i(10317, {	-- Pattern: Pink Mageweave Shirt
+							["isLimited"] = true,
+						}),
+						i(10326, {	-- Pattern: Tuxedo Jacket
+							["isLimited"] = true,
+						}),
+						i(10323, {	-- Pattern: Tuxedo Pants
+							["isLimited"] = true,
+						}),
+						i(10321, {	-- Pattern: Tuxedo Shirt
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				n(5122, {	-- Skolmin Goldfury <Bow Merchant>
+					["coord"] = { 71.6, 66.2, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(11303, {	-- Fine Shortbow
+							["isLimited"] = true,
+						}),
+						i(11307, {	-- Massive Longbow
+							["isLimited"] = true,
+						}),
+						i(11306, {	-- Sturdy Recurve
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				n(5178, {	-- Soolie Berryfizz <Alchemy Supplies>
+					["coord"] = { 66.6, 54.6, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(13478, {	-- Recipe: Elixir of Superior Defense
+							["isLimited"] = true,
+						}),
+						i(5642, {	-- Recipe: Free Action Potion
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				n(5162, {	-- Tansy Puddlefizz <Fishing Supplier>
+					["coord"] = { 47.8, 6.6, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(6326),	-- Recipe: Slitherskin Mackerel
+						i(6328),	-- Recipe: Longjaw Mud Snapper
+						i(6369),	-- Recipe: Rockscale Cod
+						i(17062),	-- Recipe: Mithril Head Trout
+					},
+				}),
+				n(5158, {	-- Tilli Thistlefuzz <Enchanting Supplies>
+					["coord"] = { 60.8, 44.2, IRONFORGE },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						-- #if BEFORE CATA
+						i(6342),	-- Formula: Enchant Chest - Minor Mana
+						-- #endif
+						i(6349, {	-- Formula: Enchant 2H Weapon - Lesser Intellect
+							["isLimited"] = true,
+						}),
+						-- #if NOT CLASSIC
+						i(20753),	-- Formula: Lesser Wizard Oil
+						i(20752),	-- Formula: Minor Mana Oil
+						i(20758),	-- Formula: Minor Wizard Oil
+						-- #endif
+						i(22307),	-- Pattern: Enchanted Mageweave Pouch
+					},
+				}),
+			}),
+		},
 	}),
-};
+}));

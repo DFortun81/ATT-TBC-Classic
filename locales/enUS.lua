@@ -67,20 +67,36 @@ app.L = {
 	["LIMITED_QUANTITY"] = "This has a limited quantity and may not always be present on the vendor.";
 
 	-- Filter Text
+	["ACHIEVEMENT_ID"] = "Achievement ID";
+	["ARTIFACT_ID"] = "Artifact ID";
+	["AZERITE_ESSENCE_ID"] = "Azerite Essence ID";
 	["ART_ID"] = "Art ID";
 	["CREATURE_ID"] = "Creature ID";
 	["CURRENCY_ID"] = "Currency ID";
+	["DIFFICULTY_ID"] = "Difficulty ID";
+	["ENCOUNTER_ID"] = "Encounter ID";
+	["EXPANSION_ID"] = "Expansion ID";
 	["EXPLORATION_ID"] = "Exploration ID";
 	["FILTER_ID"] = "Filter ID";
+	["FOLLOWER_ID"] = "Follower ID";
+	["ILLUSION_ID"] = "Illusion ID";
+	["INSTANCE_ID"] = "Instance ID";
 	["ITEM_ID"] = "Item ID";
 	["FACTION_ID"] = "Faction ID";
 	["FLIGHT_PATH_ID"] = "Flight Path ID";
 	["MAP_ID"] = "Map ID";
+	["MOUNT_ID"] = "Mount ID";
+	["MUSIC_ROLL_ID"] = "Music Roll ID";
 	["NPC_ID"] = "NPC ID";
 	["OBJECT_ID"] = "Object ID";
 	["QUEST_ID"] = "Quest ID";
+	["SET_ID"] = "Gear Set ID";
+	["SOURCE_ID"] = "Source ID";
 	["SPELL_ID"] = "Spell ID";
+	["SPECIES_ID"] = "Species ID";
 	["TITLE_ID"] = "Title ID";
+	["TOY_ID"] = "Toy ID";
+	["VISUAL_ID"] = "Visual ID";
 
 	-- Icons and Collection Text
 	["LOGO_SMALL"] = "Interface\\Addons\\ATT-Classic\\assets\\logo_tiny";		-- Winner of the Logo Contest (Used to be "Interface\\Icons\\INV_Axe_106.blp")
@@ -227,16 +243,49 @@ app.L = {
 	},
 
 	-- These need to be localized manually.
+	["ACHIEVEMENT_ICONS"] = {
+		[522] = app.asset("achievement_reputation_01"),				-- Somebody Likes Me
+		[523] = app.asset("achievement_reputation_01"),				-- 5 Exalted Reputations
+		[524] = app.asset("achievement_reputation_02"),				-- 10 Exalted Reputations
+		[521] = app.asset("achievement_reputation_03"),				-- 15 Exalted Reputations
+		[520] = app.asset("achievement_reputation_04"),				-- 20 Exalted Reputations
+		[519] = app.asset("achievement_reputation_05"),				-- 25 Exalted Reputations
+		[518] = app.asset("achievement_reputation_06"),				-- 30 Exalted Reputations
+		[1014] = app.asset("achievement_reputation_07"),			-- 35 Exalted Reputations
+		[1015] = app.asset("achievement_reputation_08"),			-- 40 Exalted Reputations
+		[891] = "Interface\\Icons\\ability_mount_ridinghorse",		-- Giddy Up!
+		[889] = "Interface\\Icons\\ability_mount_blackpanther",		-- Fast and Furious
+		[890] = "Interface\\Icons\\ability_mount_gryphon_01",		-- Into the Wild Blue Yonder
+		[5180] = "Interface\\Icons\\ability_mount_rocketmount",		-- Breaking the Sound Barrier
+		[2336] = "Interface\\Icons\\Spell_shadow_brainwash",		-- Insane in the Membrane
+	},
+	["ACHIEVEMENT_NAMES"] = {
+		[522] = "Somebody Likes Me",
+		[523] = "5 Exalted Reputations",
+		[524] = "10 Exalted Reputations",
+		[521] = "15 Exalted Reputations",
+		[520] = "20 Exalted Reputations",
+		[519] = "25 Exalted Reputations",
+		[518] = "30 Exalted Reputations",
+		[1014] = "35 Exalted Reputations",
+		[1015] = "40 Exalted Reputations",
+		[891] = "Giddy Up!",
+		[889] = "Fast and Furious",
+		[890] = "Into the Wild Blue Yonder",
+		[5180] = "Breaking the Sound Barrier",
+		[2336] = "Insane in the Membrane",
+	},
 	["HEADER_ICONS"] = {
 		[0] = "Interface\\Addons\\ATT-Classic\\assets\\INV_TreasureChest_FelfireCitadel", 	-- Zone Drop
 		[-1] = "Interface\\Addons\\ATT-Classic\\assets\\Achievement_Garrison_Horde_PVE", 	-- Common Boss Drop
 		[-2] = "Interface\\Icons\\INV_Misc_Coin_02", 										-- Vendors
 		[-3] = "Interface\\Icons\\INV_Misc_Coin_01",										-- Common Vendor Items
-		[-4] = "Interface\\Icons\\INV_Misc_Food_62", 										-- Free Festival Food
+		[-4] = app.asset("Category_Achievements"),											-- Achievements
 		[-5] = app.asset("Category_Holidays"), 												-- Holiday
 		[-6] = app.asset("Category_FlightPaths"),											-- Flight Paths
 		[-7] = "Interface\\Addons\\ATT-Classic\\assets\\Inv_offhand_1h_artifactskulloferedar_d_05",	-- World Bosses
 		[-8] = app.asset("Category_Factions"),												-- Factions
+		[-9] = app.asset("Category_PvP"),													-- Player vs. Player
 		[-12] = "Interface\\Icons\\Spell_Shadow_SummonImp", 								-- East entrance demons
 		[-13] = "Interface\\Icons\\inv_axe_10", 											-- North entrance ogres
 		[-14] = "Interface\\Icons\\INV_Misc_Head_Elf_02", 									-- West entrace elves
@@ -319,33 +368,18 @@ app.L = {
 		[-577] = "Interface\\Icons\\INV_MISC_FILM_01",								-- Warcraft Movie
 		[-578] = app.asset("Expansion_CLASSIC"),									-- World of Warcraft 15th Anniversary
 		[-579] = "Interface\\Icons\\achievement_dungeon_outland_dungeonmaster",		-- Dark Portal Pass
-		
-		-- Custom Achievement Section, just for Pre-Wrath content.
-		[-200001] = "Interface\\Icons\\Spell_shadow_brainwash",						-- Insane in the Membrane (Pre-Wrath)
-		[-200002] = "Interface\\Icons\\ability_mount_ridinghorse",					-- Giddy Up!
-		[-200003] = "Interface\\Icons\\ability_mount_blackpanther",					-- Fast and Furious
-		[-200004] = "Interface\\Icons\\ability_mount_gryphon_01",					-- Into the Wild Blue Yonder
-		[-200005] = "Interface\\Icons\\ability_mount_rocketmount",					-- Breaking the Sound Barrier
-		[-200006] = app.asset("achievement_reputation_01"),							-- Somebody Likes Me
-		[-200007] = app.asset("achievement_reputation_01"),							-- 5 Exalted Reputations
-		[-200008] = app.asset("achievement_reputation_02"),							-- 10 Exalted Reputations
-		[-200009] = app.asset("achievement_reputation_03"),							-- 15 Exalted Reputations
-		[-200010] = app.asset("achievement_reputation_04"),							-- 20 Exalted Reputations
-		[-200011] = app.asset("achievement_reputation_05"),							-- 25 Exalted Reputations
-		[-200012] = app.asset("achievement_reputation_06"),							-- 30 Exalted Reputations
-		[-200013] = app.asset("achievement_reputation_07"),							-- 35 Exalted Reputations
-		[-200014] = app.asset("achievement_reputation_08"),							-- 40 Exalted Reputations
 	};
 	["HEADER_NAMES"] = {
 		[0] = ZONE.." "..BATTLE_PET_SOURCE_1, 									-- Zone Drop
 		[-1] = BATTLE_PET_BREED_QUALITY2.." "..TRANSMOG_SOURCE_1,				-- Common Boss Drop
 		[-2] = BATTLE_PET_SOURCE_3, 											-- Vendor
 		[-3] = BATTLE_PET_BREED_QUALITY2.." "..BATTLE_PET_SOURCE_3 .. " " .. ITEMS,	-- Common Vendor Items
-		[-4] = "Free Festival Food", 											-- Free Festival Food
+		[-4] = ACHIEVEMENTS,													-- Achievements
 		[-5] = "Holiday", 														-- Holiday
 		[-6] = "Flight Paths",													-- Flight Paths
 		[-7] = WORLD.." "..RAID_BOSSES, 										-- World Bosses
 		[-8] = "Factions",														-- Factions
+		[-9] = BUG_CATEGORY14,													-- Player vs. Player
 		[-12] = DUNGEON_FLOOR_DIREMAUL5.." (East)",								-- Warpwood Quarter
 		[-13] = DUNGEON_FLOOR_DIREMAUL1.." (North)",							-- Gordok Commons
 		[-14] = DUNGEON_FLOOR_DIREMAUL2.." (West)",								-- Capital Gardens
@@ -453,22 +487,6 @@ app.L = {
 		[-579] = "Dark Portal Pass",
 -- Factions / Cities
 		[-10066] = "Legendary",
-		
-		-- Custom Achievement Section, just for Pre-Wrath content.
-		[-200001] = "Insane in the Membrane",
-		[-200002] = "Giddy Up!",
-		[-200003] = "Fast and Furious",
-		[-200004] = "Into the Wild Blue Yonder",
-		[-200005] = "Breaking the Sound Barrier",
-		[-200006] = "Somebody Likes Me",
-		[-200007] = "5 Exalted Reputations",
-		[-200008] = "10 Exalted Reputations",
-		[-200009] = "15 Exalted Reputations",
-		[-200010] = "20 Exalted Reputations",
-		[-200011] = "25 Exalted Reputations",
-		[-200012] = "30 Exalted Reputations",
-		[-200013] = "35 Exalted Reputations",
-		[-200014] = "40 Exalted Reputations",
 	},
 	["HEADER_DESCRIPTIONS"] = {
 		[-5] = "A specific holiday may need to be active for you to complete the referenced Things within this section.",

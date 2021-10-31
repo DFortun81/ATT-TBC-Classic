@@ -666,6 +666,26 @@ bubbleDown = function(data, t)
 		return t;
 	end
 end
+bubbleDownAndReplace = function(data, t)
+	if t then
+		if t.g or t.groups then
+			for key, value in pairs(data) do
+				t[key] = value;
+			end
+			bubbleDown(data, t.groups);
+			bubbleDown(data, t.g);
+		elseif isarray(t) then
+			for i,group in ipairs(t) do
+				bubbleDown(data, group);
+			end
+		else
+			for key, value in pairs(data) do
+				t[key] = value;
+			end
+		end
+		return t;
+	end
+end
 bubbleUp = function(t)
 	local t2 = {};
 	for i, group in pairs(t) do
@@ -804,15 +824,35 @@ lvlsquish = function(originalLvl, shadowlandsLvl, retailLvl)
 	return retailLvl or originalLvl;
 	-- #endif
 end
+removeclassicphase = function(t)
+	-- #if ANYCLASSIC
+	if t then
+		if t.g or t.groups then
+			t.u = nil;
+			bubbleDown(data, t.groups);
+			bubbleDown(data, t.g);
+		elseif isarray(t) then
+			for i,group in ipairs(t) do
+				bubbleDown(data, group);
+			end
+		else
+			t.u = nil;
+		end
+		return t;
+	end
+	-- #else
+	return t;
+	-- #endif
+end
 
 -- SHORTCUTS for Object Class Types
 ach = function(id, altID, t)							-- Create an ACHIEVEMENT Object
 	if t or type(altID) == "number" then
 		t = struct("allianceAchievementID", id, t or {});
 		t["hordeAchievementID"] = altID;
-		return un(WRATH_PHASE_ONE, t);
+		return applyclassicphase(WRATH_PHASE_ONE, t);
 	else
-		return un(WRATH_PHASE_ONE, struct("achievementID", id, altID));
+		return applyclassicphase(WRATH_PHASE_ONE, struct("achievementID", id, altID));
 	end
 end
 battlepet = function(id, t)								-- Create a BATTLE PET Object (Battle Pet == Species == Pet)

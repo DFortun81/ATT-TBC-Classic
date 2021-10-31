@@ -1,10 +1,48 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
-_.Zones =
-{
-	m(KALIMDOR, {
-		m(ORGRIMMAR, {
+root("Zones", m(KALIMDOR, {
+	m(ORGRIMMAR, {
+		["lore"] = "Named in honor of the legendary Orgrim Doomhammer, Orgrimmar was founded as the capital city of the orcs' new homeland. Built within a huge, winding canyon in the harsh land of Durotar, Orgrimmar stands as one of the mightiest warrior cities in the world. Behind Orgrimmar's immense walls, elderly shaman pass their knowledge on to the Horde's newest generation of leaders, while warriors spar in the gladiatorial arena, honing their skills in preparation for the trials that await them in this dangerous land.",
+		["isRaid"] = true,
+		["groups"] = {
+			n(ACHIEVEMENTS, {
+				ach(1836, applyclassicphase(TBC_PHASE_ONE, {	-- Old Crafty
+					["provider"] = { "i", 34486 },	-- Old Crafty
+					["requireSkill"] = FISHING,
+					-- #if BEFORE WRATH
+					["description"] = "Fish up Old Crafty in Orgrimmar.",
+					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, GetItemCount(34486, true) > 0); end]],
+					-- #endif
+				})),
+			}),
+			n(FACTIONS, {
+				faction(530, {	-- Darkspear Trolls
+					["icon"] = asset("Achievement_Character_Troll_Male"),
+					["races"] = HORDE_ONLY,
+				}),
+				faction(76, {	-- Orgrimmar
+					["icon"] = asset("Achievement_Character_Orc_Male"),
+					["races"] = HORDE_ONLY,
+				}),
+			}),
+			applyclassicphase(TBC_PHASE_ONE, prof(FISHING, {
+				i(34864),	-- Baby Crocolisk
+				i(34486, {	-- Old Crafty
+					-- #if BEFORE WRATH
+					["description"] = "Keep this in your bank until Achievements are added otherwise you'll need to fish it up again. Fair warning!",
+					-- #else
+					["description"] = "Keep this in your bank until Transmog is added otherwise you'll need to fish it up again. Fair warning!",
+					-- #endif
+				}),
+			})),
+			n(FLIGHT_PATHS, {
+				fp(23, {	-- Orgrimmar, Durotar
+					["cr"] = 3310,	-- Doras <Wind Rider Master>
+					["coord"] = { 45.2, 63.8, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+				}),
+			}),
 			n(QUESTS, {
 				q(7831, {	-- A Donation of Mageweave
 					["qg"] = 14726,	-- Rashona Straglash
@@ -446,6 +484,145 @@ _.Zones =
 					["lvl"] = 16,
 				}),
 			}),
-		}),
+			n(VENDORS, {
+				n(3364, {	-- Borya <Tailoring Supplies>
+					["coord"] = { 63.0, 51.2, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(5772),	-- Pattern: Red Woolen Bag
+						i(6270),	-- Pattern: Blue Linen Vest
+						i(6274),	-- Pattern: Blue Overalls
+						i(10317),	-- Pattern: Pink Mageweave Shirt
+						i(10314),	-- Pattern: Lavender Mageweave Shirt
+					},
+				}),
+				n(3367,   {	-- Felika <Trade Supplies>
+					["coords"] = {
+						{ 46.5, 36.6, ORGRIMMAR },
+						{ 50.8, 58.7, ORGRIMMAR },
+					},
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(20856, {	-- Design: Heavy Golden Necklace of Battle
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				n(3316, {	-- Handor <Cloth & Leather Armor Merchant>
+					["coord"] = { 62.8, 44.8, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(12256),	-- Cindercloth Leggings
+					},
+				}),
+				n(3410, {	-- Jin'sora <Bow Merchant>
+					["coord"] = { 77.8, 38.6, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(11303),	-- Fine Shortbow
+						i(11306),	-- Sturdy Recurve
+						i(11307),	-- Massive Longbow
+					},
+				}),
+				n(3346, {	-- Kithas <Enchanting Supplies>
+					["coord"] = { 53.6, 38.0, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						-- #if BEFORE CATA
+						i(6342),	-- Formula: Enchant Chest - Minor Mana
+						-- #endif
+						i(6346),	-- Formula: Enchant Chest - Lesser Mana
+						i(6349),	-- Formula: Enchant 2H Weapon - Lesser Intellect
+						i(22307),	-- Pattern: Enchanted Mageweave Pouch
+					},
+				}),
+				n(3348, {	-- Kor'geld <Alchemy Supplies>
+					["coord"] = { 56.2, 34.2, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(5642),	-- Recipe: Free Action Potion
+						i(13478),	-- Recipe: Elixir of Superior Defense
+					},
+				}),
+				n(3362, {	-- Ogunaro Wolfrunner <Kennel Master>
+					["coord"] = { 69.4, 12.4, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(1132),	-- Horn of the Timber Wolf
+						i(5665),	-- Horn of the Dire Wolf
+						i(5668),	-- Horn of the Brown Wolf
+						i(18796),	-- Horn of the Swift Brown Wolf
+						i(18797),	-- Horn of the Swift Timber Wolf
+						i(18798),	-- Horn of the Swift Gray Wolf
+					},
+				}),
+				n(3333, {	-- Shankys <Fishing Supplies>
+					["coord"] = { 70.0, 29.4, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(6368),	-- Recipe: Rainbow Fin Albacore
+						i(6369),	-- Recipe: Rockscale Cod
+						i(17062),	-- Recipe: Mithril Head Trout
+					},
+				}),
+				n(3413, {	-- Sovik <Engineering Supplies>
+					["coord"] = { 75.6, 25.2, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(18647, {	-- Schematic: Red Firework
+							["isLimited"] = true,
+						}),
+						i(16041, {	-- Schematic: Thorium Grenade
+							["isLimited"] = true,
+						}),
+						i(16042, {	-- Schematic: Thorium Widget
+							["isLimited"] = true,
+						}),
+						i(22729, {	-- Schematic: Steam Tonk Controller
+							["isLimited"] = true,
+							["u"] = TBC_PHASE_ONE,
+						}),
+					},
+				}),
+				n(3356, {	-- Sumi <Blacksmithing Supplier>
+					["coord"] = { 82.4, 23.8, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(12162),	-- Plans: Hardened Iron Shortsword
+					},
+				}),
+				n(3366, {	-- Tamar <Leatherworking Supplies>
+					["coord"] = { 63.0, 45.2, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(18731),	-- Pattern: Heavy Leather Ball
+					},
+				}),
+				n(3315, {	-- Tor'phan <Cloth & Leather Armor Merchant>
+					["coord"] = { 62.6, 50.6, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(12255),	-- Pale Leggings
+					},
+				}),
+				n(8404, {	-- Xan'tish <Snake Vendor>
+					["coord"] = { 37.6, 75.8, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(10360),	-- Black Kingsnake
+						i(10361),	-- Brown Snake
+						i(10392),	-- Crimson Snake
+					},
+				}),
+				n(3400, {	-- Xen'to <Cooking Supplier>
+					["coord"] = { 57.6, 53.2, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(21099),	-- Recipe: Smoked Sagefish
+						i(21219),	-- Recipe: Sagefish Delight
+					},
+				}),
+			}),
+		},
 	}),
-};
+}));

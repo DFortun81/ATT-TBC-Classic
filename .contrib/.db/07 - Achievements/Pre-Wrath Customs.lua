@@ -25,8 +25,7 @@ local INSANE_IN_THE_MEMBRANE_OnClick = [[function(row, button)
 	end
 end]];
 local INSANE_IN_THE_MEMBRANE_OnUpdate = [[function(t)
-	local collectible = _.CollectibleAchievements;
-	if collectible then
+	if t.collectible then
 		if not t.shendralar then
 			local f = _.SearchForField("factionID", 809);
 			if f and #f > 0 then
@@ -91,12 +90,11 @@ local INSANE_IN_THE_MEMBRANE_OnUpdate = [[function(t)
 				return true;
 			end
 		end
-		t.collected = t.ratchet.standing == 8 and t.gadgetzan.standing == 8
+		t.SetAchievementCollected(t.achievementID, t.ratchet.standing == 8 and t.gadgetzan.standing == 8
 			and t.everlook.standing == 8 and t.bb.standing == 8 and t.dmf.standing == 8
 			and t.ravenholdt.standing == 8 and t.shendralar.standing == 8
-			and t.bloodsail.standing >= 6;
+			and t.bloodsail.standing >= 6);
 	end
-	t.collectible = collectible;
 end]];
 local INSANE_IN_THE_MEMBRANE_OnTooltip = [[function(t)
 	if t.collectible then
@@ -133,8 +131,7 @@ local REPUTATIONS_OnClick = [[function(row, button)
 	end
 end]];
 local REPUTATIONS_OnUpdate = [[function(t)
-	local collectible = _.CollectibleAchievements;
-	if collectible then
+	if _.CollectibleAchievements then
 		local count = 0;
 		local factions = _.SearchForFieldContainer("factionID");
 		for achID,g in pairs(factions) do
@@ -145,6 +142,7 @@ local REPUTATIONS_OnUpdate = [[function(t)
 		if t.rank > 1 then
 			t.progress = math.min(count, t.rank);
 			t.total = t.rank;
+			t.collectible = false;
 			
 			if _.GroupFilter(t) then
 				local parent = t.parent;
@@ -169,7 +167,7 @@ local REPUTATIONS_OnUpdate = [[function(t)
 		end
 	else
 		t.collected = nil;
-		t.collectible = nil;
+		t.collectible = false;
 		t.progress = nil;
 		t.total = nil;
 		t.visible = false;
@@ -192,99 +190,94 @@ local REPUTATIONS_OnTooltip = [[function(t)
 	end
 end]];
 local RIDING_SKILL_OnUpdate = [[function(t)
-	local collectible = _.CollectibleAchievements;
-	t.collectible = collectible;
-	if collectible then
-		if _.IsSpellKnown(t.spellID, t.rank) then
+	if t.collectible then
+		local collected = _.IsSpellKnown(t.spellID, t.rank);
+		if collected then
 			_.CurrentCharacter.Spells[t.spellID] = 1;
 			ATTAccountWideData.Spells[t.spellID] = 1;
-			t.collected = 1;
 		else
-			t.collected = nil;
 			_.CurrentCharacter.Spells[t.spellID] = nil;
-			if _.AccountWideRecipes and ATTAccountWideData.Spells[t.spellID] then
-				t.collected = 2;
-			end
 		end
+		t.SetAchievementCollected(t.achievementID, collected);
 	end
 end]];
 _.Achievements =
 {
-	n(-200001, {	-- Insane in the Membrane
+	ach(2336, applyclassicphase(PHASE_THREE, {	-- Insane in the Membrane
 		["OnClick"] = INSANE_IN_THE_MEMBRANE_OnClick,
 		["OnTooltip"] = INSANE_IN_THE_MEMBRANE_OnTooltip,
 		["OnUpdate"] = INSANE_IN_THE_MEMBRANE_OnUpdate,
 		["description"] = "Insane in the Membrane is a Feat of Strength that rewards the title <The Insane>. This feat requires you to become honored with the Bloodsail Buccaneers and exalted with the Steamwheedle Cartel (Booty Bay, Everlook, Gadgetzan, Ratchet), Ravenholdt, Darkmoon Faire, and the Shen'dralar. It does not require that all of these reputation levels be reached at the same time, however, this may not be a thing until the achievement itself is introduced. Raising reputation with these factions is typically very difficult, time-consuming, and costly.",
-	}),
-	n(-200002, {	-- Giddy Up!
+	})),
+	removeclassicphase(ach(891, {	-- Giddy Up!
 		["spellID"] = 33388,	-- Apprentice Riding
 		["OnUpdate"] = RIDING_SKILL_OnUpdate,
 		["rank"] = 1,
-	}),
-	n(-200003, {	-- Fast and Furious
+	})),
+	removeclassicphase(ach(889, {	-- Fast and Furious
 		["spellID"] = 33391,	-- Journeyman Riding
 		["OnUpdate"] = RIDING_SKILL_OnUpdate,
 		["rank"] = 2,
-	}),
-	applyclassicphase(TBC_PHASE_ONE, n(-200004, {	-- Into the Wild Blue Yonder
+	})),
+	ach(890, applyclassicphase(TBC_PHASE_ONE, {	-- Into the Wild Blue Yonder
 		["spellID"] = 34090,	-- Expert Riding
 		["OnUpdate"] = RIDING_SKILL_OnUpdate,
 		["rank"] = 3,
 	})),
-	applyclassicphase(TBC_PHASE_ONE, n(-200005, {	-- Breaking the Sound Barrier
+	ach(5180, applyclassicphase(TBC_PHASE_ONE, {	-- Breaking the Sound Barrier
 		["spellID"] = 34091,	-- Artisan Riding
 		["OnUpdate"] = RIDING_SKILL_OnUpdate,
 		["rank"] = 4,
 	})),
-	n(-200006, {	-- Somebody Likes Me
+	removeclassicphase(ach(522, {	-- Somebody Likes Me
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 1,
-	}),
-	n(-200007, {	-- 5 Exalted Reputations
+	})),
+	removeclassicphase(ach(523, {	-- 5 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 5,
-	}),
-	n(-200008, {	-- 10 Exalted Reputations
+	})),
+	removeclassicphase(ach(524, {	-- 10 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 10,
-	}),
-	n(-200009, {	-- 15 Exalted Reputations
+	})),
+	removeclassicphase(ach(521, {	-- 15 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 15,
-	}),
-	n(-200010, {	-- 20 Exalted Reputations
+	})),
+	removeclassicphase(ach(520, {	-- 20 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 20,
-	}),
-	applyclassicphase(TBC_PHASE_ONE, n(-200011, {	-- 25 Exalted Reputations
+	})),
+	ach(519, applyclassicphase(TBC_PHASE_ONE, {	-- 25 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 25,
 	})),
-	applyclassicphase(TBC_PHASE_ONE, n(-200012, {	-- 30 Exalted Reputations
+	ach(518, applyclassicphase(TBC_PHASE_ONE, {	-- 30 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 30,
 	})),
-	applyclassicphase(TBC_PHASE_TWO, n(-200013, {	-- 35 Exalted Reputations
+	ach(1014, applyclassicphase(TBC_PHASE_TWO, {	-- 35 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
 		["rank"] = 35,
 	})),
-	applyclassicphase(TBC_PHASE_FIVE, n(-200014, {	-- 40 Exalted Reputations
+	ach(1015, applyclassicphase(TBC_PHASE_FIVE, {	-- 40 Exalted Reputations
 		["OnClick"] = REPUTATIONS_OnClick,
 		["OnTooltip"] = REPUTATIONS_OnTooltip,
 		["OnUpdate"] = REPUTATIONS_OnUpdate,
