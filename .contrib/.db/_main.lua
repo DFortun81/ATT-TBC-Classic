@@ -855,6 +855,10 @@ ach = function(id, altID, t)							-- Create an ACHIEVEMENT Object
 		return applyclassicphase(WRATH_PHASE_ONE, struct("achievementID", id, altID));
 	end
 end
+achcat = function(id, t)								-- Create an ACHIEVEMENT CATEGORY Object
+	return struct("achievementCategoryID", id, t);
+end
+achievementCategory = achcat;
 battlepet = function(id, t)								-- Create a BATTLE PET Object (Battle Pet == Species == Pet)
 	t = struct("speciesID", id, t);
 	if not t.itemID then t.u = WRATH_PHASE_ONE; end
