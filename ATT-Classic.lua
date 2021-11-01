@@ -8137,9 +8137,9 @@ local function RowOnEnter(self)
 		if reference.providers then
 			local counter = 0;
 			for i,provider in pairs(reference.providers) do
-				local providerType = provider[1]
-				local providerID = provider[2] or 0
-				local providerString = "UNKNOWN"
+				local providerType = provider[1];
+				local providerID = provider[2] or 0;
+				local providerString = UNKNOWN;
 				if providerType == "o" then
 					providerString = app.ObjectNames[providerID] or reference.text or ("Object: " .. RETRIEVING_DATA)
 					if app.Settings:GetTooltipSetting("objectID") then
