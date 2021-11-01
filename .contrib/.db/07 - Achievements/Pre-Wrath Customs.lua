@@ -250,14 +250,12 @@ _.Achievements =
 			})),
 		}),
 		achcat(171, {	-- Fishing
-			--[[
-			ach(1516, applyclassicphase(WRATH_PHASE_ONE, {	-- Accomplished Angler
+			ach(1516, {	-- Accomplished Angler
 				["requireSkill"] = FISHING,
 				["groups"] = {
 					title(83),	-- Salty %t
 				},
-			})),
-			]]--
+			}),
 			removeclassicphase(ach(126, {	-- Journeyman Fisherman
 				["requireSkill"] = FISHING,
 				["spellID"] = 7731,	-- Fishing (Journeyman)
@@ -284,51 +282,46 @@ _.Achievements =
 				["rank"] = 6,
 			})),
 			removeclassicphase(ach(1243, {	-- Fish Don't Leave Footprints
+				-- #if BEFORE WRATH
+				["description"] = "Learn the ability to find fish.",
+				-- #endif
 				["requireSkill"] = FISHING,
 				["spellID"] = 43308,	-- Find Fish
 			})),
-			ach(1556, applyclassicphase(WRATH_PHASE_ONE, {	-- 25 Fish
+			ach(1556, {	-- 25 Fish
 				["requireSkill"] = FISHING,
-			})),
-			ach(1557, applyclassicphase(WRATH_PHASE_ONE, {	-- 50 Fish
+			}),
+			ach(1557, {	-- 50 Fish
 				["requireSkill"] = FISHING,
-			})),
-			ach(1558, applyclassicphase(WRATH_PHASE_ONE, {	-- 100 Fish
+			}),
+			ach(1558, {	-- 100 Fish
 				["requireSkill"] = FISHING,
-			})),
-			ach(1559, applyclassicphase(WRATH_PHASE_ONE, {	-- 250 Fish
+			}),
+			ach(1559, {	-- 250 Fish
 				["requireSkill"] = FISHING,
-			})),
-			ach(1560, applyclassicphase(WRATH_PHASE_ONE, {	-- 500 Fish
+			}),
+			ach(1560, {	-- 500 Fish
 				["requireSkill"] = FISHING,
-			})),
-			ach(1561, applyclassicphase(WRATH_PHASE_ONE, {	-- 1000 Fish
+			}),
+			ach(1561, {	-- 1000 Fish
 				["requireSkill"] = FISHING,
-			})),
-			--[[
-			ach(2094, applyclassicphase(WRATH_PHASE_ONE, {	-- A Penny For Your Thoughts
-				["requireSkill"] = FISHING,
-				["maps"] = { DALARAN },
-			})),
-			]]--
-			--[[
-			ach(3217, applyclassicphase(WRATH_PHASE_ONE, {	-- Chasing Marcia
+			}),
+			ach(2094, {	-- A Penny For Your Thoughts
 				["requireSkill"] = FISHING,
 				["maps"] = { DALARAN },
-			})),
-			]]--
-			--[[
-			ach(1958, applyclassicphase(WRATH_PHASE_ONE, {	-- I Smell A Giant Rat
+			}),
+			ach(3217, {	-- Chasing Marcia
+				["requireSkill"] = FISHING,
+				["maps"] = { DALARAN },
+			}),
+			ach(1958, {	-- I Smell A Giant Rat
 				["provider"] = { "i", 43698 },	-- Giant Sewer Rat
 				["requireSkill"] = FISHING,
 				["maps"] = { DALARAN },
-			})),
-			]]--
-			--[[
-			ach(1517, applyclassicphase(WRATH_PHASE_ONE, {	-- Northrend Angler
+			}),
+			ach(1517, {	-- Northrend Angler
 				["requireSkill"] = FISHING,
-			})),
-			--]]
+			}),
 			removeclassicphase(ach(878, {	-- One That Didn't Get Away
 				["providers"] = {
 					{ "i", 6295 },	-- 15 Pound Mud Snapper
@@ -359,6 +352,31 @@ _.Achievements =
 				end]],
 				-- #endif
 			})),
+			ach(1225, {	-- Outland Angler
+				["requireSkill"] = FISHING,
+			}),
+			ach(2095, {	-- Silver in the City
+				["requireSkill"] = FISHING,
+				["maps"] = { DALARAN },
+			}),
+			ach(150, {	-- The Fishing Diplomat
+				["requireSkill"] = FISHING,
+				["maps"] = { ORGRIMMAR, STORMWIND },
+			}),
+			ach(153, {	-- The Old Gnome and the Sea
+				["requireSkill"] = FISHING,
+			}),
+			ach(1257, {	-- The Old Gnome and the Sea
+				["requireSkill"] = FISHING,
+			}),
+			ach(1957, {	-- There's Gold In That There Fountain
+				["requireSkill"] = FISHING,
+				["maps"] = { DALARAN },
+			}),
+			ach(3218, {	-- Turtles All the Way Down
+				["provider"] = { "i", 46109 },	-- Sea Turtle
+				["requireSkill"] = FISHING,
+			}),
 		}),
 	}),
 	achcat(201, {	-- Reputation

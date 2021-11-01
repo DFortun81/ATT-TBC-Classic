@@ -8781,9 +8781,9 @@ function app:GetDataCache()
 		end
 		
 		-- Achievements
-		local achievementsCategory = app.CreateFilter(105);
-		achievementsCategory.g = app.Categories.Achievements or {};
+		local achievementsCategory = app.CreateFilter(105, app.Categories.Achievements or {});
 		achievementsCategory.description = "This section isn't a thing until Wrath, but by popular demand and my own insanity, I've added this section so you can track your progress for at least one of the big ticket achievements if you have the stomach for it.";
+		app.Categories.Achievements = achievementsCategory.g;
 		achievementsCategory.expanded = false;
 		achievementsCategory.achievements = {};
 		table.insert(g, achievementsCategory);
@@ -12267,8 +12267,12 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 							if not cache then
 								cache = CloneData(group);
 								self.cache[group.spellID] = cache;
-								local requireSkill = cache.requireSkill;
-								local response = app:BuildSearchResponse(app.Categories.Instances, "requireSkill", requireSkill);
+								local requireSkill, response = cache.requireSkill;
+								if app.Categories.Achievements then
+									response = app:BuildSearchResponse(app.Categories.Achievements, "requireSkill", requireSkill);
+									if response then tinsert(cache.g, {text=ACHIEVEMENTS,icon = app.asset("Category_Achievements"),g=response}); end
+								end
+								response = app:BuildSearchResponse(app.Categories.Instances, "requireSkill", requireSkill);
 								if response then tinsert(cache.g, {text=GROUP_FINDER,icon = app.asset("Category_D&R"),g=response}); end
 								response = app:BuildSearchResponse(app.Categories.Zones, "requireSkill", requireSkill);
 								if response then tinsert(cache.g, {text=BUG_CATEGORY2,icon = app.asset("Category_Zones"),g=response});  end
