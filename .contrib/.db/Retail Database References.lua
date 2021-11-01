@@ -1,5 +1,20 @@
+-- World Events
 -- #IMPORT: 07 - Events\\The Ahn'Qiraj War Effort\\The Ahn'Qiraj War Effort.lua
 -- #IMPORT: 07 - Events\\The Opening of the Dark Portal\\The Opening of the Dark Portal.lua
 -- #IMPORT: 07 - Events\\The Scepter of the Shifting Sands\\The Scepter of the Shifting Sands.lua
 -- #IMPORT: 07 - Events\\The Scourge Invasion\\The Scourge Invasion.lua
 -- #IMPORT: 07 - Events\\The Silithyst Must Flow\\The Silithyst Must Flow.lua
+
+-- Promotions
+-- #IMPORT: 12 - Promotions\\BlizzCon.lua
+-- #IMPORT: 12 - Promotions\\Collector's Editions.lua
+-- #IMPORT: 12 - Promotions\\Diablo 20th Anniversary.lua
+-- #IMPORT: 12 - Promotions\\Hearthstone.lua
+-- #IMPORT: 12 - Promotions\\Heroes of the Storm.lua
+-- #IMPORT: 12 - Promotions\\iCoke.lua
+-- #IMPORT: 12 - Promotions\\Miscellaneous.lua
+-- #IMPORT: 12 - Promotions\\Recruit A Friend.lua
+-- #IMPORT: 12 - Promotions\\Scroll of Resurrection.lua
+-- #IMPORT: 12 - Promotions\\Spirit of Competition.lua
+-- #IMPORT: 12 - Promotions\\Trading Card Game.lua
+-- #IMPORT: 12 - Promotions\\Warcraft Movie.lua

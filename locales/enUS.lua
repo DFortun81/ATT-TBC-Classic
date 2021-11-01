@@ -307,6 +307,7 @@ app.L = {
 		[201] = { -1, "Reputation" },
 		[15117] = { -1, "Pet Battles" },
 		[15246] = { -1, "Collections" },
+		[15234] = { -1, "Legacy" },
 		[15273] = { -1, "Feats of Strength" },
 		[15301] = { -1, "Expansion Features" },
 	},
