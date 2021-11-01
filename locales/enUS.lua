@@ -244,7 +244,32 @@ app.L = {
 
 	-- These need to be localized manually.
 	["ACHIEVEMENT_DATA"] = {
+		[891] = { 92, "Giddy Up!", "Interface\\Icons\\ability_mount_ridinghorse" },
+		[889] = { 92, "Fast and Furious", "Interface\\Icons\\ability_mount_blackpanther" },
+		[890] = { 92, "Into the Wild Blue Yonder", "Interface\\Icons\\ability_mount_gryphon_01" },
+		[5180] = { 92, "Breaking the Sound Barrier", "Interface\\Icons\\ability_mount_rocketmount" },
+		
+		[688] = { 168, "Zul'Gurub", app.asset("achievement_boss_hakkar") },
+		
+		[121] = { 170, "Journeyman Cook", "Interface\\Icons\\inv_misc_food_15" },
+		[122] = { 170, "Expert Cook", "Interface\\Icons\\inv_misc_food_15" },
+		[123] = { 170, "Artisan Cook", "Interface\\Icons\\inv_misc_food_15" },
+		[124] = { 170, "Master Cook", "Interface\\Icons\\inv_misc_food_15" },
+		[125] = { 170, "Grand Master Cook", "Interface\\Icons\\inv_misc_food_15" },
+		
+		[126] = { 171, "Journeyman Fisherman", "Interface\\Icons\\trade_fishing" },
+		[127] = { 171, "Expert Fisherman", "Interface\\Icons\\trade_fishing" },
+		[128] = { 171, "Artisan Fisherman", "Interface\\Icons\\trade_fishing" },
+		[129] = { 171, "Master Fisherman", "Interface\\Icons\\trade_fishing" },
+		[130] = { 171, "Grand Master Fisherman", "Interface\\Icons\\trade_fishing" },
 		[306] = { 171, "Master Angler of Azeroth", "Interface\\Icons\\inv_misc_fish_06" },
+		[560] = { 171, "Deadliest Catch", "Interface\\Icons\\inv_misc_head_murloc_01" },
+		[726] = { 171, "Mr. Pinchy's Magical Crawdad Box", "Interface\\Icons\\inv_misc_fish_14" },
+		[878] = { 171, "One That Didn't Get Away", "Interface\\Icons\\inv_misc_fish_35" },
+		[1243] = { 171, "Fish Don't Leave Footprints" },
+		[1836] = { 171 },	-- Old Crafty, name and icon from providers
+		[1837] = { 171 },	-- Old Ironjaw, name and icon from providers
+		
 		[522] = { 201, "Somebody Likes Me", app.asset("achievement_reputation_01") },
 		[523] = { 201, "5 Exalted Reputations", app.asset("achievement_reputation_01") },
 		[524] = { 201, "10 Exalted Reputations", app.asset("achievement_reputation_02") },
@@ -254,12 +279,7 @@ app.L = {
 		[518] = { 201, "30 Exalted Reputations", app.asset("achievement_reputation_06") },
 		[1014] = { 201, "35 Exalted Reputations", app.asset("achievement_reputation_07") },
 		[1015] = { 201, "40 Exalted Reputations", app.asset("achievement_reputation_08") },
-		[891] = { 92, "Giddy Up!", "Interface\\Icons\\ability_mount_ridinghorse" },
-		[889] = { 92, "Fast and Furious", "Interface\\Icons\\ability_mount_blackpanther" },
-		[890] = { 92, "Into the Wild Blue Yonder", "Interface\\Icons\\ability_mount_gryphon_01" },
-		[1836] = { 171 },	-- Old Crafty, name and icon from providers
-		[1837] = { 171 },	-- Old Ironjaw, name and icon from providers
-		[5180] = { 92, "Breaking the Sound Barrier", "Interface\\Icons\\ability_mount_rocketmount" },
+		
 		[2336] = { 15273, "Insane in the Membrane", "Interface\\Icons\\Spell_shadow_brainwash" },
 	},
 	["ACHIEVEMENT_CRITERIA_DATA"] = {

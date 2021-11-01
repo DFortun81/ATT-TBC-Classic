@@ -189,39 +189,23 @@ local REPUTATIONS_OnTooltip = [[function(t)
 		end
 	end
 end]];
-local RIDING_SKILL_OnUpdate = [[function(t)
-	if t.collectible then
-		local collected = _.IsSpellKnown(t.spellID, t.rank);
-		if collected then
-			_.CurrentCharacter.Spells[t.spellID] = 1;
-			ATTAccountWideData.Spells[t.spellID] = 1;
-		else
-			_.CurrentCharacter.Spells[t.spellID] = nil;
-		end
-		t.SetAchievementCollected(t.achievementID, collected);
-	end
-end]];
 _.Achievements =
 {
 	achcat(92, {	-- Character
 		removeclassicphase(ach(891, {	-- Giddy Up!
 			["spellID"] = 33388,	-- Apprentice Riding
-			["OnUpdate"] = RIDING_SKILL_OnUpdate,
 			["rank"] = 1,
 		})),
 		removeclassicphase(ach(889, {	-- Fast and Furious
 			["spellID"] = 33391,	-- Journeyman Riding
-			["OnUpdate"] = RIDING_SKILL_OnUpdate,
 			["rank"] = 2,
 		})),
 		ach(890, applyclassicphase(TBC_PHASE_ONE, {	-- Into the Wild Blue Yonder
 			["spellID"] = 34090,	-- Expert Riding
-			["OnUpdate"] = RIDING_SKILL_OnUpdate,
 			["rank"] = 3,
 		})),
 		ach(5180, applyclassicphase(TBC_PHASE_ONE, {	-- Breaking the Sound Barrier
 			["spellID"] = 34091,	-- Artisan Riding
-			["OnUpdate"] = RIDING_SKILL_OnUpdate,
 			["rank"] = 4,
 		})),
 	}),
@@ -238,7 +222,144 @@ _.Achievements =
 		
 	}),
 	achcat(169, {	-- Professions
-		
+		achcat(170, {	-- Cooking
+			removeclassicphase(ach(121, {	-- Journeyman Cook
+				["requireSkill"] = COOKING,
+				["spellID"] = 3102,	-- Cooking (Journeyman)
+				["rank"] = 2,
+			})),
+			removeclassicphase(ach(122, {	-- Expert Cook
+				["requireSkill"] = COOKING,
+				["spellID"] = 3413,	-- Cooking (Expert)
+				["rank"] = 3,
+			})),
+			removeclassicphase(ach(123, {	-- Artisan Cook
+				["requireSkill"] = COOKING,
+				["spellID"] = 18260,	-- Cooking (Artisan)
+				["rank"] = 4,
+			})),
+			ach(124, applyclassicphase(TBC_PHASE_ONE, {	-- Master Cook
+				["requireSkill"] = COOKING,
+				["spellID"] = 33359,	-- Cooking (Master)
+				["rank"] = 5,
+			})),
+			ach(125, applyclassicphase(WRATH_PHASE_ONE, {	-- Grand Master Cook
+				["requireSkill"] = COOKING,
+				["spellID"] = 51296,	-- Cooking (Grand Master)
+				["rank"] = 6,
+			})),
+		}),
+		achcat(171, {	-- Fishing
+			--[[
+			ach(1516, applyclassicphase(WRATH_PHASE_ONE, {	-- Accomplished Angler
+				["requireSkill"] = FISHING,
+				["groups"] = {
+					title(83),	-- Salty %t
+				},
+			})),
+			]]--
+			removeclassicphase(ach(126, {	-- Journeyman Fisherman
+				["requireSkill"] = FISHING,
+				["spellID"] = 7731,	-- Fishing (Journeyman)
+				["rank"] = 2,
+			})),
+			removeclassicphase(ach(127, {	-- Expert Fisherman
+				["requireSkill"] = FISHING,
+				["spellID"] = 7732,	-- Fishing (Expert)
+				["rank"] = 3,
+			})),
+			removeclassicphase(ach(128, {	-- Artisan Fisherman
+				["requireSkill"] = FISHING,
+				["spellID"] = 18248,	-- Fishing (Artisan)
+				["rank"] = 4,
+			})),
+			ach(129, applyclassicphase(TBC_PHASE_ONE, {	-- Master Fisherman
+				["requireSkill"] = FISHING,
+				["spellID"] = 33095,	-- Fishing (Master)
+				["rank"] = 5,
+			})),
+			ach(130, applyclassicphase(WRATH_PHASE_ONE, {	-- Grand Master Fisherman
+				["requireSkill"] = FISHING,
+				["spellID"] = 51294,	-- Fishing (Grand Master)
+				["rank"] = 6,
+			})),
+			removeclassicphase(ach(1243, {	-- Fish Don't Leave Footprints
+				["requireSkill"] = FISHING,
+				["spellID"] = 43308,	-- Find Fish
+			})),
+			ach(1556, applyclassicphase(WRATH_PHASE_ONE, {	-- 25 Fish
+				["requireSkill"] = FISHING,
+			})),
+			ach(1557, applyclassicphase(WRATH_PHASE_ONE, {	-- 50 Fish
+				["requireSkill"] = FISHING,
+			})),
+			ach(1558, applyclassicphase(WRATH_PHASE_ONE, {	-- 100 Fish
+				["requireSkill"] = FISHING,
+			})),
+			ach(1559, applyclassicphase(WRATH_PHASE_ONE, {	-- 250 Fish
+				["requireSkill"] = FISHING,
+			})),
+			ach(1560, applyclassicphase(WRATH_PHASE_ONE, {	-- 500 Fish
+				["requireSkill"] = FISHING,
+			})),
+			ach(1561, applyclassicphase(WRATH_PHASE_ONE, {	-- 1000 Fish
+				["requireSkill"] = FISHING,
+			})),
+			--[[
+			ach(2094, applyclassicphase(WRATH_PHASE_ONE, {	-- A Penny For Your Thoughts
+				["requireSkill"] = FISHING,
+				["maps"] = { DALARAN },
+			})),
+			]]--
+			--[[
+			ach(3217, applyclassicphase(WRATH_PHASE_ONE, {	-- Chasing Marcia
+				["requireSkill"] = FISHING,
+				["maps"] = { DALARAN },
+			})),
+			]]--
+			--[[
+			ach(1958, applyclassicphase(WRATH_PHASE_ONE, {	-- I Smell A Giant Rat
+				["provider"] = { "i", 43698 },	-- Giant Sewer Rat
+				["requireSkill"] = FISHING,
+				["maps"] = { DALARAN },
+			})),
+			]]--
+			--[[
+			ach(1517, applyclassicphase(WRATH_PHASE_ONE, {	-- Northrend Angler
+				["requireSkill"] = FISHING,
+			})),
+			--]]
+			removeclassicphase(ach(878, {	-- One That Didn't Get Away
+				["providers"] = {
+					{ "i", 6295 },	-- 15 Pound Mud Snapper
+					{ "i", 13913 },	-- 22 Pound Lobster
+					{ "i", 13905 },	-- 29 Pound Salmon
+					{ "i", 6364 },	-- 32 Pound Catfish
+					{ "i", 13887 },	-- 52 Pound Redgill
+					{ "i", 13880 },	-- 68 Pound Grouper
+					{ "i", 13917 },	-- 103 Pound Mightfish
+					-- #if AFTER WRATH
+					{ "i", 44703 },	-- Dark Herring
+					-- #endif
+					{ "i", 19808 },	-- Rockhide Strongfish
+					{ "i", 6360 },	-- Steelscale Crushfish
+				},
+				["requireSkill"] = FISHING,
+				-- #if BEFORE WRATH
+				["description"] = "Catch one of the rare fish in the list below.\n\nKeep one in your inventory somewhere to keep credit for this.",
+				["OnUpdate"] = [[function(t)
+					local collected = false;
+					for i,provider in ipairs(t.providers) do
+						if provider[1] == "i" and GetItemCount(provider[2], true) > 0 then
+							collected = true;
+							break;
+						end
+					end
+					t.SetAchievementCollected(t.achievementID, collected);
+				end]],
+				-- #endif
+			})),
+		}),
 	}),
 	achcat(201, {	-- Reputation
 		removeclassicphase(ach(522, {	-- Somebody Likes Me

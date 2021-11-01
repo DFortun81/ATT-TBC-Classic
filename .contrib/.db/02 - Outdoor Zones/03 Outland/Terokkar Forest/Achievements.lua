@@ -1,12 +1,23 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
--- #if AFTER WRATH
 _.Zones =
 {
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(TEROKKAR_FOREST, {
 			n(ACHIEVEMENTS, {
+				ach(726, applyclassicphase(TBC_PHASE_ONE, {	-- Mr. Pinchy's Magical Crawdad Box
+					["provider"] = { "i", 27445 },	-- Magical Crawdad Box
+					["requireSkill"] = FISHING,
+					-- #if BEFORE WRATH
+					["description"] = "Fish your way to Mr. Pinchy's Magical Crawdad Box.",
+					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, GetItemCount(27445, true) > 0); end]],
+					-- #endif
+				})),
+				ach(905, applyclassicphase(WRATH_PHASE_ONE, {	-- Old Man Barlowned
+					["requireSkill"] = FISHING,
+				})),
+				-- #if AFTER WRATH
 				ach(1191, {	-- Terror of Terokkar (A)
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
@@ -94,8 +105,8 @@ _.Zones =
 						}),
 					},
 				}),
+				-- #endif
 			}),
 		}),
 	})),
 };
--- #endif

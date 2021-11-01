@@ -3241,10 +3241,28 @@ local fields = {
 		return GetAchievementCategory(t.achievementID) or -1;
 	end,
 	["SetAchievementCollected"] = function() return SetAchievementCollected; end,
+	["OnUpdateForSpellID"] = function(t)
+		if t.collectible then
+			local spellID = t.spellID;
+			local collected = app.IsSpellKnown(spellID, t.rank);
+			if collected then
+				app.CurrentCharacter.Spells[spellID] = 1;
+				ATTAccountWideData.Spells[spellID] = 1;
+			else
+				app.CurrentCharacter.Spells[spellID] = nil;
+			end
+			t.SetAchievementCollected(t.achievementID, collected);
+		end
+	end
 };
 app.BaseAchievement = app.BaseObjectFields(fields);
+
+local fieldsWithSpellID = RawCloneData(fields);
+fieldsWithSpellID.OnUpdate = fields.OnUpdateForSpellID;
+app.BaseAchievementWithSpellID = app.BaseObjectFields(fieldsWithSpellID);
 app.CreateAchievement = function(id, t)
-	return setmetatable(constructor(id, t, "achievementID"), app.BaseAchievement);
+	t = constructor(id, t, "achievementID");
+	return setmetatable(t, t.spellID and app.BaseAchievementWithSpellID or app.BaseAchievement);
 end
 
 local categoryFields = {
