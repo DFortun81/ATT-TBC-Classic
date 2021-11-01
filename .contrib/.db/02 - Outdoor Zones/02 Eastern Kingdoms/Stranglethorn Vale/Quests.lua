@@ -72,6 +72,15 @@ _.Zones =
 					["coord"] = { 30.6, 90.6, STRANGLETHORN_VALE },
 					["lvl"] = 55,
 					["groups"] = {
+						ach(871, applyclassicphase(PHASE_ONE, {	-- Avast Ye, Admiral!
+							-- #if BEFORE WRATH
+							["description"] = "Obtain the Bloodsail Admiral's Hat... and try to get some fresh air every now and then.",
+							["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(4621)); end]],
+							-- #endif
+							["groups"] = {
+								applyclassicphase(WRATH_PHASE_ONE, title(144)),	-- Bloodsail Admiral <Name>
+							},
+						})),
 						i(12185),	-- Bloodsail Admiral's Hat
 					},
 				}),
@@ -79,21 +88,8 @@ _.Zones =
 					["qg"] = 2545,	-- "Pretty Boy" Duncan
 					["minReputation"] = { 87, FRIENDLY },	-- Bloodsail Buccaneers, Friendly.
 					["coord"] = { 27.4, 69.4, STRANGLETHORN_VALE },
-					["lvl"] = 55,
 					["isBreadcrumb"] = true,
-				}),
-				q(9272, {	-- Dressing the Part
-					["qg"] = 2546,	-- Fleet Master Firallon
-					["minReputation"] = { 87, NEUTRAL },	-- Bloodsail Buccaneers, Neutral.
-					["coord"] = { 30.6, 90.6, STRANGLETHORN_VALE },
-					["lvl"] = 49,
-					["groups"] = {
-						i(22746),	-- Buccaneer's Uniform
-						i(22742),	-- Bloodsail Shirt
-						i(22743),	-- Bloodsail Sash
-						i(22745),	-- Bloodsail Pants
-						i(22744),	-- Bloodsail Boots
-					},
+					["lvl"] = 55,
 				}),
 				q(7810, {	-- Arena Master
 					["provider"] = { "i", 18706 },	-- Arena Master (trinket)
@@ -347,6 +343,19 @@ _.Zones =
 						{ "i", 5803, 10 },	-- Speck of Dream Dust
 					},
 					["lvl"] = 30,
+				}),
+				q(9272, {	-- Dressing the Part
+					["qg"] = 2546,	-- Fleet Master Firallon
+					["minReputation"] = { 87, NEUTRAL },	-- Bloodsail Buccaneers, Neutral.
+					["coord"] = { 30.6, 90.6, STRANGLETHORN_VALE },
+					["lvl"] = 49,
+					["groups"] = {
+						i(22746),	-- Buccaneer's Uniform
+						i(22742),	-- Bloodsail Shirt
+						i(22743),	-- Bloodsail Sash
+						i(22745),	-- Bloodsail Pants
+						i(22744),	-- Bloodsail Boots
+					},
 				}),
 				q(3625, {	-- Enchanted Azsharite Fel Weaponry
 					["qg"] = 7802,	-- Galvan the Ancient

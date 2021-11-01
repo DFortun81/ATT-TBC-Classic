@@ -829,11 +829,11 @@ removeclassicphase = function(t)
 	if t then
 		if t.g or t.groups then
 			t.u = nil;
-			bubbleDown(data, t.groups);
-			bubbleDown(data, t.g);
+			removeclassicphase(t.groups);
+			removeclassicphase(t.g);
 		elseif isarray(t) then
 			for i,group in ipairs(t) do
-				bubbleDown(data, group);
+				removeclassicphase(group);
 			end
 		else
 			t.u = nil;
