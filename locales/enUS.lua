@@ -280,7 +280,16 @@ app.L = {
 		[1014] = { 201, "35 Exalted Reputations", app.asset("achievement_reputation_07") },
 		[1015] = { 201, "40 Exalted Reputations", app.asset("achievement_reputation_08") },
 		
+		[292] = { 158, "Sinister Calling" },	-- Sinister Squashling, icon from providers
+		[303] = { 162, "Have Keg, Will Travel", "Interface\\Icons\\inv_cask_01" },
+		[1936] = { 162, "Does Your Wolpertinger Linger?" },	-- Wolpertinger Tankard, icon from providers
+		
+		[980] = { 15273 },	-- The Horseman's Reins, name and icon from providers
+		[1292] = { 15273 },	-- Yellow Brewfest Stein, name and icon from providers
+		[1293] = { 15273 },	-- Blue Brewfest Stein, name and icon from providers
 		[2336] = { 15273, "Insane in the Membrane", "Interface\\Icons\\Spell_shadow_brainwash" },
+		[3496] = { 15273, "A Brew-FAST Mount", "Interface\\Icons\\inv_cask_01" },
+		[4782] = { 15273 },	-- Green Brewfest Stein, name and icon from providers
 	},
 	["ACHIEVEMENT_CRITERIA_DATA"] = {
 		[92] = { -1, "Character" },
@@ -288,6 +297,8 @@ app.L = {
 		[96] = { -1, "Quests" },
 		[97] = { -1, "Exploration" },
 		[155] = { -1, "World Events" },
+		[158] = { 155, "Hallow's End" },
+		[162] = { 155, "Brewfest" },
 		[168] = { -1, "Dungeons & Raids" },
 		[169] = { -1, "Professions" },
 		[170] = { 169, "Cooking" },
