@@ -2308,6 +2308,7 @@ CacheField = function(group, field, value)
 	end
 end
 -- These are the fields we store.
+fieldCache["achievementID"] = {};
 fieldCache["creatureID"] = {};
 fieldCache["currencyID"] = {};
 fieldCache["factionID"] = {};
@@ -2348,6 +2349,15 @@ local cacheObjectID = function(group, value)
 end;
 fieldConverters = {
 	-- Simple Converters
+	["achievementID"] = function(group, value)
+		CacheField(group, "achievementID", value);
+	end,
+	["achID"] = function(group, value)
+		CacheField(group, "achievementID", value);
+	end,
+	["altAchID"] = function(group, value)
+		CacheField(group, "achievementID", value);
+	end,
 	["creatureID"] = cacheCreatureID,
 	["currencyID"] = function(group, value)
 		CacheField(group, "currencyID", value);
@@ -3177,33 +3187,36 @@ local SetAchievementCollected = function(achievementID, collected)
 		end
 	end
 end
+local GetAchievementCategory = function(achievementID)
+	local data = L.ACHIEVEMENT_DATA[achievementID];
+	if data then return data[1]; end
+end
 local fields = {
 	["key"] = function(t)
 		return "achievementID";
 	end,
 	["text"] = function(t)
-		return t.name;
+		return t.name or RETRIEVING_DATA;
 	end,
 	["name"] = function(t)
-		local name = L.ACHIEVEMENT_NAMES[t.achievementID];
-		if name then return name; end
+		local data = L.ACHIEVEMENT_DATA[t.achievementID];
+		if data and data[2] then return data[2]; end
 		if t.providers then
 			for k,v in ipairs(t.providers) do
 				if v[2] > 0 then
 					if v[1] == "o" then
-						return app.ObjectNames[v[2]] or RETRIEVING_DATA;
+						return app.ObjectNames[v[2]];
 					elseif v[1] == "i" then
-						return select(1, GetItemInfo(v[2])) or RETRIEVING_DATA;
+						return select(1, GetItemInfo(v[2]));
 					end
 				end
 			end
 		end
 		if t.spellID then return select(1, GetSpellInfo(t.spellID)); end
-		return RETRIEVING_DATA;
 	end,
 	["icon"] = function(t)
-		local icon = L.ACHIEVEMENT_ICONS[t.achievementID];
-		if icon then return icon; end
+		local data = L.ACHIEVEMENT_DATA[t.achievementID];
+		if data and data[3] then return data[3]; end
 		if t.providers then
 			for k,v in ipairs(t.providers) do
 				if v[2] > 0 then
@@ -3224,11 +3237,37 @@ local fields = {
 	["collected"] = function(t)
 		return IsAchievementCollected(t.achievementID);
 	end,
+	["parentCategoryID"] = function(t)
+		return GetAchievementCategory(t.achievementID) or -1;
+	end,
 	["SetAchievementCollected"] = function() return SetAchievementCollected; end,
 };
 app.BaseAchievement = app.BaseObjectFields(fields);
 app.CreateAchievement = function(id, t)
 	return setmetatable(constructor(id, t, "achievementID"), app.BaseAchievement);
+end
+
+local categoryFields = {
+	["key"] = function(t)
+		return "achievementCategoryID";
+	end,
+	["text"] = function(t)
+		local data = L.ACHIEVEMENT_CRITERIA_DATA[t.achievementCategoryID];
+		if data then return data[2]; end
+		return RETRIEVING_DATA;
+	end,
+	["icon"] = function(t)
+		return app.asset("Category_Achievements");
+	end,
+	["parentCategoryID"] = function(t)
+		local data = L.ACHIEVEMENT_CRITERIA_DATA[t.achievementCategoryID];
+		if data then return data[1]; end
+		return -1;
+	end,
+};
+app.BaseAchievementCategory = app.BaseObjectFields(categoryFields);
+app.CreateAchievementCategory = function(id, t)
+	return setmetatable(constructor(id, t, "achievementCategoryID"), app.BaseAchievementCategory);
 end
 end)();
 
@@ -8715,13 +8754,12 @@ function app:GetDataCache()
 		end
 		
 		-- Achievements
-		if app.Categories.Achievements then
-			db = app.CreateFilter(105);
-			db.g = app.Categories.Achievements;
-			db.description = "This section isn't a thing until Wrath, but by popular demand and my own insanity, I've added this section so you can track your progress for at least one of the big ticket achievements if you have the stomach for it.";
-			db.expanded = false;
-			table.insert(g, db);
-		end
+		local achievementsCategory = app.CreateFilter(105);
+		achievementsCategory.g = app.Categories.Achievements or {};
+		achievementsCategory.description = "This section isn't a thing until Wrath, but by popular demand and my own insanity, I've added this section so you can track your progress for at least one of the big ticket achievements if you have the stomach for it.";
+		achievementsCategory.expanded = false;
+		achievementsCategory.achievements = {};
+		table.insert(g, achievementsCategory);
 		
 		-- Battle Pets
 		local battlePetsCategory = {};
@@ -9076,6 +9114,87 @@ function app:GetDataCache()
 			tinsert(inst.parent.g, inst);
 			return inst;
 		end
+		
+		-- Update Achievement data.
+		local function cacheAchievementData(self, categories, g)
+			if g then
+				for i,o in ipairs(g) do
+					if o.achievementCategoryID then
+						categories[o.achievementCategoryID] = o;
+						if not o.g then
+							o.g = {};
+						else
+							cacheAchievementData(self, categories, o.g);
+						end
+					elseif o.achievementID then
+						self.achievements[o.achievementID] = o;
+					end
+				end
+			end
+		end
+		local function getAchievementCategory(categories, achievementCategoryID)
+			local c = categories[achievementCategoryID];
+			if not c then
+				c = app.CreateAchievementCategory(achievementCategoryID);
+				categories[achievementCategoryID] = c;
+				c.g = {};
+				
+				local p = getAchievementCategory(categories, c.parentCategoryID);
+				if not p.g then p.g = {}; end
+				table.insert(p.g, c);
+				c.parent = p;
+			end
+			return c;
+		end
+		achievementsCategory.OnUpdate = function(self)
+			local categories = {};
+			categories[-1] = self;
+			cacheAchievementData(self, categories, self.g);
+			for i,_ in pairs(fieldCache["achievementID"]) do
+				if not self.achievements[i] then
+					local achievement = app.CreateAchievement(tonumber(i));
+					for j,o in ipairs(_) do
+						for key,value in pairs(o) do rawset(achievement, key, value); end
+						if o.parent and not o.sourceQuests then
+							local questID = GetRelativeValue(o, "questID");
+							if questID then
+								if not achievement.sourceQuests then
+									achievement.sourceQuests = {};
+								end
+								if not contains(achievement.sourceQuests, questID) then
+									tinsert(achievement.sourceQuests, questID);
+								end
+							else
+								local sourceQuests = GetRelativeValue(o, "sourceQuests");
+								if sourceQuests then
+									if not achievement.sourceQuests then
+										achievement.sourceQuests = {};
+										for k,questID in ipairs(sourceQuests) do
+											tinsert(achievement.sourceQuests, questID);
+										end
+									else
+										for k,questID in ipairs(sourceQuests) do
+											if not contains(achievement.sourceQuests, questID) then
+												tinsert(achievement.sourceQuests, questID);
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+					self.achievements[i] = achievement;
+					achievement.progress = nil;
+					achievement.total = nil;
+					achievement.g = nil;
+					achievement.parent = getAchievementCategory(categories, achievement.parentCategoryID);
+					if not achievement.u or achievement.u ~= 1 then
+						tinsert(achievement.parent.g, achievement);
+					end
+				end
+			end
+		end
+		achievementsCategory:OnUpdate();
 		
 		-- Update Battle Pet data.
 		battlePetsCategory.OnUpdate = function(self)

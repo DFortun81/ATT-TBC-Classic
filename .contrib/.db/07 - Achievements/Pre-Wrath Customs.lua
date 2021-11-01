@@ -203,84 +203,117 @@ local RIDING_SKILL_OnUpdate = [[function(t)
 end]];
 _.Achievements =
 {
-	ach(2336, applyclassicphase(PHASE_THREE, {	-- Insane in the Membrane
-		["OnClick"] = INSANE_IN_THE_MEMBRANE_OnClick,
-		["OnTooltip"] = INSANE_IN_THE_MEMBRANE_OnTooltip,
-		["OnUpdate"] = INSANE_IN_THE_MEMBRANE_OnUpdate,
-		["description"] = "Insane in the Membrane is a Feat of Strength that rewards the title <The Insane>. This feat requires you to become honored with the Bloodsail Buccaneers and exalted with the Steamwheedle Cartel (Booty Bay, Everlook, Gadgetzan, Ratchet), Ravenholdt, Darkmoon Faire, and the Shen'dralar. It does not require that all of these reputation levels be reached at the same time, however, this may not be a thing until the achievement itself is introduced. Raising reputation with these factions is typically very difficult, time-consuming, and costly.",
-	})),
-	removeclassicphase(ach(891, {	-- Giddy Up!
-		["spellID"] = 33388,	-- Apprentice Riding
-		["OnUpdate"] = RIDING_SKILL_OnUpdate,
-		["rank"] = 1,
-	})),
-	removeclassicphase(ach(889, {	-- Fast and Furious
-		["spellID"] = 33391,	-- Journeyman Riding
-		["OnUpdate"] = RIDING_SKILL_OnUpdate,
-		["rank"] = 2,
-	})),
-	ach(890, applyclassicphase(TBC_PHASE_ONE, {	-- Into the Wild Blue Yonder
-		["spellID"] = 34090,	-- Expert Riding
-		["OnUpdate"] = RIDING_SKILL_OnUpdate,
-		["rank"] = 3,
-	})),
-	ach(5180, applyclassicphase(TBC_PHASE_ONE, {	-- Breaking the Sound Barrier
-		["spellID"] = 34091,	-- Artisan Riding
-		["OnUpdate"] = RIDING_SKILL_OnUpdate,
-		["rank"] = 4,
-	})),
-	removeclassicphase(ach(522, {	-- Somebody Likes Me
-		["OnClick"] = REPUTATIONS_OnClick,
-		["OnTooltip"] = REPUTATIONS_OnTooltip,
-		["OnUpdate"] = REPUTATIONS_OnUpdate,
-		["rank"] = 1,
-	})),
-	removeclassicphase(ach(523, {	-- 5 Exalted Reputations
-		["OnClick"] = REPUTATIONS_OnClick,
-		["OnTooltip"] = REPUTATIONS_OnTooltip,
-		["OnUpdate"] = REPUTATIONS_OnUpdate,
-		["rank"] = 5,
-	})),
-	removeclassicphase(ach(524, {	-- 10 Exalted Reputations
-		["OnClick"] = REPUTATIONS_OnClick,
-		["OnTooltip"] = REPUTATIONS_OnTooltip,
-		["OnUpdate"] = REPUTATIONS_OnUpdate,
-		["rank"] = 10,
-	})),
-	removeclassicphase(ach(521, {	-- 15 Exalted Reputations
-		["OnClick"] = REPUTATIONS_OnClick,
-		["OnTooltip"] = REPUTATIONS_OnTooltip,
-		["OnUpdate"] = REPUTATIONS_OnUpdate,
-		["rank"] = 15,
-	})),
-	removeclassicphase(ach(520, {	-- 20 Exalted Reputations
-		["OnClick"] = REPUTATIONS_OnClick,
-		["OnTooltip"] = REPUTATIONS_OnTooltip,
-		["OnUpdate"] = REPUTATIONS_OnUpdate,
-		["rank"] = 20,
-	})),
-	ach(519, applyclassicphase(TBC_PHASE_ONE, {	-- 25 Exalted Reputations
-		["OnClick"] = REPUTATIONS_OnClick,
-		["OnTooltip"] = REPUTATIONS_OnTooltip,
-		["OnUpdate"] = REPUTATIONS_OnUpdate,
-		["rank"] = 25,
-	})),
-	ach(518, applyclassicphase(TBC_PHASE_ONE, {	-- 30 Exalted Reputations
-		["OnClick"] = REPUTATIONS_OnClick,
-		["OnTooltip"] = REPUTATIONS_OnTooltip,
-		["OnUpdate"] = REPUTATIONS_OnUpdate,
-		["rank"] = 30,
-	})),
-	ach(1014, applyclassicphase(TBC_PHASE_TWO, {	-- 35 Exalted Reputations
-		["OnClick"] = REPUTATIONS_OnClick,
-		["OnTooltip"] = REPUTATIONS_OnTooltip,
-		["OnUpdate"] = REPUTATIONS_OnUpdate,
-		["rank"] = 35,
-	})),
-	ach(1015, applyclassicphase(TBC_PHASE_FIVE, {	-- 40 Exalted Reputations
-		["OnClick"] = REPUTATIONS_OnClick,
-		["OnTooltip"] = REPUTATIONS_OnTooltip,
-		["OnUpdate"] = REPUTATIONS_OnUpdate,
-		["rank"] = 40,
-	})),
+	achcat(92, {	-- Character
+		removeclassicphase(ach(891, {	-- Giddy Up!
+			["spellID"] = 33388,	-- Apprentice Riding
+			["OnUpdate"] = RIDING_SKILL_OnUpdate,
+			["rank"] = 1,
+		})),
+		removeclassicphase(ach(889, {	-- Fast and Furious
+			["spellID"] = 33391,	-- Journeyman Riding
+			["OnUpdate"] = RIDING_SKILL_OnUpdate,
+			["rank"] = 2,
+		})),
+		ach(890, applyclassicphase(TBC_PHASE_ONE, {	-- Into the Wild Blue Yonder
+			["spellID"] = 34090,	-- Expert Riding
+			["OnUpdate"] = RIDING_SKILL_OnUpdate,
+			["rank"] = 3,
+		})),
+		ach(5180, applyclassicphase(TBC_PHASE_ONE, {	-- Breaking the Sound Barrier
+			["spellID"] = 34091,	-- Artisan Riding
+			["OnUpdate"] = RIDING_SKILL_OnUpdate,
+			["rank"] = 4,
+		})),
+	}),
+	achcat(96, {	-- Quests
+		
+	}),
+	achcat(97, {	-- Exploration
+		
+	}),
+	achcat(95, {	-- Player vs. Player
+		
+	}),
+	achcat(168, {	-- Dungeons & Raids
+		
+	}),
+	achcat(169, {	-- Professions
+		
+	}),
+	achcat(201, {	-- Reputation
+		removeclassicphase(ach(522, {	-- Somebody Likes Me
+			["OnClick"] = REPUTATIONS_OnClick,
+			["OnTooltip"] = REPUTATIONS_OnTooltip,
+			["OnUpdate"] = REPUTATIONS_OnUpdate,
+			["rank"] = 1,
+		})),
+		removeclassicphase(ach(523, {	-- 5 Exalted Reputations
+			["OnClick"] = REPUTATIONS_OnClick,
+			["OnTooltip"] = REPUTATIONS_OnTooltip,
+			["OnUpdate"] = REPUTATIONS_OnUpdate,
+			["rank"] = 5,
+		})),
+		removeclassicphase(ach(524, {	-- 10 Exalted Reputations
+			["OnClick"] = REPUTATIONS_OnClick,
+			["OnTooltip"] = REPUTATIONS_OnTooltip,
+			["OnUpdate"] = REPUTATIONS_OnUpdate,
+			["rank"] = 10,
+		})),
+		removeclassicphase(ach(521, {	-- 15 Exalted Reputations
+			["OnClick"] = REPUTATIONS_OnClick,
+			["OnTooltip"] = REPUTATIONS_OnTooltip,
+			["OnUpdate"] = REPUTATIONS_OnUpdate,
+			["rank"] = 15,
+		})),
+		removeclassicphase(ach(520, {	-- 20 Exalted Reputations
+			["OnClick"] = REPUTATIONS_OnClick,
+			["OnTooltip"] = REPUTATIONS_OnTooltip,
+			["OnUpdate"] = REPUTATIONS_OnUpdate,
+			["rank"] = 20,
+		})),
+		ach(519, applyclassicphase(TBC_PHASE_ONE, {	-- 25 Exalted Reputations
+			["OnClick"] = REPUTATIONS_OnClick,
+			["OnTooltip"] = REPUTATIONS_OnTooltip,
+			["OnUpdate"] = REPUTATIONS_OnUpdate,
+			["rank"] = 25,
+		})),
+		ach(518, applyclassicphase(TBC_PHASE_ONE, {	-- 30 Exalted Reputations
+			["OnClick"] = REPUTATIONS_OnClick,
+			["OnTooltip"] = REPUTATIONS_OnTooltip,
+			["OnUpdate"] = REPUTATIONS_OnUpdate,
+			["rank"] = 30,
+		})),
+		ach(1014, applyclassicphase(TBC_PHASE_TWO, {	-- 35 Exalted Reputations
+			["OnClick"] = REPUTATIONS_OnClick,
+			["OnTooltip"] = REPUTATIONS_OnTooltip,
+			["OnUpdate"] = REPUTATIONS_OnUpdate,
+			["rank"] = 35,
+		})),
+		ach(1015, applyclassicphase(TBC_PHASE_FIVE, {	-- 40 Exalted Reputations
+			["OnClick"] = REPUTATIONS_OnClick,
+			["OnTooltip"] = REPUTATIONS_OnTooltip,
+			["OnUpdate"] = REPUTATIONS_OnUpdate,
+			["rank"] = 40,
+		})),
+	}),
+	achcat(155, {	-- World Events
+		
+	}),
+	achcat(15117, {	-- Pet Battles
+		
+	}),
+	achcat(15246, {	-- Collections
+		
+	}),
+	achcat(15301, {	-- Expansion Features
+		
+	}),
+	achcat(15273, {	-- Feats of Strength
+		ach(2336, applyclassicphase(PHASE_THREE, {	-- Insane in the Membrane
+			["OnClick"] = INSANE_IN_THE_MEMBRANE_OnClick,
+			["OnTooltip"] = INSANE_IN_THE_MEMBRANE_OnTooltip,
+			["OnUpdate"] = INSANE_IN_THE_MEMBRANE_OnUpdate,
+			["description"] = "Insane in the Membrane is a Feat of Strength that rewards the title <The Insane>. This feat requires you to become honored with the Bloodsail Buccaneers and exalted with the Steamwheedle Cartel (Booty Bay, Everlook, Gadgetzan, Ratchet), Ravenholdt, Darkmoon Faire, and the Shen'dralar. It does not require that all of these reputation levels be reached at the same time, however, this may not be a thing until the achievement itself is introduced. Raising reputation with these factions is typically very difficult, time-consuming, and costly.",
+		})),
+	}),
 };
