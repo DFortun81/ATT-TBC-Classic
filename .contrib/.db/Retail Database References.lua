@@ -1,0 +1,5 @@
+-- #IMPORT: 07 - Events\\The Ahn'Qiraj War Effort\\The Ahn'Qiraj War Effort.lua
+-- #IMPORT: 07 - Events\\The Opening of the Dark Portal\\The Opening of the Dark Portal.lua
+-- #IMPORT: 07 - Events\\The Scepter of the Shifting Sands\\The Scepter of the Shifting Sands.lua
+-- #IMPORT: 07 - Events\\The Scourge Invasion\\The Scourge Invasion.lua
+-- #IMPORT: 07 - Events\\The Silithyst Must Flow\\The Silithyst Must Flow.lua
