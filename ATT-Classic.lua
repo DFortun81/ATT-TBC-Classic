@@ -10562,8 +10562,18 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 						MergeObject(explorationHeader.g, clone);
 					elseif group.key == "flightPathID" then
 						MergeObject(flightPathsHeader.g, clone);
-					elseif group.key == "itemID" and GetRelativeField(group, "headerID", 0) then
-						MergeObject(zoneDropsHeader.g, clone);
+					elseif group.key == "itemID" then
+						if GetRelativeField(group, "headerID", 0) then
+							MergeObject(zoneDropsHeader.g, clone);
+						else
+							local requireSkill = GetRelativeValue(group, "requireSkill");
+							if requireSkill then
+								clone = app.CreateProfession(requireSkill, { g = { clone } });
+								MergeObject(groups, clone);
+							else
+								MergeObject(groups, clone);
+							end
+						end
 					else
 						MergeObject(groups, clone);
 					end
