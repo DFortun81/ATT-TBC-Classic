@@ -119,14 +119,21 @@ end
 local defaultComparison = function(a,b)
 	return a > b;
 end
-local insertionSort = function(t, compare)
-	if not compare then compare = defaultComparison; end
-	local j;
-	for i=2,#t,1 do
-		j = i;
-		while j > 1 and compare(t[j], t[j - 1]) do
-			t[j],t[j - 1] = t[j - 1],t[j];
-			j = j - 1;
+local function insertionSort(t, compare, nested)
+	if t then
+		if not compare then compare = defaultComparison; end
+		local j;
+		for i=2,#t,1 do
+			j = i;
+			while j > 1 and compare(t[j], t[j - 1]) do
+				t[j],t[j - 1] = t[j - 1],t[j];
+				j = j - 1;
+			end
+		end
+		if nested then
+			for i=#t,1,-1 do
+				insertionSort(t[i].g, compare, nested);
+			end
 		end
 	end
 end
@@ -9173,6 +9180,25 @@ function app:GetDataCache()
 			end
 			return c;
 		end
+		local function achievementSort(a, b)
+			if a.achievementCategoryID then
+				if b.achievementCategoryID then
+					return a.achievementCategoryID < b.achievementCategoryID;
+				end
+				return true;
+			elseif b.achievementCategoryID then
+				return false;
+			end
+			if a.rank then
+				if b.rank then
+					return a.rank < b.rank;
+				end
+				return true;
+			elseif b.rank then
+				return false;
+			end
+			return a.name <= b.name;
+		end;
 		achievementsCategory.OnUpdate = function(self)
 			local categories = {};
 			categories[-1] = self;
@@ -9220,6 +9246,7 @@ function app:GetDataCache()
 					end
 				end
 			end
+			insertionSort(self.g, achievementSort, true);
 		end
 		achievementsCategory:OnUpdate();
 		
