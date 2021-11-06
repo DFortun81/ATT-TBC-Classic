@@ -981,7 +981,7 @@ _.Zones =
 				}),
 				q(9818,  {	-- The Underneath
 					["provider"] = { "n", 18071 },	-- Elementalist Untrag <The Earthen Ring>
-					["coord"] = { 60.6, 22,6, NAGRAND },
+					["coord"] = { 60.6, 22.6, NAGRAND },
 					["sourceQuests"] = {
 						9869,	-- The Throne of the Elements (A)
 						9870,	-- The Throne of the Elements (H)
