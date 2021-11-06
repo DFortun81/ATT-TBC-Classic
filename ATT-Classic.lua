@@ -2016,6 +2016,10 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 			tinsert(info, 1, { left = group.description, wrap = true, color = "ff66ccff" });
 		end
 		
+		if group.rwp then
+			tinsert(info, 1, { left = "This gets removed in patch " .. group.rwp, wrap = true, color = "FFFFAAAA" });
+		end
+		
 		if group.isLimited then
 			tinsert(info, 1, { left = L.LIMITED_QUANTITY, wrap = true, color = "ff66ccff" });
 		end
@@ -4994,6 +4998,8 @@ local itemFields = {
 				end
 			end
 			return false;
+		--elseif t.rwp then
+		--	return true;
 		elseif t.metaAfterFailure then
 			setmetatable(t, t.metaAfterFailure);
 			return false;
@@ -5063,6 +5069,9 @@ local itemFields = {
 			end
 			return partial and 2 or 1;
 		end
+		--if t.rwp then
+		--	return GetItemCount(id, true) > 0;
+		--end
 	end,
 	["collectedAsCostAfterFailure"] = function(t)
 		
@@ -8177,27 +8186,39 @@ local function RowOnEnter(self)
 				counter = counter + 1;
 			end
 		end
-		if reference.lore and app.Settings:GetTooltipSetting("Lore") and not reference.itemID then
-			local found = false;
-			for i=1,GameTooltip:NumLines() do
-				if _G["GameTooltipTextLeft"..i]:GetText() == reference.lore then
-					found = true;
-					break;
-				end
-			end
-			if not found then GameTooltip:AddLine(reference.lore, 0.4, 0.8, 1, 1); end
-		end
-		if reference.description and app.Settings:GetTooltipSetting("Descriptions") and not reference.itemID then
-			local found = false;
-			for i=1,GameTooltip:NumLines() do
-				if _G["GameTooltipTextLeft"..i]:GetText() == reference.description then
-					found = true;
-					break;
-				end
-			end
-			if not found then GameTooltip:AddLine(reference.description, 0.4, 0.8, 1, 1); end
-		end
+		
 		if not reference.itemID then
+			if reference.lore and app.Settings:GetTooltipSetting("Lore") then
+				local found = false;
+				for i=1,GameTooltip:NumLines() do
+					if _G["GameTooltipTextLeft"..i]:GetText() == reference.lore then
+						found = true;
+						break;
+					end
+				end
+				if not found then GameTooltip:AddLine(reference.lore, 0.4, 0.8, 1, 1); end
+			end
+			if reference.description and app.Settings:GetTooltipSetting("Descriptions") then
+				local found = false;
+				for i=1,GameTooltip:NumLines() do
+					if _G["GameTooltipTextLeft"..i]:GetText() == reference.description then
+						found = true;
+						break;
+					end
+				end
+				if not found then GameTooltip:AddLine(reference.description, 0.4, 0.8, 1, 1); end
+			end
+			if reference.rwp then
+				local found = false;
+				local rwp = "|CFFFFAAAAThis gets removed in patch " .. reference.rwp .. "|r";
+				for i=1,GameTooltip:NumLines() do
+					if _G["GameTooltipTextLeft"..i]:GetText() == rwp then
+						found = true;
+						break;
+					end
+				end
+				if not found then GameTooltip:AddLine(rwp, 1, 1, 1, 1); end
+			end
 			if reference.questID and not reference.objectiveID then
 				local objectified = false;
 				local questLogIndex = GetQuestLogIndexByID(reference.questID);
