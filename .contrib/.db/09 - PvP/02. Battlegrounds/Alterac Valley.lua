@@ -2,12 +2,13 @@ local OnTooltipForAlteracValley = [[function(t)
 	local reputation = t.reputation;
 	if reputation >= 0 and reputation < 42000 then
 		local isHuman = _.RaceIndex == 1;
+-- #if BEFORE TBC
 		local repPerConcertedEffort = isHuman and 175 or 150;
 		local x, n = math.ceil((42000 - reputation) / repPerConcertedEffort), math.ceil(42000 / repPerConcertedEffort);
 		GameTooltip:AddDoubleLine("Concerted Efforts", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
-		
+-- #endif
 		local repPerFlagKill = isHuman and 427.9 or 389;
-		x, n = math.ceil((42000 - reputation) / repPerFlagKill), math.ceil(42000 / repPerFlagKill);
+		local x, n = math.ceil((42000 - reputation) / repPerFlagKill), math.ceil(42000 / repPerFlagKill);
 		GameTooltip:AddDoubleLine("Kill the General", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 		
 		repPerFlagKill = isHuman and 137.5 or 125;

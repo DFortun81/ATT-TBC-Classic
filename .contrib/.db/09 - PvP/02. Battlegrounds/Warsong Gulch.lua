@@ -34,9 +34,11 @@ local OnTooltipForWarsongGulch = [[function(t)
 	local reputation = t.reputation;
 	if reputation >= 0 and reputation < 42000 then
 		local isHuman = _.RaceIndex == 1;
+-- #if BEFORE TBC
 		local repPerConcertedEffort = isHuman and 110 or 100;
 		local x, n = math.ceil((42000 - reputation) / repPerConcertedEffort), math.ceil(42000 / repPerConcertedEffort);
 		GameTooltip:AddDoubleLine("Concerted Efforts", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+-- #endif
 		local repPerFlagCapture = isHuman and 38.5 or 35;
 		local x, n = math.ceil((42000 - reputation) / repPerFlagCapture), math.ceil(42000 / repPerFlagCapture);
 		GameTooltip:AddDoubleLine("Flags Captured", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
