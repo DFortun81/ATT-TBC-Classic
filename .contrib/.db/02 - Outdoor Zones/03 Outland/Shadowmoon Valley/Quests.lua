@@ -796,6 +796,17 @@ _.Zones =
 					["groups"] = {
 						i(30973),	-- Band of Anguish
 						i(30924),	-- Gloves of the High Magus
+						-- #if BEFORE MOP
+						i(31025, {	-- Idol of the Avenger
+							["timeline"] = { "removed 5.0.4.10000" },
+						}),
+						i(31033, {	-- Libram of Righteous Power
+							["timeline"] = { "removed 5.0.4.10000" },
+						}),
+						i(31031, {	-- Stormfury Totem
+							["timeline"] = { "removed 5.0.4.10000" },
+						}),
+						-- #endif
 					},
 				}),
 				q(10745, {	-- News of Victory
