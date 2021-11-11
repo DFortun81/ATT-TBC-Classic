@@ -5,7 +5,7 @@ local OnTooltipForConsortium = [[function(t)
 	local reputation = t.reputation;
 	if reputation < 42000 then
 		local isHuman = _.RaceIndex == 1;
-		local repPerTurnIn = isHuman and 550 or 500;
+		local repPerTurnIn = isHuman and 275 or 250;
 		local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
 		GameTooltip:AddDoubleLine("Turn in Obsidian Warbeads.", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 		GameTooltip:AddDoubleLine(" ", (x * 10) .. " Beads to go!", 1, 1, 1);
