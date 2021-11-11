@@ -921,6 +921,7 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 		i(4737),	-- Imperial Leather Spaulders
 		i(15167),	-- Imposing Bandana
 		i(15161),	-- Imposing Belt
+		i(15162),	-- Imposing Boots
 		i(15163),	-- Imposing Bracers
 		i(15166),	-- Imposing Gloves
 		i(15168),	-- Imposing Pants

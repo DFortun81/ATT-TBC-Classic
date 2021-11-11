@@ -293,6 +293,10 @@ _.Zones =
 					["lvl"] = 39,
 				},
 				q(3520, {	-- Screecher Spirits
+					["qg"] = 8579,	-- Yeh'kinya
+					["coord"] = { 67.0, 22.4, TANARIS },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { FERALAS },
 					["lvl"] = 40,
 				}),
 				q(2876, {	-- Ship Schedules
@@ -452,6 +456,12 @@ _.Zones =
 						i(9638),	-- Chelonian Cuffs
 						i(9642),	-- Band of the Great Tortoise
 					},
+				}),
+				q(2864, {	-- Tran'rek
+					["qg"] = 773,	-- Krazek
+					["coord"] = { 51.6, 26.8, STRANGLETHORN_VALE },
+					["isBreadcrumb"] = true,
+					["lvl"] = 40,
 				}),
 				q(2875, {	-- WANTED: Andre Firebeard
 					["lvl"] = 40,
