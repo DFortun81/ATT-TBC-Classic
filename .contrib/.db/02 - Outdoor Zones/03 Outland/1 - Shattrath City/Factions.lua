@@ -6,7 +6,9 @@ _.Zones =
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(SHATTRATH_CITY, {
 			n(FACTIONS, {
-				faction(1011),	-- Lower City
+				faction(1011, {	-- Lower City
+					["maps"] = { AUCHINDOUN_AUCHENAI_CRYPTS, AUCHINDOUN_SETHEKK_HALLS, AUCHINDOUN_SHADOW_LABYRINTH },
+				}),
 				faction(932, {	-- The Aldor
 					["maxReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
 				}),
