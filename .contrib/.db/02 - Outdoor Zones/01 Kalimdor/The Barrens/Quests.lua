@@ -1662,6 +1662,18 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 14,
 				}),
+				q(959, {	-- Trouble at the Docks
+					["qg"] = 3665,	-- Crane Operator Bigglefuzz
+					["coord"] = { 63.1, 37.6, THE_BARRENS },
+					["lvl"] = 14,
+					["groups"] = {
+						objective(1, {	-- 0/1 99-Year-Old Port
+							["provider"] = { "i", 5334 },	-- 99-Year-Old Port
+							["coord"] = { 45, 35.2, THE_BARRENS },
+							["cr"] = 3655,	-- Mad Magglish
+						}),
+					},
+				}),
 				q(1839, {	-- Ula'elek and the Brutal Gauntlets
 					["qg"] = 5878,	-- Thun'grim Firegaze
 					["sourceQuest"] = 1838,	-- Brutal Armor
