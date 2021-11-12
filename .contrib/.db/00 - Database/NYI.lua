@@ -565,7 +565,6 @@ _.NeverImplemented =
 	i(24071),	-- Bland Dagger
 	i(5742),	-- Gemstone Dagger
 	i(2664),	-- Spinner Fang
-	i(3222),	-- Wicked Dagger
 	i(20317),	-- 63 Green Rogue Dagger
 	i(20279),	-- 90 Epic Rogue Dagger
 	i(20303),	-- 90 Green Rogue Dagger
