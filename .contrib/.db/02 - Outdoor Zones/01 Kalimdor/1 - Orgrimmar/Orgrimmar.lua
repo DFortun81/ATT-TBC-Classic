@@ -256,6 +256,34 @@ root("Zones", m(KALIMDOR, {
 						recipe(9035),	-- Hex of Weakness
 					},
 				}),
+				q(5726, {	-- Hidden Enemies (1/5)
+					["qg"] = 4949,	-- Thrall <Warchief>
+					["coord"] = { 32.0, 37.8, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { DUROTAR },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 9,
+					["groups"] = {
+						objective(1, {	-- 0/1 Lieutenant's Insignia
+							["provider"] = { "i", 14544 },	-- Lieutenant's Insignia
+						}),
+					},
+				}),
+				q(5727, {	-- Hidden Enemies (2/5)
+					["qg"] = 4949,	-- Thrall <Warchief>
+					["sourceQuest"] = 5726,	-- Hidden Enemies (1/5)
+					["coord"] = { 32.0, 37.8, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 9,
+					["groups"] = {
+						objective(1, {	-- 0/1 Gauge Neeru Fireblade's reaction to you being a member of the Burning Blade
+							["provider"] = { "i", 14544 },	-- Lieutenant's Insignia
+							["coord"] = { 49.5, 50.6, ORGRIMMAR },
+							["cr"] = 3216,	-- Neeru Fireblade
+						}),
+					},
+				}),
 				q(2479, {	-- Hinott's Assistance
 					["lvl"] = 20,
 					["qg"] = 3401,	-- Shenthul

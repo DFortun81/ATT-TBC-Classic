@@ -249,6 +249,7 @@ app.L = {
 		[890] = { 92, "Into the Wild Blue Yonder", "Interface\\Icons\\ability_mount_gryphon_01" },
 		[5180] = { 92, "Breaking the Sound Barrier", "Interface\\Icons\\ability_mount_rocketmount" },
 		
+		[629] = { 168, "Ragefire Chasm", app.asset("spell_shadow_summonfelguard") },
 		[630] = { 168, "Wailing Caverns", app.asset("achievement_boss_mutanus_the_devourer") },
 		[633] = { 168, "Stormwind Stockade", app.asset("achievement_boss_bazil_thredd") },
 		[688] = { 168, "Zul'Gurub", app.asset("achievement_boss_hakkar") },

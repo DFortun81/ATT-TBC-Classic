@@ -66,7 +66,6 @@ _.Zones =
 					},
 				}),
 				i(14544, {	-- Lieutenant's Insignia
-					["questID"] = 5726,	-- Hidden Enemies
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						3198,	-- Burning Blade Apprentice
