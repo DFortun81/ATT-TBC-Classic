@@ -252,6 +252,7 @@ app.L = {
 		[629] = { 168, "Ragefire Chasm", app.asset("spell_shadow_summonfelguard") },
 		[630] = { 168, "Wailing Caverns", app.asset("achievement_boss_mutanus_the_devourer") },
 		[633] = { 168, "Stormwind Stockade", app.asset("achievement_boss_bazil_thredd") },
+		[635] = { 168, "Razorfen Kraul", app.asset("achievement_boss_charlgarazorflank") },
 		[636] = { 168, "Razorfen Downs", app.asset("achievement_boss_amnennar_the_coldbringer") },
 		[688] = { 168, "Zul'Gurub", app.asset("achievement_boss_hakkar") },
 		

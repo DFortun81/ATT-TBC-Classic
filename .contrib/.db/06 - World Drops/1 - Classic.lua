@@ -2214,6 +2214,7 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 			i(4091),	-- Widowmaker
 		}),
 		filter(31, {	-- Guns
+			i(3041),	-- "Mage-Eye" Blunderbuss
 			i(3042),	-- BKP "Sparrow" Smallbore
 			i(15324),	-- Burnside Rifle
 			i(4577),	-- Compact Shotgun
