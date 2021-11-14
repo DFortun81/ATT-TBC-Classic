@@ -5798,7 +5798,6 @@ local mountFields = {
 		return app.CollectibleMounts;
 	end,
 	["collected"] = function(t)
-		if app.CurrentCharacter.Spells[t.spellID] then return 1; end
 		if IsSpellKnown(t.spellID) or (t.questID and IsQuestFlaggedCompleted(t.questID)) or (t.itemID and GetItemCount(t.itemID, true) > 0) then
 			app.CurrentCharacter.Spells[t.spellID] = 1;
 			ATTAccountWideData.Spells[t.spellID] = 1;
@@ -12360,6 +12359,7 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 						if craftType == "optimal" or craftType == "medium" or craftType == "easy" or craftType == "trivial" or craftType == "used" or craftType == "none" then
 							spellID = craftSubSpellName and (select(7, GetSpellInfo(craftName, craftSubSpellName)) or app.SpellNameToSpellID[craftName .. " (" .. craftSubSpellName .. ")"]) or app.SpellNameToSpellID[craftName];
 							if spellID then
+								if spellID == 44153 then spellID = 44155; end	-- Fix the Flying Machine spellID.
 								app.CurrentCharacter.SpellRanks[spellID] = shouldShowSpellRanks and app.CraftTypeToCraftTypeID(craftType) or nil;
 								app.CurrentCharacter.Spells[spellID] = 1;
 								if not ATTAccountWideData.Spells[spellID] then
@@ -12414,6 +12414,7 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 						if skillType == "optimal" or skillType == "medium" or skillType == "easy" or skillType == "trivial" or skillType == "used" or skillType == "none" then
 							local spellID = app.SpellNameToSpellID[skillName];
 							if spellID then
+								if spellID == 44153 then spellID = 44155; end	-- Fix the Flying Machine spellID.
 								app.CurrentCharacter.SpellRanks[spellID] = shouldShowSpellRanks and app.CraftTypeToCraftTypeID(skillType) or nil;
 								app.CurrentCharacter.Spells[spellID] = 1;
 								if not ATTAccountWideData.Spells[spellID] then
