@@ -256,6 +256,7 @@ app.L = {
 		[636] = { 168, "Razorfen Downs", app.asset("achievement_boss_amnennar_the_coldbringer") },
 		[638] = { 168, "Uldaman", app.asset("achievement_boss_archaedas") },
 		[688] = { 168, "Zul'Gurub", app.asset("achievement_boss_hakkar") },
+		[691] = { 168, "Zul'Aman", app.asset("achievement_boss_zuljin") },
 		
 		[121] = { 170, "Journeyman Cook", "Interface\\Icons\\inv_misc_food_15" },
 		[122] = { 170, "Expert Cook", "Interface\\Icons\\inv_misc_food_15" },
