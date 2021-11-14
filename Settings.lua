@@ -102,7 +102,7 @@ local GeneralSettingsBase = {
 		["Thing:Exploration"] = true,
 		["Thing:FlightPaths"] = true,
 		--["Thing:Loot"] = false,
-		["Thing:Mounts"] = false,
+		--["Thing:Mounts"] = false,
 		--["Thing:PVPRanks"] = false,
 		["Thing:Quests"] = true,
 		["Thing:Recipes"] = true,
@@ -283,6 +283,10 @@ settings.GetModeString = function(self)
 			mode = "Insane " .. mode;
 		else
 			mode = "Normal " .. mode;
+		end
+		
+		if self:Get("Thing:Mounts") then
+			mode = mode .. " + Mounts";
 		end
 	end
 	if self:Get("Filter:ByLevel") then
@@ -959,7 +963,7 @@ function(self)
 	settings:UpdateMode();
 	app:RefreshData();
 end);
-MountsCheckBox:SetATTTooltip("Enable this option to track mounts.\n\nFair warning! Do this at your own risk, it will take up a lot of inventory space across your account and they can not be sent between characters!");
+MountsCheckBox:SetATTTooltip("Enable this option to track mounts.\n\nFair warning! Do this at your own risk, it will take up a lot of inventory space across your account and they can not be sent between characters!\n\nAdditionally, the cost of all Vendor mounts is reduced to 1/10 of their current prices with Wrath.");
 MountsCheckBox:SetPoint("TOPLEFT", LootCheckBox, "BOTTOMLEFT", 0, 4);
 
 local MountsAccountWideCheckBox = settings:CreateCheckBox("Account Wide",
