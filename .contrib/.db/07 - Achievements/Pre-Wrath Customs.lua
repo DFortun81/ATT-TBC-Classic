@@ -223,6 +223,14 @@ _.Achievements =
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_PROFESSIONS, {
 		achcat(170, {	-- Cooking
+			ach(1563, {	-- Hail to the Chef [Alliance]
+				["requireSkill"] = COOKING,
+				["races"] = ALLIANCE_ONLY,
+			}),
+			ach(1784, {	-- Hail to the Chef [Horde]
+				["requireSkill"] = COOKING,
+				["races"] = HORDE_ONLY,
+			}),
 			removeclassicphase(ach(121, {	-- Journeyman Cook
 				["requireSkill"] = COOKING,
 				["spellID"] = 3102,	-- Cooking (Journeyman)
@@ -248,6 +256,112 @@ _.Achievements =
 				["spellID"] = 51296,	-- Cooking (Grand Master)
 				["rank"] = 6,
 			})),
+			ach(1998, {	-- Dalaran Cooking Award
+				["provider"] = { "i", 43016 },	-- Dalaran Cooking Award
+				["requireSkill"] = COOKING,
+				["maps"] = { DALARAN },
+				["rank"] = 1,
+			}),
+			ach(1999, {	-- 10 Dalaran Cooking Awards
+				["provider"] = { "i", 43016 },	-- Dalaran Cooking Award
+				["requireSkill"] = COOKING,
+				["maps"] = { DALARAN },
+				["rank"] = 10,
+			}),
+			ach(2000, {	-- 25 Dalaran Cooking Awards
+				["provider"] = { "i", 43016 },	-- Dalaran Cooking Award
+				["requireSkill"] = COOKING,
+				["maps"] = { DALARAN },
+				["rank"] = 25,
+			}),
+			ach(2001, {	-- 50 Dalaran Cooking Awards
+				["provider"] = { "i", 43016 },	-- Dalaran Cooking Award
+				["requireSkill"] = COOKING,
+				["maps"] = { DALARAN },
+				["rank"] = 50,
+			}),
+			ach(2002, {	-- 100 Dalaran Cooking Awards
+				["provider"] = { "i", 43016 },	-- Dalaran Cooking Award
+				["requireSkill"] = COOKING,
+				["maps"] = { DALARAN },
+				["rank"] = 100,
+			}),
+			ach(1801, {	-- Captain Rumsey's Lager
+				["provider"] = { "i", 34832 },	-- Captain Rumsey's Lager
+				["requireSkill"] = COOKING,
+			}),
+			ach(1799, {	-- Chef de Cuisine
+				["requireSkill"] = COOKING,
+				["rank"] = 160,
+			}),
+			ach(1797, {	-- Chef de Partie
+				["requireSkill"] = COOKING,
+				["rank"] = 75,
+			}),
+			ach(3296, {	-- Cooking with Style
+				["provider"] = { "i", 46349 },	-- Chef's Hat
+				["requireSkill"] = COOKING,
+			}),
+			ach(1781, {	-- Critter Gitter
+				["provider"] = { "i", 43004 },	-- Critter Bites
+				["requireSkill"] = COOKING,
+			}),
+			ach(1785, {	-- Dinner Impossible
+				["requireSkill"] = COOKING,
+			}),
+			ach(906, {	-- Kickin' It Up a Notch
+				["requireSkill"] = COOKING,
+			}),
+			ach(1795, {	-- Lunch Lady
+				["requireSkill"] = COOKING,
+				["rank"] = 25,
+			}),
+			ach(1782, {	-- Our Daily Bread [Alliance]
+				["requireSkill"] = COOKING,
+				["maps"] = { DALARAN },
+				["races"] = ALLIANCE_ONLY,
+			}),
+			ach(1783, {	-- Our Daily Bread [Horde]
+				["requireSkill"] = COOKING,
+				["maps"] = { DALARAN },
+				["races"] = HORDE_ONLY,
+			}),
+			ach(1780, {	-- Second That Emotion
+				["providers"] = {
+					{ "i", 43492 },	-- Haunted Herring
+					{ "i", 43491 },	-- Bad Clams
+					{ "i", 43490 },	-- Tasty Cupcake
+					{ "i", 43488 },	-- Last Weeks Mammoth
+				},
+				["requireSkill"] = COOKING,
+			}),
+			ach(1796, {	-- Short Order Cook
+				["requireSkill"] = COOKING,
+				["rank"] = 50,
+			}),
+			ach(1798, {	-- Sous Chef
+				["requireSkill"] = COOKING,
+				["rank"] = 100,
+			}),
+			ach(877, {	-- The Cake Is Not A Lie
+				["provider"] = { "i", 33924 },	-- Delicious Chocolate Cake
+				["requireSkill"] = COOKING,
+			}),
+			ach(1777, {	-- The Northrend Gourmet (15)
+				["requireSkill"] = COOKING,
+				["rank"] = 15,
+			}),
+			ach(1778, {	-- The Northrend Gourmet (30)
+				["requireSkill"] = COOKING,
+				["rank"] = 30,
+			}),
+			ach(1779, {	-- The Northrend Gourmet (45)
+				["requireSkill"] = COOKING,
+				["rank"] = 45,
+			}),
+			ach(1800, {	-- The Outland Gourmet
+				["requireSkill"] = COOKING,
+			}),
 		}),
 		achcat(171, {	-- Fishing
 			ach(1516, {	-- Accomplished Angler
@@ -378,6 +492,41 @@ _.Achievements =
 				["requireSkill"] = FISHING,
 			}),
 		}),
+		achcat(172, {	-- First Aid
+			removeclassicphase(ach(131, {	-- Journeyman in First Aid
+				["requireSkill"] = FIRST_AID,
+				["spellID"] = 3274,	-- First Aid (Journeyman)
+				["rank"] = 2,
+			})),
+			removeclassicphase(ach(132, {	-- Expert in First Aid
+				["requireSkill"] = FIRST_AID,
+				["spellID"] = 7924,	-- First Aid (Expert)
+				["rank"] = 3,
+			})),
+			removeclassicphase(ach(133, {	-- Artisan in First Aid
+				["requireSkill"] = FIRST_AID,
+				["spellID"] = 10846,	-- First Aid (Artisan)
+				["rank"] = 4,
+			})),
+			ach(134, applyclassicphase(TBC_PHASE_ONE, {	-- Master in First Aid
+				["requireSkill"] = FIRST_AID,
+				["spellID"] = 27028,	-- First Aid (Master)
+				["rank"] = 5,
+			})),
+			ach(135, applyclassicphase(WRATH_PHASE_ONE, {	-- Grand Master in First Aid
+				["requireSkill"] = FIRST_AID,
+				["spellID"] = 45542,	-- First Aid (Grand Master)
+				["rank"] = 6,
+			})),
+			ach(137, {	-- Stocking Up
+				["requireSkill"] = FIRST_AID,
+			}),
+			ach(141, {	-- Ultimate Triage
+				["requireSkill"] = FIRST_AID,
+			}),
+		}),
+		ach(730),	-- Skills to Pay the Bills
+		ach(735),	-- Working Day and Night
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_REPUTATION, {
 		removeclassicphase(ach(522, {	-- Somebody Likes Me

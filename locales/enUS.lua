@@ -313,6 +313,12 @@ app.L = {
 		[1836] = { 171 },	-- Old Crafty, name and icon from providers
 		[1837] = { 171 },	-- Old Ironjaw, name and icon from providers
 		
+		[131] = { 172, "Journeyman in First Aid", "Interface\\Icons\\spell_holy_sealofsacrifice" },
+		[132] = { 172, "Expert in First Aid", "Interface\\Icons\\spell_holy_sealofsacrifice" },
+		[133] = { 172, "Artisan in First Aid", "Interface\\Icons\\spell_holy_sealofsacrifice" },
+		[134] = { 172, "Master in First Aid", "Interface\\Icons\\spell_holy_sealofsacrifice" },
+		[135] = { 172, "Grand Master in First Aid", "Interface\\Icons\\spell_holy_sealofsacrifice" },
+		
 		[522] = { 201, "Somebody Likes Me", app.asset("achievement_reputation_01") },
 		[523] = { 201, "5 Exalted Reputations", app.asset("achievement_reputation_01") },
 		[524] = { 201, "10 Exalted Reputations", app.asset("achievement_reputation_02") },
@@ -347,6 +353,7 @@ app.L = {
 		[169] = { -1, "Professions" },
 		[170] = { 169, "Cooking" },
 		[171] = { 169, "Fishing" },
+		[172] = { 169, "First Aid" },
 		[201] = { -1, "Reputation" },
 		[14805] = { 168, "The Burning Crusade" },
 		[14808] = { 168, "Classic" },
