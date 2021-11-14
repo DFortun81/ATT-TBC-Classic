@@ -482,6 +482,12 @@ _.Instances = { tier(CLASSIC_TIER, {
 				},
 			}),
 			n(5709, {	-- Shade of Erankikus
+				removeclassicphase(ach(641, {	-- Sunken Temple
+					-- #if BEFORE 3.0.1
+					["sourceQuest"] = 3373,	-- The Essence of Eranikus
+					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(3373)); end]],
+					-- #endif
+				})),
 				i(10454),	-- Essence of Eranikus
 				i(10828),	-- Dire Nail
 				i(10847),	-- Dragon's Call

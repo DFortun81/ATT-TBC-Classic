@@ -246,6 +246,16 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(10403),	-- Blackened Defias Belt
 			}),
 			n(639, {	-- Edwin VanCleef <Defias Kingpin>
+				removeclassicphase(ach(628, {	-- Deadmines
+					-- #if BEFORE 3.0.1
+					["sourceQuests"] = {
+						166,	-- The Defias Brotherhood
+						373,	-- The Unsent Letter
+					},
+					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(166) or C_QuestLog.IsQuestFlaggedCompleted(373)); end]],
+					["races"] = ALLIANCE_ONLY,
+					-- #endif
+				})),
 				{
 					["itemID"] = 2874,	-- An Unsent Letter
 					["questID"] = 373,	-- The Unsent Letter

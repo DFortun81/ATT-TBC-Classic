@@ -1275,6 +1275,15 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(12553), 	-- Swiftwalker Boots
 			}),
 			n(9019, {	-- Emperor Dagran Thaurissan
+				removeclassicphase(ach(642, {	-- Blackrock Depths
+					-- #if BEFORE 3.0.1
+					["sourceQuests"] = {
+						4362,	-- The Fate of the Kingdom
+						4003,	-- The Royal Rescue
+					},
+					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(4362) or C_QuestLog.IsQuestFlaggedCompleted(4003)); end]],
+					-- #endif
+				})),
 				i(11931), 	-- Dreadforge Retaliatior
 				i(11932), 	-- Guiding Stave of Wisdom
 				i(11684), 	-- Ironfoe

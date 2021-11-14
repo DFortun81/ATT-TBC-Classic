@@ -295,6 +295,15 @@ _.Instances = { tier(CLASSIC_TIER, {
 					n(12201, {	-- Princess Theradras
 						["modelScale"] = 2,
 						["groups"] = {
+							removeclassicphase(ach(640, {	-- Maraudon
+								-- #if BEFORE 3.0.1
+								["sourceQuests"] = {
+									7065,	-- Corruption of Earth and Seed
+									7064,	-- Corruption of Earth and Seed
+								},
+								["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(7065) or C_QuestLog.IsQuestFlaggedCompleted(7064)); end]],
+								-- #endif
+							})),
 							i(17780),	-- Blade of Eternal Darkness
 							i(17766),	-- Princess Theradras' Scepter
 							i(17710),	-- Charstone Dirk

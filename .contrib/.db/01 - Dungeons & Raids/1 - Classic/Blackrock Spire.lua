@@ -1083,6 +1083,17 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 				n(9568, {	-- Overlord Wyrmthalak
+					removeclassicphase(ach(643, {	-- Lower Blackrock Spire
+						-- #if BEFORE 3.0.1
+						["sourceQuests"] = {
+							5089,	-- General Drakkisath's Command
+							5081,	-- Maxwell's Mission
+							4742,	-- Seal of Ascension
+							4903,	-- Warlord's Command
+						},
+						["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(5089) or C_QuestLog.IsQuestFlaggedCompleted(5081) or C_QuestLog.IsQuestFlaggedCompleted(4742) or C_QuestLog.IsQuestFlaggedCompleted(4903)); end]],
+						-- #endif
+					})),
 					{
 						["itemID"] = 12337,	-- Gemstone of Bloodaxe
 						["questID"] = 4742,	-- Seal of Ascension
@@ -1245,6 +1256,16 @@ _.Instances = { tier(CLASSIC_TIER, {
 						}),
 					})),
 					n(10363, { 	-- General Drakkisath
+						removeclassicphase(ach(1307, {	-- Upper Blackrock Spire
+							-- #if BEFORE 3.0.1
+							["sourceQuests"] = {
+								6602,	-- Blood of the Black Dragon Champion
+								6502,	-- Drakefire Amulet
+								5102,	-- General Drakkisath's Demise
+							},
+							["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(6602) or C_QuestLog.IsQuestFlaggedCompleted(6502) or C_QuestLog.IsQuestFlaggedCompleted(5102)); end]],
+							-- #endif
+						})),
 						{
 							["itemID"] = 16663,	-- Blood of the Black Dragon Champion
 							["allianceQuestID"] = 6502,	-- Drakefire Amulet

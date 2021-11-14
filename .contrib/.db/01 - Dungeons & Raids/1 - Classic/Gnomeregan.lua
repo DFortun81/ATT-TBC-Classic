@@ -543,6 +543,15 @@ _.Instances = { tier(CLASSIC_TIER, {
 				},
 			}),
 			n(7800, {	-- Mekgineer Thermaplugg
+				removeclassicphase(ach(634, {	-- Gnomeregan
+					-- #if BEFORE 3.0.1
+					["sourceQuests"] = {
+						2929,	-- The Grand Betrayal
+						2841,	-- Rig Wars
+					},
+					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(2929) or C_QuestLog.IsQuestFlaggedCompleted(2841)); end]],
+					-- #endif
+				})),
 				{
 					["itemID"] = 9153,	-- Rig Blueprints
 					["questID"] = 2841,	-- Rig Wars

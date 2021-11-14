@@ -215,6 +215,13 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(6314),	-- Wolfmaster Cape
 			}),
 			n(4275, {	-- Archmage Arugal
+				removeclassicphase(ach(631, {	-- Shadowfang Keep
+					-- #if BEFORE 3.0.1
+					["sourceQuest"] = 1014,	-- Arugal Must Die
+					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(1014)); end]],
+					["races"] = HORDE_ONLY,
+					-- #endif
+				})),
 				{
 					["itemID"] = 5442,	-- Head of Arugal
 					["questID"] = 1014,	-- Arugal Must Die
