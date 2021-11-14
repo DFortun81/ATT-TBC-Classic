@@ -254,6 +254,7 @@ app.L = {
 		[633] = { 168, "Stormwind Stockade", app.asset("achievement_boss_bazil_thredd") },
 		[635] = { 168, "Razorfen Kraul", app.asset("achievement_boss_charlgarazorflank") },
 		[636] = { 168, "Razorfen Downs", app.asset("achievement_boss_amnennar_the_coldbringer") },
+		[638] = { 168, "Uldaman", app.asset("achievement_boss_archaedas") },
 		[688] = { 168, "Zul'Gurub", app.asset("achievement_boss_hakkar") },
 		
 		[121] = { 170, "Journeyman Cook", "Interface\\Icons\\inv_misc_food_15" },

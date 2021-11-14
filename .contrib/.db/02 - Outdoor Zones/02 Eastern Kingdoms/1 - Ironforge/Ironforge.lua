@@ -121,30 +121,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 12,
 				}),
-				q(2964, {	-- A Future Task
-					["qg"] = 2916,	-- Historian Karnik
-					["sourceQuest"] = 2977,	-- Return to Ironforge
-					["coord"] = { 77.2, 11.8, IRONFORGE },
-					["timeline"] = { "removed 4.0.3.10000" },
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = 45,
-					["groups"] = {
-						un(TBC_PHASE_ONE, i(34418, {	-- Scrying Wand
-							["timeline"] = {
-								"added 2.3.0.10000",
-								"removed 4.0.3.10000",
-							},
-						})),
-						-- #if BEFORE MOP
-						un(TBC_PHASE_ONE, i(34419, {	-- Thorium Flight Blade
-							["timeline"] = {
-								"added 2.3.0.10000",
-								"removed 4.0.3.10000",
-							},
-						})),
-						-- #endif
-					},
-				}),
 				q(686, {	-- A King's Tribute (1/3)
 					["qg"] = 2784,	-- King Magni Bronzebeard
 					["sourceQuest"] = 683,	-- Sara Balloo's Plea
@@ -479,13 +455,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 45,
 				}),
-				q(2963, {	-- Portents of Uldum
-					["qg"] = 5387,	-- High Explorer Magellas
-					["sourceQuest"] = 2439,	-- The Platinum Discs [Alliance - Part 3]
-					["coord"] = { 69.8, 18.4, IRONFORGE },
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = 45,
-				}),
 				q(6392, {	-- Return to Brock
 					["qg"] = 1573,	-- Gryth Thurden
 					["sourceQuest"] = 6388,	-- Gryth Thurden
@@ -520,16 +489,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ "i", 4514, 1 },	-- Sara Balloo's Plea
 					},
 					["lvl"] = 25,
-				}),
-				q(2946, {	-- Seeing What Happens
-					["qg"] = 2916,	-- Historian Karnik
-					["sourceQuest"] = 2963,	-- Portents of Uldum
-					["coord"] = { 77.2, 11.8, IRONFORGE },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 6064, 1 },	-- Miniature Platinum Discs
-					},
-					["lvl"] = 45,
 				}),
 				q(3451, {	-- Signal for Pickup (1/2)
 					["qg"] = 8517,	-- Xiggs Fuselighter

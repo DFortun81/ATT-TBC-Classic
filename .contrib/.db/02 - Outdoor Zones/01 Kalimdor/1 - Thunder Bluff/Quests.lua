@@ -30,25 +30,6 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 12,
 				}),
-				q(2968, {	-- A Future Task
-					["timeline"] = { "removed 4.0.3.10000" },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 45,
-					["groups"] = {
-						un(TBC_PHASE_ONE, i(34421, {	-- Cave Crawler's Mail Treads
-							["timeline"] = {
-								"added 2.3.0.10000",
-								"removed 4.0.3.10000",
-							},
-						})),
-						un(TBC_PHASE_ONE, i(34422, {	-- Tempered Thorium Boots
-							["timeline"] = {
-								"added 2.3.0.10000",
-								"removed 4.0.3.10000",
-							},
-						})),
-					},
-				}),
 				q(7825, {	-- Additional Runecloth
 					["qg"] = 14728,	-- Rumstag Proudstrider
 					["sourceQuest"] = 7823,	-- A Donation of Runecloth
@@ -155,13 +136,6 @@ _.Zones =
 						i(11887),	-- Cenarion Circle Cache
 					},
 				}),
-				q(2965, {	-- Portents of Uldum
-					["qg"] = 3978,	-- Sage Truthseeker
-					["sourceQuest"] = 2440,	-- The Platinum Discs [Horde - Part 3]
-					["coord"] = { 34.6, 47.2, THUNDER_BLUFF },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 45,
-				}),
 				q(744, {	-- Preparation for Ceremony
 					["lvl"] = 7,
 					["races"] = HORDE_ONLY,
@@ -183,16 +157,6 @@ _.Zones =
 					["lvl"] = 13,
 					["races"] = HORDE_ONLY,
 					["qg"] = 2216,	-- Apothecary Lydon
-				}),
-				q(2966, {	-- Seeing What Happens
-					["qg"] = 5770,	-- Nara Wildmane
-					["sourceQuest"] = 2965,	-- Portents of Uldum
-					["coord"] = { 75.6, 31.2, THUNDER_BLUFF },
-					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 6064, 1 },	-- Miniature Platinum Discs
-					},
-					["lvl"] = 45,
 				}),
 				q(860, {	-- Sergra Darkthorn
 					["qg"] = 3441,	-- Melor Stonehoof
