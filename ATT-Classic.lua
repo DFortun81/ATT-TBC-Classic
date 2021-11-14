@@ -9243,6 +9243,18 @@ function app:GetDataCache()
 					end
 				end
 			end
+			for j,o in ipairs(searchResults) do
+				local r = GetRelativeValue(o, "r");
+				if r then inst.r = r; end
+				local nmr = GetRelativeValue(o, "nmr");
+				if nmr then inst.nmr = nmr; end
+				local races = GetRelativeValue(o, "races");
+				if races then inst.races = races; end
+				local nmc = GetRelativeValue(o, "nmc");
+				if nmc then inst.nmc = nmc; end
+				local c = GetRelativeValue(o, "c");
+				if c then inst.c = c; end
+			end
 			inst.parent = header;
 			inst.progress = nil;
 			inst.total = nil;
