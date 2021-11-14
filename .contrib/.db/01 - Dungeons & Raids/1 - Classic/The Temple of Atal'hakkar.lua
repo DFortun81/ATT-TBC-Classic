@@ -385,63 +385,24 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(10634),	-- Mindseye Circle
 			}),
 			n(COMMON_BOSS_DROPS, {
-				{
-					["itemID"] = 20606,	-- Amber Voodoo Feather
-					["questID"] = 8413,	-- Da Voodoo [Shaman]
-					["altQuests"] = {
-						8418,	-- Forging the Mightstone [Paladin]
-						8422,	-- Trolls of a Feather [Warlock]
-						8425,	-- Voodoo Feathers [Warrior]
-					},
-					["classes"] = {
-						SHAMAN,
-						PALADIN,
-						WARLOCK,
-						WARRIOR
-					},
+				i(20606, {	-- Amber Voodoo Feather
 					["crs"] = {
 						5713,	-- Gasher
 						5716,	-- Zul'Lor
 					},
-				},
-				{
-					["itemID"] = 20607,	-- Blue Voodoo Feather
-					["questID"] = 8413,	-- Da Voodoo [Shaman]
-					["altQuests"] = {
-						8418,	-- Forging the Mightstone [Paladin]
-						8422,	-- Trolls of a Feather [Warlock]
-						8425,	-- Voodoo Feathers [Warrior]
-					},
-					["classes"] = {
-						SHAMAN,
-						PALADIN,
-						WARLOCK,
-						WARRIOR
-					},
+				}),
+				i(20607, {	-- Blue Voodoo Feather
 					["crs"] = {
 						5715,	-- Hukku
 						5717,	-- Mijan
 					},
-				},
-				{
-					["itemID"] = 20608,	-- Green Voodoo Feather
-					["questID"] = 8413,	-- Da Voodoo [Shaman]
-					["altQuests"] = {
-						8418,	-- Forging the Mightstone [Paladin]
-						8422,	-- Trolls of a Feather [Warlock]
-						8425,	-- Voodoo Feathers [Warrior]
-					},
-					["classes"] = {
-						SHAMAN,
-						PALADIN,
-						WARLOCK,
-						WARRIOR
-					},
+				}),
+				i(20608, {	-- Green Voodoo Feather
 					["crs"] = {
 						5714,	-- Loro
 						5712,	-- Zolo
 					},
-				},
+				}),
 			}),
 			n(5708, {	-- Spawn of Hakkar
 				i(10801),	-- Slitherscale Boots
@@ -474,16 +435,30 @@ _.Instances = { tier(CLASSIC_TIER, {
 					i(10786),	-- Atal'ai Boots
 				},
 			}),
+			n(8443, {	-- Avatar of Hakkar
+				["description"] = "Requires the use of the Egg of Hakkar or Yeh'kinya's Scroll.\n\nOnce you start the fight, the room will fill with a variety of mobs. You need to kill the 4 Wind Serpents that appear, and loot the blood off of them, and use it to douse one of the fires in each corner of the room.\n\nEvery time you douse a fire, a dragonkin will walk in and start channeling a spell on Hakkar. Do not let them complete this channel.\n\nThe boss spawns after all 4 flames are doused.",
+				["cost"] = {
+					{ "i", 10465, 1 },	-- Egg of Hakkar
+					{ "i", 10818, 1 },	-- Yeh'kinya's Scroll
+				},
+				["groups"] = {
+					i(10663),	-- Essence of Hakkar
+					i(10844),	-- Spire of Hakkar
+					i(10838),	-- Might of Hakkar
+					i(10843),	-- Featherskin Cape
+					i(12462),	-- Embrace of the Wind Serpent
+					i(10845),	-- Warrior's Embrace
+					i(10842),	-- Windscale Sarong
+					i(10846),	-- Bloodshot Greaves
+				},
+			}),
 			n(5711, {	-- Ogom the Wretched
 				i(10803),	-- Blade of the Wretched
 				i(10805),	-- Eater of the Dead
 				i(10804),	-- Fist of the Damned
 			}),
 			n(5710, {	-- Jammal'an the Prophet
-				{
-					["itemID"] = 6212,	-- Head of Jammal'an
-					["questID"] = 1446,	-- Jammal'an the Prophet
-				},
+				i(6212),	-- Head of Jammal'an
 				i(10806),	-- Vestments of the Atal'ai Prophet
 				i(10808),	-- Gloves of the Atal'ai Prophet
 				i(10807),	-- Kilt of the Atal'ai Prophet
@@ -507,10 +482,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 				},
 			}),
 			n(5709, {	-- Shade of Erankikus
-				{
-					["itemID"] = 10454,	-- Essence of Eranikus
-					["questID"] = 3373,	-- The Essence of Eranikus
-				},
+				i(10454),	-- Essence of Eranikus
 				i(10828),	-- Dire Nail
 				i(10847),	-- Dragon's Call
 				i(10837),	-- Tooth of Eranikus
@@ -518,26 +490,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(10835),	-- Crest of Supremacy
 				i(10833),	-- Horns of Eranikus
 				i(10829),	-- Dragon's Eye
-			}),
-			n(8443, {	-- Avatar of Hakkar
-				["description"] = "Requires the use of the Egg of Hakkar or Yeh'kinya's Scroll.\n\nOnce you start the fight, the room will fill with a variety of mobs. You need to kill the 4 Wind Serpents that appear, and loot the blood off of them, and use it to douse one of the fires in each corner of the room.\n\nEvery time you douse a fire, a dragonkin will walk in and start channeling a spell on Hakkar. Do not let them complete this channel.\n\nThe boss spawns after all 4 flames are doused.",
-				["cost"] = {
-					{ "i", 10465, 1 },	-- Egg of Hakkar
-					{ "i", 10818, 1 },	-- Yeh'kinya's Scroll
-				},
-				["groups"] = {
-					{
-						["itemID"] = 10663,	-- Essence of Hakkar
-						["questID"] = 3528,	-- The God Hakkar
-					},
-					i(10844),	-- Spire of Hakkar
-					i(10838),	-- Might of Hakkar
-					i(10843),	-- Featherskin Cape
-					i(12462),	-- Embrace of the Wind Serpent
-					i(10845),	-- Warrior's Embrace
-					i(10842),	-- Windscale Sarong
-					i(10846),	-- Bloodshot Greaves
-				},
 			}),
 		},
 	}),
