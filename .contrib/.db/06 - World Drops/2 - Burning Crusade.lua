@@ -2668,6 +2668,9 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(BATTLE_PETS, {
 		
 	}),
+	filter(100, {	-- Mounts
+		i(25596),	-- Peep's Whistle
+	}),
 	-- #if BEFORE 3.0.0
 	filter(102, {	-- Toy
 		i(37460),	-- Rope Pet Leash

@@ -5776,6 +5776,73 @@ app:RegisterEvent("ZONE_CHANGED");
 app:RegisterEvent("ZONE_CHANGED_NEW_AREA");
 end)();
 
+-- Mount Lib
+(function()
+local mountFields = {
+	["key"] = function(t)
+		return "spellID";
+	end,
+	["text"] = function(t)
+		return "|cffb19cd9" .. t.name .. "|r";
+	end,
+	["icon"] = function(t)
+		return select(3, GetSpellInfo(t.spellID));
+	end,
+	["link"] = function(t)
+		return (t.itemID and select(2, GetItemInfo(t.itemID))) or select(1, GetSpellLink(t.spellID));
+	end,
+	["filterID"] = function(t)
+		return 100;
+	end,
+	["collectible"] = function(t)
+		return app.CollectibleMounts;
+	end,
+	["collected"] = function(t)
+		if app.CurrentCharacter.Spells[t.spellID] then return 1; end
+		if IsSpellKnown(t.spellID) or (t.questID and IsQuestFlaggedCompleted(t.questID)) or (t.itemID and GetItemCount(t.itemID, true) > 0) then
+			app.CurrentCharacter.Spells[t.spellID] = 1;
+			ATTAccountWideData.Spells[t.spellID] = 1;
+			return 1;
+		elseif app.CurrentCharacter.Spells[t.spellID] == 1 then
+			app.CurrentCharacter.Spells[t.spellID] = nil;
+			ATTAccountWideData.Spells[t.spellID] = nil;
+			for guid,characterData in pairs(ATTCharacterData) do
+				if characterData.Toys and characterData.Spells[t.spellID] then
+					ATTAccountWideData.Spells[t.spellID] = 1;
+				end
+			end
+		end
+		if app.AccountWideMounts and ATTAccountWideData.Spells[t.spellID] then return 2; end
+	end,
+	["b"] = function(t)
+		return (t.parent and t.parent.b) or 1;
+	end,
+	["name"] = function(t)
+		return select(1, GetSpellInfo(t.spellID)) or RETRIEVING_DATA;
+	end,
+	["tsmForItem"] = function(t)
+		if t.itemID then return string.format("i:%d", t.itemID); end
+		if t.parent and t.parent.itemID then return string.format("i:%d", t.parent.itemID); end
+	end,
+	["linkForItem"] = function(t)
+		return select(2, GetItemInfo(t.itemID)) or select(1, GetSpellLink(t.spellID));
+	end,
+};
+app.BaseMount = app.BaseObjectFields(mountFields);
+
+local fields = RawCloneData(mountFields);
+fields.link = mountFields.linkForItem;
+fields.tsm = mountFields.tsmForItem;
+app.BaseMountWithItemID = app.BaseObjectFields(fields);
+app.CreateMount = function(id, t)
+	if t and rawget(t, "itemID") then
+		return setmetatable(constructor(id, t, "spellID"), app.BaseMountWithItemID);
+	else
+		return setmetatable(constructor(id, t, "spellID"), app.BaseMount);
+	end
+end
+end)();
+
 -- NPC Lib
 (function()
 -- NPC Model Harvester (also acquires the displayID)
@@ -9420,9 +9487,17 @@ function app:GetDataCache()
 					end
 				end
 			end
-			for i,_ in pairs(fieldCache["itemID"]) do
-				if _[1].f and _[1].f == 100 and not self.mounts[i] then
-					self.mounts[i] = buildCategoryEntry(self, headers, _, app.CreateItem(tonumber(i)));
+			for i,_ in pairs(fieldCache["spellID"]) do
+				if _[1].filterID and _[1].filterID == 100 and not self.mounts[i] then
+					local mount = app.CreateMount(tonumber(i));
+					self.mounts[i] = buildCategoryEntry(self, headers, _, mount);
+					if mount.u and mount.u < 3 then
+						for j,o in ipairs(_) do
+							if o.itemID and not o.u or o.u >= 3 then
+								mount.u = nil;
+							end
+						end
+					end
 				end
 			end
 			insertionSort(self.g, sortByTextSafely);
