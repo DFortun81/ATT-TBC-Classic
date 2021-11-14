@@ -257,6 +257,7 @@ app.L = {
 		[638] = { 168, "Uldaman", app.asset("achievement_boss_archaedas") },
 		[688] = { 168, "Zul'Gurub", app.asset("achievement_boss_hakkar") },
 		[691] = { 168, "Zul'Aman", app.asset("achievement_boss_zuljin") },
+		[694] = { 168, "Serpentshrine Cavern", app.asset("achievement_boss_ladyvashj") },
 		[696] = { 168, "Tempest Keep", app.asset("achievement_character_bloodelf_male") },
 		[697] = { 168, "The Black Temple", app.asset("achievement_boss_illidan") },
 		
