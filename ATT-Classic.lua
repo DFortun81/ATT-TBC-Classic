@@ -9243,17 +9243,47 @@ function app:GetDataCache()
 					end
 				end
 			end
+			local sourceItems, sourceItemsByID = {}, {};
 			for j,o in ipairs(searchResults) do
-				local r = GetRelativeValue(o, "r");
-				if r then inst.r = r; end
-				local nmr = GetRelativeValue(o, "nmr");
-				if nmr then inst.nmr = nmr; end
-				local races = GetRelativeValue(o, "races");
-				if races then inst.races = races; end
-				local nmc = GetRelativeValue(o, "nmc");
-				if nmc then inst.nmc = nmc; end
-				local c = GetRelativeValue(o, "c");
-				if c then inst.c = c; end
+				if o.itemID then
+					local sourceItem = sourceItemsByID[o.itemID];
+					if not sourceItem then
+						sourceItem = {};
+						tinsert(sourceItems, sourceItem);
+						sourceItemsByID[o.itemID] = sourceItem;
+					end
+					
+					local r = GetRelativeValue(o, "r");
+					if r then sourceItem.r = r; end
+					local races = GetRelativeValue(o, "races");
+					if races then sourceItem.races = races; end
+					local c = GetRelativeValue(o, "c");
+					if c then sourceItem.c = c; end
+				end
+			end
+			local count = #sourceItems;
+			if count == 1 then
+				for key,value in pairs(sourceItems[1]) do
+					inst[key] = value;
+				end
+			elseif count == 2 then
+				local a, b = sourceItems[1].r, sourceItems[2].r;
+				if a == b then inst.r = a; end
+				a, b = sourceItems[1].races, sourceItems[2].races;
+				if a and b and #a == #b and containsAny(a, b) then inst.races = a; end
+				a, b = sourceItems[1].c, sourceItems[2].c;
+				if a and b and #a == #b and containsAny(a, b) then inst.c = a; end
+			elseif count > 2 then
+				print("Mount has more than 2 source items WTF", inst.spellID);
+			end
+			if inst.c and not containsValue(inst.c, app.ClassIndex) then
+				rawset(inst, "nmc", true); -- "Not My Class"
+			end
+			if inst.r and inst.r ~= app.FactionID then
+				rawset(inst, "nmr", true);	-- "Not My Race"
+			end
+			if inst.races and not containsValue(inst.races, app.RaceIndex) then
+				rawset(inst, "nmr", true);	-- "Not My Race"
 			end
 			inst.parent = header;
 			inst.progress = nil;
