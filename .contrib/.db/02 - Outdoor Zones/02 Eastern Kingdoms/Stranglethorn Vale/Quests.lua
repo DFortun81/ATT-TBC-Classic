@@ -101,11 +101,16 @@ _.Zones =
 				q(7838, {	-- Arena Grandmaster
 					["qg"] = 14508,	-- Short John Mithril
 					["coord"] = { 29.6, 47.4, STRANGLETHORN_VALE },
+					["cost"] = { { "i", 18706, 12 } },	-- Arena Master (trinket)
 					["repeatable"] = true,
-					["cost"] = {
-						{ "i", 18706, 12 },	-- Arena Master (trinket)
-					},
 					["groups"] = {
+						removeclassicphase(ach(396, {	-- Arena Grandmaster
+							["provider"] = { "i", 19024 },	-- Arena Grand Master
+							-- #if BEFORE WRATH
+							["description"] = "Complete Short John Mithril's quest to obtain the Arena Grand Master trinket. Keep it in your bank until achievements come out.\n\nProbably not a bad idea to knock this out before all the normies start farming for this.",
+							["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, GetItemCount(19024, true) > 0); end]],
+							-- #endif
+						})),
 						i(19024),	-- Arena Grand Master
 					},
 				}),

@@ -319,6 +319,9 @@ app.L = {
 		[134] = { 172, "Master in First Aid", "Interface\\Icons\\spell_holy_sealofsacrifice" },
 		[135] = { 172, "Grand Master in First Aid", "Interface\\Icons\\spell_holy_sealofsacrifice" },
 		
+		[389] = { 95, "Gurubashi Arena Master" },	-- Arena Master, icon from providers
+		[396] = { 95, "Gurubashi Arena Grand Master" },	-- Arena Grand Master, icon from providers
+		
 		[522] = { 201, "Somebody Likes Me", app.asset("achievement_reputation_01") },
 		[523] = { 201, "5 Exalted Reputations", app.asset("achievement_reputation_01") },
 		[524] = { 201, "10 Exalted Reputations", app.asset("achievement_reputation_02") },
