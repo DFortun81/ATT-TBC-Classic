@@ -478,8 +478,6 @@ app.L = {
 		[-19] = "Dragons of Nightmare",											-- Dragons of Nightmare (World Bosses)
 		[-20] = "Silithid Royalty",												-- Silithid Royalty
 		[-21] = "Captains",
-		[-22] = "Atal'ai Defenders",											-- Atal'ai Defenders
-		[-23] = "The Four Horsemen",											-- The Four Horsemen
 		[-27] = "Lower",														-- Lower (Blackrock Spire)
 		[-28] = "Upper",														-- Upper (Blackrock Spire)
 		[-29] = COMBATLOG_FILTER_STRING_NEUTRAL_UNITS,							-- Neutral
@@ -540,6 +538,8 @@ app.L = {
 		[-388] = "Main Gate",													-- Main Gate (Stratholme)
 		[-389] = "Service Entrance",											-- Service Entrance (Stratholme)
 		[-420] = "Tier 0.5 Sets",												-- Tier 0.5 Sets
+		[-422] = "Atal'ai Defenders",											-- Atal'ai Defenders
+		[-423] = "The Four Horsemen",											-- The Four Horsemen
 
 -- Blizzard Events and Anniversaries
 		[-531] = "Spirit of Competition",

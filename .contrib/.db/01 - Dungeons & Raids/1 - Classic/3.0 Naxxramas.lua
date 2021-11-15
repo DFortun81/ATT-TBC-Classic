@@ -1931,7 +1931,7 @@ _.Instances = { tier(CLASSIC_TIER, applylegacyclassicphase(PHASE_SIX, {
 						i(23021),	-- The Soul Harvester's Bindings
 						i(23073),	-- Boots of Displacement
 					}),
-					n(-23, {	-- The Four Horsemen
+					n(-423, {	-- The Four Horsemen
 						["qgs"] = {
 							16062,	-- Highlord Mograine <The Ashbringer>
 							16065,	-- Lady Blaumeux

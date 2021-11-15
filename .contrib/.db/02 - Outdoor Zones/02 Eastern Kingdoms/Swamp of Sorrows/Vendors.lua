@@ -30,7 +30,9 @@ _.Zones =
 				n(11874, {	-- Masat T'andr <Superior Leatherworker>
 					["coord"] = { 26.5, 31.4, SWAMP_OF_SORROWS },
 					["groups"] = {
-						i(15726),	-- Pattern: Green Dragonscale Breastplate
+						i(15726, {	-- Pattern: Green Dragonscale Breastplate (Old Version)
+							["timeline"] = { "removed 4.3.0" },
+						}),
 						i(12253),	-- Brilliant Red Cloak
 						i(12254),	-- Well Oiled Cloak
 					},
