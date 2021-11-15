@@ -32,9 +32,6 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						{ "i", 15994, 1 },	-- Thorium Widget
 						{ "i", 3829, 1 },	-- Frost Oil
 					},
-					["crs"] = {
-						14323,	-- Guard Slip'kik
-					},
 					["lvl"] = 56,
 				}),
 				q(7463, {	-- Arcane Refreshment
@@ -612,13 +609,13 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						i(18313),	-- Helm of Awareness
 						i(18306),	-- Gloves of Shadowy Mist
 					}),
-					un(PHASE_FIVE, n(16097, {	-- Isalien Summonable
+					applyclassicphase(PHASE_FIVE, n(16097, {	-- Isalien Summonable
 						["description"] = "This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.",
 						["cost"] = {
 							{ "i", 22050, 1 },	-- Brazier of Beckoning [Isalien]
 							{ "i", 22057, 1 },	-- Brazier of Invocation
 						},
-						["groups"] = bubbleDown({ ["u"] = PHASE_FIVE }, {
+						["groups"] = {
 							i(22315), 	-- Hammer of Revitalization
 							i(22314), 	-- Huntsman's Harpoon
 							i(22304), 	-- Ironweave Gloves
@@ -631,7 +628,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 								["itemID"] = 22345,	-- Totem of Rebirth
 								["classes"] = { SHAMAN },
 							},
-						}),
+						},
 					})),
 					n(11491, {	-- Old Ironbark
 						["description"] = "Talk to him for him to break down the door.",
@@ -661,34 +658,52 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					{ "i", 18249, 1 },	-- Crescent Key
 				},
 				["groups"] = {
+					n(COMMON_BOSS_DROPS, {
+						["description"] = "The following items can drop from any of the guards.",
+						["crs"] = {
+							14326,	-- Guard Mol'dar
+							14321,	-- Guard Fengus
+							14323,	-- Guard Slip'kik
+						},
+						["groups"] = {
+							i(18462),	-- Jagged Bone Fist
+							i(18463),	-- Ogre Pocket Knife
+							i(18460),	-- Unsophisticated Hand Cannon
+							i(18450),	-- Robe of Combustion
+							i(18451),	-- Hyena Hide Belt
+							i(18459),	-- Gallant's Wristguards
+							i(18458),	-- Modest Wristguards
+							i(18464),	-- Gordok Nose Ring
+						},
+					}),
 					n(14326, {	-- Guard Mol'dar
-						i(18498),	-- Hedgecutter
-						i(18462),	-- Jagged Bone Fist
-						i(18463),	-- Ogre Pocket Knife
-						i(18460),	-- Unsophisticated Hand Cannon
-						i(18496),	-- Heliotrope Cloak
-						i(18493),	-- Bulky Iron Spaulders
-						i(18494),	-- Denwatcher's Shoulders
-						i(18450),	-- Robe of Combustion
-						i(18451),	-- Hyena Hide Belt
-						i(18459),	-- Gallant's Wristguards
-						i(18458),	-- Modest Wristguards
-						i(18497),	-- Sublime Wristguards
-						i(18464),	-- Gordok Nose Ring
-						i(18268),	-- Gordok Inner Door Key
+						["description"] = "If you do not have a way to open the inner door, you can kill him for the Inner Door Key.\n\nDoing so will invalidate your Tribute Run.",
+						["groups"] = {
+							i(18498),	-- Hedgecutter
+							i(18496),	-- Heliotrope Cloak
+							i(18493),	-- Bulky Iron Spaulders
+							i(18494),	-- Denwatcher's Shoulders
+							i(18497),	-- Sublime Wristguards
+							i(18268),	-- Gordok Inner Door Key
+						},
 					}),
 					n(14322, {	-- Stomper Kreeg
 						i(18425),	-- Kreeg's Mug
+						-- #if AFTER 6.0.2
+						i(18464),	-- Gordok Nose Ring
+						-- #endif
+						n(VENDOR, {
+							["description"] = "After becoming the king, you can come back to Kreeg to buy some drinks.",
+							["groups"] = {
+								i(18269),	-- Gordok Green Grog
+								i(18284),	-- Kreeg's Stout Beatdown
+								i(18288),	-- Molasses Firewater
+								i(18287),	-- Evermurky
+							},
+						}),
 					}),
 					n(14321, {	-- Guard Fengus
-						i(18462),	-- Jagged Bone Fist
-						i(18463),	-- Ogre Pocket Knife
-						i(18460),	-- Unsophisticated Hand Cannon
-						i(18450),	-- Robe of Combustion
-						i(18451),	-- Hyena Hide Belt
-						i(18459),	-- Gallant's Wristguards
-						i(18458),	-- Modest Wristguards
-						i(18464),	-- Gordok Nose Ring
+						["description"] = "Avoid him and loot his chest for a key to open the door.",
 					}),
 					o(179501, {	-- Knot Thimblejack's Cache
 						["sourceQuest"] = 5525,	-- Free Knot!
@@ -715,19 +730,15 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						},
 					}),
 					n(14323, {	-- Guard Slip'kik
-						i(18498),	-- Hedgecutter
-						i(18462),	-- Jagged Bone Fist
-						i(18463),	-- Ogre Pocket Knife
-						i(18460),	-- Unsophisticated Hand Cannon
-						i(18496),	-- Heliotrope Cloak
-						i(18493),	-- Bulky Iron Spaulders
-						i(18494),	-- Denwatcher's Shoulders
-						i(18450),	-- Robe of Combustion
-						i(18451),	-- Hyena Hide Belt
-						i(18459),	-- Gallant's Wristguards
-						i(18458),	-- Modest Wristguards
-						i(18497),	-- Sublime Wristguards
-						i(18464),	-- Gordok Nose Ring
+						["description"] = "Trap him using a Frost Oil and a Thorium Widget.",
+						["sourceQuest"] = 1193,	-- A Broken Trap
+						["groups"] = {
+							i(18498),	-- Hedgecutter
+							i(18496),	-- Heliotrope Cloak
+							i(18493),	-- Bulky Iron Spaulders
+							i(18494),	-- Denwatcher's Shoulders
+							i(18497),	-- Sublime Wristguards
+						},
 					}),
 					n(14325, {	-- Captain Kromcrush
 						["description"] = "In order to get to this boss, you must use the Inner Door Key or have an engineer open the door using a Seaforium Charge.\n\nUse the Gordok Ogre Suit to skip him. (talk to him)",
@@ -872,7 +883,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						}),
 					}),
 					n(11487, {	-- Magister Kalendris
-						un(PHASE_FIVE, i(22309)),	-- Pattern: Big Bag of Enchantment
+						applyclassicphase(PHASE_FIVE, i(22309)),	-- Pattern: Big Bag of Enchantment
 						i(18397),	-- Elder Magus Pendant
 						i(18374),	-- Flamescarred Shoulders
 						i(18350),	-- Amplifying Cloak
