@@ -6,7 +6,7 @@ _.Zones =
 	m(EASTERN_KINGDOMS, {
 		m(WESTFALL, {
 			n(ZONE_DROPS, {
-				i(826, {  -- Brutish Riverpaw Axe
+				i(826, {	-- Brutish Riverpaw Axe
 					["cr"] = 124,	-- Riverpaw Brute
 				}),
 				i(1357, {	-- Captain Sander's Treasure Map
@@ -25,21 +25,23 @@ _.Zones =
 						519,	-- Slark
 					},
 				}),
-				i(1927, {  -- Deadmines Cleaver
+				-- #if AFTER 4.0.3
+				i(1927, {	-- Deadmines Cleaver
 					["cr"] = 594,	-- Defias Henchman
 				}),
-				i(1394, {  -- Driftwood Club
+				-- #endif
+				i(1394, {	-- Driftwood Club
 					["cr"] = 171,	-- Murloc Warrior
 				}),
-				i(4290, {  -- Dust Bowl
+				i(4290, {	-- Dust Bowl
 					["cr"] = 832,	-- Dust Devil
 				}),
-				i(5669, {  -- Dust Devil Debris
+				i(5669, {	-- Dust Devil Debris
 					["questID"] = 1076,	-- Devils in Westfall
 					["cr"] = 832,	-- Dust Devil
 					["races"] = ALLIANCE_ONLY,
 				}),
-				i(1405, {  -- Foamspittle Staff
+				i(1405, {	-- Foamspittle Staff
 					["cr"] = 517,	-- Murloc Oracle
 				}),
 				i(725, {	-- Gnoll Paw
@@ -68,10 +70,10 @@ _.Zones =
 						454,	-- Young Goretusk
 					},
 				}),
-				i(1401, {  -- Green Tea Leaf
+				i(1401, {	-- Green Tea Leaf
 					["cr"] = 501,	-- Riverpaw Herbalist
 				}),
-				i(2087, {  -- Hard Crawler Carapace
+				i(2087, {	-- Hard Crawler Carapace
 					["cr"] = 830,	-- Sand Crawler
 				}),
 				i(1274, {	-- Hops
@@ -83,10 +85,10 @@ _.Zones =
 						480,	-- Rusty Harvest Golem
 					},
 				}),
-				i(2088, {  -- Long Crawler Limb
+				i(2088, {	-- Long Crawler Limb
 					["cr"] = 831,	-- Sea Crawler
 				}),
-				i(2091, {  -- Magic Dust
+				i(2091, {	-- Magic Dust
 					["cr"] = 832,	-- Dust Devil
 				}),
 				i(732, {	-- Okra
@@ -100,10 +102,10 @@ _.Zones =
 						480,	-- Rusty Harvest Golem
 					},
 				}),
-				i(1190, {  -- Overseer's Cloak
+				i(1190, {	-- Overseer's Cloak
 					["cr"] = 125,	-- Riverpaw Overseer
 				}),
-				i(1189, {  -- Overseer's Ring
+				i(1189, {	-- Overseer's Ring
 					["cr"] = 125,	-- Riverpaw Overseer
 				}),
 				i(5771, {	-- Pattern: Red Linen Bag
@@ -131,7 +133,6 @@ _.Zones =
 					},
 				}),
 				i(915, {	-- Red Silk Bandana
-					["questID"] = 214,	-- Red Silk Bandanas
 					["description"] = "Can also drop from any Defias mob in the Deadmines.",
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
@@ -140,28 +141,28 @@ _.Zones =
 						594,	-- Defias Henchman
 					},
 				}),
-				i(821, {  -- Riverpaw Leather Vest
+				i(821, {	-- Riverpaw Leather Vest
 					["cr"] = 123,	-- Riverpaw Mongrel
 				}),
-				i(1391, {  -- Riverpaw Mystic Staff
+				i(1391, {	-- Riverpaw Mystic Staff
 					["cr"] = 453,	-- Riverpaw Mystic
 				}),
-				i(832, {  -- Silver Defias Belt
+				i(832, {	-- Silver Defias Belt
 					["cr"] = 121,	-- Defias Pathstalker
 				}),
-				i(820, {  -- Slicer Blade
+				i(820, {	-- Slicer Blade
 					["cr"] = 115,	-- Harvest Reaper
 				}),
-				i(816, {  -- Small Hand Blade
+				i(816, {	-- Small Hand Blade
 					["cr"] = 36,	-- Harvest Golem
 				}),
-				i(1933, {  -- Staff of Conjuring
+				i(1933, {	-- Staff of Conjuring
 					["cr"] = 619,	-- Defias Conjurer
 				}),
-				i(2327, {  -- Sturdy Leather Bracers
+				i(2327, {	-- Sturdy Leather Bracers
 					["cr"] = 480,	-- Rusty Harvest Golem
 				}),
-				i(827, {  -- Wicked Blackjack
+				i(827, {	-- Wicked Blackjack
 					["crs"] = {
 						122,	-- Defias Highwayman
 						449,	-- Defias Knuckleduster
