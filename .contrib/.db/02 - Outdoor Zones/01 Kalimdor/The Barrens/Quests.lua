@@ -1374,7 +1374,7 @@ _.Zones =
 					["classes"] = { WARLOCK },
 					["lvl"] = 40,
 					["groups"] = {
-						recipe(5784),	-- Summon Felsteed
+						mount(5784),	-- Summon Felsteed
 					},
 				}),
 				q(5041, {	-- Supplies for the Crossroads

@@ -9242,22 +9242,31 @@ function app:GetDataCache()
 					end
 				end
 			end
-			local sourceItems, sourceItemsByID = {}, {};
+			local sourceItems, sourceItemsByID, sourceSpellsByID = {}, {}, {};
 			for j,o in ipairs(searchResults) do
+				local source;
 				if o.itemID then
-					local sourceItem = sourceItemsByID[o.itemID];
-					if not sourceItem then
-						sourceItem = {};
-						tinsert(sourceItems, sourceItem);
-						sourceItemsByID[o.itemID] = sourceItem;
+					source = sourceItemsByID[o.itemID];
+					if not source then
+						source = {};
+						tinsert(sourceItems, source);
+						sourceItemsByID[o.itemID] = source;
 					end
-					
+				elseif o.spellID then
+					source = sourceSpellsByID[o.spellID];
+					if not source then
+						source = {};
+						tinsert(sourceItems, source);
+						sourceSpellsByID[o.spellID] = source;
+					end
+				end
+				if source then
 					local r = GetRelativeValue(o, "r");
-					if r then sourceItem.r = r; end
+					if r then source.r = r; end
 					local races = GetRelativeValue(o, "races");
-					if races then sourceItem.races = races; end
+					if races then source.races = races; end
 					local c = GetRelativeValue(o, "c");
-					if c then sourceItem.c = c; end
+					if c then source.c = c; end
 				end
 			end
 			local count = #sourceItems;

@@ -405,7 +405,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					},
 					["lvl"] = 60,
 					["group"] = {
-						recipe(23161),	-- Summon Dreadsteed
+						mount(23161),	-- Summon Dreadsteed
 					},
 				}),
 				{
@@ -432,9 +432,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["description"] = "This item is utterly worthless, however there was a rumor that this item could be used to obtain the original Ashbringer via fishing.\n\nThis can be found in various places throughout all the wings of Dire Maul.\n\nDire Maul North: Southwest corner of Guard Fengus's courtyard or next to King Gordok and Cho'Rush the Observer.\n\nDire Maul East: Eastern wall of the garden, the ledge above the garden, next to Lethtendris, or next to Alzzin the Wildshaper.\n\nDire Maul West: By the southern generator in Immol'thar's room.",
 				}),
 				i(12662),	-- Demonic Rune
-				{
-					["itemID"] = 18250,	-- Gordok Shackle Key
-					["questID"] = 5525,	-- Free Knot!
+				i(18250, {	-- Gordok Shackle Key
 					["description"] = "NOTE: Do NOT Free Knot if you are doing a Tribute Run. He runs away.",
 					["crs"] = {
 						14325,	-- Captain Kromcrush
@@ -448,13 +446,12 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						11450,	-- Gordok Reaver
 						11448,	-- Gordok Warlock
 					},
-				},
+				}),
 				i(18640),	-- Happy Fun Rock
 				i(18333),	-- Libram of Focus
 				i(18334),	-- Libram of Protection
 				i(18332),	-- Libram of Rapidity
-				applyclassicphase(PHASE_FIVE, {
-					["itemID"] = 21982,	-- Ogre Warbeads
+				applyclassicphase(PHASE_FIVE, i(21982, {	-- Ogre Warbeads
 					["crs"] = {
 						11441,	-- Gordok Brute
 						14351,	-- Gordok Bushwacker
@@ -466,14 +463,24 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						11450,	-- Gordok Reaver
 						11448,	-- Gordok Warlock
 					},
-				}),
+				})),
 			}),
 			n(COMMON_BOSS_DROPS, {
 				["description"] = "The following items can drop from any boss in Dire Maul.",
 				["groups"] = {
+					i(18357),	-- Codex of Defense
+					i(18360),	-- Harnessing Shadows
+					i(18401),	-- Foror's Compendium of Dragon Slaying
+					i(18363),	-- Frost Shock and You
+					i(18356),	-- Garona: A Study on Stealth and Treachery
+					i(18362),	-- Holy Bologna: What the Light Won't Tell You
+					i(18358),	-- The Arcanist's Cookbook
+					i(18364),	-- The Emerald Dream
+					i(18361),	-- The Greatest Race of Hunters
+					i(18359),	-- The Light and How to Swing It
+					--[[
 					{
 						["itemID"] = 18357,	-- Codex of Defense
-						["questID"] = 7499,	-- Codex of Defense
 						["classes"] = { WARRIOR },
 					},
 					{
@@ -520,6 +527,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						["questID"] = 7501,	-- The Light and How to Swing It
 						["classes"] = { PALADIN },
 					},
+					]]--
 				},
 			}),
 			n(-12, {	-- Warpwood Quarter [East - Demon]
@@ -542,7 +550,6 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 							},
 						}),
 						i(18603, {	-- Satyr Blood
-							["questID"] = 7581,	-- The Prison's Bindings
 							["classes"] = { WARLOCK },
 							["crs"] = {
 								11454,	-- Wildspawn Betrayer
@@ -579,22 +586,14 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						}),
 					}),
 					n(14327, {	-- Lethtendris
-						{
-							["itemID"] = 18426,	-- Lethtendris's Web
-							["allianceQuestID"] = 7488,	-- Lethtendris's Web
-							["hordeQuestID"] = 7489,	-- Lethtendris's Web
-						},
+						i(18426),	-- Lethtendris's Web
 						i(18311),	-- Quel'dorei Channeling Rod
 						i(18301),	-- Lethtendris' Wand
 						i(18325),	-- Felhide Cap
 						i(18302),	-- Band of Vigor
 					}),
 					n(13280, {	-- Hydrospawn
-						{
-							["itemID"] = 18299,	-- Hydrospawn Essence
-							["questID"] = 7463,	-- Arcane Refreshment
-							["classes"] = { MAGE },
-						},
+						i(18299),	-- Hydrospawn Essence
 						i(18324),	-- Waveslicer
 						i(18317),	-- Tempest Talisman
 						i(18305),	-- Breakwater Legguards
@@ -620,6 +619,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 							i(22314), 	-- Huntsman's Harpoon
 							i(22304), 	-- Ironweave Gloves
 							i(22472), 	-- Boots of Ferocity
+							--[[
 							{
 								["itemID"] = 22401,	-- Libram of Hope
 								["classes"] = { PALADIN },
@@ -628,17 +628,18 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 								["itemID"] = 22345,	-- Totem of Rebirth
 								["classes"] = { SHAMAN },
 							},
+							]]--
+							i(22401),	-- Libram of Hope
+							i(22345),	-- Totem of Rebirth
 						},
 					})),
 					n(11491, {	-- Old Ironbark
 						["description"] = "Talk to him for him to break down the door.",
 					}),
 					n(11492, {	-- Alzzin the Wildshaper
-						{
-							["itemID"] = 18501,	-- Felvine Shard
-							["questID"] = 5526,	-- Shards of the Felvine
+						i(18501, {	-- Felvine Shard
 							["description"] = "Looted from the Felvine Shard object that spawns under the vines near the last boss in Dire Maul East.",
-						},
+						}),
 						i(18321),	-- Energetic Rod
 						i(18310),	-- Fiendish Machete
 						i(18328),	-- Shadewood Cloak
@@ -692,7 +693,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						-- #if AFTER 6.0.2
 						i(18464),	-- Gordok Nose Ring
 						-- #endif
-						n(VENDOR, {
+						n(VENDORS, {
 							["description"] = "After becoming the king, you can come back to Kreeg to buy some drinks.",
 							["groups"] = {
 								i(18269),	-- Gordok Green Grog
@@ -943,11 +944,9 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						},
 					}),
 					n(11486, {	-- Prince Tortheldrin
-						{
-							["itemID"] = 18336,	-- Gauntlet of Gordok Might
-							["questID"] = 7703,	-- Unfinished Gordok Business
+						i(18336, {	-- Gauntlet of Gordok Might
 							["description"] = "In the corner of the room that the Prince is in, next to the bookshelves, there is a small chest on the ground that contains the gauntlet. You must kill the Prince in order for the chest to be interactable.",
-						},
+						}),
 						i(18392),	-- Distracting Dagger
 						i(18396),	-- Mind Carver
 						i(18376),	-- Timeworn Mace

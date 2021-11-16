@@ -707,34 +707,6 @@ _.Skills =
 		["lvl"] = 40,
 		["cost"] = 200000,
 	},
-	-- #endif
-	{
-		["recipeID"] = 23214,	-- Summon Charger
-		["classes"] = { PALADIN },
-		["races"] = { HUMAN, DWARF },
-		["sourceQuest"] = 7647,	-- Judgment and Redemption
-		["lvl"] = 60,
-	},
-	{
-		["recipeID"] = 23161,	-- Summon Dreadsteed
-		["classes"] = { WARLOCK },
-		["sourceQuest"] = 7631,	-- Dreadsteed of Xoroth
-		["lvl"] = 60,
-	},
-	{
-		["recipeID"] = 5784,	-- Summon Felsteed
-		["classes"] = { WARLOCK },
-		["sourceQuest"] = 4490,	-- Summon Felsteed
-		["lvl"] = 40,
-	},
-	{
-		["recipeID"] = 13819,	-- Summon Warhorse
-		["classes"] = { PALADIN },
-		["races"] = { HUMAN, DWARF },
-		["sourceQuest"] = 1661,	-- The Tome of Nobility
-		["lvl"] = 40,
-	},
-	-- #if CLASSIC
 	{
 		["recipeID"] = 828,	-- Tiger Riding
 		["races"] = ALLIANCE_ONLY,

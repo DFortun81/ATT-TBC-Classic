@@ -1018,11 +1018,7 @@ map = function(id, t)									-- Create a MAP Object
 end
 m = map;												-- Create a MAP Object (alternative shortcut)
 mount = function(id, t)									-- Create a MOUNT Object, which is just a spellID with a filter.
-	-- #if BEFORE WRATH
-	return struct("spellID", id, t);
-	-- #else
 	return struct("mountID", id, t);
-	-- #endif
 end
 npc = function(id, t)									-- Create an NPC Object (negative indicates that it is custom)
 	if not id then

@@ -933,7 +933,7 @@ _.Zones =
 					["classes"] = { PALADIN },
 					["lvl"] = 40,
 					["groups"] = {
-						recipe(13819),	-- Summon Warhorse
+						mount(13819),	-- Summon Warhorse
 					},
 				}),
 				q(2607, {	-- The Touch of Zanzil

@@ -14,26 +14,24 @@ _.Instances = { tier(CLASSIC_TIER, {
 		["lvl"] = 58,
 		["groups"] = {
 			n(QUESTS, {
-				un(PHASE_FOUR, q(8259, {	-- A More Fitting Reward (Post 1.7, Phase 4)
+				applyclassicphase(PHASE_FOUR, q(8259, {	-- A More Fitting Reward (Post 1.7, Phase 4)
 					["qg"] = 13417,	-- Sagorne Creststrider <Shaman Trainer>
 					["sourceQuest"] = 7668,	-- The Darkreaver Menace (Original: 1.4 till 1.7 only)
 					["altQuests"] = {
 						8258,	-- The Darkreaver Menace (New)
 					},
 					["coord"] = { 38.7, 35.9, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
-						un(PHASE_FOUR, i(20134)), 	-- Skyfury Helm
+						i(20134), 	-- Skyfury Helm
 					},
 				})),
 				q(5803, {	-- Araj's Scarab (A)
 					["qg"] = 11056,	-- Alchemist Arbington
 					["sourceQuest"] = 5801,	-- Fire Plume Forged (A)
 					["coord"] = { 42.7, 83.8, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 14610, 1 },	-- Araj's Scarab
@@ -44,7 +42,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11057,	-- Apothecary Dithers
 					["sourceQuest"] = 5802,	-- Fire Plume Forged (H)
 					["coord"] = { 83.3, 69.2, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 14610, 1 },	-- Araj's Scarab
@@ -54,7 +51,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 				q(5341, {	-- Barov Family Fortune
 					["qg"] = 11022,	-- Alexi Barov <House of Barov>
 					["coord"] = { 83.06, 71.6, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 13471, 1 },	-- The Deed to Brill
@@ -67,7 +63,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 				q(5343, {	-- Barov Family Fortune
 					["qg"] = 11023,	-- Weldon Barov <House of Barov>
 					["coord"] = { 43.5, 83.7, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 13471, 1 },	-- The Deed to Brill
@@ -81,7 +76,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11036,	-- Leonid Barthalomew the Revered <The Argent Dawn>
 					["sourceQuest"] = 5522,	-- Leonid Barthalomew
 					["coord"] = { 81.73, 57.83, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["cost"] = {
 						{ "i", 13761, 1 },	-- Frozen Eggs
 					},
@@ -91,7 +85,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11035,	-- Betina Bigglezink <The Argent Dawn>
 					["sourceQuest"] = 5531,	-- Betina Bigglezink
 					["coord"] = { 81.5, 59.7, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["lvl"] = 57,
 					["groups"] = {
 						{
@@ -107,7 +100,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11216,	-- Eva Sarkhoff
 					["description"] = "Talk to Eva until she offers the quest.",
 					["coord"] = { 70.2, 73.7, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["cr"] = 11261,	-- Doctor Theolen Krastinov <The Butcher>
 					["lvl"] = 55,
 				}),
@@ -115,7 +107,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 5411,	-- Krinkle Goodsteel <Blacksmithing Supplies>
 					["sourceQuest"] = 5538,	-- Mold Rhymes With...
 					["coord"] = { 51.5, 28.8, TANARIS },
-					["maps"] = { TANARIS, UNGORO_CRATER },
+					["maps"] = { UNGORO_CRATER },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 14645, 1 },	-- Unfinished Skeleton Key
@@ -126,7 +118,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 5411,	-- Krinkle Goodsteel <Blacksmithing Supplies>
 					["sourceQuest"] = 5514,	-- Mold Rhymes With...
 					["coord"] = { 51.5, 28.8, TANARIS },
-					["maps"] = { TANARIS, UNGORO_CRATER },
+					["maps"] = { UNGORO_CRATER },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 14645, 1 },	-- Unfinished Skeleton Key
@@ -147,7 +139,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11216,	-- Eva Sarkhoff
 					["sourceQuest"] = 5515,	-- Krastinov's Bag of Horrors
 					["coord"] = { 70.2, 73.7, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["cr"] = 10506,	-- Kirtonos the Herald
 					["cost"] = {
 						{ "i", 13523, 1 },	-- Blood of Innocents
@@ -163,18 +154,38 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11216,	-- Eva Sarkhoff
 					["sourceQuest"] = 5382,	-- Doctor Theolen Krastinov, the Butcher
 					["coord"] = { 70.2, 73.7, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["cr"] = 10503,	-- Jandice Barov
 					["cost"] = {
 						{ "i", 13725, 1 },	-- Krastinov's Bag of Horrors
 					},
 					["lvl"] = 55,
 				}),
+				q(7647, {	-- Judgment and Redemption
+					["qg"] = 928,	-- Lord Grayson Shadowbreaker <Paladin Trainer>
+					["sourceQuest"] = 7646,	-- The Divination Scryer
+					["coord"] = { 37.6, 32.6, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["classes"] = { PALADIN },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 60,
+					["groups"] = {
+						objective(1, {	-- 0/1 Charger's Redeemed Soul
+							["provider"] = { "i", 18799 },	-- Charger's Redeemed Soul
+						}),
+						objective(2, {	-- 0/1 Blessed Arcanite Barding
+							["provider"] = { "i", 18792 },	-- Blessed Arcanite Barding
+						}),
+						mount(23214, {	-- Summon Charger
+							["classes"] = { PALADIN },
+							["races"] = ALLIANCE_ONLY,
+							["lvl"] = 60,
+						}),
+					},
+				}),
 				q(5522, {	-- Leonid Barthalomew
 					["qg"] = 10267,	-- Tinkee Steamboil
 					["sourceQuest"] = 4735,	-- Egg Collection
 					["coord"] = { 65.2, 23.8, BURNING_STEPPES },
-					["maps"] = { BURNING_STEPPES },
 					["cost"] = {
 						{ "i", 13761, 1 },	-- Frozen Eggs
 					},
@@ -185,7 +196,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["sourceQuest"] = 5462,	-- The Dying, Ras Frostwhisper
 					["description"] = "This is the symbol on the floor in Baron Rivendare's room in Stratholme.",
 					["coord"] = { 81.7, 57.8, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["cost"] = {
 						{ "i", 13585, 1 },	-- Keepsake of Remembrance
 					},
@@ -201,7 +211,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11056,	-- Alchemist Arbington
 					["sourceQuest"] = 5537,	-- Skeletal Fragments (A)
 					["coord"] = { 42.66, 83.77, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 14628, 1 },	-- Imbued Skeletal Fragments
@@ -213,7 +222,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11057,	-- Apothecary Dithers
 					["sourceQuest"] = 964,	-- Skeletal Fragments (H)
 					["coord"] = { 83.3, 69.2, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 14628, 1 },	-- Imbued Skeletal Fragments
@@ -224,7 +232,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 				q(5529, {	-- Plagued Hatchlings
 					["qg"] = 11035,	-- Betina Bigglezink <The Argent Dawn>
 					["coord"] = { 81.47, 59.66, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["cr"] = 10678,	-- Plagued Hatchling
 					["lvl"] = 55,
 				}),
@@ -232,7 +239,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 10838,	-- Commander Ashlam Valorfist
 					["sourceQuest"] = 5097,	-- All Along the Watchtowers (A)
 					["coord"] = { 42.7, 84.0, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 55,
 				}),
@@ -240,7 +246,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 10837,	-- High Executor Derrington
 					["sourceQuest"] = 5098,	-- All Along the Watchtowers (H)
 					["coord"] = { 83.1, 68.9, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 				}),
@@ -248,7 +253,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11056,	-- Alchemist Arbington
 					["sourceQuest"] = 5533,	-- Scholomance (A)
 					["coord"] = { 42.66, 83.77, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 14619, 15 },	-- Skeletal Fragments
@@ -259,7 +263,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11057,	-- Apothecary Dithers
 					["sourceQuest"] = 838,	-- Scholomance
 					["coord"] = { 83.3, 69.2, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 14619, 15 },	-- Skeletal Fragments
@@ -270,7 +273,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11036,	-- Leonid Barthalomew the Revered <The Argent Dawn>
 					["sourceQuest"] = 5464,	-- Menethil's Gift (2/2)
 					["coord"] = { 81.7, 57.8, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["cost"] = {
 						{ "i", 13624, 1 },	-- Soulbound Keepsake
 					},
@@ -281,7 +283,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["sourceQuest"] = 7667,	-- Material Assistance
 					["cr"] = 14516,	-- Death Knight Darkreaver
 					["coord"] = { 38.7, 35.9, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
@@ -293,7 +294,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(18807), 	-- Helm of Latent Power
 					},
 				}),
-				un(PHASE_FOUR, q(8258, {	-- The Darkreaver Menace (Post 1.7, Phase 4)
+				applyclassicphase(PHASE_FOUR, q(8258, {	-- The Darkreaver Menace (Post 1.7, Phase 4)
 					["qg"] = 13417,	-- Sagorne Creststrider <Shaman Trainer>
 					["sourceQuest"] = 7667,	-- Material Assistance
 					["altQuests"] = {
@@ -301,7 +302,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 					["cr"] = 14516,	-- Death Knight Darkreaver
 					["coord"] = { 38.7, 35.9, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
@@ -310,14 +310,13 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 					["lvl"] = 55,
 					["groups"] = {
-						un(PHASE_FOUR, i(20134)), 	-- Skyfury Helm
+						i(20134), 	-- Skyfury Helm
 					},
 				})),
 				q(5462, {	-- The Dying, Ras Frostwhisper
 					["qg"] = 11286,	-- Magistrate Marduke
 					["sourceQuest"] = 5461,	-- The Human, Ras Frostwhisper
 					["coord"] = { 70.6, 74.1, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["cost"] = {
 						{ "i", 13585, 1 },	-- Keepsake of Remembrance
 					},
@@ -327,7 +326,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11286,	-- Magistrate Marduke
 					["sourceQuest"] = 5384,	-- Kirtonos the Herald
 					["coord"] = { 70.6, 74.1, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["cost"] = {
 						{ "i", 13544, 1 },	-- Spectral Essence
 						{ "i", 13585, 1 },	-- Keepsake of Remembrance
@@ -345,7 +343,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 10838,	-- Commander Ashlam Valorfist
 					["sourceQuest"] = 5803,	-- Araj's Scarab
 					["coord"] = { 42.7, 84.0, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
@@ -360,7 +357,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 10837,	-- High Executor Derrington
 					["sourceQuest"] = 5804,	-- Araj's Scarab
 					["coord"] = { 83.1, 68.9, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
@@ -375,7 +371,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11022,	-- Alexi Barov <House of Barov>
 					["sourceQuest"] = 5341,	-- Barov Family Fortune
 					["coord"] = { 83.06, 71.6, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 13469, 1 },	-- Head of Weldon Barov
@@ -395,7 +390,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11023,	-- Weldon Barov <House of Barov>
 					["sourceQuest"] = 5343,	-- Barov Family Fortune
 					["coord"] = { 43.5, 83.7, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 13470, 1 },	-- Head of Alexi Barov
@@ -415,7 +409,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11286,	-- Magistrate Marduke
 					["sourceQuest"] = 5465,	-- Soulbound Keepsake
 					["coord"] = { 70.6, 74.1, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["cr"] = 10508,	-- Ras Frostwhisper
 					["cost"] = {
 						{ "i", 13752, 1 },	-- Soulbound Keepsake
@@ -431,7 +424,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 				}),
 			}),
 			n(ZONE_DROPS, {
-				un(PHASE_SIX, i(22526)),	-- Bone Fragments
+				applyclassicphase(PHASE_SIX, i(22526)),	-- Bone Fragments
 				i(16255, {	-- Formula: Enchant 2H Weapon - Major Spirit
 					["cr"] = 10469,	-- Scholomance Adept
 				}),
@@ -473,15 +466,10 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(18701),	-- Innervating Band
 			}),
 			n(14861, {	-- Blood Steward of Kirtonos
-				{
-					["itemID"] = 13523,	-- Blood of Innocents
-					["questID"] = 5384,	-- Kirtonos the Herald
-				},
+				i(13523),	-- Blood of Innocents
 			}),
 			{
 				["itemID"] = 13450,	-- The Deed to Southshore
-				["allianceQuestID"] = 5343,	-- Barov Family Fortune
-				["hordeQuestID"] = 5341,	-- Barov Family Fortune
 				["description"] = "Can be found in the very back of the first room hidden behind some bookshelves.",
 			},
 			n(10506, { 	-- Kirtonos the Herald
@@ -503,19 +491,11 @@ _.Instances = { tier(CLASSIC_TIER, {
 			}),
 			{
 				["itemID"] = 13451,	-- The Deed to Tarren Mill
-				["allianceQuestID"] = 5343,	-- Barov Family Fortune
-				["hordeQuestID"] = 5341,	-- Barov Family Fortune
 				["description"] = "Can be found on the table in the back corner just before you enter the dragon whelpling room or travel downstairs to fight Jandice Barov.",
 			},
 			n(10503, {	-- Jandice Barov
-				{
-					["itemID"] = 13725,	-- Krastinov's Bag of Horrors
-					["questID"] = 5515,	-- Krastinov's Bag of Horrors
-				},
-				{
-					["itemID"] = 13523,	-- Blood of Innocents
-					["questID"] = 5384,	-- Kirtonos the Herald
-				},
+				i(13725),	-- Krastinov's Bag of Horrors
+				i(13523),	-- Blood of Innocents
 				o(180794, {	-- Journal of Jandice Barov
 					["description"] = "Jandice Barov drops this item when killed, which teaches Felcloth Bag. You must be a tailor of skill 285 or higher to learn this recipe.",
 					["groups"] = {
@@ -526,7 +506,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 				i(14541),	-- Barovian Family Sword
-				un(PHASE_FIVE, i(22394)),	-- Staff of Metanoia
+				applyclassicphase(PHASE_FIVE, i(22394)),	-- Staff of Metanoia
 				i(18689),	-- Phantasmal Cloak
 				i(16701),	-- Dreadmist Mantle
 				i(14548),	-- Royal Cap Spaulders
@@ -549,23 +529,13 @@ _.Instances = { tier(CLASSIC_TIER, {
 			}),
 			n(14516, {	-- Death Knight Darkreaver
 				["description"] = "Part of the Paladin's Epic Mount quest chain.",
+				["cost"] = { { "i", 18746 } },	-- Divination Scryer
 				["groups"] = {
-					{
-						["itemID"] = 18749,	-- Charger's Lost Soul
-						["classes"] = { PALADIN },
-						["groups"] = {
-							{
-								["itemID"] = 18799,	-- Charger's Redeemed Soul
-								["questID"] = 7647,	-- Judgment and Redemption
-							},
-						},
-					},
-					{
-						["itemID"] = 18880,	-- Darkreaver's Head
-						["questID"] = 8258,	-- The Darkreaver Menace
-						["classes"] = { SHAMAN },
-						["races"] = HORDE_ONLY,
-					},
+					i(18799, {	-- Charger's Redeemed Soul
+						["cost"] = { { "i", 18749 } },	-- Charger's Lost Soul
+					}),
+					i(18749),	-- Charger's Lost Soul
+					i(18880),	-- Darkreaver's Head
 					i(18759),	-- Malicious Axe
 					i(18761),	-- Oblivion's Touch
 					i(18758),	-- Specter's Blade
@@ -581,22 +551,13 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(14577),	-- Skullsmoke Pants
 			}),
 			n(10508, {	-- Ras Frostwhisper
-				{
-					["itemID"] = 13626,	-- Human Head of Ras Frostwhisper
-					["questID"] = 5466,	-- The Lich, Ras Frostwhisper
-				},
-				{
-					["itemID"] = 12736,	-- Frostwhisper's Embalming Fluid
-					["questID"] = 5067,	-- Leggings of Arcana
+				i(13626),	-- Human Head of Ras Frostwhisper
+				i(12736, {	-- Frostwhisper's Embalming Fluid
 					["description"] = "Can be found inside the chemistry lab in Scholomance, check the vials.",
-					["repeatable"] = true,
-				},
-				{
-					["itemID"] = 13471,	-- The Deed to Brill
-					["allianceQuestID"] = 5343,	-- Barov Family Fortune
-					["hordeQuestID"] = 5341,	-- Barov Family Fortune
+				}),
+				i(13471, {	-- The Deed to Brill
 					["description"] = "Can be found along the wall in Ras Frostwhisper's room.",
-				},
+				}),
 				i(13521),	-- Recipe: Flask of Supreme Power
 				i(14487),	-- Bonechill Hammer
 				i(13952),	-- Iceblade Hacker
@@ -612,13 +573,13 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(14522),	-- Maelstrom Leggings
 				i(18694),	-- Shadowy Mail Greaves
 			}),
-			un(PHASE_FIVE, n(16118, {	-- Kormok
+			applyclassicphase(PHASE_FIVE, n(16118, {	-- Kormok
 				["description"] = "This boss can be summoned using the Brazier of Beckoning or the Brazier of Invocation, which can summon any of the spirits.",
 				["cost"] = {
 					{ "i", 22052, 1 },	-- Brazier of Beckoning [Kormok]
 					{ "i", 22057, 1 },	-- Brazier of Invocation
 				},
-				["groups"] = bubbleDown({ ["u"] = PHASE_FIVE }, {
+				["groups"] = {
 					i(21984),	-- Left Piece of Lord Valthalak's Amulet
 					i(22046),	-- Right Piece of Lord Valthalak's Amulet
 					i(22332),	-- Blade of Necromancy
@@ -626,7 +587,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					i(22303),	-- Ironweave Pants
 					i(22326),	-- Amalgam's Band
 					i(22331),	-- Band of the Steadfast Hero
-				}),
+				},
 			})),
 			n(COMMON_BOSS_DROPS, {
 				["description"] = "The following items can drop from any of the mini-bosses in the crypt before fighting Darkmaster Gandling. The bosses other than Lady Illucia Barov have an item or two exclusive to their own drop tables.",
@@ -664,18 +625,15 @@ _.Instances = { tier(CLASSIC_TIER, {
 					i(14632),	-- Necropile Leggings
 					i(14631),	-- Necropile Boots
 					i(18684),	-- Dimly Opalescent Ring
-					un(PHASE_FIVE, i(23201)),	-- Libram of Divinity
-					un(PHASE_FIVE, i(23200)),	-- Totem of Sustaining
+					applyclassicphase(PHASE_FIVE, i(23201)),	-- Libram of Divinity
+					applyclassicphase(PHASE_FIVE, i(23200)),	-- Totem of Sustaining
 				},
 			}),
 			n(10505, {	-- Instructor Malicia
 				i(16710),	-- Shadowcraft Bracers
 			}),
 			n(11261, {	-- Doctor Theolen Krastinov <The Butcher>
-				{
-					["itemID"] = 13523,	-- Blood of Innocents
-					["questID"] = 5384,	-- Kirtonos the Herald
-				},
+				i(13523),	-- Blood of Innocents
 				i(16684),	-- Magister's Gloves
 				i(14617),	-- Sawbones Shirt
 			}),
@@ -686,12 +644,9 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(16716),	-- Wildheart Belt
 			}),
 			n(10504, {	-- Lord Alexi Barov
-				{
-					["itemID"] = 13448,	-- The Deed to Caer Darrow
-					["allianceQuestID"] = 5343,	-- Barov Family Fortune
-					["hordeQuestID"] = 5341,	-- Barov Family Fortune
+				i(13448, {	-- The Deed to Caer Darrow
 					["description"] = "Can be found right next to Alexi Barov.",
-				},
+				}),
 				i(16722),	-- Lightforge Bracers
 			}),
 			n(1853, {	-- Darkmaster Gandling
@@ -716,7 +671,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					i(13951),	-- Vigorsteel Vambraces
 					i(13950),	-- Detention Strap
 					i(13398),	-- Boots of the Shrieker
-					un(PHASE_FIVE, i(22433)),	-- Don Mauricio's Band of Domination
+					applyclassicphase(PHASE_FIVE, i(22433)),	-- Don Mauricio's Band of Domination
 					applyclassicphase(PHASE_THREE, i(19276)),	-- Ace of Portals
 				},
 			}),
