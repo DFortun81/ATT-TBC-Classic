@@ -3294,7 +3294,7 @@ local categoryFields = {
 	["text"] = function(t)
 		local data = L.ACHIEVEMENT_CRITERIA_DATA[t.achievementCategoryID];
 		if data then return data[2]; end
-		return RETRIEVING_DATA;
+		return RETRIEVING_DATA .. " achcat:" .. t.achievementCategoryID;
 	end,
 	["icon"] = function(t)
 		return app.asset("Category_Achievements");
