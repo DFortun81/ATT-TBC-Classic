@@ -646,6 +646,8 @@ local NPCNameFromID = setmetatable({}, { __index = function(t, id)
 			rawset(t, id, title);
 			return title;
 		end
+	else
+		return L["HEADER_NAMES"][id];
 	end
 end});
 
@@ -5636,10 +5638,10 @@ local fields = {
 		return rawget(t, "isRaid") and ("|cffff8000" .. t.name .. "|r") or t.name;
 	end,
 	["name"] = function(t)
-		return app.GetMapName(t.mapID);
+		return t.headerID and NPCNameFromID[t.headerID] or app.GetMapName(t.mapID);
 	end,
 	["icon"] = function(t)
-		return app.asset("Category_Zones");
+		return t.headerID and L["HEADER_ICONS"][t.headerID] or app.asset("Category_Zones");
 	end,
 	["back"] = function(t)
 		if app.CurrentMapID == t.mapID or (t.maps and contains(t.maps, app.CurrentMapID)) then
@@ -5713,6 +5715,10 @@ app.CreateMap = function(id, t)
 			insertionSort(explorationHeader.g, sortByTextSafely);
 		end
 	end
+	if t.creatureID and t.creatureID < 0 then
+		rawset(t, "headerID", t.creatureID);
+		rawset(t, "creatureID", nil);
+	end
 	return map;
 end
 
@@ -5724,10 +5730,10 @@ local instanceFields = {
 		return rawget(t, "isRaid") and ("|cffff8000" .. t.name .. "|r") or t.name;
 	end,
 	["name"] = function(t)
-		return app.GetMapName(t.mapID);
+		return t.headerID and NPCNameFromID[t.headerID] or app.GetMapName(t.mapID);
 	end,
 	["icon"] = function(t)
-		return app.asset("Category_Zones");
+		return t.headerID and L["HEADER_ICONS"][t.headerID] or app.asset("Category_Zones");
 	end,
 	["back"] = function(t)
 		if app.CurrentMapID == t.mapID or (t.maps and contains(t.maps, app.CurrentMapID)) then
@@ -5753,6 +5759,10 @@ local instanceFields = {
 };
 app.BaseInstance = app.BaseObjectFields(instanceFields);
 app.CreateInstance = function(id, t)
+	if t.creatureID and t.creatureID < 0 then
+		rawset(t, "headerID", t.creatureID);
+		rawset(t, "creatureID", nil);
+	end
 	return setmetatable(constructor(id, t, "instanceID"), app.BaseInstance);
 end
 

@@ -530,7 +530,8 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					]]--
 				},
 			}),
-			n(-12, {	-- Warpwood Quarter [East - Demon]
+			m(239, {	-- Warpwood Quarter [East - Demon]
+				["creatureID"] = -12,	-- Warpwood Quarter [East - Demon]
 				["description"] = "This part of the instance can be accessed from the eastern-most portal. (right side)",
 				["groups"] = {
 					n(ZONE_DROPS, {
@@ -653,7 +654,8 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					}),
 				},
 			}),
-			n(-13, {	-- Gordok Commons [North - Ogres] [Straight]
+			m(235, {	-- Gordok Commons [North - Ogres] [Straight]
+				["creatureID"] = -13,	-- Gordok Commons [North - Ogres] [Straight]
 				["description"] = "This part of the instance can be accessed after clearing West or entering from the northern-most portal.",
 				["cost"] = {
 					{ "i", 18249, 1 },	-- Crescent Key
@@ -805,7 +807,8 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					}),
 				},
 			}),
-			n(-14, {	-- Capital Gardens [West - Elves] [Left Side]
+			m(236, {	-- Capital Gardens [West - Elves] [Left Side]
+				["creatureID"] = -14,	-- Capital Gardens [West - Elves] [Left Side]
 				["description"] = "This part of the instance can be accessed from the western-most portal. (left side)",
 				["cost"] = {
 					{ "i", 18249, 1 },	-- Crescent Key
