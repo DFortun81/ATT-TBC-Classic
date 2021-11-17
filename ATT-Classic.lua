@@ -9114,6 +9114,29 @@ function app:GetDataCache()
 		app:GetWindow("Unsorted").data = allData;
 		CacheFields(allData);
 		
+		local calculateAccessibility = function(source)
+			local score = 0;
+			if source.nmr then
+				score = score + 10;
+			end
+			if source.nmc then
+				score = score + 10;
+			end
+			if source.u then
+				score = score + 1;
+				if source.u < 3 then
+					score = score + 100;
+				elseif source.u < 4 then
+					score = score + 10;
+				else
+					score = score + 1;
+				end
+			end
+			return score;
+		end
+		local sortByAccessibility = function(a, b)
+			return calculateAccessibility(a) <= calculateAccessibility(b);
+		end
 		local buildCategoryEntry = function(self, headers, searchResults, inst)
 			local header = self;
 			for j,o in ipairs(searchResults) do
@@ -9252,56 +9275,63 @@ function app:GetDataCache()
 					end
 				end
 			end
-			local sourceItems, sourceItemsByID, sourceSpellsByID = {}, {}, {};
+			local sources, sourcesByItemID, sourcesBySpellID = {}, {}, {};
 			for j,o in ipairs(searchResults) do
 				local source;
 				if o.itemID then
-					source = sourceItemsByID[o.itemID];
+					source = sourcesByItemID[o.itemID];
 					if not source then
 						source = {};
-						tinsert(sourceItems, source);
-						sourceItemsByID[o.itemID] = source;
+						source.itemID = o.itemID;
+						tinsert(sources, source);
+						sourcesByItemID[o.itemID] = source;
 					end
 				elseif o.spellID then
-					source = sourceSpellsByID[o.spellID];
+					source = sourcesBySpellID[o.spellID];
 					if not source then
 						source = {};
-						tinsert(sourceItems, source);
-						sourceSpellsByID[o.spellID] = source;
+						tinsert(sources, source);
+						sourcesBySpellID[o.spellID] = source;
 					end
 				end
 				if source then
+					if o.requireSkill then source.requireSkill = o.requireSkill; end
+					local u = GetRelativeValue(o, "u");
+					if u then source.u = u; end
 					local r = GetRelativeValue(o, "r");
-					if r then source.r = r; end
+					if r then
+						source.r = r;
+						if r ~= app.FactionID then
+							rawset(source, "nmr", true);	-- "Not My Race"
+						end
+					end
 					local races = GetRelativeValue(o, "races");
-					if races then source.races = races; end
+					if races then
+						source.races = races;
+						if not containsValue(races, app.RaceIndex) then
+							rawset(source, "nmr", true);	-- "Not My Race"
+						end
+					end
 					local c = GetRelativeValue(o, "c");
-					if c then source.c = c; end
+					if c then
+						source.c = c;
+						if not containsValue(c, app.ClassIndex) then
+							rawset(source, "nmc", true); -- "Not My Class"
+						end
+					end
 				end
 			end
-			local count = #sourceItems;
+			local count = #sources;
 			if count == 1 then
-				for key,value in pairs(sourceItems[1]) do
+				for key,value in pairs(sources[1]) do
 					inst[key] = value;
 				end
-			elseif count == 2 then
-				local a, b = sourceItems[1].r, sourceItems[2].r;
-				if a == b then inst.r = a; end
-				a, b = sourceItems[1].races, sourceItems[2].races;
-				if a and b and #a == #b and containsAny(a, b) then inst.races = a; end
-				a, b = sourceItems[1].c, sourceItems[2].c;
-				if a and b and #a == #b and containsAny(a, b) then inst.c = a; end
-			elseif count > 2 then
-				print("Mount has more than 2 source items WTF", inst.spellID);
-			end
-			if inst.c and not containsValue(inst.c, app.ClassIndex) then
-				rawset(inst, "nmc", true); -- "Not My Class"
-			end
-			if inst.r and inst.r ~= app.FactionID then
-				rawset(inst, "nmr", true);	-- "Not My Race"
-			end
-			if inst.races and not containsValue(inst.races, app.RaceIndex) then
-				rawset(inst, "nmr", true);	-- "Not My Race"
+			elseif count > 1 then
+				-- Find the most accessible version of the thing.
+				insertionSort(sources, sortByAccessibility);
+				for key,value in pairs(sources[1]) do
+					inst[key] = value;
+				end
 			end
 			inst.parent = header;
 			inst.progress = nil;
