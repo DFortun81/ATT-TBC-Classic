@@ -14,6 +14,36 @@ local OnTooltipForShendralar = [[function(t)
 		GameTooltip:AddDoubleLine("Libram Turn Ins", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 	end
 end]];
+local OnTooltipForSteamweedle = [[function(t)
+	GameTooltip:AddLine("This is a hidden reputation. It might not count towards reputation achievements.", 1, 1, 1);
+	local reputation = t.reputation;
+	if reputation < 0 then
+		local isHuman = _.RaceIndex == 1;
+		local repPerKill = isHuman and 2.75 or 2.5;
+			local x, n = math.ceil((42000 - t.reputation) / repPerKill), math.ceil(84000 / repPerKill);
+			GameTooltip:AddDoubleLine("Kill Venture Co. (STV)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+			GameTooltip:AddDoubleLine("Kill Southsea Pirates. (Tanaris & Barrens)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+	elseif reputation < 42000 then
+		local isHuman = _.RaceIndex == 1;
+		if reputation < 20999 then
+			local repPerKill = isHuman and 2.75 or 2.5;
+			local x, n = math.ceil((20999 - t.reputation) / repPerKill), math.ceil(20999 / repPerKill);
+			GameTooltip:AddLine("To 11999 Honored:", 1, 1, 1);
+			GameTooltip:AddDoubleLine(" Kill Venture Co. (STV)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+			GameTooltip:AddDoubleLine(" Kill Southsea Pirates. (Tanaris & Barrens)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		end
+		local repPerTurnIn = isHuman and 28 or 25;
+		local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
+		GameTooltip:AddDoubleLine("Complete Zapping Quests (Feralas)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+-- #if AFTER TBC
+		local repPerTurnIn = isHuman and 385 or 350;
+-- #else
+		local repPerTurnIn = isHuman and 165 or 150;
+-- #endif
+		local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
+		GameTooltip:AddDoubleLine("Complete Free Knot! (Dire Maul)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+	end
+end]];
 _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 	map(DIRE_MAUL, {
 		["lore"] = "Dire Maul is a three-wing instance found in north-central Feralas. It was once a proud Highborne city called Eldre'Thalas, but now lies in ruins, overrun by ogres, satyrs, and undead. Only a tiny remnant of the original Highborne population remains in the form of a murderous sect called the Shen'dralar.",
@@ -22,6 +52,17 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 			n(FACTIONS, {
 				faction(809, {	-- Shen'dralar
 					["OnTooltip"] = OnTooltipForShendralar,
+				}),
+				faction(169, {	-- Steamweedle Cartel
+					["icon"] = icon("INV_Misc_Coin_01"),
+					["OnTooltip"] = OnTooltipForSteamweedle,
+					["maps"] = {
+						FERALAS,
+						STRANGLETHORN_VALE,
+						TANARIS,
+						THE_BARRENS,
+						WINTERSPRING,
+					},
 				}),
 			}),
 			n(QUESTS, {
