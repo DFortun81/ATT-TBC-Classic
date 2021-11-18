@@ -159,6 +159,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["cost"] = {
 						{ "i", 18250, 1 },	-- Gordok Shackle Key
 					},
+					["maxReputation"] = { 169, EXALTED },	-- Steamweedle Cartel, Exalted.
 					["repeatable"] = true,
 					["lvl"] = 54,
 				}),

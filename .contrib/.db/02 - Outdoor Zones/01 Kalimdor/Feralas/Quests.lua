@@ -71,6 +71,7 @@ _.Zones =
 					["qg"] = 14637,	-- Zorbin Fandazzle
 					["sourceQuest"] = 7003,	-- Zapped Giants
 					["coord"] = { 44.8, 43.4, FERALAS },
+					["maxReputation"] = { 169, EXALTED },	-- Steamweedle Cartel, Exalted.
 					["repeatable"] = true,
 					["cost"] = {
 						{ "i", 18904, 1 },	-- Zorbin's Ultra-Shrinker
@@ -433,6 +434,7 @@ _.Zones =
 					["qg"] = 14637,	-- Zorbin Fandazzle
 					["sourceQuest"] = 7721,	-- Fuel for the Zapping
 					["coord"] = { 44.8, 43.4, FERALAS },
+					["maxReputation"] = { 169, EXALTED },	-- Steamweedle Cartel, Exalted.
 					["repeatable"] = true,
 					["cost"] = {
 						{ "i", 18958, 6 },	-- Water Elemental Core
