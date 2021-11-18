@@ -16,32 +16,59 @@ local OnTooltipForShendralar = [[function(t)
 end]];
 local OnTooltipForSteamweedle = [[function(t)
 	GameTooltip:AddLine("This is a hidden reputation. It might not count towards reputation achievements.", 1, 1, 1);
+	local isHuman = _.RaceIndex == 1;
 	local reputation = t.reputation;
-	if reputation < 0 then
-		local isHuman = _.RaceIndex == 1;
-		local repPerKill = isHuman and 2.75 or 2.5;
-			local x, n = math.ceil((42000 - t.reputation) / repPerKill), math.ceil(84000 / repPerKill);
+	if reputation < 42000 then
+		if reputation < 0 then
+			local repPerKill = isHuman and 2.75 or 2.5;
+			local x, n = math.ceil((20999 - t.reputation) / repPerKill), math.ceil(63001 / repPerKill);
 			GameTooltip:AddDoubleLine("Kill Venture Co. (STV)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 			GameTooltip:AddDoubleLine("Kill Southsea Pirates. (Tanaris & Barrens)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
-	elseif reputation < 42000 then
-		local isHuman = _.RaceIndex == 1;
-		if reputation < 20999 then
-			local repPerKill = isHuman and 2.75 or 2.5;
-			local x, n = math.ceil((20999 - t.reputation) / repPerKill), math.ceil(20999 / repPerKill);
-			GameTooltip:AddLine("To 11999 Honored:", 1, 1, 1);
-			GameTooltip:AddDoubleLine(" Kill Venture Co. (STV)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
-			GameTooltip:AddDoubleLine(" Kill Southsea Pirates. (Tanaris & Barrens)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
-		end
-		local repPerTurnIn = isHuman and 28 or 25;
-		local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
-		GameTooltip:AddDoubleLine("Complete Zapping Quests (Feralas)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+			
+			local repPerTurnIn = isHuman and 28 or 25;
+			local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(84000 / repPerTurnIn);
+			GameTooltip:AddDoubleLine("Complete Zapping Quests (Feralas)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 -- #if AFTER TBC
-		local repPerTurnIn = isHuman and 385 or 350;
+			local repPerTurnIn = isHuman and 385 or 350;
 -- #else
-		local repPerTurnIn = isHuman and 165 or 150;
+			local repPerTurnIn = isHuman and 165 or 150;
 -- #endif
-		local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
-		GameTooltip:AddDoubleLine("Complete Free Knot! (Dire Maul)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+			local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(84000 / repPerTurnIn);
+			GameTooltip:AddDoubleLine("Complete Free Knot! (Dire Maul)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+-- #if AFTER TBC
+			local repPerTurnIn = isHuman and 82.5 or 75;
+-- #else
+			local repPerTurnIn = isHuman and 55 or 50;
+-- #endif
+			local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(84000 / repPerTurnIn);
+			GameTooltip:AddDoubleLine("Complete The Gordok Ogre Suit (Dire Maul)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		else
+			if reputation < 20999 then
+				local repPerKill = isHuman and 2.75 or 2.5;
+				local x, n = math.ceil((20999 - t.reputation) / repPerKill), math.ceil(20999 / repPerKill);
+				GameTooltip:AddLine("To 11999 Honored:", 1, 1, 1);
+				GameTooltip:AddDoubleLine(" Kill Venture Co. (STV)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+				GameTooltip:AddDoubleLine(" Kill Southsea Pirates. (Tanaris & Barrens)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+			end
+			
+			local repPerTurnIn = isHuman and 28 or 25;
+			local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
+			GameTooltip:AddDoubleLine("Complete Zapping Quests (Feralas)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+-- #if AFTER TBC
+			local repPerTurnIn = isHuman and 385 or 350;
+-- #else
+			local repPerTurnIn = isHuman and 165 or 150;
+-- #endif
+			local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
+			GameTooltip:AddDoubleLine("Complete Free Knot! (Dire Maul)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+-- #if AFTER TBC
+			local repPerTurnIn = isHuman and 82.5 or 75;
+-- #else
+			local repPerTurnIn = isHuman and 55 or 50;
+-- #endif
+			local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
+			GameTooltip:AddDoubleLine("Complete The Gordok Ogre Suit (Dire Maul)", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		end
 	end
 end]];
 _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
@@ -373,6 +400,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						{ "i", 14341, 2 },	-- Rune Thread
 						{ "i", 18240, 1 },	-- Ogre Tannin
 					},
+					["maxReputation"] = { 169, EXALTED },	-- Steamweedle Cartel, Exalted.
 					["repeatable"] = true,
 					["lvl"] = 56,
 					["groups"] = {
