@@ -71,10 +71,13 @@ local OnTooltipForSteamweedle = [[function(t)
 		end
 	end
 end]];
-_.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
-	map(DIRE_MAUL, {
+root("Instances", tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
+	inst(230, {	-- Dire Maul
+		-- #if BEFORE MOP
 		["lore"] = "Dire Maul is a three-wing instance found in north-central Feralas. It was once a proud Highborne city called Eldre'Thalas, but now lies in ruins, overrun by ogres, satyrs, and undead. Only a tiny remnant of the original Highborne population remains in the form of a murderous sect called the Shen'dralar.",
-		["lvl"] = 44,
+		-- #endif
+		["mapID"] = DIRE_MAUL,
+		["lvl"] = lvlsquish(44, 31, 44),
 		["groups"] = {
 			n(FACTIONS, {
 				faction(809, {	-- Shen'dralar
@@ -106,10 +109,10 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["qg"] = 14368,	-- Lorekeeper Lydros
 					["classes"] = { MAGE },
 					["lvl"] = 60,
-					["cost"] = {
-						{ "i", 18299, 1 },	-- Hydrospawn Essence
-					},
 					["groups"] = {
+						objective(1, {	-- 0/1 Hydrospawn Essence
+							["provider"] = { "i", 18299 },	-- Hydrospawn Essence
+						}),
 						recipe(10140),	-- Conjure Water (Rank 7)
 					},
 				}),
@@ -124,26 +127,38 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						{ 41.4, 54.2, THUNDER_BLUFF },
 						{ 69.2, 49.2, UNDERCITY },
 					},
-					["maps"] = { FERALAS, ORGRIMMAR, THUNDER_BLUFF, UNDERCITY },
+					["maps"] = { FERALAS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 54,
 				}),
 				q(7499, {	-- Codex of Defense
-					["classes"] = { WARRIOR },
-					["qg"] = 14383,	-- Lorekeeper Kildrath
-					["cost"] = {
-						{ "i", 18357, 1 },	-- Codex of Defense
+					["providers"] = {
+						{ "i", 18357 },	-- Codex of Defense
+						{ "n", 14383 },	-- Lorekeeper Kildrath
 					},
+					["classes"] = { WARRIOR },
 					["lvl"] = 54,
 					["groups"] = {
 						i(18466),	-- Royal Seal of Eldre'Thalas
+					},
+				}),
+				q(7631, {	-- Dreadsteed of Xoroth
+					["qg"] = 14436,	-- Mor'zul Bloodbringer
+					["sourceQuest"] = 7629,	-- Imp Delivery
+					["coord"] = { 12.6, 31.6, BURNING_STEPPES },
+					["classes"] = { WARLOCK },
+					["cost"] = {
+						{ "i", 18818, 1 },	-- Mor'zul's Instructions
+					},
+					["lvl"] = 60,
+					["group"] = {
+						mount(23161),	-- Summon Dreadsteed
 					},
 				}),
 				q(7481, {	-- Elven Legends
 					["qg"] = 14373,	-- Sage Korolusk
 					["description"] = "The objective is next to Lorekeeper Lydros in the Dire Maul West Library.",
 					["coord"] = { 75.3, 43.8, FERALAS },
-					["maps"] = { FERALAS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 54,
 				}),
@@ -151,7 +166,6 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					["qg"] = 14374,	-- Scholar Runethorn
 					["description"] = "The objective is next to Lorekeeper Lydros in the Dire Maul West Library.",
 					["coord"] = { 31.2, 43.9, FERALAS },
-					["maps"] = { FERALAS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 54,
 				}),
@@ -166,7 +180,7 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						{ 30.5, 67, IRONFORGE },
 						{ 54.8, 62.6, STORMWIND_CITY },
 					},
-					["maps"] = { FERALAS, DARNASSUS, IRONFORGE, STORMWIND_CITY },
+					["maps"] = { FERALAS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 54,
 					["isBreadcrumb"] = true,
@@ -174,91 +188,85 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 				q(5525, {	-- Free Knot!
 					["qg"] = 14338,	-- Knot Thimblejack
 					["description"] = "Freeing him gets you access to his Cache.\n\nNOTE: Do not free him until after you have finished your Tribute Run!",
-					["cost"] = {
-						{ "i", 18250, 1 },	-- Gordok Shackle Key
-					},
+					["cost"] = { { "i", 18250, 1 } },	-- Gordok Shackle Key
 					["lvl"] = 54,
 				}),
 				q(7429, {	-- Free Knot!
-					["sourceQuest"] = 5525,	-- Free Knot!
 					["qg"] = 14338,	-- Knot Thimblejack
+					["sourceQuest"] = 5525,	-- Free Knot!
 					["description"] = "Freeing him gets you access to his Cache.\n\nNOTE: Do not free him until after you have finished your Tribute Run!",
-					["cost"] = {
-						{ "i", 18250, 1 },	-- Gordok Shackle Key
-					},
 					["maxReputation"] = { 169, EXALTED },	-- Steamweedle Cartel, Exalted.
+					["cost"] = { { "i", 18250, 1 } },	-- Gordok Shackle Key
 					["repeatable"] = true,
 					["lvl"] = 54,
 				}),
 				q(7505, {	-- Frost Shock and You
-					["qg"] = 14381,	-- Lorekeeper Javon
-					["classes"] = { SHAMAN },
-					["cost"] = {
-						{ "i", 18363, 1 },	-- Frost Shock and You
+					["providers"] = {
+						{ "i", 18363 },	-- Frost Shock and You
+						{ "n", 14381 },	-- Lorekeeper Javon
 					},
+					["classes"] = { SHAMAN },
 					["lvl"] = 54,
 					["groups"] = {
 						i(18471),	-- Royal Seal of Eldre'Thalas
 					},
 				}),
 				q(7498, {	-- Garona: A Study on Stealth and Treachery
-					["qg"] = 14383,	-- Lorekeeper Kildrath
-					["classes"] = { ROGUE },
-					["cost"] = {
-						{ "i", 18356, 1 },	-- Garona: A Study on Stealth and Treachery
+					["providers"] = {
+						{ "i", 18356 },	-- Garona: A Study on Stealth and Treachery
+						{ "n", 14383 },	-- Lorekeeper Kildrath
 					},
+					["classes"] = { ROGUE },
 					["lvl"] = 54,
 					["groups"] = {
 						i(18465),	-- Royal Seal of Eldre'Thalas
 					},
 				}),
 				q(7502, {	-- Harnessing Shadows
-					["qg"] = 14382,	-- Lorekeeper Mykos
-					["classes"] = { WARLOCK },
-					["cost"] = {
-						{ "i", 18360, 1 },	-- Harnessing Shadows
+					["providers"] = {
+						{ "i", 18360 },	-- Harnessing Shadows
+						{ "n", 14382 },	-- Lorekeeper Mykos
 					},
+					["classes"] = { WARLOCK },
 					["lvl"] = 54,
 					["groups"] = {
 						i(18467),	-- Royal Seal of Eldre'Thalas
 					},
 				}),
 				q(7504, {	-- Holy Bologna: What the Light Won't Tell You
-					["qg"] = 14381,	-- Lorekeeper Javon
-					["classes"] = { PRIEST },
-					["cost"] = {
-						{ "i", 18362, 1 },	-- Holy Bologna: What the Light Won't Tell You
+					["providers"] = {
+						{ "i", 18362 },	-- Holy Bologna: What the Light Won't Tell You
+						{ "n", 14381 },	-- Lorekeeper Javon
 					},
+					["classes"] = { PRIEST },
 					["lvl"] = 54,
 					["groups"] = {
 						i(18469),	-- Royal Seal of Eldre'Thalas
 					},
 				}),
 				q(7489, {	-- Lethtendris's Web
-					["sourceQuest"] = 7492,	-- Camp Mojache
 					["qg"] = 7776,	-- Talo Thornhoof
+					["sourceQuest"] = 7492,	-- Camp Mojache
 					["coord"] = { 76.2, 43.8, FERALAS },
-					["maps"] = { FERALAS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 18426, 1 },	-- Lethtendris's Web
-					},
 					["lvl"] = 54,
 					["groups"] = {
+						objective(1, {	-- 0/1 Lethtendris's Web
+							["provider"] = { "i", 18426 },	-- Lethtendris's Web
+						}),
 						i(18491),	-- Lorespinner
 					},
 				}),
 				q(7488, {	-- Lethtendris's Web
-					["sourceQuest"] = 7494,	-- Feathermoon Stronghold
 					["qg"] = 7877,	-- Latronicus Moonspear
+					["sourceQuest"] = 7494,	-- Feathermoon Stronghold
 					["coord"] = { 30.4, 46.2, FERALAS },
-					["maps"] = { FERALAS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 18426, 1 },	-- Lethtendris's Web
-					},
 					["lvl"] = 54,
 					["groups"] = {
+						objective(1, {	-- 0/1 Lethtendris's Web
+							["provider"] = { "i", 18426 },	-- Lethtendris's Web
+						}),
 						i(18491),	-- Lorespinner
 					},
 				}),
@@ -283,8 +291,8 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						i(18330),	-- Arcanum of Focus
 					},
 				}),
-				{
-					["questID"] = 7485,	-- Libram of Protection
+				q(7485, {	-- Libram of Protection
+					["qg"] = 14368,	-- Lorekeeper Lydros
 					["altQuests"] = {
 						7480,	-- Libram of Protection
 					},
@@ -292,21 +300,20 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						7481,	-- Elven Legends
 						7482,	-- Elven Legends
 					},
-					["qg"] = 14368,	-- Lorekeeper Lydros
-					["repeatable"] = true,
 					["cost"] = {
 						{ "i", 18334, 1 },	-- Libram of Protection
 						{ "i", 18335, 1 },	-- Pristine Black Diamond
 						{ "i", 14344, 2 },	-- Large Brilliant Shard
 						{ "i", 12735, 1 },	-- Frayed Abomination Stitching
 					},
+					["repeatable"] = true,
 					["lvl"] = 57,
 					["groups"] = {
 						i(18331),	-- Arcanum of Protection
 					},
-				},
-				{
-					["questID"] = 7483,	-- Libram of Rapidity
+				}),
+				q(7483, {	-- Libram of Rapidity
+					["qg"] = 14368,	-- Lorekeeper Lydros
 					["altQuests"] = {
 						7478,	-- Libram of Rapidity
 					},
@@ -314,59 +321,53 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						7481,	-- Elven Legends
 						7482,	-- Elven Legends
 					},
-					["qg"] = 14368,	-- Lorekeeper Lydros
-					["repeatable"] = true,
 					["cost"] = {
 						{ "i", 18332, 1 },	-- Libram of Rapidity
 						{ "i", 18335, 1 },	-- Pristine Black Diamond
 						{ "i", 14344, 2 },	-- Large Brilliant Shard
 						{ "i", 12938, 2 },	-- Blood of Heroes
 					},
+					["repeatable"] = true,
 					["lvl"] = 57,
 					["groups"] = {
 						i(18329),	-- Arcanum of Rapidity
 					},
-				},
-				{
-					["questID"] = 7441,	-- Pusillin and the Elder Azj'Tordin
+				}),
+				q(7441, {	-- Pusillin and the Elder Azj'Tordin
 					["qg"] = 14355,	-- Azj'Tordin
 					["coord"] = { 76.7, 37.2, FERALAS },
-					["maps"] = { FERALAS },
-					["cost"] = {
-						{ "i", 18261, 1 },	-- Book of Incantations
-					},
 					["lvl"] = 54,
 					["groups"] = {
+						objective(1, {	-- 0/1 Book of Incantations
+							["provider"] = { "i", 18261 },	-- Book of Incantations
+						}),
 						i(18410),	-- Sprinter's Sword
 						i(18411),	-- Spry Boots
 					},
-				},
-				{
-					["questID"] = 7500,	-- The Arcanist's Cookbook
-					["qg"] = 14383,	-- Lorekeeper Kildrath
-					["classes"] = { MAGE },
-					["cost"] = {
-						{ "i", 18358, 1 },	-- The Arcanist's Cookbook
+				}),
+				q(7500, {	-- The Arcanist's Cookbook
+					["providers"] = {
+						{ "i", 18358 },	-- The Arcanist's Cookbook
+						{ "n", 14383 },	-- Lorekeeper Kildrath
 					},
+					["classes"] = { MAGE },
 					["lvl"] = 54,
 					["groups"] = {
 						i(18468),	-- Royal Seal of Eldre'Thalas
 					},
-				},
-				{
-					["questID"] = 7506,	-- The Emerald Dream...
-					["qg"] = 14381,	-- Lorekeeper Javon
-					["classes"] = { DRUID },
-					["cost"] = {
-						{ "i", 18364, 1 },	-- The Emerald Dream
+				}),
+				q(7506, {	-- The Emerald Dream...
+					["providers"] = {
+						{ "i", 18364 },	-- The Emerald Dream
+						{ "n", 14381 },	-- Lorekeeper Javon
 					},
+					["classes"] = { DRUID },
 					["lvl"] = 54,
 					["groups"] = {
 						i(18470),	-- Royal Seal of Eldre'Thalas
 					},
-				},
-				{
-					["questID"] = 5518,	-- The Gordok Ogre Suit
+				}),
+				q(5518, {	-- The Gordok Ogre Suit
 					["qg"] = 14338,	-- Knot Thimblejack
 					["cost"] = {
 						{ "i", 14048, 4 },	-- Bolt of Runecloth
@@ -389,26 +390,24 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 							["description"] = "Before using this, clear the trash before Captain Kromcrush. Tell your group to stay back while you talk to Kromcrush with this disguise on. If they aggro him, your group will fail the Tribute Run.",
 						},
 					},
-				},
-				{
-					["questID"] = 5519,	-- The Gordok Ogre Suit
-					["sourceQuest"] = 5518,	-- The Gordok Ogre Suit
+				}),
+				q(5519, {	-- The Gordok Ogre Suit
 					["qg"] = 14338,	-- Knot Thimblejack
+					["sourceQuest"] = 5518,	-- The Gordok Ogre Suit
+					["maxReputation"] = { 169, EXALTED },	-- Steamweedle Cartel, Exalted.
 					["cost"] = {
 						{ "i", 14048, 4 },	-- Bolt of Runecloth
 						{ "i", 8170, 8 },	-- Rugged Leather
 						{ "i", 14341, 2 },	-- Rune Thread
 						{ "i", 18240, 1 },	-- Ogre Tannin
 					},
-					["maxReputation"] = { 169, EXALTED },	-- Steamweedle Cartel, Exalted.
 					["repeatable"] = true,
 					["lvl"] = 56,
 					["groups"] = {
 						i(18258),	-- Gordok Ogre Suit
 					},
-				},
-				{
-					["questID"] = 5528,	-- The Gordok Taste Test
+				}),
+				q(5528, {	-- The Gordok Taste Test
 					["qg"] = 14322,	-- Stomper Kreeg <The Drunk>
 					["description"] = "With Stomper Kreeg left alive, kill |cFFFFD700King Gordok|r to become king, and then return to the courtyard.\n\nHe sells these items after you have completed the quest and if you are Friendly with him.",
 					["lvl"] = 56,
@@ -416,107 +415,71 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 						i(18269),	-- Gordok Green Grog
 						i(18284),	-- Kreeg's Stout Beatdown
 					},
-				},
-				{
-					["questID"] = 7503,	-- The Greatest Race of Hunters
-					["qg"] = 14382,	-- Lorekeeper Mykos
-					["classes"] = { HUNTER },
-					["cost"] = {
-						{ "i", 18361, 1 },	-- The Greatest Race of Hunters
+				}),
+				q(7503, {	-- The Greatest Race of Hunters
+					["providers"] = {
+						{ "i", 18361 },	-- The Greatest Race of Hunters
+						{ "n", 14382 },	-- Lorekeeper Mykos
 					},
+					["classes"] = { HUNTER },
 					["lvl"] = 54,
 					["groups"] = {
 						i(18473),	-- Royal Seal of Eldre'Thalas
 					},
-				},
-				{
-					["questID"] = 7501,	-- The Light and How To Swing It
-					["qg"] = 14382,	-- Lorekeeper Mykos
-					["classes"] = { PALADIN },
-					["cost"] = {
-						{ "i", 18359, 1 },	-- The Light and How to Swing It
+				}),
+				q(7501, {	-- The Light and How To Swing It
+					["providers"] = {
+						{ "i", 18359 },	-- The Light and How to Swing It
+						{ "n", 14382 },	-- Lorekeeper Mykos
 					},
+					["classes"] = { PALADIN },
 					["lvl"] = 54,
 					["groups"] = {
 						i(18472),	-- Royal Seal of Eldre'Thalas
 					},
-				},
-				{
-					["questID"] = 7461,	-- The Madness Within
+				}),
+				q(7461, {	-- The Madness Within
 					["qg"] = 14358,	-- Shen'dralar Ancient
-					["crs"] = {
-						11496,	-- Immol'thar
-						11486,	-- Prince Tortheldrin
-					},
 					["lvl"] = 56,
-				},
-				{
-					["questID"] = 7877,	-- The Treasure of the Shen'dralar
-					["altQuests"] = {
-						7462,	-- The Treasure of the Shen'dralar
+					["groups"] = {
+						objective(1, {	-- 0/1 Immol'thar slain
+							["provider"] = { "n", 11496 },	-- Immol'thar
+						}),
+						objective(2, {	-- 0/1 Prince Tortheldrin slain
+							["provider"] = { "n", 11486 },	-- Prince Tortheldrin
+						}),
 					},
-					["sourceQuest"] = 7461,	-- The Madness Within
+				}),
+				q(7877, {	-- The Treasure of the Shen'dralar
 					["qg"] = 14358,	-- Shen'dralar Ancient
+					["sourceQuest"] = 7461,	-- The Madness Within
 					["lvl"] = 57,
 					["groups"] = {
 						i(18421),	-- Backwood Helm
 						i(18420),	-- Bonecrusher
 						i(18424),	-- Sedge Boots
 					},
-				},
-				q(7631, {	-- Dreadsteed of Xoroth
-					["qg"] = 14436,	-- Mor'zul Bloodbringer
-					["sourceQuest"] = 7629,	-- Imp Delivery
-					["coord"] = { 12.6, 31.6, BURNING_STEPPES },
-					["maps"] = { BURNING_STEPPES },
-					["classes"] = { WARLOCK },
-					["cost"] = {
-						{ "i", 18818, 1 },	-- Mor'zul's Instructions
-					},
-					["lvl"] = 60,
-					["group"] = {
-						mount(23161),	-- Summon Dreadsteed
-					},
 				}),
-				{
-					["questID"] = 7703,	-- Unfinished Gordok Business
+				q(7703, {	-- Unfinished Gordok Business
 					["qg"] = 14325,	-- Captain Kromcrush
 					["description"] = "Kill |cFFFFD700King Gordok|r, and then return to the courtyard.",
-					["altQuests"] = {
-						1318,	-- Unfinished Gordok Business
-					},
-					["cost"] = {
-						{ "i", 18336, 1 },	-- Gauntlet of Gordok Might
-					},
 					["lvl"] = 60,
 					["groups"] = {
+						objective(1, {	-- 0/1 Gauntlet of Gordok Might
+							["provider"] = { "i", 18336 },	-- Gauntlet of Gordok Might
+						}),
 						i(18367),	-- Gordok's Gauntlets
 						i(18368),	-- Gordok's Gloves
 						i(18366),	-- Gordok's Handguards
 						i(18369),	-- Gordok's Handwraps
 					},
-				},
+				}),
 			}),
 			n(ZONE_DROPS, {
 				i(18365, {	-- A Thoroughly Read Copy of "Nat Pagle's Guide to Extreme Anglin'."
 					["description"] = "This item is utterly worthless, however there was a rumor that this item could be used to obtain the original Ashbringer via fishing.\n\nThis can be found in various places throughout all the wings of Dire Maul.\n\nDire Maul North: Southwest corner of Guard Fengus's courtyard or next to King Gordok and Cho'Rush the Observer.\n\nDire Maul East: Eastern wall of the garden, the ledge above the garden, next to Lethtendris, or next to Alzzin the Wildshaper.\n\nDire Maul West: By the southern generator in Immol'thar's room.",
 				}),
 				i(12662),	-- Demonic Rune
-				i(18250, {	-- Gordok Shackle Key
-					["description"] = "NOTE: Do NOT Free Knot if you are doing a Tribute Run. He runs away.",
-					["crs"] = {
-						14325,	-- Captain Kromcrush
-						14321,	-- Guard Fengus
-						14326,	-- Guard Mol'dar
-						14323,	-- Guard Slip'kik
-						11441,	-- Gordok Brute
-						14351,	-- Gordok Bushwacker
-						11445,	-- Gordok Captain
-						11444,	-- Gordok Mage-Lord
-						11450,	-- Gordok Reaver
-						11448,	-- Gordok Warlock
-					},
-				}),
 				i(18640),	-- Happy Fun Rock
 				i(18333),	-- Libram of Focus
 				i(18334),	-- Libram of Protection
@@ -536,68 +499,18 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 				})),
 			}),
 			n(COMMON_BOSS_DROPS, {
-				["description"] = "The following items can drop from any boss in Dire Maul.",
+				["description"] = "The following items can drop from any boss in Dire Maul and also from Dusty Tomes on the ground.",
 				["groups"] = {
 					i(18357),	-- Codex of Defense
 					i(18360),	-- Harnessing Shadows
-					i(18401),	-- Foror's Compendium of Dragon Slaying
 					i(18363),	-- Frost Shock and You
 					i(18356),	-- Garona: A Study on Stealth and Treachery
 					i(18362),	-- Holy Bologna: What the Light Won't Tell You
+					i(18401),	-- Nostro's Compendium of Dragon Slaying
 					i(18358),	-- The Arcanist's Cookbook
 					i(18364),	-- The Emerald Dream
 					i(18361),	-- The Greatest Race of Hunters
 					i(18359),	-- The Light and How to Swing It
-					--[[
-					{
-						["itemID"] = 18357,	-- Codex of Defense
-						["classes"] = { WARRIOR },
-					},
-					{
-						["itemID"] = 18360,	-- Harnessing Shadows
-						["questID"] = 7502,	-- Harnessing Shadows
-						["classes"] = { WARLOCK },
-					},
-					{
-						["itemID"] = 18401,	-- Foror's Compendium of Dragon Slaying
-						["classes"] = { WARRIOR, PALADIN },
-					},
-					{
-						["itemID"] = 18363,	-- Frost Shock and You
-						["questID"] = 7505,	-- Frost Shock and You
-						["classes"] = { SHAMAN },
-					},
-					{
-						["itemID"] = 18356,	-- Garona: A Study on Stealth and Treachery
-						["questID"] = 7498,	-- Garona: A Study on Stealth and Treachery
-						["classes"] = { ROGUE },
-					},
-					{
-						["itemID"] = 18362,	-- Holy Bologna: What the Light Won't Tell You
-						["questID"] = 7504,	-- Holy Bologna: What the Light Won't Tell You
-						["classes"] = { PRIEST },
-					},
-					{
-						["itemID"] = 18358,	-- The Arcanist's Cookbook
-						["questID"] = 7500,	-- The Arcanist's Cookbook
-						["classes"] = { MAGE },
-					},
-					{
-						["itemID"] = 18364,	-- The Emerald Dream
-						["questID"] = 7506,	-- The Emerald Dream...
-						["classes"] = { DRUID },
-					},
-					{
-						["itemID"] = 18361,	-- The Greatest Race of Hunters
-						["questID"] = 7503,	-- The Greatest Race of Hunters
-						["classes"] = { HUNTER },
-					},
-					{
-						["itemID"] = 18359,	-- The Light and How to Swing It
-						["questID"] = 7501,	-- The Light and How to Swing It
-						["classes"] = { PALADIN },
-					},
-					]]--
 				},
 			}),
 			m(239, {	-- Warpwood Quarter [East - Demon]
@@ -731,6 +644,23 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 					{ "i", 18249, 1 },	-- Crescent Key
 				},
 				["groups"] = {
+					n(ZONE_DROPS, {
+						i(18250, {	-- Gordok Shackle Key
+							["description"] = "NOTE: Do NOT Free Knot if you are doing a Tribute Run. He runs away.",
+							["crs"] = {
+								14325,	-- Captain Kromcrush
+								14321,	-- Guard Fengus
+								14326,	-- Guard Mol'dar
+								14323,	-- Guard Slip'kik
+								11441,	-- Gordok Brute
+								14351,	-- Gordok Bushwacker
+								11445,	-- Gordok Captain
+								11444,	-- Gordok Mage-Lord
+								11450,	-- Gordok Reaver
+								11448,	-- Gordok Warlock
+							},
+						}),
+					}),
 					n(COMMON_BOSS_DROPS, {
 						["description"] = "The following items can drop from any of the guards.",
 						["crs"] = {
@@ -1035,4 +965,19 @@ _.Instances = { tier(CLASSIC_TIER, applyclassicphase(PHASE_ONE_DIREMAUL, {
 			}),
 		},
 	}),
-}))};
+})));
+-- #if AFTER 6.0.1
+root("HiddenQuestTriggers", {
+	n(WOD_HEADER, {
+		q(35890),	-- Dire Maul (Warpwood Quarter) Reward Quest - Normal completion
+		q(35891),	-- Dire Maul (Capital Gardens) Reward Quest - Normal completion
+		q(35892),	-- Dire Maul (Gordok Commons) Reward Quest - Normal completion
+		q(35894),	-- Dire Maul (Bonus) Reward Quest
+		q(35956),	-- Dire Maul (Everything) Reward Quest
+	}),
+});
+-- #endif
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	q(7462),	-- The Treasure of the Shen'dralar
+	q(1318),	-- Unfinished Gordok Business
+}));
