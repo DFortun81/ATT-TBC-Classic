@@ -133,9 +133,14 @@ end]];
 local REPUTATIONS_OnUpdate = [[function(t)
 	if _.CollectibleAchievements then
 		local count = 0;
+		local ignored = _.IgnoredReputationsForAchievements;
+		if not ignored then
+			ignored = {[169] = 1};
+			_.IgnoredReputationsForAchievements = ignored;
+		end
 		local factions = _.SearchForFieldContainer("factionID");
-		for achID,g in pairs(factions) do
-			if g[1].standing == 8 then
+		for factionID,g in pairs(factions) do
+			if not ignored[factionID] and g[1].standing == 8 then
 				count = count + 1;
 			end
 		end
@@ -178,10 +183,11 @@ local REPUTATIONS_OnTooltip = [[function(t)
 	GameTooltip:AddLine("Raise " .. t.rank .. " reputations to Exalted.");
 	if t.total and t.progress < t.total and t.rank >= 25 then
 		GameTooltip:AddLine(" ");
+		local ignored = _.IgnoredReputationsForAchievements or {};
 		for i,o in ipairs(_:GetDataCache().g) do
 			if o.headerID == -8 then
 				for j,p in ipairs(o.g) do
-					if p.visible and (not p.minReputation or (p.minReputation[1] == p.factionID and p.minReputation[2] >= 41999)) and (not p.maxReputation or (p.maxReputation[1] ~= p.factionID and p.reputation >= 0)) then
+					if p.visible and not ignored[p.factionID] and (not p.minReputation or (p.minReputation[1] == p.factionID and p.minReputation[2] >= 41999)) and (not p.maxReputation or (p.maxReputation[1] ~= p.factionID and p.reputation >= 0)) then
 						GameTooltip:AddDoubleLine(" |T" .. p.icon .. ":0|t " .. p.text, _.L[p.standing >= 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 					end
 				end
