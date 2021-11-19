@@ -4477,7 +4477,14 @@ local fields = {
 		return 112;
 	end,
 	["trackable"] = function(t)
-		return app.CollectibleReputations;
+		if app.CollectibleReputations then
+			-- If your reputation is higher than the maximum for a different faction, return partial completion.
+			if not app.AccountWideReputations and t.maxReputation and t.maxReputation[1] ~= t.factionID and (select(3, GetFactionInfoByID(t.maxReputation[1])) or 4) >= app.GetFactionStanding(t.maxReputation[2]) then
+				return false;
+			end
+			return true;
+		end
+		return false;
 	end,
 	["saved"] = function(t)
 		if t.minReputation and t.minReputation[1] == t.factionID and (select(6, GetFactionInfoByID(t.minReputation[1])) or 0) >= t.minReputation[2] then
@@ -4498,11 +4505,6 @@ local fields = {
 			end
 		end
 		if app.AccountWideReputations and ATTAccountWideData.Factions[t.factionID] then return 2; end
-		
-		-- If your reputation is higher than the maximum for a different faction, return partial completion.
-		if t.maxReputation and t.maxReputation[1] ~= t.factionID and (select(3, GetFactionInfoByID(t.maxReputation[1])) or 4) >= app.GetFactionStanding(t.maxReputation[2]) then
-			return 2;
-		end
 	end,
 	["title"] = function(t)
 		local reputation = t.reputation;
