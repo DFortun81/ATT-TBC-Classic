@@ -1214,6 +1214,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 28105, 1 },	-- Duron's Report
 					},
+					["isBreadcrumb"] = true,
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = lvlsquish(58, 10, 58),
 				}),
@@ -1224,6 +1225,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 28024, 1 },	-- Orion's Report
 					},
+					["isBreadcrumb"] = true,
 					["races"] = HORDE_ONLY,
 					["lvl"] = lvlsquish(58, 10, 58),
 				}),
