@@ -971,7 +971,7 @@ profession(ENCHANTING, {
 					["name"] = "Major Spellpower",
 					["recipeID"] = 27975
 				},
-				applyclassicphase(TBC_PHASE_TWO, {
+				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Major Striking",
 					["recipeID"] = 27967
 				}),
@@ -1263,7 +1263,7 @@ itemrecipe("Formula: Enchant Boots - Surefooted", 22545, 27954, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Chest - Exceptional Stats", 22547, 27960, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Cloak - Major Resistance", 22548, 27962, TBC_PHASE_ONE, "removed 5.0.4.10000");
 itemrecipe("Formula: Enchant Weapon - Major Intellect", 22551, 27968, TBC_PHASE_ONE);
-itemrecipe("Formula: Enchant Weapon - Major Striking", 22552, 27967, TBC_PHASE_TWO);
+itemrecipe("Formula: Enchant Weapon - Major Striking", 22552, 27967, TBC_PHASE_THREE);
 itemrecipe("Formula: Enchant Weapon - Potency", 22553, 27972, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant 2H Weapon - Savagery", 22554, 27971, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Weapon - Major Spellpower", 22555, 27975, TBC_PHASE_ONE);

@@ -171,7 +171,7 @@ _.Zones =
 						i(23150),	-- Design: Thick Golden Draenite [TBC] / Design: Subtle Golden Draenite [Cata+]
 						-- #endif
 						i(28274),	-- Formula: Enchant Cloak - Spell Penetration [TBC] / Formula: Enchant Cloak - PvP Power [Cata+]
-						applyclassicphase(TBC_PHASE_TWO, i(22552)),	-- Formula: Enchant Weapon - Major Striking
+						applyclassicphase(TBC_PHASE_THREE, i(22552)),	-- Formula: Enchant Weapon - Major Striking
 						i(29456),	-- Gift of the Ethereal
 						i(29121),	-- Guile of Khoraazi
 						i(29119),	-- Haramad's Bargain
