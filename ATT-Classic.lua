@@ -4477,6 +4477,9 @@ local fields = {
 		return 112;
 	end,
 	["trackable"] = function(t)
+		return true;
+	end,
+	["collectible"] = function(t)
 		if app.CollectibleReputations then
 			-- If your reputation is higher than the maximum for a different faction, return partial completion.
 			if not app.AccountWideReputations and t.maxReputation and t.maxReputation[1] ~= t.factionID and (select(3, GetFactionInfoByID(t.maxReputation[1])) or 4) >= app.GetFactionStanding(t.maxReputation[2]) then
@@ -4538,7 +4541,6 @@ local fields = {
 		return select(2, GetFactionInfoByID(t.factionID)) or "Not all reputations can be viewed on a single character. IE: Warsong Outriders cannot be viewed by an Alliance Player and Silverwing Sentinels cannot be viewed by a Horde Player.";
 	end,
 };
-fields.collectible = fields.trackable;
 fields.collected = fields.saved;
 app.BaseFaction = app.BaseObjectFields(fields);
 app.CreateFaction = function(id, t)
