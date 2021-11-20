@@ -109,56 +109,6 @@ profession(BLACKSMITHING, {
 				i(10418),	-- Glimmering Mithril Insignia
 			},
 		}),
-		applyclassicphase(PHASE_THREE, q(7649, {	-- Enchanted Thorium Platemail: Volume I
-			["provider"] = { "i", 18769 },	-- Enchanted Thorium Platemail (Volume I)
-			-- #if BEFORE TBC
-			["requireSkill"] = 9788,	-- Armorsmith
-			-- #else
-			["requireSkill"] = BLACKSMITHING,
-			-- #endif
-			["maps"] = { DIRE_MAUL, BLACKROCK_SPIRE },
-			["cost"] = {
-				{ "i", 18779, 1 },	-- Bottom Half of Advanced Armorsmithing: Volume I
-				{ "i", 18780, 1 },	-- Top Half of Advanced Armorsmithing: Volume I
-			},
-			["g"] = {
-				applyclassicphase(PHASE_THREE, i(12727)),	-- Plans: Enchanted Thorium Breastplate
-			},
-		})),
-		applyclassicphase(PHASE_THREE, q(7650, {	-- Enchanted Thorium Platemail: Volume II
-			["provider"] = { "i", 18770 },	-- Enchanted Thorium Platemail (Volume II)
-			-- #if BEFORE TBC
-			["requireSkill"] = 9788,	-- Armorsmith
-			-- #else
-			["requireSkill"] = BLACKSMITHING,
-			-- #endif
-			["maps"] = { DIRE_MAUL, STRATHOLME, SCHOLOMANCE },
-			["cost"] = {
-				{ "i", 18781, 1 },	-- Bottom Half of Advanced Armorsmithing: Volume II
-				{ "i", 18782, 1 },	-- Top Half of Advanced Armorsmithing: Volume II
-			},
-			["lvl"] = 50,
-			["g"] = {
-				applyclassicphase(PHASE_THREE, i(12726)),	-- Plans: Enchanted Thorium Leggings
-			},
-		})),
-		applyclassicphase(PHASE_THREE, q(7651, {	-- Enchanted Thorium Platemail: Volume III
-			["provider"] = { "i", 18771 },	-- Enchanted Thorium Platemail (Volume III)
-			-- #if BEFORE TBC
-			["requireSkill"] = 9788,	-- Armorsmith
-			-- #else
-			["requireSkill"] = BLACKSMITHING,
-			-- #endif
-			["maps"] = { DIRE_MAUL, BLACKROCK_SPIRE, STRATHOLME },
-			["cost"] = {
-				{ "i", 18783, 1 },	-- Bottom Half of Advanced Armorsmithing: Volume III
-				{ "i", 18784, 1 },	-- Top Half of Advanced Armorsmithing: Volume III
-			},
-			["lvl"] = 50,
-			["g"] = {
-				applyclassicphase(PHASE_THREE, i(12725)),	-- Plans: Enchanted Thorium Helm
-			},
-		})),
 		q(2765, {	-- Expert Blacksmith!
 			["qg"] = 7802,	-- Galvan the Ancient
 			["sourceQuests"] = {

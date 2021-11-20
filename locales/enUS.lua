@@ -341,8 +341,12 @@ app.L = {
 		[1292] = { 15273 },	-- Yellow Brewfest Stein, name and icon from providers
 		[1293] = { 15273 },	-- Blue Brewfest Stein, name and icon from providers
 		[2336] = { 15273, "Insane in the Membrane", "Interface\\Icons\\Spell_shadow_brainwash" },
+		[2357] = { 15273, "Dreadsteed of Xoroth", "Interface\\Icons\\ability_mount_dreadsteed" },
 		[3496] = { 15273, "A Brew-FAST Mount", "Interface\\Icons\\inv_cask_01" },
 		[4782] = { 15273 },	-- Green Brewfest Stein, name and icon from providers
+		
+		-- Does not get added until 4.1.0, btw. So just keep that in mind for wrath.
+		[5788] = { 15273, "Agent of the Shen'dralar", "Interface\\Icons\\inv_misc_book_04" },
 	},
 	["ACHIEVEMENT_CRITERIA_DATA"] = {
 		[92] = { -1, "Character" },
