@@ -565,6 +565,39 @@ _.Zones =
 						recipe(1515),	-- Tame Beast
 					},
 				}),
+				q(1653, {	-- The Test of Righteousness (1/3)
+					["qg"] = 6171,	-- Duthorian Rall
+					["sourceQuest"] = 1652,	-- The Tome of Valor (4/4)
+					["coord"] = { 39.8, 30.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { PALADIN },
+					["lvl"] = 20,
+				}),
+				q(1654, {	-- The Test of Righteousness (2/3)
+					["qg"] = 6181,	-- Jordan Stilwell
+					["sourceQuest"] = 1653,	-- The Test of Righteousness (1/3)
+					["coord"] = { 52.6, 36.8, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { DEADMINES, LOCH_MODAN, SHADOWFANG_KEEP, BLACKFATHOM_DEEPS },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { PALADIN },
+					["lvl"] = 20,
+				}),
+				q(1806, {	-- The Test of Righteousness (3/3)
+					["qg"] = 6181,	-- Jordan Stilwell
+					["sourceQuest"] = 1654,	-- The Test of Righteousness (2/3)
+					["coord"] = { 52.6, 36.8, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { PALADIN },
+					["lvl"] = 20,
+					["groups"] = {
+						i(6953, {	-- Verigan's Fist
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
 				q(183, {	-- The Boar Hunter
 					["qg"] = 714,	-- Talin Keeneye
 					["coord"] = { 22.6, 71.4, DUN_MOROGH },

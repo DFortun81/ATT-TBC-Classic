@@ -529,10 +529,10 @@ _.Instances = { tier(CLASSIC_TIER, {
 			}),
 			n(14516, {	-- Death Knight Darkreaver
 				["description"] = "Part of the Paladin's Epic Mount quest chain.",
-				["cost"] = { { "i", 18746 } },	-- Divination Scryer
+				["cost"] = { { "i", 18746, 1 } },	-- Divination Scryer
 				["groups"] = {
 					i(18799, {	-- Charger's Redeemed Soul
-						["cost"] = { { "i", 18749 } },	-- Charger's Lost Soul
+						["cost"] = { { "i", 18749, 1 } },	-- Charger's Lost Soul
 					}),
 					i(18749),	-- Charger's Lost Soul
 					i(18880),	-- Darkreaver's Head

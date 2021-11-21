@@ -116,10 +116,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 					["lvl"] = 20,
 					["groups"] = {
-						{
-							["itemID"] = 7083,	-- Purified Kor Gem
-							["questID"] = 1654,	-- The Test of Righteousness (2/3)
-						},
+						i(7083),	-- Purified Kor Gem
 					},
 				}),
 				q(6563, {	-- The Essence of Aku'Mai
@@ -396,7 +393,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 				i(6914, {	-- Soran'ruk Fragment
-					["questID"] = 1740,	-- The Orb of Soran'ruk
 					["classes"] = { WARLOCK },
 					["cr"] = 4809,	-- Twilight Acolyte
 				}),

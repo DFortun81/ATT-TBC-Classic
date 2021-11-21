@@ -128,6 +128,21 @@ _.Zones =
 					},
 					["lvl"] = 36,
 				}),
+				q(1655, {	-- Bailor's Ore Shipment
+					["qg"] = 6241,	-- Bailor Stonehand
+					["sourceQuest"] = 1653,	-- The Test of Righteousness
+					["coord"] = { 36.0, 45.0, LOCH_MODAN },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { PALADIN },
+					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/1 Jordan's Ore Shipment
+							["provider"] = { "i", 6992 },	-- Jordan's Ore Shipment
+							["coord"] = { 71.6, 21.4, LOCH_MODAN },
+						}),
+						i(6993),	-- Jordan's Refined Ore Shipment
+					},
+				}),
 				q(2038, {	-- Bingles' Missing Supplies
 					["qg"] = 6577,	-- Bingles Blastenheimer
 					["sourceQuest"] = 2039,	-- Find Bingles
