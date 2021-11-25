@@ -2375,36 +2375,6 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = lvlsquish(58, 10, 58),
 					["groups"] = {
-						objective(1, {	-- Barracks Burned
-							["provider"] = { "i", 31346 },	-- Burning Bleeding Hollow Torch
-							["coord"] = { 69.5, 76.0, HELLFIRE_PENINSULA },
-						}),
-						objective(2, {	-- Eastern Hovel Burned
-							["provider"] = { "i", 31346 },	-- Burning Bleeding Hollow Torch
-							["coord"] = { 69.9, 70.0, HELLFIRE_PENINSULA },
-						}),
-						objective(3, {	-- Western Hovel Burned
-							["provider"] = { "i", 31346 },	-- Burning Bleeding Hollow Torch
-							["coord"] = { 67.3, 76.3, HELLFIRE_PENINSULA },
-						}),
-						objective(4, {	-- Stable Burned
-							["provider"] = { "i", 31346 },	-- Burning Bleeding Hollow Torch
-							["coord"] = { 68.5, 73.3, HELLFIRE_PENINSULA },
-						}),
-						i(28057),	-- Bonechewer Berserker's Vest
-						i(28055),	-- Gilded Crimson Chestplate
-						i(28052),	-- Goldweave Tunic
-						i(28051),	-- Jerkin of the Untamed Spirit
-						i(28050),	-- Sacred Feather Vest
-					},
-				}),
-				q(10792, {	-- Zeth'Gor Must Burn! [Horde]
-					["qg"] = 22107,	-- Captain Darkhowl
-					["sourceQuest"] = 10809,	-- WANTED: Worg Master Kruush
-					["coord"] = { 61.2, 81.3, HELLFIRE_PENINSULA },
-					["races"] = HORDE_ONLY,
-					["lvl"] = lvlsquish(58, 10, 58),
-					["groups"] = {
 						objective(1, {	-- Northern Tower Marked
 							["provider"] = { "i", 31739 },	-- Smoke Beacon
 							["coord"] = { 68.0, 66.7, HELLFIRE_PENINSULA },
@@ -2420,6 +2390,36 @@ _.Zones =
 						objective(4, {	-- Foothill Tower Marked
 							["provider"] = { "i", 31739 },	-- Smoke Beacon
 							["coord"] = { 70.8, 71.5, HELLFIRE_PENINSULA },
+						}),
+						i(28057),	-- Bonechewer Berserker's Vest
+						i(28055),	-- Gilded Crimson Chestplate
+						i(28052),	-- Goldweave Tunic
+						i(28051),	-- Jerkin of the Untamed Spirit
+						i(28050),	-- Sacred Feather Vest
+					},
+				}),
+				q(10792, {	-- Zeth'Gor Must Burn! [Horde]
+					["qg"] = 22107,	-- Captain Darkhowl
+					["sourceQuest"] = 10809,	-- WANTED: Worg Master Kruush
+					["coord"] = { 61.2, 81.3, HELLFIRE_PENINSULA },
+					["races"] = HORDE_ONLY,
+					["lvl"] = lvlsquish(58, 10, 58),
+					["groups"] = {
+						objective(1, {	-- Barracks Burned
+							["provider"] = { "i", 31346 },	-- Burning Bleeding Hollow Torch
+							["coord"] = { 69.5, 76.0, HELLFIRE_PENINSULA },
+						}),
+						objective(2, {	-- Eastern Hovel Burned
+							["provider"] = { "i", 31346 },	-- Burning Bleeding Hollow Torch
+							["coord"] = { 69.9, 70.0, HELLFIRE_PENINSULA },
+						}),
+						objective(3, {	-- Western Hovel Burned
+							["provider"] = { "i", 31346 },	-- Burning Bleeding Hollow Torch
+							["coord"] = { 67.3, 76.3, HELLFIRE_PENINSULA },
+						}),
+						objective(4, {	-- Stable Burned
+							["provider"] = { "i", 31346 },	-- Burning Bleeding Hollow Torch
+							["coord"] = { 68.5, 73.3, HELLFIRE_PENINSULA },
 						}),
 						i(27732),	-- Infiltrator's Cloak
 						i(27731),	-- Vindicator's Cloak
