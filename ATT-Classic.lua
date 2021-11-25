@@ -5989,9 +5989,31 @@ local objectFields = {
 		return rawget(t, "isRaid") and ("|cffff8000" .. t.name .. "|r") or t.name;
 	end,
 	["name"] = function(t)
+		if t.providers then
+			for k,v in ipairs(t.providers) do
+				if v[2] > 0 then
+					if v[1] == "o" then
+						return app.ObjectNames[v[2]] or RETRIEVING_DATA;
+					elseif v[1] == "i" then
+						return select(1, GetItemInfo(v[2])) or RETRIEVING_DATA;
+					end
+				end
+			end
+		end
 		return app.ObjectNames[t.objectID] or ("Object ID #" .. t.objectID);
 	end,
 	["icon"] = function(t)
+		if t.providers then
+			for k,v in ipairs(t.providers) do
+				if v[2] > 0 then
+					if v[1] == "o" then
+						return app.ObjectIcons[v[2]] or "Interface\\Icons\\INV_Misc_Bag_10";
+					elseif v[1] == "i" then
+						return select(5, GetItemInfoInstant(v[2])) or "Interface\\Icons\\INV_Misc_Bag_10";
+					end
+				end
+			end
+		end
 		return app.ObjectIcons[t.objectID] or "Interface\\Icons\\INV_Misc_Bag_10";
 	end,
 	["model"] = function(t)

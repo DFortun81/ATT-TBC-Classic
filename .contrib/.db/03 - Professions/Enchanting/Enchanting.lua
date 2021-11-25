@@ -501,7 +501,8 @@ profession(ENCHANTING, {
 				},
 				{
 					["name"] = "Lifestealing",
-					["recipeID"] = 20032
+					["recipeID"] = 20032,
+					["timeline"] = { "removed 4.0.3" },
 				},
 				{
 					["name"] = "Major Intellect",
