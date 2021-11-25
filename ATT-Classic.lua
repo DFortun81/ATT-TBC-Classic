@@ -12434,7 +12434,9 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 						if craftType == "optimal" or craftType == "medium" or craftType == "easy" or craftType == "trivial" or craftType == "used" or craftType == "none" then
 							spellID = craftSubSpellName and (select(7, GetSpellInfo(craftName, craftSubSpellName)) or app.SpellNameToSpellID[craftName .. " (" .. craftSubSpellName .. ")"]) or app.SpellNameToSpellID[craftName];
 							if spellID then
-								if spellID == 44153 then spellID = 44155; end	-- Fix the Flying Machine spellID.
+								if spellID == 44153 then spellID = 44155;	-- Fix the Flying Machine spellID.
+								elseif spellID == 44151 then spellID = 44157;	-- Fix the Turbo Flying Machine spellID.
+								elseif spellID == 20583 then spellID = 24492; end 	-- Fix rank 1 Nature Resistance.
 								app.CurrentCharacter.SpellRanks[spellID] = shouldShowSpellRanks and app.CraftTypeToCraftTypeID(craftType) or nil;
 								app.CurrentCharacter.Spells[spellID] = 1;
 								if not ATTAccountWideData.Spells[spellID] then
@@ -12490,7 +12492,8 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 							local spellID = app.SpellNameToSpellID[skillName];
 							if spellID then
 								if spellID == 44153 then spellID = 44155;	-- Fix the Flying Machine spellID.
-								elseif spellID == 44151 then spellID = 44157; end	-- Fix the Turbo Flying Machine spellID.
+								elseif spellID == 44151 then spellID = 44157;	-- Fix the Turbo Flying Machine spellID.
+								elseif spellID == 20583 then spellID = 24492; end 	-- Fix rank 1 Nature Resistance.
 								app.CurrentCharacter.SpellRanks[spellID] = shouldShowSpellRanks and app.CraftTypeToCraftTypeID(skillType) or nil;
 								app.CurrentCharacter.Spells[spellID] = 1;
 								if not ATTAccountWideData.Spells[spellID] then
