@@ -2461,10 +2461,11 @@ fieldConverters = {
 		end
 	end,
 	["coord"] = function(group, coord)
-		if coord[3] and not group.instanceID and not group.objectiveID then cacheMapID(group, coord[3]); end
+		if coord[3] and not (group.instanceID or group.mapID or group.maps or group.objectiveID) then 
+		cacheMapID(group, coord[3]); end
 	end,
 	["coords"] = function(group, value)
-		if not group.instanceID then
+		if not (group.instanceID or group.mapID or group.maps or group.objectiveID) then
 			for i,coord in ipairs(value) do
 				if coord[3] then cacheMapID(group, coord[3]); end
 			end
@@ -2510,7 +2511,7 @@ local mapKeyConverters = {
 		end
 	end,
 	["coord"] = function(group, coord)
-		if coord[3] and not group.instanceID then uncacheMap(group, coord[3]); end
+		if coord[3] and not (group.instanceID or group.mapID or group.maps or group.objectiveID) then uncacheMap(group, coord[3]); end
 	end,
 	["coords"] = function(group, coords)
 		if not group.instanceID then
