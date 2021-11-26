@@ -654,7 +654,7 @@ _.Zones =
 							["provider"] = { "i", 16968 },	-- Sar'theris Striker
 							["coords"] = {
 								{ 36.2, 32.9, DESOLACE },
-								{ 36.0, 80.1, DESOLACE },
+								{ 26.0, 80.1, DESOLACE },
 							},
 						}),
 						objective(4, {	-- 0/1 Savage Coast Blue Sailfin
