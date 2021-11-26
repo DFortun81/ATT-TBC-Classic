@@ -134,6 +134,7 @@ _.Zones =
 					["coord"] = { 36.0, 45.0, LOCH_MODAN },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
+					["repeatable"] = true,
 					["lvl"] = 20,
 					["groups"] = {
 						objective(1, {	-- 0/1 Jordan's Ore Shipment

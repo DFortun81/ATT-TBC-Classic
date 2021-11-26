@@ -761,7 +761,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					},
 				}),
 				q(4083, {	-- The Spectral Chalice
-					["provider"] = { "o", 164869 },	-- The Spectral Chalice
+					["provider"] = { "o", 164869 },	-- Spectral Chalice
 					["description"] = "If you are a miner with 230 skill, speak with Gloom'rel to have him summon the Spectral Chalice.\n\nAfter you deposit the required items, speak to Gloom'rel again to learn how to smelt Dark Iron Ore.",
 					["requireSkill"] = MINING,
 					["cost"] = {
