@@ -22,11 +22,6 @@ _.Zones =
 						9694,	-- Slavering Ember Worg
 					},
 				}),
-				i(10575, {	-- Black Dragonflight Molt
-					["questID"] = 4023,	-- A Taste of Flame
-					["cr"] = 9461,	-- Frenzied Black Drake <Cyrus's Minion>
-					["coord"] = { 93.2, 32.6, BURNING_STEPPES },
-				}),
 				i(11266, {	-- Fractured Elemental Shard
 					["questID"] = 4061,	-- The Rise of the Machines
 					["races"] = HORDE_ONLY,

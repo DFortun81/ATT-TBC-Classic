@@ -83,11 +83,9 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 					["lvl"] = 55,
 					["groups"] = {
-						{
-							["itemID"] = 16309,	-- Drakefire Amulet
-							["allianceQuestID"] = 6502,	-- Drakefire Amulet
-							["hordeQuestID"] = 6602,	-- Blood of the Black Dragon Champion
-						},
+						i(16309, {	-- Drakefire Amulet
+							["timeline"] = { "removed 3.0.2" },
+						}),
 					},
 				},
 				{

@@ -11,7 +11,6 @@ profession(BLACKSMITHING, {
 			["description"] = "You need 265 Blacksmithing. Does not require a specialization.",
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["lvl"] = 50,
 		}),
 		q(2771, {	-- A Good Head On Your Shoulders
@@ -19,7 +18,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2760,	-- The Mithril Order
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["cost"] = {
 				{ "i", 7931, 2 },	-- Mithril Coif
 				{ "i", 7928, 1 },	-- Ornate Mithril Shoulder
@@ -33,7 +31,6 @@ profession(BLACKSMITHING, {
 			["qg"] = 7790,	-- Orokk Omosh
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 79.4, 22.4, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 2868, 2 },	-- Patterned Bronze Bracers
@@ -52,7 +49,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2756,	-- The Old Ways
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 80.4, 23.2, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 8663, 1 },	-- Mithril Insignia
@@ -74,7 +70,7 @@ profession(BLACKSMITHING, {
 		q(5307, {	-- Corruption
 			["qg"] = 11193,	-- Seril Scourgebane
 			["coord"] = { 61.2, 37.2, WINTERSPRING },
-			["maps"] = { WINTERSPRING, STRATHOLME },
+			["maps"] = { STRATHOLME },
 			-- #if BEFORE TBC
 			["requireSkill"] = 9787,	-- Weaponsmith
 			-- #else
@@ -103,7 +99,6 @@ profession(BLACKSMITHING, {
 			},
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["lvl"] = 40,
 			["g"] = {
 				i(10418),	-- Glimmering Mithril Insignia
@@ -118,7 +113,6 @@ profession(BLACKSMITHING, {
 			},
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["maps"] = { STRANGLETHORN_VALE },
 			["lvl"] = 40,
 			["g"] = {
 				i(8703,	{	-- Signet of Expertise
@@ -135,7 +129,7 @@ profession(BLACKSMITHING, {
 			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["coord"] = { 61.0, 38.8, WINTERSPRING },
-			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
+			["maps"] = { BLACKROCK_SPIRE },
 			["cost"] = {
 				{ "i", 12812, 1 },	-- Unfired Plate Gauntlets
 				{ "i", 12655, 6 },	-- Enchanted Thorium Bar
@@ -157,14 +151,12 @@ profession(BLACKSMITHING, {
 			},
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["maps"] = { STRANGLETHORN_VALE },
 			["lvl"] = 40,
 		}),
 		q(1618, {	-- Gearing Redridge
 			["qg"] = 6031,	-- Tormus Deepforge
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 48.6, 43, IRONFORGE },
-			["maps"] = { IRONFORGE },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 2857, 4 },	-- Runed Copper Belt
@@ -181,7 +173,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2753,	-- Trampled Under Foot
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 79.4, 22.4, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 3851, 2 },	-- Solid Iron Maul
@@ -212,7 +203,6 @@ profession(BLACKSMITHING, {
 		q(10891, {	-- Imperial Plate Armor [A]
 			["qg"] = 11145,	-- Myolor Sunderfury
 			["coord"] = { 52.0, 41.4, IRONFORGE },
-			["maps"] = { IRONFORGE },
 			["isBreadcrumb"] = true,
 			["races"] = ALLIANCE_ONLY,
 			["u"] = TBC_PHASE_ONE,
@@ -221,7 +211,6 @@ profession(BLACKSMITHING, {
 		q(10892, {	-- Imperial Plate Armor [H]
 			["qg"] = 11176,	-- Krathok Moltenfist
 			["coord"] = { 80.0, 23.3, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["isBreadcrumb"] = true,
 			["races"] = HORDE_ONLY,
 			["u"] = TBC_PHASE_ONE,
@@ -232,7 +221,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 7652,	-- A Blue Light Bargain
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["cost"] = {
 				{ "i", 12359, 20 },	-- Thorium Bar
 			},
@@ -246,7 +234,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 7652,	-- A Blue Light Bargain
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["cost"] = {
 				{ "i", 12359, 40 },	-- Thorium Bar
 			},
@@ -260,7 +247,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 7652,	-- A Blue Light Bargain
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["cost"] = {
 				{ "i", 12359, 20 },	-- Thorium Bar
 			},
@@ -274,7 +260,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 7652,	-- A Blue Light Bargain
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["cost"] = {
 				{ "i", 12359, 60 },	-- Thorium Bar
 			},
@@ -288,7 +273,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 7652,	-- A Blue Light Bargain
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["cost"] = {
 				{ "i", 12359, 50 },	-- Thorium Bar
 			},
@@ -302,7 +286,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 7652,	-- A Blue Light Bargain
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["cost"] = {
 				{ "i", 12359, 60 },	-- Thorium Bar
 			},
@@ -316,7 +299,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 7652,	-- A Blue Light Bargain
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["cost"] = {
 				{ "i", 12359, 20 },	-- Thorium Bar
 			},
@@ -330,7 +312,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2758,	-- The Origins of Smithing
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 56, 16, STORMWIND_CITY },
-			["maps"] = { STORMWIND_CITY },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 8663, 1 },	-- Mithril Insignia
@@ -342,7 +323,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2754,	-- Horns of Frenzy
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 79.4, 22.4, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["lvl"] = 32,
 			["g"] = {
@@ -356,7 +336,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2751,	-- Barbaric Battlements
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 79.4, 22.4, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 7958, 4 },	-- Bronze Battle Axe
@@ -374,7 +353,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2760,	-- The Mithril Order
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["maps"] = { STRANGLETHORN_VALE },
 			["cost"] = {
 				{ "i", 3575, 40 },	-- Iron Bar
 				{ "i", 3860, 40 },	-- Mithril Bar
@@ -393,7 +371,7 @@ profession(BLACKSMITHING, {
 			-- #endif
 			["description"] = "Upon finishing this quest, you will become a Master Axesmith and be locked out of becoming a Master Hammersmith and Master Swordsmith.",
 			["coord"] = { 61.2, 37, WINTERSPRING },
-			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
+			["maps"] = { BLACKROCK_SPIRE },
 			["cost"] = {
 				{ "i", 13352, 1 },	-- Vosh'gajin's Snakestone
 			},
@@ -412,16 +390,16 @@ profession(BLACKSMITHING, {
 			["qg"] = 6031,	-- Tormus Deepforge
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 48.5, 43, IRONFORGE },
-			["maps"] = { IRONFORGE },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 2845, 6 },	-- Copper Axe
 				{ "i", 2851, 6 },	-- Copper Chain Belt
 			},
 			["g"] = {
-				i(3609),	-- Plans: Copper Chain Vest
 				-- #if AFTER TBC
 				i(33792), 	-- Plans: Heavy Copper Longsword
+				-- #else
+				i(3609),	-- Plans: Copper Chain Vest
 				-- #endif
 			},
 		}),
@@ -434,7 +412,7 @@ profession(BLACKSMITHING, {
 			-- #endif
 			["description"] = "Upon finishing this quest, you will become a Master Hammersmith and be locked out of becoming a Master Axesmith and Master Swordsmith.",
 			["coord"] = { 61.2, 37.2, WINTERSPRING },
-			["maps"] = { WINTERSPRING, STRATHOLME },
+			["maps"] = { STRATHOLME },
 			-- #if BEFORE TBC
 			["altQuests"] = {
 				5306,	-- Snakestone of the Shadow Huntress [Master Axesmith]
@@ -455,7 +433,6 @@ profession(BLACKSMITHING, {
 			["requireSkill"] = BLACKSMITHING,
 			["description"] = "Upon finishing this quest, you will become a Armorsmith and be locked out of becoming a Weaponsmith.",
 			["coord"] = { 50.2, 42.6, IRONFORGE },
-			["maps"] = { IRONFORGE },
 			["races"] = ALLIANCE_ONLY,
 			["altQuests"] = {
 				5301,	-- The Art of the Armorsmith (H)
@@ -474,7 +451,6 @@ profession(BLACKSMITHING, {
 			["requireSkill"] = BLACKSMITHING,
 			["description"] = "Upon finishing this quest, you will become a Armorsmith and be locked out of becoming a Weaponsmith.",
 			["coord"] = { 79.8, 23.8, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["altQuests"] = {
 				5283,	-- The Art of the Armorsmith (A)
@@ -493,7 +469,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2760,	-- The Mithril Order
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["maps"] = { STRANGLETHORN_VALE },
 			["cost"] = {
 				{ "i", 3860, 40 },	-- Iron Bar
 				{ "i", 3864, 4 },	-- Citrine
@@ -512,7 +487,7 @@ profession(BLACKSMITHING, {
 			["requireSkill"] = BLACKSMITHING,
 			-- #endif
 			["coord"] = { 63.8, 73.8, WINTERSPRING },
-			["maps"] = { WINTERSPRING, BLACKROCK_SPIRE },
+			["maps"] = { BLACKROCK_SPIRE },
 			["cost"] = {
 				{ "i", 12847, 1 },	-- Soul Stained Pike
 				{ "i", 12806, 1 },	-- Unforged Rune Covered Breastplate
@@ -530,7 +505,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2760,	-- The Mithril Order
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["maps"] = { STRANGLETHORN_VALE },
 			["cost"] = {
 				{ "i", 3860, 40 },	-- Iron Bar
 				{ "i", 6037, 5 },	-- Truesilver Bar
@@ -545,7 +519,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2760,	-- The Mithril Order
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["lvl"] = 40,
 			["cost"] = {
 				{ "i", 7930, 2 },	-- Heavy Mithril Breastplate
@@ -563,7 +536,6 @@ profession(BLACKSMITHING, {
 			},
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 28.8, 75.4, STRANGLETHORN_VALE },
-			["maps"] = { STRANGLETHORN_VALE },
 			["cost"] = {
 				{ "i", 8686, 1 },	-- Mithril Pendant
 			},
@@ -573,7 +545,6 @@ profession(BLACKSMITHING, {
 			["qg"] = 7792,	-- Aturk the Anvil
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 80.6, 23.2, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 7963, 4 },	-- Steel Breastplate
@@ -588,7 +559,6 @@ profession(BLACKSMITHING, {
 			["qg"] = 7798,	-- Hank the Hammer
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 56, 16, STORMWIND_CITY },
-			["maps"] = { STORMWIND_CITY },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 6040, 6 },	-- Golden Scale Bracers
@@ -605,7 +575,6 @@ profession(BLACKSMITHING, {
 			["requireSkill"] = BLACKSMITHING,
 			["description"] = "Upon finishing this quest, you will become a Weaponsmith and be locked out of becoming an Armorsmith.",
 			["coord"] = { 49.8, 45, IRONFORGE },
-			["maps"] = { IRONFORGE },
 			["races"] = ALLIANCE_ONLY,
 			["altQuests"] = {
 				5283,	-- The Art of the Armorsmith (A)
@@ -625,7 +594,6 @@ profession(BLACKSMITHING, {
 			["requireSkill"] = BLACKSMITHING,
 			["description"] = "Upon finishing this quest, you will become a Weaponsmith and be locked out of becoming an Armorsmith.",
 			["coord"] = { 79.6, 23.6, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["altQuests"] = {
 				5283,	-- The Art of the Armorsmith (A)
@@ -645,7 +613,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2760,	-- The Mithril Order
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
-			["maps"] = { TANARIS },
 			["cost"] = {
 				{ "i", 7933, 2 },	-- Heavy Mithril Boots
 				{ "i", 7926, 1 },	-- Ornate Mithril Pants
@@ -660,7 +627,6 @@ profession(BLACKSMITHING, {
 			["sourceQuest"] = 2752,	-- On Iron Pauldrons
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 79.4, 22.4, ORGRIMMAR },
-			["maps"] = { ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 3836, 4 },	-- Green Iron Helm
