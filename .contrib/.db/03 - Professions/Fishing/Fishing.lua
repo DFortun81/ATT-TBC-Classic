@@ -42,26 +42,6 @@ profession(FISHING, {
 			["isBreadcrumb"] = true,
 			["lvl"] = 35,
 		}),
-		q(6607, {	-- Nat Pagle, Angler Extreme
-			["qg"] = 12919,	-- Nat Pagle
-			["sourceQuests"] = {
-				6609,	-- I Got Nothin' Left!
-				6608,	-- You Too Good.
-			},
-			["requireSkill"] = FISHING,
-			["description"] = "Requires 225 Fishing to start this quest.",
-			["coord"] = { 58.6, 60.0, DUSTWALLOW_MARSH },
-			["lvl"] = 35,
-			["cost"] = {
-				{ "i", 16967, 1 },	-- Feralas Ahi
-				{ "i", 16970, 1 },	-- Misty Reed Mahi Mahi
-				{ "i", 16968, 1 },	-- Sar'theris Striker
-				{ "i", 16969, 1 },	-- Savage Coast Blue Sailfin
-			},
-			["groups"] = {
-				recipe(18248, { ["rank"] = 4 }),	-- Fishing (Artisan)
-			},
-		}),
 		q(1141, {	-- The Family and the Fishing Pole
 			["qg"] = 10216,	-- Gubber Blump
 			["description"] = "Talk to Gubber Blump after accepting the quest to learn Fishing. Buy a Fishing Pole for 23c and a Shiny Bauble for 50c from Gubber Blump. Start fishing next to Gubber Blump to catch the fish required for the quest.",

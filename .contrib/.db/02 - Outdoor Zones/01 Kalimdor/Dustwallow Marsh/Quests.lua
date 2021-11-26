@@ -630,6 +630,40 @@ _.Zones =
 						i(19221),	-- Darkmoon Special Reserve
 					},
 				})),
+				q(6607, {	-- Nat Pagle, Angler Extreme
+					["qg"] = 12919,	-- Nat Pagle
+					["sourceQuests"] = {
+						6609,	-- I Got Nothin' Left!
+						6608,	-- You Too Good.
+					},
+					["requireSkill"] = FISHING,
+					["description"] = "Requires 225 Fishing to start this quest.",
+					["coord"] = { 58.6, 60.0, DUSTWALLOW_MARSH },
+					["maps"] = { FERALAS, SWAMP_OF_SORROWS, DESOLACE, STRANGLETHORN_VALE },
+					["lvl"] = 35,
+					["groups"] = {
+						objective(1, {	-- 0/1 Feralas Ahi
+							["provider"] = { "i", 16967 },	-- Feralas Ahi
+							["coord"] = { 63.5, 53.6, FERALAS },
+						}),
+						objective(2, {	-- 0/1 Misty Reed Mahi Mahi
+							["provider"] = { "i", 16970 },	-- Misty Reed Mahi Mahi
+							["coord"] = { 94.1, 39.7, SWAMP_OF_SORROWS },
+						}),
+						objective(3, {	-- 0/1 Sar'theris Striker
+							["provider"] = { "i", 16968 },	-- Sar'theris Striker
+							["coords"] = {
+								{ 36.2, 32.9, DESOLACE },
+								{ 36.0, 80.1, DESOLACE },
+							},
+						}),
+						objective(4, {	-- 0/1 Savage Coast Blue Sailfin
+							["provider"] = { "i", 16969 },	-- Savage Coast Blue Sailfin
+							["coord"] = { 26.3, 67.8, STRANGLETHORN_VALE },
+						}),
+						recipe(18248, { ["rank"] = 4 }),	-- Fishing (Artisan)
+					},
+				}),
 				applyclassicphase(TBC_PHASE_ONE, q(11210, {	-- Oh, It's Real
 					["qg"] = 12919,	-- Nat Pagle
 					["sourceQuest"] = 11209,	-- Nat's Bargain
