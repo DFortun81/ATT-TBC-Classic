@@ -6650,11 +6650,15 @@ local spellFields = {
 		return select(2, GetItemInfo(t.itemID)) or t.linkAsSpell;
 	end,
 	["linkAsSpell"] = function(t)
-		if GetRelativeValue(t, "requireSkill") == 333 then
-			return "|cffffffff|Henchant:" .. t.spellID .. "|h[" .. t.name .. "]|h|r";
-		else
-			return "|cffffffff|Hspell:" .. t.spellID .. "|h[" .. t.name .. "]|h|r";
+		local link = select(1, GetSpellLink(t.spellID));
+		if not link then
+			if GetRelativeValue(t, "requireSkill") == 333 then
+				return "|cffffffff|Henchant:" .. t.spellID .. "|h[" .. t.name .. "]|h|r";
+			else
+				return "|cffffffff|Hspell:" .. t.spellID .. "|h[" .. t.name .. "]|h|r";
+			end
 		end
+		return link;
 	end,
 	["nameAsItem"] = function(t)
 		return select(2, GetItemInfo(t.itemID)) or t.nameAsSpell;
