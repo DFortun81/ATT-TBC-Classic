@@ -420,7 +420,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 27049,	-- Claw [Rank 9]
+			["recipeID"] = 27347,	-- Claw [Rank 9]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 9,
 			["lvl"] = 64,
@@ -1276,7 +1276,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 27060,	-- Scorpid Poison [Rank 5]
+			["recipeID"] = 27361,	-- Scorpid Poison [Rank 5]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 5,
 			["lvl"] = 64,
