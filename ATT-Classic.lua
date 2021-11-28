@@ -6530,8 +6530,7 @@ app.GetSpellName = function(spellID, rank)
 	end
 end
 app.IsSpellKnown = function(spellID, rank, ignoreHigherRanks)
-	if IsPlayerSpell(spellID) or IsSpellKnown(spellID) or IsSpellKnown(spellID, true)
-		or IsSpellKnownOrOverridesKnown(spellID) or IsSpellKnownOrOverridesKnown(spellID, true) then
+	if IsPlayerSpell(spellID) or IsSpellKnown(spellID) or IsSpellKnownOrOverridesKnown(spellID) then
 		return true;
 	end
 	if rank then
@@ -6542,8 +6541,7 @@ app.IsSpellKnown = function(spellID, rank, ignoreHigherRanks)
 				spellName = spellName .. " (" .. RANK .. " ";
 				for i=maxRank,rank,-1 do
 					spellID = app.SpellNameToSpellID[spellName .. i .. ")"];
-					if spellID and (IsPlayerSpell(spellID) or IsSpellKnown(spellID) or IsSpellKnown(spellID, true)
-						or IsSpellKnownOrOverridesKnown(spellID) or IsSpellKnownOrOverridesKnown(spellID, true)) then
+					if spellID and (IsPlayerSpell(spellID) or IsSpellKnown(spellID) or IsSpellKnownOrOverridesKnown(spellID)) then
 						return true;
 					end
 				end

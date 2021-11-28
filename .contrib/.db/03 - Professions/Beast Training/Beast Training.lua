@@ -1419,7 +1419,7 @@ profession(261, {	-- Beast Training
 		}),
 		
 		{
-			["recipeID"] = 35346,	-- Warp
+			["recipeID"] = 35348,	-- Warp
 			["u"] = TBC_PHASE_ONE,
 			["crs"] = {
 				18464,	-- Warp Stalker (Warp Stalker, 63-64, Terokkar Forest)
