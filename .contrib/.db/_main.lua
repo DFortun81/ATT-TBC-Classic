@@ -854,6 +854,16 @@ appendGroups = function(common, groups)
 	end
 	return groups;
 end
+sharedData = function(data, t)
+	for i, group in ipairs(t) do
+		for key, value in pairs(data) do
+			if not group[key] then
+				group[key] = value;
+			end
+		end
+	end
+	return t;
+end
 bubbleDown = function(data, t)
 	if t then
 		if t.g or t.groups then

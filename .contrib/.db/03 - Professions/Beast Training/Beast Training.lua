@@ -935,7 +935,7 @@ profession(261, {	-- Beast Training
 			["lvl"] = 60,
 		},
 		{
-			["recipeID"] = 27062,	-- Great Stamina [Rank 11]
+			["recipeID"] = 27364,	-- Great Stamina [Rank 11]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 11,
 			["lvl"] = 70,
@@ -1107,7 +1107,7 @@ profession(261, {	-- Beast Training
 			["lvl"] = 54,
 		},
 		{
-			["recipeID"] = 24630,	-- Natural Armor [Rank 10]
+			["recipeID"] = 27362,	-- Natural Armor [Rank 10]
 			-- #if AFTER TBC
 			["crs"] = {
 				22100,	-- Scorpid Bonecrawler (Scorpid, 64-65, Terokkar Forest)
