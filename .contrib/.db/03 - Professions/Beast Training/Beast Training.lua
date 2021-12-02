@@ -1,5 +1,7 @@
 -- See Reference: https://www.wow-petopia.com/classic_bc/abilities.php
-profession(261, {	-- Beast Training
+-- #if BEFORE 3.0.2
+profession(261, bubbleDown({ ["timeline"] = { "removed 3.0.2" } }, {	-- Beast Training
+	["description"] = "Lets the Hunter train their pet with various abilities that they have learned.\n\nGets replaced by the Pet Talent Trees in Wrath.",
 	["classes"] = { HUNTER },
 	["lvl"] = 10,
 	["groups"] = {
@@ -217,7 +219,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 27050,	-- Bite [Rank 9]
+			["recipeID"] = 27348,	-- Bite [Rank 9]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 9,
 			["lvl"] = 64,
@@ -518,7 +520,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 27048,	-- Cower [Rank 7]
+			["recipeID"] = 27346,	-- Cower [Rank 7]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 7,
 			["lvl"] = 65,
@@ -657,7 +659,7 @@ profession(261, {	-- Beast Training
 		},
 		
 		{
-			["recipeID"] = 34889,	-- Fire Breath [Rank 1]
+			["recipeID"] = 34890,	-- Fire Breath [Rank 1]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 1,
 			["lvl"] = 1,
@@ -667,7 +669,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 35323,	-- Fire Breath [Rank 2]
+			["recipeID"] = 35324,	-- Fire Breath [Rank 2]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 2,
 			["lvl"] = 60,
@@ -1327,7 +1329,7 @@ profession(261, {	-- Beast Training
 			},
 		},
 		{
-			["recipeID"] = 27051,	-- Screech [Rank 5]
+			["recipeID"] = 27349,	-- Screech [Rank 5]
 			["u"] = TBC_PHASE_ONE,
 			["rank"] = 5,
 			["lvl"] = 64,
@@ -1430,4 +1432,5 @@ profession(261, {	-- Beast Training
 			["lvl"] = 60,
 		},
 	},
-});
+}));
+-- #endif
