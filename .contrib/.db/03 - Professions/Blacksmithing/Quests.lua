@@ -203,6 +203,7 @@ profession(BLACKSMITHING, {
 		q(10891, {	-- Imperial Plate Armor [A]
 			["qg"] = 11145,	-- Myolor Sunderfury
 			["coord"] = { 52.0, 41.4, IRONFORGE },
+			["requireSkill"] = BLACKSMITHING,
 			["isBreadcrumb"] = true,
 			["races"] = ALLIANCE_ONLY,
 			["u"] = TBC_PHASE_ONE,
@@ -211,6 +212,7 @@ profession(BLACKSMITHING, {
 		q(10892, {	-- Imperial Plate Armor [H]
 			["qg"] = 11176,	-- Krathok Moltenfist
 			["coord"] = { 80.0, 23.3, ORGRIMMAR },
+			["requireSkill"] = BLACKSMITHING,
 			["isBreadcrumb"] = true,
 			["races"] = HORDE_ONLY,
 			["u"] = TBC_PHASE_ONE,
