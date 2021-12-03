@@ -7511,7 +7511,7 @@ local function CreateMiniListForGroup(group)
 									if sq.parent and sq.parent.questID == questID then
 										sq = sq.parent;
 									end
-									if app.GroupFilter(sq) and not sq.isBreadcrumb then
+									if app.GroupFilter(sq) then
 										if app.RecursiveClassAndRaceFilter(sq) and questID == sourceQuestID then
 											if not found or (not found.sourceQuests and sq.sourceQuests) then
 												found = sq;
