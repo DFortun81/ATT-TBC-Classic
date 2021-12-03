@@ -2342,6 +2342,7 @@ fieldCache["mapID"] = {};
 fieldCache["objectID"] = {};
 fieldCache["questID"] = {};
 fieldCache["requireSkill"] = {};
+fieldCache["sourceQuestID"] = {};
 fieldCache["speciesID"] = {};
 fieldCache["spellID"] = {};
 fieldCache["tierID"] = {};
@@ -2497,6 +2498,11 @@ fieldConverters = {
 	["races"] = function(group, value)
 		if not containsValue(value, app.RaceIndex) then
 			rawset(group, "nmr", true);	-- "Not My Race"
+		end
+	end,
+	["sourceQuests"] = function(group, value)
+		for i,questID in ipairs(value) do
+			CacheField(group, "sourceQuestID", questID);
 		end
 	end,
 };
@@ -6293,6 +6299,28 @@ local questFields = {
 		return IsQuestFlaggedCompletedForObject(t) == 1;
 	end,
 	
+	["collectibleAsBreadcrumb"] = function(t)
+		if app.CollectibleQuests then
+			if C_QuestLog.IsOnQuest(t.questID) or IsQuestFlaggedCompletedForObject(t) then
+				return true;
+			end
+			local results = SearchForField("sourceQuestID", t.questID);
+			if results and #results > 0 then
+				for i,o in ipairs(results) do
+					if o.collectible and not o.collected then
+						return true;
+					end
+				end
+			end
+		end
+		return false;
+	end,
+	["collectedAsBreadcrumb"] = function(t)
+		return IsQuestFlaggedCompletedForObject(t);
+	end,
+	["textAsBreadcrumb"] = function(t)
+		return "|cffcbc3e3" .. t.name .. "|r";
+	end,
 	["collectibleAsReputation"] = function(t)
 		return app.CollectibleQuests and ((not t.repeatable and not t.isBreadcrumb) or C_QuestLog.IsOnQuest(t.questID) or (t.maxReputation and (app.CollectibleReputations or not t.repeatable)));
 	end,
@@ -6306,12 +6334,22 @@ local questFields = {
 app.BaseQuest = app.BaseObjectFields(questFields);
 
 local fields = RawCloneData(questFields);
+fields.collectible = questFields.collectibleAsBreadcrumb;
+fields.collected = questFields.collectedAsBreadcrumb;
+fields.text = questFields.textAsBreadcrumb;
+app.BaseQuestAsBreadcrumb = app.BaseObjectFields(fields);
+
+local fields = RawCloneData(questFields);
 fields.collectible = questFields.collectibleAsReputation;
 fields.collected = questFields.collectedAsReputation;
 app.BaseQuestWithReputation = app.BaseObjectFields(fields);
 app.CreateQuest = function(id, t)
-	if t and rawget(t, "maxReputation") then
-		return setmetatable(constructor(id, t, "questID"), app.BaseQuestWithReputation);
+	if t then
+		if rawget(t, "maxReputation") then
+			return setmetatable(constructor(id, t, "questID"), app.BaseQuestWithReputation);
+		elseif rawget(t, "isBreadcrumb") then
+			return setmetatable(constructor(id, t, "questID"), app.BaseQuestAsBreadcrumb);
+		end
 	end
 	return setmetatable(constructor(id, t, "questID"), app.BaseQuest);
 end
@@ -8477,6 +8515,11 @@ local function RowOnEnter(self)
 				GameTooltipTextRight1:SetText(right);
 				GameTooltipTextRight1:Show();
 			end
+		end
+		
+		-- Show Breadcrumb information
+		if reference.isBreadcrumb then
+			GameTooltip:AddLine("This is a breadcrumb quest.");
 		end
 		
 		-- Show lockout information about an Instance (Raid or Dungeon)
