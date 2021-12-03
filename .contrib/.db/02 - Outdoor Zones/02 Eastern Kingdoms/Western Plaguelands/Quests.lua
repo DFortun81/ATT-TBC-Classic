@@ -450,6 +450,7 @@ _.Zones =
 					["qg"] = 10739,	-- Mulgris Deepriver
 					["sourceQuest"] = 4985,	-- The Wildlife Suffers Too
 					["coord"] = { 53.6, 64.6, WESTERN_PLAGUELANDS },
+					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 12663, 1 },	-- Glyphed Oaken Branch
@@ -463,6 +464,7 @@ _.Zones =
 					["qg"] = 10739,	-- Mulgris Deepriver
 					["sourceQuest"] = 4985,	-- The Wildlife Suffers Too
 					["coord"] = { 53.6, 64.6, WESTERN_PLAGUELANDS },
+					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 12663, 1 },	-- Glyphed Oaken Branch
