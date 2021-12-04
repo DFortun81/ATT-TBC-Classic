@@ -6140,7 +6140,7 @@ app.OnUpdateForOmarionsHandbook = function(t)
 		return false;
 	else
 		for spellID,skills in pairs(app.CurrentCharacter.ActiveSkills) do
-			if (spellID == BLACKSMITHING or spellID == LEATHERWORKING or spellID == TAILORING) and skills[1] > 290 then
+			if (spellID == BLACKSMITHING or spellID == LEATHERWORKING or spellID == TAILORING) and skills[1] > 270 then
 				rawset(t, "collectible", false);
 				t.visible = false;
 				return true;
