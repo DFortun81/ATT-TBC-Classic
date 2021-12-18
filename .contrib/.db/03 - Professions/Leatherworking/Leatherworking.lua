@@ -2167,11 +2167,10 @@ itemrecipe("Pattern: Greater Drums of Restoration", 187048, 351769, TBC_PHASE_FI
 itemrecipe("Pattern: Greater Drums of War", 185922, 351766, TBC_PHASE_FIVE);	-- Unknown Location, might be a world drop?
 -- #endif
 
---[[
--- Holiday Stuff
-itemrecipe("Pattern: Gloves of the Greatfather", 17722, 21943, PHASE_1003_IDENTIFIER);
-itemrecipe("Pattern: Winter Boots", 34262, 44953);
-]]
+applyholiday(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Gloves of the Greatfather", 17722, 21943));
+-- #if AFTER TBC
+applyholiday(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Winter Boots", 34262, 44953));
+-- #endif
 
 
 -- These items never made it in.

@@ -5525,14 +5525,14 @@ itemrecipe("Pattern: Glacial Cloak", 22685, 28208, PHASE_SIX);
 itemrecipe("Pattern: Glacial Vest", 22686, 28207, PHASE_SIX);
 itemrecipe("Pattern: Glacial Wrists", 22687, 28209, PHASE_SIX);
 
-un(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Green Holiday Shirt", 17724, 21945));
-un(LUNAR_FESTIVAL, itemrecipe("Pattern: Festival Dress", 21722, 26403));
-un(LUNAR_FESTIVAL, itemrecipe("Pattern: Festival Suit", 21723, 26407));
+applyholiday(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Green Holiday Shirt", 17724, 21945));
+applyholiday(LUNAR_FESTIVAL, itemrecipe("Pattern: Festival Dress", 21722, 26403));
+applyholiday(LUNAR_FESTIVAL, itemrecipe("Pattern: Festival Suit", 21723, 26407));
 
 -- #if AFTER TBC
 -- TBC Recipes
-un(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Green Winter Clothes", 34261));
-un(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Red Winter Clothes", 34319));
+applyholiday(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Green Winter Clothes", 34261, 44950));
+applyholiday(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Red Winter Clothes", 34319, 44958));
 
 itemrecipe("Pattern: Frozen Shadoweave Shoulders", 21912, 26756, TBC_PHASE_ONE);
 itemrecipe("Pattern: Frozen Shadoweave Robe", 21913, 26758, TBC_PHASE_ONE);
