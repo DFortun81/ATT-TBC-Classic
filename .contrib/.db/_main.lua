@@ -462,7 +462,7 @@ TCG_HEADER = -535;
 -- Filters
 HELD_IN_OFF_HAND = 1;
 COSMETIC = 2;
---CLOAKS = 3; BACK is used by multiple symlinks asking for headerID.
+CLOAKS = 3; -- BACK is used by multiple symlinks asking for headerID.
 CLOTH = 4;
 LEATHER = 5;
 MAIL = 6;
@@ -485,6 +485,7 @@ BOWS = 32;
 CROSSBOWS = 33;
 FIST_WEAPONS = 34;
 WARGLAIVES = 35;
+MISC = 50;
 MOUNTS = 100;
 BATTLE_PETS = 101;
 TOYS = 102;
