@@ -6,7 +6,12 @@
 local app = select(2, ...);
 local L = app.L;
 
--- Assign the FactionID.
+-- Cache information about the player.
+local _, class, classIndex = UnitClass("player");
+app.Class = class;
+app.ClassIndex = classIndex;
+app.Level = UnitLevel("player");
+app.Race = select(2, UnitRace("player"));
 app.Faction = UnitFactionGroup("player");
 if app.Faction == "Horde" then
 	app.FactionID = Enum.FlightPathFaction.Horde;
@@ -6584,7 +6589,8 @@ app.GetSpellName = function(spellID, rank)
 	end
 end
 app.IsSpellKnown = function(spellID, rank, ignoreHigherRanks)
-	if IsPlayerSpell(spellID) or IsSpellKnown(spellID) or IsSpellKnownOrOverridesKnown(spellID) then
+	if IsPlayerSpell(spellID) or IsSpellKnown(spellID) or IsSpellKnown(spellID, true)
+		or IsSpellKnownOrOverridesKnown(spellID) or IsSpellKnownOrOverridesKnown(spellID, true) then
 		return true;
 	end
 	if rank then
@@ -6595,7 +6601,8 @@ app.IsSpellKnown = function(spellID, rank, ignoreHigherRanks)
 				spellName = spellName .. " (" .. RANK .. " ";
 				for i=maxRank,rank,-1 do
 					spellID = app.SpellNameToSpellID[spellName .. i .. ")"];
-					if spellID and (IsPlayerSpell(spellID) or IsSpellKnown(spellID) or IsSpellKnownOrOverridesKnown(spellID)) then
+					if spellID and (IsPlayerSpell(spellID) or IsSpellKnown(spellID) or IsSpellKnown(spellID, true)
+						or IsSpellKnownOrOverridesKnown(spellID) or IsSpellKnownOrOverridesKnown(spellID, true)) then
 						return true;
 					end
 				end
@@ -13026,22 +13033,12 @@ app.events.VARIABLES_LOADED = function()
 	app.FlightPathDB = nil;
 	
 	-- Cache information about the player.
-	local _, class, classIndex = UnitClass("player");
-	local classInfo = C_CreatureInfo.GetClassInfo(classIndex);
-	local raceName, race = UnitRace("player");
-	app.Class = class;
-	app.ClassIndex = classIndex;
-	app.Level = UnitLevel("player");
-	local raceIndex = app.RaceDB[race];
-	if type(raceIndex) == "table" then
-		local factionGroup = UnitFactionGroup("player");
-		raceIndex = raceIndex[factionGroup];
-	end
-	app.Race = race;
-	app.RaceIndex = raceIndex;
+	local raceIndex = app.RaceDB[app.Race];
+	app.RaceIndex = type(raceIndex) == "table" and raceIndex[UnitFactionGroup("player")] or raceIndex;
 	local name, realm = UnitName("player");
 	if not realm then realm = GetRealmName(); end
 	app.GUID = UnitGUID("player");
+	local classInfo = C_CreatureInfo.GetClassInfo(classIndex);
 	app.Me = "|c" .. (RAID_CLASS_COLORS[classInfo.classFile].colorStr or "ff1eff00") .. name .. "-" .. realm .. "|r";
 	
 	-- Character Data Storage
