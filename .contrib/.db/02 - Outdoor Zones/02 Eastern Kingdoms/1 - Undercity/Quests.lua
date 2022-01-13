@@ -53,11 +53,12 @@ _.Zones =
 					},
 					["lvl"] = 48,
 				}),
-				q(7819, {	-- Additional Runecloth
+				q(7819, {	-- Additional Runecloth [Undercity]
 					["qg"] = 14729,	-- Ralston Farnsley
 					["sourceQuest"] = 7818,	-- A Donation of Runecloth
-					["cost"] = { { "i", 14047, 20 } },	-- Runecloth
 					["coord"] = { 71.8, 29, UNDERCITY },
+					["cost"] = { { "i", 14047, 20 } }, 	-- Runecloth
+					["maxReputation"] = { 68, EXALTED },	-- Undercity, Exalted.
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 50,

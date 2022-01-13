@@ -30,10 +30,11 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 12,
 				}),
-				q(7825, {	-- Additional Runecloth
+				q(7825, {	-- Additional Runecloth [Thunder Bluff]
 					["qg"] = 14728,	-- Rumstag Proudstrider
 					["sourceQuest"] = 7823,	-- A Donation of Runecloth
 					["cost"] = { { "i", 14047, 20 } },	-- Runecloth
+					["maxReputation"] = { 81, EXALTED },	-- Thunder Bluff, Exalted.
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 50,

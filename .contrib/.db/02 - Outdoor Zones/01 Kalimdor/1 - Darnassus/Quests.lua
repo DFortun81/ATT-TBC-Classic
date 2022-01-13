@@ -50,14 +50,15 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 12,
 				},
-				q(7801, {	-- Additional Runecloth
+				q(7801, {	-- Additional Runecloth [Darnassus]
 					["qg"] = 14725,	-- Raedon Duskstriker
 					["sourceQuest"] = 7800,	-- A Donation of Runecloth
 					["cost"] = { { "i", 14047, 20 } },	-- Runecloth
+					["maxReputation"] = { 69, EXALTED },	-- Darnassus, Exalted.
+					["coord"] = { 64.0, 23.0, DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 50,
-					["coord"] = { 64.0, 23.0, DARNASSUS },
 				}),
 				q(3763, {	-- Assisting Arch Druid Staghelm [Darnassus]
 					["qg"] = 6735,	-- Innkeeper Saelienne

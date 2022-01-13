@@ -118,13 +118,14 @@ _.Zones =
 						i(2933),	-- Seal of Wrynn
 					},
 				}),
-				q(7796, {	-- Additional Runecloth
+				q(7796, {	-- Additional Runecloth [Stormwind]
 					["qg"] = 14722,	-- Clavicus Knavingham <Alliance Cloth Quartermaster>
+					["sourceQuest"] = 7795,	-- A Donation of Runecloth
+					["coord"] = { 53.9, 81.7, STORMWIND_CITY },
+					["cost"] = { { "i", 14047, 20 } }, 	-- Runecloth
+					["maxReputation"] = { 72, EXALTED },	-- Stormwind, Exalted.
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
-					["cost"] = {
-						{ "i", 14047, 60 },	-- Runecloth
-					},
 					["lvl"] = 50,
 				}),
 				q(5676, {	-- Arcane Feedback

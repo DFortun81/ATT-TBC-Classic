@@ -1,6 +1,21 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+-- #if BEFORE CATA
+local OnTooltipForCityFactionReputation = [[function(t)
+	local reputation = t.reputation;
+	if reputation < 42000 then
+		local isHuman = _.RaceIndex == 1;
+-- #if AFTER TBC
+		local repPerTurnIn = isHuman and 82.5 or 75;
+-- #else
+		local repPerTurnIn = isHuman and 55 or 50;
+-- #endif
+		local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(42000 / repPerTurnIn);
+		GameTooltip:AddDoubleLine("Runecloth Turn Ins", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+	end
+end]];
+-- #endif
 root("Zones", m(KALIMDOR, {
 	m(ORGRIMMAR, {
 		["lore"] = "Named in honor of the legendary Orgrim Doomhammer, Orgrimmar was founded as the capital city of the orcs' new homeland. Built within a huge, winding canyon in the harsh land of Durotar, Orgrimmar stands as one of the mightiest warrior cities in the world. Behind Orgrimmar's immense walls, elderly shaman pass their knowledge on to the Horde's newest generation of leaders, while warriors spar in the gladiatorial arena, honing their skills in preparation for the trials that await them in this dangerous land.",
@@ -19,10 +34,16 @@ root("Zones", m(KALIMDOR, {
 			n(FACTIONS, {
 				faction(530, {	-- Darkspear Trolls
 					["icon"] = asset("Achievement_Character_Troll_Male"),
+					-- #if BEFORE CATA
+					["OnTooltip"] = OnTooltipForCityFactionReputation,
+					-- #endif
 					["races"] = HORDE_ONLY,
 				}),
 				faction(76, {	-- Orgrimmar
 					["icon"] = asset("Achievement_Character_Orc_Male"),
+					-- #if BEFORE CATA
+					["OnTooltip"] = OnTooltipForCityFactionReputation,
+					-- #endif
 					["races"] = HORDE_ONLY,
 				}),
 			}),
@@ -104,18 +125,20 @@ root("Zones", m(KALIMDOR, {
 						i(18042),	-- Thorium Headed Arrow
 					},
 				}),
-				q(7832, {	-- Additional Runecloth
+				q(7832, {	-- Additional Runecloth [Darkspear Trolls]
 					["qg"] = 14726,	-- Rashona Straglash
 					["sourceQuest"] = 7824,	-- A Donation of Runecloth
 					["cost"] = { { "i", 14047, 20 } },	-- Runecloth
+					["maxReputation"] = { 530, EXALTED },	-- Darkspear Trolls, Exalted.
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 50,
 				}),
-				q(7837, {	-- Additional Runecloth
+				q(7837, {	-- Additional Runecloth [Orgrimmar]
 					["qg"] = 14727,	-- Vehena
 					["sourceQuest"] = 7836,	-- A Donation of Runecloth
 					["cost"] = { { "i", 14047, 20 } },	-- Runecloth
+					["maxReputation"] = { 76, EXALTED },	-- Orgrimmar, Exalted.
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 50,
