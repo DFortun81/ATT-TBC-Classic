@@ -15,6 +15,28 @@ _.Zones =
 				i(22923, {	-- Recipe: Major Arcane Protection Potion
 					["cr"] = 17150,	-- Vir'aani Arcanist
 				}),
+				i(25433, {	-- Obsidian Warbeads
+					["crs"] = {
+						17134,	-- Boulderfist Crusher
+						18352,	-- Boulderfist Hunter
+						17137,	-- Boulderfist Mage
+						17135,	-- Boulderfist Mystic
+						17136,	-- Boulderfist Warrior
+						18423,	-- Cho'war the Pillager
+						18351,	-- Lump
+						18065,	-- Warmaul Brute
+						17138,	-- Warmaul Reaver
+						18064,	-- Warmaul Shaman
+						18037,	-- Warmaul Warlock
+						18413,	-- Zorbo the Advisor
+					},
+				}),
+				i(26042, {	-- Oshu'gun Crystal Powder Sample
+					["races"] = HORDE_ONLY,
+				}),
+				i(26043, {	-- Oshu'gun Crystal Powder Sample
+					["races"] = ALLIANCE_ONLY,
+				}),
 			}),
 		}),
 	})),

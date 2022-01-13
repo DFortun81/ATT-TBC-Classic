@@ -441,12 +441,14 @@ _.Zones =
 				q(10476, {	-- Fierce Enemies
 					["provider"] = { "n", 18408 },	-- Warden Moi'bff Jill
 					["coord"] = { 54.8, 70.8, NAGRAND },
+					["cost"] = { { "i", 25433, 10 }, },	-- Obsidian Warbeads
 					["races"] = ALLIANCE_ONLY,
 				}),
 				q(10477, {	-- More Warbeads!
 					["provider"] = { "n", 18408 },	-- Warden Moi'bff Jill
 					["coord"] = { 54.8, 70.8, NAGRAND },
 					["sourceQuest"] = 10476,	-- Fierce Enemies
+					["cost"] = { { "i", 25433, 10 }, },	-- Obsidian Warbeads
 					["repeatable"] = true,
 					["races"] = ALLIANCE_ONLY,
 				}),
@@ -491,23 +493,27 @@ _.Zones =
 					["sourceQuest"] = 9893,	-- Obsidian Warbeads
 					["repeatable"] = true,
 					["minReputation"] = { 933, FRIENDLY },
+					["cost"] = { { "i", 25433, 10 }, },	-- Obsidian Warbeads
 				}),
 				q(10478, {	-- More Warbeads!
 					["provider"] = { "n", 18407 },	-- Warden Bullrok
 					["coord"] = { 55.8, 37.8, NAGRAND },
 					["sourceQuest"] = 10479,	-- Proving Your Strength
+					["cost"] = { { "i", 25433, 10 }, },	-- Obsidian Warbeads
 					["repeatable"] = true,
 					["races"] = HORDE_ONLY,
 				}),
 				q(10479, {	-- Proving Your Strength
 					["provider"] = { "n", 18407 },	-- Warden Bullrok
 					["coord"] = { 55.8, 37.8, NAGRAND },
+					["cost"] = { { "i", 25433, 10 }, },	-- Obsidian Warbeads
 					["races"] = HORDE_ONLY,
 				}),
 				q(9893, {	-- Obsidian Warbeads
 					["provider"] = { "n", 18265 },	-- Gezhe <The Consortium>
 					["coord"] = { 31.4, 57.8, NAGRAND },
 					["minReputation"] = { 933, FRIENDLY },
+					["cost"] = { { "i", 25433, 10 }, },	-- Obsidian Warbeads
 				}),
 				q(9882, {	-- Stealing from Thieves
 					["provider"] = { "n", 18265 },	-- Gezhe <The Consortium>
@@ -628,41 +634,45 @@ _.Zones =
 					},
 				}),
 				q(10076, {	-- Oshu'gun Crystal Powder (A)
-					["provider"] = { "n", 18817 },	-- Chief Researcher Kartos
+					["qg"] = 18817,	-- Chief Researcher Kartos
 					["coord"] = { 41.2, 44.2, NAGRAND },
-					["races"] = ALLIANCE_ONLY,
 					["description"] = "This quest is only accessible when the Alliance controls Halaa.",
+					["cost"] = { { "i", 26043, 20 }, },	-- Oshu'gun Crystal Powder Sample
+					["races"] = ALLIANCE_ONLY,
 					["g"] = {
 						i(26044),	-- Halaa Research Token
 					},
 				}),
 				q(10077, {	-- Oshu'gun Crystal Powder (A)
-					["provider"] = { "n", 18817 },	-- Chief Researcher Kartos
+					["qg"] = 18817,	-- Chief Researcher Kartos
 					["coord"] = { 41.2, 44.2, NAGRAND },
-					["races"] = ALLIANCE_ONLY,
 					["sourceQuest"] = 10076,	-- Oshu'gun Crystal Powder (Alliance Version)
-					["repeatable"] = true,
 					["description"] = "This quest is only accessible when the Alliance controls Halaa.",
+					["cost"] = { { "i", 26043, 20 }, },	-- Oshu'gun Crystal Powder Sample
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
 					["g"] = {
 						i(26044),	-- Halaa Research Token
 					},
 				}),
 				q(10074, {	-- Oshu'gun Crystal Powder (H)
-					["provider"] = { "n", 18816 },	-- Chief Researcher Amereldine
+					["qg"] = 18816,	-- Chief Researcher Amereldine
 					["coord"] = { 41.2, 44.2, NAGRAND },
-					["races"] = HORDE_ONLY,
 					["description"] = "This quest is only accessible when the Horde controls Halaa.",
+					["cost"] = { { "i", 26042, 20 }, },	-- Oshu'gun Crystal Powder Sample
+					["races"] = HORDE_ONLY,
 					["g"] = {
 						i(26044),	-- Halaa Research Token
 					},
 				}),
 				q(10075, {	-- Oshu'gun Crystal Powder (H)
-					["provider"] = { "n", 18816 },	-- Chief Researcher Amereldine
-					["coord"] = { 41.2, 44.2, NAGRAND },
-					["races"] = HORDE_ONLY,
+					["qg"] = 18816,	-- Chief Researcher Amereldine
 					["sourceQuest"] = 10074,	-- Oshu'gun Crystal Powder (Horde Version)
-					["repeatable"] = true,
+					["coord"] = { 41.2, 44.2, NAGRAND },
 					["description"] = "This quest is only accessible when the Horde controls Halaa.",
+					["cost"] = { { "i", 26042, 20 }, },	-- Oshu'gun Crystal Powder Sample
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
 					["g"] = {
 						i(26044),	-- Halaa Research Token
 					},
