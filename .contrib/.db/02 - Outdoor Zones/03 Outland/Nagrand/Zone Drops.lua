@@ -7,7 +7,7 @@ _.Zones =
 		m(NAGRAND, {
 			n(ZONE_DROPS, {
 				i(26045, {	-- Halaa Battle Token
-					["description"] = "Kill members of the opposite faction that are on the plataeu of Halaa or on one of the neighboring assault platforms. Only players of honorable level can be used to farm these tokens.\n\nAs a Level 70, your target must be Level 65+",
+					["description"] = "Kill members of the opposite faction that are on the plataeu of Halaa or on one of the neighboring assault platforms. Only players of honorable level without res sickness can be used to farm these tokens.\n\nAs a Level 70, your target must be Level 65+",
 				}),
 				i(23608, {	-- Plans: Khorium Belt
 					["cr"] = 18203,	-- Murkblood Raider
