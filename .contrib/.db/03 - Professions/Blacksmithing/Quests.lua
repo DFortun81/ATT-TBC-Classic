@@ -480,28 +480,6 @@ profession(BLACKSMITHING, {
 				i(7985),	-- Plans: Ornate Mithril Shoulder
 			},
 		}),
-		q(5127, {	-- The Demon Forge
-			["qg"] = 10918,	-- Lorax
-			["sourceQuest"] = 5126,	-- Lorax's Tale
-			-- #if BEFORE TBC
-			["requireSkill"] = 9788,	-- Armorsmith
-			-- #else
-			["requireSkill"] = BLACKSMITHING,
-			-- #endif
-			["coord"] = { 63.8, 73.8, WINTERSPRING },
-			["maps"] = { BLACKROCK_SPIRE },
-			["cost"] = {
-				{ "i", 12847, 1 },	-- Soul Stained Pike
-				{ "i", 12806, 1 },	-- Unforged Rune Covered Breastplate
-			},
-			["cr"] = 10899,	-- Goraluk Anvilcrack
-			["lvl"] = 55,
-			["groups"] = {
-				i(12696),	-- Plans: Demon Forged Breastplate
-				i(9224),	-- Elixir of Demonslaying
-				i(12849),	-- Demon Kissed Sack
-			},
-		}),
 		q(2762, {	-- The Great Silver Deceiver
 			["qg"] = 7802,	-- Galvan the Ancient
 			["sourceQuest"] = 2760,	-- The Mithril Order
