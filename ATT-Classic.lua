@@ -6152,7 +6152,7 @@ local TAILORING = ATTC.SkillIDToSpellID[197];
 app.OnUpdateForOmarionsHandbook = function(t)
 	t.visible = true;
 	rawset(t, "collectible", nil);
-	if app.Settings:Get("DebugMode") or app.Settings:Get("AccountMode") or CompletedQuests[9233] then
+	if app.Settings:Get("DebugMode") or app.Settings:Get("AccountMode") or CompletedQuests[9233] or C_QuestLog.IsOnQuest(9233) then
 		return false;
 	else
 		for spellID,skills in pairs(app.CurrentCharacter.ActiveSkills) do
