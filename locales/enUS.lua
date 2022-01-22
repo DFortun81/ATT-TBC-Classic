@@ -713,6 +713,7 @@ app.L = {
 		[C_Map.GetAreaInfo(3528)] = 468,	-- Ammen Vale (Silverline Lake)
 		[C_Map.GetAreaInfo(3559)] = 468,	-- Ammen Vale (Nestlewood Hills)
 		[C_Map.GetAreaInfo(3529)] = 468,	-- Ammen Vale (Nestlewood Thicket)
+		[C_Map.GetAreaInfo(3530)] = 468,	-- Ammen Vale (Shadow Ridge)
 		[C_Map.GetAreaInfo(3561)] = 468,	-- Ammen Vale (The Sacred Grove)
 	};
 	
