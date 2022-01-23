@@ -64,6 +64,8 @@ local OnTooltipForTimbermawHold = [[function(t)
 		local x, n = math.ceil((42000 - t.reputation) / repPerTurnIn), math.ceil(84000 / repPerTurnIn);
 		GameTooltip:AddDoubleLine("Turn in Deadwood Feathers (x5) in Felwood", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 		GameTooltip:AddDoubleLine("Turn in Winterfall Beads (x5) in Winterspring", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		local remaining = ((x * 5) - GetItemCount(21383, true) - GetItemCount(21377, true));
+		if remaining > 0 then GameTooltip:AddLine("You need " .. remaining .. " more feathers/beads for Exalted.", 1, 1, 0); end
 		-- #if BEFORE CATA
 		-- #if BEFORE TBC
 		if reputation < ]] .. HONORED .. [[ then GameTooltip:AddLine("PROTIP: Do NOT turn in the totems or feathers until after Honored!", 1, 0.2, 0.2); end
