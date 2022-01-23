@@ -1092,22 +1092,14 @@ _.Zones =
 					["minReputation"] = { 576, EXALTED },	-- Timbermaw Hold
 					["coord"] = { 65.2, 2.6, FELWOOD },
 					["maps"] = { WINTERSPRING },
-					["cost"] = {
-						{ "i", 21145, 1 },	-- Essence of Xandivious
-					},
 					["lvl"] = 45,
 					["g"] = {
-						{
-							["itemID"] = 21144, 	-- Demon Summoning Torch
+						objective(1, {	-- 0/1 Essence of Xandivious
+							["provider"] = { "i", 21145 },	-- Essence of Xandivious
 							["coord"] = { 68.0, 37.6, WINTERSPRING },
+							["cost"] = { { "i", 21144, 1 } },	-- Demon Summoning Torch
 							["cr"] = 15623,	-- Xandivious
-							["groups"] = {
-								{
-									["itemID"] = 21145,	-- Essence of Xandivious
-									["questID"] = 8481,	-- The Root of All Evil
-								},
-							},
-						},
+						}),
 						i(21326),	-- Defender of the Timbermaw
 					},
 				}),
