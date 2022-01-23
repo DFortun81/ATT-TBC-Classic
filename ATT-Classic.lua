@@ -6341,8 +6341,16 @@ local questFields = {
 		return app.CollectibleQuests and ((not t.repeatable and not t.isBreadcrumb) or C_QuestLog.IsOnQuest(t.questID) or (t.maxReputation and (app.CollectibleReputations or not t.repeatable)));
 	end,
 	["collectedAsReputation"] = function(t)
-		if t.maxReputation and (select(6, GetFactionInfoByID(t.maxReputation[1])) or 0) >= t.maxReputation[2] then
-			return true;
+		if t.maxReputation then
+			if app.AccountWideReputations then
+				local faction = SearchForField("factionID", t.maxReputation[1]);
+				if (faction and #faction > 0 and faction[1].collected) then
+					return true;
+				end
+			end
+			if (select(6, GetFactionInfoByID(t.maxReputation[1])) or 0) >= t.maxReputation[2] then
+				return true;
+			end
 		end
 		return app.CollectibleQuests and IsQuestFlaggedCompletedForObject(t);
 	end,
