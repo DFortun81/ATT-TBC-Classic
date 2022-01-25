@@ -6345,7 +6345,7 @@ local questFields = {
 			if app.AccountWideReputations then
 				local faction = SearchForField("factionID", t.maxReputation[1]);
 				if (faction and #faction > 0 and faction[1].collected) then
-					return true;
+					return 2;
 				end
 			end
 			if (select(6, GetFactionInfoByID(t.maxReputation[1])) or 0) >= t.maxReputation[2] then

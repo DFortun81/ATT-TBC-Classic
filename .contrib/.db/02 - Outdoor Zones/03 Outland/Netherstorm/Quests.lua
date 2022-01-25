@@ -1064,11 +1064,15 @@ _.Zones =
 					["sourceQuests"] = {
 						11042,	-- A Mystifying Vision
 						11037,	-- A Strange Vision
+						-- #if AFTER 6.2.0.20182
 						39202,	-- Hero's Call: Netherstorm!
+						-- #endif
 						10183,	-- Off To Area 52
 						11036,	-- Out of This World Produce!
 						11040,	-- Parts for the Rocket-Chief
+						-- #if AFTER 6.2.0.20182
 						39201,	-- Warchief's Command: Netherstorm!
+						-- #endif
 					},
 					["g"] = {
 						i(30225),	-- Junior Technician 3rd Grade Bracers
