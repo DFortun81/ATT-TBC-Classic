@@ -449,6 +449,7 @@ _.Zones =
 					["coord"] = { 54.8, 70.8, NAGRAND },
 					["sourceQuest"] = 10476,	-- Fierce Enemies
 					["cost"] = { { "i", 25433, 10 }, },	-- Obsidian Warbeads
+					["maxReputation"] = { 978, EXALTED },	-- Kurenai, Exalted.
 					["repeatable"] = true,
 					["races"] = ALLIANCE_ONLY,
 				}),
@@ -494,12 +495,14 @@ _.Zones =
 					["repeatable"] = true,
 					["minReputation"] = { 933, FRIENDLY },
 					["cost"] = { { "i", 25433, 10 }, },	-- Obsidian Warbeads
+					["maxReputation"] = { 933, EXALTED },	-- The Consortium, Exalted.
 				}),
 				q(10478, {	-- More Warbeads!
 					["provider"] = { "n", 18407 },	-- Warden Bullrok
 					["coord"] = { 55.8, 37.8, NAGRAND },
 					["sourceQuest"] = 10479,	-- Proving Your Strength
 					["cost"] = { { "i", 25433, 10 }, },	-- Obsidian Warbeads
+					["maxReputation"] = { 941, EXALTED },	-- The Maghar, Exalted.
 					["repeatable"] = true,
 					["races"] = HORDE_ONLY,
 				}),
