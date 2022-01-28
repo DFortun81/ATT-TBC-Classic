@@ -7,22 +7,35 @@ _.Zones =
 		m(SHADOWMOON_VALLEY, {
 			n(QUESTS, {
 				applyclassicphase(TBC_PHASE_THREE, q(10985, {	-- A Distraction for Akama (legacy version)
-					["provider"] = { "n", 18528 },	-- Xi'ri
+					["qg"] = 18528,	-- Xi'ri
+					["sourceQuest"] = 10949,	-- Entry Into the Black Temple
 					["coord"] = { 65.2, 44.0, SHADOWMOON_VALLEY },
-					["sourceQuests"] = { 10949 },	-- Entry Into the Black Temple
+					["timeline"] = { "removed 3.0.1" },
 					["groups"] = {
+						removeclassicphase(ach(431, {	-- Hand of A'dal (Achievement)
+							-- #if BEFORE 3.0.1
+							["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(10985)); end]],
+							-- #endif
+							["timeline"] = { "removed 3.0.1" },
+						})),
+						title(39, {	-- Hand of A'dal
+							["timeline"] = { "removed 3.0.1" },
+						}),
 						i(32649),	-- Medallion of Karabor
 					},
 				})),
+				-- #if AFTER 3.0.1
 				applyclassicphase(TBC_PHASE_THREE, q(13429, {	-- A Distraction for Akama
+					["qg"] = 18528,	-- Xi'ri
+					["sourceQuest"] = 10949,	-- Entry Into the Black Temple
 					["altQuests"] = { 10985 },	-- A Distraction for Akama (legacy version)
-					["sourceQuests"] = { 10949 },	-- Entry Into the Black Temple
-					["provider"] = { "n", 18528 },	-- Xi'ri
 					["coord"] = { 65.2, 43.9, SHADOWMOON_VALLEY },
+					["timeline"] = { "added 3.0.1" },
 					["groups"] = {
 						i(32649),	-- Medallion of Karabor
 					},
 				})),
+				-- #endif
 				q(10642, {	-- A Ghost in the Machine
 					["qg"] = 21774,	-- Zorus the Judicator
 					["sourceQuest"] = 11045,	-- Zorus the Judicator
@@ -927,8 +940,10 @@ _.Zones =
 					["provider"] = { "n", 18528 },	-- Xi'ri
 					["coord"] = { 65.2, 44.0, SHADOWMOON_VALLEY },
 					["sourceQuests"] = {
-						10985,	-- A Distraction for Akama (Alliance)
-						13429,	-- A Distraction for Akama (Horde)
+						10985,	-- A Distraction for Akama
+						-- #if AFTER 3.0.1
+						13429,	-- A Distraction for Akama
+						-- #endif
 					},
 				})),
 				applyclassicphase(TBC_PHASE_THREE_NETHERWING, q(11082, {	-- Seeker of Truth

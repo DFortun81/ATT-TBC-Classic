@@ -336,6 +336,8 @@ app.L = {
 		[303] = { 162, "Have Keg, Will Travel", "Interface\\Icons\\inv_cask_01" },
 		[1936] = { 162, "Does Your Wolpertinger Linger?" },	-- Wolpertinger Tankard, icon from providers
 		
+		[431] = { 15273, "Hand of A'dal", "Interface\\Icons\\inv_mace_25" },
+		[432] = { 15273, "Champion of the Naaru", "Interface\\Icons\\inv_mace_51" },
 		[871] = { 15273, "Avast Ye, Admiral!", "Interface\\Icons\\inv_helmet_66" },
 		[980] = { 15273 },	-- The Horseman's Reins, name and icon from providers
 		[1292] = { 15273 },	-- Yellow Brewfest Stein, name and icon from providers
