@@ -336,6 +336,7 @@ app.L = {
 		[303] = { 162, "Have Keg, Will Travel", "Interface\\Icons\\inv_cask_01" },
 		[1936] = { 162, "Does Your Wolpertinger Linger?" },	-- Wolpertinger Tankard, icon from providers
 		
+		[416] = { 15273, "Scarab Lord", app.asset("achievement_zone_silithus_01") },
 		[431] = { 15273, "Hand of A'dal", "Interface\\Icons\\inv_mace_25" },
 		[432] = { 15273, "Champion of the Naaru", "Interface\\Icons\\inv_mace_51" },
 		[871] = { 15273, "Avast Ye, Admiral!", "Interface\\Icons\\inv_helmet_66" },
