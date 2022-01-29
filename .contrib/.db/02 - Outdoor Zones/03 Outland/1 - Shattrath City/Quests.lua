@@ -403,11 +403,6 @@ _.Zones =
 						i(142286),	-- Plans: Lavaforged Warhammer
 					},
 				}),
-				applyclassicphase(TBC_PHASE_THREE, q(10949, {	-- Entry Into the Black Temple
-					["provider"] = { "n", 18481 },	-- A'dal
-					["coord"] = { 54.3, 44.3, SHATTRATH_CITY },
-					["sourceQuests"] = { 10948 },	-- The Hostage Soul
-				})),
 				q(10010, {	-- It's Just That Easy?
 					["provider"] = { "n", 18584 },	-- Sal'salabim
 					["sourceQuests"] = { 10009 },	-- Crackin' Some Skulls *UNTESTED*
