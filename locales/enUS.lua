@@ -337,6 +337,8 @@ app.L = {
 		[1936] = { 162, "Does Your Wolpertinger Linger?" },	-- Wolpertinger Tankard, icon from providers
 		
 		[416] = { 15273, "Scarab Lord", app.asset("achievement_zone_silithus_01") },
+		[428] = { 15273 },	-- Thunderfury, Blessed Blade of the Windseeker, name and icon from providers
+		[429] = { 15273 },	-- Sulfuras, Hand of Ragnaros, name and icon from providers
 		[431] = { 15273, "Hand of A'dal", "Interface\\Icons\\inv_mace_25" },
 		[432] = { 15273, "Champion of the Naaru", "Interface\\Icons\\inv_mace_51" },
 		[729] = { 15273 },	-- Deathcharger's Reins, name and icon from providers
