@@ -637,6 +637,8 @@ app.L = {
 		["Tempest Keep: The Arcatraz"] = "The Arcatraz";
 		["Tempest Keep: The Botanica"] = "The Botanica";
 		["Tempest Keep: The Mechanar"] = "The Mechanar";
+		["The Battle for Mount Hyjal"] = "Hyjal Summit";
+		["Black Temple"] = "The Black Temple";
 	};
 
 	-- This is necessary to have because Blizzard does not always have the correct map ID at the time of zone change.
