@@ -844,6 +844,11 @@ _.NeverImplemented =
 	q(9357),	-- BETA Report to Aeldon Sunbrand [Eversong Woods]
 	q(8896),	-- BETA The Dwarven Spy [Eversong Woods]
 	q(9695),	-- The Sun King's Command [Bloodmyst Isle]
+	q(10454),	-- FLAG - OFF THE RAILS (not sure what this is)
+	
+	-- This might be from the Spirit of Competition?
+	q(12186),	-- FLAG: Winner
+	q(12187),	-- FLAG: Participant
 	
 	filter(20, {	-- Daggers
 		i(23650),	-- Deprecated: Keanna's Will
