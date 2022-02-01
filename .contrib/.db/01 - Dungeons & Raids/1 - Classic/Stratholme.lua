@@ -11,18 +11,13 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11039,	-- Duke Nicholas Zverenhoff <The Argent Dawn>
 					["sourceQuest"] = 5262,	-- The Truth Comes Crashing Down
 					["coord"] = { 81.4, 59.8, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 13251, 1 },	-- Head of Baron Rivendare
-					},
+					["cost"] = { { "i", 13251, 1 } },	-- Head of Baron Rivendare
 					["lvl"] = 55,
 				}),
 				q(5125, {	-- Aurius' Reckoning
 					["qg"] = 10917,	-- Aurius
 					["sourceQuest"] = 5122,	-- The Medallion of Faith
-					["cost"] = {
-						{ "i", 12845, 1 },	-- Medallion of Faith
-					},
+					["cost"] = { { "i", 12845, 1 } },	-- Medallion of Faith
 					["groups"] = {
 						i(17044),	-- Will of the Martyr
 						i(17045),	-- Blood of the Martyr
@@ -32,20 +27,14 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 1855,	-- Tirion Fordring
 					["sourceQuest"] = 5848,	-- Of Love and Family (2/2)
 					["coord"] = { 7.6, 43.6, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 14872, 1 },	-- Tirion's Gift
-					},
+					["cost"] = { { "i", 14872, 1 } },	-- Tirion's Gift
 					["lvl"] = 52,
 				}),
 				q(5243, {	-- Houses of the Holy
 					["qg"] = 11036,	-- Leonid Barthalomew the Revered <The Argent Dawn>
 					["description"] = "When mousing over the crates, look for 'Requires: Disarm Trap'. If you see this, it's a trap and shouldn't be touched.\n\nIf you are a dwarf, use find treasure and on the mini map it will show a dot for the holy water in the crate. It will only show crates with items in it on the mini map and not bad crates.",
 					["coord"] = { 81.6, 57.8, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 13180, 5 },	-- Stratholme Holy Water
-					},
+					["cost"] = { { "i", 13180, 5 } },	-- Stratholme Holy Water
 					["lvl"] = 55,
 					["groups"] = {
 						i(13216),	-- Crown of the Penitent
@@ -58,7 +47,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 1842,	-- Highlord Taelan Fordring <Highlord of the Scarlet Crusade>
 					["sourceQuest"] = 5862,	-- Scarlet Subterfuge
 					["coord"] = { 42, 14.8, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["lvl"] = 52,
 					["groups"] = {
 						i(15418),	-- Shimmering Platinum Warhammer
@@ -72,70 +60,52 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11039,	-- Duke Nicholas Zverenhoff <The Argent Dawn>
 					["sourceQuest"] = 5263,	-- Above and Beyond
 					["coord"] = { 81.4, 59.8, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["lvl"] = 55,
 				}),
 				q(5781, {	-- Of Forgotten Memories
 					["qg"] = 1855,	-- Tirion Fordring
 					["sourceQuest"] = 5742,	-- Redemption
 					["coord"] = { 7.4, 43.6, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 14613, 1 },	-- Taelan's Hammer
-					},
+					["cost"] = { { "i", 14613, 1 } },	-- Taelan's Hammer
 					["lvl"] = 52,
 					["groups"] = {
-						{
-							["itemID"] = 14613,	-- Taelan's Hammer
-							["questID"] = 5781,	-- Of Forgotten Memories
+						i(14613, {	-- Taelan's Hammer
 							["coord"] = { 29.8, 85.6, EASTERN_PLAGUELANDS },
 							["cr"] = 11886,	-- Mercutio Filthgorger
-						},
+						}),
 					},
 				}),
 				q(5845, {	-- Of Lost Honor
 					["qg"] = 1855,	-- Tirion Fordring
 					["sourceQuest"] = 5781,	-- Of Forgotten Memories
 					["coord"] = { 7.4, 43.6, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 14625, 1 },	-- Symbol of Lost Honor
-					},
+					["cost"] = { { "i", 14625, 1 } },	-- Symbol of Lost Honor
 					["lvl"] = 52,
 					["groups"] = {
-						{
-							["itemID"] = 14625,	-- Symbol of Lost Honor
-							["questID"] = 5845,	-- Of Lost Honor
+						i(14625, {	-- Symbol of Lost Honor
 							["coord"] = { 71.3, 33.9, EASTERN_PLAGUELANDS },
-						},
+						}),
 					},
 				}),
 				q(5846, {	-- Of Love and Family (1/2)
 					["qg"] = 1855,	-- Tirion Fordring
 					["sourceQuest"] = 5845,	-- Of Lost Honor
 					["coord"] = { 7.4, 43.6, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["lvl"] = 52,
 				}),
 				q(5848, {	-- Of Love and Family (2/2)
 					["qg"] = 11936,	-- Artist Renfray
 					["sourceQuest"] = 5846,	-- Of Love and Family (1/2)
 					["coord"] = { 65.6, 75.4, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 14679, 1 },	-- Of Love and Family
-					},
+					["cost"] = { { "i", 14679, 1 } },	-- Of Love and Family
 					["lvl"] = 52,
 				}),
 				q(6163, {	-- Ramstein
 					["qg"] = 11878,	-- Nathanos Blightcaller <Champion of the Banshee Queen>
 					["coord"] = { 26.6, 74.8, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
+					["cost"] = { { "i", 15880, 1 } },	-- Head of Ramstein the Gorger
 					["cr"] = 10439,	-- Ramstein the Gorger
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 15880, 1 },	-- Head of Ramstein the Gorger
-					},
 					["lvl"] = 55,
 					["groups"] = {
 						i(18022),	-- Royal Seal of Alexis
@@ -150,27 +120,20 @@ _.Instances = { tier(CLASSIC_TIER, {
 						5542,	-- Demon Dogs
 					},
 					["coord"] = { 7.4, 43.6, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["lvl"] = 52,
 				}),
 				q(5862, {	-- Scarlet Subterfuge
 					["qg"] = 11872,	-- Myranda the Hag
 					["sourceQuest"] = 5861,	-- Find Myranda
 					["coord"] = { 50.8, 77.8, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 14872, 1 },	-- Tirion's Gift
-					},
+					["cost"] = { { "i", 14872, 1 } },	-- Tirion's Gift
 					["lvl"] = 52,
 				}),
 				q(5213, {	-- The Active Agent
 					["qg"] = 11035,	-- Betina Bigglezink <The Argent Dawn>
 					["sourceQuest"] = 5212,	-- The Flesh Does Not Lie
 					["coord"] = { 81.4, 59.6, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 13176, 20 },	-- Scourge Data
-					},
+					["cost"] = { { "i", 13176, 1 } },	-- Scourge Data
 					["lvl"] = 55,
 					["groups"] = {
 						i(19812),	-- Rune of the Dawn
@@ -180,7 +143,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 				q(5251, {	-- The Archivist
 					["qg"] = 11039,	-- Duke Nicholas Zverenhoff <The Argent Dawn>
 					["coord"] = { 81.4, 59.8, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["cr"] = 10811,	-- Archivist Galford
 					["lvl"] = 55,
 				}),
@@ -188,7 +150,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 11034,	-- Lord Maxwell Tyrosus <The Argent Dawn>
 					["sourceQuest"] = 5264,	-- Lord Maxwell Tyrosus
 					["coord"] = { 81.6, 58.0, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["lvl"] = 55,
 					["groups"] = {
 						i(13246),	-- Argent Avenger
@@ -199,20 +160,14 @@ _.Instances = { tier(CLASSIC_TIER, {
 				q(5212, {	-- The Flesh Does Not Lie
 					["qg"] = 11035,	-- Betina Bigglezink <The Argent Dawn>
 					["coord"] = { 81.4, 59.6, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 13174, 20 },	-- Plagued Flesh Sample
-					},
+					["cost"] = { { "i", 13174, 20 } },	-- Plagued Flesh Sample
 					["lvl"] = 55,
 				}),
 				q(5214, {	-- The Great Fras Siabi
 					["qg"] = 11033,	-- Smokey LaRue
 					["coord"] = { 81.6, 58.0, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
+					["cost"] = { { "i", 13172, 1 } },	-- Siabi's Premium Tobacco
 					["cr"] = 11058,	-- Fras Siabi
-					["cost"] = {
-						{ "i", 13172, 1 },	-- Siabi's Premium Tobacco
-					},
 					["lvl"] = 55,
 					["groups"] = {
 						i(13171),	-- Smokey's Lighter
@@ -220,25 +175,19 @@ _.Instances = { tier(CLASSIC_TIER, {
 				}),
 				q(5122, {	-- The Medallion of Faith
 					["qg"] = 10917,	-- Aurius
+					["cost"] = { { "i", 12845, 1 } },	-- Medallion of Faith
 					["repeatable"] = true,
-					["cost"] = {
-						{ "i", 12845, 1 },	-- Medallion of Faith
-					},
 				}),
 				q(5281, {	-- The Restless Souls (1/2)
 					["qg"] = 11038,	-- Caretaker Alen <The Argent Dawn>
 					["coord"] = { 79.6, 63.8, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
 					["lvl"] = 55,
 				}),
 				q(5282, {	-- The Restless Souls (2/2)
 					["qg"] = 11140,	-- Egan
 					["sourceQuest"] = 5281,	-- The Restless Souls (1/2)
 					["coord"] = { 14.4, 33.6, EASTERN_PLAGUELANDS },
-					["maps"] = { EASTERN_PLAGUELANDS },
-					["cost"] = {
-						{ "i", 13289, 1 },	-- Egan's Blaster
-					},
+					["cost"] = { { "i", 13289, 1 } },	-- Egan's Blaster
 					["crs"] = {
 						10385,	-- Ghostly Citizen
 						10384,	-- Spectral Citizen
@@ -250,16 +199,13 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 				q(5262, {	-- The Truth Comes Crashing Down
-					["qg"] = 10813,	-- Balnazzar
+					["provider"] = { "i", 13250 },	-- Head of Balnazzar
 					["sourceQuest"] = 5251,	-- The Archivist
-					["cost"] = {
-						{ "i", 13250, 1 },	-- Head of Balnazzar
-					},
 					["lvl"] = 55,
 				}),
 			}),
 			n(ZONE_DROPS, {
-				un(PHASE_SIX, i(22526)),	-- Bone Fragments
+				applyclassicphase(PHASE_SIX, i(22526)),	-- Bone Fragments
 				i(12843, {	-- Corruptor's Scourgestone
 					["description"] = "Can drop from any Undead rare mob or boss in the Plaguelands and associated dungeons so long as you are equipped with one of the Argent Dawn trinkets.",
 				}),
@@ -272,59 +218,38 @@ _.Instances = { tier(CLASSIC_TIER, {
 				i(12811, {	-- Righteous Orb
 					["description"] = "Can drop from any Scarlet Crusade member in Stratholme in addition to the Scarlet Oracle and the Crimson Elite in the Plaguelands.",
 				}),
-				{
-					["itemID"] = 13174,	-- Plagued Flesh Sample
-					["questID"] = 5212,	-- The Flesh Does Not Lie
-				},
-				{
-					["itemID"] = 12734,	-- Enchanted Scarlet Thread
-					["questID"] = 5063,	-- Cap of the Scarlet Savant
+				i(13174),	-- Plagued Flesh Sample
+				i(12734, {	-- Enchanted Scarlet Thread
 					["description"] = "These can be found in 4 places in the Scarlet Enclave.\n\n1&2: Malor's Room on the Table\n3: In the next room before you split to Cannon Master or Archivist.\n4: In Archivist's room on a box in the back.",
-					["repeatable"] = true,
-				},
-				{
-					["itemID"] = 12735,	-- Frayed Abomination Stitching
+				}),
+				i(12735, {	-- Frayed Abomination Stitching
 					["crs"] = {
 						10439,	-- Ramstein the Gorger
 						10414,	-- Patchwork Horror
 						10416,	-- Bile Spewer
 						10417,	-- Venom Belcher
 					},
-				},
+				}),
 				i(16249, {  -- Formula: Enchant 2H Weapon - Major Intellect
-					["crs"] = {
-						10422,  -- Crimson Sorcerer
-					},
+					["cr"] = 10422,  -- Crimson Sorcerer
 				}),
 				i(16248, {	-- Formula: Enchant Weapon - Unholy
-					["crs"] = {
-						10398,	-- Thuzadin Shadowcaster
-					},
+					["cr"] = 10398,	-- Thuzadin Shadowcaster
 				}),
 				i(14495, {	-- Pattern: Ghostweave Pants
-					["crs"] = {
-						10384, 	-- Spectral Citizen
-					},
+					["cr"] = 10384, 	-- Spectral Citizen
 				}),
 				i(15777, {	-- Pattern: Runic Leather Shoulders
-					["crs"] = {
-						10425, 	-- Crimson Battle Mage
-					},
+					["cr"] = 10425, 	-- Crimson Battle Mage
 				}),
 				i(15768, {	-- Pattern: Wicked Leather Belt
-					["crs"] = {
-						10406, 	-- Ghoul Ravener
-					},
+					["cr"] = 10406, 	-- Ghoul Ravener
 				}),
 				i(18658,  {	-- Schematic: Ultra-Flash Shadow Reflector
-					["crs"] = {
-						10426,  -- Crimson Inquisitor
-					},
+					["cr"] = 10426,  -- Crimson Inquisitor
 				}),
 				i(16052,  {	-- Schematic: Voice Amplification Modulator
-					["crs"] = {
-						10426,  -- Crimson Inquisitor
-					},
+					["cr"] = 10426,  -- Crimson Inquisitor
 				}),
 				i(18743),	-- Gracious Cape
 				i(17061),	-- Juno's Shadow
@@ -379,10 +304,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 					n(11058, {	-- Fras Siabi
 						["description"] = "In order to summon this boss, one of your party members must be on the quest.",
 						["groups"] = {
-							{
-								["itemID"] = 13172,	-- Siabi's Premium Tobacco
-								["questID"] = 5214,	-- The Great Fras Siabi
-							},
+							i(13172),	-- Siabi's Premium Tobacco
 						},
 					}),
 					n(10393, {	-- Skul
@@ -415,12 +337,9 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(13402),	-- Timmy's Galoshes
 					}),
 					n(11032, {	-- Malor the Zealous
-						{
-							["itemID"] = 12845,	-- Medallion of Faith
-							["questID"] = 5122,	-- The Medallion of Faith
+						i(12845, {	-- Medallion of Faith
 							["description"] = "Located in Malor's Strongbox. Can be turned in to Aurius on the Dead side of Stratholme to have him aide you during the Baron Rivendare encounter.",
-							["repeatable"] = true,
-						},
+						}),
 					}),
 					n(11120, {	-- Crimson Hammersmith
 						["description"] = "Loot the Blacksmithing Plans on the ground to spawn this mob.",
@@ -435,12 +354,12 @@ _.Instances = { tier(CLASSIC_TIER, {
 					}),
 					n(10997, { 	-- Cannon Master Willey
 						i(12839),	-- Plans: Heartseeker
-						un(PHASE_FIVE, i(22406)),	-- Redemption
-						un(PHASE_FIVE, i(22404)),	-- Willey's Back Scratcher
+						applyclassicphase(PHASE_FIVE, i(22406)),	-- Redemption
+						applyclassicphase(PHASE_FIVE, i(22404)),	-- Willey's Back Scratcher
 						i(13380),	-- Willey's Portable Howitzer
-						un(PHASE_FIVE, i(22407)),	-- Helm of the New Moon
-						un(PHASE_FIVE, i(22403)),	-- Diana's Pearl Necklace
-						un(PHASE_FIVE, i(22405)),	-- Mantle of the Scarlet Crusade
+						applyclassicphase(PHASE_FIVE, i(22407)),	-- Helm of the New Moon
+						applyclassicphase(PHASE_FIVE, i(22403)),	-- Diana's Pearl Necklace
+						applyclassicphase(PHASE_FIVE, i(22405)),	-- Mantle of the Scarlet Crusade
 						i(16708),	-- Shadowcraft Spaulders
 						i(18721),	-- Barrage Girdle
 						i(13381),	-- Master Cannoneer Boots
@@ -448,12 +367,10 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(13377),	-- Miniature Cannon Balls
 					}),
 					n(10811, { 	-- Archivist Galford
-						{
-							["itemID"] = 14679,	-- Of Love and Family
-							["questID"] = 5848,	-- Of Love and Family
+						i(14679, {	-- Of Love and Family
 							["description"] = "Found the wall near Archivist Galford.",
-						},
-						un(PHASE_SIX, {
+						}),
+						applyclassicphase(PHASE_SIX, {
 							["itemID"] = 22897,	-- Tome of Conjure Food VII
 							["classes"] = { MAGE },
 							["spellID"] = 28612,	-- Conjure Food VII
@@ -466,14 +383,9 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(18716),	-- Ash Covered Boots
 					}),
 					n(10813, { 	-- Balnazzar
-						["crs"] = {
-							10812,	-- Grand Crusader Dathrohan
-						},
+						["crs"] = { 10812 },	-- Grand Crusader Dathrohan
 						["groups"] = {
-							{
-								["itemID"] = 13250,	-- Head of Balnazzar
-								["questID"] = 5262,	-- The Truth Comes Crashing Down
-							},
+							i(13250),	-- Head of Balnazzar
 							i(14512),	-- Pattern: Truefaith Vestments
 							i(13520),	-- Recipe: Flask of Distilled Wisdom
 							i(13348),	-- Demonshear
@@ -489,7 +401,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 							i(16725),	-- Lightforge Boots
 						},
 					}),
-					un(PHASE_FIVE, n(16102, { 	-- Sothos
+					applyclassicphase(PHASE_FIVE, n(16102, { 	-- Sothos
 						["crs"] = {
 							16101,	-- Jarien
 						},
@@ -498,7 +410,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 							{ "i", 22051, 1 },	-- Brazier of Beckoning [Jarien & Sothos]
 							{ "i", 22057, 1 },	-- Brazier of Invocation
 						},
-						["groups"] = bubbleDown({ ["u"] = PHASE_FIVE }, {
+						["groups"] = {
 							i(21984),	-- Left Piece of Lord Valthalak's Amulet
 							i(22046),	-- Right Piece of Lord Valthalak's Amulet
 							i(22329),	-- Scepter of Interminable Focus
@@ -506,12 +418,12 @@ _.Instances = { tier(CLASSIC_TIER, {
 							i(22301), 	-- Ironweave Robe
 							i(22328),	-- Legplates of Vigilance
 							i(22334),	-- Band of Mending
-						}),
+						},
 					})),
-					un(PHASE_SIX, n(16387, { 	-- Atiesh <Hand of Sargeras>
+					applyclassicphase(PHASE_SIX, n(16387, { 	-- Atiesh <Hand of Sargeras>
 						["description"] = "Summoned and defeated as part of the Atiesh quest chain to get the Greatstaff of the Guardian.",
 						["groups"] = {
-							un(PHASE_SIX, {
+							applyclassicphase(PHASE_SIX, {
 								["itemID"] = 22736,	-- Andonisus, Reaper of Souls
 								["description"] = "He drops this midway through the encounter and one lucky DPS can wield this. However, it is a conjured item and will disappear after a few minutes.",
 							}),
@@ -521,9 +433,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 			}),
 			n(-389, {	-- Service Entrance
 				["description"] = "Stratholme is divided into two sides.\n\nThis side is commonly referred to as the \"Dead\" or \"Scourge\" side, which the Scourge has taken over.",
-				["cost"] = {
-					{ "i", 12382, 1 },	-- Key to the City
-				},
+				["cost"] = { { "i", 12382, 1 } },	-- Key to the City
 				["groups"] = {
 					n(10435, { 	-- Magistrate Barthilas
 						["description"] = "IIf you enter from the Main Gate side, you can fight this boss first, otherwise he runs to the Slaughter House.",
@@ -534,7 +444,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 							i(13376),	-- Royal Tribunal Cloak
 							i(18726),	-- Magistrate's Cuffs
 							i(18722),	-- Death Grips
-							un(PHASE_FIVE, i(23198)),	-- Idol of Brutality
+							applyclassicphase(PHASE_FIVE, i(23198)),	-- Idol of Brutality
 						},
 					}),
 					n(10809, {	-- Stonespine
@@ -546,11 +456,9 @@ _.Instances = { tier(CLASSIC_TIER, {
 						},
 					}),
 					n(10437, { 	-- Nerub'enkan
-						{
-							["itemID"] = 13176,	-- Scourge Data
-							["questID"] = 5213,	-- The Active Agent
+						i(13176, {	-- Scourge Data
 							["description"] = "Located in the Ziggurat behind the boss.",
-						},
+						}),
 						i(18738),	-- Carapace Spine Crossbow
 						i(13529),	-- Husk of Nerub'enkan
 						i(13533),	-- Acid-Etched Pauldrons
@@ -602,11 +510,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(13509),	-- Clutch of Foresight
 					}),
 					n(10439, { 	-- Ramstein the Gorger
-						{
-							["itemID"] = 15880,	-- Head of Ramstein the Gorger
-							["questID"] = 6163,	-- Ramstein
-							["races"] = HORDE_ONLY,
-						},
+						i(15880),	-- Head of Ramstein the Gorger
 						i(13372),	-- Slavedriver's Cane
 						i(13375),	-- Crest of Retribution
 						i(18723),	-- Animated Chain Necklace
@@ -616,23 +520,36 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(13515),	-- Ramstein's Lightning Bolts
 					}),
 					n(10440, {	-- Baron Rivendare
-						{
-							["itemID"] = 13251,	-- Head of Baron Rivendare
-							["questID"] = 5263,	-- Above and Beyond
-						},
+						i(13251),	-- Head of Baron Rivendare
+						removeclassicphase(ach(729, {	-- Deathcharger's Reins
+							["provider"] = { "i", 13335 },	-- Deathcharger's Reins
+							-- #if BEFORE WRATH
+							["description"] = "Obtain the Deathcharger's Reins from Baron Rivendare in Stratholme.",
+							["OnUpdate"] = [[function(t)
+								local collected = false;
+								for i,provider in ipairs(t.providers) do
+									if provider[1] == "i" and GetItemCount(provider[2], true) > 0 then
+										collected = true;
+										break;
+									end
+								end
+								t.SetAchievementCollected(t.achievementID, collected);
+							end]],
+							-- #endif
+						})),
 						i(13335),	-- Deathcharger's Reins (MOUNT!)
 						i(13505),	-- Runeblade of Baron Rivendare
 						i(13368),	-- Bonescraper
-						un(PHASE_FIVE, i(22408)),	-- Ritssyn's Wand of Bad Mojo
+						applyclassicphase(PHASE_FIVE, i(22408)),	-- Ritssyn's Wand of Bad Mojo
 						i(13349),	-- Scepter of the Unholy
 						i(13361),	-- Skullforge Reaver
-						un(PHASE_FIVE, i(22411)),	-- Helm of the Executioner
-						un(PHASE_FIVE, i(22412)),	-- Thuzadin Mantle
+						applyclassicphase(PHASE_FIVE, i(22411)),	-- Helm of the Executioner
+						applyclassicphase(PHASE_FIVE, i(22412)),	-- Thuzadin Mantle
 						i(13340),	-- Cape of the Black Baron
 						i(13346),	-- Robes of the Exalted
-						un(PHASE_FIVE, i(22409)),	-- Tunic of the Crescent Moon
+						applyclassicphase(PHASE_FIVE, i(22409)),	-- Tunic of the Crescent Moon
 						i(13344),	-- Dracorian Gauntlets
-						un(PHASE_FIVE, i(22410)),	-- Gauntlets of Deftness
+						applyclassicphase(PHASE_FIVE, i(22410)),	-- Gauntlets of Deftness
 						i(16678),	-- Beaststalker's Pants
 						i(16694),	-- Devout Skirt
 						i(16699),	-- Dreadmist Leggings

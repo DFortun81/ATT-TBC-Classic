@@ -339,6 +339,7 @@ app.L = {
 		[416] = { 15273, "Scarab Lord", app.asset("achievement_zone_silithus_01") },
 		[431] = { 15273, "Hand of A'dal", "Interface\\Icons\\inv_mace_25" },
 		[432] = { 15273, "Champion of the Naaru", "Interface\\Icons\\inv_mace_51" },
+		[729] = { 15273 },	-- Deathcharger's Reins, name and icon from providers
 		[871] = { 15273, "Avast Ye, Admiral!", "Interface\\Icons\\inv_helmet_66" },
 		[980] = { 15273 },	-- The Horseman's Reins, name and icon from providers
 		[1292] = { 15273 },	-- Yellow Brewfest Stein, name and icon from providers
