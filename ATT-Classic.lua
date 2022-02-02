@@ -6296,8 +6296,7 @@ local questFields = {
 		end
 	end,
 	["link"] = function(t)
-		-- This might not be a thing in Classic. Investigate more!
-		--return "quest:" .. t.questID;
+		if t.questID then return "[" .. t.name .. " (".. t.questID .. ")]"; end
 	end,
 	["repeatable"] = function(t)
 		return rawget(t, "isDaily") or rawget(t, "isWeekly") or rawget(t, "isMonthly") or rawget(t, "isYearly");
