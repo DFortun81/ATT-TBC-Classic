@@ -3241,7 +3241,7 @@ local fields = {
 		return "achievementID";
 	end,
 	["text"] = function(t)
-		return t.name or RETRIEVING_DATA;
+		return "|cffffff00[" .. (t.name or RETRIEVING_DATA) .. "]|r";
 	end,
 	["name"] = function(t)
 		local data = L.ACHIEVEMENT_DATA[t.achievementID];
@@ -13004,6 +13004,23 @@ SLASH_ATTCU3 = "/attwho";
 SlashCmdList["ATTCU"] = function(cmd)
 	local name,server = UnitName("target");
 	if name then SendResponseMessage("?", server and (name .. "-" .. server) or name); end
+end
+
+local oldItemSetHyperlink = ItemRefTooltip.SetHyperlink;
+function ItemRefTooltip:SetHyperlink(link, a, b, c, d, e, f)
+	-- Make sure to call the default function, but with a try-catch.
+	local status, err = pcall(function () oldItemSetHyperlink(self, link, a, b, c, d, e, f) end)
+	if not status then	
+		local linkType, id, params = strsplit(':', link)
+		linkType = linkType .. "ID";
+		print(linkType, id, params);
+		if not fieldCache[linkType] then return end
+		
+		-- Search for the Link in the database
+		local cmd = linkType .. ":" .. id;
+		local group = GetCachedSearchResults(cmd, SearchForLink, cmd);
+		if group then CreateMiniListForGroup(group); end
+	end
 end
 
 -- Register Events required at the start
