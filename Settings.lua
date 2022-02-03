@@ -1600,7 +1600,7 @@ TBCPhasesLabel:Show();
 table.insert(settings.MostRecentTab.objects, TBCPhasesLabel);
 
 last, xoffset, yoffset = TBCPhasesLabel, 0, -4;
-for i,o in ipairs({ { 17, 0, 0 }, {1701, spacing, -vspacing }, { 18, 0, -vspacing }, {1801, spacing, -vspacing },  { 1802, spacing },  { 19, 0, -vspacing }, { 1901, spacing, -vspacing }, { 20, 0, -vspacing }, { 21, 0 }, }) do
+for i,o in ipairs({ { 17, 0, 0 }, {1701, spacing, -vspacing }, { 18, 0, -vspacing }, {1801, spacing, -vspacing },  { 1802, spacing },  { 19, 0, -vspacing }, { 1901, spacing, -vspacing }, { 1902, spacing }, { 20, 0, -vspacing }, { 21, 0 }, }) do
 	local u = o[1];
 	yoffset = o[3] or 6;
 	local reason = reasons[u];
