@@ -603,6 +603,18 @@ _.Achievements =
 		
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_FEATS_OF_STRENGTH, {
+		removeclassicphase(ach(2358, {	-- Charger
+			["classes"] = { PALADIN },
+			-- #if BEFORE 3.0.1
+			["sourceQuests"] = {
+				7647,	-- Judgment and Redemption
+				-- #if AFTER TBC
+				9737,	-- True Masters of the Light
+				-- #endif
+			},
+			["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(6602) or C_QuestLog.IsQuestFlaggedCompleted(6502) or C_QuestLog.IsQuestFlaggedCompleted(5102)); end]],
+			-- #endif
+		})),
 		ach(2336, applyclassicphase(PHASE_THREE, {	-- Insane in the Membrane
 			["OnClick"] = INSANE_IN_THE_MEMBRANE_OnClick,
 			["OnTooltip"] = INSANE_IN_THE_MEMBRANE_OnTooltip,

@@ -22,7 +22,24 @@ _.Zones =
 					["minReputation"] = { 589, EXALTED },	-- Wintersaber Trainers, Exalted.
 					["coord"] = { 49.8, 9.8, WINTERSPRING },
 					["races"] = ALLIANCE_ONLY,
-					["g"] = {
+					["groups"] = {
+						removeclassicphase(ach(3356, {	-- Winterspring Frostsaber
+							["provider"] = { "i", 13086 },	-- Reins of the Winterspring Frostsaber
+							["races"] = ALLIANCE_ONLY,
+							-- #if BEFORE WRATH
+							["description"] = "Obtain a Winterspring Frosaber.",
+							["OnUpdate"] = [[function(t)
+								local collected = false;
+								for i,provider in ipairs(t.providers) do
+									if provider[1] == "i" and GetItemCount(provider[2], true) > 0 then
+										collected = true;
+										break;
+									end
+								end
+								t.SetAchievementCollected(t.achievementID, collected);
+							end]],
+							-- #endif
+						})),
 						i(13086), 	-- Reins of the Winterspring Frostsaber (MOUNT!)
 					},
 				}),
@@ -65,7 +82,7 @@ _.Zones =
 					["requireSkill"] = 20222,	-- Goblin Engineering
 					["description"] = "Goblin Engineers can speak to Zap Farflinger to learn the recipe.",
 					["coord"] = { 59.6, 49.8, WINTERSPRING },
-					["g"] = {
+					["groups"] = {
 						recipe(23486),	-- Dimensional Ripper - Everlook
 					},
 				}),

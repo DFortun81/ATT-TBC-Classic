@@ -25,7 +25,7 @@ _.Zones =
 				q(4491, {	-- A Little Help From My Friends
 					["sourceQuest"] = 4492,	-- Lost!
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(11910),	-- Bejeweled Legguards
 						i(11911),	-- Treetop Leggings
 						i(11913),	-- Clayridge Helm
@@ -43,131 +43,131 @@ _.Zones =
 					["lvl"] = 47,
 				}),
 				q(3883, {	-- Alien Ecology
-					["lvl"] = 48,
 					["qg"] = 9271,	-- Hol'anyee Marshal
+					["lvl"] = 48,
 				}),
 				q(4501, {	-- Beware of Pterrordax
-					["lvl"] = 49,
 					["provider"] = { "o", 174682 },	-- Beware of Pterrordax
-					["g"] = {
+					["coord"] = { 43.6, 8.4, UNGORO_CRATER },
+					["lvl"] = 49,
+					["groups"] = {
 						i(11918),	-- Grotslab Gloves
 						i(11919),	-- Cragplate Greaves
 					},
-					["coord"] = { 43.6, 8.4, UNGORO_CRATER },
 				}),
 				q(9052, {	-- Bloodpetal Poison
 					["qg"] = 9619,	-- Torwa Pathfinder
-					["coord"] = { 71.6, 76.0, UNGORO_CRATER },
 					["sourceQuest"] = 9063,  -- Torwa Pathfinder
+					["coord"] = { 71.6, 76.0, UNGORO_CRATER },
 					["classes"] = { DRUID },
-					["lvl"] = 50,
 					["cost"] = {
 						{ "i", 22434, 8 },	-- Bloodcap
 						{ "i", 22435, 8 },	-- Gorishi Sting
 					},
+					["lvl"] = 50,
 				}),
 				q(4144, {	-- Bloodpetal Sprouts
-					["lvl"] = 47,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 9119,	-- Muigin
 					["sourceQuest"] = 4143,	-- Haze of Evil
 					["coord"] = { 42.9, 9.6, UNGORO_CRATER },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 47,
 				}),
 				q(4148, {	-- Bloodpetal Zapper
-					["lvl"] = 47,
-					["races"] = HORDE_ONLY,
 					["qg"] = 9118,	-- Larion
 					["sourceQuest"] = 4146,	-- Zapper Fuel
-					["g"] = {
+					["races"] = HORDE_ONLY,
+					["lvl"] = 47,
+					["groups"] = {
 						i(11320),	-- Bloodpetal Zapper
 					},
 				}),
 				q(4243, {	-- Chasing A-Me 01
-					["lvl"] = 48,
 					["qg"] = 9618,	-- Karna Remtravel
 					["coord"] = { 46.4, 13.5, UNGORO_CRATER },
+					["lvl"] = 48,
 				}),
 				q(4244, {	-- Chasing A-Me 01
-					["lvl"] = 48,
 					["qg"] = 9623,	-- A-Me 01
 					["sourceQuest"] = 4243,	-- Chasing A-Me 01
 					["coord"] = { 67.6, 16.8, UNGORO_CRATER },
+					["lvl"] = 48,
 				}),
 				q(4245, {	-- Chasing A-Me 01
-					["lvl"] = 48,
 					["qg"] = 9623,	-- A-Me 01
 					["sourceQuest"] = 4244,	-- Chasing A-Me 01
 					["coord"] = { 67.6, 16.8, UNGORO_CRATER },
+					["lvl"] = 48,
 				}),
 				q(4385, {	-- Crystal Charge
-					["lvl"] = 47,
 					["repeatable"] = true,
-					["g"] = {
+					["lvl"] = 47,
+					["groups"] = {
 						i(11566),	-- Crystal Charge
 					},
 				}),
 				q(4382, {	-- Crystal Force
-					["lvl"] = 47,
 					["repeatable"] = true,
-					["g"] = {
+					["lvl"] = 47,
+					["groups"] = {
 						i(11563),	-- Crystal Force
 					},
 				}),
 				q(4381, {	-- Crystal Restore
-					["lvl"] = 47,
 					["repeatable"] = true,
-					["g"] = {
+					["lvl"] = 47,
+					["groups"] = {
 						i(11562),	-- Crystal Restore
 					},
 				}),
 				q(4386, {	-- Crystal Spire
-					["lvl"] = 47,
 					["repeatable"] = true,
-					["g"] = {
+					["lvl"] = 47,
+					["groups"] = {
 						i(11567),	-- Crystal Spire
 					},
 				}),
 				q(4383, {	-- Crystal Ward
-					["lvl"] = 47,
 					["repeatable"] = true,
-					["g"] = {
+					["lvl"] = 47,
+					["groups"] = {
 						i(11564),	-- Crystal Ward
 					},
 				}),
 				q(4384, {	-- Crystal Yield
-					["lvl"] = 47,
 					["repeatable"] = true,
-					["g"] = {
+					["lvl"] = 47,
+					["groups"] = {
 						i(11565),	-- Crystal Yield
 					},
 				}),
 				q(4284, {	-- Crystals of Power
-					["lvl"] = 47,
 					["qg"] = 9117,	-- J.D. Collie
+					["lvl"] = 47,
 				}),
 				q(5150, {	-- Dadanga is Hungry!
-					["lvl"] = 47,
-					["repeatable"] = true,
 					["qg"] = 9274,	-- Dadanga
-					["g"] = {
+					["coord"] = { 43.6, 7.2, UNGORO_CRATER },
+					["repeatable"] = true,
+					["lvl"] = 47,
+					["groups"] = {
 						i(15699, {	-- Small Brown-wrapped Package
 							i(13481),	-- Recipe: Elixir of Brute Force
 						}),
 					},
-					["coord"] = { 43.6, 7.2, UNGORO_CRATER },
 				}),
 				q(3881, {	-- Expedition Salvation
-					["lvl"] = 48,
 					["qg"] = 9270,	-- Williden Marshal
 					["coord"] = { 43.9, 7.1, UNGORO_CRATER },
 					["description"] = "The crate can be found at 68.5, 36.5.",
+					["lvl"] = 48,
 				}),
 				q(974, {	-- Finding the Source
-					["lvl"] = 51,
 					["qg"] = 10302,	-- Krakle
 					["cost"] = {
 						{ "i", 12472, 1 },	-- Krackle's Thermometer
 					},
+					["lvl"] = 51,
 				}),
 				q(3962, {	-- It's Dangerous to Go Alone
 					["qg"] = 8737,	-- Linken
@@ -179,7 +179,7 @@ _.Zones =
 						{ "i", 11179, 1 },	-- Golden Flame
 					},
 					["lvl"] = 47,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 11179,	-- Golden Flame
 							["questID"] = 3962,	-- It's Dangerous to Go Alone
@@ -238,22 +238,22 @@ _.Zones =
 					["lvl"] = 47,
 				}),
 				q(4492, {	-- Lost!
-					["lvl"] = 50,
 					["qg"] = 9997,	-- Spraggle Frock
 					["coord"] = { 43.6, 8.5, UNGORO_CRATER },
+					["lvl"] = 50,
 				}),
 				q(4321, {	-- Making Sense of It
-					["lvl"] = 47,
 					["qg"] = 9117,	-- J.D. Collie
-					["g"] = {
+					["lvl"] = 47,
+					["groups"] = {
 						i(11482),	-- Crystal Pylon User's Manual
 					},
 				}),
 				q(4147, {	-- Marvon's Workshop
-					["lvl"] = 47,
 					["qg"] = 9118,	-- Larion
-					["races"] = HORDE_ONLY,
 					["sourceQuest"] = 4145,	-- Larion and Muigin
+					["races"] = HORDE_ONLY,
+					["lvl"] = 47,
 				}),
 				q(3912, {	-- Meet at the Grave
 					["qg"] = 9298,	-- Donova Snowden
@@ -282,7 +282,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 11114, 8 },	-- Dinosaur Bone
 					},
-					["g"] = {
+					["groups"] = {
 						i(11908),	-- Archaeologist's Quarry Boots
 						i(11909),	-- Excavator's Utility Belt
 					},
@@ -294,17 +294,17 @@ _.Zones =
 						{ "i", 11830, 8 },	-- Webbed Diemetradon Scale
 						{ "i", 11831, 8 },	-- Webbed Pterrordax Scale
 					},
-					["g"] = {
+					["lvl"] = 49,
+					["groups"] = {
 						i(11915),	-- Shizzle's Drizzle Blocker
 						i(11916),	-- Shizzle's Muzzle
 						i(11917),	-- Shizzle's Nozzle Wiper
 					},
-					["lvl"] = 49,
 				}),
 				q(4289, {	-- The Apes of Un'Goro
-					["lvl"] = 47,
 					["qg"] = 9619,	-- Torwa Pathfinder
 					["coord"] = { 71.6, 76.0, UNGORO_CRATER },
+					["lvl"] = 47,
 				}),
 				q(4292, {	-- The Bait for Lar'korwi
 					["qg"] = 9619,	-- Torwa Pathfinder
@@ -313,7 +313,7 @@ _.Zones =
 						{ "i", 11510, 1 },	-- Lar'korwi's Head
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11568, {	-- Torwa's Pouch
 							{
 								["itemID"] = 11570,	-- Preserved Pheromone Mixture
@@ -335,8 +335,8 @@ _.Zones =
 					},
 				}),
 				q(4287, {	-- The Eastern Pylon
-					["lvl"] = 47,
 					["qg"] = 9117,	-- J.D. Collie
+					["lvl"] = 47,
 				}),
 				q(4290, {	-- The Fare of Lar'korwi
 					["lvl"] = 48,
@@ -345,7 +345,7 @@ _.Zones =
 					["qg"] = 9619,	-- Torwa Pathfinder
 					["coord"] = { 71.6, 76.0, UNGORO_CRATER },
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(11906),	-- Beastsmasher
 						i(11907),	-- Beastslayer
 					},
@@ -355,32 +355,71 @@ _.Zones =
 					["lvl"] = 51,
 				}),
 				q(4285, {	-- The Northern Pylon
-					["lvl"] = 47,
 					["qg"] = 9117,	-- J.D. Collie
+					["lvl"] = 47,
 				}),
 				q(4291, {	-- The Scent of Lar'korwi
-					["lvl"] = 48,
 					["qg"] = 9619,	-- Torwa Pathfinder
 					["coord"] = { 71.6, 76.0, UNGORO_CRATER },
+					["lvl"] = 48,
 				}),
 				q(3909, {	-- The Videre Elixir
 					["qg"] = 9298,	-- Donova Snowden
 					["sourceQuest"] = 3908,	-- It's a Secret to Everybody
 					["coord"] = { 31.2, 45.2, WINTERSPRING },
-					["maps"] = { WINTERSPRING },
 					["cost"] = {
 						{ "i", 11141, 1 },	-- Bait
 						{ "i", 11242, 1 },	-- Evoroot
 					},
-					["g"] = {
+					["lvl"] = 47,
+					["groups"] = {
 						i(11243),	-- Videre Elixir
 					},
-					["lvl"] = 47,
 				}),
 				q(4288, {	-- The Western Pylon
-					["lvl"] = 47,
 					["qg"] = 9117,	-- J.D. Collie
+					["lvl"] = 47,
 				}),
+				applyclassicphase(WRATH_PHASE_ONE, q(13906, {	-- They Grow Up So Fast
+					["qg"] = 11701,	-- Mor'vek <Ravasaur Trainers>
+					["coord"] = { 71.2, 73.7, UNGORO_CRATER },
+					["timeline"] = { "added 3.2.0.10026" },
+					["races"] = HORDE_ONLY,
+					["cost"] = {
+						{ "i", 14047, 20 },	-- Runecloth
+						{ "i", 8170, 20 },	-- Rugged Leather
+						{ "g", 800000 },	-- 80g
+					},
+					["lvl"] = 48,
+					["groups"] = {
+						objective(1, {	-- 0/20 Venomhide Baby Tooth
+							["provider"] = { "i", 47196 },	-- Venomhide Baby Tooth
+							["cost"] = { { "i", 46362, 1 } },	-- Venomhide Hatchling
+						}),
+						removeclassicphase(ach(3357, {	-- Venomhide Ravasaur
+							["provider"] = { "i", 46102 },	-- Whistle of the Venomhide Ravasaur
+							["timeline"] = { "added 3.2.0.10026" },
+							["races"] = HORDE_ONLY,
+							-- #if BEFORE WRATH
+							["description"] = "Obtain a Venomhide Ravasaur.",
+							["OnUpdate"] = [[function(t)
+								local collected = false;
+								for i,provider in ipairs(t.providers) do
+									if provider[1] == "i" and GetItemCount(provider[2], true) > 0 then
+										collected = true;
+										break;
+									end
+								end
+								t.SetAchievementCollected(t.achievementID, collected);
+							end]],
+							-- #endif
+						})),
+						i(46102, {	-- Whistle of the Venomhide Ravasaur
+							["timeline"] = { "added 3.2.0.10026" },
+							["races"] = HORDE_ONLY,
+						}),
+					},
+				})),
 				q(9063, {	-- Torwa Pathfinder
 					["qgs"] = {
 						4218,	-- Denatharion <Druid Trainer>
@@ -404,14 +443,23 @@ _.Zones =
 					["lvl"] = 50,
 				}),
 				q(4502, {	-- Volcanic Activity
-					["lvl"] = 49,
 					["qg"] = 8496,	-- Liv Rizzlefix
+					["lvl"] = 49,
 				}),
 				q(3884, {	-- Williden's Journal
-					["lvl"] = 48,
 					["provider"] = { "i", 11116 },	-- A Mangled Journal
+					["lvl"] = 48,
 				}),
 			}),
 		}),
 	}),
 };
+
+-- #if AFTER WRATH
+-- These quests never made it in.
+_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	n(QUESTS, {
+		q(13908),	-- Gearing Up To Ride
+	}),
+});
+-- #endif
