@@ -337,6 +337,8 @@ app.L = {
 		[1936] = { 162, "Does Your Wolpertinger Linger?" },	-- Wolpertinger Tankard, icon from providers
 		
 		[416] = { 15273, "Scarab Lord", app.asset("achievement_zone_silithus_01") },
+		[424] = { 15273, "Why? Because It's Red" },	-- Why? Because It's Red, icon from providers
+		[425] = { 15273 },	-- Atiesh, Greatstaff of the Guardian, name and icon from providers
 		[426] = { 15273, "Warglaives of Azzinoth" },	-- Warglaives of Azzinoth, icon from providers
 		[428] = { 15273 },	-- Thunderfury, Blessed Blade of the Windseeker, name and icon from providers
 		[429] = { 15273 },	-- Sulfuras, Hand of Ragnaros, name and icon from providers
@@ -346,6 +348,8 @@ app.L = {
 		[725] = { 15273 },	-- Thori'dal, the Stars' Fury, name and icon from providers
 		[729] = { 15273 },	-- Deathcharger's Reins, name and icon from providers
 		[871] = { 15273, "Avast Ye, Admiral!", "Interface\\Icons\\inv_helmet_66" },
+		[880] = { 15273 },	-- Swift Zulian Tiger, name and icon from providers
+		[881] = { 15273 },	-- Swift Razzashi Raptor, name and icon from providers
 		[882] = { 15273 },	-- Fiery Warhorse's Reins, name and icon from providers
 		[883] = { 15273 },	-- Reins of the Raven Lord, name and icon from providers
 		[884] = { 15273 },	-- Swift White Hawkstrider, name and icon from providers
@@ -355,6 +359,7 @@ app.L = {
 		[1293] = { 15273 },	-- Blue Brewfest Stein, name and icon from providers
 		[2336] = { 15273, "Insane in the Membrane", "Interface\\Icons\\Spell_shadow_brainwash" },
 		[2357] = { 15273, "Dreadsteed of Xoroth", "Interface\\Icons\\ability_mount_dreadsteed" },
+		[2496] = { 15273, "The Fifth Element", "Interface\\Icons\\spell_frost_summonwaterelemental_2" },
 		[3496] = { 15273, "A Brew-FAST Mount", "Interface\\Icons\\inv_cask_01" },
 		[4782] = { 15273 },	-- Green Brewfest Stein, name and icon from providers
 		
