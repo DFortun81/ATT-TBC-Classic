@@ -1409,7 +1409,11 @@ profession(LEATHERWORKING, {
 				}),
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Bracers of Shackled Souls",
-					["recipeID"] = 52733
+					-- #if AFTER WRATH
+					["recipeID"] = 52733,
+					-- #else
+					["recipeID"] = 40000,
+					-- #endif
 				}),
 				{
 					["name"] = "Felstalker Bracers",
