@@ -359,6 +359,7 @@ app.L = {
 		[1293] = { 15273 },	-- Blue Brewfest Stein, name and icon from providers
 		[2336] = { 15273, "Insane in the Membrane", "Interface\\Icons\\Spell_shadow_brainwash" },
 		[2357] = { 15273, "Dreadsteed of Xoroth", "Interface\\Icons\\ability_mount_dreadsteed" },
+		[2359] = { 15273, "Swift Flight Form", "Interface\\Icons\\ability_druid_flightform" },
 		[2496] = { 15273, "The Fifth Element", "Interface\\Icons\\spell_frost_summonwaterelemental_2" },
 		[3496] = { 15273, "A Brew-FAST Mount", "Interface\\Icons\\inv_cask_01" },
 		[4782] = { 15273 },	-- Green Brewfest Stein, name and icon from providers
