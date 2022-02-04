@@ -89,7 +89,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 19182, 5 },	-- Darkmoon Faire Prize Ticket
 					},
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						i(19295),	-- Darkmoon Flower
 					},
 				}),
@@ -107,7 +107,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 19182, 5 },	-- Darkmoon Faire Prize Ticket
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						i(19298),	-- Minor Darkmoon Prize
 					},
 				}),
@@ -124,7 +124,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 19182, 10 },	-- Darkmoon Faire Prize Ticket
 					},
-					["g"] = {
+					["groups"] = {
 						i(19292),	-- Last Month's Mutton
 					},
 				}),
@@ -141,7 +141,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 19182, 12 },	-- Darkmoon Faire Prize Ticket
 					},
-					["g"] = {
+					["groups"] = {
 						i(19297),	-- Lesser Darkmoon Prize
 					},
 				}),
@@ -158,7 +158,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 19182, 40 },	-- Darkmoon Faire Prize Ticket
 					},
-					["g"] = {
+					["groups"] = {
 						i(19296),	-- Greater Darkmoon Prize
 					},
 				}),
@@ -176,7 +176,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 19182, 40 },	-- Darkmoon Faire Prize Ticket
 					},
-					["g"] = {
+					["groups"] = {
 						STEAM_TONK_CONTROLLER,
 					},
 				}),
@@ -193,7 +193,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 19182, 50 },	-- Darkmoon Faire Prize Ticket
 					},
-					["g"] = {
+					["groups"] = {
 						i(19291),	-- Darkmoon Storage Box
 					},
 				}),
@@ -210,7 +210,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 19182, 50 },	-- Darkmoon Faire Prize Ticket
 					},
-					["g"] = {
+					["groups"] = {
 						i(19293),	-- Last Year's Mutton
 					},
 				}),
@@ -227,7 +227,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 19182, 1200 },	-- Darkmoon Faire Prize Ticket
 					},
-					["g"] = {
+					["groups"] = {
 						i(19491),	-- Amulet of the Darkmoon
 					},
 				}),
@@ -244,7 +244,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 19182, 1200 },	-- Darkmoon Faire Prize Ticket
 					},
-					["g"] = {
+					["groups"] = {
 						i(19426),	-- Orb of the Darkmoon
 					},
 				}),
@@ -263,7 +263,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 15564, 8 },	-- Rugged Armor Kit
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -282,7 +282,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 7945, 1 },	-- Big Black Mace
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -300,7 +300,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 2309, 3 },	-- Embossed Leather Boots
 					},
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -319,7 +319,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 2314, 3 },	-- Toughened Leather Armor
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -337,7 +337,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 3240, 10 },	-- Coarse Weightstone
 					},
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -355,7 +355,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 4363, 5 },	-- Copper Modulator
 					},
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -374,7 +374,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 8185, 1 },	-- Turtle Scale Leggings
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -382,7 +382,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 19228 },  -- Beasts Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(19288),	-- Darkmoon Card: Blue Dragon
 					},
 				})),
@@ -390,7 +390,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 31890 },  -- Blessings Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(31856),	-- Darkmoon Card: Crusade
 					},
 				})),
@@ -398,7 +398,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 44276 },	-- Chaos Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(42989),	-- Darkmoon Card: Berserker!
 					},
 				})),
@@ -406,7 +406,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 19267 },  -- Elementals Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(19289),	-- Darkmoon Card: Maelstrom
 					},
 				})),
@@ -414,7 +414,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 31907 },  -- Furies Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(31858),	-- Darkmoon Card: Vengeance
 					},
 				})),
@@ -422,7 +422,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 31914 },  -- Lunacy Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(31859),	-- Darkmoon Card: Madness
 					},
 				})),
@@ -430,7 +430,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 19277 },  -- Portals Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(19290),	-- Darkmoon Card: Twisting Nether
 					},
 				})),
@@ -438,7 +438,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 31891 },  -- Storms Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(31857),	-- Darkmoon Card: Wrath
 					},
 				})),
@@ -446,7 +446,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["provider"] = { "i", 19257 },  -- Warlords Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(19287),	-- Darkmoon Card: Heroism
 					},
 				})),
@@ -465,7 +465,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 11404, 10 },	-- Evil Bat Eye
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -484,7 +484,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 19933, 10 },	-- Glowing Scorpid Blood
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -503,7 +503,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 9313, 36 },	-- Green Firework
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -522,7 +522,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 3835, 3 },	-- Green Iron Bracers
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -541,7 +541,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 3486, 7 },	-- Heavy Grinding Stone
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -560,7 +560,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 11590, 6 },	-- Mechanical Repair Kit
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -579,7 +579,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 15564, 8 },	-- Rugged Armor Kit
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -598,7 +598,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 11404, 10 },	-- Evil Bat Eye
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -617,7 +617,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 12644, 8 },	-- Dense Grinding Stone
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -636,7 +636,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 19933, 10 },	-- Glowing Scorpid Blood
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -655,7 +655,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 15994, 6 },	-- Thorium Widget
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -674,7 +674,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 12644, 8 },	-- Dense Grinding Stone
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -692,7 +692,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cost"] = {
 						{ "i", 5134, 5 },	-- Small Furry Paw
 					},
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -711,7 +711,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 4582, 5 },	-- Soft Bushy Tail
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -730,7 +730,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					},
 					["isMonthly"] = true,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(19462, {	-- Unhatched Jubling Egg
 							i(19450),	-- A Jubling's Tiny Home
 						}),
@@ -758,7 +758,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 19338, 1 },	-- Free Ticket Voucher
 					},
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -777,7 +777,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 5739, 3 },	-- Barbaric Harness
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -796,7 +796,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 15994, 6 },	-- Thorium Widget
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -815,7 +815,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 11407, 5 },	-- Torn Bear Pelt
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -834,7 +834,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 5117, 5 },	-- Vibrant Plume
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -853,7 +853,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						{ "i", 4375, 7 },	-- Whirring Bronze Gizmo
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
@@ -863,7 +863,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cr"] = 14822,	-- Sayge
 					["repeatable"] = true,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(19425),	-- Mysterious Lockbox
 					},
 				}),
@@ -873,7 +873,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cr"] = 14822,	-- Sayge
 					["repeatable"] = true,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(19425),	-- Mysterious Lockbox
 					},
 				}),
@@ -883,7 +883,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cr"] = 14822,	-- Sayge
 					["repeatable"] = true,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(19425),	-- Mysterious Lockbox
 					},
 				}),
@@ -893,7 +893,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					["cr"] = 14822,	-- Sayge
 					["repeatable"] = true,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(19425),	-- Mysterious Lockbox
 					},
 				}),

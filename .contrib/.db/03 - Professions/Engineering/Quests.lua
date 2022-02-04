@@ -316,7 +316,7 @@ profession(ENGINEERING, {
 				{ "i", 10559, 6 },	-- Mithril Tube
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(10790),	-- Gnome Engineer Membership Card
 			},
 		}),
@@ -336,7 +336,7 @@ profession(ENGINEERING, {
 				{ "i", 10559, 6 },	-- Mithril Tube
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(10790),	-- Gnome Engineer Membership Card
 			},
 		}),

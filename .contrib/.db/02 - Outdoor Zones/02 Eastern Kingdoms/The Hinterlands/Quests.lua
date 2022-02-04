@@ -58,7 +58,7 @@ _.Zones =
 					["coord"] = { 14.1, 43.6, THE_HINTERLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 37,
-					["g"] = {
+					["groups"] = {
 						i(11474, {	-- Sprite Darter Egg
 							["races"] = ALLIANCE_ONLY,
 						}),
@@ -86,7 +86,7 @@ _.Zones =
 						{ "i", 19071, 10 },	-- Vessel of Tainted Blood
 					},
 					["lvl"] = 46,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 19071,	-- Vessel of Tainted Blood
 							["questID"] = 7850,	-- Dark Vessels
@@ -170,7 +170,7 @@ _.Zones =
 					["coord"] = { 79.0, 79.0, THE_HINTERLANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 46,
-					["g"] = {
+					["groups"] = {
 						i(19120),	-- Rune of the Guard Captain
 					},
 				}),
@@ -188,7 +188,7 @@ _.Zones =
 						{ "i", 19034, 1 },	-- Lard's Lunch
 					},
 					["lvl"] = 44,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 19034,	-- Lard's Lunch
 							["questID"] = 7840,	-- Lard Lost His Lunch
@@ -266,7 +266,7 @@ _.Zones =
 					["coord"] = { 59.6, 77.8, THE_HINTERLANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 46,
-					["g"] = {
+					["groups"] = {
 						i(19114),	-- Highland Bow
 						i(19115),	-- Flask of Forest Mojo
 					},
@@ -333,7 +333,7 @@ _.Zones =
 						{ "i", 9472, 1 },	-- Hexx's Key
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 9472,	-- Hexx's Key
 							["questID"] = 2994,	-- Saving Sharpbeak
@@ -353,7 +353,7 @@ _.Zones =
 						{ "i", 19070, 1 },	-- Huntsman Malkhor's Bones
 					},
 					["lvl"] = 46,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 19069,	-- Huntsman Malkhor's Skull
 							["questID"] = 7849,	-- Separation Anxiety
@@ -379,7 +379,7 @@ _.Zones =
 					["coord"] = { 80.2, 81.4, THE_HINTERLANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 44,
-					["g"] = {
+					["groups"] = {
 						i(19022),	-- Nat Pagle's Extreme Angler FC-5000
 					},
 				}),
@@ -439,7 +439,7 @@ _.Zones =
 						{ "i", 19036, 1 },	-- Final Message to the Wildhammer
 					},
 					["lvl"] = 44,
-					["g"] = {
+					["groups"] = {
 						i(19119),	-- Owlbeast Hide Gloves
 					},
 				}),
@@ -499,7 +499,7 @@ _.Zones =
 					["coord"] = { 79.0, 79.0, THE_HINTERLANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 46,
-					["g"] = {
+					["groups"] = {
 						i(19159),	-- Woven Ivy Necklace
 						i(19121),	-- Deep Woodlands Cloak
 					},

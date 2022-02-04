@@ -17,7 +17,7 @@ _.Zones =
 					["coord"] = { 45.10, 57.69, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 25,
-					["g"] = {
+					["groups"] = {
 						i(6741),	-- Orcish War Sword
 					},
 				}),
@@ -50,7 +50,7 @@ _.Zones =
 					["coord"] = { 51.44, 30.15, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(2458),	-- Elixir of Minor Fortitude
 						i(2457),	-- Elixir of Minor Agility
 						i(2456),	-- Minor Rejuvenation Potion
@@ -71,7 +71,7 @@ _.Zones =
 					["coord"] = { 44.55, 59.26, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(5316),	-- Barkshell Tunic
 						i(5317),	-- Dry Moss Tunic
 					},
@@ -174,7 +174,7 @@ _.Zones =
 						{ "i", 6652, 1 },	-- Reagent Pouch
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 6636,	-- Fire Sapta
 							["questID"] = 1526,	-- Call of Fire (4/5)
@@ -192,7 +192,7 @@ _.Zones =
 						{ "i", 6655, 1 },	-- Glowing Ember
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 6636,	-- Fire Sapta
 							["cr"] = 5893,	-- Minor Manifestation of Fire
@@ -217,7 +217,7 @@ _.Zones =
 						{ "i", 6654, 1 },	-- Torch of the Eternal Flame
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						recipe(3599),	-- Searing Totem
 						i(5176, {	-- Fire Totem
 							["description"] = "You must keep this in your bags forever.",
@@ -402,7 +402,7 @@ _.Zones =
 					["coord"] = { 45.34, 28.42, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(5346),	-- Orcish Battle Bow
 						i(5344),	-- Pointed Axe
 						i(5345),	-- Stonewood Hammer
@@ -419,7 +419,7 @@ _.Zones =
 					["coord"] = { 62.27, 38.39, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 11,
-					["g"] = {
+					["groups"] = {
 						i(4952),	-- Stormstout
 					},
 				}),
@@ -430,7 +430,7 @@ _.Zones =
 					["coord"] = { 62.27, 38.39, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 11,
-					["g"] = {
+					["groups"] = {
 						i(4953),	-- Trogg Brew
 					},
 				}),
@@ -501,7 +501,7 @@ _.Zones =
 					["coord"] = { 51.95, 31.58, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 14,
-					["g"] = {
+					["groups"] = {
 						i(5314),	-- Boar Hunter's Cape
 						i(6477),	-- Grassland Sash
 					},
@@ -519,7 +519,7 @@ _.Zones =
 					["coord"] = { 44.86, 59.13, THE_BARRENS },
 					["lvl"] = 10,
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(5302),	-- Cobalt Buckler
 						i(5306),	-- Wind Rider Staff
 						i(5299),	-- Gloves of the Moon
@@ -585,7 +585,7 @@ _.Zones =
 					["coord"] = { 51.07, 29.62, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(6503),	-- Harlequin Robes
 						i(6502),	-- Violet Scale Armor
 					},
@@ -606,7 +606,7 @@ _.Zones =
 					["classes"] = { SHAMAN },
 					["repeatable"] = true,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 6636,	-- Fire Sapta
 							["questID"] = 1526,	-- Call of Fire (4/5)
@@ -623,7 +623,7 @@ _.Zones =
 						{ "i", 6534, 1 },	-- Forged Steel Bars
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 6534,	-- Forged Steel Bars
 							["questID"] = 1503,	-- Forged Steel
@@ -656,7 +656,7 @@ _.Zones =
 					["coord"] = { 61.96, 54.97, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 13,
-					["g"] = {
+					["groups"] = {
 						i(5311),	-- Buckled Boots
 						i(5312),	-- Riveted Gauntlets
 					},
@@ -726,7 +726,7 @@ _.Zones =
 					["coord"] = { 45.34, 28.42, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 11,
-					["g"] = {
+					["groups"] = {
 						i(5351),	-- Bounty Hunter's Ring
 					},
 				}),
@@ -736,7 +736,7 @@ _.Zones =
 					["coord"] = { 48.12, 5.42, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						i(10653),	-- Trailblazer Boots
 						i(10654),	-- Jutebraid Gloves
 					},
@@ -788,7 +788,7 @@ _.Zones =
 					["coord"] = { 65.83, 43.85, THE_BARRENS },
 					["lvl"] = 10,
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(5356),	-- Branding Rod
 						i(5357),	-- Ward of the Vale
 						i(5355),	-- Beastmaster's Girdle
@@ -800,7 +800,7 @@ _.Zones =
 					["coord"] = { 44.86, 59.13, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(10338),	-- Fresh Zhevra Carcass
 					},
 				}),
@@ -918,7 +918,7 @@ _.Zones =
 					["qg"] = 3453,	-- Wharfmaster Dizzywig
 					["coord"] = { 63.35, 38.45, THE_BARRENS },
 					["lvl"] = 13,
-					["g"] = {
+					["groups"] = {
 						i(5335, {	-- A Sack of Coins
 							i(4957),	-- Old Moneybag
 						}),
@@ -930,7 +930,7 @@ _.Zones =
 					["races"] = { ORC, UNDEAD, TROLL },
 					["classes"] = { ROGUE },
 					["sourceQuest"] = 2458,	-- Deep Cover
-					["g"] = {
+					["groups"] = {
 						i(18160),	-- Recipe: Thistle Tea
 					}
 				}),
@@ -940,7 +940,7 @@ _.Zones =
 					["coord"] = { 52.26, 31.92, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(10820),	-- Jackseed Belt
 						i(10821),	-- Sower's Cloak
 					},
@@ -1046,7 +1046,7 @@ _.Zones =
 					["qg"] = 3446,	-- Mebok Mizzyrix
 					["coord"] = { 62.37, 37.32, THE_BARRENS },
 					["lvl"] = 13,
-					["g"] = {
+					["groups"] = {
 						i(5342),	-- Raptor Punch
 						i(5343),	-- Barkeeper's Cloak
 					},
@@ -1103,7 +1103,7 @@ _.Zones =
 					["coord"] = { 46.08, 76.37, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(5313),	-- Totemic Clan Ring
 					},
 				}),
@@ -1165,7 +1165,7 @@ _.Zones =
 					["sourceQuest"] = 901,	-- Samophlange
 					["coord"] = { 52.41, 11.60, THE_BARRENS },
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(5324),	-- Engineer's Hammer
 						i(5325),	-- Welding Shield
 					},
@@ -1176,7 +1176,7 @@ _.Zones =
 					["coord"] = { 76.49, 24.47, ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(11855),	-- Tork Wrench
 						i(11854),	-- Samophlange Screwdriver
 						i(11147),	-- Samophlange Manual Cover
@@ -1216,7 +1216,7 @@ _.Zones =
 					["coord"] = { 51.62, 30.90, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 12,
-					["g"] = {
+					["groups"] = {
 						i(5321),	-- Elegant Shortsword
 						i(5279),	-- Harpy Skinner
 						i(5318),	-- Zhovur Axe
@@ -1310,7 +1310,7 @@ _.Zones =
 					["sourceQuest"] = 892,	-- The Missing Shipment
 					["coord"] = {62.68, 36.24, THE_BARRENS },
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(5337),	-- Wayfaring Gloves
 						i(5320),	-- Padded Lamellar Boots
 					},
@@ -1321,7 +1321,7 @@ _.Zones =
 					["coord"] = { 51.93, 30.32, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(11853),	-- Rambling Boots
 						i(2694),	-- Settler's Leggings
 					},
@@ -1402,7 +1402,7 @@ _.Zones =
 					["coord"] = { 52.23, 31.01, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(5165),	-- Sunscale Feather
 					},
 				}),
@@ -1435,7 +1435,7 @@ _.Zones =
 						{ "i", 6999, 1 },	-- Tome of the Cabal
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						recipe(691),	-- Summon Felhunter
 						i(22244),	-- Box of Souls
 					},
@@ -1476,7 +1476,7 @@ _.Zones =
 					["coord"] = { 62.4, 35.4, THE_BARRENS },
 					["classes"] = { WARLOCK },
 					["lvl"] = 31,
-					["g"] = {
+					["groups"] = {
 						i(6900),	-- Enchanted Gold Bloodrobe
 					},
 				}),
@@ -1486,7 +1486,7 @@ _.Zones =
 					["coord"] = { 51.50, 30.86, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(5275),	-- Binding Girdle
 						i(5328),	-- Cinched Belt
 					},
@@ -1496,7 +1496,7 @@ _.Zones =
 					["sourceQuest"] = 858,	-- Ignition
 					["coord"] = { 56.52, 7.45, THE_BARRENS },
 					["lvl"] = 13,
-					["g"] = {
+					["groups"] = {
 						i(5326),	-- Flaring Baton
 						i(5327),	-- Greasy Tinker's Pants
 					},
@@ -1513,7 +1513,7 @@ _.Zones =
 					["coord"] = { 62.29, 39.03, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 13,
-					["g"] = {
+					["groups"] = {
 						i(5309),	-- Privateer Musket
 						i(5310),	-- Sea Dog Britches
 					},
@@ -1723,7 +1723,7 @@ _.Zones =
 					["coord"] = { 45.10, 57.69, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(5322),	-- Demolition Hammer
 						i(5323),	-- Everglow Lantern
 					},

@@ -116,7 +116,7 @@ _.Zones =
 						{ "i", 11058, 1 },	-- Sha'ni's Nose-Ring
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11869),	-- Sha'ni's Ring
 					},
 				}),
@@ -132,7 +132,7 @@ _.Zones =
 						{ "g", 300000 },   -- 30g
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(11642),	-- Lesser Arcanum of Constitution
 					},
 				}),
@@ -148,7 +148,7 @@ _.Zones =
 						{ "g", 300000 },   -- 30g
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(11644),	-- Lesser Arcanum of Resilience
 					},
 				}),
@@ -164,7 +164,7 @@ _.Zones =
 						{ "g", 300000 },   -- 30g
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(11622),	-- Lesser Arcanum of Rumination
 					},
 				}),
@@ -180,7 +180,7 @@ _.Zones =
 						{ "g", 300000 },   -- 30g
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(11643),	-- Lesser Arcanum of Tenacity
 					},
 				}),
@@ -196,7 +196,7 @@ _.Zones =
 						{ "g", 300000 },   -- 30g
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(11647),	-- Lesser Arcanum of Voracity
 						i(11648),	-- Lesser Arcanum of Voracity
 						i(11649),	-- Lesser Arcanum of Voracity
@@ -248,7 +248,7 @@ _.Zones =
 						{ "i", 11079, 1 },	-- Gor'tesh's Lopped Off Head
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11867),	-- Maddening Gauntlets
 						i(11868),	-- Choking Band
 					},

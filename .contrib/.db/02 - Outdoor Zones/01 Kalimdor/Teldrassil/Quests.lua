@@ -760,7 +760,7 @@ _.Zones =
 						{ "i", 5170, 5 },	-- Mossy Tumor
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						i(5605),	-- Pruning Knife
 					},
 				}),

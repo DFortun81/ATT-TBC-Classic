@@ -16,7 +16,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15563,	-- Elder Bellowrage
 				["maps"] = { BLASTED_LANDS },
 				["coord"] = { 58.8, 51.7, BLASTED_LANDS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -25,7 +25,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15595,  -- Elder Bladeleaf
 				["coord"] = { 56.9, 60.5, TELDRASSIL },
 				["maps"] = { TELDRASSIL },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -34,7 +34,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15599,	-- Elder Bladesing
 				["maps"] = { SILITHUS },
 				["coord"] = { 49.0, 37.7, SILITHUS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -43,7 +43,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15598,  -- Elder Bladeswift
 				["coord"] = { 33.5, 14.3, DARNASSUS },
 				["maps"] = { DARNASSUS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -52,7 +52,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15575 ,	-- Elder Bloodhoof
 				["maps"] = { MULGORE },
 				["coord"] = { 48.4, 53.2, MULGORE },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -61,7 +61,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15606,  -- Elder Brightspear
 				["coord"] = { 55.6, 43.7, WINTERSPRING },
 				["maps"] = { WINTERSPRING },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -70,7 +70,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15871,	-- Elder Bronzebeard
 				["maps"] = { IRONFORGE },
 				["coord"] = { 29.1, 17.0, IRONFORGE },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -83,7 +83,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21640),	-- Lunar Festival Fireworks Pack
 					i(21737),	-- Schematic: Cluster Launcher
 				},
@@ -97,10 +97,10 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21640),	-- Lunar Festival Fireworks Pack
 					i(21741, {	-- Cluster Rocket Recipes
-						["g"] = {
+						["groups"] = {
 							i(21730),	-- Schematic: Blue Rocket Cluster
 							i(21731),	-- Schematic: Green Rocket Cluster
 							i(21732),	-- Schematic: Red Rocket Cluster
@@ -113,7 +113,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15564,	-- Elder Darkcore
 				["maps"] = { UNDERCITY },
 				["coord"] = { 66.6, 38.2, UNDERCITY },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -122,7 +122,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15579,  -- Elder Darkhorn
 				["coord"] = { 40.9, 33.9, ORGRIMMAR },
 				["maps"] = { ORGRIMMAR },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -131,7 +131,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15585,	-- Elder Dawnstrider
 				["maps"] = { BURNING_STEPPES },
 				["coord"] = { 64.5, 24.1, BURNING_STEPPES },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -141,7 +141,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["maps"] = { TANARIS },
 				["coord"] = { 51.5, 27.8, TANARIS },
 				["questID"] = 8684,	-- Dreamseer the Elder
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -151,7 +151,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15864,  -- Valadar Starsong
 				["coord"] = { 53.7, 35.2, MOONGLADE },
 				["maps"] = { MOONGLADE },
-				["g"] = {
+				["groups"] = {
 					i(21540),	-- Elune's Lantern
 					i(21640),	-- Lunar Festival Fireworks Pack
 				},
@@ -165,7 +165,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21640),	-- Lunar Festival Fireworks Pack
 					i(21713),	-- Elune's Candle
 				},
@@ -175,7 +175,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["isYearly"] = true,
 				["qg"] = 15607,	-- Elder Farwhisper
 				["maps"] = { STRATHOLME },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -187,7 +187,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 1 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21537),	-- Festival Dumplings
 				},
 			}),
@@ -199,7 +199,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21157),	-- Festive Green Dress
 					i(21538),	-- Festive Pink Dress
 					i(21539),	-- Festive Purple Dress
@@ -214,7 +214,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21541),	-- Festive Black Pant Suit
 					i(21544),	-- Festive Blue Pant Suit
 					i(21543),	-- Festive Teal Pant Suit
@@ -230,7 +230,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21640),	-- Lunar Festival Fireworks Pack
 					i(21722),	-- Pattern: Festival Dress
 					i(21723),	-- Pattern: Festival Suit
@@ -245,7 +245,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21640),	-- Lunar Festival Fireworks Pack
 					i(21738),	-- Schematic: Firework Launcher
 				},
@@ -255,7 +255,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15568,	-- Elder Graveborn
 				["maps"] = { TIRISFAL_GLADES },
 				["coord"] = { 61.9, 53.8, TIRISFAL_GLADES },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -264,7 +264,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["coord"] = { 76.7, 37.9, FERALAS },
 				["maps"] = { FERALAS },
 				["isYearly"] = true,
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -273,7 +273,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15569,	-- Elder Goldwell
 				["maps"] = { DUN_MOROGH },
 				["coord"] = { 46.8, 51.6, DUN_MOROGH },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -282,7 +282,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15562,  -- Elder Hammershout
 				["coord"] = { 21.40, 53.87, STORMWIND_CITY },
 				["maps"] = { STORMWIND_CITY },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -291,7 +291,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15588,  -- Elder High Mountain
 				["coord"] = { 45.0, 58.0, THE_BARRENS },
 				["maps"] = { THE_BARRENS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -300,7 +300,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15559,	-- Elder Highpeak
 				["maps"] = { THE_HINTERLANDS },
 				["coord"] = { 50.0, 48.0, THE_HINTERLANDS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -309,7 +309,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15567,	-- Elder Ironband
 				["maps"] = { SEARING_GORGE },
 				["coord"] = { 21.3, 79.0, SEARING_GORGE },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -322,10 +322,10 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21640),	-- Lunar Festival Fireworks Pack
 					i(21743, {	-- Large Cluster Rocket Recipes
-						["g"] = {
+						["groups"] = {
 							i(21733),	-- Schematic: Large Blue Rocket Cluster
 							i(21734),	-- Schematic: Large Green Rocket Cluster
 							i(21735),	-- Schematic: Large Red Rocket Cluster
@@ -342,10 +342,10 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21640),	-- Lunar Festival Fireworks Pack
 					i(21742, {	-- Large Rocket Recipes
-						["g"] = {
+						["groups"] = {
 							i(21727),	-- Schematic: Large Blue Rocket
 							i(21728),	-- Schematic: Large Green Rocket
 							i(21729),	-- Schematic: Large Red Rocket
@@ -362,7 +362,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15602,	-- Elder Meadowrun
 				["maps"] = { WESTERN_PLAGUELANDS },
 				["coord"] = { 66.0, 47.8, WESTERN_PLAGUELANDS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -372,7 +372,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["maps"] = { FERALAS },
 				["coord"] = { 62.5, 31.0, FERALAS },
 				["questID"] = 8685,	-- Mistwalker the Elder
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -381,7 +381,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15594,	-- Elder Moonstrike
 				["maps"] = { WESTERN_PLAGUELANDS },
 				["coord"] = { 69, 73, WESTERN_PLAGUELANDS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -390,7 +390,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15597,  -- Elder Moonwarden
 				["coord"] = { 51.2, 31.2, THE_BARRENS },
 				["maps"] = { THE_BARRENS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -399,7 +399,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["isYearly"] = true,
 				["qg"] = 15549,	-- Elder Morndeep
 				["maps"] = { BLACKROCK_DEPTHS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -408,7 +408,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15604 ,	-- Elder Morningdew
 				["maps"] = { THOUSAND_NEEDLES },
 				["coord"] = { 79.2, 77.1, THOUSAND_NEEDLES },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -417,7 +417,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15603,	-- Elder Nightwind
 				["maps"] = { FELWOOD },
 				["coord"] = { 37.7, 53.0, FELWOOD },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -426,7 +426,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15561,	-- Elder Obsidian
 				["maps"] = { SILVERPINE_FOREST },
 				["coord"] = { 44.9, 41.1, SILVERPINE_FOREST },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -435,7 +435,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15570,	-- Elder Primestone
 				["maps"] = { SILITHUS },
 				["coord"] = { 23.1, 11.8, SILITHUS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -444,7 +444,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15580,	-- Elder Proudhorn
 				["maps"] = { THUNDER_BLUFF },
 				["coord"] = { 73.0, 23.4, THUNDER_BLUFF },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -453,7 +453,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15573,	-- Elder Ragetotem
 				["maps"] = { TANARIS },
 				["coord"] = { 36.3, 80.5, TANARIS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -462,7 +462,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15605,	-- Elder Riversong
 				["maps"] = { ASHENVALE },
 				["coord"] = { 35.53, 48.91, ASHENVALE },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -471,7 +471,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15557,	-- Elder Rumblerock
 				["maps"] = { BURNING_STEPPES },
 				["coord"] = { 82.2, 46.5, BURNING_STEPPES },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -480,7 +480,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15572,  -- Elder Runetotem
 				["coord"] = { 53.1, 44.2, DUROTAR },
 				["maps"] = { DUROTAR },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -489,7 +489,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15558,	-- Elder Silvervein
 				["maps"] = { LOCH_MODAN },
 				["coord"] = { 33.3, 46.5, LOCH_MODAN },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -498,7 +498,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15577,	-- Elder Skychaser
 				["maps"] = { WESTFALL },
 				["coord"] = { 56.7, 47.1, WESTFALL },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -507,7 +507,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15600,  -- Elder Skygleam
 				["coord"] = { 72.4, 85.4, AZSHARA },
 				["maps"] = { AZSHARA },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -516,7 +516,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15584,	-- Elder Skyseer
 				["maps"] = { THOUSAND_NEEDLES },
 				["coord"] = { 45.4, 50.1, THOUSAND_NEEDLES },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -529,10 +529,10 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["cost"] = {
 					{ "i", 21100, 5 },	-- Coin of Ancestry
 				},
-				["g"] = {
+				["groups"] = {
 					i(21640),	-- Lunar Festival Fireworks Pack
 					i(21740, {	-- Small Rocket Recipes
-						["g"] = {
+						["groups"] = {
 							i(21724),	-- Schematic: Small Blue Rocket
 							i(21725),	-- Schematic: Small Green Rocket
 							i(21726),	-- Schematic: Small Red Rocket
@@ -545,7 +545,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15566,	-- Elder Snowcrown
 				["maps"] = { EASTERN_PLAGUELANDS },
 				["coord"] = { 81.5, 60.5, EASTERN_PLAGUELANDS },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -554,7 +554,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["description"] = "Inside of Maraudon. Located in the passage way across the water where Rotgrip can be found as if you were headed to Tinkerer from the water near Princess.",
 				["maps"] = { MARAUDON },
 				["isYearly"] = true,
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -563,7 +563,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15596,	-- Elder Starglade
 				["maps"] = { STRANGLETHORN_VALE },
 				["coord"] = { 53.11, 18.46, STRANGLETHORN_VALE },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -572,7 +572,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["description"] = "Inside of Sunken Temple. From the entrance, take a left up the spiral staircase. You will need to fight and kill the first dragon pack. Continue down the hallway and hang left into the room with all the dragonkin and then again into the alcove.",
 				["maps"] = { SUNKEN_TEMPLE },
 				["isYearly"] = true,
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -581,7 +581,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15601,	-- Elder Starweave
 				["maps"] = { DARKSHORE },
 				["coord"] = { 36.8, 46.7, DARKSHORE },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -590,7 +590,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["isYearly"] = true,
 				["qg"] = 15560,	-- Elder Stonefort
 				["maps"] = { BLACKROCK_SPIRE },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -599,7 +599,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15574,  -- Elder Stonespire
 				["coord"] = { 61.4, 37.8, WINTERSPRING },
 				["maps"] = { WINTERSPRING },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -608,7 +608,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15565,	-- Elder Stormbrow
 				["maps"] = { ELWYNN_FOREST },
 				["coord"] = { 39.8, 63.8, ELWYNN_FOREST },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -680,7 +680,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["qg"] = 15583,	-- Elder Thunderhorn
 				["maps"] = { UNGORO_CRATER },
 				["coord"] = { 50.4, 76.2, UNGORO_CRATER },
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -694,7 +694,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["description"] = "Inside of Zul'Farrak. Located by the pool where Gahz'rilla is summoned.",
 				["maps"] = { ZULFARRAK },
 				["isYearly"] = true,
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -703,7 +703,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["coord"] = { 39.7, 75.4, EASTERN_PLAGUELANDS },
 				["maps"] = { EASTERN_PLAGUELANDS },
 				["isYearly"] = true,
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -712,7 +712,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["coord"] = { 62.5, 37.2, THE_BARRENS },
 				["maps"] = { THE_BARRENS },
 				["isYearly"] = true,
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),
@@ -721,7 +721,7 @@ _.Holidays = bubbleDown({ ["u"] = LUNAR_FESTIVAL },
 				["coord"] = { 27.6, 74.2, STRANGLETHORN_VALE },
 				["maps"] = { STRANGLETHORN_VALE },
 				["isYearly"] = true,
-				["g"] = {
+				["groups"] = {
 					i(21100),	-- Coin of Ancestry
 				},
 			}),

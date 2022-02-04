@@ -14,7 +14,7 @@ _.Zones =
 					["qg"] = 14627,	-- Hansel Heavyhands
 					["coord"] = { 38.6, 27.8, SEARING_GORGE },
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(19126),	-- Slagplate Gauntlets
 					},
 				}),
@@ -35,7 +35,7 @@ _.Zones =
 					["qg"] = 14627,	-- Hansel Heavyhands
 					["coord"] = { 38.6, 27.8, SEARING_GORGE },
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(19125),	-- Seared Mail Girdle
 					},
 				}),
@@ -60,7 +60,7 @@ _.Zones =
 					["qg"] = 14627,	-- Hansel Heavyhands
 					["coord"] = { 38.6, 27.8, SEARING_GORGE },
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(19141),	-- Luffa
 					},
 				}),
@@ -74,7 +74,7 @@ _.Zones =
 					["coord"] = { 38.4, 27.7, SEARING_GORGE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						un(NEVER_IMPLEMENTED, i(19129)),	-- Everglowing Robe
 					},
 				})),
@@ -89,7 +89,7 @@ _.Zones =
 						{ "i", 11723, 1 },	-- Goodsteel's Balanced Flameberge
 					},
 					["lvl"] = 43,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 11724,	-- Overdue Package
 							["questID"] = 4450,	-- Ledger from Tanaris
@@ -112,7 +112,7 @@ _.Zones =
 					["provider"] = { "i", 18950 },	-- Chambermaid Pillaclencher's Pillow
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						un(NEVER_IMPLEMENTED, i(18951)),	-- Evonice's Landin' Pilla
 					},
 				})),
@@ -129,7 +129,7 @@ _.Zones =
 						{ "i", 10458, 1 },	-- Prayer to Elune
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(10745),	-- Kaylari Shoulders
 						i(10746),	-- Runesteel Vambraces
 					},
@@ -203,7 +203,7 @@ _.Zones =
 						{ "i", 10446, 1 },	-- Heart of Obsidion
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 10447,	-- Head of Lathoric the Black
 							["questID"] = 3566,	-- Rise, Obsidion!
@@ -229,7 +229,7 @@ _.Zones =
 						{ "i", 18959, 1 },	-- Smithing Tuyere
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(19124),	-- Slagplate Leggings
 						i(19123),	-- Everwarm Handwraps
 					},
@@ -242,7 +242,7 @@ _.Zones =
 						{ "i", 10515, 1 },	-- Torch of Retribution
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(10742),	-- Dragonflight Leggings
 						i(10743),	-- Drakefire Headguard
 						i(10744),	-- Axe of the Ebon Drake
@@ -311,7 +311,7 @@ _.Zones =
 					["sourceQuest"] = 3453,	-- The Torch of Retribution
 					["coord"] = { 39.1, 39.0, SEARING_GORGE },
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(10515),	-- Torch of Retribution
 					},
 				}),
@@ -319,7 +319,7 @@ _.Zones =
 					["provider"] = { "o", 149502 },	-- Hoard of the Black Dragonflight
 					["sourceQuest"] = 3463,	-- Set Them Ablaze!
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(10569, {	-- Hoard of the Black Dragonflight
 							i(10575),	-- Black Dragonflight Molt
 						}),
@@ -332,7 +332,7 @@ _.Zones =
 						{ "i", 18946, 1 },	-- Head of Overseer Maltorius
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 18946,	-- Head of Overseer Maltorius
 							["questID"] = 7701,	-- WANTED: Overseer Maltorius
@@ -350,7 +350,7 @@ _.Zones =
 						{ "i", 18922, 1 },	-- Secret Plans: Fiery Flux
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 18922,	-- Secret Plans: Fiery Flux
 							["questID"] = 7722,	-- What the Flux?

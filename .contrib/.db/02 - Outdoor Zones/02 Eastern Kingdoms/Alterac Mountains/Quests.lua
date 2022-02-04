@@ -55,7 +55,7 @@ _.Zones =
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(5249),	-- Burning Sliver
 						i(3763),	-- Lunar Buckler
 					},
@@ -83,7 +83,7 @@ _.Zones =
 						{ "i", 3672, 1 },	-- Head of Nagaz
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3672,	-- Head of Nagaz
 							["questID"] = 537,	-- Dark Council
@@ -254,7 +254,7 @@ _.Zones =
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 26,
-					["g"] = {
+					["groups"] = {
 						i(3758),	-- Crusader Belt
 						i(3759),	-- Insulated Sage Gloves
 					},
@@ -287,7 +287,7 @@ _.Zones =
 						{ "i", 6894, 1 },	-- Whirlwind Heart
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 6894,	-- Whirlwind Heart
 							["questID"] = 1713,	-- The Summoning
@@ -306,7 +306,7 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
-					["g"] = {
+					["groups"] = {
 						i(3601),	-- Syndicate Missive
 					},
 				}),

@@ -3,7 +3,7 @@ profession(40, {	-- Poisons
 		["classes"] = { ROGUE },
 		["name"] = "Consumable",
 		["categoryID"] = 2,
-		["g"] = {
+		["groups"] = {
 			applyclassicphase(TBC_PHASE_ONE, {
 				["name"] = "Anesthetic Poison",
 				["timeline"] = { "added 2.0.1.6180" },

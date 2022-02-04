@@ -743,7 +743,7 @@ _.PvP =
 							i(19323),	-- The Unstoppable Force
 							i(19324),	-- The Lobotomizer
 							i(19325),	-- Don Julio's Band
-							un(PHASE_FIVE, i(21563)),	-- Don Rodrigo's Band
+							applyclassicphase(PHASE_FIVE, i(21563)),	-- Don Rodrigo's Band
 							i(19030),	-- Stormpike Battle Charger
 							i(19084),	-- Stormpike Soldier's Cloak
 							i(19086),	-- Stormpike Sage's Cloak
@@ -785,7 +785,7 @@ _.PvP =
 							i(19323),	-- The Unstoppable Force
 							i(19324),	-- The Lobotomizer
 							i(19325),	-- Don Julio's Band
-							un(PHASE_FIVE, i(21563)),	-- Don Rodrigo's Band
+							applyclassicphase(PHASE_FIVE, i(21563)),	-- Don Rodrigo's Band
 							i(19029),	-- Horn of the Frostwolf Howler
 							i(19083),	-- Frostwolf Legionnaire's Cloak
 							i(19085),	-- Frostwolf Advisor's Cloak
@@ -828,7 +828,7 @@ _.PvP =
 							i(19323),	-- The Unstoppable Force
 							i(19324),	-- The Lobotomizer
 							i(19325),	-- Don Julio's Band
-							un(PHASE_FIVE, i(21563)),	-- Don Rodrigo's Band
+							applyclassicphase(PHASE_FIVE, i(21563)),	-- Don Rodrigo's Band
 							i(19029),	-- Horn of the Frostwolf Howler
 							i(19083),	-- Frostwolf Legionnaire's Cloak
 							i(19085),	-- Frostwolf Advisor's Cloak
@@ -871,7 +871,7 @@ _.PvP =
 							i(19323),	-- The Unstoppable Force
 							i(19324),	-- The Lobotomizer
 							i(19325),	-- Don Julio's Band
-							un(PHASE_FIVE, i(21563)),	-- Don Rodrigo's Band
+							applyclassicphase(PHASE_FIVE, i(21563)),	-- Don Rodrigo's Band
 							i(19030),	-- Stormpike Battle Charger
 							i(19084),	-- Stormpike Soldier's Cloak
 							i(19086),	-- Stormpike Sage's Cloak

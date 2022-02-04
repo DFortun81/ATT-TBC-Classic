@@ -35,7 +35,7 @@ _.Zones =
 						{ "i", 16192, 1 },	-- Besseleth's Fang
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 16192,	-- Besseleth's Fang
 							["questID"] = 6284,	-- Arachnophobia
@@ -67,7 +67,7 @@ _.Zones =
 						{ "i", 16190, 1 },	-- Bloodfury Ripper's Remains
 					},
 					["lvl"] = 18,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 16190,	-- Bloodfury Ripper's Remains
 							["questID"] = 6283,	-- Bloodfury Bloodline
@@ -112,7 +112,7 @@ _.Zones =
 						{ "i", 5718, 1 },	-- Venture Co. Engineering Plans
 					},
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5718,	-- Venture Co. Engineering Plans
 							["questID"] = 1079,	-- Covert Ops - Alpha
@@ -133,7 +133,7 @@ _.Zones =
 						{ "i", 5717, 1 },	-- Venture Co. Letters
 					},
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5717,	-- Venture Co. Letters
 							["questID"] = 1080,	-- Covert Ops - Beta
@@ -157,7 +157,7 @@ _.Zones =
 					["coord"] = { 47.17, 64.10, STONETALON_MOUNTAINS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 14,
-					["g"] = {
+					["groups"] = {
 						i(16981),	-- Owlbeard Bracers
 						i(1306),	-- Wolfmane Wristguards
 					},
@@ -205,7 +205,7 @@ _.Zones =
 						{ "i", 5736, 1 },	-- Gerenzo's Mechanical Arm
 					},
 					["lvl"] = 16,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5736,	-- Gerenzo's Mechanical Arm
 							["questID"] = 1096,	-- Gerenzo Wrenchwhistle
@@ -229,7 +229,7 @@ _.Zones =
 						{ "i", 5733, 1 },	-- Unidentified Ore
 					},
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(6666),	-- Dredge Boots
 					},
 				}),
@@ -257,7 +257,7 @@ _.Zones =
 						{ "i", 5584, 5 },	-- Twilight Whisker
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(6664),	-- Voodoo Mantle
 						i(6665),	-- Hexed Bracers
 					},
@@ -306,7 +306,7 @@ _.Zones =
 					["coord"] = { 47.44, 58.47, STONETALON_MOUNTAINS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(16985),	-- Windseeker Boots
 						i(16986),	-- Sandspire Gloves
 					},
@@ -356,7 +356,7 @@ _.Zones =
 					["maps"] = { FERALAS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(6675),	-- Tempered Bracers
 						i(6676),	-- Constable Buckler
 					},
@@ -377,7 +377,7 @@ _.Zones =
 						{ "i", 5675, 8 },	-- Crystalized Scales
 					},
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(6677),	-- Spellcrafter Wand
 					},
 				}),
@@ -417,7 +417,7 @@ _.Zones =
 						{ "i", 5689, 1 },	-- Sleepers' Key
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(6671),	-- Juggernaut Leggings
 						i(6670),	-- Panther Armor
 						i(6669),	-- Sacred Band

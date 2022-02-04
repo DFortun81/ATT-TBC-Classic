@@ -86,7 +86,7 @@ _.Zones =
 						{ "i", 5338, 1 },	-- Ancient Moonstone Seal
 					},
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						i(7229),	-- Explorer's Vest
 						i(5617),	-- Vagabond Leggings
 						i(5604),	-- Elven Wand
@@ -211,7 +211,7 @@ _.Zones =
 						{ "i", 5414, 4 },	-- Grizzled Scalp
 					},
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						i(2082),	-- Wizbang's Gunnysack
 						i(11846),	-- Wizbang's Special Brew
 					},
@@ -234,7 +234,7 @@ _.Zones =
 						{ "i", 5270, 1 },	-- Death Cap
 					},
 					["lvl"] = 12,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5270,	-- Death Cap
 							["questID"] = 947,	-- Cave Mushrooms
@@ -279,7 +279,7 @@ _.Zones =
 						{ "i", 12191, 1 },	-- Silver Dawning's Lockbox
 					},
 					["lvl"] = 13,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 12192,	-- Mist Veil's Lockbox
 							["questID"] = 982,	-- Deep Ocean, Vast Sea
@@ -302,7 +302,7 @@ _.Zones =
 					["coord"] = { 45.0, 85.4, DARKSHORE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(5609),	-- Steadfast Cinch
 					},
 				}),
@@ -314,7 +314,7 @@ _.Zones =
 					["coord"] = { 45.0, 85.4, DARKSHORE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(6659),	-- Scarab Trousers
 					},
 				}),
@@ -326,7 +326,7 @@ _.Zones =
 						{ "i", 5382, 1 },	-- Anaya's Pendant
 					},
 					["lvl"] = 11,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5382,	-- Anaya's Pendant
 							["questID"] = 963,	-- For Love Eternal
@@ -344,7 +344,7 @@ _.Zones =
 						{ "i", 12237, 6 },	-- Fine Crab Chunks
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						i(15405),	-- Shucking Gloves
 						i(15406),	-- Crustacean Boots
 					},
@@ -381,7 +381,7 @@ _.Zones =
 						{ "i", 7442, 1 },	-- Gyromast's Key
 					},
 					["lvl"] = 14,
-					["g"] = {
+					["groups"] = {
 						i(5996),	-- Elixir of Water Breathing
 					},
 				}),
@@ -434,7 +434,7 @@ _.Zones =
 						{ "i", 5273, 6 },	-- Mathystra Relic
 					},
 					["lvl"] = 12,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5273,	-- Mathystra Relic
 							["questID"] = 951,	-- Mathystra Relics
@@ -467,7 +467,7 @@ _.Zones =
 					["altQuests"] = {
 						949,	-- The Twilight Camp
 					},
-					["g"] = {
+					["groups"] = {
 						i(5251),	-- Phial of Scrying
 					},
 				}),
@@ -481,7 +481,7 @@ _.Zones =
 					["altQuests"] = {
 						950,	-- Return to Onu
 					},
-					["g"] = {
+					["groups"] = {
 						i(5251),	-- Phial of Scrying
 					},
 				}),
@@ -528,7 +528,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["cr"] = 6788,	-- Den Mother
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(7738),	-- Evergreen Gloves
 						i(7739),	-- Timberland Cape
 					},
@@ -556,7 +556,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 4654, 1 },	-- Mysterious Fossil
 					},
-					["g"] = {
+					["groups"] = {
 						i(5629),	-- Hammerfist Gloves
 						i(5630),	-- Windfelt Gloves
 						i(11936),	-- Relic Hunter Belt
@@ -571,7 +571,7 @@ _.Zones =
 						{ "i", 12355, 1 },	-- Talisman of Corruption
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 12346,	-- Empty Cleansing Bowl
 							["coord"] = { 37.76, 44.02, DARKSHORE },
@@ -648,7 +648,7 @@ _.Zones =
 					["coord"] = { 47.3, 48.7, DARKSHORE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 12,
-					["g"] = {
+					["groups"] = {
 						i(15335),	-- Briarsteel Shortsword
 						i(15396),	-- Curvewood Dagger
 						i(15397),	-- Oakthrush Staff
@@ -684,7 +684,7 @@ _.Zones =
 						{ "i", 13536, 1 },	-- Horn of Awakening
 					},
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(15205),	-- Owlsight Rifle
 						i(15206),	-- Jadefinger Baton
 						i(15207),	-- Steelcap Shield
@@ -741,7 +741,7 @@ _.Zones =
 					["coord"] = { 55.0, 24.9, DARKSHORE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 13,
-					["g"] = {
+					["groups"] = {
 						i(10043),	-- Pious Legwraps
 						i(5614),	-- Seraph's Strike
 					},
@@ -775,7 +775,7 @@ _.Zones =
 						{ "i", 5360, 7 },	-- Highborne Relic
 					},
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(5612),	-- Ivy Cuffs
 					},
 				}),
@@ -797,7 +797,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["cr"] = 10323,	-- Murkdeep
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						i(5315),	-- Timberland Armguards
 						i(15403),	-- Ridgeback Bracers
 						i(15404),	-- Breakwater Girdle
@@ -821,7 +821,7 @@ _.Zones =
 						{ "i", 12289, 1 },	-- Sea Turtle Remains
 					},
 					["lvl"] = 11,
-					["g"] = {
+					["groups"] = {
 						i(15398),	-- Sandcomber Boots
 						i(15399),	-- Dryweed Belt
 						i(15400),	-- Clamshell Bracers

@@ -2642,9 +2642,9 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 		i(17965, {	-- Yellow Sack of Gems
 			i(12363),	-- Arcane Crystal
 		}),
-		un(PHASE_FIVE, i(23197)),	-- Idol of the Moon [Phase 5/6]
-		un(PHASE_FIVE, i(23203)),	-- Libram of Fervor [Phase 5/6]
-		un(PHASE_FIVE, i(23199)),	-- Totem of the Storm [Phase 5/6]
+		applyclassicphase(PHASE_FIVE, i(23197)),	-- Idol of the Moon [Phase 5/6]
+		applyclassicphase(PHASE_FIVE, i(23203)),	-- Libram of Fervor [Phase 5/6]
+		applyclassicphase(PHASE_FIVE, i(23199)),	-- Totem of the Storm [Phase 5/6]
 		i(4500),	-- Traveler's Backpack
 	}),
 	category(106, {	-- Tarot Cards
@@ -2699,7 +2699,7 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 				["spellID"] = 23028,	-- Arcane Brilliance
 				["rank"] = 1,
 			},
-			un(PHASE_SIX, {
+			applyclassicphase(PHASE_SIX, {
 				["itemID"] = 22890,		-- Tome of Frost Ward V [Phase 6]
 				["spellID"] = 28609,	-- Frost Ward V
 				["rank"] = 5,
@@ -2716,14 +2716,14 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 				["spellID"] = 21564,	-- Prayer of Fortitude II
 				["rank"] = 2,
 			},
-			un(PHASE_FIVE, {
+			applyclassicphase(PHASE_FIVE, {
 				["itemID"] = 22393,		-- Codex: Prayer of Shadow Protection [Phase 5]
 				["spellID"] = 27683,	-- Prayer of Shadow Protection
 				["rank"] = 1,
 			}),
 		}),
 		cl(WARLOCK, {
-			un(PHASE_SIX, {
+			applyclassicphase(PHASE_SIX, {
 				["itemID"] = 22891,		-- Grimoire of Shadow Ward IV [Phase 6]
 				["spellID"] = 28610,	-- Shadow Ward IV
 				["rank"] = 4,
@@ -2808,7 +2808,7 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 			i(12694),	-- Plans: Thorium Helm
 			i(12704),	-- Plans: Thorium Leggings
 			i(12692),	-- Plans: Thorium Shield Spike
-			un(PHASE_FIVE, i(22388)),	-- Plans: Titanic Leggings
+			applyclassicphase(PHASE_FIVE, i(22388)),	-- Plans: Titanic Leggings
 			i(8029),	-- Plans: Wicked Mithril Blade
 			i(12711),	-- Plans: Whitesoul Helm
 			i(12691),	-- Plans: Wildthorn Mail

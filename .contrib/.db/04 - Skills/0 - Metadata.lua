@@ -457,7 +457,7 @@ _.Skills =
 	{
 		["name"] = "Weapon Skills",
 		["categoryID"] = 71,
-		["g"] = {
+		["groups"] = {
 			{
 				["recipeID"] = 264,	-- Bows
 				["classes"] = {

@@ -30,7 +30,7 @@ _.Zones =
 						{ "i", 4029, 10 },	-- Akiris Reed
 					},
 					["lvl"] = 38,
-					["g"] = {
+					["groups"] = {
 						i(4117),	-- Scorching Sash
 					},
 				}),
@@ -53,7 +53,7 @@ _.Zones =
 						836,	-- Rescue OOX-09/HL!
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(10398),	-- Mechanical Chicken
 					},
 				}),
@@ -123,7 +123,7 @@ _.Zones =
 						{ "i", 2634, 1 },	-- Venom Fern Extract
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 2634,	-- Venom Fern Extract
 							["questID"] = 204,	-- Bad Medicine
@@ -145,7 +145,7 @@ _.Zones =
 						{ "i", 3880, 1 },	-- Head of Bangalash
 					},
 					["lvl"] = 28,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3880,	-- Head of Bangalash
 							["questID"] = 208,	-- Big Game Hunter
@@ -187,7 +187,7 @@ _.Zones =
 						{ "i", 1519, 15 },	-- Bloodscalp Ear
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4598),	-- Goblin Fishing Pole
 					},
 				}),
@@ -199,7 +199,7 @@ _.Zones =
 						{ "i", 3915, 25 },	-- Bloody Bone Necklace
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4135),	-- Bloodbone Band
 					},
 				}),
@@ -213,7 +213,7 @@ _.Zones =
 					["qg"] = 716,	-- Barnil Stonepot
 					["coord"] = { 35.7, 10.5, STRANGLETHORN_VALE },
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(2756, {	-- Green Hills of Stranglethorn - Chapter I
 							["questID"] = 339,	-- Chapter I
 							["cost"] = {
@@ -229,7 +229,7 @@ _.Zones =
 					["qg"] = 716,	-- Barnil Stonepot
 					["coord"] = { 35.7, 10.5, STRANGLETHORN_VALE },
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(2757, {	-- Green Hills of Stranglethorn - Chapter II
 							["questID"] = 340,	-- Chapter II
 							["cost"] = {
@@ -245,7 +245,7 @@ _.Zones =
 					["qg"] = 716,	-- Barnil Stonepot
 					["coord"] = { 35.7, 10.5, STRANGLETHORN_VALE },
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(2758, {	-- Green Hills of Stranglethorn - Chapter III
 							["questID"] = 341,	-- Chapter III
 							["cost"] = {
@@ -261,7 +261,7 @@ _.Zones =
 					["qg"] = 716,	-- Barnil Stonepot
 					["coord"] = { 35.7, 10.5, STRANGLETHORN_VALE },
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(2759, {	-- Green Hills of Stranglethorn - Chapter IV
 							["questID"] = 342,	-- Chapter IV
 							["cost"] = {
@@ -281,7 +281,7 @@ _.Zones =
 						{ "i", 3615, 1 },	-- Kurzen's Head
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3615,	-- Kurzen's Head
 							["questID"] = 202,	-- Colonel Kurzen
@@ -319,7 +319,7 @@ _.Zones =
 					["coord"] = { 31.1, 66.1, DUSTWALLOW_MARSH },
 					["maps"] = { DUSTWALLOW_MARSH, THE_HINTERLANDS },
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 11324,	-- Explorer's Knapsack
 							["questID"] = 626,	-- Cortello's Riddle
@@ -335,7 +335,7 @@ _.Zones =
 						{ "i", 3930, 1 },	-- Maury's Key
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4129),	-- Collection Plate
 					},
 				}),
@@ -366,7 +366,7 @@ _.Zones =
 					["qg"] = 7802,	-- Galvan the Ancient
 					["sourceQuest"] = 3621,	-- The Formation of Felbane
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(10697),	-- Enchanted Azsharite Felbane Dagger
 						i(10698),	-- Enchanted Azsharite Felbane Staff
 						i(10696),	-- Enchanted Azsharite Felbane Sword
@@ -380,7 +380,7 @@ _.Zones =
 						{ "i", 4105, 1 },	-- Elder Crocolisk Skin
 					},
 					["lvl"] = 31,
-					["g"] = {
+					["groups"] = {
 						i(4109),	-- Excelsior Boots
 					},
 				}),
@@ -395,7 +395,7 @@ _.Zones =
 						618,	-- Facing Negolash
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						q(619, {	-- Enticing Negolash
 							["provider"] = { "o", 2289 },	-- Ruined Lifeboat
 							["cost"] = {
@@ -430,7 +430,7 @@ _.Zones =
 					["coord"] = { 27.1, 77.2, STRANGLETHORN_VALE },
 					["repeatable"] = true,
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						i(5806),	-- Fool's Stout
 					},
 				}),
@@ -443,7 +443,7 @@ _.Zones =
 						{ "i", 9319, 1 },	-- Nimboya's Laden Pike
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 15002,	-- Nimboya's Pike
 							["cost"] = {
@@ -468,7 +468,7 @@ _.Zones =
 						{ "i", 1532, 20 },	-- Shrunken Head
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4133),	-- Darkspear Cuffs
 						i(4132),	-- Darkspear Armsplints
 					},
@@ -477,7 +477,7 @@ _.Zones =
 					["qg"] = 737,	-- Kebok
 					["coord"] = { 27.00, 77.13, STRANGLETHORN_VALE },
 					["lvl"] = 31,
-					["g"] = {
+					["groups"] = {
 						i(4121),	-- Gemmed Gloves
 					},
 				}),
@@ -509,7 +509,7 @@ _.Zones =
 						{ "i", 3897, 1 },	-- Dizzy's Eye
 					},
 					["lvl"] = 37,
-					["g"] = {
+					["groups"] = {
 						i(4114),	-- Darktide Cape
 					},
 				}),
@@ -542,7 +542,7 @@ _.Zones =
 						{ "i", 3616, 1 },	-- Mind's Eye
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4125),	-- Tranquil Orb
 					},
 				}),
@@ -558,7 +558,7 @@ _.Zones =
 						{ "i", 4103, 1 },	-- 	Shackle Key
 					},
 					["lvl"] = 42,
-					["g"] = {
+					["groups"] = {
 						i(4103, {	-- Shackle Key
 							["cr"] = 1559,	-- King Mukla
 							["questID"] = 630,	-- Message in a Bottle (2/2)
@@ -607,7 +607,7 @@ _.Zones =
 						{ "i", 737, 1 },	-- Holy Spring Water
 					},
 					["lvl"] = 33,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 737,	-- Holy Spring Water
 							["questID"] = 573,	-- Mok'thardin's Enchantment
@@ -641,7 +641,7 @@ _.Zones =
 						{ "i", 3876, 1 },	-- Fang of Bhag'thera
 					},
 					["lvl"] = 28,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3876,	-- Fang of Bhag'thera
 							["questID"] = 193,	-- Panther Mastery (4/4)
@@ -686,7 +686,7 @@ _.Zones =
 						{ "i", 3877, 1 },	-- Talon of Tethis
 					},
 					["lvl"] = 28,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3877,	-- Talon of Tethis
 							["questID"] = 197,	-- Raptor Mastery (4/4)
@@ -701,7 +701,7 @@ _.Zones =
 					["coord"] = { 37.7, 3.4, STRANGLETHORN_VALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4139),	-- Junglewalker Sandals
 						i(4123),	-- Frost Metal Pauldrons
 					},
@@ -711,7 +711,7 @@ _.Zones =
 					["coord"] = { 26.95, 77.21, STRANGLETHORN_VALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 32,
-					["g"] = {
+					["groups"] = {
 						i(4124),	-- Cap of Harmony
 					},
 				}),
@@ -736,7 +736,7 @@ _.Zones =
 						{ "i", 3913, 1 },	-- Filled Soul Gem
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3912,	-- Soul Gem
 							["questID"] = 593,	-- Filling the Soul Gem
@@ -838,7 +838,7 @@ _.Zones =
 						{ "i", 3916, 25 },	-- Split Bone Necklace
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4137),	-- Darkspear Shoes
 						i(4136),	-- Darkspear Boots
 					},
@@ -850,7 +850,7 @@ _.Zones =
 						{ "i", 2797, 1 },	-- Heart of Mokk
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						q(349, {	-- Stranglethorn Fever
 							["qg"] = 1449,	-- Witch Doctor Unbagwa
 							["coord"] = { 35.2, 60.4, STRANGLETHORN_VALE },
@@ -914,7 +914,7 @@ _.Zones =
 					["qg"] = 2487,	-- Fleet Master Seahorn
 					["coord"] = { 27.2, 77.0, STRANGLETHORN_VALE },
 					["lvl"] = 37,
-					["g"] = {
+					["groups"] = {
 						i(4138),	-- Blackwater Tunic
 					},
 				}),
@@ -928,7 +928,7 @@ _.Zones =
 						{ "i", 3932, 1 },	-- Smotts' Chest
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3932,	-- Smotts' Chest
 							["questID"] = 8551,	-- The Captain's Chest
@@ -966,7 +966,7 @@ _.Zones =
 						{ "i", 4034, 1 },	-- Stone of the Tides
 					},
 					["lvl"] = 32,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4027,	-- Catelyn's Blade
 							["coord"] = { 25, 23.6, STRANGLETHORN_VALE },
@@ -990,7 +990,7 @@ _.Zones =
 					["qg"] = 2464,	-- Commander Aggro'gosh
 					["races"] = HORDE_ONLY,
 					["lvl"] = 33,
-					["g"] = {
+					["groups"] = {
 						i(4115),	-- Grom'gol Buckler
 					},
 				}),
@@ -1008,7 +1008,7 @@ _.Zones =
 						{ "i", 2759, 1 },	-- Green Hills of Stranglethorn - Chapter IV
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(17688),	-- Jungle Boots
 						i(3928),	-- Superior Healing Potion
 						i(8173),	-- Thick Armor Kit
@@ -1024,7 +1024,7 @@ _.Zones =
 					["provider"] = { "o", 287 },	-- Bookie Herod's Records
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4122),	-- Bookmaker's Scepter
 					},
 				}),
@@ -1105,7 +1105,7 @@ _.Zones =
 						{ "i", 3879, 1 },	-- Paw of Sin'Dall
 					},
 					["lvl"] = 28,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3879,	-- Paw of Sin'Dall
 							["questID"] = 188,	-- Tiger Mastery (4/4)
@@ -1157,7 +1157,7 @@ _.Zones =
 						{ "i", 3917, 10 },	-- Singing Blue Crystal
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(5253),	-- Goblin Igniter
 						i(4128),	-- Silver Spade
 					},
@@ -1216,7 +1216,7 @@ _.Zones =
 						 { "i", 3900, 12 },	-- Pupellyverbos Port
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3900,	-- Pupellyverbos Port
 							["questID"] = 580,	-- Whiskey Slim's Lost Grog
@@ -1238,7 +1238,7 @@ _.Zones =
 						{ "i", 4016, 12 },	-- Zanzil's Mixture
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						i(4131),	-- Belt of Corruption
 					},
 				}),

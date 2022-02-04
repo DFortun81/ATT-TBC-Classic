@@ -113,7 +113,7 @@ _.Zones =
 						{ "i", 1971, 1 },	-- Furlbrow's Deed
 					},
 					["lvl"] = 8,
-					["g"] = {
+					["groups"] = {
 						i(5057),	-- Ripe Watermelon
 						i(4656),	-- Small Pumpkin
 					},
@@ -126,7 +126,7 @@ _.Zones =
 						{ "i", 723, 8 },	-- Goretusk Liver
 					},
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(724),	-- Goretusk Liver Pie
 						i(2697),	-- Recipe: Goretusk Liver Pie
 					},
@@ -138,7 +138,7 @@ _.Zones =
 						{ "i", 814, 5 },	-- Flask of Oil
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(2455),	-- Minor Mana Potion
 						i(118),	-- Minor Healing Potion
 						i(955),	-- Scroll of Intellect
@@ -157,7 +157,7 @@ _.Zones =
 						{ "i", 7908, 1 },	-- Klaven Mortwake's Journal
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 7923,	-- Defias Tower Key
 							["questID"] = 2359,	-- Klaven's Tower
@@ -182,7 +182,7 @@ _.Zones =
 						{ "i", 725, 8 },	-- Gnoll Paw
 					},
 					["lvl"] = 8,
-					["g"] = {
+					["groups"] = {
 						i(1154),	-- Belt of the People's Militia
 						i(710),	-- Bracers of the People's Militia
 					},
@@ -195,7 +195,7 @@ _.Zones =
 						{ "i", 1528, 8 },	-- Handful of Oats
 					},
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(2165),	-- Old Blanchy's Blanket
 						i(1537),	-- Old Blanchy's Feed Pouch
 					},
@@ -208,7 +208,7 @@ _.Zones =
 						{ "i", 829, 15 },	-- Red Leather Bandana
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(3511),	-- Cloak of the People's Militia
 						i(5944),	-- Greaves of the People's Militia
 						i(12295),	-- Leggings of the People's Militia
@@ -300,7 +300,7 @@ _.Zones =
 						{ "i", 743, 1 },	-- Bundle of Charred Oak
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 743,	-- Bundle of Charred Oak
 							["questID"] = 53,	-- Sweet Amber (5/5)
@@ -321,7 +321,7 @@ _.Zones =
 						{ "i", 3636, 1 },	-- Scale of Old Murk-Eye
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3636,	-- Scale of Old Murk-Eye
 							["questID"] = 104,	-- The Coastal Menace
@@ -382,7 +382,7 @@ _.Zones =
 						{ "i", 841, 1 },	-- Furlbrow's Pocket Watch
 					},
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(4541),	-- Freshly Baked Bread
 						i(1179),	-- Ice Cold Milk
 					},
@@ -392,7 +392,7 @@ _.Zones =
 					["coord"] = { 56.0, 31.2, WESTFALL },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 8,
-					["g"] = {
+					["groups"] = {
 						i(3578),	-- Harvester's Pants
 						i(1561),	-- Harvester's Robe
 					},
@@ -416,7 +416,7 @@ _.Zones =
 					["coord"] = { 56.3, 47.6, WESTFALL },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(1566),	-- Edge of the People's Militia
 						i(1480),	-- Fist of the People's Militia
 						i(12296),	-- Spark of the People's Militia
@@ -430,7 +430,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 1274, 5 },	-- Hops
 					},
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 1262,	-- Keg of Thunderbrew
 							["questID"] = 116,	-- Dry Times
@@ -459,7 +459,7 @@ _.Zones =
 						{ "i", 732, 3 },	-- Okra
 					},
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(733),	-- Westfall Stew
 						i(1479),	-- Salma's Oven Mitts
 						i(728),	-- Recipe: Westfall Stew

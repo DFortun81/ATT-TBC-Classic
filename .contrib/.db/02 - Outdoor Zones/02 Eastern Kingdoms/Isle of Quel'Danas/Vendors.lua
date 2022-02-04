@@ -8,7 +8,7 @@ _.Zones =
 			n(VENDORS, {
 				n(25032, {	-- Eldara Dawnrunner <Shattered Sun Quartermaster>
 					["coord"] = { 47.2, 30.7, ISLE_OF_QUELDANAS },
-					["g"] = {
+					["groups"] = {
 						i(34667),	-- Archmage's Guile
 						i(34665),	-- Bombardier's Blade
 						i(34676),	-- Dawnforged Defender
@@ -52,7 +52,7 @@ _.Zones =
 				}),
 				n(26090, {	-- Karynna <Exotic Gear Purveyor>
 					["coord"] = { 49.6, 40.5, ISLE_OF_QUELDANAS },
-					["g"] = {
+					["groups"] = {
 						i(28334, {	-- Gladiator's Chain Armor
 							["cost"] = { { "i", 29755, 1 }, },	-- Chestguard of the Fallen Hero
 						}),
@@ -312,7 +312,7 @@ _.Zones =
 				}),
 				n(26089, {	-- Kayri <Exotic Gear Purveyor>
 					["coord"] = { 50.2, 39.7, ISLE_OF_QUELDANAS },
-					["g"] = {
+					["groups"] = {
 						i(32809),	-- Veteran's Chain Bracers
 						i(32797),	-- Veteran's Chain Girdle
 						i(32785),	-- Veteran's Chain Sabatons
@@ -497,7 +497,7 @@ _.Zones =
 				}),
 				n(26091, {	-- Olus <Exotic Gear Purveyor>
 					["coord"] = { 50.2, 40.1, ISLE_OF_QUELDANAS },
-					["g"] = {
+					["groups"] = {
 						i(31962, {	-- Merciless Gladiator's Chain Helm
 							["cost"] = { { "i", 30244, 1, } },	-- 1x Helm of the Vanquished Hero [Hunter, Mage, Warlock]
 						}),
@@ -757,7 +757,7 @@ _.Zones =
 				}),
 				n(25950, {	-- Shaani
 					["coord"] = { 51.5, 32.5, ISLE_OF_QUELDANAS },
-					["g"] = {
+					["groups"] = {
 						-- #if BEFORE CATA
 						i(35238),	-- Design: Balanced Shadowsong Amethyst [TBC] / Design: Shifting Shadowsong Amethyst [CATA+]
 						-- #endif
@@ -857,7 +857,7 @@ _.Zones =
 				}),
 				n(25046, {	-- Smith Hauthaa <Weapons & Armorsmith>
 					["coord"] = { 50.5, 40.7, ISLE_OF_QUELDANAS },
-					["g"] = {
+					["groups"] = {
 						i(34925),	-- Adorned Supernal Legwraps
 						i(34935),	-- Aftershock Waistguard
 						i(34887),	-- Angelista's Revenge
@@ -919,7 +919,7 @@ _.Zones =
 				}),
 				n(26092, {	-- Soryn <Exotic Gear Purveyor>
 					["coord"] = { 49.3, 39.7, ISLE_OF_QUELDANAS },
-					["g"] = {
+					["groups"] = {
 						i(31960, {	-- Merciless Gladiator's Chain Armor
 							["cost"] = { { "i", 31091, 1 }, },	-- Chestguard of the Forgotten Protector
 						}),
@@ -1179,7 +1179,7 @@ _.Zones =
 				}),
 				n(25976, {	-- Theremis <Keeper of Lost Artifacts>
 					["coord"] = { 50.1, 28.4, ISLE_OF_QUELDANAS },
-					["g"] = {
+					["groups"] = {
 						i(34527, {	-- Belt of Absolution
 							["cost"] = { { "i", 34853, 1 }, },	-- Belt of the Forgotten Conqueror
 						}),
@@ -1337,7 +1337,7 @@ _.Zones =
 				}),
 				n(25977, {	-- Yrma <Transmuter of Sin'dorei Relics>
 					["coord"] = { 50.2, 28.2 },
-					["g"] = {
+					["groups"] = {
 						i(34397, {	-- Bladed Chaos Tunic
 							["cost"] = {
 								{ "i", 34664, 1 },	-- 1x Sunmote

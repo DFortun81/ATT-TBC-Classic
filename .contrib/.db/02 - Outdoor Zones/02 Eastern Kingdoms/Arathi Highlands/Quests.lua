@@ -77,7 +77,7 @@ _.Zones =
 					["coord"] = { 74.24, 33.91, ARATHI_HIGHLANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(9520),	-- Silent Hunter
 						i(9521),	-- Skullsplitter
 					},
@@ -92,7 +92,7 @@ _.Zones =
 					["sourceQuest"] = 670,	-- Sunken Treasure (5/5)
 					["coord"] = { 32.2, 81.6, ARATHI_HIGHLANDS },
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						i(4550),	-- Coldwater Ring
 						i(4549),	-- Seafire Band
 					},
@@ -100,14 +100,14 @@ _.Zones =
 				q(662, {	-- Deep Sea Salvage
 					["lvl"] = 35,
 					["qg"] = 2767,	-- First Mate Nilzlix
-					["g"] = {
+					["groups"] = {
 						i(4511),	-- Black Water Hammer
 					},
 				}),
 				q(664, {	-- Drowned Sorrows
 					["lvl"] = 35,
 					["qg"] = 2769,	-- Captain Steelgut
-					["g"] = {
+					["groups"] = {
 						i(4509),	-- Seawolf Gloves
 					},
 				}),
@@ -141,7 +141,7 @@ _.Zones =
 					["lvl"] = 29,
 					["races"] = HORDE_ONLY,
 					["qg"] = 2792,	-- Gor'mul
-					["g"] = {
+					["groups"] = {
 						i(4546),	-- Call of the Raptor
 					},
 				}),
@@ -195,7 +195,7 @@ _.Zones =
 						{ "i", 4533, 1 },	-- Sealed Letter to Archmage Malin
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4975),	-- Vigilant Buckler
 						i(15104),	-- Wingborne Boots
 					},
@@ -309,7 +309,7 @@ _.Zones =
 						{ "i", 4506, 15 },	-- Stromgarde Badge
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4741),	-- Stromgarde Cavalry Leggings
 					},
 				}),
@@ -354,7 +354,7 @@ _.Zones =
 						{ "i", 4492, 10 },	-- Elven Gem
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						i(4547),	-- Gnomish Zapper
 						i(4548),	-- Servomechanic Sledgehammer
 					},
@@ -409,7 +409,7 @@ _.Zones =
 						{ "i", 4551, 1 },	-- Or'Kalar's Head
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4551,	-- Or'Kalar's Head
 							["questID"] = 680,	-- The Real Threat
@@ -460,7 +460,7 @@ _.Zones =
 				q(646, {	-- Trol'kalar
 					["lvl"] = 32,
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(4508),	-- Blood-tinged Armor
 						i(4507),	-- Pit Fighter's Shield
 					},
@@ -488,7 +488,7 @@ _.Zones =
 						{ "i", 4515, 1 },	-- Marez's Head
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4515,	-- Marez's Head
 							["questID"] = 684,	-- Wanted! Marez Cowl
@@ -507,7 +507,7 @@ _.Zones =
 						{ "i", 4516, 1 },	-- Otto's Head
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4517,	-- Falconcrest's Head
 							["questID"] = 685,	-- Wanted! Otto and Falconcrest

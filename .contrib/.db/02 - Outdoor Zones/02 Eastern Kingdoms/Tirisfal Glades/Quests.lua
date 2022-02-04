@@ -22,7 +22,7 @@ _.Zones =
 						{ "i", 2858, 5 },	-- Darkhound Blood
 					},
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						i(3382),	-- Weak Troll's Blood Potion
 					},
 				}),
@@ -35,7 +35,7 @@ _.Zones =
 						{ "i", 2859, 5 },	-- Vile Fin Scale
 					},
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						i(3434),	-- Slumber Sand
 					},
 				}),
@@ -48,7 +48,7 @@ _.Zones =
 						{ "i", 2872, 4 },	-- Vicious Night Web Spider Venom
 					},
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						i(3442),	-- Apprentice Sash
 					},
 				}),
@@ -83,7 +83,7 @@ _.Zones =
 					["qg"] = 6784,	-- Calvin Montague
 					["coord"] = { 38.2, 56.8, TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(4604),	-- Forest Mushroom Cap
 						i(159),	-- Refreshing Spring Water
 					},
@@ -113,7 +113,7 @@ _.Zones =
 					["coord"] = { 60.6, 51.8, TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						i(3445),	-- Ceremonial Knife
 						i(3071),	-- Striking Hatchet
 					},
@@ -130,7 +130,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3080,	-- Candle of Beckoning
 							["questID"] = 409,	-- Proving Allegiance
@@ -247,7 +247,7 @@ _.Zones =
 						{ "i", 2834, 8 },	-- Embalming Ichor
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						i(6063),	-- Cold Steel Gauntlets
 						i(3439),	-- Zombie Skin Boots
 					},
@@ -268,7 +268,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["classes"] = { WARRIOR },
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(7115),	-- Heirloom Axe
 						i(7117),	-- Heirloom Hammer
 						i(7116),	-- Heirloom Dagger
@@ -291,7 +291,7 @@ _.Zones =
 						{ "i", 16333, 1 },	-- Samuel's Remains
 					},
 					["lvl"] = 3,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 16333,	-- Samuel's Remains
 							["questID"] = 6395,	-- Marla's Last Wish
@@ -312,7 +312,7 @@ _.Zones =
 					["coord"] = { 32.2, 66.0, TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 2,
-					["g"] = {
+					["groups"] = {
 						i(3270),	-- Flax Vest
 						i(3273),	-- Rugged Mail Vest
 						i(3272),	-- Zombie Skin Leggings
@@ -337,7 +337,7 @@ _.Zones =
 						{ "i", 2875, 10 },	-- Scarlet Insignia Ring
 					},
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						i(3435),	-- Zombie Skin Bracers
 						i(3437),	-- Clasped Belt
 						i(12299),	-- Netted Gloves
@@ -358,7 +358,7 @@ _.Zones =
 					["sourceQuest"] = 364,	-- The Mindless Ones
 					["coord"] = { 30.8, 66.2, TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(3274),	-- Flax Boots
 						i(11851),	-- Scavenger Tunic
 						i(11852),	-- Roamer's Leggings
@@ -400,7 +400,7 @@ _.Zones =
 						{ "i", 11127, 6 },	-- Scavenged Goods
 					},
 					["lvl"] = 2,
-					["g"] = {
+					["groups"] = {
 						i(11848),	-- Flax Belt
 						i(11849),	-- Rustmetal Bracers
 						i(11850),	-- Short Duskbat Cape
@@ -457,7 +457,7 @@ _.Zones =
 						{ "i", 2320, 1 },	-- Coarse Thread
 					},
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						i(3833),	-- Adept's Cloak
 						i(5939),	-- Sewing Gloves
 					},
@@ -471,7 +471,7 @@ _.Zones =
 						{ "i", 3265, 6 },	-- Scavenger Paw
 					},
 					["lvl"] = 2,
-					["g"] = {
+					["groups"] = {
 						i(6060),	-- Flax Bracers
 						i(2173),	-- Old Leather Belt
 					},
@@ -503,7 +503,7 @@ _.Zones =
 					["races"] = { UNDEAD },
 					["classes"] = { ROGUE },
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(7298),	-- Blade of Cunning
 					},
 				}),
@@ -521,7 +521,7 @@ _.Zones =
 						{ "i", 3082, 1 },	-- Dargol's Skull
 					},
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3082,	-- Dargol's Skull
 							["questID"] = 408,	-- The Family Crypt
@@ -540,7 +540,7 @@ _.Zones =
 						{ "i", 2831, 1 },	-- Devlin's Remains
 					},
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 2831,	-- Devlin's Remains
 							["questID"] = 362,	-- The Haunted Mills
@@ -570,7 +570,7 @@ _.Zones =
 						{ "i", 3162, 5 },	-- Notched Rib
 					},
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						i(3447),	-- Cryptwalker Boots
 						i(3834),	-- Sturdy Cloth Trousers
 					},
@@ -580,7 +580,7 @@ _.Zones =
 					["sourceQuest"] = 363,	-- Rude Awakening
 					["coord"] = { 30.8, 66.2, TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(3275),	-- Flax Gloves
 						i(11847),	-- Battered Cloak
 					},
@@ -598,7 +598,7 @@ _.Zones =
 					["qg"] = 1497,	-- Gunther Arcanus
 					["races"] = HORDE_ONLY,
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						i(5940),	-- Bone Buckler
 					},
 				}),
@@ -611,7 +611,7 @@ _.Zones =
 						{ "i", 2885, 1 },	-- Scarlet Crusade Documents
 					},
 					["lvl"] = 2,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 2885,	-- Scarlet Crusade Documents
 							["questID"] = 382,	-- The Red Messenger
@@ -631,7 +631,7 @@ _.Zones =
 						{ "i", 3266, 12 },	-- Scarlet Armband
 					},
 					["lvl"] = 2,
-					["g"] = {
+					["groups"] = {
 						i(3268),	-- Forsaken Dagger
 						i(3269),	-- Forsaken Maul
 						i(3267),	-- Forsaken Shortsword
@@ -666,7 +666,7 @@ _.Zones =
 						{ "i", 3635, 1 },	-- Maggot Eye's Paw
 					},
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3635,	-- Maggot Eye's Paw
 							["questID"] = 398,	-- Wanted: Maggot Eye

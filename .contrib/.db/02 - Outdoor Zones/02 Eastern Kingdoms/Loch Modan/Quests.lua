@@ -71,7 +71,7 @@ _.Zones =
 					["coord"] = { 50.6, 14.4, LOCH_MODAN },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 16,
-					["g"] = {
+					["groups"] = {
 						i(2907),	-- Dwarven Tree Chopper
 						i(2908),	-- Thornblade
 					},
@@ -80,7 +80,7 @@ _.Zones =
 					["lvl"] = 11,
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 1187,	-- Daryl the Youngling
-					["g"] = {
+					["groups"] = {
 						i(2903),	-- Daryl's Hunting Bow
 						i(2904),	-- Daryl's Hunting Rifle
 					},
@@ -90,7 +90,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 1187,	-- Daryl the Youngling
 					["sourceQuest"] = 257,	-- A Hunter's Boast
-					["g"] = {
+					["groups"] = {
 						i(859),	-- Fine Cloth Shirt
 						i(3572),	-- Daryl's Shortsword
 					},
@@ -149,7 +149,7 @@ _.Zones =
 					["sourceQuest"] = 2039,	-- Find Bingles
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 12,
-					["g"] = {
+					["groups"] = {
 						i(12522),	-- Bingles' Flying Gloves
 					},
 				}),
@@ -161,7 +161,7 @@ _.Zones =
 						{ "i", 2925, 6 },	-- Crocolisk Skin
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(3678),	-- Recipe: Crocolisk Steak
 						i(2240),	-- Rugged Cape
 					},
@@ -176,7 +176,7 @@ _.Zones =
 					["qg"] = 1343,	-- Mountaineer Stormpike
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(3166),	-- Ironheart Chain
 						i(3161),	-- Robe of the Keeper
 						i(3160),	-- Ironplate Buckler
@@ -190,7 +190,7 @@ _.Zones =
 					["coord"] = { 65.93, 65.62, LOCH_MODAN },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4982),	-- Ripped Prospector Belt
 						i(2776),	-- Gold Ore
 						i(1529),	-- Jade
@@ -201,7 +201,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 1345,	-- Magmar Fellhew
 					["sourceQuest"] = 436,	-- Ironband's Excavation
-					["g"] = {
+					["groups"] = {
 						i(5241),	-- Dwarven Flamestick
 						i(6186),	-- Trogg Slicer
 						i(3154),	-- Thelsamar Axe
@@ -234,7 +234,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 1090,	-- Mountaineer Wallbang
 					["sourceQuest"] = 237,	-- In Defense of the King's Lands (2/4)
-					["g"] = {
+					["groups"] = {
 						i(2863),	-- Coarse Sharpening Stone
 					},
 				}),
@@ -243,7 +243,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 1092,	-- Captain Rugelfuss
 					["sourceQuest"] = 263,	-- In Defense of the King's Lands (3/4)
-					["g"] = {
+					["groups"] = {
 						i(1436),	-- Frontier Britches
 						i(6187),	-- Dwarven Defender
 						i(1832),	-- Lucky Trousers
@@ -295,7 +295,7 @@ _.Zones =
 						2057,	-- Huldar
 					},
 					["sourceQuest"] = 454,	-- After the Ambush
-					["g"] = {
+					["groups"] = {
 						i(3217),	-- Foreman Belt
 						i(6188),	-- Mud Stompers
 					},
@@ -304,7 +304,7 @@ _.Zones =
 					["lvl"] = 10,
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 1340,	-- Mountaineer Kadrell
-					["g"] = {
+					["groups"] = {
 						i(3158),	-- Burnt Hide Bracers
 						i(860),	-- Cavalier's Boots
 					},
@@ -343,7 +343,7 @@ _.Zones =
 				}),
 				un(NEVER_IMPLEMENTED, q(912, {	-- Stonesplinter Trogg Disguise
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						un(NEVER_IMPLEMENTED, i(5131)),	-- Knowledge: Stonesplinter Disguise
 					},
 				})),
@@ -378,7 +378,7 @@ _.Zones =
 						{ "i", 3174, 3 },	-- Spider Ichor
 					},
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						i(3220),	-- Blood Sausage
 						i(3679),	-- Recipe: Blood Sausage
 					},
@@ -401,7 +401,7 @@ _.Zones =
 						{ "i", 2713, 1 },	-- Ol' Sooty's Head
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 2713,	-- Ol' Sooty's Head
 							["questID"] = 271,	-- Vyrin's Revenge (1/2)
@@ -418,7 +418,7 @@ _.Zones =
 						{ "i", 2713, 1 },	-- Ol' Sooty's Head
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						i(3574),	-- Hunting Ammo Sack
 						i(3573),	-- Hunting Quiver
 					},
@@ -428,7 +428,7 @@ _.Zones =
 					["coord"] = { 37.2, 46.4, LOCH_MODAN },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 2561,	-- Chok'sul's Head
 							["questID"] = 256,	-- WANTED: Chok'sul

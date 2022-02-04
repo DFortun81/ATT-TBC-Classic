@@ -8,7 +8,7 @@ _.Zones =
 		m(NETHERSTORM, {
 			n(ACHIEVEMENTS, {
 				ach(1194, {		-- Into the Nether
-					["g"] = {
+					["groups"] = {
 						-- TODO: possibly more sourceQuests needed for some of these
 						crit(1, {		-- Socrethar
 							["sourceQuests"] = {

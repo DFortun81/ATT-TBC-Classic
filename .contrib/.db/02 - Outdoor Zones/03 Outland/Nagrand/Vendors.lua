@@ -146,7 +146,7 @@ _.Zones =
 				}),
 				n(23007, {	-- Paulsta'ats <Consortium Quartermaster>
 					["coord"] = { 30.5, 56.9, NAGRAND },
-					["g"] = {
+					["groups"] = {
 						i(29115),	-- Consortium Blaster
 						i(31776),	-- Consortium Tabard
 						i(33156),	-- Design: Crimson Sun
@@ -195,7 +195,7 @@ _.Zones =
 				n(20241, {	-- Provisioner Nasela <Mag'har Quartermaster>
 					["coord"] = { 55.8, 37.8, NAGRAND },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(29145),	-- Band of Ancestral Spirits
 						i(29139),	-- Ceremonial Cover
 						i(29143, {	-- Clefthoof Hide Quiver
@@ -430,7 +430,7 @@ _.Zones =
 				n(20240, {	-- Trader Narasu <Kurenai Quartermaster>
 					["coord"] = { 54.5, 75.1, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(29138),	-- Arechron's Gift
 						i(29146),	-- Band of Elemental Spirits
 						i(29148),	-- Blackened Leather Spaulders

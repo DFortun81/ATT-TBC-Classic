@@ -13,7 +13,7 @@ _.Zones =
 						{ "i", 2162, 1 },	-- Sarah's Ring
 					},
 					["lvl"] = 28,
-					["g"] = {
+					["groups"] = {
 						i(2000),	-- Archeus
 					},
 				}),
@@ -30,7 +30,7 @@ _.Zones =
 					["coord"] = { 75.3, 49.2, DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 25,
-					["g"] = {
+					["groups"] = {
 						i(5817),	-- Lunaris Bow
 						i(5818),	-- Moonbeam Wand
 					},
@@ -67,7 +67,7 @@ _.Zones =
 						{ "i", 2382, 1 },	-- The Embalmer's Heart
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 2382,	-- The Embalmer's Heart
 							["questID"] = 253,	-- Bride of the Embalmer
@@ -115,7 +115,7 @@ _.Zones =
 						{ "i", 2251, 6 },	-- Gooey Spider Leg
 					},
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(3683),	-- Recipe: Gooey Spider Cake
 					},
 				}),
@@ -124,7 +124,7 @@ _.Zones =
 					["coord"] = { 45.1, 67.0, DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						i(3559),	-- Night Watch Gauntlets
 					},
 				}),
@@ -236,7 +236,7 @@ _.Zones =
 						{ "i", 1968, 1 },	-- Ogre's Monocle
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 1968,	-- Ogre's Monocle
 							["questID"] = 181,	-- Look To The Stars
@@ -274,7 +274,7 @@ _.Zones =
 						{ "i", 7297, 1 },	-- Morbent's Bane
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(2954),	-- Night Watch Pantaloons
 						i(2953),	-- Watch Master's Cloak
 						i(1282),	-- Sparkmetal Coif
@@ -286,7 +286,7 @@ _.Zones =
 					["coord"] = { 72.6, 47.7, DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
-					["g"] = {
+					["groups"] = {
 						i(2154),	-- The Story of Morgan Ladimore
 					},
 				}),
@@ -314,7 +314,7 @@ _.Zones =
 						{ "i", 6082, 1 },	-- Deepstrider Tumor
 					},
 					["lvl"] = 37,
-					["g"] = {
+					["groups"] = {
 						i(6832),	-- Cloak of Blight
 						i(11265),	-- Cragwood Maul
 					},
@@ -394,7 +394,7 @@ _.Zones =
 						{ "i", 2665, 1 },	-- Stormwind Seasoning Herbs
 					},
 					["lvl"] = 18,
-					["g"] = {
+					["groups"] = {
 						i(1017),	-- Seasoned Wolf Kabob
 						i(2701),	-- Recipe: Seasoned Wolf Kabob
 					},
@@ -490,7 +490,7 @@ _.Zones =
 						{ "i", 938, 1 },	-- Muddy Journal Pages
 					},
 					["lvl"] = 22,
-					["g"] = {
+					["groups"] = {
 						i(939),	-- A Bloodstained Journal Page
 					},
 				}),
@@ -553,7 +553,7 @@ _.Zones =
 						{ "i", 3629, 1 },	-- Mistmantle Family Ring
 					},
 					["lvl"] = 22,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3629,	-- Mistmantle Family Ring
 							["questID"] = 98,	-- The Legend of Stalvan
@@ -622,7 +622,7 @@ _.Zones =
 					["coord"] = { 73.6, 46.9, DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 18,
-					["g"] = {
+					["groups"] = {
 						i(3604),	-- Bandolier of the Night Watch
 						i(3605),	-- Quiver of the Night Watch
 						i(1729),	-- Gunnysack of the Night Watch
@@ -665,7 +665,7 @@ _.Zones =
 						{ "i", 1130, 5 },	-- Vial of Spider Venom
 					},
 					["lvl"] = 18,
-					["g"] = {
+					["groups"] = {
 						i(1131),	-- Totem of Infliction
 					},
 				}),
@@ -686,7 +686,7 @@ _.Zones =
 					["coord"] = { 72.6, 47.7, DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(3248),	-- Translated Letter from The Embalmer
 					},
 				}),
@@ -701,7 +701,7 @@ _.Zones =
 					["coord"] = { 7.7, 33.4, DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 19,
-					["g"] = {
+					["groups"] = {
 						i(1127),	-- Flash Bundle
 					},
 				}),
@@ -722,7 +722,7 @@ _.Zones =
 					["coord"] = { 75.3, 48.0, DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 23,
-					["g"] = {
+					["groups"] = {
 						i(2902),	-- Cloak of the Faith
 						i(1547),	-- Shield of the Faith
 						i(5244),	-- Consecrated Wand

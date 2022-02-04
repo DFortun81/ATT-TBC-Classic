@@ -14,7 +14,7 @@ _.Zones =
 						{ "i", 4616, 1 },	-- Ryedol's Lucky Pick
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						i(4978),	-- Ryedol's Hammer
 					},
 				}),
@@ -89,7 +89,7 @@ _.Zones =
 						{ "i", 3404, 4 },	-- Buzzard Wing
 					},
 					["lvl"] = 33,
-					["g"] = {
+					["groups"] = {
 						i(4457),	-- Barbecued Buzzard Wing
 						i(4609),	-- Recipe: Barbecued Buzzard Wing
 					},
@@ -111,7 +111,7 @@ _.Zones =
 						{ "i", 4645, 1 },	-- Chains of Hematus
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(11193),	-- Blazewind Breastplate
 						i(11194),	-- Prismscale Hauberk
 						i(11195),	-- Warforged Chestplate
@@ -144,7 +144,7 @@ _.Zones =
 						{ "i", 4612, 1 },	-- Black Drake's Heart
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(5421),	-- Fiery Blaze Enchantment
 					},
 				}),
@@ -166,7 +166,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 4647, 1 },	-- Yagyin's Digest
 					},
-					["g"] = {
+					["groups"] = {
 						i(4984),	-- Skull of Impending Doom
 					},
 				}),
@@ -195,7 +195,7 @@ _.Zones =
 						{ "i", 3823, 1 },	-- Lesser Invisibility Potion
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						i(4624),	-- Recipe: Lesser Stoneshield Potion
 						i(4623),	-- Lesser Stoneshield Potion
 					},
@@ -212,7 +212,7 @@ _.Zones =
 					["coord"] = { 50.89, 62.4, BADLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4983),	-- Rock Pulverizer
 					},
 				}),
@@ -251,7 +251,7 @@ _.Zones =
 						{ "i", 4611, 9 },	-- Blue Pearl
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(4086),	-- Flash Rifle
 						i(5248),	-- Flash Wand
 						i(4852),	-- Flash Bomb
@@ -338,7 +338,7 @@ _.Zones =
 						{ "i", 4630, 7 },	-- Scrap Metal
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						i(4652),	-- Salbac Shield
 						i(4653),	-- Ironheel Boots
 					},
@@ -419,7 +419,7 @@ _.Zones =
 						{ "i", 2868, 1 },	-- Patterned Bronze Bracers
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						i(4979),	-- Enchanted Stonecloth Bracers
 					},
 				}),
@@ -553,7 +553,7 @@ _.Zones =
 						{ "i", 4847, 1 }	-- Lotwil's Shackles of Elemental Binding
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4847,	-- Lotwil's Shackles of Elemental Binding
 							["questID"] = 778,	-- This Is Going to Be Hard
@@ -586,7 +586,7 @@ _.Zones =
 						{ "i", 4645, 1 },	-- Chains of Hematus
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						
 						i(11193),	-- Blazewind Breastplate
 						i(11194),	-- Prismscale Hauberk

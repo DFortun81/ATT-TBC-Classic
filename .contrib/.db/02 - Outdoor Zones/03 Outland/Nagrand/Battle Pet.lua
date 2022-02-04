@@ -29,7 +29,7 @@ _.Zones =
 					["isDaily"] = true,
 					["coord"] = { 61.0, 49.4, NAGRAND },
 					["provider"] = { "n", 66552 },	-- Narrok <Master Pet Tamer>
-					["g"] = {
+					["groups"] = {
 						i(89125)	-- Sack of Pet Supplies
 					},
 				}),

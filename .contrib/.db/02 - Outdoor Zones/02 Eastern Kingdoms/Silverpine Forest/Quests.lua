@@ -16,7 +16,7 @@ _.Zones =
 						{ "i", 3613, 1 },	-- Valdred's Hands
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3613,	-- Valdred's Hands
 							["questID"] = 530,	-- A Husband's Revenge
@@ -35,7 +35,7 @@ _.Zones =
 						{ "i", 3254, 6 },	-- Skittering Blood
 					},
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(3448),	-- Senggin Root
 					},
 				}),
@@ -58,7 +58,7 @@ _.Zones =
 						{ "i", 3258, 1 },	-- Hardened Tumor
 					},
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(3451),	-- Nightglow Concoction
 						i(3582),	-- Acidproof Cloak
 						i(2458),	-- Elixir of Minor Fortitude
@@ -130,7 +130,7 @@ _.Zones =
 						{ "i", 3218, 6 },	-- Pyrewood Shackle
 					},
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						i(3586),	-- Logsplitter
 						i(3570),	-- Bonegrinding Pestle
 						i(5242),	-- Cinder Wand
@@ -145,7 +145,7 @@ _.Zones =
 						{ "i", 3623, 1 },	-- Thule's Head
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3623,	-- Thule's Head
 							["questID"] = 442,	-- Assault on Fenris Isle
@@ -161,7 +161,7 @@ _.Zones =
 					["coord"] = { 44, 41, SILVERPINE_FOREST },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 16,
-					["g"] = {
+					["groups"] = {
 						i(5252),	-- Wand of Decay
 					},
 				}),
@@ -190,7 +190,7 @@ _.Zones =
 					["coord"] = { 56.2, 9.2, SILVERPINE_FOREST },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(3455),	-- Deathstalker Shortsword
 					},
 				}),
@@ -202,7 +202,7 @@ _.Zones =
 						{ "i", 3621, 1 },	-- Ivar's Head
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3621,	-- Ivar's Head
 							["questID"] = 425,	-- Ivar the Foul
@@ -245,7 +245,7 @@ _.Zones =
 					["coord"] = { 46.4, 74.2, SILVERPINE_FOREST },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 12,
-					["g"] = {
+					["groups"] = {
 						i(3450),	-- Faerleia's Shield
 						i(2818),	-- Stretched Leather Trousers
 						i(3449),	-- Mystic Shawl
@@ -265,7 +265,7 @@ _.Zones =
 					["coord"] = { 42.8, 40.8, SILVERPINE_FOREST },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(3240),	-- Coarse Weightstone
 						i(2863),	-- Coarse Sharpening Stone
 						i(2313),	-- Medium Armor Kit
@@ -349,7 +349,7 @@ _.Zones =
 						{ "i", 3622, 1 },	-- Essence of Nightlash
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3622,	-- Essence of Nightlash
 							["questID"] = 437,	-- The Dead Fields
@@ -398,7 +398,7 @@ _.Zones =
 						{ "i", 3515, 1 },	-- Ataeric's Staff
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(3452),	-- Ceranium Rod
 						i(3585),	-- Camouflaged Tunic
 					},
@@ -409,7 +409,7 @@ _.Zones =
 					["coord"] = { 42.8, 40.8, SILVERPINE_FOREST },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(3251),	-- Bethor's Potion
 					},
 				}),
@@ -422,7 +422,7 @@ _.Zones =
 						{ "i", 3425, 1 },	-- Woven Wand
 					},
 					["lvl"] = 12,
-					["g"] = {
+					["groups"] = {
 						i(3457),	-- Stamped Trousers
 						i(3458),	-- Rugged Mail Gloves
 						i(3581),	-- Serrated Knife
@@ -437,7 +437,7 @@ _.Zones =
 						{ "i", 3164, 6 },	-- Discolored Worg Heart
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(4597),	-- Recipe: Discolored Healing Potion
 						i(4596),	-- Discolored Healing Potion
 					},

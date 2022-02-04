@@ -42,7 +42,7 @@ _.Zones =
 						{ "i", 10714, 20 },	-- Crystallized Azsharite
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 10834,	-- Felhound Tracker Kit
 							["groups"] = {
@@ -104,7 +104,7 @@ _.Zones =
 						{ "i", 10597, 1 },	-- Head of Magus Rimtori
 					},
 					["lvl"] = 44,
-					["g"] = {
+					["groups"] = {
 						i(10709),	-- Pyrestone Orb
 						i(11120),	-- Belgrom's Hammer
 					},
@@ -200,7 +200,7 @@ _.Zones =
 						{ "i", 10718, 1 },	-- Kim'Jael's Wizzlegoober
 					},
 					["lvl"] = 47,
-					["g"] = {
+					["groups"] = {
 						i(10830),	-- M73 Frag Grenade
 					},
 				}),

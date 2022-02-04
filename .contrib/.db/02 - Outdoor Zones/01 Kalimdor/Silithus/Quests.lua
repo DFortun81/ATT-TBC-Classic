@@ -6,7 +6,7 @@ _.Zones =
 	m(KALIMDOR, {
 		m(SILITHUS, {
 			n(QUESTS, {
-				un(PHASE_FIVE_CATCH_UP, q(9248, {	-- A Humble Offering
+				applyclassicphase(PHASE_FIVE_CATCH_UP, q(9248, {	-- A Humble Offering
 					["qg"] = 15282,	-- Aurel Goldleaf
 					["coord"] = { 52.0, 38.2, SILITHUS },
 					["minReputation"] = { 609, HONORED },	-- Cenarion Circle
@@ -15,7 +15,7 @@ _.Zones =
 					},
 					["lvl"] = 58,
 					["groups"] = {
-						un(PHASE_FIVE_CATCH_UP, i(22725)),	-- Band of Cenarius
+						i(22725),	-- Band of Cenarius
 					},
 				})),
 				q(8287, {	-- A Terrible Purpose
@@ -82,7 +82,7 @@ _.Zones =
 						i(20601),	-- Sack of Spoils
 					},
 				}),
-				un(PHASE_FIVE, q(9338, {	-- Allegiance to Cenarion Circle
+				applyclassicphase(PHASE_FIVE, q(9338, {	-- Allegiance to Cenarion Circle
 					["qg"] = 15540,	-- Windcaller Kaldon
 					["coord"] = { 50.0, 36.4, SILITHUS },
 					["repeatable"] = true,
@@ -181,7 +181,7 @@ _.Zones =
 						i(20712),	-- Wastewalker's Gauntlets
 					},
 				}),
-				un(PHASE_FIVE, q(8780, {	-- Armor Kits for the Field [ALLIANCE]
+				applyclassicphase(PHASE_FIVE, q(8780, {	-- Armor Kits for the Field [ALLIANCE]
 					["provider"] = { "i", 21263 },	-- Logistics Task Briefing VII
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
@@ -195,7 +195,7 @@ _.Zones =
 						i(20805),	-- Followup Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8787, {	-- Armor Kits for the Field [HORDE]
+				applyclassicphase(PHASE_FIVE, q(8787, {	-- Armor Kits for the Field [HORDE]
 					["provider"] = { "i", 21264 },	-- Logistics Task Briefing VII
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
@@ -209,7 +209,7 @@ _.Zones =
 						i(21386),	-- Followup Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8781, {	-- Arms for the Field [ALLIANCE]
+				applyclassicphase(PHASE_FIVE, q(8781, {	-- Arms for the Field [ALLIANCE]
 					["provider"] = { "i", 21260 },	-- Logistics Task Briefing VI
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
@@ -222,7 +222,7 @@ _.Zones =
 						i(20805),	-- Followup Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8786, {	-- Arms for the Field [HORDE]
+				applyclassicphase(PHASE_FIVE, q(8786, {	-- Arms for the Field [HORDE]
 					["provider"] = { "i", 21261 },	-- Logistics Task Briefing VI
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
@@ -242,7 +242,7 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 54,
 				}),
-				un(PHASE_FIVE, q(8737, {	-- Azure Templar
+				applyclassicphase(PHASE_FIVE, q(8737, {	-- Azure Templar
 					["provider"] = { "i", 21245 },	-- Tactical Task Briefing I
 					["cr"] = 15211,	-- Azure Templar <Abyssal Council>
 					["repeatable"] = true,
@@ -252,7 +252,7 @@ _.Zones =
 						i(21133),	-- Followup Tactical Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8496, {	-- Bandages for the Field
+				applyclassicphase(PHASE_FIVE, q(8496, {	-- Bandages for the Field
 					["provider"] = { "i", 20806 },	-- Logistics Task Briefing X
 					["repeatable"] = true,
 					["cost"] = {
@@ -266,7 +266,7 @@ _.Zones =
 						i(20805),	-- Followup Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8810, {	-- Bandages for the Field
+				applyclassicphase(PHASE_FIVE, q(8810, {	-- Bandages for the Field
 					["provider"] = { "i", 21385 },	-- Logistics Task Briefing X
 					["repeatable"] = true,
 					["cost"] = {
@@ -280,7 +280,7 @@ _.Zones =
 						i(21386),	-- Followup Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8540, {	-- Boots for the Guard
+				applyclassicphase(PHASE_FIVE, q(8540, {	-- Boots for the Guard
 					["provider"] = { "i", 20939 },	-- Logistics Task Briefing II
 					["repeatable"] = true,
 					["cost"] = {
@@ -292,7 +292,7 @@ _.Zones =
 						i(21132),	-- Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8805, {	-- Boots for the Guard
+				applyclassicphase(PHASE_FIVE, q(8805, {	-- Boots for the Guard
 					["provider"] = { "i", 21379 },	-- Logistics Task Briefing II
 					["repeatable"] = true,
 					["cr"] = 15209,	-- Crimson Templar <Abyssal Council>
@@ -333,12 +333,12 @@ _.Zones =
 					},
 					["lvl"] = 40,
 				}),
-				un(PHASE_FIVE, q(8800, {	-- Cenarion Battlegear
+				applyclassicphase(PHASE_FIVE, q(8800, {	-- Cenarion Battlegear
 					["qg"] = 15540,	-- Windcaller Kaldon
 					["coord"] = { 50.0, 36.4, SILITHUS },
 					["lvl"] = 60,
 				})),
-				un(PHASE_FIVE, q(8573, {	-- Champion's Battlegear
+				applyclassicphase(PHASE_FIVE, q(8573, {	-- Champion's Battlegear
 					["qg"] = 15176,	-- Vargus
 					["sourceQuest"] = 8800,	-- Cenarion Battlegear
 					["minReputation"] = { 609, EXALTED },	-- Cenarion Circle
@@ -352,12 +352,12 @@ _.Zones =
 					},
 					["lvl"] = 54,
 					["groups"] = {
-						un(PHASE_FIVE, i(21188)),	-- Fist of Cenarius
-						un(PHASE_FIVE, i(21190)),	-- Wrath of Cenarius
-						un(PHASE_FIVE, i(21180)),	-- Earthstrike
+						i(21188),	-- Fist of Cenarius
+						i(21190),	-- Wrath of Cenarius
+						i(21180),	-- Earthstrike
 					},
 				})),
-				un(PHASE_FIVE, q(8537, {	-- Crimson Templar
+				applyclassicphase(PHASE_FIVE, q(8537, {	-- Crimson Templar
 					["provider"] = { "i", 20945 },	-- Tactical Task Briefing II
 					["cr"] = 15209,	-- Crimson Templar <Abyssal Council>
 					["repeatable"] = true,
@@ -381,7 +381,7 @@ _.Zones =
 					["coord"] = { 49.2, 34.2, SILITHUS },
 					["lvl"] = 40,
 				}),
-				un(PHASE_FIVE, q(8804, {	-- Desert Survival Kits
+				applyclassicphase(PHASE_FIVE, q(8804, {	-- Desert Survival Kits
 					["provider"] = { "i", 21378 },	-- Logistics Task Briefing I
 					["repeatable"] = true,
 					["cost"] = {
@@ -395,7 +395,7 @@ _.Zones =
 						i(21266),	-- Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8497, {	-- Desert Survival Kits
+				applyclassicphase(PHASE_FIVE, q(8497, {	-- Desert Survival Kits
 					["provider"] = { "i", 20807 },	-- Logistics Task Briefing I
 					["repeatable"] = true,
 					["cost"] = {
@@ -409,7 +409,7 @@ _.Zones =
 						i(21132),	-- Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8856, {	-- Desert Survival Kits
+				applyclassicphase(PHASE_FIVE, q(8856, {	-- Desert Survival Kits
 					["provider"] = { "i", 20807 },	-- Logistics Task Briefing I
 					["repeatable"] = true,
 					["cost"] = {
@@ -436,7 +436,7 @@ _.Zones =
 						i(20422),	-- Twilight Cultist Medallion of Station
 					},
 				}),
-				un(PHASE_FIVE, q(8536, {	-- Earthen Templar
+				applyclassicphase(PHASE_FIVE, q(8536, {	-- Earthen Templar
 					["provider"] = { "i", 21751 },	-- Tactical Task Briefing III
 					["cr"] = 15307,	-- Earthen Templar <Abyssal Council>
 					["repeatable"] = true,
@@ -456,7 +456,7 @@ _.Zones =
 					},
 					["lvl"] = 40,
 				}),
-				un(PHASE_FIVE, q(8783, {	-- Extraordinary Materials
+				applyclassicphase(PHASE_FIVE, q(8783, {	-- Extraordinary Materials
 					["provider"] = { "i", 21265 },	-- Logistics Task Briefing IX
 					["repeatable"] = true,
 					["cost"] = {
@@ -469,7 +469,7 @@ _.Zones =
 						i(21132),	-- Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8809, {	-- Extraordinary Materials
+				applyclassicphase(PHASE_FIVE, q(8809, {	-- Extraordinary Materials
 					["provider"] = { "i", 21381 },	-- Logistics Task Briefing IX
 					["repeatable"] = true,
 					["cost"] = {
@@ -482,7 +482,7 @@ _.Zones =
 						i(21266),	-- Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8507, {	-- Field Duty
+				applyclassicphase(PHASE_FIVE, q(8507, {	-- Field Duty
 					["qg"] = 15540,	-- Windcaller Kaldon
 					["coord"] = { 50.0, 36.4, SILITHUS },
 					["races"] = ALLIANCE_ONLY,
@@ -503,7 +503,7 @@ _.Zones =
 						i(20809),	-- Tactical Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8731, {	-- Field Duty
+				applyclassicphase(PHASE_FIVE, q(8731, {	-- Field Duty
 					["qg"] = 15540,	-- Windcaller Kaldon
 					["coord"] = { 50.0, 36.4, SILITHUS },
 					["races"] = HORDE_ONLY,
@@ -524,7 +524,7 @@ _.Zones =
 						i(20809),	-- Tactical Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8508, {	-- Field Duty Papers [ALLIANCE]
+				applyclassicphase(PHASE_FIVE, q(8508, {	-- Field Duty Papers [ALLIANCE]
 					["qg"] = 15440,	-- Captain Blackanvil <Ironforge Brigade Captain>
 					["coord"] = { 33.2, 52.1, SILITHUS },
 					["races"] = ALLIANCE_ONLY,
@@ -537,7 +537,7 @@ _.Zones =
 						i(20810),	-- Signed Field Duty Papers
 					},
 				})),
-				un(PHASE_FIVE, q(8732, {	-- Field Duty Papers [HORDE]
+				applyclassicphase(PHASE_FIVE, q(8732, {	-- Field Duty Papers [HORDE]
 					["qg"] = 15612,	-- Krug Skullsplit
 					["coord"] = { 52.2, 68.4, SILITHUS },
 					["races"] = HORDE_ONLY,
@@ -590,7 +590,7 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 54,
 				}),
-				un(PHASE_FIVE, q(8541, {	-- Grinding Stones for the Guard
+				applyclassicphase(PHASE_FIVE, q(8541, {	-- Grinding Stones for the Guard
 					["provider"] = { "i", 20940 },	-- Logistics Task Briefing III
 					["repeatable"] = true,
 					["cost"] = {
@@ -604,7 +604,7 @@ _.Zones =
 						i(21132),	-- Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8806, {	-- Grinding Stones for the Guard
+				applyclassicphase(PHASE_FIVE, q(8806, {	-- Grinding Stones for the Guard
 					["provider"] = { "i", 21380 },	-- Logistics Task Briefing III
 					["repeatable"] = true,
 					["cost"] = {
@@ -642,7 +642,7 @@ _.Zones =
 						},
 					},
 				}),
-				un(PHASE_FIVE, q(8739, {	-- Hive'Ashi Scout Report
+				applyclassicphase(PHASE_FIVE, q(8739, {	-- Hive'Ashi Scout Report
 					["provider"] = { "i", 21167 },	-- Tactical Task Briefing VIII
 					["repeatable"] = true,
 					["cost"] = {
@@ -659,7 +659,7 @@ _.Zones =
 						i(20809),	-- Tactical Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8738, {	-- Hive'Regal Scout Report
+				applyclassicphase(PHASE_FIVE, q(8738, {	-- Hive'Regal Scout Report
 					["provider"] = { "i", 21166 },	-- Tactical Task Briefing VII
 					["repeatable"] = true,
 					["cost"] = {
@@ -676,7 +676,7 @@ _.Zones =
 						i(21133),	-- Followup Tactical Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8534, {	-- Hive'Zora Scout Report
+				applyclassicphase(PHASE_FIVE, q(8534, {	-- Hive'Zora Scout Report
 					["provider"] = { "i", 21165 },	-- Tactical Task Briefing VI
 					["repeatable"] = true,
 					["cost"] = {
@@ -693,7 +693,7 @@ _.Zones =
 						i(21133),	-- Followup Tactical Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8535, {	-- Hoary Templar
+				applyclassicphase(PHASE_FIVE, q(8535, {	-- Hoary Templar
 					["provider"] = { "i", 20947 },	-- Tactical Task Briefing IV
 					["cr"] = 15212,	-- Hoary Templar <Abyssal Council>
 					["repeatable"] = true,
@@ -781,7 +781,7 @@ _.Zones =
 						i(20602),	-- Chest of Spoils
 					},
 				}),
-				un(PHASE_FIVE, q(8779, {	-- Scrying Materials
+				applyclassicphase(PHASE_FIVE, q(8779, {	-- Scrying Materials
 					["provider"] = { "i", 21259 },	-- Logistics Task Briefing V
 					["repeatable"] = true,
 					["cost"] = {
@@ -795,7 +795,7 @@ _.Zones =
 						i(20805),	-- Followup Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8807, {	-- Scrying Materials
+				applyclassicphase(PHASE_FIVE, q(8807, {	-- Scrying Materials
 					["provider"] = { "i", 21382 },	-- Logistics Task Briefing V
 					["repeatable"] = true,
 					["cost"] = {
@@ -817,7 +817,7 @@ _.Zones =
 					},
 					["lvl"] = 57,
 				}),
-				un(PHASE_FIVE_WAR, q(8857, {	-- Secrets of the Colossus - Ashi
+				applyclassicphase(PHASE_FIVE_WAR, q(8857, {	-- Secrets of the Colossus - Ashi
 					["provider"] = { "i", 21534 },	-- Colossus of Ashi's Husk
 					["cr"] = 15742,	-- Colossus of Ashi
 					["lvl"] = 51,
@@ -825,7 +825,7 @@ _.Zones =
 						i(21528),	-- Colossal Bag of Loot
 					},
 				})),
-				un(PHASE_FIVE_WAR, q(8858, {	-- Secrets of the Colossus - Regal
+				applyclassicphase(PHASE_FIVE_WAR, q(8858, {	-- Secrets of the Colossus - Regal
 					["provider"] = { "i", 21535 },	-- Colossus of Regal's Husk
 					["cr"] = 15741,	-- Colossus of Regal
 					["lvl"] = 51,
@@ -833,7 +833,7 @@ _.Zones =
 						i(21528),	-- Colossal Bag of Loot
 					},
 				})),
-				un(PHASE_FIVE_WAR, q(8859, {	-- Secrets of the Colossus - Zora
+				applyclassicphase(PHASE_FIVE_WAR, q(8859, {	-- Secrets of the Colossus - Zora
 					["provider"] = { "i", 21533 },	-- Colossus of Zora's Husk
 					["cr"] = 15740,	-- Colossus of Zora
 					["lvl"] = 51,
@@ -863,7 +863,7 @@ _.Zones =
 						i(20601),	-- Sack of Spoils
 					},
 				}),
-				un(PHASE_FIVE, q(8574, {	-- Stalwart's Battlegear
+				applyclassicphase(PHASE_FIVE, q(8574, {	-- Stalwart's Battlegear
 					["qg"] = 15176,	-- Vargus
 					["sourceQuest"] = 8800,	-- Cenarion Battlegear
 					["minReputation"] = { 609, REVERED },	-- Cenarion Circle
@@ -877,10 +877,10 @@ _.Zones =
 					},
 					["lvl"] = 54,
 					["groups"] = {
-						un(PHASE_FIVE, i(21184)),	-- Deeprock Bracers
-						un(PHASE_FIVE, i(21185)),	-- Earthcalm Orb
-						un(PHASE_FIVE, i(21186)),	-- Rockfury Bracers
-						un(PHASE_FIVE, i(21189)),	-- Might of Cenarius
+						i(21184),	-- Deeprock Bracers
+						i(21185),	-- Earthcalm Orb
+						i(21186),	-- Rockfury Bracers
+						i(21189),	-- Might of Cenarius
 					},
 				})),
 				q(8281, {	-- Stepping Up Security
@@ -916,7 +916,7 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 54,
 				}),
-				un(PHASE_FIVE, q(8770, {	-- Target: Hive'Ashi Defenders
+				applyclassicphase(PHASE_FIVE, q(8770, {	-- Target: Hive'Ashi Defenders
 					["provider"] = { "i", 21749 },	-- Combat Task Briefing I
 					["cr"] = 11722,	-- Hive'Ashi Defender
 					["repeatable"] = true,
@@ -925,7 +925,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8771, {	-- Target: Hive'Ashi Sandstalkers
+				applyclassicphase(PHASE_FIVE, q(8771, {	-- Target: Hive'Ashi Sandstalkers
 					["provider"] = { "i", 21750 },	-- Combat Task Briefing II
 					["cr"] = 11723,	-- Hive'Ashi Sandstalker
 					["repeatable"] = true,
@@ -934,7 +934,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8501, {	-- Target: Hive'Ashi Stingers
+				applyclassicphase(PHASE_FIVE, q(8501, {	-- Target: Hive'Ashi Stingers
 					["provider"] = { "i", 20941 },	-- Combat Task Briefing XII
 					["cr"] = 11698,	-- Hive'Ashi Stinger
 					["repeatable"] = true,
@@ -943,7 +943,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8502, {	-- Target: Hive'Ashi Workers
+				applyclassicphase(PHASE_FIVE, q(8502, {	-- Target: Hive'Ashi Workers
 					["provider"] = { "i", 20942 },	-- Combat Task Briefing III
 					["cr"] = 11721,	-- Hive'Ashi Worker
 					["repeatable"] = true,
@@ -952,7 +952,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8774, {	-- Target: Hive'Regal Ambushers
+				applyclassicphase(PHASE_FIVE, q(8774, {	-- Target: Hive'Regal Ambushers
 					["provider"] = { "i", 21252 },	-- Combat Task Briefing VIII
 					["cr"] = 11730,	-- Hive'Regal Ambusher
 					["repeatable"] = true,
@@ -961,7 +961,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8777, {	-- Target: Hive'Regal Burrowers
+				applyclassicphase(PHASE_FIVE, q(8777, {	-- Target: Hive'Regal Burrowers
 					["provider"] = { "i", 21256 },	-- Combat Task Briefing XI
 					["cr"] = 11731,	-- Hive'Regal Burrower
 					["repeatable"] = true,
@@ -970,7 +970,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8776, {	-- Target: Hive'Regal Slavemakers
+				applyclassicphase(PHASE_FIVE, q(8776, {	-- Target: Hive'Regal Slavemakers
 					["provider"] = { "i", 21255 },	-- Combat Task Briefing X
 					["cr"] = 11733,	-- Hive'Regal Slavemaker
 					["repeatable"] = true,
@@ -979,7 +979,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8775, {	-- Target: Hive'Regal Spitfires
+				applyclassicphase(PHASE_FIVE, q(8775, {	-- Target: Hive'Regal Spitfires
 					["provider"] = { "i", 21253 },	-- Combat Task Briefing IX
 					["cr"] = 11732,	-- Hive'Regal Spitfire
 					["repeatable"] = true,
@@ -988,7 +988,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8539, {	-- Target: Hive'Zora Hive Sisters
+				applyclassicphase(PHASE_FIVE, q(8539, {	-- Target: Hive'Zora Hive Sisters
 					["provider"] = { "i", 21249 },	-- Combat Task Briefing V
 					["cr"] = 11729,	-- Hive'Zora Hive Sister
 					["repeatable"] = true,
@@ -997,7 +997,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8773, {	-- Target: Hive'Zora Reavers
+				applyclassicphase(PHASE_FIVE, q(8773, {	-- Target: Hive'Zora Reavers
 					["provider"] = { "i", 21248 },	-- Combat Task Briefing IV
 					["cr"] = 11728,	-- Hive'Zora Reaver
 					["repeatable"] = true,
@@ -1006,7 +1006,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8687, {	-- Target: Hive'Zora Tunnelers
+				applyclassicphase(PHASE_FIVE, q(8687, {	-- Target: Hive'Zora Tunnelers
 					["provider"] = { "i", 21251 },	-- Combat Task Briefing VII
 					["cr"] = 11726,	-- Hive'Zora Tunneler
 					["repeatable"] = true,
@@ -1015,7 +1015,7 @@ _.Zones =
 						i(20802),	-- Cenarion Combat Badge
 					},
 				})),
-				un(PHASE_FIVE, q(8772, {	-- Target: Hive'Zora Waywatchers
+				applyclassicphase(PHASE_FIVE, q(8772, {	-- Target: Hive'Zora Waywatchers
 					["provider"] = { "i", 21250 },	-- Combat Task Briefing VI
 					["cr"] = 11725,	-- Hive'Zora Waywatcher
 					["repeatable"] = true,
@@ -1055,7 +1055,7 @@ _.Zones =
 					},
 					["lvl"] = 40,
 				}),
-				un(PHASE_FIVE, q(8538, {	-- The Four Dukes
+				applyclassicphase(PHASE_FIVE, q(8538, {	-- The Four Dukes
 					["provider"] = { "i", 20948 },	-- Tactical Task Briefing V
 					["crs"] = {
 						15206,	-- The Duke of Cynders <Abyssal Council>
@@ -1069,7 +1069,7 @@ _.Zones =
 						i(21508),	-- Mark of Cenarius
 					},
 				})),
-				un(PHASE_FIVE, q(8778, {	-- The Ironforge Brigade Needs Explosives!
+				applyclassicphase(PHASE_FIVE, q(8778, {	-- The Ironforge Brigade Needs Explosives!
 					["provider"] = { "i", 21257 },	-- Logistics Task Briefing IV
 					["repeatable"] = true,
 					["races"] = ALLIANCE_ONLY,
@@ -1084,7 +1084,7 @@ _.Zones =
 						i(20805),	-- Followup Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8785, {	-- The Orgrimmar Legion Needs Mojo!
+				applyclassicphase(PHASE_FIVE, q(8785, {	-- The Orgrimmar Legion Needs Mojo!
 					["provider"] = { "i", 21258 },	-- Logistics Task Briefing IV
 					["repeatable"] = true,
 					["races"] = HORDE_ONLY,
@@ -1099,7 +1099,7 @@ _.Zones =
 						i(21386),	-- Followup Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(9023, {	-- The Perfect Poison
+				applyclassicphase(PHASE_FIVE, q(9023, {	-- The Perfect Poison
 					["qg"] = 16091,	-- Dirk Thunderwood
 					["coord"] = { 52.1, 39.1, SILITHUS },
 					["maps"] = { RUINS_OF_AHNQIRAJ, ZULGURUB },
@@ -1173,7 +1173,7 @@ _.Zones =
 						},
 					},
 				}),
-				un(PHASE_FIVE, q(8829, {	-- The Ultimate Deception
+				applyclassicphase(PHASE_FIVE, q(8829, {	-- The Ultimate Deception
 					["provider"] = { "i", 21514 },	-- Logistics Task Briefing XI
 					["repeatable"] = true,
 					["cost"] = {
@@ -1195,7 +1195,7 @@ _.Zones =
 					},
 					["lvl"] = 40,
 				}),
-				un(PHASE_FIVE, q(8498, {	-- Twilight Battle Orders
+				applyclassicphase(PHASE_FIVE, q(8498, {	-- Twilight Battle Orders
 					["provider"] = { "i", 20943 },	-- Tactical Task Briefing X
 					["cr"] = 15308,	-- Twilight Prophet <Twilight's Hammer>
 					["repeatable"] = true,
@@ -1214,7 +1214,7 @@ _.Zones =
 					["cr"] = 11881,	-- Twilight Geolord
 					["lvl"] = 60,
 				}),
-				un(PHASE_FIVE, q(8740, {	-- Twilight Marauders
+				applyclassicphase(PHASE_FIVE, q(8740, {	-- Twilight Marauders
 					["provider"] = { "i", 20944 },	-- Tactical Task Briefing IX
 					["crs"] = {
 						15541,	-- Twilight Marauder Morna <Twilight's Hammer>
@@ -1251,7 +1251,7 @@ _.Zones =
 					},
 					["lvl"] = 54,
 				}),
-				un(PHASE_FIVE, q(8782, {	-- Uniform Supplies
+				applyclassicphase(PHASE_FIVE, q(8782, {	-- Uniform Supplies
 					["provider"] = { "i", 21262 },	-- Logistics Task Briefing VIII
 					["repeatable"] = true,
 					["cost"] = {
@@ -1265,7 +1265,7 @@ _.Zones =
 						i(21132),	-- Logistics Assignment
 					},
 				})),
-				un(PHASE_FIVE, q(8808, {	-- Uniform Supplies
+				applyclassicphase(PHASE_FIVE, q(8808, {	-- Uniform Supplies
 					["provider"] = { "i", 21384 },	-- Logistics Task Briefing VIII
 					["repeatable"] = true,
 					["cost"] = {
@@ -1291,7 +1291,7 @@ _.Zones =
 					},
 					["lvl"] = 40,
 				}),
-				un(PHASE_FIVE, q(8572, {	-- Veteran's Battlegear
+				applyclassicphase(PHASE_FIVE, q(8572, {	-- Veteran's Battlegear
 					["qg"] = 15176,	-- Vargus
 					["sourceQuest"] = 8800,	-- Cenarion Battlegear
 					["minReputation"] = { 609, HONORED },	-- Cenarion Circle
@@ -1304,12 +1304,12 @@ _.Zones =
 					},
 					["lvl"] = 54,
 					["groups"] = {
-						un(PHASE_FIVE, i(21181)),	-- Grace of Earth
-						un(PHASE_FIVE, i(21182)),	-- Band of Earthen Might
-						un(PHASE_FIVE, i(21183)),	-- Earthpower Vest
+						i(21181),	-- Grace of Earth
+						i(21182),	-- Band of Earthen Might
+						i(21183),	-- Earthpower Vest
 					},
 				})),
-				un(PHASE_FIVE, q(8548, {	-- Volunteer's Battlegear
+				applyclassicphase(PHASE_FIVE, q(8548, {	-- Volunteer's Battlegear
 					["qg"] = 15176,	-- Vargus
 					["sourceQuest"] = 8800,	-- Cenarion Battlegear
 					["minReputation"] = { 609, FRIENDLY },	-- Cenarion Circle
@@ -1322,9 +1322,9 @@ _.Zones =
 					},
 					["lvl"] = 54,
 					["groups"] = {
-						un(PHASE_FIVE, i(21178)),	-- Gloves of Earthen Power
-						un(PHASE_FIVE, i(21179)),	-- Band of Earthen Wrath
-						un(PHASE_FIVE, i(21187)),	-- Earthweave Cloak
+						i(21178),	-- Gloves of Earthen Power
+						i(21179),	-- Band of Earthen Wrath
+						i(21187),	-- Earthweave Cloak
 					},
 				})),
 				q(8321, {	-- Vyral the Vile

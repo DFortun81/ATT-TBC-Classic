@@ -43,7 +43,7 @@ _.Zones =
 						{ "i", 182, 1 },	-- Garrick's Head
 					},
 					["lvl"] = 2,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 182,	-- Garrick's Head
 							["questID"] = 6,	-- Bounty on Garrick Padfoot
@@ -59,7 +59,7 @@ _.Zones =
 					["qg"] = 261,	-- Guard Thomas
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						i(4840),	-- Long Bayonet
 						i(1158),	-- Solid Metal Club
 						i(1008),	-- Well-used Sword
@@ -72,7 +72,7 @@ _.Zones =
 						{ "i", 752, 12 },	-- Red Burlap Bandana
 					},
 					["lvl"] = 2,
-					["g"] = {
+					["groups"] = {
 						i(2224),	-- Militia Dagger
 						i(5580),	-- Militia Hammer
 						i(1161),	-- Militia Shortsword
@@ -89,7 +89,7 @@ _.Zones =
 						{ "i", 748, 1 },	-- Stormwind Armor Marker
 					},
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						i(1171),	-- Well-stitched Robe
 						i(2237),	-- Patched Pants
 					},
@@ -209,7 +209,7 @@ _.Zones =
 					["qg"] = 255,	-- Gerard Tiller
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(4536),	-- Shiny Red Apple
 					},
 				}),
@@ -229,7 +229,7 @@ _.Zones =
 						{ "i", 773, 8 },	-- Gold Dust
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						i(1191),	-- Bag of Marbles
 					},
 				}),
@@ -240,7 +240,7 @@ _.Zones =
 						{ "i", 981, 1 },	-- Bernice's Necklace
 					},
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 981,	-- Bernice's Necklace
 							["cr"] = 327,	-- Goldtooth
@@ -258,7 +258,7 @@ _.Zones =
 						{ "i", 11125, 1 },	-- Grape Manifest
 					},
 					["lvl"] = 2,
-					["g"] = {
+					["groups"] = {
 						i(11475),	-- Wine-stained Cloak
 						i(2690),	-- Latched Belt
 					},
@@ -303,7 +303,7 @@ _.Zones =
 						{ "i", 772, 8 },	-- Large Candle
 					},
 					["lvl"] = 3,
-					["g"] = {
+					["groups"] = {
 						i(1434),	-- Glowing Wax Stick
 					},
 				}),
@@ -321,7 +321,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 2239, 1 },	-- The Collector's Ring
 					},
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 2239,	-- The Collector's Ring
 							["questID"] = 147,	-- Manhunt
@@ -374,7 +374,7 @@ _.Zones =
 						{ "i", 1006, 1 },	-- Brass Collar
 					},
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 1006,	-- Brass Collar
 							["questID"] = 88,	-- Princess Must Die!
@@ -390,7 +390,7 @@ _.Zones =
 					["lvl"] = 7,
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 261,	-- Guard Thomas
-					["g"] = {
+					["groups"] = {
 						i(858),	-- Lesser Healing Potion
 					},
 				}),
@@ -402,7 +402,7 @@ _.Zones =
 						{ "i", 1019, 8 },	-- Red Linen Bandana
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						i(2575),	-- Red Linen Shirt
 						i(983),		-- Red Linen Sash
 					},
@@ -415,7 +415,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 745, 1 },	-- Marshal McBride's Documents
 					},
-					["g"] = {
+					["groups"] = {
 						i(6078),	-- Pikeman Shield
 					},
 				}),
@@ -442,7 +442,7 @@ _.Zones =
 				q(2158, {	-- Rest and Relaxation
 					["qg"] = 6774,	-- Falkhaan Isenstrider
 					["races"] = ALLIANCE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(4656),	-- Small Pumpkin
 						i(159),	-- Refreshing Spring Water
 					},
@@ -456,7 +456,7 @@ _.Zones =
 						{ "i", 2795, 1 },	-- Book: Stresses of Iron
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(6095),
 					},
 				}),
@@ -468,7 +468,7 @@ _.Zones =
 						{ "i", 782, 8 },	-- Painted Gnoll Armband
 					},
 					["lvl"] = 6,
-					["g"] = {
+					["groups"] = {
 						i(2249),	-- Militia Buckler
 						i(2238),	-- Urchin's Pants
 					},
@@ -490,7 +490,7 @@ _.Zones =
 						{ "i", 957, 1 },	-- William's Shipment
 					},
 					["lvl"] = 3,
-					["g"] = {
+					["groups"] = {
 						i(1178),	-- Explosive Rocket
 						i(1177),	-- Oil of Olaf
 						i(2454),	-- Elixir of Lion's Strength
@@ -515,7 +515,7 @@ _.Zones =
 					["sourceQuest"] = 15,	-- Investigate Echo Ridge
 					["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(2186),	-- Outfitter Belt
 						i(2691),	-- Outfitter Boots
 						i(11192),	-- Outfitter Gloves
@@ -558,7 +558,7 @@ _.Zones =
 						{ "i", 1257, 1 },	-- Invisibility Liquor
 					},
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						i(118),	-- Minor Healing Potion
 					},
 				}),
@@ -633,7 +633,7 @@ _.Zones =
 						{ "i", 1931, 1 },	-- Huge Gnoll Claw
 					},
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 1931,	-- Huge Gnoll Claw
 							["questID"] = 176,	-- Wanted: "Hogger"
@@ -660,7 +660,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 750, 8 },	-- Tough Wolf Meat
 					},
-					["g"] = {
+					["groups"] = {
 						i(80),	-- Soft Fur-lined Shoes
 						i(6070),	-- Wolfskin Bracers
 					},

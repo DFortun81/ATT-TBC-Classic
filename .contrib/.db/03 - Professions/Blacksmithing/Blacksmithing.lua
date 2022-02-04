@@ -3,7 +3,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Materials",
 			["categoryID"] = 215,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Arcanite Rod",
 					["recipeID"] = 20201
@@ -53,7 +53,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Weapon Mods",
 			["categoryID"] = 216,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Coarse Sharpening Stone",
 					["recipeID"] = 2665
@@ -111,7 +111,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Armor Mods",
 			["categoryID"] = 217,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Iron Shield Spike",
 					["recipeID"] = 7221
@@ -133,7 +133,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Helms",
 			["categoryID"] = 218,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Iron Helm",
 					["recipeID"] = 9814
@@ -215,7 +215,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Shoulders",
 			["categoryID"] = 219,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Iron Shoulders",
 					["recipeID"] = 9811
@@ -283,7 +283,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Bracers",
 			["categoryID"] = 222,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Copper Bracers",
 					["recipeID"] = 2663
@@ -335,16 +335,16 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Gauntlets",
 			["categoryID"] = 221,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Iron Gloves",
 					["recipeID"] = 9820
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Black Grasp of the Destroyer",
 					["recipeID"] = 27589,
 				}),
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Bloodsoul Gauntlets",
 					["recipeID"] = 24138,
 				}),
@@ -354,7 +354,7 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 23637,
 				}),
 				-- #endif
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Darkrune Gauntlets",
 					["recipeID"] = 24912,
 				}),
@@ -368,7 +368,7 @@ profession(BLACKSMITHING, {
 					["name"] = "Gemmed Copper Gauntlets",
 					["recipeID"] = 3325
 				},
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Gloves of the Dawn",
 					["recipeID"] = 23633,
 				}),
@@ -384,7 +384,7 @@ profession(BLACKSMITHING, {
 					["name"] = "Heavy Mithril Gauntlet",
 					["recipeID"] = 9928
 				},
-				un(PHASE_SIX, {
+				applyclassicphase(PHASE_SIX, {
 					["name"] = "Icebane Gauntlets",
 					["recipeID"] = 28243,
 				}),
@@ -392,7 +392,7 @@ profession(BLACKSMITHING, {
 					["name"] = "Ironforge Gauntlets",
 					["recipeID"] = 8368,
 				}),
-				un(PHASE_FIVE_CATCH_UP, {
+				applyclassicphase(PHASE_FIVE_CATCH_UP, {
 					["name"] = "Ironvine Gloves",
 					["recipeID"] = 28462,
 				}),
@@ -435,12 +435,12 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Chest",
 			["categoryID"] = 220,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Iron Breastplate",
 					["recipeID"] = 9813
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Bloodsoul Breastplate",
 					["recipeID"] = 24136,
 				}),
@@ -458,11 +458,11 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 15296,
 				},
 				-- #endif
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Darkrune Breastplate",
 					["recipeID"] = 24914,
 				}),
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Darksoul Breastplate",
 					["recipeID"] = 24139,
 				}),
@@ -488,7 +488,7 @@ profession(BLACKSMITHING, {
 					["name"] = "Heavy Mithril Breastplate",
 					["recipeID"] = 9959
 				},
-				un(PHASE_SIX, {
+				applyclassicphase(PHASE_SIX, {
 					["name"] = "Icebane Breastplate",
 					["recipeID"] = 28242,
 				}),
@@ -510,11 +510,11 @@ profession(BLACKSMITHING, {
 					["name"] = "Ironforge Chain",
 					["recipeID"] = 8366,
 				}),
-				un(PHASE_FIVE_CATCH_UP, {
+				applyclassicphase(PHASE_FIVE_CATCH_UP, {
 					["name"] = "Ironvine Breastplate",
 					["recipeID"] = 28461,
 				}),
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Obsidian Mail Tunic",
 					["recipeID"] = 27590,
 				}),
@@ -554,7 +554,7 @@ profession(BLACKSMITHING, {
 					["name"] = "Steel Breastplate",
 					["recipeID"] = 9916
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Thick Obsidian Breastplate",
 					["recipeID"] = 27587,
 				}),
@@ -577,7 +577,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Belts",
 			["categoryID"] = 223,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Copper Chain Belt",
 					["recipeID"] = 2661
@@ -588,15 +588,15 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 20872,
 				},
 				-- #endif
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Girdle of the Dawn",
 					["recipeID"] = 23632,
 				}),
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Heavy Obsidian Belt",
 					["recipeID"] = 27585,
 				}),
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Heavy Timbermaw Belt",
 					["recipeID"] = 23628,
 				}),
@@ -604,11 +604,11 @@ profession(BLACKSMITHING, {
 					["name"] = "Imperial Plate Belt",
 					["recipeID"] = 16647
 				},
-				un(PHASE_FIVE_CATCH_UP, {
+				applyclassicphase(PHASE_FIVE_CATCH_UP, {
 					["name"] = "Ironvine Belt",
 					["recipeID"] = 28463,
 				}),
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Light Obsidian Belt",
 					["recipeID"] = 27588,
 				}),
@@ -629,7 +629,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Legs",
 			["categoryID"] = 224,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Copper Chain Pants",
 					["recipeID"] = 2662
@@ -640,7 +640,7 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 20876,
 				},
 				-- #endif
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Darksoul Leggings",
 					["recipeID"] = 24140,
 				}),
@@ -714,7 +714,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Boots",
 			["categoryID"] = 225,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Barbaric Iron Boots",
 					["recipeID"] = 9818
@@ -741,7 +741,7 @@ profession(BLACKSMITHING, {
 					["name"] = "Heavy Mithril Boots",
 					["recipeID"] = 9968
 				},
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Heavy Timbermaw Boots",
 					["recipeID"] = 23629,
 				}),
@@ -782,8 +782,8 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Shields",
 			["categoryID"] = 226,
-			["g"] = {
-				un(PHASE_FIVE, {
+			["groups"] = {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Jagged Obsidian Shield",
 					["recipeID"] = 27586,
 				}),
@@ -792,7 +792,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Weapons",
 			["categoryID"] = 227,
-			["g"] = {
+			["groups"] = {
 				-- #if AFTER TBC
 				{
 					["name"] = "Annihilator",
@@ -816,15 +816,15 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 3491
 				},
 				-- #if AFTER TBC
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Black Amnesty",
 					["recipeID"] = 23638,
 				}),
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Blackfury",
 					["recipeID"] = 23639,
 				}),
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Blackguard",
 					["recipeID"] = 23652,
 				}),
@@ -937,7 +937,7 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 3295
 				},
 				-- #if AFTER TBC
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Ebon Hand",
 					["recipeID"] = 23650,
 				}),
@@ -1052,7 +1052,7 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 3496
 				},
 				-- #if AFTER TBC
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Nightfall",
 					["recipeID"] = 23653,
 				}),
@@ -1066,7 +1066,7 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 6517
 				},
 				-- #if AFTER TBC
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Persuader",
 					["recipeID"] = 27830,
 				}),
@@ -1084,7 +1084,7 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 10009
 				},
 				-- #if AFTER TBC
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Sageblade",
 					["recipeID"] = 27832,
 				}),
@@ -1163,7 +1163,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Skeleton Keys",
 			["categoryID"] = 228,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Arcanite Skeleton Key",
 					["recipeID"] = 19669
@@ -1187,7 +1187,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Materials",
 			["categoryID"] = 215,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Rod",
 					["recipeID"] = 32656,
@@ -1205,7 +1205,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Weapon Mods",
 			["categoryID"] = 216,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Weapon Chain",
 					["recipeID"] = 42688,
@@ -1232,7 +1232,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Armor Mods",
 			["categoryID"] = 217,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Felsteel Shield Spike",
 					["recipeID"] = 29657,
@@ -1258,7 +1258,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Helms",
 			["categoryID"] = 218,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Fel Iron Chain Coif",
 					["recipeID"] = 29551,
@@ -1301,7 +1301,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Shoulders",
 			["categoryID"] = 219,
-			["g"] = {
+			["groups"] = {
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Dawnsteel Shoulders",
 					["recipeID"] = 41135,
@@ -1319,7 +1319,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Bracers",
 			["categoryID"] = 222,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Plate Bracers",
 					["recipeID"] = 29603,
@@ -1362,7 +1362,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Gauntlets",
 			["categoryID"] = 221,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Plate Gloves",
 					["recipeID"] = 29605,
@@ -1417,7 +1417,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Chest",
 			["categoryID"] = 220,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Breastplate",
 					["recipeID"] = 29606,
@@ -1469,7 +1469,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Belts",
 			["categoryID"] = 223,
-			["g"] = {
+			["groups"] = {
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Belt of the Guardian",
 					["recipeID"] = 36389,
@@ -1500,7 +1500,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Legs",
 			["categoryID"] = 224,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Enchanted Adamantite Leggings",
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
@@ -1535,7 +1535,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Boots",
 			["categoryID"] = 225,
-			["g"] = {
+			["groups"] = {
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Boots of the Protector",
 					["recipeID"] = 36391,
@@ -1566,7 +1566,7 @@ profession(BLACKSMITHING, {
 		{
 			["name"] = "Weapons",
 			["categoryID"] = 227,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Cleaver",
 					["recipeID"] = 29568,

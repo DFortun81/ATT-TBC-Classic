@@ -14,7 +14,7 @@ _.Zones =
 						{ "i", 3639, 1 },	-- Ear of Balgaras
 					},
 					["lvl"] = 26,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3639,	-- Ear of Balgaras
 							["questID"] = 304,	-- A Grim Task
@@ -38,7 +38,7 @@ _.Zones =
 						{ "i", 3348, 6 },	-- Giant Crocolisk Skin
 					},
 					["lvl"] = 18,
-					["g"] = {
+					["groups"] = {
 						i(2545),	-- Malleable Chain Leggings
 						i(3561),	-- Resilient Poncho
 						i(3681),	-- Recipe: Crocolisk Gumbo
@@ -50,7 +50,7 @@ _.Zones =
 					["coord"] = { 56.3, 40.4, WETLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(3558),	-- Fen Keeper Robe
 						i(1273),	-- Forest Chain
 						i(2263),	-- Phytoblade
@@ -82,7 +82,7 @@ _.Zones =
 						{ "i", 2944, 1 },	-- Cursed Eye of Paleth
 					},
 					["lvl"] = 22,
-					["g"] = {
+					["groups"] = {
 						i(2943),	-- Eye of Paleth
 					},
 				}),
@@ -104,7 +104,7 @@ _.Zones =
 						{ "i", 3625, 1 },	-- Nek'rosh's Head
 					},
 					["lvl"] = 23,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3625,	-- Nek'rosh's Head
 							["questID"] = 474,	-- Defeat Nek'rosh
@@ -123,7 +123,7 @@ _.Zones =
 						{ "i", 3349, 1 },	-- Sida's Bag
 					},
 					["lvl"] = 19,
-					["g"] = {
+					["groups"] = {
 						i(3352),	-- Ooze-covered Bag
 					},
 				}),
@@ -150,7 +150,7 @@ _.Zones =
 						{ "i", 2611, 9 },	-- Crude Flint
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(4606),	-- Spongy Morel
 					},
 				}),
@@ -193,7 +193,7 @@ _.Zones =
 					["coord"] = { 10.6, 60.5, WETLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(2702),	-- Lightforge Ingot
 					},
 				}),
@@ -240,7 +240,7 @@ _.Zones =
 						{ "i", 3638, 1 },	-- Sarltooth's Talon
 					},
 					["lvl"] = 22,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3638,	-- Sarltooth's Talon
 							["questID"] = 296,	-- Ormer's Revenge (3/3)
@@ -283,7 +283,7 @@ _.Zones =
 						{ "i", 2625, 1 },	-- Menethil Statuette
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(2950),	-- Icicle Rod
 						i(2949),	-- Mariner Boots
 					},
@@ -305,7 +305,7 @@ _.Zones =
 						{ "i", 5233, 1 },	-- Stone of Relu
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 5234,	-- Flagongut's Fossil
 							["questID"] = 943,	-- The Absent Minded Prospector (5/5)
@@ -348,7 +348,7 @@ _.Zones =
 						{ "i", 2944, 1 },	-- Cursed Eye of Paleth
 					},
 					["lvl"] = 22,
-					["g"] = {
+					["groups"] = {
 						i(2944),	-- Cursed Eye of Paleth
 					},
 				}),
@@ -421,7 +421,7 @@ _.Zones =
 					["maps"] = { ARATHI_HIGHLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
-					["g"] = {
+					["groups"] = {
 						i(4504),	-- Dwarven Guard Cloak
 						i(4505),	-- Swampland Trousers
 					},
@@ -454,7 +454,7 @@ _.Zones =
 						{ "i", 2661, 1 },	-- Neru Fragment
 					},
 					["lvl"] = 25,
-					["g"] = {
+					["groups"] = {
 						i(2913),	-- Silk Mantle of Gamn
 					},
 				}),

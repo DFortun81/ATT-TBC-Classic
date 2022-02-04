@@ -5,7 +5,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 	map(SCARLET_MONASTERY, {
 		["lore"] = "The Monastery was once a proud bastion of Lordaeron's priesthood - a center for learning and enlightenment. With the rise of the undead Scourge during the Third War, the peaceful Monastery was converted into a stronghold of the fanatical Scarlet Crusade. The Crusaders are intolerant of all non-human races, regardless of alliance or affiliation. They believe that any and all outsiders are potential carriers of the undead plague - and must be destroyed. Reports indicate that adventurers who enter the monastery are forced to contend with Scarlet Commander Mograine - who commands a large garrison of fanatically devoted warriors. However, the monastery's true master is High Inquisitor Whitemane - a fearsome priestess who possesses the ability to resurrect fallen warriors to do battle in her name.",
 		["lvl"] = 25,
-		["g"] = {
+		["groups"] = {
 			n(QUESTS, {
 				q(1113, {	-- Hearts of Zeal
 					["sourceQuest"] = 1109,	-- Going, Going, Guano!
@@ -249,7 +249,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(19509),	-- Dusty Mail Boots
 					}),
 					n(3976, {	-- Scarlet Commander Mograine
-						["g"] = {
+						["groups"] = {
 							i(7726),	-- Aegis of the Scarlet Commander
 							i(7724),	-- Gauntlets of Divinity
 							i(7723),	-- Mograine's Might

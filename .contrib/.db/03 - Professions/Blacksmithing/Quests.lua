@@ -23,7 +23,7 @@ profession(BLACKSMITHING, {
 				{ "i", 7928, 1 },	-- Ornate Mithril Shoulder
 			},
 			["lvl"] = 40,
-			["g"] = {
+			["groups"] = {
 				recipe(9980),	-- Ornate Mithril Helm
 			},
 		}),
@@ -38,7 +38,7 @@ profession(BLACKSMITHING, {
 				{ "i", 5635, 2 },	-- Sharp Claw
 			},
 			["lvl"] = 32,
-			["g"] = {
+			["groups"] = {
 				i(7979, {	-- Plans: Barbaric Iron Breastplate
 					["description"] = "This item can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths.",
 				}),
@@ -86,7 +86,7 @@ profession(BLACKSMITHING, {
 			},
 			-- #endif
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12825),	-- Plans: Blazing Rapier
 			},
 		}),
@@ -100,7 +100,7 @@ profession(BLACKSMITHING, {
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 51.4, 28.7, TANARIS },
 			["lvl"] = 40,
-			["g"] = {
+			["groups"] = {
 				i(10418),	-- Glimmering Mithril Insignia
 			},
 		}),
@@ -114,7 +114,7 @@ profession(BLACKSMITHING, {
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
 			["lvl"] = 40,
-			["g"] = {
+			["groups"] = {
 				i(8703,	{	-- Signet of Expertise
 					i(8708),	-- Hammer of Expertise
 				}),
@@ -162,7 +162,7 @@ profession(BLACKSMITHING, {
 				{ "i", 2857, 4 },	-- Runed Copper Belt
 				{ "i", 6214, 4 },	-- Heavy Copper Maul
 			},
-			["g"] = {
+			["groups"] = {
 				i(6735, {	-- Plans: Ironforge Breastplate
 					["description"] = "This item can be sold on the Neutral Auction House to Horde Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Alliance Blacksmiths.",
 				}),
@@ -180,7 +180,7 @@ profession(BLACKSMITHING, {
 				{ "i", 3483, 2 },	-- Silvered Bronze Gauntlets
 			},
 			["lvl"] = 32,
-			["g"] = {
+			["groups"] = {
 				i(7980, {	-- Plans: Barbaric Iron Helm
 					["description"] = "This item can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths.",
 				}),
@@ -227,7 +227,7 @@ profession(BLACKSMITHING, {
 				{ "i", 12359, 20 },	-- Thorium Bar
 			},
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12688),	-- Plans: Imperial Plate Belt
 			},
 		}),
@@ -240,7 +240,7 @@ profession(BLACKSMITHING, {
 				{ "i", 12359, 40 },	-- Thorium Bar
 			},
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12700),	-- Plans: Imperial Plate Boots
 			},
 		}),
@@ -253,7 +253,7 @@ profession(BLACKSMITHING, {
 				{ "i", 12359, 20 },	-- Thorium Bar
 			},
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12690),	-- Plans: Imperial Plate Bracer
 			},
 		}),
@@ -266,7 +266,7 @@ profession(BLACKSMITHING, {
 				{ "i", 12359, 60 },	-- Thorium Bar
 			},
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12705),	-- Plans: Imperial Plate Chest
 			},
 		}),
@@ -279,7 +279,7 @@ profession(BLACKSMITHING, {
 				{ "i", 12359, 50 },	-- Thorium Bar
 			},
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12701),	-- Plans: Imperial Plate Helm
 			},
 		}),
@@ -292,7 +292,7 @@ profession(BLACKSMITHING, {
 				{ "i", 12359, 60 },	-- Thorium Bar
 			},
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12715),	-- Plans: Imperial Plate Leggings
 			},
 		}),
@@ -305,7 +305,7 @@ profession(BLACKSMITHING, {
 				{ "i", 12359, 20 },	-- Thorium Bar
 			},
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12687),	-- Plans: Imperial Plate Shoulders
 			},
 		}),
@@ -327,7 +327,7 @@ profession(BLACKSMITHING, {
 			["coord"] = { 79.4, 22.4, ORGRIMMAR },
 			["races"] = HORDE_ONLY,
 			["lvl"] = 32,
-			["g"] = {
+			["groups"] = {
 				i(7982, {	-- Plans: Barbaric Iron Gloves
 					["description"] = "This item can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths.",
 				}),
@@ -344,7 +344,7 @@ profession(BLACKSMITHING, {
 				{ "i", 7956, 4 },	-- Bronze Warhammer
 			},
 			["lvl"] = 32,
-			["g"] = {
+			["groups"] = {
 				i(7978, {	-- Plans: Barbaric Iron Shoulders
 					["description"] = "This item can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths.",
 				}),
@@ -360,7 +360,7 @@ profession(BLACKSMITHING, {
 				{ "i", 3860, 40 },	-- Mithril Bar
 			},
 			["lvl"] = 40,
-			["g"] = {
+			["groups"] = {
 				i(7983),	-- Plans: Ornate Mithril Pants
 			},
 		}),
@@ -384,7 +384,7 @@ profession(BLACKSMITHING, {
 			},
 			-- #endif
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12821),	-- Plans: Dawn's Edge
 			},
 		}),
@@ -397,7 +397,7 @@ profession(BLACKSMITHING, {
 				{ "i", 2845, 6 },	-- Copper Axe
 				{ "i", 2851, 6 },	-- Copper Chain Belt
 			},
-			["g"] = {
+			["groups"] = {
 				-- #if AFTER TBC
 				i(33792), 	-- Plans: Heavy Copper Longsword
 				-- #else
@@ -426,7 +426,7 @@ profession(BLACKSMITHING, {
 				{ "i", 13351, 1 },	-- Crimson Hammersmith's Apron
 			},
 			["lvl"] = 50,
-			["g"] = {
+			["groups"] = {
 				i(12824),	-- Plans: Enchanted Battlehammer
 			},
 		}),
@@ -476,7 +476,7 @@ profession(BLACKSMITHING, {
 				{ "i", 3864, 4 },	-- Citrine
 			},
 			["lvl"] = 40,
-			["g"] = {
+			["groups"] = {
 				i(7985),	-- Plans: Ornate Mithril Shoulder
 			},
 		}),
@@ -490,7 +490,7 @@ profession(BLACKSMITHING, {
 				{ "i", 6037, 5 },	-- Truesilver Bar
 			},
 			["lvl"] = 40,
-			["g"] = {
+			["groups"] = {
 				i(7984),	-- Plans: Ornate Mithril Gloves
 			},
 		}),
@@ -504,7 +504,7 @@ profession(BLACKSMITHING, {
 				{ "i", 7930, 2 },	-- Heavy Mithril Breastplate
 				{ "i", 7927, 1 },	-- Ornate Mithril Gloves
 			},
-			["g"] = {
+			["groups"] = {
 				recipe(9972),	-- Ornate Mithril Breastplate
 			},
 		}),
@@ -531,7 +531,7 @@ profession(BLACKSMITHING, {
 				{ "i", 7922, 4 },	-- Steel Plate Helm
 			},
 			["lvl"] = 40,
-			["g"] = {
+			["groups"] = {
 				recipe(9957),	-- Orcish War Leggings
 			},
 		}),
@@ -544,7 +544,7 @@ profession(BLACKSMITHING, {
 				{ "i", 6040, 6 },	-- Golden Scale Bracers
 			},
 			["lvl"] = 40,
-			["g"] = {
+			["groups"] = {
 				i(9367, {	-- Plans: Golden Scale Gauntlets
 					["description"] = "This item can be sold on the Neutral Auction House to Horde Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Alliance Blacksmiths.",
 				}),
@@ -598,7 +598,7 @@ profession(BLACKSMITHING, {
 				{ "i", 7926, 1 },	-- Ornate Mithril Pants
 			},
 			["lvl"] = 40,
-			["g"] = {
+			["groups"] = {
 				recipe(9979),	-- Ornate Mithril Boots
 			},
 		}),
@@ -614,7 +614,7 @@ profession(BLACKSMITHING, {
 				{ "i", 3842, 2 },	-- Green Iron Leggings
 			},
 			["lvl"] = 32,
-			["g"] = {
+			["groups"] = {
 				i(7981, {	-- Plans: Barbaric Iron Boots
 					["description"] = "This item can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths.",
 				}),

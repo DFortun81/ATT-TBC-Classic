@@ -115,7 +115,7 @@ profession(ENCHANTING, {
 					["name"] = "Greater Spirit",
 					["recipeID"] = 13846
 				},
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Healing",
 					["recipeID"] = 23802,
 				}),
@@ -143,7 +143,7 @@ profession(ENCHANTING, {
 					["name"] = "Lesser Spirit",
 					["recipeID"] = 7859
 				},
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Mana Regeneration",
 					["recipeID"] = 23801,
 				}),
@@ -283,7 +283,7 @@ profession(ENCHANTING, {
 					["name"] = "Defense",
 					["recipeID"] = 13635
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Dodge",
 					["recipeID"] = 25086,
 				}),
@@ -295,11 +295,11 @@ profession(ENCHANTING, {
 					["name"] = "Greater Defense",
 					["recipeID"] = 13746
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Greater Fire Resistance",
 					["recipeID"] = 25081,
 				}),
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Greater Nature Resistance",
 					["recipeID"] = 25082,
 				}),
@@ -339,11 +339,11 @@ profession(ENCHANTING, {
 					["name"] = "Resistance",
 					["recipeID"] = 13794
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Stealth",
 					["recipeID"] = 25083,
 				}),
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Subtlety",
 					["recipeID"] = 25084,
 				}),
@@ -369,7 +369,7 @@ profession(ENCHANTING, {
 					["name"] = "Agility",
 					["recipeID"] = 13815
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Fire Power",
 					["recipeID"] = 25078,
 				}),
@@ -377,7 +377,7 @@ profession(ENCHANTING, {
 					["name"] = "Fishing",
 					["recipeID"] = 13620
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Frost Power",
 					["recipeID"] = 25074,
 				}),
@@ -389,7 +389,7 @@ profession(ENCHANTING, {
 					["name"] = "Greater Strength",
 					["recipeID"] = 20013
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Healing Power",
 					["recipeID"] = 25079,
 				}),
@@ -409,7 +409,7 @@ profession(ENCHANTING, {
 					["name"] = "Riding Skill",
 					["recipeID"] = 13947
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Shadow Power",
 					["recipeID"] = 25073,
 				}),
@@ -421,11 +421,11 @@ profession(ENCHANTING, {
 					["name"] = "Strength",
 					["recipeID"] = 13887
 				},
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Superior Agility",
 					["recipeID"] = 25080,
 				}),
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Threat",
 					["recipeID"] = 25072,
 				}),
@@ -435,11 +435,11 @@ profession(ENCHANTING, {
 			["name"] = "Weapon Enchantments",
 			["categoryID"] = 695,
 			["groups"] = {
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Agility",
 					["recipeID"] = 23800,
 				}),
-				un(PHASE_FIVE, {
+				applyclassicphase(PHASE_FIVE, {
 					["name"] = "Agility", -- Enchant 2H Weapon
 					["recipeID"] = 27837,
 				}),
@@ -512,11 +512,11 @@ profession(ENCHANTING, {
 					["name"] = "Major Spirit",
 					["recipeID"] = 20035
 				},
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Mighty Intellect",
 					["recipeID"] = 23804,
 				}),
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Mighty Spirit",
 					["recipeID"] = 23803,
 				}),
@@ -536,7 +536,7 @@ profession(ENCHANTING, {
 					["name"] = "Spellpower",
 					["recipeID"] = 22749
 				},
-				un(PHASE_THREE, {
+				applyclassicphase(PHASE_THREE, {
 					["name"] = "Strength",
 					["recipeID"] = 23799,
 				}),

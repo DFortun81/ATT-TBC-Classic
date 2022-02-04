@@ -1047,7 +1047,7 @@ profession(261, bubbleDown({ ["timeline"] = { "removed 3.0.2" } }, {	-- Beast Tr
 				5708,	-- Spawn of Hakkar (Wind Serpent, 51, The Temple of Atal'Hakkar)
 			},
 		},
-		un(PHASE_FOUR, {
+		applyclassicphase(PHASE_FOUR, {
 			["recipeID"] = 25012,	-- Lightning Breath [Rank 6]
 			["rank"] = 6,
 			["lvl"] = 60,

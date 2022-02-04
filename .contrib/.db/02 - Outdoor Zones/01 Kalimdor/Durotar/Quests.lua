@@ -23,7 +23,7 @@ _.Zones =
 						{ "i", 4887, 4 },	-- Intact Makrura Eye
 					},
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						i(4941),	-- Really Sticky Glue
 					},
 				}),
@@ -74,7 +74,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 4859, 1 },	-- Burning Blade Medallion
 					},
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4859,	-- Burning Blade Medallion
 							["questID"] = 794,	-- Burning Blade Medallion
@@ -152,7 +152,7 @@ _.Zones =
 						{ "i", 4870, 8 },	-- Canvas Scraps
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						i(11845),	-- Handmade Leather Bag
 					},
 				}),
@@ -181,7 +181,7 @@ _.Zones =
 					["sourceQuest"] = 4641,	-- Your Place In The World
 					["coord"] = { 42.06, 68.33, DUROTAR },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(4915),	-- Soft Wool Boots
 						i(4914),	-- Battleworn Leather Gloves
 					},
@@ -195,7 +195,7 @@ _.Zones =
 						{ "i", 4869, 1 },	-- Fizzle's Claw
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4869,	-- Fizzle's Claw
 							["questID"] = 806,	-- Dark Storms
@@ -281,7 +281,7 @@ _.Zones =
 						{ "i", 4886, 4 },	-- Venomtail Poison Sac
 					},
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4904,	-- Venomtail Antidote
 							["questID"] = 812,	-- Need for a Cure
@@ -293,7 +293,7 @@ _.Zones =
 					["coord"] = { 62.4, 20, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4986,	-- Flawed Power Stone
 							["questID"] = 924,	-- The Demon Seed
@@ -309,7 +309,7 @@ _.Zones =
 						{ "i", 4863, 3 },	-- Gnomish Tools
 					},
 					["lvl"] = 3,
-					["g"] = {
+					["groups"] = {
 						i(4936),	-- Dirt-trodden Boots
 						i(4928),	-- Sandrunner Wristguards
 						i(4935),	-- Wide Metal Girdle
@@ -323,7 +323,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 11583, 10 },	-- Cactus Apple
 					},
-					["g"] = {
+					["groups"] = {
 						i(11584),	-- Cactus Apple Surprise
 					},
 				}),
@@ -407,7 +407,7 @@ _.Zones =
 						{ "i", 4891, 1 },	-- Kron's Amulet
 					},
 					["lvl"] = 8,
-					["g"] = {
+					["groups"] = {
 						i(4944),	-- Handsewn Cloak
 					},
 				}),
@@ -427,7 +427,7 @@ _.Zones =
 						{ "i", 4864, 1 },	-- Minshina's Skull
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4864,	-- Minshina's Skull
 							["questID"] = 808,	-- Minshina's Skull
@@ -444,7 +444,7 @@ _.Zones =
 						{ "i", 4904, 1 },	-- Venomtail Antidote
 					},
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						i(4937),	-- Charging Buckler
 						i(4929),	-- Light Scorpid Armor
 					},
@@ -523,7 +523,7 @@ _.Zones =
 					["sourceQuest"] = 790,	-- Sarkoth (1/2)
 					["coord"] = { 40.60, 62.60, DUROTAR },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(4916),	-- Soft Wool Vest
 						i(4917),	-- Battleworn Chain Leggings
 					},
@@ -546,7 +546,7 @@ _.Zones =
 					["coord"] = { 46.38, 22.94, DUROTAR },
 					--["races"] = ALL_RACES,	-- Crieve: Yes, doable on Alliance.
 					["lvl"] = 7,
-					["g"] = {
+					["groups"] = {
 						i(4932),	-- Harpy Wing Clipper
 						i(4931),	-- Hickory Shortbow
 						i(4938),	-- Blemished Wooden Staff
@@ -581,7 +581,7 @@ _.Zones =
 						{ "i", 4871, 6 },	-- Searing Collar
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						i(4947),	-- Jagged Dagger
 						i(4939),	-- Steady Bastard Sword
 						i(4948),	-- Stinging Mace
@@ -613,7 +613,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 4862, 10 },	-- Scorpid Worker Tail
 					},
-					["g"] = {
+					["groups"] = {
 						i(4919),	-- Soft Wool Belt
 						i(4920),	-- Battleworn Cape
 					},
@@ -705,7 +705,7 @@ _.Zones =
 					["maps"] = { THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 9,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4986,	-- Flawed Power Stone
 							["questID"] = 924,	-- The Demon Seed
@@ -754,7 +754,7 @@ _.Zones =
 					["coord"] = { 54.52, 75.20, DUROTAR },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						{
 							["objectID"] = 3192,	-- Attack Plan: Orgrimmar
 							["questID"] = 786,	-- Thwarting Kolkar Aggression
@@ -807,7 +807,7 @@ _.Zones =
 					["classes"] = exclude(WARLOCK, ALL_CLASSES),
 					["races"] = HORDE_ONLY,
 					["lvl"] = 2,
-					["g"] = {
+					["groups"] = {
 						i(4924),	-- Primitive Club
 						i(4925),	-- Primitive Hand Blade
 						i(4923),	-- Primitive Hatchet
@@ -859,7 +859,7 @@ _.Zones =
 						{ "i", 4866, 1 },	-- 	Zalazane's Head
 					},
 					["lvl"] = 4,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 4866,	-- Zalazane's Head
 							["questID"] = 826,	-- Zalazane

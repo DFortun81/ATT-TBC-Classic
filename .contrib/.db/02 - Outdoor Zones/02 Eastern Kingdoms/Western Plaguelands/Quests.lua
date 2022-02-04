@@ -77,7 +77,7 @@ _.Zones =
 						{ "i", 12627, 1 },	-- Temporal Displacer
 					},
 					["lvl"] = 53,
-					["g"] = {
+					["groups"] = {
 						i(15812),	-- Orchid Amice
 						i(15813),	-- Gold Link Belt
 					},
@@ -157,7 +157,7 @@ _.Zones =
 						{ "i", 17114, 1 },	-- Araj's Phylactery Shard
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(17759),	-- Mark of Resolution
 					},
 				}),
@@ -171,7 +171,7 @@ _.Zones =
 						{ "i", 17114, 1 },	-- Araj's Phylactery Shard
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(17759),	-- Mark of Resolution
 					},
 				}),
@@ -200,7 +200,7 @@ _.Zones =
 					["qg"] = 10840,	-- Argent Officer Pureheart
 					["coord"] = { 43.0, 83.6, WESTERN_PLAGUELANDS },
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(12846),	-- Argent Dawn Commission
 					},
 				}),
@@ -209,7 +209,7 @@ _.Zones =
 					["coord"] = { 83.2, 68.4, TIRISFAL_GLADES },
 					["maps"] = { TIRISFAL_GLADES },
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(12846),	-- Argent Dawn Commission
 					},
 				}),
@@ -283,7 +283,7 @@ _.Zones =
 						{ "i", 12844, 25 },	-- Argent Dawn Valor Token
 					},
 					["lvl"] = 55,
-					["g"] = {
+					["groups"] = {
 						i(18182),	-- Chromatic Mantle of the Dawn
 					},
 				}),
@@ -302,7 +302,7 @@ _.Zones =
 						{ "i", 12844, 25 },	-- Argent Dawn Valor Token
 					},
 					["lvl"] = 55,
-					["g"] = {
+					["groups"] = {
 						i(18182),	-- Chromatic Mantle of the Dawn
 					},
 				}),
@@ -329,7 +329,7 @@ _.Zones =
 						{ "i", 12843, 1 },	-- Corruptor's Scourgestone
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(12844),	-- Argent Dawn Valor Token
 					},
 				}),
@@ -343,7 +343,7 @@ _.Zones =
 						{ "i", 12843, 1 },	-- Corruptor's Scourgestone
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(12844),	-- Argent Dawn Valor Token
 					},
 				}),
@@ -355,7 +355,7 @@ _.Zones =
 						{ "i", 12638, 5 },	-- Andorhal Watch
 					},
 					["lvl"] = 53,
-					["g"] = {
+					["groups"] = {
 						i(12650),	-- Attuned Dampener
 					},
 				}),
@@ -368,7 +368,7 @@ _.Zones =
 						{ "i", 12638, 5 },	-- Andorhal Watch
 					},
 					["lvl"] = 53,
-					["g"] = {
+					["groups"] = {
 						i(12650),	-- Attuned Dampener
 					},
 				}),
@@ -456,7 +456,7 @@ _.Zones =
 						{ "i", 12663, 1 },	-- Glyphed Oaken Branch
 					},
 					["lvl"] = 51,
-					["g"] = {
+					["groups"] = {
 						i(15804),	-- Cerise Drape
 					},
 				}),
@@ -470,7 +470,7 @@ _.Zones =
 						{ "i", 12663, 1 },	-- Glyphed Oaken Branch
 					},
 					["lvl"] = 51,
-					["g"] = {
+					["groups"] = {
 						i(15804),	-- Cerise Drape
 					},
 				}),
@@ -511,7 +511,7 @@ _.Zones =
 						{ "i", 12841, 10 },	-- Invader's Scourgestones
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(12844),	-- Argent Dawn Valor Token
 					},
 				}),
@@ -524,7 +524,7 @@ _.Zones =
 						{ "i", 12841, 10 },	-- Invader's Scourgestones
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(12844),	-- Argent Dawn Valor Token
 					},
 				}),
@@ -564,7 +564,7 @@ _.Zones =
 						{ "i", 12739, 1 },	-- Dalson Cabinet Key
 					},
 					["lvl"] = 52,
-					["g"] = {
+					["groups"] = {
 						i(13474),	-- Farmer Dalson's Shotgun
 						i(13475),	-- Dalson Family Wedding Ring
 					},
@@ -600,7 +600,7 @@ _.Zones =
 						{ "i", 12840, 20 },	-- Minion's Scourgestone
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(12844),	-- Argent Dawn Valor Token
 					},
 				}),
@@ -613,7 +613,7 @@ _.Zones =
 						{ "i", 12840, 20 },	-- Minion's Scourgestone
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(12844),	-- Argent Dawn Valor Token
 					},
 				}),
@@ -623,7 +623,7 @@ _.Zones =
 					["coord"] = { 42.7, 84.1, WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(15801),	-- Valiant Shortsword
 						i(15800),	-- Intrepid Shortsword
 						i(15799),	-- Heroic Commendation Medal
@@ -636,7 +636,7 @@ _.Zones =
 					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(15801),	-- Valiant Shortsword
 						i(15800),	-- Intrepid Shortsword
 						i(15799),	-- Heroic Commendation Medal
@@ -975,7 +975,7 @@ _.Zones =
 						{ "i", 12723, 1 },	-- Good Luck Charm
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 12722,	-- Good Luck Other-Half-Charm
 							["cr"] = 10801,	-- Jabbering Ghoul

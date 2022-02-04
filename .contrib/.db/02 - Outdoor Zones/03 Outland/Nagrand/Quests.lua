@@ -131,7 +131,7 @@ _.Zones =
 					["coord"] = { 55.6, 37.6, NAGRAND },
 					["races"] = HORDE_ONLY,
 					["sourceQuest"] = 9906 ,	-- Message in a Battle
-					["g"] = {
+					["groups"] = {
 						i(25623),	-- Bracers of the Battle Cleric
 						i(25624),	-- King's Bulwark
 						i(25622),	-- Staff of the Four Golden Coins
@@ -153,7 +153,7 @@ _.Zones =
 					["coord"] = { 55.6, 37.6, NAGRAND },
 					["races"] = HORDE_ONLY,
 					["sourceQuest"] = 9910,	-- Standards and Practices
-					["g"] = {
+					["groups"] = {
 						i(25630),	-- Ogre Basher's Slippers
 						i(25629),	-- Ogre Handler's Shooter
 						i(25628),	-- Ogre Mauler's Badge
@@ -176,7 +176,7 @@ _.Zones =
 					["provider"] = { "n", 19035 },	-- Wazat
 					["coord"] = { 61.6, 67.0, NAGRAND },
 					["sourceQuest"] = 10109,	-- I Must Have Them!
-					["g"] = {
+					["groups"] = {
 						i(28030),	-- Spell-Slinger's Protector
 						i(28032),	-- Delicate Green Poncho
 						i(28031),	-- Nomad's Woven Cloak
@@ -192,7 +192,7 @@ _.Zones =
 					["coord"] = { 31.4, 44.0, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
 					["sourceQuest"] = 9954,	-- Corki's Ransom
-					["g"] = {
+					["groups"] = {
 						i(25775),	-- Ogre Slayer's Band
 						i(25776),	-- Ogre Slayer's Pendant
 						i(25777),	-- Ogre Slayer's Cover
@@ -203,7 +203,7 @@ _.Zones =
 					["coord"] = { 32.2, 36.2, NAGRAND },
 					["races"] = HORDE_ONLY,
 					["sourceQuest"] = 9945,	-- War on the Warmaul
-					["g"] = {
+					["groups"] = {
 						i(25775),	-- Ogre Slayer's Band
 						i(25776),	-- Ogre Slayer's Pendant
 						i(25777),	-- Ogre Slayer's Cover
@@ -222,7 +222,7 @@ _.Zones =
 					["provider"] = { "n", 18180 },	-- Hemet Nesingwary
 					["coord"] = { 71.5, 40.8, NAGRAND },
 					["sourceQuest"] = 9850,	-- Clefthoof Mastery
-					["g"] = {
+					["groups"] = {
 						i(25591),	-- Clefthoof Gloves
 						i(25589),	-- Clefthoof Helm
 						i(25592),	-- Clefthoof Wristguards
@@ -233,7 +233,7 @@ _.Zones =
 					["coord"] = { 55.4, 68.8, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
 					["sourceQuest"] = 9923,	-- HELP!
-					["g"] = {
+					["groups"] = {
 						i(25631),	-- Boots of the Specialist
 						i(25633),	-- Uniting Charm
 						i(25632),	-- Wand of Happiness
@@ -288,7 +288,7 @@ _.Zones =
 					["provider"] = { "n", 18415 },	-- Elder Ungriz
 					["coord"] = { 32.2, 36.2, NAGRAND },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(25778),	-- Manacles of Remembrance
 						i(25780),	-- Warmaul Defender's Cloak
 						i(25779),	-- Warmaul Slayer's Band
@@ -298,7 +298,7 @@ _.Zones =
 					["provider"] = { "n", 18417 },	-- Altruis the Sufferer
 					["coord"] = { 27.4, 42.0, NAGRAND },
 					["sourceQuest"] = 10010,	-- It's Just That Easy?
-					["g"] = {
+					["groups"] = {
 						i(25819),	-- Breastplate of the Warbringer
 						i(25821),	-- Leggings of Unending Assault
 						i(25820),	-- Metallic Headband of Simm'onz
@@ -309,7 +309,7 @@ _.Zones =
 					["provider"] = { "n", 18276 },	-- Zerid
 					["coord"] = { 30.8, 58.1, NAGRAND },
 					["sourceQuest"] = 9913,	-- The Consortium Needs You!
-					["g"] = {
+					["groups"] = {
 						i(25637),	-- Ethereal Sash
 						i(25634),	-- Oshu'gun Relic
 						i(25544),	-- Zerid's Vintage Musket
@@ -319,7 +319,7 @@ _.Zones =
 					["coord"] = { 60.0, 22.0, NAGRAND },
 					["provider"] = { "n", 18099 },	-- Gordawg <Fury of Earth>
 					["sourceQuest"] = 9849,	-- Shattering the Veil
-					["g"] =	{
+					["groups"] =	{
 						i(25564),	-- Earthen Mark of Health
 						i(25563),	-- Earthen Mark of Power
 						i(25562),	-- Earthen Mark of Razing
@@ -342,7 +342,7 @@ _.Zones =
 					["coord"] = { 32.2, 36.2, NAGRAND },
 					["races"] = HORDE_ONLY,
 					["sourceQuest"] = 9865,	-- Once Were Warriors
-					["g"] = {
+					["groups"] = {
 						i(25574),	-- Greenkeeper's Pantaloons
 						i(25576),	-- Smuggler's Mitts
 						i(25575),	-- Thunderbringer's Guard
@@ -357,7 +357,7 @@ _.Zones =
 					["qg"] = 4949,	-- Thrall
 					["timeline"] = { "removed 4.0.1.13287" },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(28173),	-- Mag'hari Huntsman's Leggings
 						i(28169),	-- Mag'hari Ritualist's Horns
 						i(28172),	-- Mag'hari Scout's Tunic
@@ -395,7 +395,7 @@ _.Zones =
 					["provider"] = { "n", 19844 },	-- Nitrin the Learned
 					["coord"] = { 51.8, 56.8, NAGRAND },
 					["sourceQuest"] = 10252,	-- Vision of the Dead
-					["g"] = {
+					["groups"] = {
 						i(29312),	-- Cover of Righteous Fury
 						i(29313),	-- Earthbreaker's Greaves
 						i(29315),	-- Gloves of Penitence
@@ -424,7 +424,7 @@ _.Zones =
 					["isMonthly"] = true,
 					["minReputation"] = { 933, NEUTRAL },
 					["maxReputation"] = { 933, FRIENDLY },
-					["g"] = {
+					["groups"] = {
 						i(25424),	-- Gem-Stuffed Envelope
 					},
 				}),
@@ -434,7 +434,7 @@ _.Zones =
 					["isMonthly"] = true,
 					["minReputation"] = { 933, FRIENDLY },
 					["maxReputation"] = { 933, HONORED },
-					["g"] = {
+					["groups"] = {
 						i(25419),	-- Unmarked Bag of Gems
 					},
 				}),
@@ -459,7 +459,7 @@ _.Zones =
 					["isMonthly"] = true,
 					["minReputation"] = { 933, HONORED },
 					["maxReputation"] = { 933, REVERED },
-					["g"] = {
+					["groups"] = {
 						i(25422),	-- Bulging Sack of Gems
 					},
 				}),
@@ -468,7 +468,7 @@ _.Zones =
 					["coord"] = { 31.4, 57.8, NAGRAND },
 					["isMonthly"] = true,
 					["minReputation"] = { 933, REVERED },
-					["g"] = {
+					["groups"] = {
 						i(25423),	-- Bag of Premium Gems
 					},
 				}),
@@ -538,7 +538,7 @@ _.Zones =
 						9932,	-- Body of Evidence
 						9931,	-- Returning the Favor
 					},
-					["g"] = {
+					["groups"] = {
 						i(25607),	-- Burning Blade Cultist Band
 						i(25609),	-- Burning Blade Devotee's Cinch
 						i(25608),	-- Lantresor's Warblade
@@ -552,7 +552,7 @@ _.Zones =
 						9932,	-- Body of Evidence
 						9931,	-- Returning the Favor
 					},
-					["g"] = {
+					["groups"] = {
 						i(25606),	-- Burning Blade Cultist Band
 						i(25605),	-- Burning Blade Devotee's Cinch
 						i(25603),	-- Lantresor's Warblade
@@ -577,7 +577,7 @@ _.Zones =
 						9869,	-- The Throne of the Elements (A)
 						9870,	-- The Throne of the Elements (H)
 					},
-					["g"] = {
+					["groups"] = {
 						i(25560),	-- Lo'ap's Muck Diving Pads
 						i(25559),	-- Lo'ap's Tunic of Muck Diving
 						i(25561),	-- Muck-Ridden Galoshes
@@ -587,7 +587,7 @@ _.Zones =
 					["provider"] = { "n", 18074 },	-- Elementalist Morgh <The Earthen Ring>
 					["coord"] = { 60.6, 22.4, NAGRAND },
 					["sourceQuest"] = 9861,	-- The Howling Wind
-					["g"] = {
+					["groups"] = {
 						i(25567),	-- Cord of the Ring
 						i(25566),	-- Judicator's Gauntlets
 						i(25565),	-- Spaulders of the Ring
@@ -607,7 +607,7 @@ _.Zones =
 					["provider"] = { "n", 18068 },	-- Farseer Margadesh <The Lightning Sons>
 					["coord"] = { 54.6, 39.8, NAGRAND },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(25583),	-- Eighty Silver Links
 						i(25585),	-- Murkblood Avenger's Legplates
 						i(25584),	-- Murkblood Oven Mitts
@@ -630,7 +630,7 @@ _.Zones =
 					["coord"] = { 55.4, 68.8, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
 					["sourceQuest"] = 9871,	-- Murkblood Invaders!
-					["g"] = {
+					["groups"] = {
 						i(25583),	-- Eighty Silver Links
 						i(25585),	-- Murkblood Avenger's Legplates
 						i(25584),	-- Murkblood Oven Mitts
@@ -642,7 +642,7 @@ _.Zones =
 					["description"] = "This quest is only accessible when the Alliance controls Halaa.",
 					["cost"] = { { "i", 26043, 20 }, },	-- Oshu'gun Crystal Powder Sample
 					["races"] = ALLIANCE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(26044),	-- Halaa Research Token
 					},
 				}),
@@ -654,7 +654,7 @@ _.Zones =
 					["cost"] = { { "i", 26043, 20 }, },	-- Oshu'gun Crystal Powder Sample
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(26044),	-- Halaa Research Token
 					},
 				}),
@@ -664,7 +664,7 @@ _.Zones =
 					["description"] = "This quest is only accessible when the Horde controls Halaa.",
 					["cost"] = { { "i", 26042, 20 }, },	-- Oshu'gun Crystal Powder Sample
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(26044),	-- Halaa Research Token
 					},
 				}),
@@ -676,7 +676,7 @@ _.Zones =
 					["cost"] = { { "i", 26042, 20 }, },	-- Oshu'gun Crystal Powder Sample
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(26044),	-- Halaa Research Token
 					},
 				}),
@@ -717,7 +717,7 @@ _.Zones =
 					["coord"] = { 54.4, 72.2, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
 					["sourceQuest"] = 9918,	-- Not On My Watch!
-					["g"] = {
+					["groups"] = {
 						i(25578),	-- Caustic Feeler
 						i(25579),	-- Dark Shaman's Cover
 						i(25577),	-- Greenblood Pantaloons
@@ -733,7 +733,7 @@ _.Zones =
 					["provider"] = { "n", 18222 },	-- Otonbu the Sage
 					["coord"] = { 54.4, 72.0, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(25570),	-- Melia's Lustrous Crown
 						i(25569),	-- Murkblood Avenger's Chestplate
 						i(25568),	-- Warcaster's Scaled Leggings
@@ -766,7 +766,7 @@ _.Zones =
 					["provider"] = { "n", 18218 },	-- Harold Lane
 					["coord"] = { 71.4, 40.6, NAGRAND },
 					["sourceQuest"] = 9858,	-- Talbuk Mastery
-					["g"] = {
+					["groups"] = {
 						i(25636),	-- Talbuk Cape
 						i(25545),	-- Talbuk Dirk
 						i(25543),	-- Talbuk Sticker
@@ -848,7 +848,7 @@ _.Zones =
 					["provider"] = { "n", 18416 },	-- Huntress Kima
 					["coord"] = { 54.8, 70.6, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(25778),	-- Manacles of Remembrance
 						i(25780),	-- Warmaul Defender's Cloak
 						i(25779),	-- Warmaul Slayer's Band
@@ -890,7 +890,7 @@ _.Zones =
 					["provider"] = { "n", 18471 },	-- Gurgthock
 					["coord"] = { 42.8, 20.7, NAGRAND },
 					["sourceQuest"] = 9973,	-- The Ring of Blood: The Warmaul Champion
-					["g"] = {
+					["groups"] = {
 						i(25760),	-- Battle Mage's Baton
 						i(25763),	-- Ceremonial Warmaul Blood-Blade
 						i(25762),	-- Honed Voidaxe
@@ -914,7 +914,7 @@ _.Zones =
 					["provider"] = { "n", 18073 },	-- Elementalist Lo'ap <The Earthen Ring>
 					["coord"] = { 60.8, 22.4, NAGRAND },
 					["sourceQuest"] = 9805,	-- Blessing of Incineratus
-					["g"] = {
+					["groups"] = {
 						i(25558),	-- Ango'rosh Souleater's Cowl
 						i(25556),	-- Oversized Ogre Hauberk
 						i(25557),	-- Salvaged Ango'rosh Pauldrons
@@ -952,7 +952,7 @@ _.Zones =
 					["coord"] = { 54.6, 72.2, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
 					["sourceQuest"] = 9921,	-- The Ruins of Burning Blade
-					["g"] = {
+					["groups"] = {
 						i(25623),	-- Bracers of the Battle Cleric
 						i(25624),	-- King's Bulwark
 						i(25622),	-- Staff of the Four Golden Coins
@@ -969,7 +969,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 24505, 1 },	-- Heart of Tusker
 					},
-					["g"] = {
+					["groups"] = {
 						i(24505, {	-- Heart of Tusker
 							["cr"] = 18290,	-- Tusker <Queen of the Elekk>
 							["coord"] = { 44.2, 65.2, NAGRAND },
@@ -1005,7 +1005,7 @@ _.Zones =
 					["coord"] = { 26.0, 60.6, NAGRAND },
 					["races"] = HORDE_ONLY,
 					["sourceQuest"] = 10171,	-- The Inconsolable Chieftain
-					["g"] = {
+					["groups"] = {
 						i(28168),	-- Insignia of the Mag'hari Hero
 						i(28173),	-- Mag'hari Huntsman's Leggings
 						i(28169),	-- Mag'hari Ritualist's Horns
@@ -1041,7 +1041,7 @@ _.Zones =
 					["provider"] = { "n", 18066 },	-- Farseer Kurkush <The Lightning Sons>
 					["coord"] = { 54.8, 39.4, NAGRAND },
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(25570),	-- Melia's Lustrous Crown
 						i(25569),	-- Murkblood Avenger's Chestplate
 						i(25568),	-- Warcaster's Scaled Leggings
@@ -1066,7 +1066,7 @@ _.Zones =
 						9936,	-- WANTED: Giselda the Crone
 						9940,	-- WANTED: Zorbo the Advisor
 					},
-					["g"] = {
+					["groups"] = {
 						i(25774),	-- Azure Lightblade
 						i(25772),	-- Crystalline Kopesh
 						i(25773),	-- Hungering Bone Cudgel
@@ -1080,7 +1080,7 @@ _.Zones =
 						9935,	-- WANTED: Giselda the Crone
 						9939,	-- WANTED: Zorbo the Advisor
 					},
-					["g"] = {
+					["groups"] = {
 						i(25774),	-- Azure Lightblade
 						i(25772),	-- Crystalline Kopesh
 						i(25773),	-- Hungering Bone Cudgel
@@ -1139,7 +1139,7 @@ _.Zones =
 					["provider"] = { "n", 18200 },	-- Shado 'Fitz' Farstrider
 					["coord"] = { 71.6, 40.5, NAGRAND },
 					["sourceQuest"] = 9855,	-- Windroc Mastery
-					["g"] = {
+					["groups"] = {
 						i(25594),	-- Windroc Boots
 						i(25593),	-- Windroc Greaves
 						i(25595),	-- Windroc Shroud

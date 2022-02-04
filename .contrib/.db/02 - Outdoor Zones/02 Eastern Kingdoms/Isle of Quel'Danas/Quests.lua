@@ -21,7 +21,7 @@ _.Zones =
 					["provider"] = { "n", 25163 },	-- Anchorite Kairthos
 					["coord"] = { 51.2, 33.1, ISLE_OF_QUELDANAS },
 					["minReputation"] = { 1077, EXALTED },
-					["g"] = {
+					["groups"] = {
 						title(38),	-- Of the Shattered Sun
 					},
 				}),

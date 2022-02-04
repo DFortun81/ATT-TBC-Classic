@@ -16,7 +16,7 @@ _.Zones =
 						{ 76.2, 78.0, NAGRAND },
 						{ 76.0, 80.8, NAGRAND },
 					},
-					["g"] = {
+					["groups"] = {
 						crit(10, {	-- Goretooth
 							["achievementID"] = 1312,	-- Bloody Rare
 						}),
@@ -37,7 +37,7 @@ _.Zones =
 						{ 67.6, 73.8, NAGRAND },
 						{ 70.0, 70.4, NAGRAND },
 					},
-					["g"] = {
+					["groups"] = {
 						i(31194),	-- Gronn-Blessed Warbeads
 					},
 				}),
@@ -52,7 +52,7 @@ _.Zones =
 						{ 32.2, 70.8, NAGRAND },
 						{ 33.2, 67.8, NAGRAND },
 					},
-					["g"] = {
+					["groups"] = {
 						crit(19, {	-- Voidhunter Yar
 							["achievementID"] = 1312,	-- Bloody Rare
 						}),

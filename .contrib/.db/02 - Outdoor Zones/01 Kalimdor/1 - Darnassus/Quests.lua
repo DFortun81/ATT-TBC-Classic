@@ -120,7 +120,7 @@ _.Zones =
 						{ "i", 7737, 1 },	-- Sethir's Journal
 					},
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 7737,	-- Sethir's Journal
 							["questID"] = 2242,	-- Destiny Calls
@@ -157,7 +157,7 @@ _.Zones =
 				q(3781, {	-- Morrowgrain Research
 					["lvl"] = 47,
 					["races"] = ALLIANCE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(11022),	-- Packet of Tharlendris Seeds
 					},
 				}),
@@ -167,7 +167,7 @@ _.Zones =
 					},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 47,
-					["g"] = {
+					["groups"] = {
 						i(11887),	-- Cenarion Circle Cache
 					},
 				}),
@@ -175,7 +175,7 @@ _.Zones =
 					["lvl"] = 47,
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(11887),	-- Cenarion Circle Cache
 					},
 				}),
@@ -195,7 +195,7 @@ _.Zones =
 						{ "i", 8155, 1 },	-- Sathrah's Sacrifice
 					},
 					["lvl"] = 5,
-					["g"] = {
+					["groups"] = {
 						i(9600),	-- Lace Pants
 						i(9601),	-- Cushioned Boots
 					},
@@ -365,7 +365,7 @@ _.Zones =
 					["classes"] = { WARRIOR },
 					["qg"] = 6142,	-- Mathiel
 					["sourceQuest"] = 1692,	-- Smith Mathiel
-					["g"] = {
+					["groups"] = {
 						i(6966),	-- Elunite Axe
 						i(6967),	-- Elunite Sword
 						i(6968),	-- Elunite Hammer

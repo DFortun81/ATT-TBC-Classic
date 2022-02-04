@@ -121,7 +121,7 @@ root("Zones", m(KALIMDOR, {
 					["lvl"] = 52,
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(18042),	-- Thorium Headed Arrow
 					},
 				}),
@@ -167,7 +167,7 @@ root("Zones", m(KALIMDOR, {
 				q(4300, {	-- Bone-Bladed Weapons
 					["lvl"] = 48,
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(11862),	-- White Bone Band
 						i(11863),	-- White Bone Shredder
 						i(11864),	-- White Bone Spear
@@ -247,7 +247,7 @@ root("Zones", m(KALIMDOR, {
 				q(7491, {	-- For All To See
 					["lvl"] = 60,
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(18406),	-- Onyxia Blood Talisman
 						i(18403),	-- Dragonslayer's Signet
 						i(18404),	-- Onyxia Tooth Pendant

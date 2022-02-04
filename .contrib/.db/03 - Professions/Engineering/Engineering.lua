@@ -3,7 +3,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Bullets",
 			["categoryID"] = 1,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Crafted Heavy Shot",
 					["recipeID"] = 3930,
@@ -33,7 +33,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Devices",
 			["categoryID"] = 188,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Advanced Target Dummy",
 					["recipeID"] = 3965
@@ -189,7 +189,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Explosives",
 			["categoryID"] = 184,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Arcane Bomb",
 					["recipeID"] = 19831
@@ -295,7 +295,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Fireworks",
 			["categoryID"] = 194,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Blue Firework",
 					["recipeID"] = 23067
@@ -373,7 +373,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Goggles",
 			["categoryID"] = 185,
-			["g"] = {
+			["groups"] = {
 				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Bloodvine Goggles",
 					["recipeID"] = 24356,
@@ -439,7 +439,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Guns",
 			["categoryID"] = 189,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Core Marksman Rifle",
 					["recipeID"] = 22795
@@ -489,7 +489,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Parts",
 			["categoryID"] = 183,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Bronze Framework",
 					["recipeID"] = 3953
@@ -587,7 +587,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Scopes",
 			["categoryID"] = 190,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Accurate Scope",
 					["recipeID"] = 3979
@@ -617,7 +617,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Tools",
 			["categoryID"] = 191,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Arclight Spanner",
 					["recipeID"] = 7430
@@ -633,7 +633,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Bullets",
 			["categoryID"] = 1,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Fel Iron Shells",
 					["recipeID"] = 30346
@@ -643,7 +643,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Reagents",
 			["categoryID"] = 750,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Frame",
 					["recipeID"] = 30306
@@ -681,7 +681,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Explosives",
 			["categoryID"] = 751,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Grenade",
 					["recipeID"] = 30311
@@ -703,7 +703,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Goggles",
 			["categoryID"] = 752,
-			["g"] = {
+			["groups"] = {
 				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Annihilator Holo-Gogs",
 					["classes"] = { PRIEST, MAGE, WARLOCK },
@@ -835,7 +835,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Devices",
 			["categoryID"] = 753,
-			["g"] = {
+			["groups"] = {
 				applyclassicphase(TBC_PHASE_TWO, {
 					["name"] = "Adamantite Arrow Maker",
 					["timeline"] = { "added 2.1.0.6692", "removed 4.0.1.10000" },
@@ -883,7 +883,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Weapons",
 			["categoryID"] = 754,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Rifle",
 					["recipeID"] = 30313
@@ -909,7 +909,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Scopes",
 			["categoryID"] = 755,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Adamantite Scope",
 					["recipeID"] = 30329
@@ -927,7 +927,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Mounts",
 			["categoryID"] = 756,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Flying Machine",
 					["recipeID"] = 44155
@@ -941,7 +941,7 @@ profession(ENGINEERING, {
 		{
 			["name"] = "Fireworks",
 			["categoryID"] = 757,
-			["g"] = {
+			["groups"] = {
 				{
 					["name"] = "Green Smoke Flare",
 					["recipeID"] = 30344

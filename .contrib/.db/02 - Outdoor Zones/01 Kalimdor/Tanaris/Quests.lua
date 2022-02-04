@@ -25,7 +25,7 @@ _.Zones =
 						{ "i", 8644, 1 },	-- Fine Egg
 					},
 					["lvl"] = 42,
-					["g"] = {
+					["groups"] = {
 						i(9540),	-- Box of Spells
 					},
 				}),
@@ -38,7 +38,7 @@ _.Zones =
 						{ "i", 8643, 1 },	-- Extraordinary Egg
 					},
 					["lvl"] = 42,
-					["g"] = {
+					["groups"] = {
 						i(9541),	-- Box of Goodies
 					},
 				}),
@@ -51,7 +51,7 @@ _.Zones =
 						{ "i", 8645, 1 },	-- Ordinary Egg
 					},
 					["lvl"] = 42,
-					["g"] = {
+					["groups"] = {
 						i(9539),	-- Box of Rations
 					},
 				}),
@@ -60,7 +60,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["qg"] = 7407,	-- Chief Engineer Bilgewhizzle
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(8524),	-- Model 4711-FTZ Power Source
 					},
 				}),
@@ -123,7 +123,7 @@ _.Zones =
 				q(2874, {	-- Deliver to MacKinley
 					["lvl"] = 40,
 					["sourceQuest"] = 2873,	-- Stoley's Shipment
-					["g"] = {
+					["groups"] = {
 						i(9636),	-- Swashbuckler Sash
 						i(9637),	-- Shinkicker Boots
 					},
@@ -142,7 +142,7 @@ _.Zones =
 				}),
 				q(3161, {	-- Gahz'ridian
 					["lvl"] = 43,
-					["g"] = {
+					["groups"] = {
 						i(10827),	-- Surveyor's Tunic
 						i(10826),	-- Staff of Lore
 					},
@@ -193,7 +193,7 @@ _.Zones =
 				}),
 				q(2662, {	-- Noggenfogger Elixir
 					["lvl"] = 44,
-					["g"] = {
+					["groups"] = {
 						i(8529),	-- Noggenfogger Elixir
 					},
 				}),
@@ -237,7 +237,7 @@ _.Zones =
 					["lvl"] = 43,
 					["qg"] = 7784,	-- Homing Robot OOX-17/TN
 					["sourceQuest"] = 351,	-- Find OOX-17/TN!
-					["g"] = {
+					["groups"] = {
 						i(9643),	-- Optomatic Deflector
 						i(9644),	-- Thermotastic Egg Timer
 					},
@@ -252,7 +252,7 @@ _.Zones =
 						{ "i", 8527, 1 },	-- Sealed Field Testing Kit
 					},
 					["lvl"] = 38,
-					["g"] = {
+					["groups"] = {
 						i(9634),	-- Skilled Handling Gloves
 						i(9635),	-- Master Apothecary Cape
 						i(11502),	-- Loreskin Shoulders
@@ -288,14 +288,14 @@ _.Zones =
 						{ "i", 8483, 5 },	-- Wastewander Water Pouch
 					},
 					["lvl"] = 38,
-					["g"] = {
+					["groups"] = {
 						i(8524),	-- Model 4711-FTZ Power Source
 					},
 				}),
 				q(8366, {	-- Southsea Shakedown
 					["lvl"] = 40,
 					["qg"] = 7882,	-- Security Chief Bilgewhizzle
-					["g"] = {
+					["groups"] = {
 						i(20640),	-- Southsea Head Bucket
 						i(20641),	-- Southsea Mojo Boots
 					},
@@ -336,7 +336,7 @@ _.Zones =
 						{ "i", 9438, 8 },	-- Acceptable Scorpid Sample
 					},
 					["lvl"] = 38,
-					["g"] = {
+					["groups"] = {
 						i(9437),	-- Untested Basilisk Sample
 						i(9439),	-- Untested Hyena Sample
 					},
@@ -344,7 +344,7 @@ _.Zones =
 				q(5863, {	-- The Dunemaul Compound
 					["lvl"] = 44,
 					["qg"] = 11758,	-- Andi Lynn
-					["g"] = {
+					["groups"] = {
 						i(16738),	-- Witherseed Gloves
 						i(16739),	-- Rugwood Mantle
 					},
@@ -373,7 +373,7 @@ _.Zones =
 						{ "i", 8564, 1 },	-- Hippogryph Egg
 					},
 					["lvl"] = 42,
-					["g"] = {
+					["groups"] = {
 						i(8647),	-- Egg Crate
 					},
 				}),
@@ -383,7 +383,7 @@ _.Zones =
 						{ "i", 8564, 1 },	-- Hippogryph Egg
 					},
 					["lvl"] = 42,
-					["g"] = {
+					["groups"] = {
 						i(8647),	-- Egg Crate
 					},
 				}),
@@ -421,7 +421,7 @@ _.Zones =
 				q(1560, {	-- Tooga's Quest
 					["lvl"] = 40,
 					["qg"] = 5955,	-- Tooga
-					["g"] = {
+					["groups"] = {
 						i(9638),	-- Chelonian Cuffs
 						i(9642),	-- Band of the Great Tortoise
 					},
@@ -462,7 +462,7 @@ _.Zones =
 				q(1707, {	-- Water Pouch Bounty
 					["lvl"] = 40,
 					["qg"] = 7408,	-- Spigot Operator Luglunket
-					["g"] = {
+					["groups"] = {
 						i(8484),	-- Gadgetzan Water Co. Care Package
 					},
 				}),
@@ -471,7 +471,7 @@ _.Zones =
 					["qg"] = 7408,	-- Spigot Operator Luglunket
 					["sourceQuest"] = 1707,	-- Water Pouch Bounty
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(8484),	-- Gadgetzan Water Co. Care Package
 					},
 				}),

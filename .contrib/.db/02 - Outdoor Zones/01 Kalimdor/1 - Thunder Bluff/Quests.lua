@@ -94,7 +94,7 @@ _.Zones =
 					["coord"] = { 61.52, 80.88, THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 26,
-					["g"] = {
+					["groups"] = {
 						i(6720),	-- Spirit Hunter Headdress
 						i(5810),	-- Fresh Carcass
 					},
@@ -116,7 +116,7 @@ _.Zones =
 					["lvl"] = 47,
 					["races"] = HORDE_ONLY,
 					["qg"] = 9087,	-- Bashana Runetotem
-					["g"] = {
+					["groups"] = {
 						i(11887),	-- Cenarion Circle Cache
 					},
 				}),
@@ -124,7 +124,7 @@ _.Zones =
 					["lvl"] = 47,
 					["races"] = HORDE_ONLY,
 					["qg"] = 5769,	-- Arch Druid Hamuul Runetotem
-					["g"] = {
+					["groups"] = {
 						i(11022),	-- Packet of Tharlendris Seeds
 					},
 				}),
@@ -133,7 +133,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["qg"] = 9087,	-- Bashana Runetotem
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(11887),	-- Cenarion Circle Cache
 					},
 				}),
@@ -141,7 +141,7 @@ _.Zones =
 					["lvl"] = 7,
 					["races"] = HORDE_ONLY,
 					["qg"] = 2987,	-- Eyahn Eagletalon
-					["g"] = {
+					["groups"] = {
 						i(4968),	-- Bound Harness
 						i(4967),	-- Tribal Warrior's Shield
 					},
@@ -219,7 +219,7 @@ _.Zones =
 						{ "i", 5869, 1 },	-- Cloven Hoof
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(6739),	-- Cliffrunner's Aim
 						i(6740),	-- Azure Sash
 					},

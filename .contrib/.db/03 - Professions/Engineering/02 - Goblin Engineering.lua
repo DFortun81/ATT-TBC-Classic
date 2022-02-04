@@ -6,7 +6,7 @@ profession(ENGINEERING, {
 			{
 				["name"] = "Devices",
 				["categoryID"] = 188,
-				["g"] = {
+				["groups"] = {
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Dimensional Ripper - Area 52",
 						["recipeID"] = 36954,
@@ -35,7 +35,7 @@ profession(ENGINEERING, {
 			{
 				["name"] = "Goggles",
 				["categoryID"] = 185,
-				["g"] = {
+				["groups"] = {
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Foreman's Enchanted Helmet",
 						["recipeID"] = 30565
@@ -61,7 +61,7 @@ profession(ENGINEERING, {
 			{
 				["name"] = "Explosives",
 				["categoryID"] = 184,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Goblin Bomb Dispenser",
 						["recipeID"] = 12755
@@ -99,7 +99,7 @@ profession(ENGINEERING, {
 			{
 				["name"] = "Parts",
 				["categoryID"] = 183,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Goblin Rocket Fuel Recipe",
 						["recipeID"] = 12715,
@@ -118,7 +118,7 @@ profession(ENGINEERING, {
 					["timeline"] = { "removed 4.0.3.2000" },
 					["repeatable"] = true,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(10791),	-- Goblin Engineer Membership Card
 					},
 				}),
@@ -133,7 +133,7 @@ profession(ENGINEERING, {
 					["timeline"] = { "removed 4.0.3.2000" },
 					["repeatable"] = true,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(10791),	-- Goblin Engineer Membership Card
 					},
 				}),

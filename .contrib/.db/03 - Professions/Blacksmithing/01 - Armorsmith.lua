@@ -10,7 +10,7 @@ profession(BLACKSMITHING, {
 			{
 				["name"] = "Helms",
 				["categoryID"] = 218,
-				["g"] = {
+				["groups"] = {
 					applyclassicphase(PHASE_THREE, {
 						["name"] = "Dark Iron Helm",
 						["recipeID"] = 23636,
@@ -44,7 +44,7 @@ profession(BLACKSMITHING, {
 			{
 				["name"] = "Shoulders",
 				["categoryID"] = 219,
-				["g"] = {
+				["groups"] = {
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Dawnbringer Shoulders",
 						["recipeID"] = 16660,
@@ -62,7 +62,7 @@ profession(BLACKSMITHING, {
 			{
 				["name"] = "Bracers",
 				["categoryID"] = 222,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Dark Iron Bracers",
 						["recipeID"] = 20874,
@@ -76,7 +76,7 @@ profession(BLACKSMITHING, {
 			{
 				["name"] = "Gauntlets",
 				["categoryID"] = 221,
-				["g"] = {
+				["groups"] = {
 					applyclassicphase(PHASE_THREE, {
 						["name"] = "Dark Iron Gauntlets",
 						["recipeID"] = 23637,
@@ -109,7 +109,7 @@ profession(BLACKSMITHING, {
 			{
 				["name"] = "Chest",
 				["categoryID"] = 220,
-				["g"] = {
+				["groups"] = {
 					-- #if BEFORE TBC
 					{
 						["name"] = "Dark Iron Plate",
@@ -188,7 +188,7 @@ profession(BLACKSMITHING, {
 			{
 				["name"] = "Belts",
 				["categoryID"] = 223,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Fiery Chain Girdle",
 						["recipeID"] = 20872,
@@ -200,7 +200,7 @@ profession(BLACKSMITHING, {
 			{
 				["name"] = "Legs",
 				["categoryID"] = 224,
-				["g"] = {
+				["groups"] = {
 					-- #if BEFORE TBC
 					{
 						["name"] = "Dark Iron Leggings",
@@ -234,7 +234,7 @@ profession(BLACKSMITHING, {
 			{
 				["name"] = "Boots",
 				["categoryID"] = 225,
-				["g"] = {
+				["groups"] = {
 					applyclassicphase(PHASE_FOUR, {
 						["name"] = "Dark Iron Boots",
 						["recipeID"] = 24399,

@@ -114,7 +114,7 @@ _.Zones =
 						{ "i", 2956, 1 },	-- Report on the Defias Brotherhood
 					},
 					["lvl"] = 16,
-					["g"] = {
+					["groups"] = {
 						i(2933),	-- Seal of Wrynn
 					},
 				}),
@@ -341,7 +341,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(6972),	-- Fire Hardened Hauberk
 					},
 				}),
@@ -389,7 +389,7 @@ _.Zones =
 					["classes"] = { WARRIOR },
 					["sourceQuest"] = 1705,	-- Burning Blood
 					["qg"] = 1416,	-- Grimand Elmore
-					["g"] = {
+					["groups"] = {
 						i(6971),	-- Fire Hardened Coif
 					},
 				}),
@@ -552,7 +552,7 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["cr"] = 11878,	-- Nathanos Blightcaller <Champion of the Banshee Queen>
 					["lvl"] = 56,
-					["g"] = {
+					["groups"] = {
 						i(16996),	-- Gorewood Bow
 						i(16997),	-- Stormrager
 						i(16998),	-- Sacred Protector
@@ -625,7 +625,7 @@ _.Zones =
 					["qg"] = 332,	-- Master Mathias Shaw
 					["sourceQuest"] = 2205,	-- Seek out SI:7
 					["coord"] = { 75.8, 59.8, STORMWIND_CITY },
-					["g"] = {
+					["groups"] = {
 						i(7298),	-- Blade of Cunning
 					},
 				}),
@@ -1026,7 +1026,7 @@ _.Zones =
 						{ "i", 8431, 1 },	-- Spool of Light Chartreuse Silk Thread
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 8431,	-- Spool of Light Chartreuse Silk Thread
 							["questID"] = 2609,	-- The Touch of Zanzil
@@ -1075,7 +1075,7 @@ _.Zones =
 					["cost"] = {
 						{ "i", 2722, 1 },	-- Wine Ticket
 					},
-					["g"] = {
+					["groups"] = {
 						i(2723),	-- Bottle of Dalaran Noir
 					},
 				}),

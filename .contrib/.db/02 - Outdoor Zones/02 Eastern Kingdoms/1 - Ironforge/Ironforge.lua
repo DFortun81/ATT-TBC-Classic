@@ -354,7 +354,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["classes"] = { WARRIOR },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 10,
-					["g"] = {
+					["groups"] = {
 						i(6978),	-- Umbral Axe
 						i(6984),	-- Umbral Sword
 						i(6982),	-- Umbral Mace

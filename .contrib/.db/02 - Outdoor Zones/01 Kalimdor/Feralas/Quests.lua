@@ -25,7 +25,7 @@ _.Zones =
 						{ "i", 9462, 1 },	-- Crate of Grimtotem Horns
 					},
 					["lvl"] = 37,
-					["g"] = {
+					["groups"] = {
 						i(11858),	-- Battlehard Cape
 						i(11859),	-- Jademoon Orb
 					},
@@ -36,7 +36,7 @@ _.Zones =
 					["coord"] = { 31.8, 45.2, FERALAS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(11856),	-- Ceremonial Elven Blade
 						i(11857),	-- Sanctimonial Rod
 					},
@@ -160,7 +160,7 @@ _.Zones =
 						{ "i", 9528, 1 },	-- Edana's Dark Heart
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 9528,	-- Edana's Dark Heart
 							["questID"] = 3062,	-- Dark Heart
@@ -181,7 +181,7 @@ _.Zones =
 						{ "i", 9248, 1 } -- Mysterious Relic
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(9663),	-- Dawnrider's Chestpiece
 						i(9664),	-- Sentinel's Guard
 					},
@@ -202,7 +202,7 @@ _.Zones =
 						{ "i", 9368, 1 },	-- Jer'kai's Signet Ring
 					},
 					["lvl"] = 38,
-					["g"] = {
+					["groups"] = {
 						i(10705),	-- Firwillow Wristbands
 						i(10706),	-- Nightscale Girdle
 					},
@@ -255,7 +255,7 @@ _.Zones =
 						{ "i", 18958, 10 },	-- Water Elemental Core
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(19039),	-- Zorbin's Water Resistant Hat
 					},
 				}),
@@ -268,7 +268,7 @@ _.Zones =
 						{ "i", 9463, 12 },	-- Gordunni Cobalt
 					},
 					["lvl"] = 38,
-					["g"] = {
+					["groups"] = {
 						i(9658),	-- Boots of the Maharishi
 						i(9660),	-- Stargazer Cloak
 					},
@@ -310,7 +310,7 @@ _.Zones =
 						{ "i", 18947, 10 },	-- Rage Scar Yeti Hide
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19041),	-- Pratt's Handcrafted Tunic
 					},
 				}),
@@ -323,7 +323,7 @@ _.Zones =
 						{ "i", 18947, 10 },	-- Rage Scar Yeti Hide
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(19042),	-- Jangdor's Handcrafted Tunic
 					},
 				}),
@@ -359,7 +359,7 @@ _.Zones =
 						{ "i", 11040, 5 },	-- Morrowgrain
 					},
 					["lvl"] = 47,
-					["g"] = {
+					["groups"] = {
 						i(11022),	-- Packet of Tharlendris Seeds
 					},
 				}),
@@ -446,7 +446,7 @@ _.Zones =
 					["sourceQuest"] = 2766,	-- Find OOX-22/FE!
 					["coord"] = { 53.4, 55.6, FERALAS },
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(9647),	-- Failed Flying Experiment
 						i(9648),	-- Chainlink Towel
 					},
@@ -535,7 +535,7 @@ _.Zones =
 						{ "i", 9266, 1 },	-- Woodpaw Battle Plans
 					},
 					["lvl"] = 39,
-					["g"] = {
+					["groups"] = {
 						i(9661),	-- Earthclasp Barrier
 						i(9662),	-- Rushridge Boots
 					},
@@ -589,7 +589,7 @@ _.Zones =
 						 { "i", 8973, 10 },	-- Thick Yeti Hide
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(9630),	-- Pratt's Handcrafted Boots
 						i(9631),	-- Pratt's Handcrafted Gloves
 					},
@@ -602,7 +602,7 @@ _.Zones =
 						 { "i", 8973, 10 },	-- Thick Yeti Hide
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(9633),	-- Jangdor's Handcrafted Boots
 						i(9632),	-- Jangdor's Handcrafted Gloves
 					},
@@ -630,7 +630,7 @@ _.Zones =
 						{ "i", 9306, 1 },	-- Stave of Equinex
 					},
 					["lvl"] = 42,
-					["g"] = {
+					["groups"] = {
 						i(9654),	-- Cairnstone Sliver
 						i(9655),	-- Seedtime Hoop
 					},
@@ -647,7 +647,7 @@ _.Zones =
 						{ "i", 11040, 10 },	-- Morrowgrain
 					},
 					["lvl"] = 47,
-					["g"] = {
+					["groups"] = {
 						i(11888),	-- Quintis' Research Gloves
 						i(11889),	-- Bark Iron Pauldrons
 					},
@@ -681,7 +681,7 @@ _.Zones =
 						{ "i", 9306, 1 },	-- Stave of Equinex
 					},
 					["lvl"] = 42,
-					["g"] = {
+					["groups"] = {
 						{
 							["provider"] = { "o", 142185 },	-- Flame of Byltan
 							["itemID"] = 9258,	-- Byltan Essence
@@ -740,7 +740,7 @@ _.Zones =
 						{ "i", 11242, 1 },	-- Evoroot
 					},
 					["lvl"] = 47,
-					["g"] = {
+					["groups"] = {
 						i(11243),	-- Videre Elixir
 					},
 				}),
@@ -804,7 +804,7 @@ _.Zones =
 						{ "i", 9189, 1 },	-- Shay's Bell
 					},
 					["lvl"] = 44,
-					["g"] = {
+					["groups"] = {
 						i(9656),	-- Granite Grips
 						i(9657),	-- Vinehedge Cinch
 					},
@@ -827,7 +827,7 @@ _.Zones =
 					["coord"] = { 74.4, 43.4, FERALAS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(9684),	-- Force of the Hippogryph
 						i(9686),	-- Spirit of the Faerie Dragon
 						i(9683),	-- Strength of the Treant
@@ -848,7 +848,7 @@ _.Zones =
 						{ "i", 18956, 10 },	-- Miniaturization Residue
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 18904,	-- Zorbin's Ultra-Shrinker
 							["crs"] = {
@@ -890,7 +890,7 @@ _.Zones =
 						{ "i", 19020, 1 },	-- Camp Mojache Zukk'ash Report
 					},
 					["lvl"] = 39,
-					["g"] = {
+					["groups"] = {
 						i(19038),	-- Ring of Subtlety
 						i(19037),	-- Emerald Peak Spaulders
 					},

@@ -15,7 +15,7 @@ _.Zones =
 						{ "i", 8394, 1 },	-- Basilisk Brain
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8411),	-- Lung Juice Cocktail
 					},
 				}),
@@ -25,7 +25,7 @@ _.Zones =
 						{ "i", 10593, 1 },	-- Imperfect Draenethyst Fragment
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(12122),	-- Kum'isha's Junk
 					},
 				}),
@@ -38,7 +38,7 @@ _.Zones =
 						{ "i", 8396, 2 },	-- Vulture Gizzard
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8423),	-- Cerebral Cortex Compound
 					},
 				}),
@@ -50,7 +50,7 @@ _.Zones =
 						{ "i", 8244, 1 },	-- Flawless Draenethyst Sphere
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(10752),	-- Emerald Encrusted Chest
 					},
 				}),
@@ -62,7 +62,7 @@ _.Zones =
 						{ "i", 10593, 1 },	-- Imperfect Draenethyst Fragment
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(12122),	-- Kum'isha's Junk
 					},
 				}),
@@ -83,7 +83,7 @@ _.Zones =
 						{ "i", 8393, 1 },	-- Scorpok Pincer
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8410),	-- R.O.I.D.S.
 					},
 				}),
@@ -112,7 +112,7 @@ _.Zones =
 						{ "i", 8392, 1 },	-- Blasted Boar Lung
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8412),	-- Ground Scorpok Assay
 					},
 				}),
@@ -125,7 +125,7 @@ _.Zones =
 						{ "i", 8393, 1 },	-- Scorpok Pincer
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8410),	-- R.O.I.D.S.
 					},
 				}),
@@ -140,7 +140,7 @@ _.Zones =
 						{ "i", 8394, 1 },	-- Basilisk Brain
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8411),	-- Lung Juice Cocktail
 					},
 				}),
@@ -149,7 +149,7 @@ _.Zones =
 					["coord"] = { 50.6, 14.3, BLASTED_LANDS },
 					["repeatable"] = true,
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8424),	-- Gizzard Gum
 					},
 				}),
@@ -178,7 +178,7 @@ _.Zones =
 						{ "i", 8396, 2 },	-- Vulture Gizzard
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8423),	-- Cerebral Cortex Compound
 					},
 				}),
@@ -196,7 +196,7 @@ _.Zones =
 						{ "i", 8392, 1 },	-- Blasted Boar Lung
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8412),	-- Ground Scorpok Assay
 					},
 				}),
@@ -234,7 +234,7 @@ _.Zones =
 						{ "i", 8244, 1 },	-- Flawless Draenethyst Sphere
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(10752),	-- Emerald Encrusted Chest
 					},
 				}),
@@ -246,7 +246,7 @@ _.Zones =
 						{ "i", 8391, 2 },	-- Snickerfang Jowl
 					},
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(8424),	-- Gizzard Gum
 					},
 				}),
@@ -255,7 +255,7 @@ _.Zones =
 					["sourceQuest"] = 3627,	-- Uniting the Shattered Amulet
 					["coord"] = { 34.3, 66.2, SWAMP_OF_SORROWS },
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						objective(1, {	-- Severed Horn of the Defiler
 							["provider"] = { "i", 10759 },	-- Severed Horn of the Defiler
 							["cost"] = {

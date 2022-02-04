@@ -67,7 +67,7 @@ _.Zones =
 					["coord"] = { 48.2, 86.6, NETHERSTORM },
 					["sourceQuest"] = 10197,	-- A Convincing Disguise
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
-					["g"] = {
+					["groups"] = {
 						i(30383),	-- Belt of the Sage
 						i(30386),	-- Bloodguard's Greaves
 						i(30384),	-- Brightdawn Bracers
@@ -79,7 +79,7 @@ _.Zones =
 					["coord"] = { 32.1, 64.0, NETHERSTORM },
 					["sourceQuest"] = 10330,	-- Shutting Down Manaforge Coruu
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
-					["g"] = {
+					["groups"] = {
 						i(30522),	-- Conjurer's Staff
 						i(30396),	-- Jeweled Halberd
 						i(30394),	-- Sunfury Blade
@@ -130,7 +130,7 @@ _.Zones =
 					["coord"] = { 32.0, 64.0, NETHERSTORM },
 					["sourceQuest"] = 10338,	-- Shutting Down Manaforge Duro
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
-					["g"] = {
+					["groups"] = {
 						i(30366),	-- Manastorm Band
 						i(30378),	-- Thalodien's Charm
 					},
@@ -140,7 +140,7 @@ _.Zones =
 					["coord"] = { 42.6, 91.4, SHATTRATH_CITY },
 					["sourceQuest"] = 10509,	-- Bound for Glory
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
-					["g"] = {
+					["groups"] = {
 						i(30375),	-- Gauntlets of the Vanquisher
 						i(30374),	-- Greaves of Spellpower
 						i(30373),	-- Netherfused Pauldrons
@@ -196,7 +196,7 @@ _.Zones =
 					["coord"] = { 34.8, 38.3, NETHERSTORM },
 					["sourceQuest"] = 10380,	-- A Dark Pact
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
-					["g"] = {
+					["groups"] = {
 						i(30382),	-- Aldor Ceremonial Wraps
 						i(30380),	-- Girdle of the Lost Vindicator
 						i(30381),	-- Kaylaan's Spaulders
@@ -227,7 +227,7 @@ _.Zones =
 					["coord"] = { 24.2, 29.8, SHATTRATH_CITY },
 					["sourceQuest"] = 10410,	-- Ishanah's Help
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
-					["g"] = {
+					["groups"] = {
 						i(30369),	-- Cleansed Fel Pauldrons
 						i(30370),	-- Gauntlets of the Redeemed Vindicator
 						i(30371),	-- Lightwarden's Girdle
@@ -255,7 +255,7 @@ _.Zones =
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10241,	-- Distraction at Manaforge B'naar
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
-					["g"] = {
+					["groups"] = {
 						i(30362),	-- Energized Helm
 						i(30364),	-- Resonating Axe
 						i(30363),	-- Warp-Shielded Hauberk
@@ -279,7 +279,7 @@ _.Zones =
 					["coord"] = { 32.0, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10322,	-- Shutting Down Manaforge Duro
 					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
-					["g"] = {
+					["groups"] = {
 						i(30377),	-- Karja's Medallion
 						i(30365),	-- Overseer's Signet
 					},
@@ -321,7 +321,7 @@ _.Zones =
 					["provider"] = { "n", 19488 },	-- Custodian Dieworth
 					["coord"] = { 57.6, 86.2, NETHERSTORM },
 					["sourceQuest"] = 10174,	-- Curse of the Violet Tower
-					["g"] = {
+					["groups"] = {
 						i(30401),	-- Farahlite Studded Boots
 						i(29955),	-- Mana Infused Wristguards
 						i(29954),	-- Spiritbinder's Mantle
@@ -365,7 +365,7 @@ _.Zones =
 				q(10176, {	-- Ar'kelos the Guardian
 					["provider"] = { "n", 19644 },	-- Image of Archmage Vargoth
 					["sourceQuest"] = 10209,	-- Summoner Kanthin's Prize
-					["g"] = {
+					["groups"] = {
 						i(29777),	-- Cloak of the Valiant Defender
 						i(29776),	-- Core of Ar'kelos
 						i(29775),	-- Pendant of the Battle-Mage
@@ -375,7 +375,7 @@ _.Zones =
 				q(10353, {	-- Arconus the Insatiable
 					["provider"] = { "n", 20552 },	-- Agent Ya-six
 					["coord"] = { 60.9, 41.5, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(30329),	-- Flesh Handler's Headpiece
 						i(30517),	-- Netherfarer's Leggings
 						i(30328),	-- Protectorate Assassin's Tunic
@@ -386,7 +386,7 @@ _.Zones =
 					["provider"] = { "n", 19832 },	-- Doctor Vomisa, Ph.T.
 					["coord"] = { 37.3, 63.6, NETHERSTORM },
 					["sourceQuests"] = { 10248 },	-- You, Robot
-					["g"] = {
+					["groups"] = {
 						i(134021, {	-- X-52 Rocket Helmet (TOY!)
 							["timeline"] = { "added 7.0.3.22248" },
 						}),
@@ -410,7 +410,7 @@ _.Zones =
 				q(10701, {	-- Breaking Down Netherock
 					["provider"] = { "o", 183811 },	-- Wanted Poster
 					["coord"] = { 32.1, 64.7, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(31315),	-- Goblin Girdle
 						i(31313),	-- Nether-Rocket Gloves
 						i(31314),	-- Rocket-Chief Pauldrons
@@ -421,7 +421,7 @@ _.Zones =
 					["provider"] = { "n", 19489 },	-- Lieutenant-Sorcerer Morran
 					["sourceQuest"] = 10239,	-- Potential Energy Source
 					["coord"] = { 57.6, 86.3, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(30398),	-- Boots of the Beneficent
 						i(29785),	-- Crimson Mail Bracers
 						i(29784),	-- Harmony's Touch
@@ -482,7 +482,7 @@ _.Zones =
 					["provider"] = { "n", 20393 },	-- Foreman Sundown
 					["coord"] = { 26.4, 42.3, NETHERSTORM },
 					["sourceQuest"] = 10317,	-- Dealing with the Foreman
-					["g"] = {
+					["groups"] = {
 						i(30003),	-- Gloves of the Nether-Stalker
 						i(30004),	-- Landing Boots
 						i(30005),	-- Overmaster's Shoulders
@@ -493,7 +493,7 @@ _.Zones =
 					["provider"] = { "n", 19728 },	-- Mama Wheeler
 					["coord"] = { 46.6, 56.5, NETHERSTORM },
 					["sourceQuest"] = 10234,	-- One Demon's Trash...
-					["g"] = {
+					["groups"] = {
 						i(30279),	-- Mama's Insurance
 						i(30278),	-- Pilfered Ethereal Blade
 						i(30277),	-- Ripfang Paw
@@ -503,7 +503,7 @@ _.Zones =
 					["provider"] = { "n", 20482 },	-- Image of Commander Ameer
 					["coord"] = { 56.8, 38.7, NETHERSTORM },
 					["sourceQuest"] = 10405,	-- S-A-B-O-T-A-G-E
-					["g"] = {
+					["groups"] = {
 						i(30335),	-- Druidic Force Boots
 						i(30337),	-- Protectorate Headplate
 						i(30336),	-- Surger's Hand Wraps
@@ -514,7 +514,7 @@ _.Zones =
 					["provider"] = { "n", 19488 },	-- Custodian Dieworth
 					["coord"] = { 57.5, 86.3, NETHERSTORM },
 					["sourceQuest"] = 10319,	-- Capturing the Phylactery
-					["g"] = {
+					["groups"] = {
 						i(29782),	-- Coif of the Wicked
 						i(29780),	-- Kirin Tor Apprentice's Robes
 						i(29783),	-- Legguards of the Resolute Defender
@@ -530,7 +530,7 @@ _.Zones =
 					["provider"] = { "n", 20907 },	-- Professor Dabiri
 					["coord"] = { 60.1, 31.7, NETHERSTORM },
 					["sourceQuest"] = 10438,	-- On Nethery Wings
-					["g"] = {
+					["groups"] = {
 						i(30297),	-- Circlet of the Starcaller
 						i(30300),	-- Dabiri's Enigma
 						i(30299),	-- Starcaller's Plated Leggings
@@ -546,7 +546,7 @@ _.Zones =
 					["provider"] = { "n", 19488 },	-- Custodian Dieworth
 					["coord"] = { 57.5, 86.3, NETHERSTORM },
 					["sourceQuest"] = 10222,	-- The Sunfury Garrison
-					["g"] = {
+					["groups"] = {
 						i(29792),	-- Dawnstrider's Cloak
 						i(30399),	-- Nightstalker's Wristguards
 						i(29793),	-- Signet of the Violet Tower
@@ -557,7 +557,7 @@ _.Zones =
 					["provider"] = { "n", 19634 },	-- Lead Sapper Blastfizzle
 					["coord"] = { 34.2, 68.0, NETHERSTORM },
 					["sourceQuest"] = 10203,	-- Invaluable Asset Zapping
-					["g"] = {
+					["groups"] = {
 						i(30514),	-- Nether Guards
 						i(29968),	-- Nether Leggings
 						i(29967),	-- Nether Vest
@@ -576,7 +576,7 @@ _.Zones =
 					["provider"] = { "n", 19709 },	-- Chief Engineer Trep
 					["coord"] = { 32.4, 66.8, NETHERSTORM },
 					["sourceQuest"] = 10224,	-- Essence for the Engines
-					["g"] = {
+					["groups"] = {
 						i(30264),	-- Area 52 Engineering Gloves
 						i(30516),	-- Chief Engineer's Belt
 						i(30263),	-- Heavy-Duty Engineering Boots
@@ -586,7 +586,7 @@ _.Zones =
 				q(10425, {	-- Escape from the Staging Grounds
 					["provider"] = { "n", 20763 },	-- Captured Protectorate Vanguard
 					["coord"] = { 57.0, 37.6, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(30331),	-- Diviner's Cinch
 						i(30332),	-- Ferocious Bands
 						i(30333),	-- Spaulders of the Protectorate
@@ -641,7 +641,7 @@ _.Zones =
 					["provider"] = { "n", 20067 },	-- Zuben Elgenubi
 					["coord"] = { 44.1, 36.0, NETHERSTORM },
 					["sourceQuest"] = 10290,	-- In Search of Farahlite
-					["g"] = {
+					["groups"] = {
 						i(29814),	-- Celestial Jewel Ring
 						i(29815),	-- Chain of Glowing Tendrils
 						i(29813),	-- Cloak of Woven Energy
@@ -668,7 +668,7 @@ _.Zones =
 				q(10309, {	-- It's a Fel Reaver, But with Heart
 					["provider"] = { "n", 19690 },	-- N. D. Meancamp
 					["coord"] = { 26.8, 77.0, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(30268),	-- Heap Leggings
 						i(30270),	-- Scavenged Breastplate
 						i(30269),	-- Warp-Raider's Eyepatch
@@ -689,7 +689,7 @@ _.Zones =
 				q(10191, {	-- Mark V is Alive!
 					["provider"] = { "n", 19589 },	-- Maxx A. Million Mk. V
 					["coord"] = { 31.6, 56.6, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(30226),	-- Alley's Recurve
 						-- #if BEFORE MOP
 						i(30227, {	-- Mark V's Throwing Star
@@ -703,7 +703,7 @@ _.Zones =
 					["provider"] = { "n", 20463 },	-- Apprentice Andrethan
 					["coord"] = { 57.7, 85.2, NETHERSTORM },
 					["sourceQuest"] = 10331,	-- Indispensable Tools
-					["g"] = {
+					["groups"] = {
 						i(29789),	-- Andrethan's Masterwork
 						i(29788),	-- Finely Wrought Scale Leggings
 						i(29787),	-- Master Smith's Hammer
@@ -723,7 +723,7 @@ _.Zones =
 					["provider"] = { "n", 20482 },	-- Image of Commander Ameer
 					["coord"] = { 56.8, 38.7, NETHERSTORM },
 					["sourceQuest"] = 10406,	-- Delivering the Message
-					["g"] = {
+					["groups"] = {
 						i(30011),	-- Ameer's Impulse Taser
 						i(30012),	-- Ameer's Judgment
 						i(30010),	-- Fleshling Simulation Staff
@@ -758,7 +758,7 @@ _.Zones =
 					["provider"] = { "n", 19645 },	-- Papa Wheeler
 					["coord"] = { 33.0, 64.7, NETHERSTORM },
 					["sourceQuest"] = 10265,	-- Consortium Crystal Collection
-					["g"] = {
+					["groups"] = {
 						i(30275),	-- Mech Tech Shoulders
 						i(30274),	-- Papa's Armbands
 						i(30276),	-- Wheeler Family Heirloom
@@ -800,7 +800,7 @@ _.Zones =
 					["provider"] = { "n", 20205 },	-- Audi the Needle
 					["coord"] = { 44.7, 36.7, NETHERSTORM },
 					["sourceQuests"] = { 10434 },	-- The Dynamic Duo
-					["g"] = {
+					["groups"] = {
 						i(30284),	-- Audi's Embroidered Boots
 						i(30285),	-- B.O.O.M. Operative's Belt
 						i(30402),	-- Field Agent's Bracers
@@ -811,7 +811,7 @@ _.Zones =
 					["provider"] = { "n", 20066 },	-- Gahruj
 					["coord"] = { 46.7, 56.9, NETHERSTORM },
 					["sourceQuest"] = 10266,	-- Request for Assistance
-					["g"] = {
+					["groups"] = {
 						i(30273),	-- Duro Footgear
 						i(30272),	-- Eco-Dome Leggings
 						i(30271),	-- Midrealm Hat
@@ -829,7 +829,7 @@ _.Zones =
 				q(10310, {	-- Sabotage the Warp-Gate!
 					["provider"] = { "n", 20281 },	-- Drijya
 					["sourceQuest"] = 10311,	-- Drijya Needs Your Help
-					["g"] = {
+					["groups"] = {
 						i(29978),	-- Consortium Combatant's Robes
 						i(29980),	-- Midrealm Leggings
 						i(29979),	-- Netherstorm Eyepatch
@@ -844,7 +844,7 @@ _.Zones =
 					["provider"] = { "n", 20110 },	-- Tyri
 					["coord"] = { 71.2, 35.1, NETHERSTORM },
 					["sourceQuest"] = 10273,	-- Troublesome Distractions
-					["g"] = {
+					["groups"] = {
 						i(29812),	-- Blued Steel Gauntlets
 						i(29810),	-- Dragon Crested Epaulets
 						i(29811),	-- Goldenlink Bracers
@@ -860,7 +860,7 @@ _.Zones =
 					["coord"] = { 45.9, 36.0, NETHERSTORM },
 					["sourceQuest"] = 10276,	-- Full Triangle
 					["description"] = "Items do not show up on quest rewards but appearances are awarded upon turn in to A'dal.",
-					["g"] = {
+					["groups"] = {
 						i(30258),	-- Chestplate of A'dal
 						i(30256),	-- Pants of the Naaru
 						i(30257),	-- Shattrath Leggings
@@ -870,7 +870,7 @@ _.Zones =
 					["provider"] = { "n", 20913 },	-- Tashar
 					["coord"] = { 44.7, 14.6, NETHERSTORM },
 					["sourceQuest"] = 10436,	-- All Clear!
-					["g"] = {
+					["groups"] = {
 						i(30520),	-- Gold-Trimmed Cuffs
 						i(30293),	-- Heavenly Inspiration
 						i(30290),	-- Leggings of Concentrated Power
@@ -884,7 +884,7 @@ _.Zones =
 				q(10335, {	-- Surveying the Ruins
 					["provider"] = { "n", 20470 },	-- Zephyrion
 					["coord"] = { 44.7, 34.9, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(30255),	-- Chestguard of the Stormspire
 						i(30253),	-- Ethereal Gloves
 						i(30254),	-- Zephyrion's Belt
@@ -894,7 +894,7 @@ _.Zones =
 					["provider"] = { "n", 20471 },	-- Nether-Stalker Nauthis
 					["coord"] = { 44.7, 34.9, NETHERSTORM },
 					["sourceQuest"] = 10856,	-- The Best Defense
-					["g"] = {
+					["groups"] = {
 						i(31699),	-- Imbued Draenethyst Crystal
 						i(31703),	-- Nether-Stalker's Blade
 						i(31700),	-- Runed Silver Staff
@@ -910,7 +910,7 @@ _.Zones =
 					["provider"] = { "n", 19617 },	-- Boots
 					["coord"] = { 32.3, 63.9, NETHERSTORM },
 					["sourceQuest"] = 10342,	-- Securing the Shaleskin Shale
-					["g"] = {
+					["groups"] = {
 						i(29999),	-- After Hours Pauldrons
 						i(30002),	-- Boot's Boots
 						i(30001),	-- Doc's Belt
@@ -937,7 +937,7 @@ _.Zones =
 				q(10345, {	-- The Flesh Lies...
 					["provider"] = { "n", 20551 },	-- Agent Araxes
 					["coord"] = { 59.4, 45.0, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(30519),	-- Boots of the Nexus Warden
 						i(30352),	-- Demolisher's Bracers
 						i(30341),	-- Flash Handler's Gauntlets
@@ -948,7 +948,7 @@ _.Zones =
 					["provider"] = { "i", 29738 },	-- Vial of Void Horror Ooze
 					["crs"] = { 20779 },	-- Congealed Void Horror
 					["coord"] = { 54.6, 44.1, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(30338),	-- Diviner's Cloak
 						i(30339),	-- Protectorate Assassin's Ring
 						i(30340),	-- Starkiller's Bauble
@@ -961,7 +961,7 @@ _.Zones =
 				q(10188, {	-- The Sigil of Krasus
 					["provider"] = { "n", 19644 },	-- Image of Archmage Vargoth
 					["sourceQuest"] = 10174,	-- Curse of the Violet Tower
-					["g"] = {
+					["groups"] = {
 						i(29773),	-- Battle-Mage's Helmet
 						i(29774),	-- Kirin'Var Defender's Chausses
 						i(29771),	-- Kirin'Var Journeyman's Belt
@@ -1015,7 +1015,7 @@ _.Zones =
 				q(10261, {	-- Wanted: Annihilator Servo!
 					["provider"] = { "o", 183811 },	-- Wanted Poster
 					["coord"] = { 32.1, 64.7, NETHERSTORM },
-					["g"] = {
+					["groups"] = {
 						i(30295),	-- Exotic Spiked Shoulders
 						i(30296),	-- Lost Chestplate of the Reverent
 						i(30294),	-- Red Pointy Hat
@@ -1030,7 +1030,7 @@ _.Zones =
 					["provider"] = { "n", 19880 },	-- Nether-Stalker Khay'ji
 					["coord"] = { 32.4, 64.2, NETHERSTORM },
 					["sourceQuest"] = 10262,	-- A Heap of Ethereals
-					["g"] = {
+					["groups"] = {
 						i(30266),	-- Zaxxis Boots
 						i(30265),	-- Zaxxis Bracers
 						i(30267),	-- Zaxxis Gloves
@@ -1045,7 +1045,7 @@ _.Zones =
 					["provider"] = { "n", 20415 },	-- Bessy
 					["coord"] = { 59.1, 78.8, NETHERSTORM },
 					["sourceQuest"] = 10334,	-- Needs More Cowbell
-					["g"] = {
+					["groups"] = {
 						i(29806),	-- Cowpoke's Riding Gloves
 						i(29807),	-- Engraved Cattleman's Buckle
 						i(30523),	-- Hotshot Cattle Prod
@@ -1074,7 +1074,7 @@ _.Zones =
 						39201,	-- Warchief's Command: Netherstorm!
 						-- #endif
 					},
-					["g"] = {
+					["groups"] = {
 						i(30225),	-- Junior Technician 3rd Grade Bracers
 						i(30224),	-- Junior Technician 3rd Grade Gloves
 						i(30515),	-- Junior Technician 3rd Grade Goggles

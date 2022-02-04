@@ -17,7 +17,7 @@ _.Zones =
 						{ "i", 3720, 10 },	-- Yeti Fur
 					},
 					["lvl"] = 29,
-					["g"] = {
+					["groups"] = {
 						i(2805),	-- Yeti Fur Cloak
 					},
 				}),
@@ -68,7 +68,7 @@ _.Zones =
 					["sourceQuest"] = 541,	-- Battle of Hillsbrad
 					["races"] = HORDE_ONLY,
 					["lvl"] = 19,
-					["g"] = {
+					["groups"] = {
 						i(6282),	-- Sacred Burial Trousers
 						i(3761),	-- Deadskull Shield
 						i(3822),	-- Runic Darkblade
@@ -93,7 +93,7 @@ _.Zones =
 					["lvl"] = 30,
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 2382,	-- Darren Malvew
-					["g"] = {
+					["groups"] = {
 						i(3753),	-- Shepherd's Girdle
 						i(3754),	-- Shepherd's Gloves
 						i(3736),	-- Recipe: Tasty Lion Steak
@@ -113,7 +113,7 @@ _.Zones =
 					["coord"] = { 62.56, 19.69, HILLSBRAD_FOOTHILLS },
 					["lvl"] = 19,
 					["races"] = HORDE_ONLY,
-					["g"] = {
+					["groups"] = {
 						i(3742),	-- Bow of Plunder
 						i(3743),	-- Sentry Buckler
 						i(5250),	-- Charred Wand
@@ -135,7 +135,7 @@ _.Zones =
 						{ "i", 3502, 6 },	-- Mudsnout Blossoms
 					},
 					["lvl"] = 24,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3502,	-- Mudsnout Blossoms
 							["questID"] = 509,	-- Elixir of Agony
@@ -164,7 +164,7 @@ _.Zones =
 					},
 					["races"] = HORDE_ONLY,
 					["lvl"] = 24,
-					["g"] = {
+					["groups"] = {
 						i(3749),	-- High Apothecary Cloak
 						i(3747),	-- Meditative Sash
 					},
@@ -202,7 +202,7 @@ _.Zones =
 						{ "i", 3496, 10 },	-- Mountain Lion Blood
 					},
 					["lvl"] = 21,
-					["g"] = {
+					["groups"] = {
 						i(2230),	-- Gloves of Brawn
 						i(3741),	-- Stomping Boots
 						i(6482),	-- Firewalker Boots
@@ -299,7 +299,7 @@ _.Zones =
 					["lvl"] = 30,
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 2712,	-- Quae
-					["g"] = {
+					["groups"] = {
 						i(15455),	-- Dustfall Robes
 						i(15456),	-- Lightstep Leggings
 					},
@@ -345,7 +345,7 @@ _.Zones =
 						{ "i", 3693, 1 },	-- Humbert's Sword
 					},
 					["lvl"] = 26,
-					["g"] = {
+					["groups"] = {
 						i(3750),	-- Ribbed Breastplate
 						i(3751),	-- Mercenary Leggings
 					},
@@ -400,7 +400,7 @@ _.Zones =
 						{ "i", 3688, 1 },	-- Bloodstone Oval
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3688,	-- Bloodstone Oval
 							["questID"] = 544,	-- Prison Break In
@@ -440,7 +440,7 @@ _.Zones =
 						{ "i", 3692, 30 },	-- Hillsbrad Human Skull
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(3739),	-- Skull Ring
 					},
 				}),
@@ -459,7 +459,7 @@ _.Zones =
 					["coord"] = { 51.4, 58.4, HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 25,
-					["g"] = {
+					["groups"] = {
 						i(3755),	-- Fish Gutter
 					},
 				}),
@@ -468,7 +468,7 @@ _.Zones =
 					["coord"] = { 39.30, 14.30, ALTERAC_MOUNTAINS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
-					["g"] = {
+					["groups"] = {
 						i(3764),	-- Mantis Boots
 						i(3765),	-- Brigand's Pauldrons
 					},
@@ -548,7 +548,7 @@ _.Zones =
 						{ "i", 3554, 1 },	-- Crown of Will
 					},
 					["lvl"] = 34,
-					["g"] = {
+					["groups"] = {
 						i(4430),	-- Ethereal Talisman
 					},
 				}),
@@ -569,7 +569,7 @@ _.Zones =
 						{ "i", 3467, 1 },	-- Dull Iron Key
 					},
 					["lvl"] = 17,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3499,	-- Burnished Gold Key
 							["questID"] = 498,	-- The Rescue
@@ -613,7 +613,7 @@ _.Zones =
 					["coord"] = { 61.4, 19.2, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(9649),	-- Royal Highmark Vestments
 						i(9650),	-- Honorguard Chestpiece
 						i(10686),	-- Aegis of Battle
@@ -628,7 +628,7 @@ _.Zones =
 						{ "i", 3626, 1 },	-- Head of Baron Vardus
 					},
 					["lvl"] = 35,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3626,	-- Head of Baron Vardus
 							["questID"] = 566,	-- WANTED: Baron Vardus

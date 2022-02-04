@@ -14,7 +14,7 @@ _.Zones =
 						{ "i", 13207, 1 },	-- Shadow Lord Fel'dan's Head
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 13207,	-- Shadow Lord Fel'dan's Head
 							["questID"] = 5242,	-- A Final Blow
@@ -86,7 +86,7 @@ _.Zones =
 						{ "i", 11445, 1 },	-- Flute of the Ancients
 					},
 					["lvl"] = 49,
-					["g"] = {
+					["groups"] = {
 						i(11873),	-- Ethereal Mist Cape
 						i(11874),	-- Clouddrift Mantle
 					},
@@ -615,7 +615,7 @@ _.Zones =
 					["coord"] = { 51.4, 81.5, FELWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 49,
-					["g"] = {
+					["groups"] = {
 						i(11875),	-- Breezecloud Bracers
 					},
 				}),
@@ -628,7 +628,7 @@ _.Zones =
 						{ "i", 12558, 1 },	-- Blue-feathered Necklace
 					},
 					["lvl"] = 52,
-					["g"] = {
+					["groups"] = {
 						i(15796),	-- Seaspray Bracers
 						i(15797),	-- Shining Armplates
 					},
@@ -683,7 +683,7 @@ _.Zones =
 					["coord"] = { 51.2, 81.6, FELWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 49,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 11445,	-- Flute of the Ancients
 							["description"] = "You need to save this flute for the 'Ancient Spirit' escort quest, then you can safely discard it.",
@@ -711,7 +711,7 @@ _.Zones =
 						{ "i", 14047, 30 },	-- Runecloth
 					},
 					["lvl"] = 40,
-					["g"] = {
+					["groups"] = {
 						i(15822),	-- Shadowskin Spaulders
 						i(15823),	-- Bricksteel Gauntlets
 					},
@@ -740,7 +740,7 @@ _.Zones =
 						{ "i", 11174, 1 },	-- Lesser Nether Essence
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -755,7 +755,7 @@ _.Zones =
 						{ "i", 11174, 1 },	-- Lesser Nether Essence
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -769,7 +769,7 @@ _.Zones =
 						{ "i", 11174, 1 },	-- Lesser Nether Essence
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -784,7 +784,7 @@ _.Zones =
 						{ "i", 11174, 1 },	-- Lesser Nether Essence
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -798,7 +798,7 @@ _.Zones =
 						{ "i", 11514, 4 },	-- Fel Creep
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -813,7 +813,7 @@ _.Zones =
 						{ "i", 11514, 4 },	-- Fel Creep
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -828,7 +828,7 @@ _.Zones =
 						{ "i", 11514, 4 },	-- Fel Creep
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -843,7 +843,7 @@ _.Zones =
 						{ "i", 11514, 4 },	-- Fel Creep
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -856,7 +856,7 @@ _.Zones =
 						{ "i", 11515, 6 },	-- Corrupted Soul Shard
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -870,7 +870,7 @@ _.Zones =
 						{ "i", 11515, 6 },	-- Corrupted Soul Shard
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -883,7 +883,7 @@ _.Zones =
 						{ "i", 11515, 6 },	-- Corrupted Soul Shard
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -897,7 +897,7 @@ _.Zones =
 						{ "i", 11515, 6 },	-- Corrupted Soul Shard
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -911,7 +911,7 @@ _.Zones =
 						{ "i", 11513, 4 },	-- Tainted Vitriol
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -926,7 +926,7 @@ _.Zones =
 						{ "i", 11513, 4 },	-- Tainted Vitriol
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -940,7 +940,7 @@ _.Zones =
 						{ "i", 11513, 4 },	-- Tainted Vitriol
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -955,7 +955,7 @@ _.Zones =
 						{ "i", 11513, 4 },	-- Tainted Vitriol
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -969,7 +969,7 @@ _.Zones =
 						{ "i", 11512, 5 },	-- Patch of Tainted Skin
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -984,7 +984,7 @@ _.Zones =
 						{ "i", 11512, 5 },	-- Patch of Tainted Skin
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -998,7 +998,7 @@ _.Zones =
 						{ "i", 11512, 5 },	-- Patch of Tainted Skin
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -1013,7 +1013,7 @@ _.Zones =
 						{ "i", 11512, 5 },	-- Patch of Tainted Skin
 					},
 					["lvl"] = 48,
-					["g"] = {
+					["groups"] = {
 						i(11516),	-- Cenarion Plant Salve
 					},
 				}),
@@ -1082,7 +1082,7 @@ _.Zones =
 						{ "i", 13562, 1 },	-- Remains of Trey Lightforge
 					},
 					["lvl"] = 49,
-					["g"] = {
+					["groups"] = {
 						i(15706),	-- Hunt Tracker Blade
 						i(15705),	-- Tidecrest Blade
 					},
@@ -1093,7 +1093,7 @@ _.Zones =
 					["coord"] = { 65.2, 2.6, FELWOOD },
 					["maps"] = { WINTERSPRING },
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						objective(1, {	-- 0/1 Essence of Xandivious
 							["provider"] = { "i", 21145 },	-- Essence of Xandivious
 							["coord"] = { 68.0, 37.6, WINTERSPRING },
@@ -1122,7 +1122,7 @@ _.Zones =
 					["altQuests"] = { 6131 },	-- Timbermaw Ally (old version, deprecated)
 					["coord"] = { 50.9, 85.0, FELWOOD },
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(21311),	-- Earth Warder's Vest
 						i(21312),	-- Belt of the Den Watcher
 					},

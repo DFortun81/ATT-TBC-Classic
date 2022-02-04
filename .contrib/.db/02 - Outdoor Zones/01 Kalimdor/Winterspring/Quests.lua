@@ -18,7 +18,7 @@ _.Zones =
 					["lvl"] = 55,
 					["qg"] = 10305,	-- Umi Rumplesnicker
 					["sourceQuest"] = 5163,	-- Are We There, Yeti? (3/3)
-					["g"] = {
+					["groups"] = {
 						{
 							["recipeID"] = 26011,	-- Tranquil Mechanical Yeti
 							["requireSkill"] = ENGINEERING,
@@ -38,7 +38,7 @@ _.Zones =
 					["lvl"] = 52,
 					["qg"] = 10305,	-- Umi Rumplesnicker
 					["sourceQuest"] = 977,	-- Are We There, Yeti? (2/3)
-					["g"] = {
+					["groups"] = {
 						i(15778),	-- Mechanical Yeti
 					},
 				}),
@@ -64,7 +64,7 @@ _.Zones =
 					["qg"] = 10307,	-- Witch Doctor Mau'ari
 					["sourceQuest"] = 969,	-- Luck Be With You
 					["lvl"] = 55,
-					["g"] = {
+					["groups"] = {
 						i(12384),	-- Cache of Mau'ari
 					},
 				}),
@@ -72,7 +72,7 @@ _.Zones =
 					["lvl"] = 55,
 					["qg"] = 10307,	-- Witch Doctor Mau'ari
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(12457),	-- Juju Chill
 					},
 				}),
@@ -135,7 +135,7 @@ _.Zones =
 					["lvl"] = 55,
 					["qg"] = 10307,	-- Witch Doctor Mau'ari
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(12460),	-- Juju Might
 					},
 				}),
@@ -143,7 +143,7 @@ _.Zones =
 					["lvl"] = 55,
 					["qg"] = 10307,	-- Witch Doctor Mau'ari
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(12450),	-- Juju Flurry
 					},
 				}),
@@ -196,7 +196,7 @@ _.Zones =
 					["qg"] = 9298,	-- Donova Snowden
 					["sourceQuest"] = 5087,	-- Winterfall Runners
 					["coord"] = { 31.2, 45.2, WINTERSPRING },
-					["g"] = {
+					["groups"] = {
 						i(15784),	-- Crystal Breeze Mantle
 						i(15786),	-- Fernpulse Jerkin
 						i(15787),	-- Willow Band Hauberk
@@ -206,7 +206,7 @@ _.Zones =
 					["qg"] = 10307,	-- Witch Doctor Mau'ari
 					["repeatable"] = true,
 					["lvl"] = 55,
-					["g"] = {
+					["groups"] = {
 						i(12459),	-- Juju Escape
 					},
 				}),
@@ -232,7 +232,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					-- #endif
 					["lvl"] = 53,
-					["g"] = {
+					["groups"] = {
 						i(15704),	-- Hunter's Insignia Medal
 					},
 				}),
@@ -269,7 +269,7 @@ _.Zones =
 						{ "i", 12445, 1 },	-- Felnok's Package
 					},
 					["lvl"] = 50,
-					["g"] = {
+					["groups"] = {
 						i(15862),	-- Blitzcleaver
 						i(15863),	-- Grave Scepter
 					},
@@ -278,7 +278,7 @@ _.Zones =
 					["lvl"] = 55,
 					["qg"] = 10307,	-- Witch Doctor Mau'ari
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(12455),	-- Juju Ember
 					},
 				}),
@@ -290,7 +290,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					-- #endif
 					["lvl"] = 53,
-					["g"] = {
+					["groups"] = {
 						i(15783),	-- Beasthunter Dagger
 						i(15782),	-- Beaststalker Blade
 						i(12733, {	-- Sacred Frostsaber Meat
@@ -316,7 +316,7 @@ _.Zones =
 					["qg"] = 9298,	-- Donova Snowden
 					["sourceQuest"] = 980,	-- The New Springs
 					["coord"] = { 31.2, 45.2, WINTERSPRING },
-					["g"] = {
+					["groups"] = {
 						i(15789),	-- Deep River Cloak
 					},
 				}),
@@ -328,7 +328,7 @@ _.Zones =
 						{ "i", 13347, 1 },	-- Crystal of Zin-Malor (Provided)
 					},
 					["lvl"] = 53,
-					["g"] = {
+					["groups"] = {
 						i(15791),	-- Turquoise Sash
 						i(15792),	-- Plow Wood Spaulders
 						i(15795),	-- Emerald Mist Gauntlets
@@ -411,7 +411,7 @@ _.Zones =
 					["lvl"] = 55,
 					["qg"] = 10307,	-- Witch Doctor Mau'ari
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(12458),	-- Juju Guile
 					},
 				}),
@@ -419,7 +419,7 @@ _.Zones =
 					["lvl"] = 55,
 					["qg"] = 10307,	-- Witch Doctor Mau'ari
 					["repeatable"] = true,
-					["g"] = {
+					["groups"] = {
 						i(12451),	-- Juju Power
 					},
 				}),
@@ -427,7 +427,7 @@ _.Zones =
 					["lvl"] = 45,
 					["races"] = ALLIANCE_ONLY,
 					["qg"] = 11556,	-- Salfa
-					["g"] = {
+					["groups"] = {
 						i(21318),	-- Earth Warder's Gloves
 						i(21319),	-- Gloves of the Pathfinder
 						i(21320),	-- Vest of the Den Watcher

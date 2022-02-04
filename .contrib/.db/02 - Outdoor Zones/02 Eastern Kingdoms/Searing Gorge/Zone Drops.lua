@@ -63,7 +63,7 @@ _.Zones =
 						8419,	-- Twilight Idolater
 					},
 				}),
-				un(PHASE_FIVE, i(21547, {	-- Recipe: Elixir of Greater Firepower
+				applyclassicphase(PHASE_FIVE, i(21547, {	-- Recipe: Elixir of Greater Firepower
 					["crs"] = {
 						5844,	-- Dark Iron Slaver
 						5846,	-- Dark Iron Taskmaster

@@ -41,7 +41,7 @@ _.Zones =
 						{ "i", 7871, 1 },	-- Token of Thievery
 					},
 					["lvl"] = 16,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 7871,	-- Token of Thievery
 							["questID"] = 2282,	-- Alther's Mill
@@ -55,7 +55,7 @@ _.Zones =
 					["coord"] = { 21.9, 46.4, REDRIDGE_MOUNTAINS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 18,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3631,	-- Bellygrub's Tusk
 							["questID"] = 34,	-- An Unwelcome Guest
@@ -94,7 +94,7 @@ _.Zones =
 						{ "i", 1325, 1 },	-- Daffodil Bouquet
 					},
 					["lvl"] = 12,
-					["g"] = {
+					["groups"] = {
 						i(1326),	-- Sauteed Sunfish
 					},
 				}),
@@ -115,7 +115,7 @@ _.Zones =
 						{ "i", 1939, 1 },	-- Skin of Sweet Rum
 					},
 					["lvl"] = 12,
-					["g"] = {
+					["groups"] = {
 						i(1270),	-- Finely Woven Cloak
 						i(10456),	-- A Bulging Coin Purse
 					},
@@ -143,7 +143,7 @@ _.Zones =
 						{ "i", 3614, 1},	-- Yowler's Paw
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3614,	-- Yowler's Paw
 							["questID"] = 126,	-- Howling in the Hills
@@ -225,7 +225,7 @@ _.Zones =
 					["qg"] = 349,	-- Corporal Keeshan
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 19,
-					["g"] = {
+					["groups"] = {
 						i(3555),	-- Robe of Solomon
 						i(1275),	-- Deputy Chain Coat
 						i(3431),	-- Bone-studded Leather
@@ -238,7 +238,7 @@ _.Zones =
 						{ "i", 3617, 1 },	-- Pendant of Shadow
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 3617,	-- Pendant of Shadow
 							["questID"] = 249,	-- Morganth
@@ -256,7 +256,7 @@ _.Zones =
 						{ "i", 1468, 8 },	-- Murloc Fin
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(3567),	-- Dwarven Fishing Pole
 					},
 				}),
@@ -270,7 +270,7 @@ _.Zones =
 						{ "i", 1081, 5 },	-- Crisp Spider Meat
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						i(1082),	-- Redridge Goulash
 						i(2699),	-- Recipe: Redridge Goulash
 					},
@@ -298,7 +298,7 @@ _.Zones =
 					["qg"] = 381,	-- Dockmaster Baren
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 16,
-					["g"] = {
+					["groups"] = {
 						i(3663),	-- Murloc Fin Soup
 						i(1322),	-- Fishliver Oil
 						i(3680),	-- Recipe: Murloc Fin Soup
@@ -328,7 +328,7 @@ _.Zones =
 						{ "i", 1260, 1},	-- Tharil'zun's Head
 					},
 					["lvl"] = 18,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 1260,	-- Tharil'zun's Head
 							["questID"] = 19,	-- Tharil'zun
@@ -357,7 +357,7 @@ _.Zones =
 						{ "i", 1013, 5 },	-- Iron Rivet
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						i(1310),	-- Smith's Trousers
 						i(1303),	-- Bridgeworker's Gloves
 						i(1304),	-- Riding Gloves
@@ -371,7 +371,7 @@ _.Zones =
 						{ "i", 1309, 1 },	-- Oslow's Toolbox
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 1309,	-- Oslow's Toolbox
 							["questID"] = 125,	-- The Lost Tools
@@ -412,7 +412,7 @@ _.Zones =
 						{ "i", 6843, 1 },	-- Cask of Scalder
 					},
 					["lvl"] = 20,
-					["g"] = {
+					["groups"] = {
 						i(6970),	-- Furen's Favor
 					},
 				}),
@@ -423,7 +423,7 @@ _.Zones =
 						{ "i", 1956, 1 },	-- Faded Shadowhide Pendant
 					},
 					["lvl"] = 15,
-					["g"] = {
+					["groups"] = {
 						i(1970),	-- Restoring Balm
 					},
 				}),
@@ -435,7 +435,7 @@ _.Zones =
 						{ "i", 1221, 6},	-- Underbelly Whelp Scale
 					},
 					["lvl"] = 14,
-					["g"] = {
+					["groups"] = {
 						i(6092),	-- Black Whelp Boots
 						i(1302),	-- Black Whelp Gloves
 					},

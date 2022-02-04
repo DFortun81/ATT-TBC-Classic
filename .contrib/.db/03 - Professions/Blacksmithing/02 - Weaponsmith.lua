@@ -116,7 +116,7 @@ profession(BLACKSMITHING, {
 				["description"] = "These items can only be crafted by Master Hammersmith specialized Weaponsmiths.",
 				["groups"] = {
 					-- #if BEFORE TBC
-					un(PHASE_THREE, {
+					applyclassicphase(PHASE_THREE, {
 						["name"] = "Ebon Hand",
 						["recipeID"] = 23650,
 						["requireSkill"] = 17040,
@@ -136,7 +136,7 @@ profession(BLACKSMITHING, {
 						["recipeID"] = 16993,
 						["requireSkill"] = 17040,
 					},
-					un(PHASE_FIVE, {
+					applyclassicphase(PHASE_FIVE, {
 						["name"] = "Persuader",
 						["recipeID"] = 27830,
 						["requireSkill"] = 17040,
@@ -233,7 +233,7 @@ profession(BLACKSMITHING, {
 						["recipeID"] = 16990,
 						["requireSkill"] = 17039,
 					},
-					un(PHASE_THREE, {
+					applyclassicphase(PHASE_THREE, {
 						["name"] = "Blackguard",
 						["recipeID"] = 23652,
 						["requireSkill"] = 17039,
@@ -259,7 +259,7 @@ profession(BLACKSMITHING, {
 						["recipeID"] = 16992,
 						["requireSkill"] = 17039,
 					},
-					un(PHASE_FIVE, {
+					applyclassicphase(PHASE_FIVE, {
 						["name"] = "Sageblade",
 						["recipeID"] = 27832,
 						["requireSkill"] = 17039,
@@ -345,14 +345,14 @@ profession(BLACKSMITHING, {
 				["name"] = "Weapons",
 				["description"] = "These can be crafted by any Weaponsmith.",
 				["categoryID"] = 227,
-				["g"] = {
+				["groups"] = {
 					-- #if BEFORE TBC
-					un(PHASE_THREE, {
+					applyclassicphase(PHASE_THREE, {
 						["name"] = "Black Amnesty",
 						["recipeID"] = 23638,
 						["requireSkill"] = 9787,
 					}),
-					un(PHASE_THREE, {
+					applyclassicphase(PHASE_THREE, {
 						["name"] = "Blackfury",
 						["recipeID"] = 23639,
 						["requireSkill"] = 9787,

@@ -39,7 +39,7 @@ _.Zones =
 					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(6744),	-- Gloves of Kapelan
 						i(6745),	-- Swiftrunner Cape
 					},
@@ -63,7 +63,7 @@ _.Zones =
 					["qg"] = 11625,	-- Cork Gizelton
 					["coord"] = { 40.4, 79.2, DESOLACE },
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(15689),	-- Trader's Ring
 					},
 				}),
@@ -74,7 +74,7 @@ _.Zones =
 						{ "i", 13703, 10 },	-- Kodo Bone
 					},
 					["lvl"] = 33,
-					["g"] = {
+					["groups"] = {
 						i(15690),	-- Kodobone Necklace
 					},
 				}),
@@ -86,7 +86,7 @@ _.Zones =
 						{ "i", 15803, 1 },	-- Book of the Ancients
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 15766,	-- Gem of the Serpent
 							["coord"] = { 28.2, 6.4, DESOLACE },
@@ -138,7 +138,7 @@ _.Zones =
 						{ "i", 13546, 2 },	-- Bloodbelly Fish
 					},
 					["lvl"] = 32,
-					["g"] = {
+					["groups"] = {
 						i(3858),	-- Mithril Ore
 						i(4304),	-- Thick Leather
 						i(4338),	-- Mageweave Cloth
@@ -153,7 +153,7 @@ _.Zones =
 						{ "i", 6067, 15 },	-- Centaur Ear
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(6780),	-- Lilac Sash
 						i(6784),	-- Braced Handguards
 					},
@@ -166,7 +166,7 @@ _.Zones =
 						{ "i", 6067, 15 },	-- Centaur Ear
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(6790),	-- Ring of Calm
 					},
 				}),
@@ -178,7 +178,7 @@ _.Zones =
 						{ "i", 15878, 1 },	-- Rackmore's Silver Key
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(16788),	-- Captain Rackmore's Wheel
 						i(16789),	-- Captain Rackmore's Tiller
 					},
@@ -191,7 +191,7 @@ _.Zones =
 						{ "i", 15924, 10 },	-- Soft-shelled Clam Meat
 					},
 					["lvl"] = 31,
-					["g"] = {
+					["groups"] = {
 						i(15585),	-- Pardoc Grips
 						i(15587),	-- Ringtail Girdle
 						i(15588),	-- Bracesteel Belt
@@ -225,7 +225,7 @@ _.Zones =
 						{ "i", 13545, 5 },	-- Shellfish
 					},
 					["lvl"] = 25,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 13546,	-- Bloodbelly Fish
 							["questID"] = 5386,	-- Catch of the Day
@@ -250,7 +250,7 @@ _.Zones =
 						{ "i", 15849, 8 },	-- Ghost-o-plasm
 					},
 					["lvl"] = 34,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 15848,	-- Crate of Ghost Magnets
 							["coord"] = { 65, 91, DESOLACE },
@@ -270,7 +270,7 @@ _.Zones =
 					["qg"] = 11626,	-- Rigger Gizelton
 					["coord"] = { 40.4, 79.4, DESOLACE },
 					["lvl"] = 32,
-					["g"] = {
+					["groups"] = {
 						i(15691),	-- Sidegunner Shottie
 						i(15692),	-- Kodo Brander
 						i(15695),	-- Studded Ring Shield
@@ -438,7 +438,7 @@ _.Zones =
 						11627,	-- Tamed Kodo
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(15697),	-- Kodo Rustler Boots
 						i(15698),	-- Wrangling Spaulders
 					},
@@ -483,7 +483,7 @@ _.Zones =
 						{ "i", 14547, 1 },	-- Hand of Iruxos
 					},
 					["lvl"] = 32,
-					["g"] = {
+					["groups"] = {
 						i(16794),	-- Gripsteel Wristguards
 						i(16873),	-- Braidfur Gloves
 					},
@@ -547,7 +547,7 @@ _.Zones =
 						{ "i", 6253, 1 },	-- Leftwitch's Package
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(6793),	-- Auric Bracers
 						i(6794),	-- Stormfire Gauntlets
 					},
@@ -571,7 +571,7 @@ _.Zones =
 					["sourceQuest"] = 1439,	-- Search for Tyranis
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(9687),	-- Grappler's Belt
 						i(9698),	-- Gloves of Insight
 						i(9699),	-- Garrison Cloak
@@ -625,7 +625,7 @@ _.Zones =
 						{ "i", 6069, 6 },	-- Crudely Dried Meat
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						-- #if BEFORE MOP
 						i(3463, {	-- Silver Star [Classic] / Broken Silver Star [TBC]
 							["timeline"] = {
@@ -660,7 +660,7 @@ _.Zones =
 						{ "i", 6435, 15 },	-- Infused Burning Gem
 					},
 					["lvl"] = 25,
-					["g"] = {
+					["groups"] = {
 						{
 							["itemID"] = 6436,	-- Burning Gem
 							["coord"] = { 55, 26.7, DESOLACE },
@@ -718,7 +718,7 @@ _.Zones =
 						5760,	-- Lord Azrethoc
 					},
 					["lvl"] = 25,
-					["g"] = {
+					["groups"] = {
 						i(6746),	-- Basalt Buckler
 						i(6747),	-- Enforcer Pauldrons
 					},
@@ -756,7 +756,7 @@ _.Zones =
 						{ "i", 6245, 1 },	-- Karnitol's Satchel
 					},
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(6791),	-- Hellion Boots
 						i(6792),	-- Sanguine Pauldrons
 					},

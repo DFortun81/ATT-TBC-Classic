@@ -76,7 +76,7 @@ profession(LEATHERWORKING, {
 			["maps"] = { THUNDER_BLUFF },
 			["races"] = HORDE_ONLY,
 			["lvl"] = 5,
-			["g"] = {
+			["groups"] = {
 				i(5083),	-- Pattern: Kodo Hide Bag
 			},
 		}),
@@ -97,7 +97,7 @@ profession(LEATHERWORKING, {
 				{ "i", 9235, 1 },	-- Pratt's Letter
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8408),	-- Pattern: Wild Leather Cloak
 			},
 		}),
@@ -118,7 +118,7 @@ profession(LEATHERWORKING, {
 				{ "i", 9236, 1 },	-- Jangdor's Letter
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8408),	-- Pattern: Wild Leather Cloak
 			},
 		}),
@@ -134,7 +134,7 @@ profession(LEATHERWORKING, {
 				{ "i", 4239, 1 },	-- Embossed Leather Gloves
 			},
 			["lvl"] = 8,
-			["g"] = {
+			["groups"] = {
 				i(6710),	-- Pattern: Moonglow Vest
 			},
 		}),
@@ -205,7 +205,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 2 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8406),	-- Pattern: Wild Leather Boots
 			},
 		}),
@@ -222,7 +222,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 2 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8406),	-- Pattern: Wild Leather Boots
 			},
 		}),
@@ -239,7 +239,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 1 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8405),	-- Pattern: Wild Leather Helmet
 			},
 		}),
@@ -256,7 +256,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 1 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8405),	-- Pattern: Wild Leather Helmet
 			},
 		}),
@@ -273,7 +273,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 2 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8407),	-- Pattern: Wild Leather Leggings
 			},
 		}),
@@ -290,7 +290,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 2 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8407),	-- Pattern: Wild Leather Leggings
 			},
 		}),
@@ -306,7 +306,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 1 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8403),	-- Pattern: Wild Leather Shoulders
 			},
 		}),
@@ -322,7 +322,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 1 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8403),	-- Pattern: Wild Leather Shoulders
 			},
 		}),
@@ -339,7 +339,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 1 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8404),	-- Pattern: Wild Leather Vest
 			},
 		}),
@@ -356,7 +356,7 @@ profession(LEATHERWORKING, {
 				{ "i", 8153, 1 },	-- Wildvine
 			},
 			["lvl"] = 30,
-			["g"] = {
+			["groups"] = {
 				i(8404),	-- Pattern: Wild Leather Vest
 			},
 		}),

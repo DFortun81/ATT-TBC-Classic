@@ -9,16 +9,16 @@ _.Zones =
 				n(15293, {	-- Aendel Windspear
 					["coord"] = { 62.6, 49.8, SILITHUS },
 					["groups"] = {
-						un(PHASE_FIVE_CATCH_UP, i(22769)),	-- Pattern: Bramblewood Belt
-						un(PHASE_FIVE_CATCH_UP, i(22770)),	-- Pattern: Bramblewood Boots
-						un(PHASE_FIVE_CATCH_UP, i(22771)),	-- Pattern: Bramblewood Helm
-						un(PHASE_FOUR, i(20382)),	-- Pattern: Dreamscale Breastplate
-						un(PHASE_FOUR, i(20509)),	-- Pattern: Sandstalker Bracers
-						un(PHASE_FOUR, i(20511)),	-- Pattern: Sandstalker Breastplate
-						un(PHASE_FOUR, i(20510)),	-- Pattern: Sandstalker Gauntlets
-						un(PHASE_FOUR, i(20506)),	-- Pattern: Spitfire Bracers
-						un(PHASE_FOUR, i(20508)),	-- Pattern: Spitfire Breastplate
-						un(PHASE_FOUR, i(20507)),	-- Pattern: Spitfire Gauntlets
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22769)),	-- Pattern: Bramblewood Belt
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22770)),	-- Pattern: Bramblewood Boots
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22771)),	-- Pattern: Bramblewood Helm
+						applyclassicphase(PHASE_FOUR, i(20382)),	-- Pattern: Dreamscale Breastplate
+						applyclassicphase(PHASE_FOUR, i(20509)),	-- Pattern: Sandstalker Bracers
+						applyclassicphase(PHASE_FOUR, i(20511)),	-- Pattern: Sandstalker Breastplate
+						applyclassicphase(PHASE_FOUR, i(20510)),	-- Pattern: Sandstalker Gauntlets
+						applyclassicphase(PHASE_FOUR, i(20506)),	-- Pattern: Spitfire Bracers
+						applyclassicphase(PHASE_FOUR, i(20508)),	-- Pattern: Spitfire Breastplate
+						applyclassicphase(PHASE_FOUR, i(20507)),	-- Pattern: Spitfire Gauntlets
 					},
 				}),
 				n(15419, {	-- Kania <Enchanting Supplies>
@@ -41,22 +41,22 @@ _.Zones =
 					["coord"] = { 49.8, 36.4, SILITHUS },
 					["groups"] = {
 						applyclassicphase(TBC_PHASE_ONE, i(21952)),	-- Design: Emerald Crown of Destruction
-						un(PHASE_FIVE, i(22310)),	-- Pattern: Cenarion Herb Bag
-						un(PHASE_FIVE_CATCH_UP, i(22683)),	-- Pattern: Gaea's Embrace
-						un(PHASE_FIVE, i(22312)),	-- Pattern: Satchel of Cenarius
-						un(PHASE_FIVE_CATCH_UP, i(22773)),	-- Pattern: Sylvan Crown
-						un(PHASE_FIVE_CATCH_UP, i(22772)),	-- Pattern: Sylvan Shoulders
-						un(PHASE_FIVE_CATCH_UP, i(22774)),	-- Pattern: Sylvan Vest
+						applyclassicphase(PHASE_FIVE, i(22310)),	-- Pattern: Cenarion Herb Bag
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22683)),	-- Pattern: Gaea's Embrace
+						applyclassicphase(PHASE_FIVE, i(22312)),	-- Pattern: Satchel of Cenarius
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22773)),	-- Pattern: Sylvan Crown
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22772)),	-- Pattern: Sylvan Shoulders
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22774)),	-- Pattern: Sylvan Vest
 					},
 				}),
 				n(15176, {	-- Vargus <Blacksmith>
 					["coord"] = { 51.2, 38.8, SILITHUS },
 					["groups"] = {
-						un(PHASE_FIVE, i(22209)),	-- Plans: Heavy Obsidian Belt
-						un(PHASE_FIVE_CATCH_UP, i(22768)),	-- Plans: Ironvine Belt
-						un(PHASE_FIVE_CATCH_UP, i(22766)),	-- Plans: Ironvine Breastplate
-						un(PHASE_FIVE_CATCH_UP, i(22767)),	-- Plans: Ironvine Gloves
-						un(PHASE_FIVE, i(22214)),	-- Plans: Light Obsidian Belt
+						applyclassicphase(PHASE_FIVE, i(22209)),	-- Plans: Heavy Obsidian Belt
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22768)),	-- Plans: Ironvine Belt
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22766)),	-- Plans: Ironvine Breastplate
+						applyclassicphase(PHASE_FIVE_CATCH_UP, i(22767)),	-- Plans: Ironvine Gloves
+						applyclassicphase(PHASE_FIVE, i(22214)),	-- Plans: Light Obsidian Belt
 					},
 				}),
 				n(12956, {	-- Zannok Hidepiercer <Leatherworking Supplies>

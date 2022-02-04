@@ -1144,7 +1144,7 @@ e = function(id, t)										-- Create an ENCOUNTER Object
 				return t;
 			end
 		else
-			return { ["npcID"] = -1, ["g"] = t };
+			return { ["npcID"] = -1, ["groups"] = t };
 		end
 	end
 	-- #else
@@ -1202,7 +1202,7 @@ inst = function(id, t)									-- Create an INSTANT Object
 				return t;
 			end
 		else
-			return { ["npcID"] = -1, ["g"] = t };
+			return { ["npcID"] = -1, ["groups"] = t };
 		end
 		-- #endif
 		return t;

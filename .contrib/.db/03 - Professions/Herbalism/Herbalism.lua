@@ -10,7 +10,7 @@ profession(HERBALISM, {
 				{ "i", 5056, 8 },	-- Root Sample
 			},
 			["lvl"] = 9,
-			["g"] = {
+			["groups"] = {
 				i(5341),	-- Spore-Covered Tunic
 			},
 		}),

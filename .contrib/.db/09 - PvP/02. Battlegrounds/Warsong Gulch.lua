@@ -333,7 +333,7 @@ _.PvP =
 					["maps"] = { THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(19153),	-- Outrider Advanced Care Package
 					},
 				}),
@@ -344,7 +344,7 @@ _.PvP =
 					["maps"] = { THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = { 25, 34 },
-					["g"] = {
+					["groups"] = {
 						i(19154),	-- Outrider Basic Care Package
 					},
 				}),
@@ -355,7 +355,7 @@ _.PvP =
 					["maps"] = { THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = { 35, 44 },
-					["g"] = {
+					["groups"] = {
 						i(19155),	-- Outrider Standard Care Package
 					},
 				}),
@@ -366,7 +366,7 @@ _.PvP =
 					["maps"] = { ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 45,
-					["g"] = {
+					["groups"] = {
 						i(19152),	-- Sentinel Advanced Care Package
 					},
 				}),
@@ -377,7 +377,7 @@ _.PvP =
 					["maps"] = { ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = { 25, 34 },
-					["g"] = {
+					["groups"] = {
 						i(19150),	-- Sentinel Basic Care Package
 					},
 				}),
@@ -388,7 +388,7 @@ _.PvP =
 					["maps"] = { ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = { 35, 44 },
-					["g"] = {
+					["groups"] = {
 						i(19151),	-- Sentinel Standard Care Package
 					},
 				}),
@@ -453,17 +453,17 @@ _.PvP =
 						i(19584),	-- Windtalker's Wristguards
 						
 						-- Not Available Until Phase 6
-						un(PHASE_SIX, i(21567)),	-- Rune of Duty
-						un(PHASE_SIX, i(21568)),	-- Rune of Duty
-						un(PHASE_SIX, i(21565)),	-- Rune of Perfection
-						un(PHASE_SIX, i(21566)),	-- Rune of Perfection
-						un(PHASE_SIX, i(22673)),	-- Outrider's Chain Leggings
+						applyclassicphase(PHASE_SIX, i(21567)),	-- Rune of Duty
+						applyclassicphase(PHASE_SIX, i(21568)),	-- Rune of Duty
+						applyclassicphase(PHASE_SIX, i(21565)),	-- Rune of Perfection
+						applyclassicphase(PHASE_SIX, i(21566)),	-- Rune of Perfection
+						applyclassicphase(PHASE_SIX, i(22673)),	-- Outrider's Chain Leggings
 						un(TBC_PHASE_ONE, i(30498)),	-- Outrider's Lamellar Legguards
-						un(PHASE_SIX, i(22740)),	-- Outrider's Leather Pants
-						un(PHASE_SIX, i(22741)),	-- Outrider's Lizardhide Pants
-						un(PHASE_SIX, i(22676)),	-- Outrider's Mail Leggings
-						un(PHASE_SIX, i(22651)),	-- Outrider's Plate Legguards
-						un(PHASE_SIX, i(22747)),	-- Outrider's Silk Leggings
+						applyclassicphase(PHASE_SIX, i(22740)),	-- Outrider's Leather Pants
+						applyclassicphase(PHASE_SIX, i(22741)),	-- Outrider's Lizardhide Pants
+						applyclassicphase(PHASE_SIX, i(22676)),	-- Outrider's Mail Leggings
+						applyclassicphase(PHASE_SIX, i(22651)),	-- Outrider's Plate Legguards
+						applyclassicphase(PHASE_SIX, i(22747)),	-- Outrider's Silk Leggings
 					},
 				}),
 				n(14753, {	-- Illiyana Moonblaze <Silverwing Supply Officer>
@@ -525,17 +525,17 @@ _.PvP =
 						i(19584),	-- Windtalker's Wristguards
 						
 						-- Not Available Until Phase 6
-						un(PHASE_SIX, i(21567)),	-- Rune of Duty
-						un(PHASE_SIX, i(21568)),	-- Rune of Duty
-						un(PHASE_SIX, i(21565)),	-- Rune of Perfection
-						un(PHASE_SIX, i(21566)),	-- Rune of Perfection
-						un(PHASE_SIX, i(22748)),	-- Sentinel's Chain Leggings
+						applyclassicphase(PHASE_SIX, i(21567)),	-- Rune of Duty
+						applyclassicphase(PHASE_SIX, i(21568)),	-- Rune of Duty
+						applyclassicphase(PHASE_SIX, i(21565)),	-- Rune of Perfection
+						applyclassicphase(PHASE_SIX, i(21566)),	-- Rune of Perfection
+						applyclassicphase(PHASE_SIX, i(22748)),	-- Sentinel's Chain Leggings
 						un(TBC_PHASE_ONE, i(30497)),	-- Sentinel's Mail Leggings
-						un(PHASE_SIX, i(22753)),	-- Sentinel's Lamellar Legguards
-						un(PHASE_SIX, i(22749)),	-- Sentinel's Leather Pants
-						un(PHASE_SIX, i(22750)),	-- Sentinel's Lizardhide Pants
-						un(PHASE_SIX, i(22672)),	-- Sentinel's Plate Legguards
-						un(PHASE_SIX, i(22752)),	-- Sentinel's Silk Leggings
+						applyclassicphase(PHASE_SIX, i(22753)),	-- Sentinel's Lamellar Legguards
+						applyclassicphase(PHASE_SIX, i(22749)),	-- Sentinel's Leather Pants
+						applyclassicphase(PHASE_SIX, i(22750)),	-- Sentinel's Lizardhide Pants
+						applyclassicphase(PHASE_SIX, i(22672)),	-- Sentinel's Plate Legguards
+						applyclassicphase(PHASE_SIX, i(22752)),	-- Sentinel's Silk Leggings
 					},
 				}),
 			}),

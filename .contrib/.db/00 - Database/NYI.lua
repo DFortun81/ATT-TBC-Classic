@@ -66,7 +66,7 @@ _.NeverImplemented =
 		["cost"] = {
 			{ "i", 19804, 1 },	-- Pale Ghoulfish
 		},
-		["g"] = {
+		["groups"] = {
 			un(NEVER_IMPLEMENTED, i(7996)),	-- Worn Fishing Hat
 		},
 	})),

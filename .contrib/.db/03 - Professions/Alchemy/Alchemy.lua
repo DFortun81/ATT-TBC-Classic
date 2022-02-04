@@ -50,7 +50,7 @@ profession(ALCHEMY, {
 					["name"] = "Greater Arcane Protection Potion",
 					["recipeID"] = 17577
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Greater Dreamless Sleep Potion",
 					["recipeID"] = 24366,
 				}),
@@ -114,11 +114,11 @@ profession(ALCHEMY, {
 					["name"] = "Limited Invulnerability Potion",
 					["recipeID"] = 3175
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Living Action Potion",
 					["recipeID"] = 24367,
 				}),
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Mageblood Potion",
 					["recipeID"] = 24365,
 				}),
@@ -138,7 +138,7 @@ profession(ALCHEMY, {
 					["name"] = "Major Rejuvenation Potion",
 					["recipeID"] = 22732
 				},
-				un(PHASE_FOUR, {
+				applyclassicphase(PHASE_FOUR, {
 					["name"] = "Major Troll's Blood Potion",
 					["recipeID"] = 24368,
 				}),

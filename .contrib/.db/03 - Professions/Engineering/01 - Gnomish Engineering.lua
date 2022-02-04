@@ -9,7 +9,7 @@ profession(ENGINEERING, {
 			{
 				["name"] = "Devices",
 				["categoryID"] = 188,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Gnomish Alarm-o-Bot",
 						["recipeID"] = 23096
@@ -78,7 +78,7 @@ profession(ENGINEERING, {
 			{
 				["name"] = "Goggles",
 				["categoryID"] = 185,
-				["g"] = {
+				["groups"] = {
 					applyclassicphase(TBC_PHASE_ONE, {
 						["name"] = "Gnomish Battle Goggles",
 						["recipeID"] = 30575
@@ -96,7 +96,7 @@ profession(ENGINEERING, {
 			{
 				["name"] = "Parts",
 				["categoryID"] = 183,
-				["g"] = {
+				["groups"] = {
 					{
 						["name"] = "Inlaid Mithril Cylinder Plans",
 						["recipeID"] = 12895,
@@ -116,7 +116,7 @@ profession(ENGINEERING, {
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(10790),	-- Gnome Engineer Membership Card
 					},
 				}),
@@ -132,7 +132,7 @@ profession(ENGINEERING, {
 					["timeline"] = { "removed 4.0.3.2000" },
 					["repeatable"] = true,
 					["lvl"] = 30,
-					["g"] = {
+					["groups"] = {
 						i(10790),	-- Gnome Engineer Membership Card
 					},
 				}),

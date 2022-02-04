@@ -51,7 +51,7 @@ profession(FISHING, {
 				{ "i", 12238, 6 },	-- Darkshore Grouper
 			},
 			["lvl"] = 10,
-			["g"] = {
+			["groups"] = {
 				i(12225),	-- Blump Family Fishing Pole
 			},
 		}),
