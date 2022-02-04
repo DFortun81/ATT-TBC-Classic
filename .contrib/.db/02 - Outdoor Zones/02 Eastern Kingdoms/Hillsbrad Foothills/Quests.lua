@@ -476,7 +476,6 @@ _.Zones =
 				q(495, {	-- The Crown of Will
 					["qg"] = 2227,	-- Sharlindra
 					["coord"] = { 57.60, 93.84, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 34,

@@ -22,18 +22,6 @@ _.PvP =
 						{ 61.8, 83.8, ASHENVALE },
 						-- #endif
 					},
-					["maps"] = {
-						DARNASSUS,
-						IRONFORGE,
-						STORMWIND_CITY,
-						-- #if AFTER TBC
-						SHATTRATH_CITY,
-						-- #else
-						ALTERAC_MOUNTAINS,
-						ARATHI_HIGHLANDS,
-						ASHENVALE,
-						-- #endif
-					},
 					["races"] = ALLIANCE_ONLY,
 					-- #if AFTER TBC
 					["cost"] = {
@@ -70,18 +58,6 @@ _.PvP =
 						{ 39.4, 82.2, ALTERAC_MOUNTAINS },
 						{ 45.6, 45.8, ARATHI_HIGHLANDS },
 						{ 61.8, 83.8, ASHENVALE },
-						-- #endif
-					},
-					["maps"] = {
-						DARNASSUS,
-						IRONFORGE,
-						STORMWIND_CITY,
-						-- #if AFTER TBC
-						SHATTRATH_CITY,
-						-- #else
-						ALTERAC_MOUNTAINS,
-						ARATHI_HIGHLANDS,
-						ASHENVALE,
 						-- #endif
 					},
 					["races"] = ALLIANCE_ONLY,
@@ -675,7 +651,6 @@ _.PvP =
 				}),
 				n(12805, {	-- Officer Areyn <Accessories Quartermaster>
 					["coord"] = { 73.8, 53.4, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["groups"] = {
 						i(18664),	-- A Treatise on Military Ranks
 						i(15196),	-- Private's Tabard
@@ -762,18 +737,6 @@ _.PvP =
 						{ 46.7, 8.4, THE_BARRENS },
 						-- #endif
 					},
-					["maps"] = {
-						ORGRIMMAR,
-						THUNDER_BLUFF,
-						UNDERCITY,
-						-- #if AFTER TBC
-						SHATTRATH_CITY,
-						-- #else
-						ALTERAC_MOUNTAINS,
-						ARATHI_HIGHLANDS,
-						THE_BARRENS,
-						-- #endif
-					},
 					["races"] = HORDE_ONLY,
 					-- #if AFTER TBC
 					["cost"] = {
@@ -810,18 +773,6 @@ _.PvP =
 						{ 62.6, 59.1, ALTERAC_MOUNTAINS },
 						{ 73.5, 29.7, ARATHI_HIGHLANDS },
 						{ 46.7, 8.4, THE_BARRENS },
-						-- #endif
-					},
-					["maps"] = {
-						ORGRIMMAR,
-						THUNDER_BLUFF,
-						UNDERCITY,
-						-- #if AFTER TBC
-						SHATTRATH_CITY,
-						-- #else
-						ALTERAC_MOUNTAINS,
-						ARATHI_HIGHLANDS,
-						THE_BARRENS,
 						-- #endif
 					},
 					["races"] = HORDE_ONLY,
@@ -1388,7 +1339,6 @@ _.PvP =
 				}),
 				n(12799, {	-- Sergeant Ba'sha <Accessories Quartermaster>
 					["coord"] = { 41.6, 68.6, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["groups"] = {
 						i(15197),	-- Scout's Tabard
 						i(18834, {	-- Insignia of the Horde

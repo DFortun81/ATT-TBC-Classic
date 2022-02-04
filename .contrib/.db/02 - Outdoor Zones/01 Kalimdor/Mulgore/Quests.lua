@@ -310,7 +310,6 @@ _.Zones =
 					["qg"] = 3057,	-- Cairne Bloodhoof <High Chieftain>
 					["sourceQuest"] = 775,	-- Journey into Thunder Bluff
 					["coord"] = { 59.8, 51.6, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 4841, 1 },	-- Horn of Arra'chea
@@ -484,7 +483,6 @@ _.Zones =
 				q(6065, {	-- The Hunter's Path
 					["qg"] = 3038,	-- Kary Thunderhorn <Hunter Trainer>
 					["coord"] = { 58.4, 88.0, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = { TAUREN },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,
@@ -501,7 +499,6 @@ _.Zones =
 				q(6067, {	-- The Hunter's Path
 					["qg"] = 3171,	-- Thotar <Hunter Trainer>
 					["coord"] = { 51.9, 43.5, DUROTAR },
-					["maps"] = { DUROTAR },
 					["races"] = { TAUREN },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,

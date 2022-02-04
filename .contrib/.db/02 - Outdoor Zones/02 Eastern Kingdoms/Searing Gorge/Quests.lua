@@ -27,7 +27,6 @@ _.Zones =
 					["qg"] = 8256,	-- Curator Thorius
 					["sourceQuest"] = 3368,	-- Suntara Stones (2/2)
 					["coord"] = { 71.4, 16.2, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 40,
 				}),

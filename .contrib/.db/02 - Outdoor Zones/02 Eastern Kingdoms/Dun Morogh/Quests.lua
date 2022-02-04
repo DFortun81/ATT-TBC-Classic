@@ -487,7 +487,6 @@ _.Zones =
 						{ 34.8, 47, LOCH_MODAN },
 						{ 72.4, 93.6, IRONFORGE },
 					},
-					["maps"] = { IRONFORGE, LOCH_MODAN },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 20,
@@ -619,7 +618,6 @@ _.Zones =
 				q(6074, {	-- The Hunter's Path
 					["qg"] = 5116,	-- Olmin Burningbeard <Hunter Trainer>
 					["coord"] = { 70, 84.6, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = { DWARF },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,
@@ -636,7 +634,6 @@ _.Zones =
 				q(6076, {	-- The Hunter's Path
 					["qg"] = 5515,	-- Einris Brightspear <Hunter Trainer>
 					["coord"] = { 61.6, 15.4, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = { DWARF },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,

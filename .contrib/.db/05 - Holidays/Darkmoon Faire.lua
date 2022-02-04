@@ -739,7 +739,6 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 				q(7905, {	-- The Darkmoon Faire
 					["qg"] = 14842,	-- Melnan Darkstone <Darkmoon Faire Barker>
 					["coord"] = { 29.2, 68.4, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 19338, 1 },	-- Free Ticket Voucher
@@ -752,7 +751,6 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 				q(7926, {	-- The Darkmoon Faire
 					["qg"] = 14843,	-- Kruban Darkblade
 					["coord"] = { 52.2, 66, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 19338, 1 },	-- Free Ticket Voucher

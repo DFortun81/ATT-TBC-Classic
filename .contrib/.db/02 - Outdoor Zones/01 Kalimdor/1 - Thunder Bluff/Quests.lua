@@ -52,7 +52,6 @@ _.Zones =
 				q(1066, {	-- Blood of Innocents
 					["qg"] = 2216,	-- Apothecary Lydon
 					["coord"] = { 61.4, 19.2, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 5620, 5 },	-- Vial of Innocent Blood
@@ -212,7 +211,6 @@ _.Zones =
 				q(1197, {	-- The Sacred Flame
 					["qg"] = 4722,	-- Rau Cliffrunner
 					["coord"] = { 46.13, 51.69, THOUSAND_NEEDLES },
-					["maps"] = { THOUSAND_NEEDLES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 5868, 1 },	-- Filled Etched Phial

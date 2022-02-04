@@ -27,7 +27,6 @@ _.Zones =
 				q(522, {	-- Assassin's Contract
 					["provider"] = { "i", 3668 },	-- Assassin's Contract
 					["coord"] = { 50.8, 58.8, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -35,14 +34,12 @@ _.Zones =
 					["qg"] = 2276,	-- Magistrate Henry Maleb
 					["sourceQuest"] = 522,	-- Assassin's Contract
 					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
 				q(500, {	-- Crushridge Bounty
 					["qg"] = 2263,	-- Marshal Redpath
 					["coord"] = { 49.6, 58.6, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 2843, 9 },	-- Dirty Knucklebones
@@ -52,7 +49,6 @@ _.Zones =
 				q(504, {	-- Crushridge Warmongers
 					["qg"] = 2263,	-- Marshal Redpath
 					["coord"] = { 49.6, 58.6, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -77,7 +73,6 @@ _.Zones =
 					["qg"] = 2276,	-- Magistrate Henry Maleb
 					["sourceQuest"] = 525,	-- Further Mysteries
 					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 3672, 1 },	-- Head of Nagaz
@@ -96,7 +91,6 @@ _.Zones =
 					["qg"] = 8379,	-- Archmage Xylem
 					["sourceQuest"] = 8234,	-- Sealed Azure Bag
 					["coord"] = { 29.6, 40.6, AZSHARA },
-					["maps"] = { AZSHARA },
 					["classes"] = { ROGUE },
 					["cost"] = {
 						{ "i", 20023, 10 },	-- Encoded Fragment
@@ -152,7 +146,7 @@ _.Zones =
 					["qg"] = 1356,	-- Prospector Stormpike
 					["sourceQuest"] = 514,	-- Letter to Stormpike
 					["coord"] = { 74.4, 12, IRONFORGE },
-					["maps"] = { IRONFORGE, HILLSBRAD_FOOTHILLS },
+					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -179,7 +173,6 @@ _.Zones =
 					["qg"] = 2277,	-- Loremaster Dibbs
 					["sourceQuest"] = 511,	-- Encrypted Letter
 					["coord"] = { 50.4, 57, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 3521, 1 },	-- Cleverly Encrypted Letter
@@ -190,7 +183,7 @@ _.Zones =
 					["qg"] = 2276,	-- Magistrate Henry Maleb
 					["sourceQuest"] = 510,	-- Foreboding Plans
 					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS, ALTERAC_MOUNTAINS },
+					["maps"] = { ALTERAC_MOUNTAINS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 3505, 7 },	-- Alterac Signet Ring
@@ -244,14 +237,12 @@ _.Zones =
 					["qg"] = 2277,	-- Loremaster Dibbs
 					["sourceQuest"] = 551,	-- The Ensorcelled Parchment
 					["coord"] = { 50.4, 57.0, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
 				q(505, {	-- Syndicate Assassins
 					["qg"] = 2276,	-- Magistrate Henry Maleb
 					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 26,
 					["groups"] = {

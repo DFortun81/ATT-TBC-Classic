@@ -488,7 +488,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 8392,	-- Pilot Xiggs Fuselighter
 					["sourceQuest"] = 3449,	-- Arcane Runes
 					["coord"] = { 77.8, 91.4, AZSHARA },
-					["maps"] = { AZSHARA },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 10445, 1 },	-- Drawing Kit

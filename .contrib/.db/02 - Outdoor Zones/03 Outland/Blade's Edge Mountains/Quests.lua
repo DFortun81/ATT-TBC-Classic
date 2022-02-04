@@ -664,7 +664,6 @@ _.Zones =
 					["qg"] = 22940,	-- Grok
 					["sourceQuest"] = 10984,	-- Speak with the Ogre
 					["coord"] = { 65.0, 68.4, SHATTRATH_CITY },
-					["maps"] = { SHATTRATH_CITY },
 					["isBreadcrumb"] = true,
 					["lvl"] = lvlsquish(70, 20, 70),
 				}),
@@ -983,7 +982,6 @@ _.Zones =
 					["qg"] = 20448,	-- Commander Ameer
 					["sourceQuest"] = 10973,	-- A Thousand Worlds
 					["coord"] = { 59.5, 32.4, NETHERSTORM },
-					["maps"] = { NETHERSTORM },
 					["groups"] = {
 						i(32064),	-- Protectorate Treasure Cache
 					},
@@ -1170,7 +1168,6 @@ _.Zones =
 				q(9795,  {	-- The Ogre Threat
 					["qg"] = 18013,	-- Shadow Hunter Denjai
 					["coord"] = { 30.6, 50.8, ZANGARMARSH },
-					["maps"] = { ZANGARMARSH },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = lvlsquish(64, 10, 64),

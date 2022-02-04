@@ -645,7 +645,6 @@ _.Zones =
 						{ 49.01, 18.32, UNDERCITY },
 						{ 35.6, 87.6, ORGRIMMAR },
 					},
-					["maps"] = { DUROTAR, ORGRIMMAR },
 					["altQuests"] = {
 						5659,	-- Touch of Weakness (NYI)
 						5660,	-- Touch of Weakness (Durotar)
@@ -664,7 +663,6 @@ _.Zones =
 					["qg"] = 5878,	-- Thun'grim Firegaze
 					["sourceQuest"] = 18382,	-- Brutal Armor
 					["coord"] = { 257.2, 30.2, THE_BARRENS },
-					["maps"] = { THE_BARRENS },
 					["classes"] = { WARRIOR },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 20,

@@ -110,7 +110,6 @@ profession(ENGINEERING, {
 					["description"] = "Requires 200 Engineering to start this quest.",
 					["coord"] = { 28.2, 76.2, STRANGLETHORN_VALE },
 					["requireSkill"] = ENGINEERING,
-					["maps"] = { STRANGLETHORN_VALE },
 					["cost"] = { { "g", 20000 } },	-- 2g
 					["timeline"] = { "removed 4.0.3.2000" },
 					["races"] = HORDE_ONLY,
@@ -126,7 +125,6 @@ profession(ENGINEERING, {
 					["description"] = "Requires 200 Engineering to start this quest.",
 					["coord"] = { 69.8, 50.2, IRONFORGE },
 					["requireSkill"] = ENGINEERING,
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = { { "g", 20000 } },	-- 2g
 					["timeline"] = { "removed 4.0.3.2000" },

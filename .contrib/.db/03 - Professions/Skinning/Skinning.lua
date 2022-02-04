@@ -4,7 +4,6 @@ profession(SKINNING, {
 			["qg"] = 3050,	-- Veren Tallstrider
 			["requireSkill"] = SKINNING,
 			["coord"] = { 44.0, 44.6, THUNDER_BLUFF },
-			["maps"] = { THUNDER_BLUFF },
 			["cost"] = {
 				{ "i", 2318, 12 },	-- Light Leather
 			},

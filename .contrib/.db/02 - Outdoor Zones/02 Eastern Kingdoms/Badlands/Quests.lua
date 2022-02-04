@@ -57,7 +57,6 @@ _.Zones =
 						{ "i", 4621, 1 },	-- Ambassador Infernus' Bracer
 					},
 					["coord"] = { 77.5, 11.8, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 					["groups"] = {
@@ -161,7 +160,6 @@ _.Zones =
 						{ 50.8, 5.6, IRONFORGE },
 						{ 53.7, 54.5, UNDERCITY },
 					},
-					["maps"] = { IRONFORGE, UNDERCITY },
 					["lvl"] = 30,
 					["cost"] = {
 						{ "i", 4647, 1 },	-- Yagyin's Digest
@@ -231,7 +229,6 @@ _.Zones =
 					["sourceQuest"] = 724,	-- Prospect of Faith
 					["qg"] = 2916,	-- Historian Karnik
 					["coord"] = { 77.5, 11.8, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 				}),
@@ -239,7 +236,6 @@ _.Zones =
 					["sourceQuest"] = 725,	-- Passing Word of a Threat
 					["qg"] = 2918,	-- Advisor Belgrum
 					["coord"] = { 77.3, 9.7, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 				}),
@@ -290,7 +286,7 @@ _.Zones =
 					["questID"] = 1360,	-- Reclaimed Treasures
 					["qg"] = 6294,	-- Krom Stoutarm
 					["coord"] = { 74.2, 9.4, IRONFORGE },
-					["maps"] = { IRONFORGE, LOCH_MODAN },
+					["maps"] = { LOCH_MODAN },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 33,
 					["groups"] = {
@@ -306,7 +302,7 @@ _.Zones =
 					["questID"] = 2342,	-- Reclaimed Treasures
 					["qg"] = 5651,	-- Patrick Garrett
 					["coord"] = { 62.3, 48.6, UNDERCITY },
-					["maps"] = { UNDERCITY, LOCH_MODAN },
+					["maps"] = { LOCH_MODAN },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 33,
 					["groups"] = {
@@ -481,7 +477,7 @@ _.Zones =
 						{ 50.8, 5.6, IRONFORGE },
 						{ 53.7, 54.5, UNDERCITY },
 					},
-					["maps"] = { IRONFORGE, UNDERCITY, ALTERAC_MOUNTAINS, DUSTWALLOW_MARSH, STRANGLETHORN_VALE },
+					["maps"] = { ALTERAC_MOUNTAINS, DUSTWALLOW_MARSH, STRANGLETHORN_VALE },
 					["cost"] = {
 						{ "i", 4641, 1 },	-- Hand of Dagun
 						{ "i", 4646, 1 },	-- Star of Xil'yeh

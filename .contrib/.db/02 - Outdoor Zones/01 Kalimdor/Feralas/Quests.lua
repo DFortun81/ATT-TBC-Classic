@@ -62,7 +62,6 @@ _.Zones =
 				q(2981, {	-- A Threat in Feralas
 					["qg"] = 4485,	-- Belgrom Rockmaul
 					["coord"] = { 75, 34.2, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["isBreadcrumb"] = true,
 					["races"] = HORDE_ONLY,
 					["lvl"] = 38,
@@ -337,7 +336,6 @@ _.Zones =
 				q(3787, {	-- Jonespyre's Request
 					["qg"] = 5566,	-- Tannysa
 					["coord"] = { 44.8, 77, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 47,
@@ -462,7 +460,6 @@ _.Zones =
 					["qg"] = 3216,	-- Neeru Fireblade
 					["sourceQuest"] = 3121,	-- A Strange Request
 					["coord"] = { 49.6, 50.6, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 9628, 1 },	-- Neeru's Herb Pouch

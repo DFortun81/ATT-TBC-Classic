@@ -310,14 +310,14 @@ _.Zones =
 					["provider"] = { "o", 2553 },	-- A Soggy Scroll
 					["sourceQuest"] = 624,	-- Cortello's Riddle (1/3)
 					["coord"] = { 22.8, 48.1, SWAMP_OF_SORROWS },
-					["maps"] = { DUSTWALLOW_MARSH, SWAMP_OF_SORROWS },
+					["maps"] = { DUSTWALLOW_MARSH },
 					["lvl"] = 35,
 				}),
 				q(626, {	-- Cortello's Riddle (3/3)
 					["provider"] = { "o", 255 },	-- Musty Scroll
 					["sourceQuest"] = 625,	-- Cortello's Riddle (2/3)
 					["coord"] = { 31.1, 66.1, DUSTWALLOW_MARSH },
-					["maps"] = { DUSTWALLOW_MARSH, THE_HINTERLANDS },
+					["maps"] = { THE_HINTERLANDS },
 					["lvl"] = 35,
 					["groups"] = {
 						{
@@ -601,7 +601,6 @@ _.Zones =
 					["qg"] = 2465,	-- Far Seer Mok'thardin
 					["sourceQuest"] = 571,	-- Mok'thardin's Enchantment
 					["coord"] = { 32, 29.2, STRANGLETHORN_VALE },
-					["maps"] = { STRANGLETHORN_VALE },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 737, 1 },	-- Holy Spring Water
@@ -768,7 +767,6 @@ _.Zones =
 					["qg"] = 4047,	-- Zor Lonetree
 					["sourceQuest"] = 1262,	-- Report to Zor
 					["coord"] = { 39, 38, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {

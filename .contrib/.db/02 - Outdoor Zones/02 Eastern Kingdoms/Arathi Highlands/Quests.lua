@@ -180,7 +180,6 @@ _.Zones =
 				q(690, {	-- Malin's Request
 					["qg"] = 2708,	-- Archmage Malin
 					["coord"] = { 39.8, 81.2, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 30,
@@ -324,7 +323,6 @@ _.Zones =
 					["qg"] = 2785,	-- Theldurin the Lost
 					["sourceQuest"] = 692,	-- The Lost Fragments
 					["coord"] = { 51.4, 76.8, BADLANDS },
-					["maps"] = { BADLANDS },
 					["cost"] = {
 						{ "i", 4472, 1 },	-- Scroll of Myzrael
 						{ "i", 4473, 1 },	-- Eldritch Shackles
@@ -381,7 +379,6 @@ _.Zones =
 					["qg"] = 2487,	-- Fleet Master Seahorn <Blackwater Raiders>
 					["sourceQuest"] = 669,	-- Sunken Treasure (4/5)
 					["coord"] = { 27.2, 77.0, STRANGLETHORN_VALE },
-					["maps"] = { STRANGLETHORN_VALE },
 					["cost"] = {
 						{ "i", 4494, 1 },	-- Seahorn's Sealed Letter
 					},
@@ -433,7 +430,7 @@ _.Zones =
 						{ 74.4, 35.6, ARATHI_HIGHLANDS },
 						{ 50.6, 6.2, IRONFORGE },
 					},
-					["maps"] = { IRONFORGE, BADLANDS },
+					["maps"] = { BADLANDS },
 					["lvl"] = 30,
 				}),
 				q(694, {	-- Trelane's Defenses

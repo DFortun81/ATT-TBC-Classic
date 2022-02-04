@@ -38,17 +38,6 @@ _.Zones =
 						{ 55.6, 82.3, THE_EXODAR },
 						-- #endif
 					},
-					["maps"] = {
-						DARNASSUS,
-						ORGRIMMAR,
-						THUNDER_BLUFF,
-						IRONFORGE,
-						STORMWIND_CITY,
-						UNDERCITY,
-						-- #if AFTER TBC
-						THE_EXODAR,
-						-- #endif
-					},
 					["classes"] = { WARRIOR },
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -197,7 +186,6 @@ _.Zones =
 				q(1363, {	-- Mazen's Behest (1/2)
 					["qg"] = 338,	-- Mazen Mac'Nadir
 					["coord"] = { 41.4, 64.2, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 37,
 				}),
@@ -205,7 +193,6 @@ _.Zones =
 					["qg"] = 5386,	-- Acolyte Dellis
 					["sourceQuest"] = 1363,	-- Mazen's Behest (1/2)
 					["coord"] = { 40.8, 64, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["cost"] = {
 						{ "i", 6065, 1 },	-- Khadgar's Essays on Dimensional Convergence
 					},
@@ -273,7 +260,6 @@ _.Zones =
 					["qg"] = 5598,	-- Atal'ai Exile
 					["sourceQuest"] = 1429,	-- The Atal'ai Exile
 					["coord"] = { 33.6, 75.2, THE_HINTERLANDS },
-					["maps"] = { THE_HINTERLANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 38,
 				}),

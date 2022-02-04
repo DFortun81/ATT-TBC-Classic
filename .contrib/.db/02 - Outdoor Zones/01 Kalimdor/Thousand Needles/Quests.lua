@@ -144,14 +144,12 @@ _.Zones =
 					["qg"] = 4631,	-- Wharfmaster Lozgil
 					["sourceQuest"] = 1180,	-- Goblin Sponsorship
 					["coord"] = { 26.3, 73.6, STRANGLETHORN_VALE },
-					["maps"] = { STRANGLETHORN_VALE },
 					["lvl"] = 29,
 				}),
 				q(1182, {	-- Goblin Sponsorship
 					["qg"] = 2496,	-- Baron Revilgaz
 					["sourceQuest"] = 1181,	-- Goblin Sponsorship
 					["coord"] = { 27.2, 76.9, STRANGLETHORN_VALE },
-					["maps"] = { STRANGLETHORN_VALE },
 					["cost"] = {
 						{ "i", 5852, 1 },	-- Fuel Regulator Blueprints
 					},
@@ -175,7 +173,6 @@ _.Zones =
 					["qg"] = 2496,	-- Baron Revilgaz
 					["sourceQuest"] = 1182,	-- Goblin Sponsorship
 					["coord"] = { 27.2, 76.9, STRANGLETHORN_VALE },
-					["maps"] = { STRANGLETHORN_VALE },
 					["cost"] = {
 						{ "i", 5852, 1 },	-- Fuel Regulator Blueprints
 					},
@@ -450,7 +447,6 @@ _.Zones =
 				q(1179, {	-- The Brassbolts Brothers
 					["qg"] = 2092,	-- Pilot Longbeard
 					["coord"] = { 72.4, 93.6, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 5849, 1 },	-- Crate of Crash Helmets
@@ -460,7 +456,6 @@ _.Zones =
 				q(2769, {	-- The Brassbolts Brothers
 					["qg"] = 6169,	-- Klockmort Spannerspan
 					["coord"] = { 68.2, 46.2, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 40,
@@ -533,7 +528,6 @@ _.Zones =
 					["qg"] = 2498,	-- Crank Fizzlebub
 					["sourceQuest"] = 1118,	-- Back to Booty Bay
 					["coord"] = { 27.1, 77.2, STRANGLETHORN_VALE },
-					["maps"] = { STRANGLETHORN_VALE },
 					["lvl"] = 35,
 				}),
 			}),

@@ -9,7 +9,6 @@ _.Zones =
 				q(1431, {	-- Alliance Relations (1/4)
 					["qg"] = 5639,	-- Craven Drok
 					["coord"] = { 49.8, 47.8, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -17,7 +16,6 @@ _.Zones =
 					["qg"] = 5640,	-- Keldran
 					["sourceQuest"] = 1431,	-- Alliance Relations (1/4)
 					["coord"] = { 22.4, 52.8, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -118,7 +116,6 @@ _.Zones =
 				q(6141, {	-- Brother Anton
 					["qg"] = 12336,	-- Brother Crowley
 					["coord"] = { 42.4, 24.4, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 34,
@@ -500,7 +497,6 @@ _.Zones =
 				q(1453, {	-- Reclaimers' Business in Desolace
 					["qg"] = 5637,	-- Roetten Stonehammer
 					["coord"] = { 69.6, 21, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -561,7 +557,7 @@ _.Zones =
 						{ 63.24, 20.68, HILLSBRAD_FOOTHILLS },	-- Krusk
 						{ 75, 34.2, ORGRIMMAR },	-- Belgrom Rockmaul
 					},
-					["maps"] = { THE_BARRENS, ORGRIMMAR, HILLSBRAD_FOOTHILLS },
+					["maps"] = { THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 30,
@@ -765,7 +761,6 @@ _.Zones =
 					["qg"] = 3389,	-- Regthar Deathgate
 					["sourceQuest"] = 1361,	-- Regthar Deathgate
 					["coord"] = { 45.2, 28.4, THE_BARRENS },
-					["maps"] = { THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 				}),

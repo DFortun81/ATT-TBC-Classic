@@ -61,7 +61,6 @@ _.NeverImplemented =
 		--["qg"] = 15079,	-- Fishbot 5000
 		["requireSkill"] = FISHING,
 		--["coord"] = { 27.4, 76.9, STRANGLETHORN_VALE },
-		--["maps"] = { STRANGLETHORN_VALE },
 		["repeatable"] = true,
 		["cost"] = {
 			{ "i", 19804, 1 },	-- Pale Ghoulfish

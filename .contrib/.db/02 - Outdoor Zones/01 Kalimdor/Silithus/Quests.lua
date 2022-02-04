@@ -903,7 +903,6 @@ _.Zones =
 				q(8276, {	-- Taking Back Silithus
 					["qg"] = 15188,	-- Cenarion Emissary Blackhoof
 					["coord"] = { 47.6, 65.8, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 54,
@@ -911,7 +910,6 @@ _.Zones =
 				q(8275, {	-- Taking Back Silithus
 					["qg"] = 15187,	-- Cenarion Emissary Jademoon
 					["coord"] = { 58.5, 47.3, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 54,

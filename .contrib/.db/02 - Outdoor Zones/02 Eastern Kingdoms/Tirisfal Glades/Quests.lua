@@ -373,7 +373,6 @@ _.Zones =
 					["qg"] = 1498,	-- Bethor Iceshard
 					["sourceQuest"] = 357,	-- The Lich's Identity
 					["coord"] = { 84.2, 17.4, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 3016, 1 },	-- Gunther's Spellbook
@@ -553,7 +552,6 @@ _.Zones =
 					["qg"] = 1498,	-- Bethor Iceshard
 					["sourceQuest"] = 405,	-- The Prodigal Lich
 					["coord"] = { 84.2, 17.4, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 2833, 1 },	-- The Lich's Spellbook

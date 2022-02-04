@@ -184,7 +184,7 @@ _.Zones =
 						{ 39.0, 43.4, DARKSHORE },
 						{ 56.2, 59.2, TELDRASSIL },
 					},
-					["maps"] = { DARKSHORE, DARNASSUS },
+					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
 					["lvl"] = 10,
@@ -404,7 +404,6 @@ _.Zones =
 					["qg"] = 3517,	-- Rellian Greenspyre
 					["sourceQuest"] = 923,	-- Tumors
 					["coord"] = { 38.4, 21.6, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 4,
 				}),
@@ -586,7 +585,6 @@ _.Zones =
 				q(6071, {	-- The Hunter's Path
 					["qg"] = 4146,	-- Jocaste <Hunter Trainer>
 					["coord"] = { 40.2, 8.8, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = { NIGHTELF },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,
@@ -603,7 +601,6 @@ _.Zones =
 				q(6073, {	-- The Hunter's Path
 					["qg"] = 4205,	-- Dorion <Hunter Trainer>
 					["coord"] = { 42.2, 7.6, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = { NIGHTELF },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,
@@ -612,7 +609,6 @@ _.Zones =
 				q(6721, {	-- The Hunter's Path
 					["qg"] = 5117,	-- Regnus Thundergranite <Hunter Trainer>
 					["coord"] = { 69.8, 83.6, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = { NIGHTELF },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,
@@ -621,7 +617,6 @@ _.Zones =
 				q(6722, {	-- The Hunter's Path
 					["qg"] = 1231,	-- Grif Wildheart <Hunter Trainer>
 					["coord"] = { 45.8, 53, DUN_MOROGH },
-					["maps"] = { DUN_MOROGH },
 					["races"] = { NIGHTELF },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,
@@ -754,7 +749,6 @@ _.Zones =
 					["qg"] = 3517,	-- Rellian Greenspyre
 					["sourceQuest"] = 922,	-- Rellian Greenspyre
 					["coord"] = { 38.2, 21.6, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 5170, 5 },	-- Mossy Tumor

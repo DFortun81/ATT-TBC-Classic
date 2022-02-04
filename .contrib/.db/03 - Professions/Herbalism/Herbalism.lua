@@ -5,7 +5,6 @@ profession(HERBALISM, {
 			["qg"] = 3446,	-- Mebok Mizzyrix
 			["coord"] = { 62.4, 37.6, THE_BARRENS },
 			["requireSkill"] = HERBALISM,
-			["maps"] = { THE_BARRENS },
 			["cost"] = {
 				{ "i", 5056, 8 },	-- Root Sample
 			},

@@ -68,7 +68,6 @@ _.Zones =
 						{ 28.4, 78.2, STORMWIND_CITY },
 						{ 86.0, 15.6, UNDERCITY },
 					},
-					["maps"] = { ORGRIMMAR, IRONFORGE, STORMWIND_CITY, UNDERCITY },
 					["altQuests"] = { 8420 },	-- Hot and Itchy
 					["races"] = HORDE_ONLY,
 					["classes"] = { WARLOCK },
@@ -124,7 +123,6 @@ _.Zones =
 					["qg"] = 5901,	-- Islen Waterseer
 					["sourceQuest"] = 5158,	-- Seeking Spiritual Aid
 					["coord"] = { 65.8, 43.8, THE_BARRENS },
-					["maps"] = { THE_BARRENS },
 					["cost"] = {
 						{ "i", 12906, 1 },	-- Purified Moonwell Water
 					},
@@ -721,7 +719,6 @@ _.Zones =
 					["requireSkill"] = TAILORING,
 					["minReputation"] = { 576, FRIENDLY },	-- Timbermaw Hold
 					["coord"] = { 65.6, 2.8, FELWOOD },
-					["maps"] = { FELWOOD },
 					["cost"] = {
 						{ "i", 14342, 2 },	-- Mooncloth
 					},

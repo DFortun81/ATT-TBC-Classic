@@ -194,7 +194,6 @@ _.Zones =
 					["qg"] = 3442,	-- Sputtervalve
 					["sourceQuest"] = 1094,	-- Further Instructions (1/2)
 					["coord"] = { 62.97, 37.19, THE_BARRENS },
-					["maps"] = { THE_BARRENS },
 					["lvl"] = 16,
 				}),
 				q(1096, {	-- Gerenzo Wrenchwhistle
@@ -371,7 +370,7 @@ _.Zones =
 				q(1078, {	-- Retrieval for Mauren
 					["qg"] = 4078,	-- Collin Mauren
 					["coord"] = { 43.1, 80.3, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY, THOUSAND_NEEDLES },
+					["maps"] = { THOUSAND_NEEDLES },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 5675, 8 },	-- Crystalized Scales
@@ -392,7 +391,6 @@ _.Zones =
 					["qg"] = 4078,	-- Collin Mauren
 					["sourceQuest"] = 1076,	-- Devils in Westfall
 					["coord"] = { 43.1, 80.3, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 17,
 				}),
@@ -433,7 +431,6 @@ _.Zones =
 				q(1061, {	-- The Spirits of Stonetalon
 					["qg"] = 4047,	-- Zor Lonetree
 					["coord"] = { 39.03, 38.04, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 13,
 					["isBreadcrumb"] = true,
@@ -462,7 +459,6 @@ _.Zones =
 				q(1483, {	-- Ziz Fizziks
 					["qg"] = 3442,	-- Sputtervalve
 					["coord"] = { 62.98, 37.21, THE_BARRENS },
-					["maps"] = { THE_BARRENS },
 					["isBreadcrumb"] = true,
 					["lvl"] = 16,
 				}),

@@ -74,7 +74,6 @@ _.Zones =
 					["qg"] = 2216,	-- Apothecary Lydon <Royal Apothecary Society>
 					["sourceQuest"] = 2934,	-- Undamaged Venom Sac
 					["coord"] = { 61.4, 19.2, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 40,
 				}),
@@ -393,7 +392,7 @@ _.Zones =
 					["qg"] = 3188,	-- Master Gadrin
 					["sourceQuest"] = 2936,	-- The Spider God
 					["coord"] = { 56.0, 74.6, DUROTAR },
-					["maps"] = { DUROTAR, THE_HINTERLANDS },
+					["maps"] = { THE_HINTERLANDS },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 9324, 1 },	-- Shadra's Venom

@@ -16,7 +16,6 @@ _.Zones =
 					["qg"] = 9299,	-- Gaeriyan
 					["sourceQuest"] = 3912,	-- Meet at the Grave
 					["coord"] = { 54.0, 23.4, TANARIS },
-					["maps"] = { TANARIS },
 					["cost"] = {
 						{ "i", 11136, 1 },	-- Linken's Tempered Sword
 					},
@@ -259,7 +258,6 @@ _.Zones =
 					["qg"] = 9298,	-- Donova Snowden
 					["sourceQuest"] = 3909,	-- The Videre Elixir
 					["coord"] = { 31.2, 45.2, WINTERSPRING },
-					["maps"] = { WINTERSPRING },
 					["cost"] = {
 						{ "i", 11243, 1 },	-- Videre Elixir
 						{ "i", 11136, 1 },	-- Linken's Tempered Sword
@@ -431,7 +429,6 @@ _.Zones =
 						{ 52.4, 40.6, MOONGLADE },
 						{ 76.6, 27.6, THUNDER_BLUFF },
 					},
-					["maps"] = { DARNASSUS, MOONGLADE, THUNDER_BLUFF },
 					["classes"] = { DRUID },
 					["lvl"] = 50,
 				}),

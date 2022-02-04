@@ -52,7 +52,6 @@ _.Zones =
 						324,	-- The Lost Ingots
 					},
 					["coord"] = { 10.6, 60.5, WETLANDS },
-					["maps"] = { WETLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 2712, 1 },	-- Crate of Lightforge Ingots

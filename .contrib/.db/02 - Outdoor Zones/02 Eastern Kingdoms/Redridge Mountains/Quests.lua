@@ -24,7 +24,6 @@ _.Zones =
 				q(94, {	-- A Watchful Eye
 					["qg"] = 313,	-- Theocritus
 					["coord"] = { 65.2, 69.8, ELWYNN_FOREST },
-					["maps"] = { ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 1083, 1 },	-- Glyph of Azora
@@ -173,7 +172,6 @@ _.Zones =
 					["qg"] = 263,	-- Lord Ello Ebonlocke
 					["sourceQuest"] = 145,	-- Messenger to Darkshire (1/2)
 					["coord"] = { 72.0, 46.6, DUSKWOOD },
-					["maps"] = { DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 1410, 1 },	-- Ebonlocke's Response to Solomon
@@ -193,7 +191,6 @@ _.Zones =
 					["qg"] = 466,	-- General Marcus Jonathan
 					["sourceQuest"] = 120,	-- Messenger to Stormwind (1/2)
 					["coord"] = { 63.8, 75.4, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 1294, 1 },	-- The General's Response
@@ -214,7 +211,6 @@ _.Zones =
 					["qg"] = 234,	-- Gryan Stoutmantle
 					["sourceQuest"] = 143,	-- Messenger to Westfall (1/2)
 					["coord"] = { 56.2, 47.6, WESTFALL },
-					["maps"] = { WESTFALL },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 1408, 1 },	-- Stoutmantle's Response to Solomon
@@ -287,7 +283,6 @@ _.Zones =
 				q(119, {	-- Return to Verner
 					["qg"] = 514,	-- Smith Argus
 					["coord"] = { 41.7, 65.5, ELWYNN_FOREST },
-					["maps"] = { ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 1284, 1 },	-- Crate of Horseshoes
@@ -486,7 +481,10 @@ _.Zones =
 						5479,	-- Wu Shen <Warrior Trainer>
 						7315,	-- Darnath Bladesigner <Warrior Trainer>
 					},
-					["maps"] = { DARNASSUS, STORMWIND_CITY },
+					["coords"] = {
+						{ 48.6, 35.6, DARNASSUS },
+						{ 78.8, 45.6, STORMWIND_CITY },
+					},
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
 					["isBreadcrumb"] = true,
@@ -495,7 +493,6 @@ _.Zones =
 				q(10371, {	-- Yorus Barleybrew (Draenei)
 					["qg"] = 16771,	-- Ahonan
 					["coord"] = { 55.0, 83.4, THE_EXODAR },
-					["maps"] = { THE_EXODAR },
 					["timeline"] = { "removed 4.0.3.10000" },
 					["races"] = { DRAENEI },
 					["classes"] = { WARRIOR },

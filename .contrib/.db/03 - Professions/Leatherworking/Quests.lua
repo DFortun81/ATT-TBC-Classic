@@ -8,7 +8,6 @@ profession(LEATHERWORKING, {
 			},
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 37.4, 65.4, AZSHARA },
-			["maps"] = { AZSHARA },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 8203, 2 },	-- Tough Scorpid Breastplate
@@ -25,7 +24,6 @@ profession(LEATHERWORKING, {
 			},
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 62.6, 57.4, BADLANDS },
-			["maps"] = { BADLANDS },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 8203, 2 },	-- Tough Scorpid Breastplate
@@ -42,7 +40,6 @@ profession(LEATHERWORKING, {
 			},
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 63.6, 76.0, SEARING_GORGE },
-			["maps"] = { SEARING_GORGE },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 7081, 2 },	-- Breath of Wind
@@ -58,8 +55,8 @@ profession(LEATHERWORKING, {
 				5145,	-- Dragonscale Leatherworking
 				5148,	-- Tribal Leatherworking
 			},
+			["coord"] = { 28.2, 45.0, ARATHI_HIGHLANDS },
 			["requireSkill"] = LEATHERWORKING,
-			["maps"] = { ARATHI_HIGHLANDS },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 7081, 2 },	-- Breath of Wind
@@ -73,7 +70,6 @@ profession(LEATHERWORKING, {
 			["qg"] = 3050,	-- Veren Tallstrider
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 44, 44.6, THUNDER_BLUFF },
-			["maps"] = { THUNDER_BLUFF },
 			["races"] = HORDE_ONLY,
 			["lvl"] = 5,
 			["groups"] = {
@@ -91,7 +87,6 @@ profession(LEATHERWORKING, {
 			},
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 30.6, 42.7, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 9235, 1 },	-- Pratt's Letter
@@ -112,7 +107,6 @@ profession(LEATHERWORKING, {
 			},
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 74.43, 42.91, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 9236, 1 },	-- Jangdor's Letter
@@ -126,7 +120,6 @@ profession(LEATHERWORKING, {
 			["qg"] = 6034,	-- Lotherias
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 64.4, 22.2, DARNASSUS },
-			["maps"] = { DARNASSUS },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 2309, 5 },	-- Embossed Leather Boots
@@ -146,7 +139,6 @@ profession(LEATHERWORKING, {
 			},
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 89.4, 46.5, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 8214, 1 },	-- Wild Leather Helmet
@@ -162,7 +154,6 @@ profession(LEATHERWORKING, {
 			},
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 36.6, 34.2, STRANGLETHORN_VALE },
-			["maps"] = { STRANGLETHORN_VALE },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 8214, 1 },	-- Wild Leather Helmet
@@ -174,7 +165,6 @@ profession(LEATHERWORKING, {
 			["qg"] = 7852,	-- Pratt McGrubben
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 30.6, 42.7, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 4304, 10 },	-- Thick Leather
@@ -185,7 +175,6 @@ profession(LEATHERWORKING, {
 			["qg"] = 7854,	-- Jangdor Swiftstrider
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 74.43, 42.91, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 4304, 10 },	-- Thick Leather
@@ -197,7 +186,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2847,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 30.6, 42.7, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 8193, 2 },	-- Nightscape Pants
@@ -214,7 +202,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2854,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 74.43, 42.91, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 8193, 2 },	-- Nightscape Pants
@@ -231,7 +218,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2847,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 30.6, 42.7, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 8175, 2 },	-- Nightscape Tunic
@@ -248,7 +234,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2854,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 74.43, 42.91, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 8175, 2 },	-- Nightscape Tunic
@@ -265,7 +250,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2847,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 30.6, 42.7, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 8191, 2 },	-- Turtle Scale Helm
@@ -282,7 +266,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2854,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 74.43, 42.91, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 8191, 2 },	-- Turtle Scale Helm
@@ -299,7 +282,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2847,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 30.6, 42.7, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 8173, 6 },	-- Thick Armor Kit
@@ -315,7 +297,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2854,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 74.43, 42.91, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 8173, 6 },	-- Thick Armor Kit
@@ -331,7 +312,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2847,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 30.6, 42.7, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = ALLIANCE_ONLY,
 			["cost"] = {
 				{ "i", 8189, 2 },	-- Turtle Scale Breastplate
@@ -348,7 +328,6 @@ profession(LEATHERWORKING, {
 			["sourceQuest"] = 2854,	-- Wild Leather Armor
 			["requireSkill"] = LEATHERWORKING,
 			["coord"] = { 74.43, 42.91, FERALAS },
-			["maps"] = { FERALAS },
 			["races"] = HORDE_ONLY,
 			["cost"] = {
 				{ "i", 8189, 2 },	-- Turtle Scale Breastplate

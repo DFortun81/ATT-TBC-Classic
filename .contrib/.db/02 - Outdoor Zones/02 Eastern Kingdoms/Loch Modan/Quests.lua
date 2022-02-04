@@ -37,7 +37,6 @@ _.Zones =
 					["qg"] = 1073,	-- Ashlan Stonesmirk
 					["sourceQuest"] = 161,	-- A Dark Threat Looms (3/7)
 					["coord"] = { 50, 18.2, WETLANDS },
-					["maps"] = { WETLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 2609, 1 },	-- Disarming Colloid
@@ -273,7 +272,6 @@ _.Zones =
 					["qg"] = 1356,	-- Prospector Stormpike
 					["sourceQuest"] = 301,	-- Report to Ironforge
 					["coord"] = { 74.4, 12, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 10,
 				}),

@@ -113,7 +113,6 @@ _.Zones =
 				q(1522, {	-- Call of Fire (1/5) [Orgrimmar]
 					["qg"] = 5892,	-- Searn Firewarder
 					["coord"] = { 37.8, 37.4, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -122,7 +121,6 @@ _.Zones =
 				q(1523, {	-- Call of Fire (1/5) [Thunder Bluff]
 					["qg"] = 5906,	-- Xanis Flameweaver
 					["coord"] = { 25.2, 21, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -132,7 +130,6 @@ _.Zones =
 					["qg"] = 3173,	-- Swart <Shaman Trainer>
 					["coord"] = { 54.4, 42.6, DUROTAR },
 					["classes"] = { SHAMAN },
-					["maps"] = { DUROTAR },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 10,
@@ -140,7 +137,6 @@ _.Zones =
 				q(2984, {	-- Call of Fire (1/5) [Mulgore]
 					["qg"] = 3066,	-- Narm Skychaser <Shaman Trainer>
 					["coord"] = { 48.4, 59.2, MULGORE },
-					["maps"] = { MULGORE },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["isBreadcrumb"] = true,
@@ -166,7 +162,6 @@ _.Zones =
 					["qg"] = 5900,	-- Telf Joolam
 					["sourceQuest"] = 1524,	-- Call of Fire (2/5)
 					["coord"] = { 38.6, 58.8, DUROTAR },
-					["maps"] = { DUROTAR },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["cost"] = {
@@ -185,7 +180,6 @@ _.Zones =
 					["qg"] = 5900,	-- Telf Joolam
 					["sourceQuest"] = 1525,	-- Call of Fire (3/5)
 					["coord"] = { 38.6, 58.8, DUROTAR },
-					["maps"] = { DUROTAR },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["cost"] = {
@@ -210,7 +204,6 @@ _.Zones =
 					["provider"] = { "o", 61934 },	-- Brazier of the Dormant Flame
 					["sourceQuest"] = 1526,	-- Call of Fire (4/5)
 					["coord"] = { 38.9, 58.2, DUROTAR },
-					["maps"] = { DUROTAR },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["cost"] = {
@@ -227,7 +220,6 @@ _.Zones =
 				q(2985, {	-- Call of Water (1/9) [Durotar]
 					["qg"] = 3173,	-- Swart <Shaman Trainer>
 					["coord"] = { 54.4, 42.6, DUROTAR },
-					["maps"] = { DUROTAR },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -236,7 +228,6 @@ _.Zones =
 				q(1528, {	-- Call of Water (1/9) [Orgrimmar]
 					["qg"] = 5892,	-- Searn Firewarder
 					["coord"] = { 38.0, 37.7, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -245,7 +236,6 @@ _.Zones =
 				q(1529, {	-- Call of Water (1/9) [Thunder Bluff]
 					["qg"] = 5906,	-- Xanis Flameweaver
 					["coord"] = { 25.2, 20.5, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -361,7 +351,6 @@ _.Zones =
 					["provider"] = { "o", 113791 },	-- Brazier of Everfount
 					["sourceQuest"] = 1534,	-- Call of Water (7/9)
 					["coord"] = { 38.3, 44.6, SILVERPINE_FOREST },
-					["maps"] = { SILVERPINE_FOREST },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 20,
@@ -370,7 +359,6 @@ _.Zones =
 					["qg"] = 5895,	-- Minor Manifestation of Water
 					["sourceQuest"] = 100,	-- Call of Water (8/9)
 					["coord"] = { 38.6, 44.6, SILVERPINE_FOREST },
-					["maps"] = { SILVERPINE_FOREST },
 					["cost"] = {
 						{ "i", 7813, 1 },	-- Shard of Water
 					},
@@ -388,7 +376,6 @@ _.Zones =
 					["qg"] = 7007,	-- Tiev Mordune
 					["sourceQuest"] = 100,	-- Call of Water (8/9)
 					["coord"] = { 37.3, 44.1, SILVERPINE_FOREST },
-					["maps"] = { SILVERPINE_FOREST },
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
@@ -438,7 +425,6 @@ _.Zones =
 					["qg"] = 6546,	-- Tabetha
 					["sourceQuest"] = 1799,	-- Fragments of the Orb of Orahil
 					["coord"] = { 46, 57, DUSTWALLOW_MARSH },
-					["maps"] = { DUSTWALLOW_MARSH },
 					["classes"] = { WARLOCK },
 					["cr"] = 6549,	-- Demon of the Orb
 					["cost"] = {
@@ -569,7 +555,6 @@ _.Zones =
 					["qg"] = 6929,	-- Innkeeper Gryshka
 					["sourceQuest"] = 6384,	-- Ride to Orgrimmar
 					["coord"] = { 54.09, 68.43, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = { ORC, TROLL },
 					["lvl"] = 10,
 				}),
@@ -601,7 +586,6 @@ _.Zones =
 					["qg"] = 5900,	-- Telf Joolam
 					["sourceQuest"] = 1525,	-- Call of Fire (3/5)
 					["coord"] = { 38.6, 58.8, DUROTAR },
-					["maps"] = { DUROTAR },
 					["races"] = HORDE_ONLY,
 					["classes"] = { SHAMAN },
 					["repeatable"] = true,
@@ -744,7 +728,6 @@ _.Zones =
 				q(4736, {	-- In Search of Menara Voidrender (Ironforge)
 					["qg"] = 5172,	-- Briarthorn
 					["coord"] = { 50.2, 6, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["classes"] = { WARLOCK },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
@@ -753,7 +736,6 @@ _.Zones =
 				q(4737, {	-- In Search of Menara Voidrender (Orgrimmar)
 					["qg"] = 3326,	-- Zevrost
 					["coord"] = { 48.4, 45.6, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["classes"] = { WARLOCK },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -762,7 +744,6 @@ _.Zones =
 				q(4738, {	-- In Search of Menara Voidrender (Stormwind)
 					["qg"] = 461,	-- Demisette Cloyce
 					["coord"] = { 25.4, 78.2, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["classes"] = { WARLOCK },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
@@ -771,7 +752,6 @@ _.Zones =
 				q(4739, {	-- In Search of Menara Voidrender (Undercity)
 					["qg"] = 4563,	-- Kaal Soulreaper
 					["coord"] = { 86, 15.6, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["classes"] = { WARLOCK },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -821,7 +801,6 @@ _.Zones =
 				q(4967, {	-- Knowledge of the Orb of Orahil [Orgrimmar]
 					["qg"] = 3326,	-- Zevrost
 					["coord"] = { 48.4, 45.6, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["classes"] = { WARLOCK },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -830,7 +809,6 @@ _.Zones =
 				q(4965, {	-- Knowledge of the Orb of Orahil [Ironforge]
 					["qg"] = 5172,	-- Briarthorn
 					["coord"] = { 50.2, 6, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["classes"] = { WARLOCK },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
@@ -839,7 +817,6 @@ _.Zones =
 				q(4968, {	-- Knowledge of the Orb of Orahil [Stormwind]
 					["qg"] = 461,	-- Demisette Cloyce
 					["coord"] = { 25.4, 78.2, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["classes"] = { WARLOCK },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
@@ -848,7 +825,6 @@ _.Zones =
 				q(4969, {	-- Knowledge of the Orb of Orahil [Undercity]
 					["qg"] = 4563,	-- Kaal Soulreaper
 					["coord"] = { 86, 15.6, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["classes"] = { WARLOCK },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -1082,7 +1058,6 @@ _.Zones =
 					["qg"] = 3310,	-- Doras
 					["sourceQuest"] = 6385,	-- Doras the Wind Rider Master
 					["coord"] = { 45.21, 63.58, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = { ORC, TROLL },
 					["lvl"] = 10,
 				}),
@@ -1090,7 +1065,6 @@ _.Zones =
 					["qg"] = 6546,	-- Tabetha
 					["sourceQuest"] = 4961,	-- Cleansing of the Orb of Orahil
 					["coord"] = { 46, 57, DUSTWALLOW_MARSH },
-					["maps"] = { DUSTWALLOW_MARSH },
 					["classes"] = { WARLOCK },
 					["cost"] = {
 						{ "i", 12642, 1 },	-- Cleansed Infernal Orb
@@ -1186,7 +1160,6 @@ _.Zones =
 				q(2996, {	-- Seeking Strahad (Orgrimmar)
 					["qg"] = 5875,	-- Gan'rul Bloodeye
 					["coord"] = { 48.2, 45.6, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = { ORC, UNDEAD },
 					["classes"] = { WARLOCK },
 					["isBreadcrumb"] = true,
@@ -1195,7 +1168,6 @@ _.Zones =
 				q(1798, {	-- Seeking Strahad (Stormwind)
 					["qg"] = 6122,	-- Gakin the Darkbinder
 					["coord"] = { 25.4, 78.4, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARLOCK },
 					["isBreadcrumb"] = true,
@@ -1204,7 +1176,6 @@ _.Zones =
 				q(3001, {	-- Seeking Strahad (Undercity)
 					["qg"] = 5675,	-- Carendin Halgar
 					["coord"] = { 85, 25.6, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = { ORC, UNDEAD },
 					["classes"] = { WARLOCK },
 					["isBreadcrumb"] = true,
@@ -1284,7 +1255,6 @@ _.Zones =
 						{ 57.4, 87.2, THUNDER_BLUFF },
 						{ 47.2, 17, UNDERCITY },
 					},
-					["maps"] = { ORGRIMMAR, THUNDER_BLUFF, UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["classes"] = { WARRIOR },
 					["lvl"] = 20,
@@ -1329,7 +1299,6 @@ _.Zones =
 				q(4487, {	-- Summon Felsteed (Ironforge)
 					["qg"] = 5172,	-- Briarthorn
 					["coord"] = { 50.2, 6, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["classes"] = { WARLOCK },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
@@ -1338,7 +1307,6 @@ _.Zones =
 				q(3631, {	-- Summon Felsteed (Orgrimmar)
 					["qg"] = 3326,	-- Zevrost
 					["coord"] = { 48.4, 45.6, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["classes"] = { WARLOCK },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -1347,7 +1315,6 @@ _.Zones =
 				q(4488, {	-- Summon Felsteed (Stormwind)
 					["qg"] = 461,	-- Demisette Cloyce <Warlock Trainer>
 					["coord"] = { 25.4, 78.2, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["classes"] = { WARLOCK },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
@@ -1356,7 +1323,6 @@ _.Zones =
 				q(4489, {	-- Summon Felsteed (Undercity)
 					["qg"] = 4563,	-- Kaal Soulreaper
 					["coord"] = { 86, 15.6, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["classes"] = { WARLOCK },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
@@ -1419,7 +1385,6 @@ _.Zones =
 					["qg"] = 5769,	-- Arch Druid Hamuul Runetotem
 					["coord"] = { 78.63, 28.56, THUNDER_BLUFF },
 					["isBreadcrumb"] = true,
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
 				}),
@@ -1684,11 +1649,6 @@ _.Zones =
 						{ 54.18, 42.47, DUROTAR },
 						{ 49.4, 60.4, MULGORE },
 						{ 80.3, 32.4, ORGRIMMAR },
-					},
-					["maps"] = {
-						DUROTAR,
-						MULGORE,
-						ORGRIMMAR,
 					},
 					["description"] = "This quest becomes unavailable after completing \"Ulag the Cleaver\" in Tirisfal Glades.",
 					["races"] = HORDE_ONLY,

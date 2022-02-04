@@ -9,7 +9,6 @@ _.Zones =
 				q(26, {	-- A Lesson to Learn
 					["qg"] = 4217,	-- Mathrengyl Bearwalker <Druid Trainer>
 					["coord"] = { 35.2, 8, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { DRUID },
 					["lvl"] = 16,
@@ -17,7 +16,6 @@ _.Zones =
 				q(27, {	-- A Lesson to Learn
 					["qg"] = 3033,	-- Turak Runetotem <Druid Trainer>
 					["coord"] = { 76.4, 27.6, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["classes"] = { DRUID },
 					["lvl"] = 16,
@@ -89,7 +87,7 @@ _.Zones =
 					["qg"] = 4217,	-- Mathrengyl Bearwalker <Druid Trainer>
 					["sourceQuest"] = 5931,	-- Back to Darnassus
 					["coord"] = { 35.2, 8, DARNASSUS },
-					["maps"] = { DARKSHORE, DARNASSUS },
+					["maps"] = { DARKSHORE },
 					["cost"] = {
 						{ "i", 15208, 1 },	-- Cenarion Moondust
 					},
@@ -119,7 +117,7 @@ _.Zones =
 					["qg"] = 3033,	-- Turak Runetotem <Druid Trainer>
 					["sourceQuest"] = 5932,	-- Back to Thunder Bluff
 					["coord"] = { 76.4, 27.6, THUNDER_BLUFF },
-					["maps"] = { THE_BARRENS, THUNDER_BLUFF },
+					["maps"] = { THE_BARRENS },
 					["cost"] = {
 						{ "i", 15710, 1 },	-- Cenarion Lunardust
 					},
@@ -165,7 +163,6 @@ _.Zones =
 				q(5923, {	-- Heeding the Call
 					["qg"] = 4218,	-- Denatharion <Druid Trainer>
 					["coord"] = { 34.8, 7.8, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { DRUID },
 					["isBreadcrumb"] = true,
@@ -174,7 +171,6 @@ _.Zones =
 				q(5924, {	-- Heeding the Call
 					["qg"] = 5505,	-- Theridran <Druid Trainer>
 					["coord"] = { 21.4, 51.4, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { DRUID },
 					["isBreadcrumb"] = true,
@@ -183,7 +179,6 @@ _.Zones =
 				q(5925, {	-- Heeding the Call
 					["qg"] = 3602,	-- Kal <Druid Trainer>
 					["coord"] = { 56, 61.6, TELDRASSIL },
-					["maps"] = { TELDRASSIL },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { DRUID },
 					["isBreadcrumb"] = true,
@@ -192,7 +187,6 @@ _.Zones =
 				q(5926, {	-- Heeding the Call
 					["qg"] = 6746,	-- Innkeeper Pala <Innkeeper>
 					["coord"] = { 45.8, 64.4, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["classes"] = { DRUID },
 					["isBreadcrumb"] = true,
@@ -201,7 +195,6 @@ _.Zones =
 				q(5927, {	-- Heeding the Call
 					["qg"] = 3060,	-- Gart Mistrunner <Druid Trainer>
 					["coord"] = { 45.1, 75.9, MULGORE },
-					["maps"] = { MULGORE },
 					["races"] = HORDE_ONLY,
 					["classes"] = { DRUID },
 					["isBreadcrumb"] = true,
@@ -210,7 +203,6 @@ _.Zones =
 				q(5928, {	-- Heeding the Call
 					["qg"] = 3064,	-- Gennia Runetotem <Druid Trainer>
 					["coord"] = { 48.4, 59.6, MULGORE },
-					["maps"] = { MULGORE },
 					["races"] = HORDE_ONLY,
 					["classes"] = { DRUID },
 					["isBreadcrumb"] = true,
@@ -224,7 +216,6 @@ _.Zones =
 						5925,   -- Heeding the Call
 					},
 					["coord"] = { 35.2, 8.0, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { DRUID },
 					["lvl"] = 14,
@@ -237,7 +228,6 @@ _.Zones =
 						5928,   -- Heeding the Call
 					},
 					["coord"] = { 76.4, 27.6, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["classes"] = { DRUID },
 					["lvl"] = 14,
@@ -250,7 +240,6 @@ _.Zones =
 						5925,   -- Heeding the Call
 					},
 					["coord"] = { 35.2, 8.0, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { DRUID },
 				}),
@@ -262,7 +251,6 @@ _.Zones =
 						5928,   -- Heeding the Call
 					},
 					["coord"] = { 76.4, 27.6, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["classes"] = { DRUID },
 				}),
@@ -309,7 +297,6 @@ _.Zones =
 					["qg"] = 4217,  -- Mathrengyl Bearwalker <Druid Trainer>
 					["sourceQuest"] = 6761,	-- The New Frontier
 					["coord"] = { 35.2, 8.0, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 54,
 				}),
@@ -321,7 +308,6 @@ _.Zones =
 						1018,   -- The New Frontier [Orgrimmar]
 					},
 					["coord"] = { 78.4, 28.4, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 54,
 				}),
@@ -368,7 +354,6 @@ _.Zones =
 				q(1015, {	-- The New Frontier
 					["qg"] = 2198,	-- Crier Goodman
 					["coord"] = { 54.8, 62.6, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["altQuests"] = {
 						1019,   -- The New Frontier [Ironforge]
@@ -379,7 +364,6 @@ _.Zones =
 				q(1019, {	-- The New Frontier
 					["qg"] = 10877,	-- Courier Hammerfall
 					["coord"] = { 31.6, 67, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["altQuests"] = {
 						1015,	-- The New Frontier [Stormwind City]
@@ -390,7 +374,6 @@ _.Zones =
 				q(1047, {	-- The New Frontier
 					["qg"] = 10878,	-- Herald Moonstalker
 					["coord"] = { 36.4, 39.8, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["altQuests"] = {
 						1015,	-- The New Frontier [Stormwind City]
@@ -401,7 +384,6 @@ _.Zones =
 				q(6761, {	-- The New Frontier
 					["qg"] = 3516,	-- Arch Druid Fandral Staghelm
 					["coord"] = { 34.8, 8.8, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["sourceQuests"] = {
 						1015,	-- The New Frontier [Stormwind City]
 						1019,   -- The New Frontier [Ironforge]
@@ -413,7 +395,6 @@ _.Zones =
 				q(1000, {	-- The New Frontier
 					["qg"] = 10881,	-- Bluff Runner Windstrider
 					["coord"] = { 41.4, 54.2, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["sourceQuests"] = {
 						1018,	-- The New Frontier [Orgrimmar]
 						1004,   -- The New Frontier [Undercity]
@@ -424,7 +405,6 @@ _.Zones =
 				q(1004, {	-- The New Frontier
 					["qg"] = 10879,	-- Harbinger Balthazad
 					["coord"] = { 68.8, 48.4, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["sourceQuests"] = {
 						1018,	-- The New Frontier [Orgrimmar]
 						1000,   -- The New Frontier [Thunder Bluff]
@@ -435,7 +415,6 @@ _.Zones =
 				q(1018, {	-- The New Frontier
 					["qg"] = 10880,	-- Warcaller Gorlach
 					["coord"] = { 46.6, 64.6, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["sourceQuests"] = {
 						1000,   -- The New Frontier [Thunder Bluff]
 						1004,   -- The New Frontier [Undercity]

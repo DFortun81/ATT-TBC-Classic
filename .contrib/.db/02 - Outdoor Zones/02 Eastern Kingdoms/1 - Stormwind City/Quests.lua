@@ -90,7 +90,6 @@ _.Zones =
 						{ 78.6, 45.6, STORMWIND_CITY },
 						{ 41, 65.8, ELWYNN_FOREST },
 					},
-					["maps"] = { ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
 					["lvl"] = 10,
@@ -232,6 +231,7 @@ _.Zones =
 				q(1705, {	-- Burning Blood
 					["qg"] = 1416,	-- Grimand Elmore
 					["sourceQuest"] = 1700,	-- Grimand Elmore
+					["coord"] = { 51.6, 12.2, STORMWIND_CITY },
 					["maps"] = { DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
@@ -266,14 +266,6 @@ _.Zones =
 						{ 20.8, 50.2, STORMWIND_CITY },
 						{ 38.8, 26.6, STORMWIND_CITY },
 						{ 55.6, 56.8, TELDRASSIL },
-					},
-					["maps"] = {
-						DARNASSUS,
-						DUN_MOROGH,
-						ELWYNN_FOREST,
-						IRONFORGE,
-						STORMWIND_CITY,
-						TELDRASSIL,
 					},
 					["altQuests"] = {
 						5635,	-- Desperate Prayer (Elwynn Forest)
@@ -410,10 +402,6 @@ _.Zones =
 						{ 27.0, 8.2, IRONFORGE },
 						{ 38.6, 79.6, STORMWIND_CITY },
 					},
-					["maps"] = {
-						IRONFORGE,
-						STORMWIND_CITY,
-					},
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
 					["isBreadcrumb"] = true,
@@ -435,7 +423,6 @@ _.Zones =
 				q(1448, {	-- In Search of The Temple
 					["qg"] = 5384,	-- Brohann Caskbelly <Explorers' League>
 					["coord"] = { 70.0, 55.0, SWAMP_OF_SORROWS },
-					["maps"] = { SWAMP_OF_SORROWS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 38,
 				}),
@@ -594,7 +581,6 @@ _.Zones =
 				q(1919, {	-- Report to Jennea
 					["qg"] = 7312,	-- Dink <Mage Trainer>
 					["coord"] = { 26.8, 8.6, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
 					["isBreadcrumb"] = true,
@@ -823,7 +809,7 @@ _.Zones =
 				q(543, {	-- The Perenolde Tiara
 					["qg"] = 2285,	-- Count Remington Ridgewell
 					["coord"] = { 74, 30, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY, ALTERAC_MOUNTAINS },
+					["maps"] = { ALTERAC_MOUNTAINS },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 3684, 1 },	-- Perenolde Tiara
@@ -917,7 +903,6 @@ _.Zones =
 				q(4486, {	-- The Tome of Nobility
 					["qg"] = 5149,	-- Brandur Ironhammer <Paladin Trainer>
 					["coord"] = { 23.6, 6.6, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
 					["isBreadcrumb"] = true,

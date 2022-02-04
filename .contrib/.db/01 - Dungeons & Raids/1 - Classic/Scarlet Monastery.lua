@@ -14,7 +14,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 						{ "i", 5805, 20 },	-- Heart of Zeal
 					},
 					["coord"] = { 48.82, 69.28, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -22,7 +21,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 3980,	-- Raleigh the Devout
 					["sourceQuest"] = 1052,	-- Down the Scarlet Path (2/2)
 					["coord"] = { 51.5, 58.4, HILLSBRAD_FOOTHILLS },
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 33,
 					["groups"] = {
@@ -35,7 +33,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 				q(1048, {	-- Into The Scarlet Monastery
 					["qg"] = 2425,	-- Varimathras
 					["coord"] = { 56.3, 92.2, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 33,
 					["groups"] = {
@@ -138,7 +135,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 								{ "i", 5535, 1},	-- Compendium of the Fallen
 							},
 							["coord"] = { 34.6, 47.2, THUNDER_BLUFF },
-							["maps"] = { THUNDER_BLUFF },
 							["races"] = { ORC, TAUREN, TROLL },
 							["lvl"] = 28,
 							["description"] = "On one of the shelves on the left as you enter the final hallway leading to Doan.",
@@ -151,7 +147,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 						q(1050, {	-- Mythology of the Titans
 							["qg"] = 3979,	-- Librarian Mae Paledust <Explorers' League>
 							["coord"] = { 75.0, 12.5, IRONFORGE },
-							["maps"] = { IRONFORGE },
 							["cost"] = {
 								{ "i", 5536, 1 },	-- Mythology of the Titans
 							},
@@ -165,7 +160,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 							["qg"] = 6548,	-- Magus Tirth
 							["sourceQuest"] = 1950,	-- Get the Scoop
 							["coord"] = { 478.2, 75.8, THOUSAND_NEEDLES },
-							["maps"] = { DUSTWALLOW_MARSH, THOUSAND_NEEDLES },
+							["maps"] = { DUSTWALLOW_MARSH },
 							["classes"] = { MAGE },
 							["cost"] = {
 								{ "i", 7274, 1 },	-- Rituals of Power
@@ -176,7 +171,6 @@ _.Instances = { tier(CLASSIC_TIER, {
 							["sourceQuest"] = 1159,	-- Test of Lore
 							["qg"] = 4488,	-- Parqual Fintallas
 							["coord"] = { 57.8, 65.4, UNDERCITY },
-							["maps"] = { UNDERCITY },
 							["cost"] = {
 								{ "i", 5861, 1 },	-- Beginnings of the Undead Threat
 							},

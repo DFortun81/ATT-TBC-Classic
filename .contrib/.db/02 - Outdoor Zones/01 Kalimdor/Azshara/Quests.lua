@@ -27,7 +27,6 @@ _.Zones =
 					["qg"] = 6522,	-- Andron Gant
 					["sourceQuest"] = 3542,	-- Delivery to Andron Gant
 					["coord"] = { 54.6, 75.6, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 10679, 1 },	-- Andron's Note
@@ -63,7 +62,6 @@ _.Zones =
 				q(3504, {	-- Betrayed (1/4)
 					["qg"] = 4485,	-- Belgrom Rockmaul
 					["coord"] = { 75, 34.2, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 10643, 1 },	-- Sealed Letter to Ag'tor
@@ -183,7 +181,6 @@ _.Zones =
 					["qg"] = 8659,	-- Jes'rimon
 					["sourceQuest"] = 3541,	-- Delivery to Jes'rimon
 					["coord"] = { 55.6, 34, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 10680, 1 },	-- Jes'rimon's Note
@@ -222,7 +219,6 @@ _.Zones =
 					["qg"] = 4046,	-- Magatha Grimtotem
 					["sourceQuest"] = 3518,	-- Delivery to Magatha
 					["coord"] = { 70.2, 30.8, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 10678, 1 },	-- Magatha's Note
@@ -243,13 +239,6 @@ _.Zones =
 						{ 38.2, 81.4, STORMWIND_CITY },
 						{ 22.6, 14.8, THUNDER_BLUFF },
 						{ 85.6, 14.0, UNDERCITY },
-					},
-					["maps"] = {
-						IRONFORGE,
-						ORGRIMMAR,
-						STORMWIND_CITY,
-						THUNDER_BLUFF,
-						UNDERCITY
 					},
 					["classes"] = { MAGE },
 					["isBreadcrumb"] = true,
@@ -328,13 +317,6 @@ _.Zones =
 						{ 66.2, 18.6, ORGRIMMAR },
 						{ 62.0, 15.0, STORMWIND_CITY },
 						{ 58.4, 88.0, THUNDER_BLUFF },
-					},
-					["maps"] = {
-						DARNASSUS,
-						IRONFORGE,
-						ORGRIMMAR,
-						STORMWIND_CITY,
-						THUNDER_BLUFF,
 					},
 					["classes"] = { HUNTER },
 					["lvl"] = 50,

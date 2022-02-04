@@ -330,7 +330,6 @@ _.PvP =
 					["qg"] = 14754,	-- Kelm Hargunth <Warsong Supply Officer>
 					["minReputation"] = { 889, FRIENDLY },	-- Warsong Outriders, Friendly.
 					["coord"] = { 46.6, 8.4, THE_BARRENS },
-					["maps"] = { THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 45,
 					["groups"] = {
@@ -341,7 +340,6 @@ _.PvP =
 					["qg"] = 14754,	-- Kelm Hargunth <Warsong Supply Officer>
 					["minReputation"] = { 889, FRIENDLY },	-- Warsong Outriders, Friendly.
 					["coord"] = { 46.6, 8.4, THE_BARRENS },
-					["maps"] = { THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = { 25, 34 },
 					["groups"] = {
@@ -352,7 +350,6 @@ _.PvP =
 					["qg"] = 14754,	-- Kelm Hargunth <Warsong Supply Officer>
 					["minReputation"] = { 889, FRIENDLY },	-- Warsong Outriders, Friendly.
 					["coord"] = { 46.6, 8.4, THE_BARRENS },
-					["maps"] = { THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = { 35, 44 },
 					["groups"] = {
@@ -363,7 +360,6 @@ _.PvP =
 					["qg"] = 14753,	-- Illiyana Moonblaze
 					["coord"] = { 61.6, 83.8, ASHENVALE },
 					["minReputation"] = { 890, FRIENDLY },	-- Silverwing Sentinels, Friendly.
-					["maps"] = { ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 45,
 					["groups"] = {
@@ -374,7 +370,6 @@ _.PvP =
 					["qg"] = 14753,	-- Illiyana Moonblaze
 					["coord"] = { 61.6, 83.8, ASHENVALE },
 					["minReputation"] = { 890, FRIENDLY },	-- Silverwing Sentinels, Friendly.
-					["maps"] = { ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = { 25, 34 },
 					["groups"] = {
@@ -385,7 +380,6 @@ _.PvP =
 					["qg"] = 14753,	-- Illiyana Moonblaze
 					["coord"] = { 61.6, 83.8, ASHENVALE },
 					["minReputation"] = { 890, FRIENDLY },	-- Silverwing Sentinels, Friendly.
-					["maps"] = { ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = { 35, 44 },
 					["groups"] = {
@@ -396,7 +390,6 @@ _.PvP =
 			n(VENDORS, {
 				n(14754, {	-- Kelm Hargunth <Warsong Supply Officer>
 					["coord"] = { 46.6, 8.4, THE_BARRENS },
-					["maps"] = { THE_BARRENS },
 					["groups"] = {
 						i(19505),	-- Warsong Battle Tabard
 						i(19518),	-- Advisor's Ring
@@ -468,7 +461,6 @@ _.PvP =
 				}),
 				n(14753, {	-- Illiyana Moonblaze <Silverwing Supply Officer>
 					["coord"] = { 61.6, 83.8, ASHENVALE },
-					["maps"] = { ASHENVALE },
 					["groups"] = {
 						i(19506),	-- Silverwing Battle Tabard
 						i(19578),	-- Berserker Bracers

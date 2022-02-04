@@ -9,7 +9,6 @@ _.Zones =
 				q(5066, {	-- A Call to Arms: The Plaguelands! [Stormwind City]
 					["qg"] = 2198,	-- Crier Goodman
 					["coord"] = { 54.8, 62.6, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -17,7 +16,6 @@ _.Zones =
 				q(5090, {	-- A Call to Arms: The Plaguelands! [Ironforge]
 					["qg"] = 10877,	-- Courier Hammerfall
 					["coord"] = { 31.6, 67, IRONFORGE },
-					["maps"] = { IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -25,7 +23,6 @@ _.Zones =
 				q(5091, {	-- A Call to Arms: The Plaguelands! [Darnassus]
 					["qg"] = 10878,	-- Herald Moonstalker
 					["coord"] = { 36.4, 39.8, DARNASSUS },
-					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -33,7 +30,6 @@ _.Zones =
 				applyclassicphase(TBC_PHASE_ONE, q(10373, {	-- A Call to Arms: The Plaguelands! [The Exodar]
 					["qg"] = 20722,	-- Herald Bran'daan
 					["coord"] = { 55.4, 47.2, THE_EXODAR },
-					["maps"] = { THE_EXODAR },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -41,7 +37,6 @@ _.Zones =
 				q(5093, {	-- A Call to Arms: The Plaguelands! [Orgrimmar]
 					["qg"] = 10880,	-- Warcaller Gorlach
 					["coord"] = { 46.6, 64.6, ORGRIMMAR },
-					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -49,7 +44,6 @@ _.Zones =
 				q(5094, {	-- A Call to Arms: The Plaguelands! [Undercity]
 					["qg"] = 10879,	-- Harbinger Balthazad
 					["coord"] = { 64, 44, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -57,7 +51,6 @@ _.Zones =
 				q(5095, {	-- A Call to Arms: The Plaguelands! [Thunder Bluff]
 					["qg"] = 10881,	-- Bluff Runner Windstrider
 					["coord"] = { 41.4, 54.2, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -65,7 +58,6 @@ _.Zones =
 				applyclassicphase(TBC_PHASE_ONE, q(10374, {	-- A Call to Arms: The Plaguelands! [Silvermoon City]
 					["qg"] = 20724,	-- Herald Amorlin
 					["coord"] = { 59.3, 64.7, SILVERMOON_CITY },
-					["maps"] = { SILVERMOON_CITY },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
@@ -113,7 +105,7 @@ _.Zones =
 				q(5901, {	-- A Plague Upon Thee
 					["qg"] = 11615,	-- Mickey Levine
 					["coord"] = { 83.2, 72.4, TIRISFAL_GLADES },
-					["maps"] = { EASTERN_PLAGUELANDS, TIRISFAL_GLADES },
+					["maps"] = { EASTERN_PLAGUELANDS },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 15042, 1 },	-- Empty Termite Jar
@@ -125,7 +117,6 @@ _.Zones =
 					["qg"] = 11615,	-- Mickey Levine
 					["sourceQuest"] = 5901,	-- A Plague Upon Thee
 					["coord"] = { 83.2, 72.4, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 15044, 1 },	-- Barrel of Plagueland Termites
@@ -165,7 +156,6 @@ _.Zones =
 					["qg"] = 10837,	-- High Executor Derrington
 					["sourceQuest"] = 5098,	-- All Along the Watchtowers
 					["coord"] = { 83.0, 69.0, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 17114, 1 },	-- Araj's Phylactery Shard
@@ -189,7 +179,6 @@ _.Zones =
 					["qg"] = 10837,	-- High Executor Derrington
 					["sourceQuest"] = 5096,	-- Scarlet Diversions
 					["coord"] = { 83.0, 69.0, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 12815, 1 },	-- Beacon Torch
@@ -207,7 +196,6 @@ _.Zones =
 				q(5405, {	-- Argent Dawn Commission
 					["qg"] = 10839,	-- Argent Officer Garush
 					["coord"] = { 83.2, 68.4, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["lvl"] = 50,
 					["groups"] = {
 						i(12846),	-- Argent Dawn Commission
@@ -259,10 +247,6 @@ _.Zones =
 						{ 23.6, 6.6, IRONFORGE },
 						{ 37.6, 32.6, STORMWIND_CITY },
 					},
-					["maps"] = {
-						IRONFORGE,
-						STORMWIND_CITY,
-					},
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
 					["lvl"] = 50,
@@ -272,7 +256,6 @@ _.Zones =
 					["sourceQuest"] = 5504,	-- Mantles of the Dawn
 					["minReputation"] = { 529, EXALTED },	-- Argent Dawn
 					["coord"] = { 83.2, 68.2, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["altQuests"] = {
 						5517,	-- Chromatic Mantle of the Dawn
@@ -336,7 +319,6 @@ _.Zones =
 				q(5406, {	-- Corruptor's Scourgestones
 					["qg"] = 10839,	-- Argent Officer Garush
 					["coord"] = { 83.2, 68.4, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
 					["cost"] = {
@@ -487,7 +469,6 @@ _.Zones =
 						{ 67.4, 43.8, UNDERCITY },
 						{ 52.4, 41.8, STORMWIND_CITY },
 					},
-					["maps"] = { STORMWIND_CITY, UNDERCITY },
 					["cost"] = {
 						{ "i", 12721, 1 },	-- Good Luck Half-Charm
 					},
@@ -504,7 +485,6 @@ _.Zones =
 				q(5407, {	-- Invader's Scourgestones
 					["qg"] = 10839,	-- Argent Officer Garush
 					["coord"] = { 83.2, 68.4, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
 					["cost"] = {
@@ -583,7 +563,6 @@ _.Zones =
 					["qg"] = 10856,	-- Argent Quartermaster Hasana <The Argent Dawn>
 					["minReputation"] = { 529, REVERED },	-- Argent Dawn
 					["coord"] = { 83.2, 68.2, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 12844, 10 },	-- Argent Dawn Valor Token
@@ -593,7 +572,6 @@ _.Zones =
 				q(5408, {	-- Minion's Scourgestones
 					["qg"] = 10839,	-- Argent Officer Garush
 					["coord"] = { 83.2, 68.4, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["repeatable"] = true,
 					["cost"] = {
@@ -633,7 +611,6 @@ _.Zones =
 					["qg"] = 10837,	-- High Executor Derrington
 					["sourceQuest"] = 5236,	-- Return to the Bulwark
 					["coord"] = { 83.0, 69.0, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 50,
 					["groups"] = {
@@ -738,7 +715,6 @@ _.Zones =
 						-- #endif
 					},
 					["coord"] = { 83.0, 69.0, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 12814, 1 },	-- Flame in a Bottle
@@ -892,7 +868,6 @@ _.Zones =
 					["qg"] = 10781,	-- Royal Overseer Bauhaus <Undercity Census>
 					["sourceQuest"] = 5023,	-- Better Late Than Never
 					["coord"] = { 69.6, 43.6, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 12724, 1 },	-- Janice's Parcel
@@ -927,7 +902,6 @@ _.Zones =
 					["qg"] = 10837,	-- High Executor Derrington
 					["sourceQuest"] = 5096,	-- Scarlet Diversions
 					["coord"] = { 83.0, 69.0, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 50,
 				}),

@@ -10,7 +10,6 @@ _.Zones =
 					["qg"] = 2050,	-- Raleigh Andrean
 					["sourceQuest"] = 441,	-- Raleigh and the Undercity
 					["coord"] = { 62, 43, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 3613, 1 },	-- Valdred's Hands
@@ -43,7 +42,6 @@ _.Zones =
 					["qg"] = 2055,	-- Master Apothecary Faranell
 					["sourceQuest"] = 447,	-- A Recipe For Death
 					["coord"] = { 48.6, 69.4, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 9,
 				}),
@@ -255,7 +253,6 @@ _.Zones =
 					["qg"] = 1499,	-- Magistrate Sevren
 					["sourceQuest"] = 440,	-- The Engraved Ring
 					["coord"] = { 61.2, 50.8, TIRISFAL_GLADES },
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
 				}),
@@ -334,7 +331,6 @@ _.Zones =
 						{ 43.4, 41.6, SILVERPINE_FOREST },
 						{ 60.2, 52.2, TIRISFAL_GLADES },
 					},
-					["maps"] = { TIRISFAL_GLADES },
 					["races"] = { UNDEAD },
 					["cost"] = {
 						{ "i", 16209, 1 },	-- Podrig's Order

@@ -995,7 +995,6 @@ _.Zones =
 					["qg"] = 10667,	-- Chromie
 					["sourceQuest"] = 5941,	-- Return to Chromie
 					["coord"] = { 39.4, 66.8, WESTERN_PLAGUELANDS },
-					["maps"] = { WESTERN_PLAGUELANDS },
 					["cost"] = {
 						{ "i", 15209, 1 },	-- Relic Bundle
 					},
@@ -1026,7 +1025,6 @@ _.Zones =
 					["qg"] = 2425,	-- Varimathras
 					["sourceQuest"] = 6144,	-- The Call to Command
 					["coord"] = { 56.2, 92.6, UNDERCITY },
-					["maps"] = { UNDERCITY },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 15868, 1 },	-- The Grand Crusader's Command

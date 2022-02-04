@@ -229,12 +229,6 @@ _.Zones =
 						{ 25.8, 77.6, STORMWIND_CITY },
 						{ 85.8, 15.8, UNDERCITY },
 					},
-					["maps"] = {
-						IRONFORGE,
-						ORGRIMMAR,
-						STORMWIND_CITY,
-						UNDERCITY,
-					},
 					["classes"] = { WARLOCK },
 					["isBreadcrumb"] = true,
 					["lvl"] = 60,

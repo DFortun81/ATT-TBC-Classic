@@ -77,7 +77,6 @@ _.Zones =
 				}),
 				n(1460, {	-- Unger Statforth <Horse Breeder>
 					["coord"] = { 8.6, 54.4, WETLANDS },
-					["maps"] = { WETLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(2411),	-- Black Stallion Bridle

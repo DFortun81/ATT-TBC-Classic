@@ -216,7 +216,6 @@ _.Zones =
 				q(1205, {	-- Deadmire
 					["qg"] = 3441,	-- Melor Stonehoof
 					["coord"] = { 61.52, 80.88, THUNDER_BLUFF },
-					["maps"] = { THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 5945, 1 },	-- Deadmire's Tooth
@@ -282,7 +281,6 @@ _.Zones =
 					},
 					["description"] = "Don't forget to loot all the food and drinks off the tables.",
 					["coord"] = { 41.4, 89.2, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -380,7 +378,7 @@ _.Zones =
 					["qg"] = 6546,	-- Tabetha
 					["sourceQuest"] = 1951,	-- Rituals of Power
 					["coord"] = { 46, 57, DUSTWALLOW_MARSH },
-					["maps"] = { ARATHI_HIGHLANDS, DUSTWALLOW_MARSH },
+					["maps"] = { ARATHI_HIGHLANDS },
 					["classes"] = { MAGE },
 					["cost"] = {
 						{ "i", 7516, 1 },	-- Tabetha's Instructions
@@ -406,7 +404,7 @@ _.Zones =
 				q(1301, {	-- James Hyal (1/2)
 					["qg"] = 5081,	-- Connor Rivers
 					["coord"] = { 40.4, 91.6, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY, WETLANDS },
+					["maps"] = { WETLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 30,
@@ -416,7 +414,6 @@ _.Zones =
 					["sourceQuest"] = 1301,	-- James Hyal (1/2)
 					["altQuests"] = { 1282 },	-- They Call Him Smiling Jim
 					["coord"] = { 10.8, 60.4, WETLANDS },
-					["maps"] = { WETLANDS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -485,7 +482,6 @@ _.Zones =
 						{ 25.8, 14.4, THUNDER_BLUFF },
 						{ 85, 10.2, UNDERCITY },
 					},
-					["maps"] = { ORGRIMMAR, IRONFORGE, STORMWIND_CITY, THUNDER_BLUFF, UNDERCITY },
 					["classes"] = { MAGE },
 					["isBreadcrumb"] = true,
 					["lvl"] = 30,
@@ -602,7 +598,6 @@ _.Zones =
 				q(1260, {	-- Morgan Stern
 					["qg"] = 1141,	-- Angus Stern
 					["coord"] = { 41.4, 89.2, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 33,
@@ -854,7 +849,6 @@ _.Zones =
 					["qg"] = 4791,	-- Nazeer Bloodpike
 					["sourceQuest"] = 1261,	-- Marg Speaks
 					["coord"] = { 35.2, 30.6, DUSTWALLOW_MARSH },
-					["maps"] = { DUSTWALLOW_MARSH },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
 						{ "i", 5942, 1 },	-- Jeweled Pendant
@@ -877,7 +871,6 @@ _.Zones =
 					["qg"] = 1748,	-- Highlord Bolvar Fordragon
 					["sourceQuest"] = 11222,	-- Warn Bolvar!
 					["coord"] = { 78.2, 18.1, STORMWIND_CITY },
-					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 33,
 					["groups"] = {
@@ -901,7 +894,6 @@ _.Zones =
 						{ 25.8, 14.4, THUNDER_BLUFF },
 						{ 85, 10.2, UNDERCITY },
 					},
-					["maps"] = { ORGRIMMAR, IRONFORGE, STORMWIND_CITY, THUNDER_BLUFF, UNDERCITY },
 					["classes"] = { MAGE },
 					["isBreadcrumb"] = true,
 					["lvl"] = 35,
