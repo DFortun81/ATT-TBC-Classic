@@ -434,7 +434,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 31110
 				},
 				-- #endif
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Forceful Seaspray Emerald",
 					["recipeID"] = 47053
 				}),
@@ -480,7 +480,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 46803
 				}),
 				-- #endif
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Steady Seaspray Emerald",
 					["recipeID"] = 47054
 				}),
@@ -580,7 +580,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 31108
 				},
 				-- #endif
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Reckless Pyrestone",
 					["recipeID"] = 47055
 				}),
@@ -980,7 +980,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["name"] = "Quick Dawnstone",
 					["recipeID"] = 46403
 				}),
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Quick Lionseye",
 					["recipeID"] = 47056
 				}),
