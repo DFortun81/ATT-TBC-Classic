@@ -15,7 +15,7 @@ local TIER_TWO_MAX_REPUTATION = { 909, NEUTRAL + 1100 };	-- Darkmoon Faire, must
 local TIER_THREE_MAX_REPUTATION = { 909, NEUTRAL + 1700 };	-- Darkmoon Faire, must be less than 1700 over Neutral
 local TIER_FOUR_MAX_REPUTATION = { 909, NEUTRAL + 2500 };	-- Darkmoon Faire, must be less than 2500 over Neutral
 local TIER_FIVE_MAX_REPUTATION = { 909, FRIENDLY + 2000 };	-- Darkmoon Faire, must be less than 2000 over Friendly
-local DECK_MAX_REPUTATION = { 909, EXALTED + 999 };	-- Darkmoon Faire, must be less than Exalted 999/1000.
+local DECK_MAX_REPUTATION = { 909, EXALTED };	-- Darkmoon Faire, must be less than Exalted 999/1000.
 
 -- This is what every online guide ever says, but they're incorrect.
 -- The "More" quests appear to be infinitely repeatable, with 0 reputation gains.
