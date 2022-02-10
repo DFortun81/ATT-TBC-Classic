@@ -2243,7 +2243,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 		end
 		
 		-- If the item is a recipe, then show which characters know this recipe.
-		if group.collectible and group.spellID and group.filterID ~= 100 and app.Settings:GetTooltipSetting("KnownBy") then
+		if group.collectible and group.spellID and group.f ~= 100 and app.Settings:GetTooltipSetting("KnownBy") then
 			local knownBy = {};
 			for guid,character in pairs(ATTCharacterData) do
 				if character.Spells and character.Spells[group.spellID] then
@@ -3340,7 +3340,7 @@ local fields = {
 	["key"] = function(t)
 		return "speciesID";
 	end,
-	["filterID"] = function(t)
+	["f"] = function(t)
 		return 101;
 	end,
 	["collectible"] = function(t)
@@ -4495,9 +4495,6 @@ local fields = {
 	end,
 	["icon"] = function(t)
 		return app.asset("Category_Factions");
-	end,
-	["filterID"] = function(t)
-		return 112;
 	end,
 	["trackable"] = function(t)
 		return true;
@@ -5828,7 +5825,7 @@ local mountFields = {
 	["link"] = function(t)
 		return (t.itemID and select(2, GetItemInfo(t.itemID))) or select(1, GetSpellLink(t.spellID));
 	end,
-	["filterID"] = function(t)
+	["f"] = function(t)
 		return 100;
 	end,
 	["collectible"] = function(t)
@@ -9485,6 +9482,18 @@ function app:GetDataCache()
 			end
 			if a.rank then
 				if b.rank then
+					if a.f then
+						if b.f then
+							if a.f == b.f then
+								return a.rank < b.rank;
+							else
+								return a.f < b.f;
+							end
+						end
+						return true;
+					elseif b.f then
+						return false;
+					end
 					return a.rank < b.rank;
 				end
 				return true;
@@ -9680,7 +9689,7 @@ function app:GetDataCache()
 				end
 			end
 			for i,_ in pairs(fieldCache["spellID"]) do
-				if _[1].filterID and _[1].filterID == 100 and not self.mounts[i] then
+				if ((_[1].f and _[1].f == 100) or (_[1].filterID and _[1].filterID == 100)) and not self.mounts[i] then
 					local mount = app.CreateMount(tonumber(i));
 					self.mounts[i] = buildCategoryEntry(self, headers, _, mount);
 					if mount.u and mount.u < 3 then
@@ -13515,12 +13524,12 @@ app.events.ADDON_LOADED = function(addonName)
 		-- Function to Update the State of the Scan button. (Coroutines, do not call manually.)
 		local ObjectTypeMetas = {
 			["mountID"] = setmetatable({	-- Mounts
-				["filterID"] = 100,
+				["f"] = 100,
 				["description"] = "All mounts that you have not collected yet are displayed here.",
 				["priority"] = 3,
 			}, app.BaseFilter),
 			["recipeID"] = setmetatable({	-- Recipes
-				["filterID"] = 200,
+				["f"] = 200,
 				["description"] = "All recipes that you have not collected yet are displayed here.",
 				["priority"] = 6,
 			}, app.BaseFilter),
@@ -13597,11 +13606,11 @@ app.events.ADDON_LOADED = function(addonName)
 			if searchResultsByKey.spellID then
 				local filteredItems = {};
 				for key,entry in pairs(searchResultsByKey.spellID) do
-					if entry.filterID then
-						local filterData = filteredItems[entry.filterID];
+					if entry.f then
+						local filterData = filteredItems[entry.f];
 						if not filterData then
 							filterData = {};
-							filteredItems[entry.filterID] = filterData;
+							filteredItems[entry.f] = filterData;
 						end
 						filterData[key] = entry;
 					else

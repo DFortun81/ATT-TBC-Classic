@@ -515,6 +515,11 @@ settings.UpdateMode = function(self)
 			app.RequireFactionFilter = app.FilterItemClass_RequireFaction;
 		end
 	end
+	
+	self:SetFilter(100, app.CollectibleMounts);
+	self:SetFilter(101, app.CollectibleBattlePets);
+	self:SetFilter(102, app.CollectibleToys);
+	self:SetFilter(200, app.CollectibleRecipes);
 	if self:Get("Show:CompletedGroups") or self:Get("DebugMode") then
 		app.GroupVisibilityFilter = app.NoFilter;
 	else
@@ -1436,7 +1441,7 @@ end
 
 -- Secondary Weapon Classes
 yoffset = -4;
-for i,filterID in ipairs({ 50, 57, 100, 54, 1 }) do
+for i,filterID in ipairs({ 50, 57, 54, 1 }) do
 	local filter = settings:CreateCheckBox(itemFilterNames[filterID] or tostring(filterID), ItemFilterOnRefresh, ItemFilterOnClick);
 	filter:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, yoffset);
 	filter.filterID = filterID;
@@ -1446,7 +1451,7 @@ end
 
 -- Miscellaneous
 yoffset = -4;
-for i,filterID in ipairs({ 113, 55, 104, 200 }) do
+for i,filterID in ipairs({ 113, 55, 104 }) do
 	local filter = settings:CreateCheckBox(itemFilterNames[filterID] or tostring(filterID), ItemFilterOnRefresh, ItemFilterOnClick);
 	filter:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, yoffset);
 	filter.filterID = filterID;

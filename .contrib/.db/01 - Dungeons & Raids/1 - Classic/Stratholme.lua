@@ -525,6 +525,7 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(13251),	-- Head of Baron Rivendare
 						removeclassicphase(ach(729, {	-- Deathcharger's Reins
 							["provider"] = { "i", 13335 },	-- Deathcharger's Reins
+							["f"] = 100,
 							-- #if BEFORE WRATH
 							["description"] = "Obtain the Deathcharger's Reins from Baron Rivendare in Stratholme.",
 							["OnUpdate"] = [[function(t)

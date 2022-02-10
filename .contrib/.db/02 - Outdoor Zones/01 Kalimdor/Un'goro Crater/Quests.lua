@@ -398,6 +398,7 @@ _.Zones =
 							["provider"] = { "i", 46102 },	-- Whistle of the Venomhide Ravasaur
 							["timeline"] = { "added 3.2.0.10026" },
 							["races"] = HORDE_ONLY,
+							["f"] = 100,
 							-- #if BEFORE WRATH
 							["description"] = "Obtain a Venomhide Ravasaur.",
 							["OnUpdate"] = [[function(t)

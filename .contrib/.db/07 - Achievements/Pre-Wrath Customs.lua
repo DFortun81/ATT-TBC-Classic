@@ -64,12 +64,17 @@ local COMPANIONS_OnTooltip = [[function(t)
 	GameTooltip:AddLine("Collect " .. t.rank .. " companion pets.");
 	if t.total and t.progress < t.total and t.rank >= 25 then
 		GameTooltip:AddLine(" ");
+		local c = 0;
 		for i,g in pairs(_.SearchForFieldContainer("speciesID")) do
 			local p = g[1];
 			if p.visible then
-				GameTooltip:AddDoubleLine(" |T" .. p.icon .. ":0|t " .. p.text, _.L[p.collected and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+				c = c + 1;
+				if c < 16 then
+					GameTooltip:AddDoubleLine(" |T" .. p.icon .. ":0|t " .. p.text, _.L[p.collected and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+				end
 			end
 		end
+		if c > 15 then GameTooltip:AddLine(" And " .. (c - 15) .. " more!"); end
 	end
 end]];
 local INSANE_IN_THE_MEMBRANE_OnClick = [[function(row, button)
@@ -343,24 +348,28 @@ _.Achievements =
 			["OnClick"] = COMPANIONS_OnClick,
 			["OnTooltip"] = COMPANIONS_OnTooltip,
 			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["f"] = 101,
 			["rank"] = 1,
 		})),
 		removeclassicphase(ach(15, {	-- Plenty of Pets
 			["OnClick"] = COMPANIONS_OnClick,
 			["OnTooltip"] = COMPANIONS_OnTooltip,
 			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["f"] = 101,
 			["rank"] = 15,
 		})),
 		removeclassicphase(ach(1248, {	-- Plethora of Pets
 			["OnClick"] = COMPANIONS_OnClick,
 			["OnTooltip"] = COMPANIONS_OnTooltip,
 			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["f"] = 101,
 			["rank"] = 25,
 		})),
 		ach(1250, applyclassicphase(TBC_PHASE_ONE, {	-- Shop Smart, Shop Pet...Smart
 			["OnClick"] = COMPANIONS_OnClick,
 			["OnTooltip"] = COMPANIONS_OnTooltip,
 			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["f"] = 101,
 			["rank"] = 50,
 			["groups"] = {
 				applyclassicphase(WRATH_PHASE_ONE, i(40653)),	-- Reeking Pet Carrier
@@ -370,6 +379,7 @@ _.Achievements =
 			["OnClick"] = COMPANIONS_OnClick,
 			["OnTooltip"] = COMPANIONS_OnTooltip,
 			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["f"] = 101,
 			["rank"] = 75,
 			["groups"] = {
 				applyclassicphase(WRATH_PHASE_ONE, i(44841)),	-- Little Fawn's Salt Lick
@@ -766,6 +776,7 @@ _.Achievements =
 	achcat(ACHIEVEMENT_CATEGORY_FEATS_OF_STRENGTH, {
 		removeclassicphase(ach(2358, {	-- Charger
 			["classes"] = { PALADIN },
+			["f"] = 100,
 			-- #if BEFORE 3.0.1
 			["sourceQuests"] = {
 				7647,	-- Judgment and Redemption

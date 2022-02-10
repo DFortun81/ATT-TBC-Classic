@@ -26,6 +26,7 @@ _.Zones =
 						removeclassicphase(ach(3356, {	-- Winterspring Frostsaber
 							["provider"] = { "i", 13086 },	-- Reins of the Winterspring Frostsaber
 							["races"] = ALLIANCE_ONLY,
+							["f"] = 100,
 							-- #if BEFORE WRATH
 							["description"] = "Obtain a Winterspring Frosaber.",
 							["OnUpdate"] = [[function(t)
