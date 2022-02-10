@@ -109,6 +109,7 @@ local INSANE_IN_THE_MEMBRANE_OnTooltip = [[function(t)
 		GameTooltip:AddDoubleLine(" |T" .. t.shendralar.icon .. ":0|t " .. t.shendralar.text, _.L[t.shendralar.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 	end
 end]];
+local LEVEL_OnUpdate = [[function(t) t.SetAchievementCollected(t.achievementID, _.Level >= t.lvl); end]];
 local REPUTATIONS_OnClick = [[function(row, button)
 	if button == "RightButton" then
 		local t = row.ref;
@@ -198,6 +199,59 @@ end]];
 _.Achievements =
 {
 	achcat(ACHIEVEMENT_CATEGORY_CHARACTER, {
+		removeclassicphase(ach(6, {	-- Level 10
+			["lvl"] = 10,
+			-- #if BEFORE WRATH
+			["OnUpdate"] = LEVEL_OnUpdate,
+			-- #endif
+		})),
+		removeclassicphase(ach(7, {	-- Level 20
+			["lvl"] = 20,
+			-- #if BEFORE WRATH
+			["OnUpdate"] = LEVEL_OnUpdate,
+			-- #endif
+		})),
+		removeclassicphase(ach(8, {	-- Level 30
+			["lvl"] = 30,
+			-- #if BEFORE WRATH
+			["OnUpdate"] = LEVEL_OnUpdate,
+			-- #endif
+		})),
+		removeclassicphase(ach(9, {	-- Level 40
+			["lvl"] = 40,
+			-- #if BEFORE WRATH
+			["OnUpdate"] = LEVEL_OnUpdate,
+			-- #endif
+		})),
+		removeclassicphase(ach(10, {	-- Level 50
+			["lvl"] = 50,
+			-- #if BEFORE WRATH
+			["OnUpdate"] = LEVEL_OnUpdate,
+			-- #endif
+		})),
+		removeclassicphase(ach(11, {	-- Level 60
+			["lvl"] = 60,
+			-- #if BEFORE WRATH
+			["OnUpdate"] = LEVEL_OnUpdate,
+			-- #endif
+		})),
+		ach(12, applyclassicphase(TBC_PHASE_ONE, {	-- Level 70
+			["lvl"] = 70,
+			-- #if BEFORE WRATH
+			["OnUpdate"] = LEVEL_OnUpdate,
+			-- #endif
+		})),
+		ach(13, applyclassicphase(WRATH_PHASE_ONE, {	-- Level 80
+			["lvl"] = 80,
+			-- #if BEFORE WRATH
+			["OnUpdate"] = LEVEL_OnUpdate,
+			-- #endif
+			["groups"] = {
+				i(41426, {	-- Magically Wrapped Gift
+					i(41427),	-- Dalaran Firework
+				}),
+			},
+		})),
 		removeclassicphase(ach(891, {	-- Giddy Up!
 			["spellID"] = 33388,	-- Apprentice Riding
 			["rank"] = 1,

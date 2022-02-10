@@ -244,6 +244,14 @@ app.L = {
 
 	-- These need to be localized manually.
 	["ACHIEVEMENT_DATA"] = {
+		[6] = { 92, "Level 10", "Interface\\Icons\\Achievement_Level_10" },
+		[7] = { 92, "Level 20", "Interface\\Icons\\Achievement_Level_20" },
+		[8] = { 92, "Level 30", "Interface\\Icons\\Achievement_Level_30" },
+		[9] = { 92, "Level 40", "Interface\\Icons\\Achievement_Level_40" },
+		[10] = { 92, "Level 50", "Interface\\Icons\\Achievement_Level_50" },
+		[11] = { 92, "Level 60", "Interface\\Icons\\Achievement_Level_60" },
+		[12] = { 92, "Level 70", "Interface\\Icons\\Achievement_Level_70" },
+		[13] = { 92, "Level 80", "Interface\\Icons\\Achievement_Level_80" },
 		[891] = { 92, "Giddy Up!", "Interface\\Icons\\ability_mount_ridinghorse" },
 		[889] = { 92, "Fast and Furious", "Interface\\Icons\\ability_mount_blackpanther" },
 		[890] = { 92, "Into the Wild Blue Yonder", "Interface\\Icons\\ability_mount_gryphon_01" },
