@@ -256,6 +256,8 @@ app.L = {
 		[889] = { 92, "Fast and Furious", "Interface\\Icons\\ability_mount_blackpanther" },
 		[890] = { 92, "Into the Wild Blue Yonder", "Interface\\Icons\\ability_mount_gryphon_01" },
 		[5180] = { 92, "Breaking the Sound Barrier", "Interface\\Icons\\ability_mount_rocketmount" },
+		[1165] = { 92, "My Sack is \"Gigantique\"" },
+		
 		[628] = { 14808, "Deadmines", app.asset("achievement_boss_edwinvancleef") },
 		[629] = { 14808, "Ragefire Chasm", app.asset("spell_shadow_summonfelguard") },
 		[630] = { 14808, "Wailing Caverns", app.asset("achievement_boss_mutanus_the_devourer") },
