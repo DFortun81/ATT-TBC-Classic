@@ -186,6 +186,90 @@ local INSANE_IN_THE_MEMBRANE_OnTooltip = [[function(t)
 	end
 end]];
 local LEVEL_OnUpdate = [[function(t) t.SetAchievementCollected(t.achievementID, _.Level >= t.lvl); end]];
+local MOUNTS_OnClick = [[function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local template,r = {},{};
+		for i,o in pairs(_.SearchForFieldContainer("spellID")) do
+			if ((o[1].f and o[1].f == 100) or (o[1].filterID and o[1].filterID == 100)) and not r[i] then
+				table.insert(template, o[1]);
+				r[i] = 1;
+			end
+		end
+		
+		local clone = _.CreateMiniListForGroup(_.CreateNPC(t[t.key], template)).data;
+		clone.OnTooltip = t.OnTooltip;
+		clone.OnUpdate = t.OnUpdate;
+		clone.rank = t.rank;
+		return true;
+	end
+end]];
+local MOUNTS_OnUpdate = [[function(t)
+	if _.CollectibleMounts then
+		local count,r = 0,{};
+		local spells = _.SearchForFieldContainer("spellID");
+		for i,g in pairs(spells) do
+			if ((g[1].f and g[1].f == 100) or (g[1].filterID and g[1].filterID == 100)) and not r[i] then
+				if g[1].collected then count = count + 1; end
+				r[i] = 1;
+			end
+		end
+		if t.rank > 1 then
+			t.progress = math.min(count, t.rank);
+			t.total = t.rank;
+			t.collectible = false;
+			
+			if _.GroupFilter(t) then
+				local parent = t.parent;
+				parent.total = (parent.total or 0) + t.total;
+				parent.progress = (parent.progress or 0) + t.progress;
+				t.visible = (t.progress < t.total or _.CollectedItemVisibilityFilter(t));
+			else
+				t.visible = false;
+			end
+		else
+			t.collected = count >= 1;
+			t.collectible = collectible;
+			
+			if _.GroupFilter(t) then
+				local parent = t.parent;
+				parent.total = (parent.total or 0) + 1;
+				if t.collected then parent.progress = (parent.progress or 0) + 1; end
+				t.visible = (not t.collected or _.CollectedItemVisibilityFilter(t));
+			else
+				t.visible = false;
+			end
+		end
+	else
+		t.collected = nil;
+		t.collectible = false;
+		t.progress = nil;
+		t.total = nil;
+		t.visible = false;
+	end
+	return true;
+end]];
+local MOUNTS_OnTooltip = [[function(t)
+	GameTooltip:AddLine("Collect " .. t.rank .. " mounts.");
+	if t.total and t.progress < t.total and t.rank >= 25 then
+		GameTooltip:AddLine(" ");
+		local c = 0;
+		local template,r = {},{};
+		for i,o in pairs(_.SearchForFieldContainer("spellID")) do
+			local p = o[1];
+			if ((p.f and p.f == 100) or (p.filterID and p.filterID == 100)) and not r[i] then
+				r[i] = 1;
+				if p.visible then
+					c = c + 1;
+					if c < 16 then
+						GameTooltip:AddDoubleLine(" |T" .. p.icon .. ":0|t " .. p.text, _.L[p.collected and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+					end
+				end
+			end
+		end
+		if c > 15 then GameTooltip:AddLine(" And " .. (c - 15) .. " more!"); end
+	end
+end]];
 local REPUTATIONS_OnClick = [[function(row, button)
 	if button == "RightButton" then
 		local t = row.ref;
@@ -275,6 +359,92 @@ end]];
 _.Achievements =
 {
 	achcat(ACHIEVEMENT_CATEGORY_CHARACTER, {
+		-- Armored Brown Bear, located in Dalaran. [TOCO]
+		ach(5180, applyclassicphase(CATA_PHASE_ONE, {	-- Breaking the Sound Barrier
+			["spellID"] = 90265,	-- Master Riding
+			["rank"] = 5,
+		})),
+		removeclassicphase(ach(1017, {	-- Can I Keep Him?
+			["OnClick"] = COMPANIONS_OnClick,
+			["OnTooltip"] = COMPANIONS_OnTooltip,
+			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["f"] = 101,
+			["rank"] = 1,
+		})),
+		-- #if BEFORE 4.0.1
+		ach(92, {	-- Did Somebody Order a Knuckle Sandwich?
+			["timeline"] = { "removed 4.0.1" },
+		}),
+		-- #endif
+		ach(2716),	-- Dual Talent Specialization
+		ach(556),	-- Epic
+		removeclassicphase(ach(889, {	-- Fast and Furious
+			["spellID"] = 33391,	-- Journeyman Riding
+			["rank"] = 2,
+		})),
+		removeclassicphase(ach(2142, {	-- Filling Up The Barn
+			["OnClick"] = MOUNTS_OnClick,
+			["OnTooltip"] = MOUNTS_OnTooltip,
+			["OnUpdate"] = MOUNTS_OnUpdate,
+			["rank"] = 25,
+			["f"] = 100,
+		})),
+		ach(1254, {	-- Friend or Fowl? [TODO: Move to Howling Fjord]
+			["coords"] = {
+				{ 69.6, 65.8, HOWLING_FJORD },
+				{ 59.4, 63.6, HOWLING_FJORD },
+				{ 31.6, 41.4, HOWLING_FJORD },
+			},
+			["crs"] = {
+				23801,	-- Turkey
+				24746,	-- Fjord Turkey
+				29594,	-- Angry Turkey
+			},
+		}),
+		ach(2097, {	-- Get to the Choppa!
+			["providers"] = {
+				{ "i", 44413 },	-- Mekgineer's Chopper
+				{ "i", 41508 },	-- Mechano-hog
+			},
+			["f"] = 100,
+		}),
+		removeclassicphase(ach(891, {	-- Giddy Up!
+			["spellID"] = 33388,	-- Apprentice Riding
+			["rank"] = 1,
+		})),
+		ach(964),	-- Going Down?
+		ach(1176, {	-- Got My Mind On My Money [100g]
+			["rank"] = 100,
+		}),
+		ach(1177, {	-- Got My Mind On My Money [1000g]
+			["rank"] = 1000,
+		}),
+		ach(1178, {	-- Got My Mind On My Money [5000g]
+			["rank"] = 5000,
+		}),
+		ach(1180, {	-- Got My Mind On My Money [10000g]
+			["rank"] = 10000,
+		}),
+		ach(1181, {	-- Got My Mind On My Money [25000g]
+			["rank"] = 25000,
+		}),
+		ach(558),	-- Greedy
+		-- 1956: Higher Learning [TODO: Add to Dalaran]
+		ach(890, applyclassicphase(TBC_PHASE_ONE, {	-- Into the Wild Blue Yonder
+			["spellID"] = 34090,	-- Expert Riding
+			["rank"] = 3,
+		})),
+		ach(1833),	-- It's Happy Hour Somewhere
+		ach(2143, applyclassicphase(TBC_PHASE_ONE, {	-- Leading the Cavalry
+			["OnClick"] = MOUNTS_OnClick,
+			["OnTooltip"] = MOUNTS_OnTooltip,
+			["OnUpdate"] = MOUNTS_OnUpdate,
+			["rank"] = 50,
+			["f"] = 100,
+			["groups"] = {
+				applyclassicphase(WRATH_PHASE_ONE, i(44178)),	-- Reins of the Albino Drake
+			},
+		})),
 		removeclassicphase(ach(6, {	-- Level 10
 			["lvl"] = 10,
 			-- #if BEFORE WRATH
@@ -328,29 +498,42 @@ _.Achievements =
 				}),
 			},
 		})),
-		removeclassicphase(ach(891, {	-- Giddy Up!
-			["spellID"] = 33388,	-- Apprentice Riding
-			["rank"] = 1,
-		})),
-		removeclassicphase(ach(889, {	-- Fast and Furious
-			["spellID"] = 33391,	-- Journeyman Riding
-			["rank"] = 2,
-		})),
-		ach(890, applyclassicphase(TBC_PHASE_ONE, {	-- Into the Wild Blue Yonder
-			["spellID"] = 34090,	-- Expert Riding
-			["rank"] = 3,
-		})),
-		ach(5180, applyclassicphase(TBC_PHASE_ONE, {	-- Breaking the Sound Barrier
-			["spellID"] = 34091,	-- Artisan Riding
-			["rank"] = 4,
-		})),
-		removeclassicphase(ach(1017, {	-- Can I Keep Him?
+		ach(2516, applyclassicphase(WRATH_PHASE_ONE, {	-- Lil' Game Hunter
 			["OnClick"] = COMPANIONS_OnClick,
 			["OnTooltip"] = COMPANIONS_OnTooltip,
 			["OnUpdate"] = COMPANIONS_OnUpdate,
 			["f"] = 101,
-			["rank"] = 1,
+			["rank"] = 75,
+			["groups"] = {
+				applyclassicphase(WRATH_PHASE_ONE, i(44841)),	-- Little Fawn's Salt Lick
+			},
 		})),
+		ach(705),	-- Master of Arms
+		ach(2536, applyclassicphase(WRATH_PHASE_ONE, {	-- Mountain o' Mounts [A]
+			["OnClick"] = MOUNTS_OnClick,
+			["OnTooltip"] = MOUNTS_OnTooltip,
+			["OnUpdate"] = MOUNTS_OnUpdate,
+			["races"] = ALLIANCE_ONLY,
+			["rank"] = 100,
+			["f"] = 100,
+			["groups"] = {
+				applyclassicphase(WRATH_PHASE_ONE, i(44843)),	-- Blue Dragonhawk Mount
+			},
+		})),
+		ach(2537, applyclassicphase(WRATH_PHASE_ONE, {	-- Mountain o' Mounts [H]
+			["OnClick"] = MOUNTS_OnClick,
+			["OnTooltip"] = MOUNTS_OnTooltip,
+			["OnUpdate"] = MOUNTS_OnUpdate,
+			["races"] = HORDE_ONLY,
+			["rank"] = 100,
+			["f"] = 100,
+			["groups"] = {
+				applyclassicphase(WRATH_PHASE_ONE, i(44842)),	-- Red Dragonhawk Mount
+			},
+		})),
+		-- My Sack is "Gigantique", located in Shattrath
+		ach(559),	-- Needy
+		ach(2556),	-- Pest Control
 		removeclassicphase(ach(15, {	-- Plenty of Pets
 			["OnClick"] = COMPANIONS_OnClick,
 			["OnTooltip"] = COMPANIONS_OnTooltip,
@@ -365,6 +548,17 @@ _.Achievements =
 			["f"] = 101,
 			["rank"] = 25,
 		})),
+		ach(621, {	-- Represent [TODO]
+			["rank"] = 1,
+		}),
+		-- 2084: Ring of the Kirin Tor, located in Dalaran. [TODO]
+		removeclassicphase(ach(546, {	-- Safe Deposit
+			-- #if BEFORE WRATH
+			["description"] = "Buy 7 additional bank slots.",
+			["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, GetNumBankSlots() >= 7); end]],
+			-- #endif
+		})),
+		ach(545),	-- Shave and a Haircut
 		ach(1250, applyclassicphase(TBC_PHASE_ONE, {	-- Shop Smart, Shop Pet...Smart
 			["OnClick"] = COMPANIONS_OnClick,
 			["OnTooltip"] = COMPANIONS_OnTooltip,
@@ -375,16 +569,34 @@ _.Achievements =
 				applyclassicphase(WRATH_PHASE_ONE, i(40653)),	-- Reeking Pet Carrier
 			},
 		})),
-		ach(2516, applyclassicphase(WRATH_PHASE_ONE, {	-- Lil' Game Hunter
-			["OnClick"] = COMPANIONS_OnClick,
-			["OnTooltip"] = COMPANIONS_OnTooltip,
-			["OnUpdate"] = COMPANIONS_OnUpdate,
-			["f"] = 101,
-			["rank"] = 75,
-			["groups"] = {
-				applyclassicphase(WRATH_PHASE_ONE, i(44841)),	-- Little Fawn's Salt Lick
-			},
+		removeclassicphase(ach(2141, {	-- Stable Keeper
+			["OnClick"] = MOUNTS_OnClick,
+			["OnTooltip"] = MOUNTS_OnTooltip,
+			["OnUpdate"] = MOUNTS_OnUpdate,
+			["rank"] = 10,
+			["f"] = 100,
 		})),
+		ach(557),	-- Superior
+		ach(1832),	-- Tastes Like Chicken
+		ach(1020, {	-- Ten Tabards [TODO]
+			["rank"] = 10,
+		}),
+		ach(1187),	-- The Keymaster
+		ach(892, applyclassicphase(TBC_PHASE_ONE, {	-- The Right Stuff
+			["spellID"] = 34091,	-- Artisan Riding
+			["rank"] = 4,
+		})),
+		ach(1206),	-- To All The Squirrels I've Loved Before
+		ach(2557),	-- To All The Squirrels Who Shared My Life
+		-- 2078: Traveler's Tundra Mammoth, located in Dalaran. [TODO]
+		ach(1021, {	-- Twenty-Five Tabards [TODO]
+			["rank"] = 25,
+			["groups"] = {
+				i(40643),	-- Tabard of the Achiever
+			},
+		}),
+		ach(1244),	-- Well Read
+		ach(2077),	-- Wooly Mammoth
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_QUESTS, {
 		
@@ -787,6 +999,11 @@ _.Achievements =
 			["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(6602) or C_QuestLog.IsQuestFlaggedCompleted(6502) or C_QuestLog.IsQuestFlaggedCompleted(5102)); end]],
 			-- #endif
 		})),
+		-- #if AFTER 4.0.1
+		ach(92, {	-- Did Somebody Order a Knuckle Sandwich?
+			["timeline"] = { "removed 4.0.1" },
+		}),
+		-- #endif
 		ach(2336, applyclassicphase(PHASE_THREE, {	-- Insane in the Membrane
 			["OnClick"] = INSANE_IN_THE_MEMBRANE_OnClick,
 			["OnTooltip"] = INSANE_IN_THE_MEMBRANE_OnTooltip,
