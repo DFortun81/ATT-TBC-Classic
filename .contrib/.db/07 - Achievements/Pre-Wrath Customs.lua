@@ -1,6 +1,77 @@
 --------------------------------------------------
 --    A C H I E V E M E N T S    M O D U L E    --
 --------------------------------------------------
+local COMPANIONS_OnClick = [[function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local template = {};
+		for i,o in pairs(_.SearchForFieldContainer("speciesID")) do
+			table.insert(template, o[1]);
+		end
+		
+		local clone = _.CreateMiniListForGroup(_.CreateNPC(t[t.key], template)).data;
+		clone.OnTooltip = t.OnTooltip;
+		clone.OnUpdate = t.OnUpdate;
+		clone.rank = t.rank;
+		return true;
+	end
+end]];
+local COMPANIONS_OnUpdate = [[function(t)
+	if _.CollectibleBattlePets then
+		local count = 0;
+		local pets = _.SearchForFieldContainer("speciesID");
+		for i,g in pairs(pets) do
+			if g[1].collected then
+				count = count + 1;
+			end
+		end
+		if t.rank > 1 then
+			t.progress = math.min(count, t.rank);
+			t.total = t.rank;
+			t.collectible = false;
+			
+			if _.GroupFilter(t) then
+				local parent = t.parent;
+				parent.total = (parent.total or 0) + t.total;
+				parent.progress = (parent.progress or 0) + t.progress;
+				t.visible = (t.progress < t.total or _.CollectedItemVisibilityFilter(t));
+			else
+				t.visible = false;
+			end
+		else
+			t.collected = count >= 1;
+			t.collectible = collectible;
+			
+			if _.GroupFilter(t) then
+				local parent = t.parent;
+				parent.total = (parent.total or 0) + 1;
+				if t.collected then parent.progress = (parent.progress or 0) + 1; end
+				t.visible = (not t.collected or _.CollectedItemVisibilityFilter(t));
+			else
+				t.visible = false;
+			end
+		end
+	else
+		t.collected = nil;
+		t.collectible = false;
+		t.progress = nil;
+		t.total = nil;
+		t.visible = false;
+	end
+	return true;
+end]];
+local COMPANIONS_OnTooltip = [[function(t)
+	GameTooltip:AddLine("Collect " .. t.rank .. " companion pets.");
+	if t.total and t.progress < t.total and t.rank >= 25 then
+		GameTooltip:AddLine(" ");
+		for i,g in pairs(_.SearchForFieldContainer("speciesID")) do
+			local p = g[1];
+			if p.visible then
+				GameTooltip:AddDoubleLine(" |T" .. p.icon .. ":0|t " .. p.text, _.L[p.collected and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+			end
+		end
+	end
+end]];
 local INSANE_IN_THE_MEMBRANE_OnClick = [[function(row, button)
 	if button == "RightButton" then
 		local t = row.ref;
@@ -267,6 +338,42 @@ _.Achievements =
 		ach(5180, applyclassicphase(TBC_PHASE_ONE, {	-- Breaking the Sound Barrier
 			["spellID"] = 34091,	-- Artisan Riding
 			["rank"] = 4,
+		})),
+		removeclassicphase(ach(1017, {	-- Can I Keep Him?
+			["OnClick"] = COMPANIONS_OnClick,
+			["OnTooltip"] = COMPANIONS_OnTooltip,
+			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["rank"] = 1,
+		})),
+		removeclassicphase(ach(15, {	-- Plenty of Pets
+			["OnClick"] = COMPANIONS_OnClick,
+			["OnTooltip"] = COMPANIONS_OnTooltip,
+			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["rank"] = 15,
+		})),
+		removeclassicphase(ach(1248, {	-- Plethora of Pets
+			["OnClick"] = COMPANIONS_OnClick,
+			["OnTooltip"] = COMPANIONS_OnTooltip,
+			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["rank"] = 25,
+		})),
+		ach(1250, applyclassicphase(TBC_PHASE_ONE, {	-- Shop Smart, Shop Pet...Smart
+			["OnClick"] = COMPANIONS_OnClick,
+			["OnTooltip"] = COMPANIONS_OnTooltip,
+			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["rank"] = 50,
+			["groups"] = {
+				applyclassicphase(WRATH_PHASE_ONE, i(40653)),	-- Reeking Pet Carrier
+			},
+		})),
+		ach(2516, applyclassicphase(WRATH_PHASE_ONE, {	-- Lil' Game Hunter
+			["OnClick"] = COMPANIONS_OnClick,
+			["OnTooltip"] = COMPANIONS_OnTooltip,
+			["OnUpdate"] = COMPANIONS_OnUpdate,
+			["rank"] = 75,
+			["groups"] = {
+				applyclassicphase(WRATH_PHASE_ONE, i(44841)),	-- Little Fawn's Salt Lick
+			},
 		})),
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_QUESTS, {
