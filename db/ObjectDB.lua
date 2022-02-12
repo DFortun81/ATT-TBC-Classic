@@ -399,6 +399,7 @@ select(2, ...).ObjectNames = {
 	[217852] = "Horde Bonfire",
 	[240622] = "Warden's Scroll Case",
 	[243911] = "Snow Mound",
+	[259806] = "Love Potion Recipe",
 	[259870] = "Horde Bonfire",
 	[259871] = "Alliance Bonfire",
 	[259926] = "Horde Bonfire",
