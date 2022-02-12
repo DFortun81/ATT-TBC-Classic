@@ -590,6 +590,20 @@ _.Zones =
 						i(2032),	-- Gallan Cuffs
 					},
 				}),
+				q(9601, {	-- To The Bulwark
+					["qgs"] = {
+						16681,	-- Champion Bachi <Paladin Trainer>
+						20406,	-- Champion Cyssa Dawnrose <Paladin Trainer>
+					},
+					["coords"] = {
+						{ 92.0, 37.6, SILVERMOON_CITY },
+						{ 57.8, 90.8, UNDERCITY },
+					},
+					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
+					["classes"] = { PALADIN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 50,
+				}),
 				q(1999, {	-- Tools of the Trade
 					["qg"] = 6467,	-- Mennet Carkad
 					["sourceQuest"] = 1998,	-- Fenwick Thatros

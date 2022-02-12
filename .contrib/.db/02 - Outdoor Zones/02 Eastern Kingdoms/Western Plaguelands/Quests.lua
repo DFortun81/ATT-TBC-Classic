@@ -389,13 +389,11 @@ _.Zones =
 				}),
 				q(8414, {	-- Dispelling Evil
 					["qg"] = 10838,	-- Commander Ashlam Valorfist
-					["sourceQuest"] = 8415,	-- Chillwind Camp
+					["sourceQuest"] = 8415,	-- Chillwind Point
 					["coord"] = { 42.8, 84.0, WESTERN_PLAGUELANDS },
-					["races"] = ALLIANCE_ONLY,
+					["cost"] = { { "i", 12840, 20 } },	-- Minion's Scourgestone
 					["classes"] = { PALADIN },
-					["cost"] = {
-						{ "i", 12840, 20 },	-- Minion's Scourgestone
-					},
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 50,
 				}),
 				q(5218, {	-- Felstone Field Cauldron
@@ -478,8 +476,8 @@ _.Zones =
 					["qg"] = 1854,	-- High Priest Thel'danis
 					["sourceQuest"] = 8414,	-- Dispelling Evil
 					["coord"] = { 52.2, 83.6, WESTERN_PLAGUELANDS },
-					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 50,
 				}),
 				q(5407, {	-- Invader's Scourgestones

@@ -343,6 +343,17 @@ _.Zones =
 						i(12299),	-- Netted Gloves
 					},
 				}),
+				q(10590, {	-- Prove Your Hatred
+					["qg"] = 17099,	-- Mehlar Dawnblade
+					["sourceQuest"] = 9601,	-- To The Bulwark
+					["coord"] = { 83.2, 71.2, TIRISFAL_GLADES },
+					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
+					["cost"] = { { "i", 12840, 20 } },	-- Minion's Scourgestone
+					["maps"] = { UNDERCITY },
+					["classes"] = { PALADIN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 50,
+				}),
 				q(409, {	-- Proving Allegiance
 					["qg"] = 1497,	-- Gunther Arcanus
 					["sourceQuest"]= 366,	-- Return the Book
@@ -674,6 +685,19 @@ _.Zones =
 						i(5941),	-- Brass Scale Pants
 						i(3444),	-- Tiller's Vest
 					},
+				}),
+				q(10592, {	-- Wisdom of the Banshee Queen
+					["providers"] = {
+						{ "n", 17099 },	-- Mehlar Dawnblade
+						{ "i", 30700 },	-- Scourgestone Fragments
+					},
+					["sourceQuest"] = 10590,	-- Prove Your Hatred
+					["coord"] = { 83.2, 71.2, TIRISFAL_GLADES },
+					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
+					["maps"] = { UNDERCITY },
+					["classes"] = { PALADIN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 50,
 				}),
 			}),
 		}),
