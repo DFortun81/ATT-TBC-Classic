@@ -1989,7 +1989,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 				local usedToBuy = app.CreateNPC(-2);
 				if not usedToBuy.g then usedToBuy.g = {}; end
 				for i,o in ipairs(costResults) do
-					if o.key == "difficultyID" or o.key == "instanceID" or o.key == "mapID" or o.key == "headerID" then
+					if o.key == "instanceID" or ((o.key == "difficultyID" or o.key == "mapID" or o.key == "headerID") and (o.parent and GetRelativeValue(o.parent, "instanceID"))) then
 						if app.CollectibleQuests then
 							local d = CreateObject(o);
 							d.collectible = true;
@@ -5013,7 +5013,7 @@ local itemFields = {
 			if not t.parent or not t.parent.saved then
 				for _,ref in pairs(results) do
 					if ref.itemID ~= id and app.RecursiveGroupRequirementsFilter(ref) then
-						if ref.key == "difficultyID" or ref.key == "instanceID" or ref.key == "mapID" or ref.key == "headerID" then
+						if ref.key == "instanceID" or ((ref.key == "difficultyID" or ref.key == "mapID" or ref.key == "headerID") and (ref.parent and GetRelativeValue(ref.parent, "instanceID"))) then
 							return app.CollectibleQuests;
 						elseif ref.collectible and not ref.collected then
 							return true;
@@ -5058,7 +5058,7 @@ local itemFields = {
 		if results and #results > 0 then
 			for _,ref in pairs(results) do
 				if ref.itemID ~= id and app.RecursiveGroupRequirementsFilter(ref) then
-					if ref.key == "difficultyID" or ref.key == "instanceID" or ref.key == "mapID" or ref.key == "headerID" then
+					if ref.key == "instanceID" or ((ref.key == "difficultyID" or ref.key == "mapID" or ref.key == "headerID") and (ref.parent and GetRelativeValue(ref.parent, "instanceID"))) then
 						if app.CollectibleQuests and GetItemCount(id, true) == 0 then
 							return false;
 						end
