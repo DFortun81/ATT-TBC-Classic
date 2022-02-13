@@ -5832,11 +5832,25 @@ local mountFields = {
 		return app.CollectibleMounts;
 	end,
 	["collected"] = function(t)
-		if IsSpellKnown(t.spellID) or (t.questID and IsQuestFlaggedCompleted(t.questID)) or (t.itemID and GetItemCount(t.itemID, true) > 0) then
+		if t.explicitlyCollected then
 			app.CurrentCharacter.Spells[t.spellID] = 1;
 			ATTAccountWideData.Spells[t.spellID] = 1;
 			return 1;
 		elseif app.CurrentCharacter.Spells[t.spellID] == 1 then
+			-- Check all of the matches
+			for _,g in ipairs(app.SearchForField("spellID", t.spellID)) do
+				if #g > 1 then
+					for i,o in ipairs(g) do
+						if o.explicitlyCollected then
+							app.CurrentCharacter.Spells[t.spellID] = 1;
+							ATTAccountWideData.Spells[t.spellID] = 1;
+							return 1;
+						end
+					end
+				end
+			end
+			
+			-- Unflag collection
 			app.CurrentCharacter.Spells[t.spellID] = nil;
 			ATTAccountWideData.Spells[t.spellID] = nil;
 			for guid,characterData in pairs(ATTCharacterData) do
@@ -5846,6 +5860,9 @@ local mountFields = {
 			end
 		end
 		if app.AccountWideMounts and ATTAccountWideData.Spells[t.spellID] then return 2; end
+	end,
+	["explicitlyCollected"] = function(t)
+		return IsSpellKnown(t.spellID) or (t.questID and IsQuestFlaggedCompleted(t.questID)) or (t.itemID and GetItemCount(t.itemID, true) > 0);
 	end,
 	["b"] = function(t)
 		return (t.parent and t.parent.b) or 1;
