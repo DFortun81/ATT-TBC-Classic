@@ -5833,13 +5833,11 @@ local mountFields = {
 	end,
 	["collected"] = function(t)
 		-- Check all of the matches
-		for _,g in ipairs(app.SearchForField("spellID", t.spellID)) do
-			for i,o in ipairs(g) do
-				if o.explicitlyCollected then
-					app.CurrentCharacter.Spells[t.spellID] = 1;
-					ATTAccountWideData.Spells[t.spellID] = 1;
-					return 1;
-				end
+		for i,o in ipairs(app.SearchForField("spellID", t.spellID)) do
+			if o.explicitlyCollected then
+				app.CurrentCharacter.Spells[t.spellID] = 1;
+				ATTAccountWideData.Spells[t.spellID] = 1;
+				return 1;
 			end
 		end
 		
