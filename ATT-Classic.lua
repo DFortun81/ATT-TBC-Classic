@@ -5832,29 +5832,23 @@ local mountFields = {
 		return app.CollectibleMounts;
 	end,
 	["collected"] = function(t)
-		if t.explicitlyCollected then
-			app.CurrentCharacter.Spells[t.spellID] = 1;
-			ATTAccountWideData.Spells[t.spellID] = 1;
-			return 1;
-		elseif app.CurrentCharacter.Spells[t.spellID] == 1 then
-			-- Check all of the matches
-			for _,g in ipairs(app.SearchForField("spellID", t.spellID)) do
-				if #g > 1 then
-					for i,o in ipairs(g) do
-						if o.explicitlyCollected then
-							app.CurrentCharacter.Spells[t.spellID] = 1;
-							ATTAccountWideData.Spells[t.spellID] = 1;
-							return 1;
-						end
-					end
+		-- Check all of the matches
+		for _,g in ipairs(app.SearchForField("spellID", t.spellID)) do
+			for i,o in ipairs(g) do
+				if o.explicitlyCollected then
+					app.CurrentCharacter.Spells[t.spellID] = 1;
+					ATTAccountWideData.Spells[t.spellID] = 1;
+					return 1;
 				end
 			end
-			
-			-- Unflag collection
+		end
+		
+		-- Unflag collection
+		if app.CurrentCharacter.Spells[t.spellID] == 1 then
 			app.CurrentCharacter.Spells[t.spellID] = nil;
 			ATTAccountWideData.Spells[t.spellID] = nil;
 			for guid,characterData in pairs(ATTCharacterData) do
-				if characterData.Toys and characterData.Spells[t.spellID] then
+				if characterData.Spells and characterData.Spells[t.spellID] then
 					ATTAccountWideData.Spells[t.spellID] = 1;
 				end
 			end
