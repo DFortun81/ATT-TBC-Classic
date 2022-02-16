@@ -8,11 +8,25 @@ _.Holidays = { applyholiday(NOBLEGARDEN, {
 	["holidayID"] = 235477,
 	-- #endif
 	["groups"] = {
-		-- TODO: Easter Holiday
-		-- Brightly Colored Egg
-		i(6834),	-- Black Tuxedo
-		i(6835),	-- Black Tuxedo Pants
-		i(19028),	-- Elegant Dress
-		i(6833),	-- White Tuxedo Shirt
+		-- #if BEFORE WRATH
+		o(113768, {	-- Brightly Colored Egg
+			["description"] = "These eggs can be found spread out in all of the starting zones.",
+			["groups"] = {
+				i(19028),	-- Elegant Dress
+				i(6835),	-- Black Tuxedo Pants
+				i(6833),	-- White Tuxedo Shirt
+				i(7807),	-- Candy Bar
+				i(7808),	-- Chocolate Square
+				i(7806),	-- Lollipop
+			},
+		}),
+		-- #endif
 	},
 })};
+
+
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	holiday(235477, {	-- Noblegarden
+		i(6834),	-- Black Tuxedo
+	}),
+}));

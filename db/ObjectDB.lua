@@ -1,7 +1,8 @@
 -------------------------------------------------------
 --   O B J E C T   D A T A B A S E   M O D U L E   --
 -------------------------------------------------------
-select(2, ...).ObjectNames = {
+local _ = select(2, ...);
+_.ObjectNames = {
 	[31] = "Old Lion Statue",
 	[34] = "Old Jug",
 	[35] = "Captain's Footlocker",
@@ -92,6 +93,7 @@ select(2, ...).ObjectNames = {
 	[112888] = "Dusty Shelf",
 	[112948] = "Intrepid's Locked Strongbox",
 	[113757] = "Shadowforge Cache",
+	[113768] = "Brightly Colored Egg",
 	[113791] = "Brazier of Everfount",
 	[123329] = "Baelog's Chest",
 	[124388] = "Garrett Family Chest",
@@ -418,7 +420,7 @@ select(2, ...).ObjectNames = {
 	[330169] = "Direbrew Cog",
 	[330170] = "Hozen Totem",
 };
-select(2, ...).ObjectIcons = {
+_.ObjectIcons = {
 	[31] = "Interface/Icons/INV_Mount_AllianceLionG",
 	[34] = "Interface/Icons/INV_Drink_11",
 	[55] = "Interface/Icons/INV_Misc_Bone_HumanSkull_01",
@@ -461,6 +463,7 @@ select(2, ...).ObjectIcons = {
 	[35251] = "Interface/Icons/Garrison_BronzeChest",
 	[37099] = "Interface/Icons/INV_Misc_StoneTablet_03",
 	[112948] = "Interface/Icons/battleground_strongbox_skirmish_horde",
+	[113768] = _.asset("Holiday_noblegarden"),
 	[131474] = "Interface/Icons/Creatureportrait_Nexus_Floating_Disc",
 	[138492] = "Interface/Icons/inv_enchanting_wod_crystal2",
 	[141832] = "Interface/Icons/inv_hammer_19",
@@ -675,7 +678,7 @@ select(2, ...).ObjectIcons = {
 	[330169] = "Interface/Icons/inv_misc_gear_01",
 	[330170] = "Interface/Icons/spell_totem_wardofdraining",
 };
-select(2, ...).ObjectModels = {
+_.ObjectModels = {
 	[31] = 189908,
 	[55] = 198343,
 	[56] = 198343,
