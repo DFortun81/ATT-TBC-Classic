@@ -1231,12 +1231,12 @@ profession(LEATHERWORKING, {
 					["name"] = "Bag of Many Hides",
 					["recipeID"] = 45117
 				},
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_FOUR, {
 					["name"] = "Knothide Ammo Pouch",
 					["timeline"] = { "removed 4.0.1.10000" },
 					["recipeID"] = 44343
 				}),
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_FOUR, {
 					["name"] = "Knothide Quiver",
 					["timeline"] = { "removed 4.0.1.10000" },
 					["recipeID"] = 44344
