@@ -2643,7 +2643,32 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 			i(12363),	-- Arcane Crystal
 		}),
 		applyclassicphase(PHASE_FIVE, i(23197)),	-- Idol of the Moon [Phase 5/6]
+		i(11733, {	-- Libram of Constitution
+			-- #if AFTER CATA
+			["description"] = "This item is now completely worthless.",
+			-- #endif
+		}),
 		applyclassicphase(PHASE_FIVE, i(23203)),	-- Libram of Fervor [Phase 5/6]
+		i(11736, {	-- Libram of Resilience
+			-- #if AFTER CATA
+			["description"] = "This item is now completely worthless.",
+			-- #endif
+		}),
+		i(11732, {	-- Libram of Rumination
+			-- #if AFTER CATA
+			["description"] = "This item is now completely worthless.",
+			-- #endif
+		}),
+		i(11734, {	-- Libram of Tenacity
+			-- #if AFTER CATA
+			["description"] = "This item is now completely worthless.",
+			-- #endif
+		}),
+		i(11737, {	-- Libram of Voracity
+			-- #if AFTER CATA
+			["description"] = "This item is now completely worthless.",
+			-- #endif
+		}),
 		applyclassicphase(PHASE_FIVE, i(23199)),	-- Totem of the Storm [Phase 5/6]
 		i(4500),	-- Traveler's Backpack
 	}),
