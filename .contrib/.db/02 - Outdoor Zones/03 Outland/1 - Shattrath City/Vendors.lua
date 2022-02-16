@@ -768,6 +768,37 @@ _.Zones =
 						}),
 					},
 				}),
+				-- #if BEFORE CATA
+				n(25196, {	-- Archer Delvinar <Specialty Ammunition Vendor>
+					["coord"] = { 41.4, 63.4, SHATTRATH_CITY },
+					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
+					["groups"] = {
+						i(32883, {	-- Felbane Slugs
+							["timeline"] = { "removed 4.0.1.10000" },
+							["races"] = ALLIANCE_ONLY,
+						}),
+						i(32882, {	-- Hellfire Shot
+							["timeline"] = { "removed 4.0.1.10000" },
+							["races"] = HORDE_ONLY,
+						}),
+						applyclassicphase(TBC_PHASE_THREE, i(34581, {	-- Mysterious Arrow
+							["timeline"] = { "removed 4.0.1.20000" },
+						})),
+						applyclassicphase(TBC_PHASE_THREE, i(34582, {	-- Mysterious Shell
+							["timeline"] = { "removed 4.0.1.20000" },
+						})),
+						applyclassicphase(TBC_PHASE_THREE, i(31737, {	-- Timeless Arrow
+							["timeline"] = { "removed 4.0.1.20000" },
+						})),
+						applyclassicphase(TBC_PHASE_THREE, i(31735, {	-- Timeless Shell
+							["timeline"] = { "removed 4.0.1.20000" },
+						})),
+						i(31949, {	-- Warden's Arrow
+							["timeline"] = { "removed 4.0.1" },
+						}),
+					},
+				}),
+				-- #endif
 				n(20613, {	-- Arodis Sunblade <Keeper of Sha'tari Artifacts>
 					["coord"] = { 42.6, 90.6, SHATTRATH_CITY },
 					["minReputation"] = { 934, NEUTRAL },	-- The Scryers, Neutral.
@@ -1065,6 +1096,37 @@ _.Zones =
 					["minReputation"] = { 1011, NEUTRAL },	-- Lower City, Neutral.
 					["groups"] = MADAME_RUBY_GROUPS,
 				}),
+				-- #if BEFORE CATA
+				n(25195, {	-- Marksman Bova <Specialty Ammunition Vendor>
+					["coord"] = { 37.6, 27.8, SHATTRATH_CITY },
+					["minReputation"] = { 932, NEUTRAL },	-- The Aldor, Neutral.
+					["groups"] = {
+						i(32883, {	-- Felbane Slugs
+							["timeline"] = { "removed 4.0.1.10000" },
+							["races"] = ALLIANCE_ONLY,
+						}),
+						i(32882, {	-- Hellfire Shot
+							["timeline"] = { "removed 4.0.1.10000" },
+							["races"] = HORDE_ONLY,
+						}),
+						applyclassicphase(TBC_PHASE_THREE, i(34581, {	-- Mysterious Arrow
+							["timeline"] = { "removed 4.0.1.20000" },
+						})),
+						applyclassicphase(TBC_PHASE_THREE, i(34582, {	-- Mysterious Shell
+							["timeline"] = { "removed 4.0.1.20000" },
+						})),
+						applyclassicphase(TBC_PHASE_THREE, i(31737, {	-- Timeless Arrow
+							["timeline"] = { "removed 4.0.1.20000" },
+						})),
+						applyclassicphase(TBC_PHASE_THREE, i(31735, {	-- Timeless Shell
+							["timeline"] = { "removed 4.0.1.20000" },
+						})),
+						i(31949, {	-- Warden's Arrow
+							["timeline"] = { "removed 4.0.1" },
+						}),
+					},
+				}),
+				-- #endif
 				n(21655, {	-- Nakodu <Lower City Quartermaster>
 					["coord" ] = { 62.6, 69.0, SHATTRATH_CITY },
 					["minReputation"] = { 1011, NEUTRAL },	-- Lower City, Neutral.

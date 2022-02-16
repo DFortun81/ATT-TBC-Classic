@@ -39,6 +39,20 @@ _.Zones =
 						}),
 					},
 				}),
+				-- #if BEFORE CATA
+				n(21488, {	-- Banro <Ammunition>
+					["coord"] = { 41.6, 43.8, NAGRAND },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(30612, {	-- Halaani Grimshot
+							["timeline"] = { "removed 4.0.1.10000" },
+						}),
+						i(30611, {	-- Halaani Razorshaft
+							["timeline"] = { "removed 4.0.1.10000" },
+						}),
+					},
+				}),
+				-- #endif
 				n(19017, {	-- Borto <Trade Supplies>
 					["coord"] = { 53.2, 71.8, NAGRAND },
 					["races"] = ALLIANCE_ONLY,
@@ -427,6 +441,20 @@ _.Zones =
 						}),
 					},
 				}),
+				-- #if BEFORE CATA
+				n(21483, {	-- Tasaldan <Ammunition>
+					["coord"] = { 41.6, 44.0, NAGRAND },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(30612, {	-- Halaani Grimshot
+							["timeline"] = { "removed 4.0.1.10000" },
+						}),
+						i(30611, {	-- Halaani Razorshaft
+							["timeline"] = { "removed 4.0.1.10000" },
+						}),
+					},
+				}),
+				-- #endif
 				n(20240, {	-- Trader Narasu <Kurenai Quartermaster>
 					["coord"] = { 54.5, 75.1, NAGRAND },
 					["races"] = ALLIANCE_ONLY,

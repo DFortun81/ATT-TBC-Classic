@@ -7,6 +7,17 @@ _.Zones =
 		m(TANARIS, {
 			m(CAVERNS_OF_TIME, applyclassicphase(TBC_PHASE_ONE, {
 				n(VENDORS, {
+					applyclassicphase(TBC_PHASE_THREE, n(19932, {	-- Andormu <Keepers of Time>
+						i(186683),	-- Formula: Enchant Ring - Stats
+						-- #if BEFORE CATA
+						i(31737, {	-- Timeless Arrow
+							["timeline"] = { "removed 4.0.1.20000" },
+						}),
+						i(31735, {	-- Timeless Shell
+							["timeline"] = { "removed 4.0.1.20000" },
+						}),
+						-- #endif
+					})),
 					n(21643, {	-- Alurmi <Keepers of Time Quartermaster>
 						["coord"] = { 40.0, 77.2, 74 },
 						["groups"] = {

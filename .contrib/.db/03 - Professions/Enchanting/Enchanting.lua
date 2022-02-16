@@ -1254,6 +1254,7 @@ itemrecipe("Formula: Enchant Ring - Striking", 22535, 27920, TBC_PHASE_ONE, "rem
 itemrecipe("Formula: Enchant Ring - Spellpower", 22536, 27924, TBC_PHASE_ONE, "removed 6.0.2.10000");
 itemrecipe("Formula: Enchant Ring - Healing Power", 22537, 27926, TBC_PHASE_ONE, "removed 6.0.2.10000");
 itemrecipe("Formula: Enchant Ring - Stats", 22538, 27927, TBC_PHASE_THREE, "removed 6.0.2.10000");
+itemrecipe("Formula: Enchant Ring - Stats", 186683, 27927, TBC_PHASE_THREE, "removed 6.0.2.10000");
 itemrecipe("Formula: Enchant Shield - Intellect", 22539, 27945, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Shield - Shield Block", 22540, 27946, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Shield - Resistance", 22541, 27947, TBC_PHASE_ONE, "removed 5.0.4.10000");
