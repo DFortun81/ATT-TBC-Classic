@@ -185,6 +185,15 @@ local INSANE_IN_THE_MEMBRANE_OnTooltip = [[function(t)
 		GameTooltip:AddDoubleLine(" |T" .. t.shendralar.icon .. ":0|t " .. t.shendralar.text, _.L[t.shendralar.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 	end
 end]];
+local HK_OnUpdate = [[function(t) t.SetAchievementCollected(t.achievementID, GetPVPLifetimeStats() >= t.rank); end]];
+local HK_OnTooltip = [[function(t)
+	local s = "Get " .. t.rank .. " honorable kill" .. (t.rank == 1 and "" or "s") .. ".";
+	if not t.collected then
+		GameTooltip:AddDoubleLine(s, select(1, GetPVPLifetimeStats()) .. " / " .. t.rank, 1, 1, 1);
+	else
+		GameTooltip:AddLine(s);
+	end
+end]];
 local LEVEL_OnUpdate = [[function(t) t.SetAchievementCollected(t.achievementID, _.Level >= t.lvl); end]];
 local MOUNTS_OnClick = [[function(row, button)
 	if button == "RightButton" then
@@ -605,7 +614,77 @@ _.Achievements =
 		
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_PVP, {
-		
+		ach(238, applyclassicphase(PHASE_TWO, {	-- An Honorable Kill
+			["rank"] = 1,
+			-- #if BEFORE WRATH
+			["OnTooltip"] = HK_OnTooltip,
+			["OnUpdate"] = HK_OnUpdate,
+			-- #endif
+		})),
+		ach(513, applyclassicphase(PHASE_TWO, {	-- 100 Honorable Kills
+			["rank"] = 100,
+			-- #if BEFORE WRATH
+			["OnTooltip"] = HK_OnTooltip,
+			["OnUpdate"] = HK_OnUpdate,
+			-- #endif
+		})),
+		ach(515, applyclassicphase(PHASE_TWO, {	-- 500 Honorable Kills
+			["rank"] = 500,
+			-- #if BEFORE WRATH
+			["OnTooltip"] = HK_OnTooltip,
+			["OnUpdate"] = HK_OnUpdate,
+			-- #endif
+		})),
+		ach(516, applyclassicphase(PHASE_TWO, {	-- 1000 Honorable Kills
+			["rank"] = 1000,
+			-- #if BEFORE WRATH
+			["OnTooltip"] = HK_OnTooltip,
+			["OnUpdate"] = HK_OnUpdate,
+			-- #endif
+		})),
+		ach(512, applyclassicphase(PHASE_TWO, {	-- 5000 Honorable Kills
+			["rank"] = 5000,
+			-- #if BEFORE WRATH
+			["OnTooltip"] = HK_OnTooltip,
+			["OnUpdate"] = HK_OnUpdate,
+			-- #endif
+		})),
+		ach(509, applyclassicphase(PHASE_TWO, {	-- 10000 Honorable Kills
+			["rank"] = 10000,
+			-- #if BEFORE WRATH
+			["OnTooltip"] = HK_OnTooltip,
+			["OnUpdate"] = HK_OnUpdate,
+			-- #endif
+		})),
+		ach(239, applyclassicphase(PHASE_TWO, {	-- 25000 Honorable Kills
+			["rank"] = 25000,
+			-- #if BEFORE WRATH
+			["OnTooltip"] = HK_OnTooltip,
+			["OnUpdate"] = HK_OnUpdate,
+			-- #endif
+		})),
+		ach(869, applyclassicphase(WRATH_PHASE_ONE, {	-- 50000 Honorable Kills
+			["rank"] = 50000,
+			-- #if BEFORE WRATH
+			["OnTooltip"] = HK_OnTooltip,
+			["OnUpdate"] = HK_OnUpdate,
+			-- #endif
+		})),
+		ach(870, applyclassicphase(WRATH_PHASE_ONE, {	-- 100000 Honorable Kills
+			["rank"] = 100000,
+			-- #if BEFORE WRATH
+			["OnTooltip"] = HK_OnTooltip,
+			["OnUpdate"] = HK_OnUpdate,
+			-- #endif
+			["groups"] = {
+				title(126, {	-- <Name> of the Alliance
+					["races"] = ALLIANCE_ONLY,
+				}),
+				title(127, {	-- <Name> of the Horde
+					["races"] = HORDE_ONLY,
+				}),
+			},
+		})),
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_DUNGEONS_AND_RAIDS, {
 		
