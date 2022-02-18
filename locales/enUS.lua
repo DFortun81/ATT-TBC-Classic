@@ -347,6 +347,8 @@ app.L = {
 		
 		[389] = { 95, "Gurubashi Arena Master" },	-- Arena Master, icon from providers
 		[396] = { 95, "Gurubashi Arena Grand Master" },	-- Arena Grand Master, icon from providers
+		[714] = { 95, "The Conqueror", "Interface\\Icons\\inv_misc_tabardpvp_04" },	-- The Conqueror
+		[907] = { 95, "The Justicar", "Interface\\Icons\\inv_misc_tabardpvp_03" },	-- The Justicar
 		
 		[522] = { 201, "Somebody Likes Me", app.asset("achievement_reputation_01") },
 		[523] = { 201, "5 Exalted Reputations", app.asset("achievement_reputation_01") },

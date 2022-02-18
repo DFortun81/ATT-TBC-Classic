@@ -2,11 +2,111 @@
 -- Add Vendors
 -- https://classic.wowhead.com/npc=12783/lieutenant-karter
 -- https://classic.wowhead.com/npc=12796/raider-bork
+local THE_CONQUEROR_OnUpdate = [[function(t)
+	if t.collectible then
+		if not t.wsg then
+			local f = _.SearchForField("factionID", 889);
+			if f and #f > 0 then
+				t.wsg = f[1];
+			else
+				return true;
+			end
+		end
+		if not t.ab then
+			local f = _.SearchForField("factionID", 510);
+			if f and #f > 0 then
+				t.ab = f[1];
+			else
+				return true;
+			end
+		end
+		if not t.av then
+			local f = _.SearchForField("factionID", 729);
+			if f and #f > 0 then
+				t.av = f[1];
+			else
+				return true;
+			end
+		end
+		t.SetAchievementCollected(t.achievementID, t.wsg.standing == 8 and t.ab.standing == 8 and t.av.standing == 8);
+	end
+end]];
+local THE_JUSTICAR_OnUpdate = [[function(t)
+	if t.collectible then
+		if not t.wsg then
+			local f = _.SearchForField("factionID", 890);
+			if f and #f > 0 then
+				t.wsg = f[1];
+			else
+				return true;
+			end
+		end
+		if not t.ab then
+			local f = _.SearchForField("factionID", 509);
+			if f and #f > 0 then
+				t.ab = f[1];
+			else
+				return true;
+			end
+		end
+		if not t.av then
+			local f = _.SearchForField("factionID", 730);
+			if f and #f > 0 then
+				t.av = f[1];
+			else
+				return true;
+			end
+		end
+		t.SetAchievementCollected(t.achievementID, t.wsg.standing == 8 and t.ab.standing == 8 and t.av.standing == 8);
+	end
+end]];
+local THE_JUSTICAR_AND_THE_CONQUEROR_OnClick = [[function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local clone = _.CreateMiniListForGroup(_.CreateNPC(t[t.key], {
+			t.wsg,
+			t.ab,
+			t.av
+		})).data;
+		clone.description = t.description;
+		return true;
+	end
+end]];
+local THE_JUSTICAR_AND_THE_CONQUEROR_OnTooltip = [[function(t)
+	if t.collectible then
+		GameTooltip:AddLine(" ");
+		GameTooltip:AddDoubleLine(" |T" .. t.wsg.icon .. ":0|t " .. t.wsg.text, _.L[t.wsg.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+		GameTooltip:AddDoubleLine(" |T" .. t.ab.icon .. ":0|t " .. t.ab.text, _.L[t.ab.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+		GameTooltip:AddDoubleLine(" |T" .. t.av.icon .. ":0|t " .. t.av.text, _.L[t.av.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+	end
+end]];
 _.PvP =
 {
 	n(FACTION_HEADER_ALLIANCE, {
 		["races"] = ALLIANCE_ONLY,
 		["groups"] = {
+			n(ACHIEVEMENTS, {
+				ach(907, applyclassicphase(PHASE_TWO, {	-- The Justicar
+					["races"] = ALLIANCE_ONLY,
+					-- #if BEFORE 3.0.1
+					["OnClick"] = THE_JUSTICAR_AND_THE_CONQUEROR_OnClick,
+					["OnTooltip"] = THE_JUSTICAR_AND_THE_CONQUEROR_OnTooltip,
+					["OnUpdate"] = THE_JUSTICAR_OnUpdate,
+					["description"] = "Raise your reputation values in Warsong Gulch, Arathi Basin and Alterac Valley to Exalted.",
+					-- #endif
+					["groups"] = {
+						applyclassicphase(TBC_PHASE_ONE, title(	-- Justicar <Name>
+							-- #if BEFORE WRATH
+							35,
+							-- #else
+							48,
+							-- #endif
+						{
+							["races"] = ALLIANCE_ONLY,
+						})),
+					},
+				})),
+			}),
 			n(QUESTS, {
 				q(8371, {	-- Concerted Efforts
 					["qg"] = 15351,	-- Alliance Brigadier General
@@ -722,6 +822,28 @@ _.PvP =
 	n(FACTION_HEADER_HORDE, {
 		["races"] = HORDE_ONLY,
 		["groups"] = {
+			n(ACHIEVEMENTS, {
+				ach(714, applyclassicphase(PHASE_TWO, {	-- The Conqueror
+					["races"] = HORDE_ONLY,
+					-- #if BEFORE 3.0.1
+					["OnClick"] = THE_JUSTICAR_AND_THE_CONQUEROR_OnClick,
+					["OnTooltip"] = THE_JUSTICAR_AND_THE_CONQUEROR_OnTooltip,
+					["OnUpdate"] = THE_CONQUEROR_OnUpdate,
+					["description"] = "Raise your reputation values in Warsong Gulch, Arathi Basin and Alterac Valley to Exalted.",
+					-- #endif
+					["groups"] = {
+						applyclassicphase(TBC_PHASE_ONE, title(	-- Conqueror <Name>
+							-- #if BEFORE WRATH
+							34,
+							-- #else
+							47,
+							-- #endif
+						{
+							["races"] = HORDE_ONLY,
+						})),
+					},
+				})),
+			}),
 			n(QUESTS, {
 				q(8367, {	-- For Great Honor
 					["qg"] = 15350,	-- Horde Warbringer
