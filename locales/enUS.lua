@@ -357,6 +357,7 @@ app.L = {
 		
 		[389] = { 95, "Gurubashi Arena Master" },	-- Arena Master, icon from providers
 		[396] = { 95, "Gurubashi Arena Grand Master" },	-- Arena Grand Master, icon from providers
+		[727] = { 95, "Call in the Cavalry" },	-- Call in the Cavalry, icon from providers
 		[714] = { 95, "The Conqueror", "Interface\\Icons\\inv_misc_tabardpvp_04" },
 		[907] = { 95, "The Justicar", "Interface\\Icons\\inv_misc_tabardpvp_03" },
 		

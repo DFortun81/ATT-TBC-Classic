@@ -118,6 +118,7 @@ _.PvP =
 						})),
 					},
 				}),
+				
 				-- #if BEFORE TBC
 				n(EXPLORATION, {
 					exploration(2959, "270:240:348:13"),	-- Dun Baldar

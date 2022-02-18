@@ -685,6 +685,152 @@ _.Achievements =
 				}),
 			},
 		})),
+		ach(230, applyclassicphase(WRATH_PHASE_ONE, {	-- Battlemaster (Alliance)
+			["races"] = ALLIANCE_ONLY,
+			["groups"] = {
+				title(72),	-- Battlemaster
+			},
+		})),
+		ach(1175, applyclassicphase(WRATH_PHASE_ONE, {	-- Battlemaster (Horde)
+			["races"] = HORDE_ONLY,
+			["groups"] = {
+				title(72),	-- Battlemaster
+			},
+		})),
+		ach(611, applyclassicphase(WRATH_PHASE_ONE, {	-- Bleeding Bloodhoof
+			["provider"] = { "n", 3057 },	-- Cairne Bloodhoof <High Chieftain>
+			["maps"] = { THUNDER_BLUFF },
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(727, applyclassicphase(PHASE_TWO, {	-- Call in the Cavalry
+			["providers"] = {
+				{ "i", 18243 },	-- Black Battlestrider (Original)
+				{ "i", 18247 },	-- Black War Kodo (Original)
+				{ "i", 18244 },	-- Black War Ram (Original)
+				{ "i", 18241 },	-- Black War Steed Bridle (Original)
+				{ "i", 18245 },	-- Horn of the Black War Wolf (Original)
+				{ "i", 18248 },	-- Red Skeletal Warhorse (Original)
+				{ "i", 18242 },	-- Reins of the Black War Tiger (Original)
+				{ "i", 18246 },	-- Whistle of the Black War Raptor (Original)
+				-- #if AFTER TBC
+				{ "i", 29465 },	-- Black Battlestrider
+				{ "i", 29466 },	-- Black War Kodo
+				{ "i", 29467 },	-- Black War Ram
+				{ "i", 29468 },	-- Black War Steed Bridle
+				{ "i", 29469 },	-- Horn of the Black War Wolf
+				{ "i", 29470 },	-- Red Skeletal Warhorse
+				{ "i", 35906 },	-- Reins of the Black War Elekk
+				{ "i", 29471 },	-- Reins of the Black War Tiger
+				{ "i", 34129 },	-- Swift Warstrider
+				{ "i", 29472 },	-- Whistle of the Black War Raptor
+				-- #endif
+			},
+			-- #if BEFORE WRATH
+			["description"] = "Obtain one of the war mounts through the honor system.",
+			["OnUpdate"] = [[function(t)
+				local collected = false;
+				for i,provider in ipairs(t.providers) do
+					if provider[1] == "i" and GetItemCount(provider[2], true) > 0 then
+						collected = true;
+						break;
+					end
+				end
+				t.SetAchievementCollected(t.achievementID, collected);
+			end]],
+			-- #endif
+		})),
+		ach(908, applyclassicphase(WRATH_PHASE_ONE, {	-- Call to Arms! (Alliance)
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(909, applyclassicphase(WRATH_PHASE_ONE, {	-- Call to Arms! (Horde)
+			["races"] = HORDE_ONLY,
+		})),
+		ach(388, applyclassicphase(WRATH_PHASE_ONE, {	-- City Defender (Alliance)
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(1006, applyclassicphase(WRATH_PHASE_ONE, {	-- City Defender (Horde)
+			["races"] = HORDE_ONLY,
+		})),
+		ach(227),	-- Damage Control
+		ach(616, applyclassicphase(WRATH_PHASE_ONE, {	-- Death to the King!
+			["provider"] = { "n", 2784 },	-- King Magni Bronzebeard <Lord of Ironforge>
+			["maps"] = { IRONFORGE },
+			["races"] = HORDE_ONLY,
+		})),
+		ach(610, applyclassicphase(WRATH_PHASE_ONE, {	-- Death to the Warchief!
+			["provider"] = { "n", 4949 },	-- Thrall <Warchief>
+			["maps"] = { ORGRIMMAR },
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(612, applyclassicphase(WRATH_PHASE_ONE, {	-- Downing the Dark Lady
+			["provider"] = { "n", 10181 },	-- Lady Sylvanas Windrunner <Banshee Queen>
+			["maps"] = { UNDERCITY },
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(1157),	-- Duel-icious
+		ach(614, applyclassicphase(WRATH_PHASE_ONE, {	-- For The Alliance!
+			["races"] = ALLIANCE_ONLY,
+			["groups"] = {
+				i(44223),	-- Reins of the Black War Bear
+			},
+		})),
+		ach(619, applyclassicphase(WRATH_PHASE_ONE, {	-- For The Horde!
+			["races"] = HORDE_ONLY,
+			["groups"] = {
+				i(44224),	-- Reins of the Black War Bear
+			},
+		})),
+		ach(701, applyclassicphase(WRATH_PHASE_ONE, {	-- Freedom of the Alliance
+			-- TODO: Add providers and make accessible to classic
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(700, applyclassicphase(WRATH_PHASE_ONE, {	-- Freedom of the Horde
+			-- TODO: Add providers and make accessible to classic
+			["races"] = HORDE_ONLY,
+		})),
+		-- TODO: Move the two following to Grizzly Hills Zone File
+		ach(2016, applyclassicphase(WRATH_PHASE_ONE, {	-- Grizzled Veteran (Alliance)
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(2017, applyclassicphase(WRATH_PHASE_ONE, {	-- Grizzled Veteran (Horde)
+			["races"] = HORDE_ONLY,
+		})),
+		ach(617, applyclassicphase(WRATH_PHASE_ONE, {	-- Immortal No More
+			["provider"] = { "n", 7999 },	-- Tyrande Whisperwind <High Priestess of Elune>
+			["maps"] = { DARNASSUS },
+			["races"] = HORDE_ONLY,
+		})),
+		ach(613, applyclassicphase(WRATH_PHASE_ONE, {	-- Killed in Quel'Thalas
+			["provider"] = { "n", 16802 },	-- Lor'themar Theron <Regent Lord of Quel'Thalas>
+			["maps"] = { SILVERMOON_CITY },
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(246, applyclassicphase(WRATH_PHASE_ONE, {	-- Know Thy Enemy (Alliance)
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(1005, applyclassicphase(WRATH_PHASE_ONE, {	-- Know Thy Enemy (Horde)
+			["races"] = HORDE_ONLY,
+		})),
+		ach(247),	-- Make Love, Not Warcraft
+		ach(618, applyclassicphase(WRATH_PHASE_ONE, {	-- Putting Out the Light
+			["provider"] = { "n", 17468 },	-- Prophet Velen
+			["maps"] = { THE_EXODAR },
+			["races"] = HORDE_ONLY,
+		})),
+		ach(615, applyclassicphase(WRATH_PHASE_ONE, {	-- Storming Stormwind
+			["provider"] = { "n", 29611 },	-- King Varian Wrynn <King of Stormwind>
+			["maps"] = { STORMWIND_CITY },
+			["races"] = HORDE_ONLY,
+		})),
+		ach(245),	-- That Takes Class
+		ach(229),	-- The Grim Reaper
+		ach(604, applyclassicphase(WRATH_PHASE_ONE, {	-- Wrath of the Alliance
+			["races"] = ALLIANCE_ONLY,
+		})),
+		ach(603, applyclassicphase(WRATH_PHASE_ONE, {	-- Wrath of the Horde
+			["races"] = HORDE_ONLY,
+		})),
+		ach(231),	-- Wrecking Ball
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_DUNGEONS_AND_RAIDS, {
 		
