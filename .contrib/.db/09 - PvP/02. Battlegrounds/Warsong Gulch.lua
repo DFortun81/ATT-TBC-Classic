@@ -47,8 +47,8 @@ local OnTooltipForWarsongGulch = [[function(t)
 end]];
 _.PvP =
 {
-	n(-304, {	-- Battlegrounds
-		m(1460, {	-- Warsong Gulch
+	n(BATTLEGROUNDS, {
+		m(WARSONG_GULCH, {
 			n(FACTIONS, {
 				faction(890, {	-- Silverwing Sentinels
 					["icon"] = "Interface\\Icons\\ability_racial_shadowmeld",
