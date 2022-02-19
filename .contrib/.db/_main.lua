@@ -1224,7 +1224,7 @@ end
 m = map;												-- Create a MAP Object (alternative shortcut)
 mark = function(cost, item)								-- Assign a Mark of Honor cost to an item with proper timeline requirements.
 	-- #if AFTER 7.0.3.22248
-	item["cost"] = { { "i", 137642, cost } },	-- Mark of Honor
+	item["cost"] = { { "i", 137642, cost } };	-- Mark of Honor
 	-- #endif
 	return item;
 end
