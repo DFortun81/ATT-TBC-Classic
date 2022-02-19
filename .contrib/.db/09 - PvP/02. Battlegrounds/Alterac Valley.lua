@@ -34,7 +34,7 @@ local OnTooltipForAlteracValley = [[function(t)
 	end
 end]];
 local REMOVED_WITH_ANNIVERSARY_15 = { "removed 8.2.5.31958" };
-root("PvP", pvp(n(BATTLEGROUNDS, {
+root("PVP", pvp(n(BATTLEGROUNDS, {
 	m(ALTERAC_VALLEY, {
 		["lore"] = "Alterac Valley is a battleground players fight in frosty Alterac between the Frostwolf Clan (Horde) and Stormpike Guard (Alliance). Alterac Valley is notable both for how many people can queue per side (40) as well as how much honor each game rewards.",
 		-- #if AFTER WRATH
@@ -692,7 +692,6 @@ root("PvP", pvp(n(BATTLEGROUNDS, {
 				}),
 				q(7141, {	-- The Battle of Alterac (Alliance)
 					["qg"] = 13816,	-- Prospector Stonehewer
-					-- ["sourceQuest"] = 7221,	-- Speak with Prospector Stonehewer [Not in WoW Classic]
 					-- #if AFTER CATA
 					["coord"] = { 45.2, 45.2, HILLSBRAD_FOOTHILLS },
 					-- #else
@@ -709,7 +708,6 @@ root("PvP", pvp(n(BATTLEGROUNDS, {
 				}),
 				q(7142, {	-- The Battle for Alterac (Horde)
 					["qg"] = 13817,	-- Voggah Deathgrip
-					--["sourceQuest"] = 7222,	-- Speak with Voggah Deathgrip [Not in WoW Classic]
 					-- #if AFTER CATA
 					["coord"] = { 58.6, 34.2, HILLSBRAD_FOOTHILLS },
 					-- #else

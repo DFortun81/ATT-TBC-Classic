@@ -8956,12 +8956,12 @@ function app:GetDataCache()
 		end
 		
 		-- PvP
-		if app.Categories.PvP then
+		if app.Categories.PVP then
 			db = {};
 			db.text = PVP;
 			db.isPVPCategory = true;
 			db.icon = app.asset("Category_PvP");
-			db.g = app.Categories.PvP;
+			db.g = app.Categories.PVP;
 			table.insert(g, db);
 		end
 		

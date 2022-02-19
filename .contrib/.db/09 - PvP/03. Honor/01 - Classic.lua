@@ -80,7 +80,7 @@ local THE_JUSTICAR_AND_THE_CONQUEROR_OnTooltip = [[function(t)
 		GameTooltip:AddDoubleLine(" |T" .. t.av.icon .. ":0|t " .. t.av.text, _.L[t.av.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 	end
 end]];
-_.PvP =
+_.PVP =
 {
 	n(FACTION_HEADER_ALLIANCE, {
 		["races"] = ALLIANCE_ONLY,

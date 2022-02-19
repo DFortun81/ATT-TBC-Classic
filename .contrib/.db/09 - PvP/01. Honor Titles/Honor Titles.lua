@@ -1,4 +1,4 @@
-_.PvP =
+_.PVP =
 {
 	n(-32, {	-- Honor Titles
 		["timeline"] = {

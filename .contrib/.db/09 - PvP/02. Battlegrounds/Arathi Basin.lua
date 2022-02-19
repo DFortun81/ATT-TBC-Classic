@@ -14,7 +14,7 @@ local OnTooltipForArathiBasin = [[function(t)
 		GameTooltip:AddLine(" Every 200 or 150 Resources during AB Weekend.", 1, 1, 1);
 	end
 end]];
-_.PvP =
+_.PVP =
 {
 	n(BATTLEGROUNDS, {
 		m(ARATHI_BASIN, {

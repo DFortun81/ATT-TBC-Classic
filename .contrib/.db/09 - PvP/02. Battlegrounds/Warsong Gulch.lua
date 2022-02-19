@@ -45,7 +45,7 @@ local OnTooltipForWarsongGulch = [[function(t)
 		GameTooltip:AddLine(" Each capture is worth " .. repPerFlagCapture .. " rep, +10 on WSG Weekend.", 1, 1, 1);
 	end
 end]];
-_.PvP =
+_.PVP =
 {
 	n(BATTLEGROUNDS, {
 		m(WARSONG_GULCH, {
