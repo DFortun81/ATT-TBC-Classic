@@ -1234,7 +1234,16 @@ end
 
 local ResolveSymbolicLink;
 (function()
-local subroutines = {};
+local subroutines;
+subroutines = {
+	["common_vendor"] = function(npcID)
+		return {
+			{"select", "creatureID", npcID},	-- Main Vendor
+			{"pop"},	-- Remove Main Vendor and push his children into the processing queue.
+			{"is", "itemID"},	-- Only Items
+		};
+	end,
+};
 ResolveSymbolicLink = function(o)
 	if o and o.sym then
 		local searchResults, finalized = {}, {};

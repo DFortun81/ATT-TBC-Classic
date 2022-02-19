@@ -613,7 +613,7 @@ _.Achievements =
 	achcat(ACHIEVEMENT_CATEGORY_EXPLORATION, {
 		
 	}),
-	achcat(ACHIEVEMENT_CATEGORY_PVP, {
+	pvp(achcat(ACHIEVEMENT_CATEGORY_PVP, {
 		ach(238, applyclassicphase(PHASE_TWO, {	-- An Honorable Kill
 			["rank"] = 1,
 			-- #if BEFORE WRATH
@@ -831,7 +831,7 @@ _.Achievements =
 			["races"] = HORDE_ONLY,
 		})),
 		ach(231),	-- Wrecking Ball
-	}),
+	})),
 	achcat(ACHIEVEMENT_CATEGORY_DUNGEONS_AND_RAIDS, {
 		
 	}),
