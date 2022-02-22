@@ -367,6 +367,10 @@ app.L = {
 		[708] = { 14801, "Hero of the Frostwolf Clan", "Interface\\Icons\\inv_jewelry_frostwolftrinket_05" },
 		[709] = { 14801, "Hero of the Stormpike Guard", "Interface\\Icons\\inv_jewelry_stormpiketrinket_05" },
 		
+		-- Arathi Basin Achievements
+		[711] = { 14802, "Knight of Arathor", "Interface\\Icons\\ability_warrior_rallyingcry" },
+		[710] = { 14802, "The Defiler", "Interface\\Icons\\Ability_Sap" },
+		
 		-- Warsong Gulch Achievements
 		[712] = { 14804, "Warsong Outrider", "Interface\\Icons\\ability_warrior_warcry" },
 		[713] = { 14804, "Silverwing Sentinel", "Interface\\Icons\\ability_racial_shadowmeld" },
@@ -429,6 +433,7 @@ app.L = {
 		[92] = { -1, "Character" },
 		[95] = { -1, BUG_CATEGORY14 },	-- Player vs. Player
 		[14801] = { 95, "Alterac Valley" },
+		[14802] = { 95, "Arathi Basin" },
 		[14804] = { 95, "Warsong Gulch" },
 		[96] = { -1, "Quests" },
 		[97] = { -1, "Exploration" },
