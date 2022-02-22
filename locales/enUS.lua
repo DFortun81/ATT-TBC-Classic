@@ -367,6 +367,10 @@ app.L = {
 		[708] = { 14801, "Hero of the Frostwolf Clan", "Interface\\Icons\\inv_jewelry_frostwolftrinket_05" },
 		[709] = { 14801, "Hero of the Stormpike Guard", "Interface\\Icons\\inv_jewelry_stormpiketrinket_05" },
 		
+		-- Warsong Gulch Achievements
+		[712] = { 14804, "Warsong Outrider", "Interface\\Icons\\ability_warrior_warcry" },
+		[713] = { 14804, "Silverwing Sentinel", "Interface\\Icons\\ability_racial_shadowmeld" },
+		
 		[522] = { 201, "Somebody Likes Me", app.asset("achievement_reputation_01") },
 		[523] = { 201, "5 Exalted Reputations", app.asset("achievement_reputation_01") },
 		[524] = { 201, "10 Exalted Reputations", app.asset("achievement_reputation_02") },
@@ -425,6 +429,7 @@ app.L = {
 		[92] = { -1, "Character" },
 		[95] = { -1, BUG_CATEGORY14 },	-- Player vs. Player
 		[14801] = { 95, "Alterac Valley" },
+		[14804] = { 95, "Warsong Gulch" },
 		[96] = { -1, "Quests" },
 		[97] = { -1, "Exploration" },
 		[155] = { -1, "World Events" },
