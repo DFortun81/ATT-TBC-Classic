@@ -1,8 +1,1 @@
-_.PVP =
-{
-	n(BATTLEGROUNDS, {
-		applyclassicphase(TBC_PHASE_ONE, m(EYE_OF_THE_STORM, {
-			
-		})),
-	}),
-};
+-- #IMPORT: 09 - PvP\\Battlegrounds\\04 Eye of the Storm.lua
