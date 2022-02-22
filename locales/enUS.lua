@@ -361,6 +361,12 @@ app.L = {
 		[714] = { 95, "The Conqueror", "Interface\\Icons\\inv_misc_tabardpvp_04" },
 		[907] = { 95, "The Justicar", "Interface\\Icons\\inv_misc_tabardpvp_03" },
 		
+		-- Alterac Valley Achievements
+		[706] = { 14801 },	-- Frostwolf Howler, name and icon from providers
+		[707] = { 14801 },	-- Stormpike Battle Charger, name and icon from providers
+		[708] = { 14801, "Hero of the Frostwolf Clan", "Interface\\Icons\\inv_jewelry_frostwolftrinket_05" },
+		[709] = { 14801, "Hero of the Stormpike Guard", "Interface\\Icons\\inv_jewelry_stormpiketrinket_05" },
+		
 		[522] = { 201, "Somebody Likes Me", app.asset("achievement_reputation_01") },
 		[523] = { 201, "5 Exalted Reputations", app.asset("achievement_reputation_01") },
 		[524] = { 201, "10 Exalted Reputations", app.asset("achievement_reputation_02") },
@@ -418,6 +424,7 @@ app.L = {
 	["ACHIEVEMENT_CRITERIA_DATA"] = {
 		[92] = { -1, "Character" },
 		[95] = { -1, BUG_CATEGORY14 },	-- Player vs. Player
+		[14801] = { 95, "Alterac Valley" },
 		[96] = { -1, "Quests" },
 		[97] = { -1, "Exploration" },
 		[155] = { -1, "World Events" },

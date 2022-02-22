@@ -9,7 +9,7 @@ local COMPANIONS_OnClick = [[function(row, button)
 			table.insert(template, o[1]);
 		end
 		
-		local clone = _.CreateMiniListForGroup(_.CreateNPC(t[t.key], template)).data;
+		local clone = _.CreateMiniListForGroup(_.CreateAchievement(t[t.key], template)).data;
 		clone.OnTooltip = t.OnTooltip;
 		clone.OnUpdate = t.OnUpdate;
 		clone.rank = t.rank;
@@ -206,7 +206,7 @@ local MOUNTS_OnClick = [[function(row, button)
 			end
 		end
 		
-		local clone = _.CreateMiniListForGroup(_.CreateNPC(t[t.key], template)).data;
+		local clone = _.CreateMiniListForGroup(_.CreateAchievement(t[t.key], template)).data;
 		clone.OnTooltip = t.OnTooltip;
 		clone.OnUpdate = t.OnUpdate;
 		clone.rank = t.rank;
@@ -293,7 +293,7 @@ local REPUTATIONS_OnClick = [[function(row, button)
 			end
 		end
 		
-		local clone = _.CreateMiniListForGroup(_.CreateNPC(t[t.key], template)).data;
+		local clone = _.CreateMiniListForGroup(_.CreateAchievement(t[t.key], template)).data;
 		clone.OnTooltip = t.OnTooltip;
 		clone.OnUpdate = t.OnUpdate;
 		clone.rank = t.rank;
