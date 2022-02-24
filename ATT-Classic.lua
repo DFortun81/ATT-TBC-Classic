@@ -5531,16 +5531,6 @@ app.GetMapName = function(mapID)
 	end
 end
 
-local ExplorationAreaCoordinates = {};
-local DiscoveredNewArea = {};
-local ExplorationGrid = {};
-local levelOfDetail = 50;
-for i=0,levelOfDetail,1 do
-	for j=0,levelOfDetail,1 do
-		tinsert(ExplorationGrid, CreateVector2D(i / levelOfDetail, j / levelOfDetail));
-	end
-end
-
 local fields = {
 	["key"] = function(t)
 		return "explorationID";
@@ -5601,15 +5591,30 @@ app.CreateExploration = function(id, t)
 	return setmetatable(constructor(id, t, "explorationID"), app.ExplorationClass);
 end
 
+local ExplorationGrid = {};
+local levelOfDetail = -1;--200;
+for i=0,levelOfDetail,1 do
+	for j=0,levelOfDetail,1 do
+		tinsert(ExplorationGrid, CreateVector2D(i / levelOfDetail, j / levelOfDetail));
+	end
+end
+
+local DiscoveredNewArea = {};
 local onMapUpdate = function(t)
 	local explorationByAreaID = {};
 	local explorationHeader = nil;
+	local coordinates = {};
 	for i,o in ipairs(t.g) do
 		if o.key == "headerID" and o.headerID == -15 then
 			explorationHeader = o;
 			if o.g then
 				for j,e in ipairs(o.g) do
 					explorationByAreaID[e.explorationID] = e;
+					if e.coords and #e.coords > 0 then
+						tinsert(coordinates, e.coords[1]);
+					else
+						print("Missing Coordinates for areaID", e.explorationID);
+					end
 				end
 			end
 			break;
@@ -5619,7 +5624,25 @@ local onMapUpdate = function(t)
 	local id = t.mapID;
 	local newExplorationObjects = {};
 	local areaIDs = app.ExplorationDB[id];
-	for _,pos in pairs(ExplorationGrid) do
+	for _,pos in ipairs(coordinates) do
+		local explored = C_MapExplorationInfo_GetExploredAreaIDsAtPosition(pos[3] or id, CreateVector2D(pos[1] / 100, pos[2] / 100));
+		if explored then
+			for _,areaID in ipairs(explored) do
+				app.CurrentCharacter.Exploration[areaID] = 1;
+				ATTAccountWideData.Exploration[areaID] = 1;
+				local o = explorationByAreaID[areaID];
+				if not o and not DiscoveredNewArea[areaID] then
+					DiscoveredNewArea[areaID] = true;
+					o = app.CreateExploration(areaID);
+					explorationByAreaID[areaID] = o;
+					tinsert(newExplorationObjects, o);
+					print("Found New AreaID:", id, t.text, areaID, o.text);
+					tinsert(areaIDs, areaID);
+				end
+			end
+		end
+	end
+	for _,pos in ipairs(ExplorationGrid) do
 		local explored = C_MapExplorationInfo_GetExploredAreaIDsAtPosition(id, pos);
 		if explored then
 			for _,areaID in ipairs(explored) do
@@ -5638,7 +5661,12 @@ local onMapUpdate = function(t)
 				if not coords then
 					coords = {};
 					app.ExplorationAreaPositionDB[areaID] = coords;
-					--ATTClassicAD.ExplorationAreaPositionDB = ATTC.ExplorationAreaPositionDB[3467];
+					local missing = ATTClassicAD.ExplorationAreaPositionDB;
+					if not missing then
+						missing = {};
+						ATTClassicAD.ExplorationAreaPositionDB = missing;
+					end
+					missing[areaID] = coords;
 				end
 				tinsert(coords, {pos.x * 100, pos.y * 100, id});
 			end
