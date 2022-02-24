@@ -5492,6 +5492,7 @@ local C_Map_GetMapInfo = C_Map.GetMapInfo;
 local C_Map_GetMapLevels = C_Map.GetMapLevels;
 local C_Map_GetBestMapForUnit = C_Map.GetBestMapForUnit;
 local C_MapExplorationInfo_GetExploredMapTextures = C_MapExplorationInfo.GetExploredMapTextures;
+local C_MapExplorationInfo_GetExploredAreaIDsAtPosition = C_MapExplorationInfo.GetExploredAreaIDsAtPosition;
 app.GetCurrentMapID = function()
 	local ZONE_TEXT_TO_MAP_ID = app.L["ZONE_TEXT_TO_MAP_ID"];
 	local ALT_ZONE_TEXT_TO_MAP_ID = app.L["ALT_ZONE_TEXT_TO_MAP_ID"];
@@ -5530,92 +5531,25 @@ app.GetMapName = function(mapID)
 	end
 end
 
--- NOTE: Get these values by dumping C_MapExplorationInfo_GetExploredMapTextures(mapID)
--- This is now a table of maphash,subAreaID (explorationID in ATT)
--- The commented sections are areas associated with the map, but not collectible. (afaik, they might add them later)
--- /script for areaID=1,5000,1 do if C_Map.GetAreaInfo(areaID) == "Undercity" then print("Area ID: ", areaID); end end
-local EXPLORATION_ID_META = { __index = function(t, artID)
-	local exploration = {};
-	rawset(t, artID, exploration);
-	return exploration;
-end };
-local EXPLORATION_ID_MAP = setmetatable({}, EXPLORATION_ID_META);
-
-local ExploredMapDataByIDMeta = { __index = function(t, mapID)
-	local exploredMapTextures = C_MapExplorationInfo_GetExploredMapTextures(mapID);
-	if exploredMapTextures then
-		local missingExplorationGroup;
-		local artID = C_Map_GetMapArtID(mapID);
-		local explorationByID, missingHashes = {}, {};
-		rawset(t, mapID, explorationByID);
-		for _,info in ipairs(exploredMapTextures) do
-			if info.textureWidth > 0 and info.textureHeight > 0 then
-				local maphash = info.textureWidth..":"..info.textureHeight..":"..info.offsetX..":"..info.offsetY;
-				local remappedExplorationID = EXPLORATION_ID_MAP[artID][maphash];
-				if remappedExplorationID then
-					rawset(explorationByID, remappedExplorationID, true);
-				else
-					table.insert(missingHashes, maphash);
-				end
-			end
-		end
-		if #missingHashes > 0 then
-			if not missingExplorationGroup then
-				missingExplorationGroup = {};
-				missingExplorationGroup.text = "Missing Exploration Data for Map " .. mapID;
-				missingExplorationGroup.icon = "Interface\\Worldmap\\Gear_64Grey";
-				missingExplorationGroup.g = {};
-				missingExplorationGroup.map = setmetatable(constructor(mapID, NIL, "mapID"), app.BaseMap);
-				missingExplorationGroup.map.artID = artID;
-				missingExplorationGroup.map.parent = missingExplorationGroup;
-				table.insert(missingExplorationGroup.g, missingExplorationGroup.map);
-			end
-			missingExplorationGroup.map.g = {};
-			for i,maphash in ipairs(missingHashes) do
-				local exploration = app.CreateExploration(-1);
-				exploration.parent = missingExplorationGroup.map;
-				exploration.maphash = maphash;
-				table.insert(missingExplorationGroup.map.g, exploration);
-				print("Missing Exploration ID for ", maphash, " for mapID ", mapID);
-			end
-			app.CreateMiniListForGroup(missingExplorationGroup);
-		end
-		return explorationByID;
+local ExplorationAreaCoordinates = {};
+local DiscoveredNewArea = {};
+local ExplorationGrid = {};
+local levelOfDetail = 50;
+for i=0,levelOfDetail,1 do
+	for j=0,levelOfDetail,1 do
+		tinsert(ExplorationGrid, CreateVector2D(i / levelOfDetail, j / levelOfDetail));
 	end
-end };
-local ExploredMapDataByID = setmetatable({}, ExploredMapDataByIDMeta);
-local ExploredSubMapsByIDMeta = { __index = function(t, mapID)
-	local submaps = C_Map_GetMapArtID(mapID) and ExploredMapDataByID[mapID] or {};
-	rawset(t, mapID, submaps);
-	return submaps;
-end };
-local ExploredSubMapsByID = setmetatable({}, ExploredSubMapsByIDMeta);
+end
 
 local fields = {
 	["key"] = function(t)
 		return "explorationID";
 	end,
 	["text"] = function(t)
-		return C_Map.GetAreaInfo(t.explorationID) or t.maphash or "";
-	end,
-	["title"] = function(t)
-		return t.maphash;
+		return C_Map.GetAreaInfo(t.explorationID) or RETRIEVING_DATA;
 	end,
 	["icon"] = function(t)
 		return app.asset("INV_Misc_Map02");
-	end,
-	["preview"] = function(t)
-		local exploredMapTextureInfo = t.exploredMapTextureInfo;
-		if exploredMapTextureInfo then
-			local texture = exploredMapTextureInfo.fileDataIDs[1];
-			if texture then
-				rawset(t, "preview", texture);
-				return texture;
-			end
-		end
-	end,
-	["artID"] = function(t)
-		return t.parent and (t.parent.artID or (t.parent.parent and t.parent.parent.artID));
 	end,
 	["mapID"] = function(t)
 		return t.parent and (t.parent.mapID or (t.parent.parent and t.parent.parent.mapID));
@@ -5624,38 +5558,42 @@ local fields = {
 		return app.CollectibleExploration;
 	end,
 	["collected"] = function(t)
-		return t.exploredMapTextureInfo and 1;
-	end,
-	["exploredMapTextureInfo"] = function(t)
-		local exploredMapTextures = C_MapExplorationInfo_GetExploredMapTextures(t.mapID)
-		if exploredMapTextures then
-			for i,info in ipairs(exploredMapTextures) do
-				local maphash = info.textureWidth..":"..info.textureHeight..":"..info.offsetX..":"..info.offsetY;
-				if maphash == t.maphash then
-					rawset(t, "exploredMapTextureInfo", info);
-					return info;
-				end
-			end
-		end
-	end,
-	["maphash"] = function(t)
-		local artID = t.artID;
-		if artID then
-			for maphash,explorationID in pairs(EXPLORATION_ID_MAP[artID]) do
-				if explorationID == t.explorationID then
-					return maphash;
-				end
-			end
-		end
-	end,
-	["coords"] = function(t)
+		if app.CurrentCharacter.Exploration[t.explorationID] then return 1; end
+		if app.AccountWideExploration and ATTAccountWideData.Exploration[t.explorationID] then return 2; end
+		
 		local maphash = t.maphash;
 		if maphash then
-			local coords = {};
-			local width, height, offsetX, offsetY = strsplit(":", maphash);
-			tinsert(coords, {((offsetX + (width * 0.5)) * 100) / WorldMapFrame:GetWidth(), ((offsetY + (height * 0.5)) * 100) / WorldMapFrame:GetHeight(), t.mapID});
-			return coords;
+			local exploredMapTextures = C_MapExplorationInfo_GetExploredMapTextures(t.mapID)
+			if exploredMapTextures then
+				for i,info in ipairs(exploredMapTextures) do
+					local hash = info.textureWidth..":"..info.textureHeight..":"..info.offsetX..":"..info.offsetY;
+					if hash == maphash then
+						app.CurrentCharacter.Exploration[t.explorationID] = 1;
+						ATTAccountWideData.Exploration[t.explorationID] = 1;
+						return 1;
+					end
+				end
+			end
 		end
+		--[[
+		local coords = t.coords;
+		if coords and #coords > 0 then
+			local c = coords[1];
+			local explored = C_MapExplorationInfo_GetExploredAreaIDsAtPosition(c[2], CreateVector2D(c[1] / 100, c[2] / 100, c[2]));
+			if explored then
+				for _,areaID in ipairs(explored) do
+					if areaID == t.explorationID then
+						app.CurrentCharacter.Exploration[areaID] = 1;
+						ATTAccountWideData.Exploration[areaID] = 1;
+						return 1;
+					end
+				end
+			end
+		end
+		]]
+	end,
+	["coords"] = function(t)
+		return app.ExplorationAreaPositionDB[t.explorationID];
 	end,
 };
 app.ExplorationClass = app.BaseObjectFields(fields);
@@ -5663,6 +5601,72 @@ app.CreateExploration = function(id, t)
 	return setmetatable(constructor(id, t, "explorationID"), app.ExplorationClass);
 end
 
+local onMapUpdate = function(t)
+	local explorationByAreaID = {};
+	local explorationHeader = nil;
+	for i,o in ipairs(t.g) do
+		if o.key == "headerID" and o.headerID == -15 then
+			explorationHeader = o;
+			if o.g then
+				for j,e in ipairs(o.g) do
+					explorationByAreaID[e.explorationID] = e;
+				end
+			end
+			break;
+		end
+	end
+	
+	local id = t.mapID;
+	local newExplorationObjects = {};
+	local areaIDs = app.ExplorationDB[id];
+	for _,pos in pairs(ExplorationGrid) do
+		local explored = C_MapExplorationInfo_GetExploredAreaIDsAtPosition(id, pos);
+		if explored then
+			for _,areaID in ipairs(explored) do
+				app.CurrentCharacter.Exploration[areaID] = 1;
+				ATTAccountWideData.Exploration[areaID] = 1;
+				local o = explorationByAreaID[areaID];
+				if not o and not DiscoveredNewArea[areaID] then
+					DiscoveredNewArea[areaID] = true;
+					o = app.CreateExploration(areaID);
+					explorationByAreaID[areaID] = o;
+					tinsert(newExplorationObjects, o);
+					print("Found New AreaID:", id, t.text, areaID, o.text);
+					tinsert(areaIDs, areaID);
+				end
+				local coords = app.ExplorationAreaPositionDB[areaID];
+				if not coords then
+					coords = {};
+					app.ExplorationAreaPositionDB[areaID] = coords;
+					--ATTClassicAD.ExplorationAreaPositionDB = ATTC.ExplorationAreaPositionDB[3467];
+				end
+				tinsert(coords, {pos.x * 100, pos.y * 100, id});
+			end
+		end
+	end
+	if #newExplorationObjects > 0 then
+		if explorationHeader then
+			if not explorationHeader.g then
+				explorationHeader.g = {};
+			end
+			for i,o in ipairs(newExplorationObjects) do
+				table.insert(explorationHeader.g, o);
+				o.parent = explorationHeader;
+			end
+		else
+			explorationHeader = app.CreateNPC(-15, newExplorationObjects);
+			for i,o in ipairs(newExplorationObjects) do
+				o.parent = explorationHeader;
+			end
+			explorationHeader.parent = t;
+			tinsert(t.g, 1, explorationHeader);
+		end
+	end
+	if explorationHeader and explorationHeader.g then
+		insertionSort(explorationHeader.g, sortByTextSafely);
+	end
+	rawset(t, "OnUpdate", nil);
+end;
 local fields = {
 	["key"] = function(t)
 		return "mapID";
@@ -5701,16 +5705,16 @@ local fields = {
 app.BaseMap = app.BaseObjectFields(fields);
 app.CreateMap = function(id, t)
 	local map = setmetatable(constructor(id, t, "mapID"), app.BaseMap);
-	local artID = map.artID;
-	if artID and map.g then
-		local exploration = EXPLORATION_ID_MAP[artID];
+	local artID = t.artID;
+	if artID and t.g then
+		local explorationByAreaID = {};
 		local explorationHeader = nil;
-		for i,o in ipairs(map.g) do
+		for i,o in ipairs(t.g) do
 			if o.key == "headerID" and o.headerID == -15 then
 				explorationHeader = o;
 				if o.g then
 					for j,e in ipairs(o.g) do
-						exploration[e.maphash] = e.explorationID;
+						explorationByAreaID[e.explorationID] = e;
 					end
 				end
 				break;
@@ -5718,18 +5722,19 @@ app.CreateMap = function(id, t)
 		end
 		
 		local newExplorationObjects = {};
-		local explored = C_MapExplorationInfo_GetExploredMapTextures(id);
-		if explored then
-			for i,info in pairs(explored) do
-				local maphash = info.textureWidth..":"..info.textureHeight..":"..info.offsetX..":"..info.offsetY;
-				if not exploration[maphash] then
-					exploration[maphash] = -i;
-					tinsert(newExplorationObjects, app.CreateExploration(-i, {artID=artID,maphash=maphash}));
+		local areaIDs = app.ExplorationDB[id];
+		if not areaIDs then
+			areaIDs = {};
+			app.ExplorationDB[id] = areaIDs;
+			--ATTClassicAD.ExplorationDB = ATTC.ExplorationDB;
+		else
+			for _,areaID in ipairs(areaIDs) do
+				if not explorationByAreaID[areaID] then
+					o = app.CreateExploration(areaID);
+					explorationByAreaID[areaID] = o;
+					tinsert(newExplorationObjects, o);
 				end
 			end
-		end
-		if ExploredMapDataByID[id] then
-			-- Do nothing.
 		end
 		if #newExplorationObjects > 0 then
 			if explorationHeader then
@@ -5738,14 +5743,22 @@ app.CreateMap = function(id, t)
 				end
 				for i,o in ipairs(newExplorationObjects) do
 					table.insert(explorationHeader.g, o);
+					o.parent = explorationHeader;
 				end
 			else
 				explorationHeader = app.CreateNPC(-15, newExplorationObjects);
-				tinsert(map.g, 1, explorationHeader);
+				for i,o in ipairs(newExplorationObjects) do
+					o.parent = explorationHeader;
+				end
+				explorationHeader.parent = t;
+				tinsert(t.g, 1, explorationHeader);
 			end
 		end
 		if explorationHeader and explorationHeader.g then
 			insertionSort(explorationHeader.g, sortByTextSafely);
+		end
+		if not rawget(t, "OnUpdate") then
+			map.OnUpdate = onMapUpdate;
 		end
 	end
 	if t.creatureID and t.creatureID < 0 then
@@ -5800,13 +5813,39 @@ app.CreateInstance = function(id, t)
 end
 
 app.events.MAP_EXPLORATION_UPDATED = function(...)
-	wipe(ExploredMapDataByID);
-	wipe(ExploredSubMapsByID);
 	app.CurrentMapID = app.GetCurrentMapID();
-	if ExploredMapDataByID[app.CurrentMapID] then
-		-- Do nothing.
+	StartCoroutine("RefreshExploration", function()
+		coroutine.yield();
+		
+		local pos = C_Map.GetPlayerMapPosition(app.CurrentMapID, "player");
+		if pos then
+			local x, y = pos:GetXY();
+			local explored = C_MapExplorationInfo_GetExploredAreaIDsAtPosition(app.CurrentMapID, pos);
+			if explored then
+				local newArea = false;
+				for _,areaID in ipairs(explored) do
+					if not app.CurrentCharacter.Exploration[areaID] then
+						app.CurrentCharacter.Exploration[areaID] = 1;
+						ATTAccountWideData.Exploration[areaID] = 1;
+						newArea = true;
+						if not app.ExplorationAreaPositionDB[areaID] then
+							local coord = {x * 100, y * 100, app.CurrentMapID};
+							print("New Coordinate: ", C_Map.GetAreaInfo(areaID), coord);
+							app.ExplorationAreaPositionDB[areaID] = { coord };
+						end
+					end
+				end
+				if newArea then
+					app:RefreshData(true, true);
+				end
+			end
+		end
+	end);
+end
+app.events.UI_INFO_MESSAGE = function(messageID)
+	if messageID == 372 then
+		app.events.MAP_EXPLORATION_UPDATED();
 	end
-	app:RefreshData(true, true);
 end
 app.events.ZONE_CHANGED = function()
 	app.CurrentMapID = app.GetCurrentMapID();
@@ -5815,6 +5854,7 @@ app.events.ZONE_CHANGED_NEW_AREA = function()
 	app.CurrentMapID = app.GetCurrentMapID();
 end
 app:RegisterEvent("MAP_EXPLORATION_UPDATED");
+app:RegisterEvent("UI_INFO_MESSAGE");
 app:RegisterEvent("ZONE_CHANGED");
 app:RegisterEvent("ZONE_CHANGED_NEW_AREA");
 end)();
@@ -13116,6 +13156,7 @@ app.events.VARIABLES_LOADED = function()
 	if not currentCharacter.ActiveSkills then currentCharacter.ActiveSkills = {}; end
 	if not currentCharacter.BattlePets then currentCharacter.BattlePets = {}; end
 	if not currentCharacter.Deaths then currentCharacter.Deaths = 0; end
+	if not currentCharacter.Exploration then currentCharacter.Exploration = {}; end
 	if not currentCharacter.Factions then currentCharacter.Factions = {}; end
 	if not currentCharacter.FlightPaths then currentCharacter.FlightPaths = {}; end
 	if not currentCharacter.Lockouts then currentCharacter.Lockouts = {}; end
@@ -13250,6 +13291,7 @@ app.events.VARIABLES_LOADED = function()
 	if not accountWideData.Achievements then accountWideData.Achievements = {}; end
 	if not accountWideData.BattlePets then accountWideData.BattlePets = {}; end
 	if not accountWideData.Deaths then accountWideData.Deaths = 0; end
+	if not accountWideData.Exploration then accountWideData.Exploration = {}; end
 	if not accountWideData.Factions then accountWideData.Factions = {}; end
 	if not accountWideData.FlightPaths then accountWideData.FlightPaths = {}; end
 	if not accountWideData.Quests then accountWideData.Quests = {}; end
