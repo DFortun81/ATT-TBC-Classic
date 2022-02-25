@@ -5538,6 +5538,22 @@ local fields = {
 	["text"] = function(t)
 		return C_Map.GetAreaInfo(t.explorationID) or RETRIEVING_DATA;
 	end,
+	["title"] = function(t)
+		return t.maphash;
+	end,
+	["preview"] = function(t)
+		local exploredMapTextureInfo = t.exploredMapTextureInfo;
+		if exploredMapTextureInfo then
+			local texture = exploredMapTextureInfo.fileDataIDs[1];
+			if texture then
+				rawset(t, "preview", texture);
+				return texture;
+			end
+		end
+	end,
+	["artID"] = function(t)
+		return t.parent and (t.parent.artID or (t.parent.parent and t.parent.parent.artID));
+	end,
 	["icon"] = function(t)
 		return app.asset("INV_Misc_Map02");
 	end,
@@ -5583,8 +5599,33 @@ local fields = {
 		]]
 	end,
 	["coords"] = function(t)
-		return app.ExplorationAreaPositionDB[t.explorationID];
+		local coords = app.ExplorationAreaPositionDB[t.explorationID];
+		if not coords then
+			local maphash = t.maphash;
+			if maphash then
+				local coords = {};
+				local width, height, offsetX, offsetY = strsplit(":", maphash);
+				tinsert(coords, {((offsetX + (width * 0.5)) * 100) / WorldMapFrame:GetWidth(), ((offsetY + (height * 0.5)) * 100) / WorldMapFrame:GetHeight(), t.mapID});
+				return coords;
+			end
+		end
+		return coords;
 	end,
+	["exploredMapTextureInfo"] = function(t)
+		local maphash = t.maphash;
+		if maphash then
+			local exploredMapTextures = C_MapExplorationInfo_GetExploredMapTextures(t.mapID)
+			if exploredMapTextures then
+				for i,info in ipairs(exploredMapTextures) do
+					local hash = info.textureWidth..":"..info.textureHeight..":"..info.offsetX..":"..info.offsetY;
+					if hash == maphash then
+						rawset(t, "exploredMapTextureInfo", info);
+						return info;
+					end
+				end
+			end
+		end
+	end
 };
 app.ExplorationClass = app.BaseObjectFields(fields);
 app.CreateExploration = function(id, t)
