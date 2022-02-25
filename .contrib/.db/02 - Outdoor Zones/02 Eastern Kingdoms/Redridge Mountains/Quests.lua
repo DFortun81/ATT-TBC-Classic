@@ -128,7 +128,6 @@ _.Zones =
 				q(3741, {	-- Hilary's Necklace
 					["qg"] = 8965,	-- Shawn
 					["coord"] = { 29.3, 53.4, REDRIDGE_MOUNTAINS },
-					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 10958, 1 },	-- Hilary's Necklace
 					},
