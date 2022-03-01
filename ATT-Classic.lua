@@ -5779,7 +5779,7 @@ app.CreateMap = function(id, t)
 		local explorationByAreaID = {};
 		local explorationHeader = nil;
 		for i,o in ipairs(t.g) do
-			if o.key == "headerID" and o.headerID == -15 then
+			if o.headerID == -15 then
 				explorationHeader = o;
 				if o.g then
 					for j,e in ipairs(o.g) do
@@ -10949,7 +10949,9 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 			if results then
 				-- Simplify the returned groups
 				local groups = {};
-				local header = app.CreateMap(self.mapID, { g = groups });
+				local header = { mapID = self.mapID, g = groups };
+				local achievementsHeader = app.CreateNPC(-4, { ["g"] = {} });
+				table.insert(groups, achievementsHeader);
 				local explorationHeader = app.CreateNPC(-15, { ["g"] = {} });
 				table.insert(groups, explorationHeader);
 				local factionsHeader = app.CreateNPC(-8, { ["g"] = {} });
@@ -11018,6 +11020,8 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 						else
 							MergeObject(groups, clone);
 						end
+					elseif group.key == "achievementID" then
+						MergeObject(achievementsHeader.g, clone);
 					elseif group.key == "questID" then
 						MergeObject(questsHeader.g, clone, 1);
 					elseif group.key == "factionID" then
@@ -11044,7 +11048,7 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 				end
 				
 				-- Swap out the map data for the header.
-				results = header;
+				results = (header.key == "instanceID" and app.CreateInstance or app.CreateMap)(header.mapID, header);
 				
 				if IsSameMap(self.data, results) then
 					ReapplyExpand(self.data.g, results.g);
