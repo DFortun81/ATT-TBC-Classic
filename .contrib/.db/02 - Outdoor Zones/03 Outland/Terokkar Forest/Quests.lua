@@ -194,7 +194,7 @@ _.Zones =
 						i(32720),	-- Time-Lost Offering
 					},
 				})),
-				applyclassicphase(TBC_PHASE_TWO_SKYGUARD, q(11073, {  -- Terokk's Downfall
+				applyclassicphase(TBC_PHASE_TWO_SKYGUARD, q(11073, {	-- Terokk's Downfall
 					["qg"] = 23038,	-- Sky Commander Adaris
 					["sourceQuest"] = 11885,	-- Adversarial Blood
 					["coord"] = { 64.1, 66.9, TEROKKAR_FOREST },

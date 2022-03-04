@@ -161,6 +161,15 @@ _.Zones =
 					},
 					["lvl"] = 70,
 				})),
+				q(9766,  {	-- Coilfang Armaments
+					["qg"] = 17841,	-- Ysiel Windsinger
+					["sourceQuest"] = 9765,	-- Preparing for War
+					["maxReputation"] = { 942, EXALTED },	-- Cenarion Expedition, Exalted.
+					["timeline"] = { "removed 4.3.0.14732" },
+					["cost"] = { { "i", 24368, 1 } },	-- Coilfang Armaments
+					["repeatable"] = true,
+					["lvl"] = lvlsquish(67, 20, 67),
+				}),
 				q(10104, {	-- Concerns About Tuurem
 					["qg"] = 18008,	-- Ikuti
 					["coord"] = { 41.8, 27.2, ZANGARMARSH },
