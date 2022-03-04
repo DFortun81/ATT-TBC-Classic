@@ -466,6 +466,7 @@ _.Zones =
 					["coord"] = { 47.4, 52, DUN_MOROGH },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { MAGE },
+					["isBreadcrumb"] = true,
 					["lvl"] = 10,
 				}),
 				q(317, {	-- Stocking Jetsteam

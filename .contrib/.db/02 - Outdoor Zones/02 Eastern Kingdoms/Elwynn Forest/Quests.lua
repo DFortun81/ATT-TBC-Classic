@@ -537,6 +537,7 @@ _.Zones =
 					},
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { MAGE },
+					["isBreadcrumb"] = true,
 					["lvl"] = 10,
 				}),
 				q(123, {	-- The Collector
