@@ -287,6 +287,7 @@ app.L = {
 		[641] = { 14808, "Sunken Temple", app.asset("achievement_boss_shadeoferanikus") },
 		[642] = { 14808, "Blackrock Depths", app.asset("achievement_boss_emperordagranthaurissan") },
 		[643] = { 14808, "Lower Blackrock Spire", app.asset("achievement_boss_overlord_wyrmthalak") },
+		[646] = { 14808, "Stratholme", app.asset("spell_deathknight_armyofthedead") },
 		[647] = { 14805, "Hellfire Ramparts", app.asset("achievement_boss_omartheunscarred_01") },
 		[650] = { 14805, "Underbog", app.asset("achievement_boss_theblackstalker") },
 		[651] = { 14805, "Mana-Tombs", app.asset("achievement_boss_nexus_prince_shaffar") },

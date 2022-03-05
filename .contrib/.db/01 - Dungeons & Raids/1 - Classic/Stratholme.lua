@@ -2,76 +2,122 @@
 --   D U N G E O N S  &  R A I D S  M O D U L E    --
 -----------------------------------------------------
 _.Instances = { tier(CLASSIC_TIER, {
-	map(STRATHOLME, {
+	inst(236, {	-- Stratholme
 		-- #if BEFORE MOP
 		["lore"] = "Once the jewel of northern Lordaeron, the city of Stratholme is where Prince Arthas turned against his mentor, Uther Lightbringer, and slaughtered hundreds of his own subjects who were believed to have contracted the dreaded plague of undeath. Arthas' downward spiral and ultimate surrender to the Lich King soon followed. The broken city is now inhabited by the undead Scourge -- led by the powerful lich, Kel'Thuzad. A contingent of Scarlet Crusaders, led by Grand Crusader Dathrohan, also holds a portion of the ravaged city. The two sides are locked in constant, violent combat. Those adventurers brave (or foolish) enough to enter Stratholme will be forced to contend with both factions before long. It is said that the city is guarded by three massive watchtowers, as well as powerful necromancers, banshees and abominations. There have also been reports of a malefic Death Knight riding atop an unholy steed, dispensing indiscriminate wrath on all those who venture within the realm of the Scourge.",
 		-- #endif
+		-- #if BEFORE CATA
+		["mapID"] = STRATHOLME,
+		-- #endif
 		["lvl"] = 48,
 		["groups"] = {
+			n(ACHIEVEMENTS, {
+				removeclassicphase(ach(646, {	-- Stratholme
+					-- #if BEFORE WRATH
+					["sourceQuest"] = 5263,	-- Above and Beyond
+					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(5263)); end]],
+					-- #endif
+				})),
+			}),
 			n(QUESTS, {
 				q(5263, {	-- Above and Beyond
 					["qg"] = 11039,	-- Duke Nicholas Zverenhoff <The Argent Dawn>
 					["sourceQuest"] = 5262,	-- The Truth Comes Crashing Down
 					["coord"] = { 81.4, 59.8, EASTERN_PLAGUELANDS },
-					["cost"] = { { "i", 13251, 1 } },	-- Head of Baron Rivendare
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/1 Head of Baron Rivendare
+							["provider"] = { "i", 13251 },	-- Head of Baron Rivendare
+						}),
+					},
 				}),
 				q(5125, {	-- Aurius' Reckoning
 					["qg"] = 10917,	-- Aurius
 					["sourceQuest"] = 5122,	-- The Medallion of Faith
 					["cost"] = { { "i", 12845, 1 } },	-- Medallion of Faith
+					["timeline"] = { "removed 4.0.3" },
 					["groups"] = {
-						i(17044),	-- Will of the Martyr
-						i(17045),	-- Blood of the Martyr
+						i(17044, {	-- Will of the Martyr
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(17045, {	-- Blood of the Martyr
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5861, {	-- Find Myranda
-					["qg"] = 1855,	-- Tirion Fordring
+					["providers"] = {
+						{ "n", 1855 },	-- Tirion Fordring
+						{ "i", 14872 },	-- Tirion's Gift
+					},
 					["sourceQuest"] = 5848,	-- Of Love and Family (2/2)
 					["coord"] = { 7.6, 43.6, EASTERN_PLAGUELANDS },
-					["cost"] = { { "i", 14872, 1 } },	-- Tirion's Gift
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 52,
 				}),
 				q(5243, {	-- Houses of the Holy
 					["qg"] = 11036,	-- Leonid Barthalomew the Revered <The Argent Dawn>
+					-- #if BEFORE 4.0.3
 					["description"] = "When mousing over the crates, look for 'Requires: Disarm Trap'. If you see this, it's a trap and shouldn't be touched.\n\nIf you are a dwarf, use find treasure and on the mini map it will show a dot for the holy water in the crate. It will only show crates with items in it on the mini map and not bad crates.",
+					-- #endif
 					["coord"] = { 81.6, 57.8, EASTERN_PLAGUELANDS },
 					["cost"] = { { "i", 13180, 5 } },	-- Stratholme Holy Water
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
-						i(13216),	-- Crown of the Penitent
-						i(13217),	-- Band of the Penitent
+						i(13216, {	-- Crown of the Penitent
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13217, {	-- Band of the Penitent
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						-- #if BEFORE 4.0.3
 						i(6149),	-- Greater Mana Potion
 						i(3928),	-- Superior Healing Potion
+						-- #endif
 					},
 				}),
 				q(5944, {	-- In Dreams
 					["qg"] = 1842,	-- Highlord Taelan Fordring <Highlord of the Scarlet Crusade>
 					["sourceQuest"] = 5862,	-- Scarlet Subterfuge
 					["coord"] = { 42, 14.8, WESTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 52,
 					["groups"] = {
-						i(15418),	-- Shimmering Platinum Warhammer
-						i(15411),	-- Mark of Fordring
-						i(15421),	-- Shroud of the Exile
-						i(15413),	-- Ornate Adamantium Breastplate
-						i(16058),	-- Fordring's Seal
+						i(15418, {	-- Shimmering Platinum Warhammer
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15411, {	-- Mark of Fordring
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15421, {	-- Shroud of the Exile
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15413, {	-- Ornate Adamantium Breastplate
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(16058, {	-- Fordring's Seal
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5264, {	-- Lord Maxwell Tyrosus
 					["qg"] = 11039,	-- Duke Nicholas Zverenhoff <The Argent Dawn>
 					["sourceQuest"] = 5263,	-- Above and Beyond
 					["coord"] = { 81.4, 59.8, EASTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 				}),
 				q(5781, {	-- Of Forgotten Memories
 					["qg"] = 1855,	-- Tirion Fordring
 					["sourceQuest"] = 5742,	-- Redemption
 					["coord"] = { 7.4, 43.6, EASTERN_PLAGUELANDS },
-					["cost"] = { { "i", 14613, 1 } },	-- Taelan's Hammer
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 52,
 					["groups"] = {
-						i(14613, {	-- Taelan's Hammer
+						objective(1, {	-- 0/1 Taelan's Hammer
+							["provider"] = { "i", 14613 },	-- Taelan's Hammer
 							["coord"] = { 29.8, 85.6, EASTERN_PLAGUELANDS },
 							["cr"] = 11886,	-- Mercutio Filthgorger
 						}),
@@ -81,10 +127,11 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 1855,	-- Tirion Fordring
 					["sourceQuest"] = 5781,	-- Of Forgotten Memories
 					["coord"] = { 7.4, 43.6, EASTERN_PLAGUELANDS },
-					["cost"] = { { "i", 14625, 1 } },	-- Symbol of Lost Honor
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 52,
 					["groups"] = {
-						i(14625, {	-- Symbol of Lost Honor
+						objective(1, {	-- 0/1 Symbol of Lost Honor
+							["provider"] = { "i", 14625 },	-- Symbol of Lost Honor
 							["coord"] = { 71.3, 33.9, EASTERN_PLAGUELANDS },
 						}),
 					},
@@ -93,25 +140,38 @@ _.Instances = { tier(CLASSIC_TIER, {
 					["qg"] = 1855,	-- Tirion Fordring
 					["sourceQuest"] = 5845,	-- Of Lost Honor
 					["coord"] = { 7.4, 43.6, EASTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 52,
 				}),
 				q(5848, {	-- Of Love and Family (2/2)
 					["qg"] = 11936,	-- Artist Renfray
 					["sourceQuest"] = 5846,	-- Of Love and Family (1/2)
 					["coord"] = { 65.6, 75.4, WESTERN_PLAGUELANDS },
-					["cost"] = { { "i", 14679, 1 } },	-- Of Love and Family
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 52,
+					["groups"] = {
+						objective(1, {	-- 0/1 Of Love and Family
+							["provider"] = { "i", 14679 },	-- Of Love and Family
+						}),
+					},
 				}),
 				q(6163, {	-- Ramstein
 					["qg"] = 11878,	-- Nathanos Blightcaller <Champion of the Banshee Queen>
 					["coord"] = { 26.6, 74.8, EASTERN_PLAGUELANDS },
-					["cost"] = { { "i", 15880, 1 } },	-- Head of Ramstein the Gorger
-					["cr"] = 10439,	-- Ramstein the Gorger
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
-						i(18022),	-- Royal Seal of Alexis
-						i(17001),	-- Elemental Circle
+						objective(1, {	-- 0/1 Head of Ramstein the Gorger
+							["provider"] = { "i", 15880 },	-- Head of Ramstein the Gorger
+							["cr"] = 10439,	-- Ramstein the Gorger
+						}),
+						i(18022, {	-- Royal Seal of Alexis
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(17001, {	-- Elemental Circle
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5742, {	-- Redemption
@@ -122,137 +182,171 @@ _.Instances = { tier(CLASSIC_TIER, {
 						5542,	-- Demon Dogs
 					},
 					["coord"] = { 7.4, 43.6, EASTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 52,
 				}),
 				q(5862, {	-- Scarlet Subterfuge
-					["qg"] = 11872,	-- Myranda the Hag
+					["providers"] = {
+						{ "n", 11872 },	-- Myranda the Hag
+						{ "i", 14872 },	-- Tirion's Gift
+					},
 					["sourceQuest"] = 5861,	-- Find Myranda
 					["coord"] = { 50.8, 77.8, WESTERN_PLAGUELANDS },
-					["cost"] = { { "i", 14872, 1 } },	-- Tirion's Gift
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 52,
 				}),
 				q(5213, {	-- The Active Agent
 					["qg"] = 11035,	-- Betina Bigglezink <The Argent Dawn>
 					["sourceQuest"] = 5212,	-- The Flesh Does Not Lie
 					["coord"] = { 81.4, 59.6, EASTERN_PLAGUELANDS },
-					["cost"] = { { "i", 13176, 1 } },	-- Scourge Data
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
-						i(19812),	-- Rune of the Dawn
-						i(13209),	-- Seal of the Dawn
+						objective(1, {	-- 0/1 Scourge Data
+							["provider"] = { "i", 13176 },	-- Scourge Data
+						}),
+						i(19812, {	-- Rune of the Dawn
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13209, {	-- Seal of the Dawn
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5251, {	-- The Archivist
 					["qg"] = 11039,	-- Duke Nicholas Zverenhoff <The Argent Dawn>
 					["coord"] = { 81.4, 59.8, EASTERN_PLAGUELANDS },
-					["cr"] = 10811,	-- Archivist Galford
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/1 Archivist Galford slain
+							["provider"] = { "n", 10811 },	-- Archivist Galford
+						}),
+					},
 				}),
 				q(5265, {	-- The Argent Hold
 					["qg"] = 11034,	-- Lord Maxwell Tyrosus <The Argent Dawn>
 					["sourceQuest"] = 5264,	-- Lord Maxwell Tyrosus
 					["coord"] = { 81.6, 58.0, EASTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
-						i(13246),	-- Argent Avenger
-						i(13249),	-- Argent Crusader
-						i(13243),	-- Argent Defender
+						i(13246, {	-- Argent Avenger
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13249, {	-- Argent Crusader
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13243, {	-- Argent Defender
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5212, {	-- The Flesh Does Not Lie
 					["qg"] = 11035,	-- Betina Bigglezink <The Argent Dawn>
 					["coord"] = { 81.4, 59.6, EASTERN_PLAGUELANDS },
-					["cost"] = { { "i", 13174, 20 } },	-- Plagued Flesh Sample
-					["lvl"] = 55,
-				}),
-				q(5214, {	-- The Great Fras Siabi
-					["qg"] = 11033,	-- Smokey LaRue
-					["coord"] = { 81.6, 58.0, EASTERN_PLAGUELANDS },
-					["cost"] = { { "i", 13172, 1 } },	-- Siabi's Premium Tobacco
-					["cr"] = 11058,	-- Fras Siabi
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
-						i(13171),	-- Smokey's Lighter
+						objective(1, {	-- 0/10 Plagued Flesh Sample (20 in Classic)
+							["provider"] = { "i", 13174 },	-- Plagued Flesh Sample
+						}),
+					},
+				}),
+				q(5214, {	-- The Great Ezra Grimm
+					["qg"] = 11033,	-- Smokey LaRue
+					["coord"] = { 81.6, 58.0, EASTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/1 Grimm's Premium Tobacco
+							["provider"] = { "i", 13172 },	-- Grimm's Premium Tobacco
+							["cr"] = 11058,	-- Ezra Grimm
+						}),
+						i(13171, {	-- Smokey's Lighter
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5122, {	-- The Medallion of Faith
 					["qg"] = 10917,	-- Aurius
 					["cost"] = { { "i", 12845, 1 } },	-- Medallion of Faith
+					["timeline"] = { "removed 4.0.3" },
 					["repeatable"] = true,
 				}),
 				q(5281, {	-- The Restless Souls (1/2)
 					["qg"] = 11038,	-- Caretaker Alen <The Argent Dawn>
 					["coord"] = { 79.6, 63.8, EASTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 				}),
 				q(5282, {	-- The Restless Souls (2/2)
 					["qg"] = 11140,	-- Egan
 					["sourceQuest"] = 5281,	-- The Restless Souls (1/2)
 					["coord"] = { 14.4, 33.6, EASTERN_PLAGUELANDS },
-					["cost"] = { { "i", 13289, 1 } },	-- Egan's Blaster
-					["crs"] = {
-						10385,	-- Ghostly Citizen
-						10384,	-- Spectral Citizen
-						11122,	-- Restless Soul
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
-						i(13315),	-- Testament of Hope
+						objective(1, {	-- 0/15 Souls Freed
+							["provider"] = { "i", 13289 },	-- Egan's Blaster
+							["crs"] = {
+								10385,	-- Ghostly Citizen
+								10384,	-- Spectral Citizen
+								11122,	-- Restless Soul
+							},
+						}),
+						i(13315, {	-- Testament of Hope
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5262, {	-- The Truth Comes Crashing Down
 					["provider"] = { "i", 13250 },	-- Head of Balnazzar
 					["sourceQuest"] = 5251,	-- The Archivist
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 				}),
 			}),
 			n(ZONE_DROPS, {
-				applyclassicphase(PHASE_SIX, i(22526)),	-- Bone Fragments
+				applyclassicphase(PHASE_SIX, i(22526, {	-- Bone Fragments
+					["timeline"] = { "removed 4.0.3" },
+				})),
 				i(12843, {	-- Corruptor's Scourgestone
+					-- #if BEFORE 4.0.3
 					["description"] = "Can drop from any Undead rare mob or boss in the Plaguelands and associated dungeons so long as you are equipped with one of the Argent Dawn trinkets.",
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 				}),
 				i(12841, {	-- Invader's Scourgestone
+					-- #if BEFORE 4.0.3
 					["description"] = "Can drop from any Undead mobs in the Plaguelands and associated dungeons so long as you are equipped with one of the Argent Dawn trinkets.",
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 				}),
 				i(12840, {	-- Minion's Scourgestone
+					-- #if BEFORE 4.0.3
 					["description"] = "Can drop from weak Undead mobs in the Plaguelands and associated dungeons so long as you are equipped with one of the Argent Dawn trinkets.",
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 				}),
-				i(12811, {	-- Righteous Orb
-					["description"] = "Can drop from any Scarlet Crusade member in Stratholme in addition to the Scarlet Oracle and the Crimson Elite in the Plaguelands.",
-				}),
-				i(13174),	-- Plagued Flesh Sample
-				i(12734, {	-- Enchanted Scarlet Thread
-					["description"] = "These can be found in 4 places in the Scarlet Enclave.\n\n1&2: Malor's Room on the Table\n3: In the next room before you split to Cannon Master or Archivist.\n4: In Archivist's room on a box in the back.",
+				i(13174, {	-- Plagued Flesh Sample
+					["timeline"] = { "removed 4.0.3" },
 				}),
 				i(12735, {	-- Frayed Abomination Stitching
+					-- NOTE: Not removed from game, but no longer useful for anything.
+					-- #if BEFORE 4.0.3
 					["crs"] = {
 						10439,	-- Ramstein the Gorger
 						10414,	-- Patchwork Horror
 						10416,	-- Bile Spewer
 						10417,	-- Venom Belcher
 					},
+					-- #endif
 				}),
-				i(16249, {  -- Formula: Enchant 2H Weapon - Major Intellect
-					["cr"] = 10422,  -- Crimson Sorcerer
+				i(142337, {	-- Plans: Blight
+					["timeline"] = { "added 7.1.5.23360" },
 				}),
-				i(16248, {	-- Formula: Enchant Weapon - Unholy
-					["cr"] = 10398,	-- Thuzadin Shadowcaster
-				}),
-				i(14495, {	-- Pattern: Ghostweave Pants
-					["cr"] = 10384, 	-- Spectral Citizen
-				}),
-				i(15777, {	-- Pattern: Runic Leather Shoulders
-					["cr"] = 10425, 	-- Crimson Battle Mage
-				}),
-				i(15768, {	-- Pattern: Wicked Leather Belt
-					["cr"] = 10406, 	-- Ghoul Ravener
-				}),
-				i(18658,  {	-- Schematic: Ultra-Flash Shadow Reflector
-					["cr"] = 10426,  -- Crimson Inquisitor
-				}),
-				i(16052,  {	-- Schematic: Voice Amplification Modulator
-					["cr"] = 10426,  -- Crimson Inquisitor
-				}),
+				
 				i(18743),	-- Gracious Cape
 				i(17061),	-- Juno's Shadow
 				i(18741),	-- Morlune's Bracer
@@ -273,6 +367,36 @@ _.Instances = { tier(CLASSIC_TIER, {
 			n(-388, {	-- Main Gate
 				["description"] = "Stratholme is divided into two sides.\n\nThis side is commonly referred to as the \"Live\" or \"Scarlet\" side, which the Scarlet Crusade has taken over.",
 				["groups"] = {
+					n(ZONE_DROPS, {
+						i(12811, {	-- Righteous Orb
+							-- #if BEFORE 4.0.3
+							["description"] = "Can drop from any Scarlet Crusade member in Stratholme in addition to the Scarlet Oracle and the Crimson Elite in the Plaguelands.",
+							-- #endif
+						}),
+						i(12734, {	-- Enchanted Scarlet Thread
+							-- #if BEFORE 4.0.3
+							["description"] = "These can be found in 4 places in the Scarlet Enclave.\n\n1&2: Malor's Room on the Table\n3: In the next room before you split to Cannon Master or Archivist.\n4: In Archivist's room on a box in the back.",
+							-- #endif
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(16249, {	-- Formula: Enchant 2H Weapon - Major Intellect
+							["cr"] = 10422,  -- Crimson Sorcerer / Risen Sorcerer [CATA+]
+						}),
+						i(14495, {	-- Pattern: Ghostweave Pants
+							["timeline"] = { "removed 4.0.3" },	-- Moved to Trainer
+							["cr"] = 10384,  -- Spectral Citizen
+						}),
+						i(15777, {	-- Pattern: Runic Leather Shoulders
+							["timeline"] = { "removed 4.0.3" },	-- Moved to Trainer
+							["cr"] = 10425,	-- Crimson Battle Mage
+						}),
+						i(18658, {	-- Schematic: Ultra-Flash Shadow Reflector
+							["cr"] = 10426,	-- Crimson Inquisitor / Risen Inquisitor [CATA+]
+						}),
+						i(16052, {	-- Schematic: Voice Amplification Modulator
+							["cr"] = 10426,	-- Crimson Inquisitor / Risen Inquisitor [CATA+]
+						}),
+					}),
 					n(11082, {	-- Stratholme Courier
 						["description"] = "Drops 3 random keys used to open postboxes found throughout Stratholme. All 3 of the postboxes must be opened to spawn the Postmaster.",
 						["groups"] = {
@@ -340,17 +464,25 @@ _.Instances = { tier(CLASSIC_TIER, {
 					}),
 					n(11032, {	-- Malor the Zealous
 						i(12845, {	-- Medallion of Faith
+							-- #if BEFORE 4.0.3
 							["description"] = "Located in Malor's Strongbox. Can be turned in to Aurius on the Dead side of Stratholme to have him aide you during the Baron Rivendare encounter.",
+							-- #endif
+							["timeline"] = { "removed 4.0.3" },
 						}),
 					}),
-					n(11120, {	-- Crimson Hammersmith
+					n(11120, {	-- Crimson Hammersmith / Risen Hammersmith [CATA+]
 						["description"] = "Loot the Blacksmithing Plans on the ground to spawn this mob.",
 						["groups"] = {
-							i(18781),	-- Bottom Half of Advanced Armorsmithing: Volume II
-							i(13351),	-- Crimson Hammersmith's Apron
+							i(18781, {	-- Bottom Half of Advanced Armorsmithing: Volume II
+								["timeline"] = { "removed 4.0.3" },
+							}),
+							i(13351, {	-- Crimson Hammersmith's Apron
+								["timeline"] = { "removed 4.0.3" },
+							}),
 							i(12827, {	-- Plans: Serenity
 								["description"] = "You must be a Blacksmith in order to loot this from the Plans on the floor.",
 								["timeline"] = { "removed 2.0.1", "added 3.0.1" },
+								["requireSkill"] = BLACKSMITHING,
 							}),
 						},
 					}),
@@ -437,6 +569,14 @@ _.Instances = { tier(CLASSIC_TIER, {
 				["description"] = "Stratholme is divided into two sides.\n\nThis side is commonly referred to as the \"Dead\" or \"Scourge\" side, which the Scourge has taken over.",
 				["cost"] = { { "i", 12382, 1 } },	-- Key to the City
 				["groups"] = {
+					n(ZONE_DROPS, {
+						i(16248, {	-- Formula: Enchant Weapon - Unholy
+							["cr"] = 10398,	-- Thuzadin Shadowcaster
+						}),
+						i(15768, {	-- Pattern: Wicked Leather Belt
+							["cr"] = 10406,	-- Ghoul Ravener
+						}),
+					}),
 					n(10435, { 	-- Magistrate Barthilas
 						["description"] = "IIf you enter from the Main Gate side, you can fight this boss first, otherwise he runs to the Slaughter House.",
 						["groups"] = {
