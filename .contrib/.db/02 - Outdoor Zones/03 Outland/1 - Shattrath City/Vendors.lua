@@ -646,6 +646,12 @@ _.Zones =
 						i(22537),	-- Formula: Enchant Ring - Healing Power
 						i(28281),	-- Formula: Enchant Weapon - Major Healing
 						i(29175),	-- Gavel of Pure Light
+						i(29195, {	-- Glyph of Arcane Warding
+							["timeline"] = { "removed 5.0.4" },
+						}),
+						i(29191, {	-- Glyph of Power
+							["timeline"] = { "removed 5.0.4" },
+						}),
 						applyclassicphase(TBC_PHASE_TWO, i(35362)),	-- Kodohide Helm
 						applyclassicphase(TBC_PHASE_TWO, i(35333)),	-- Mooncloth Cowl
 						applyclassicphase(TBC_PHASE_TWO, i(35368)),	-- Opportunist's Leather Legguards
