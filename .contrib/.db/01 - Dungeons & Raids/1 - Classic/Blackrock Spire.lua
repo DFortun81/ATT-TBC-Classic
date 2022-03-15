@@ -780,13 +780,19 @@ _.Instances = { tier(CLASSIC_TIER, {
 					},
 				}),
 				i(16680),	-- Beaststalker's Belt
-				i(16681),	-- Beaststalker's Bindings
+				i(16681, {	-- Beaststalker's Bindings
+					["timeline"] = { "removed 4.0.3" },
+					["cr"] = 9096,	-- Rage Talon Dragonspawn
+				}),
 				i(16736),	-- Belt of Valor
 				i(16735),	-- Bracers of Valor
 				i(16673), 	-- Cord of Elements
 				i(16696),	-- Devout Belt
 				i(16703),	-- Dreadmist Bracers
-				i(16685),	-- Magister's Belt
+				i(16685, {	-- Magister's Belt
+					["timeline"] = { "removed 4.0.3" },
+					["cr"] = 9239,	-- Smolderthorn Mystic
+				}),
 				i(16683),	-- Magister's Bindings
 				i(16713),	-- Shadowcraft Belt
 				i(16716),	-- Wildheart Belt
