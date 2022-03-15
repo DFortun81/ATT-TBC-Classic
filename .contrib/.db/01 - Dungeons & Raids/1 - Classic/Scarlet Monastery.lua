@@ -206,6 +206,9 @@ _.Instances = { tier(CLASSIC_TIER, {
 						i(7713),	-- Illusionary Rod
 						i(7712),	-- Mantle of Doan
 						i(7711),	-- Robe of Doan
+						i(34227, {	-- Deadman's Hand
+							["timeline"] = { "added 2.3.0", "removed 5.0.4" },
+						}),
 						{
 							["itemID"] = 7146,	-- The Scarlet Key
 							["description"] = "Found in the chest after killing Arcanist Doan.",
