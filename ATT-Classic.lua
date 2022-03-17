@@ -11042,6 +11042,10 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 								MergeObject(groups, clone);
 							end
 						end
+					elseif group.key == "headerID" then
+						if not GetRelativeValue(group, "instanceID") then
+							MergeObject(groups, clone);
+						end
 					else
 						MergeObject(groups, clone);
 					end
