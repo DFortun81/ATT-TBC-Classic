@@ -412,13 +412,6 @@ root("Zones", m(KALIMDOR, {
 						recipe(697),	-- Summon Voidwalker
 					},
 				}),
-				q(787, {	-- The New Horde
-					["races"] = HORDE_ONLY,
-					["qg"] = 3144,	-- Eitrigg
-					["altQuests"] = {
-						4641,	-- Your Place In The World
-					},
-				}),
 				q(1963, {	-- The Shattered Hand (1/2)
 					["qg"] = 6446,	-- Therzok
 					["sourceQuests"] = {

@@ -734,6 +734,13 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 10,
 				}),
+				q(787, {	-- The New Horde
+					["qg"] = 3144,	-- Eitrigg
+					["coord"] = { 34.3, 39.4, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
+					["isBreadcrumb"] = true,
+					["races"] = HORDE_ONLY,
+				}),
 				q(1859, {	-- Therzok
 					["qg"] = 3170,	-- Kaplak
 					["coord"] = { 51.98, 43.70, DUROTAR },
@@ -839,8 +846,8 @@ _.Zones =
 				}),
 				q(4641, {	-- Your Place In The World
 					["qg"] = 10176,	-- Kaltunk
+					["sourceQuest"] = 787,	-- The New Horde
 					["coord"] = { 43.2, 68.4, DUROTAR },
-					["altQuests"] = { 787 },	-- The New Horde
 					["isBreadcrumb"] = true,
 					["races"] = HORDE_ONLY,
 				}),
