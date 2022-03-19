@@ -2783,7 +2783,7 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 		prof(BLACKSMITHING, {
 			i(7992),	-- Plans: Blue Glittering Axe
 			i(3609),	-- Plans: Copper Chain Vest
-			un(TBC_PHASE_ONE, i(12698)),	-- Plans: Dawnbringer Shoulders
+			applyclassicphase(TBC_PHASE_ONE, i(12698)),	-- Plans: Dawnbringer Shoulders
 			i(7993),	-- Plans: Dazzling Mithril Rapier
 			i(2883),	-- Plans: Deadly Bronze Poniard
 			i(3868),	-- Plans: Frost Tiger Blade
@@ -2799,6 +2799,7 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 			i(7975),	-- Plans: Heavy Mithril Pants
 			i(7990),	-- Plans: Heavy Mithril Helm
 			i(12716),	-- Plans: Helm of the Great Chief
+			i(12728),	-- Plans: Invulnerable Mail [Also available from Goraluk Anvilcrack in UBRS.]
 			i(5543),	-- Plans: Iridescent Hammer
 			i(6045),	-- Plans: Iron Counterweight
 			i(6044),	-- Plans: Iron Shield Spike

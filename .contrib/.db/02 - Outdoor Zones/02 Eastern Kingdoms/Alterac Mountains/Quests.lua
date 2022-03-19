@@ -166,7 +166,7 @@ _.Zones =
 								"removed 2.0.1.5678"
 							},
 						}),
-						un(TBC_PHASE_ONE, i(25878)),	-- Dusksteel Throwing Knife [TBC]
+						applyclassicphase(TBC_PHASE_ONE, i(25878)),	-- Dusksteel Throwing Knife [TBC]
 					},
 				}),
 				q(514, {	-- Letter to Stormpike

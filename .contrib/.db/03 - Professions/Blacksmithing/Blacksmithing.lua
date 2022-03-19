@@ -957,7 +957,7 @@ profession(BLACKSMITHING, {
 				},
 				-- #endif
 				-- #if BEFORE MOP
-				un(TBC_PHASE_ONE, {
+				applyclassicphase(TBC_PHASE_ONE, {
 					["recipeID"] = 34982,	-- Enchanted Thorium Blades
 					["timeline"] = {
 						"added 2.0.1.10000",
@@ -1119,7 +1119,7 @@ profession(BLACKSMITHING, {
 				},
 				-- #endif
 				-- #if BEFORE MOP
-				un(TBC_PHASE_ONE, {
+				applyclassicphase(TBC_PHASE_ONE, {
 					["recipeID"] = 34979,	-- Thick Bronze Darts
 					["timeline"] = {
 						"added 2.0.1.10000",
@@ -1146,7 +1146,7 @@ profession(BLACKSMITHING, {
 					["recipeID"] = 16984
 				},
 				-- #if BEFORE MOP
-				un(TBC_PHASE_ONE, {
+				applyclassicphase(TBC_PHASE_ONE, {
 					["recipeID"] = 34981,	-- Whirling Steel Axes
 					["timeline"] = {
 						"added 2.0.1.10000",

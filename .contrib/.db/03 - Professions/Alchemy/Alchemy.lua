@@ -373,7 +373,8 @@ profession(ALCHEMY, {
 			["groups"] = {
 				{
 					["name"] = "Flask of Chromatic Resistance",
-					["recipeID"] = 17638
+					["timeline"] = { "removed 5.0.4" },
+					["recipeID"] = 17638,
 				},
 				{
 					["name"] = "Flask of Distilled Wisdom",

@@ -629,7 +629,7 @@ _.Zones =
 								"removed 2.0.1.5678"
 							},
 						}),
-						un(TBC_PHASE_ONE, i(32378, {	-- Silver Star [TBC]
+						applyclassicphase(TBC_PHASE_ONE, i(32378, {	-- Silver Star [TBC]
 							["timeline"] = {
 								"added 2.0.1.5678",
 								"removed 4.0.3.10000",
