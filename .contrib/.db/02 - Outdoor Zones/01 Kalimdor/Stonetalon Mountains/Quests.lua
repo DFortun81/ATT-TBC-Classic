@@ -362,8 +362,8 @@ _.Zones =
 				}),
 				q(6542, {	-- Report to Kadrak
 					["qg"] = 11821,	-- Darn Talongrip
-					["isBreadcrumb"] = true,
 					["coord"] = { 73.23, 94.91, STONETALON_MOUNTAINS },
+					["isBreadcrumb"] = true,
 					["races"] = HORDE_ONLY,
 					["lvl"] = 17,
 				}),

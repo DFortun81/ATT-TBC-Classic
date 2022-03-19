@@ -1044,6 +1044,7 @@ _.Zones =
 				q(6541, {	-- Report to Kadrak
 					["qg"] = 3429,	-- Thork
 					["coord"] = { 51.50, 30.86, THE_BARRENS },
+					["isBreadcrumb"] = true,
 					["races"] = HORDE_ONLY,
 					["lvl"] = 17,
 				}),
