@@ -657,7 +657,7 @@ _.Zones =
 						applyclassicphase(TBC_PHASE_TWO, i(35368)),	-- Opportunist's Leather Legguards
 						i(29717),	-- Pattern: Drums of Battle
 						-- #if ANYCLASSIC
-						applyclassicphase(TBC_PHASE_FIVE, i(185926)),	-- Pattern: Greater Drums of Battle
+						applyclassicphase(TBC_PHASE_FOUR, i(185926)),	-- Pattern: Greater Drums of Battle
 						-- #endif
 						i(13517),	-- Recipe: Alchemist Stone
 						i(31354),	-- Recipe: Flask of the Titans

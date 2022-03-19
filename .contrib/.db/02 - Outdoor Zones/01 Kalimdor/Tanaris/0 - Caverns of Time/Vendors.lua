@@ -61,7 +61,7 @@ _.Zones =
 							}),
 							i(29713),	-- Pattern: Drums of Panic
 							-- #if ANYCLASSIC
-							applyclassicphase(TBC_PHASE_FIVE, i(185925)),	-- Pattern: Greater Drums of Panic
+							applyclassicphase(TBC_PHASE_FOUR, i(185925)),	-- Pattern: Greater Drums of Panic
 							-- #endif
 							i(31355),	-- Recipe: Flask of Supreme Power
 						},

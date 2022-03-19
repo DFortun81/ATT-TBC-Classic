@@ -1,3 +1,12 @@
+-- Database
+-- #IMPORT: 00 - DB\\CategoryDB.lua
+-- #IMPORT: 00 - DB\\ClassInfoDB.lua
+-- #IMPORT: 00 - DB\\ItemDB.lua
+-- #IMPORT: 00 - DB\\MountDB.lua
+-- #IMPORT: 00 - DB\\ObjectDB.lua
+-- #IMPORT: 00 - DB\\PetDB.lua
+-- #IMPORT: 00 - DB\\ToyDB.lua
+
 -- Dungeons & Raids
 -- Classic
 -- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\0.5 Tier 0.5 Sets.lua
@@ -65,6 +74,10 @@
 -- #IMPORT: 07 - Events\\The Scepter of the Shifting Sands\\The Scepter of the Shifting Sands.lua
 -- #IMPORT: 07 - Events\\The Scourge Invasion\\The Scourge Invasion.lua
 -- #IMPORT: 07 - Events\\The Silithyst Must Flow\\The Silithyst Must Flow.lua
+
+-- Craftables
+-- #IMPORT: 10 - Craftables\\01 - Classic.lua
+-- #IMPORT: 10 - Craftables\\02 - Burning Crusade.lua
 
 -- Promotions
 -- #IMPORT: 12 - Promotions\\BlizzCon.lua

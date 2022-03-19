@@ -1760,23 +1760,23 @@ profession(LEATHERWORKING, {
 					["recipeID"] = 35540
 				},
 				-- #if ANYCLASSIC
-				applyclassicphase(TBC_PHASE_FIVE, {
+				applyclassicphase(TBC_PHASE_FOUR, {
 					["name"] = "Greater Drums of Battle",
 					["recipeID"] = 351771
 				}),
-				applyclassicphase(TBC_PHASE_FIVE, {
+				applyclassicphase(TBC_PHASE_FOUR, {
 					["name"] = "Greater Drums of Panic",
 					["recipeID"] = 351770
 				}),
-				applyclassicphase(TBC_PHASE_FIVE, {
+				applyclassicphase(TBC_PHASE_FOUR, {
 					["name"] = "Greater Drums of Restoration",
 					["recipeID"] = 351769
 				}),
-				applyclassicphase(TBC_PHASE_FIVE, {
+				applyclassicphase(TBC_PHASE_FOUR, {
 					["name"] = "Greater Drums of Speed",
 					["recipeID"] = 351768
 				}),
-				applyclassicphase(TBC_PHASE_FIVE, {
+				applyclassicphase(TBC_PHASE_FOUR, {
 					["name"] = "Greater Drums of War",
 					["recipeID"] = 351766
 				}),
@@ -2162,13 +2162,13 @@ itemrecipe("Pattern: Cobrascale Gloves", 35302, 35559, TBC_PHASE_FIVE, true);
 itemrecipe("Pattern: Gloves of the Living Touch", 35303, 35562, TBC_PHASE_FIVE, true);
 
 -- New Drum Recipes with Classic
-itemrecipe("Pattern: Greater Drums of Battle", 185926, 351771, TBC_PHASE_FIVE);	-- Sha'tar
-itemrecipe("Pattern: Greater Drums of Panic", 185925, 351770, TBC_PHASE_FIVE);	-- Keepers of Time
-itemrecipe("Pattern: Greater Drums of Speed", 185923, 351768, TBC_PHASE_FIVE);	-- Horde, Mag'har
-itemrecipe("Pattern: Greater Drums of Speed", 187049, 351768, TBC_PHASE_FIVE);	-- Alliance, Kurenai
-itemrecipe("Pattern: Greater Drums of Restoration", 185924, 351769, TBC_PHASE_FIVE);	-- Horde, Mag'har
-itemrecipe("Pattern: Greater Drums of Restoration", 187048, 351769, TBC_PHASE_FIVE);	-- Alliance, Kurenai
-itemrecipe("Pattern: Greater Drums of War", 185922, 351766, TBC_PHASE_FIVE);	-- Unknown Location, might be a world drop?
+itemrecipe("Pattern: Greater Drums of Battle", 185926, 351771, TBC_PHASE_FOUR);	-- Sha'tar
+itemrecipe("Pattern: Greater Drums of Panic", 185925, 351770, TBC_PHASE_FOUR);	-- Keepers of Time
+itemrecipe("Pattern: Greater Drums of Speed", 185923, 351768, TBC_PHASE_FOUR);	-- Horde, Mag'har
+itemrecipe("Pattern: Greater Drums of Speed", 187049, 351768, TBC_PHASE_FOUR);	-- Alliance, Kurenai
+itemrecipe("Pattern: Greater Drums of Restoration", 185924, 351769, TBC_PHASE_FOUR);	-- Horde, Mag'har
+itemrecipe("Pattern: Greater Drums of Restoration", 187048, 351769, TBC_PHASE_FOUR);	-- Alliance, Kurenai
+itemrecipe("Pattern: Greater Drums of War", 185922, 351766, TBC_PHASE_FOUR);	-- Unknown Location, might be a world drop?
 -- #endif
 
 applyholiday(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Gloves of the Greatfather", 17722, 21943));
