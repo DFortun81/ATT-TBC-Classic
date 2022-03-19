@@ -1,3 +1,64 @@
+-- Dungeons & Raids
+-- Classic
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\0.5 Tier 0.5 Sets.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\0.9 World Bosses.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\1.0 Molten Core.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\1.5 Onyxia's Lair.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\1.6 Blackwing Lair.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\1.7 Zul'Gurub.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\2.5 Ruins of Ahn'Qiraj.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\2.6 Temple of Ahn'Qiraj.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\3.0 Naxxramas.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Blackfathom Deeps.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Blackrock Depths.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Lower Blackrock Spire.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Deadmines.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Dire Maul.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Gnomeregan.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Maraudon.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Ragefire Chasm.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Razorfen Downs.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Razorfen Kraul.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Scarlet Halls.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Scarlet Monastery.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Scholomance.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Shadowfang Keep.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Stratholme.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\The Stockade.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\The Temple of Atal'hakkar.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Uldaman.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Wailing Caverns.lua
+-- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\Zul'Farrak.lua
+
+-- Burning Crusade
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\0 - Metadata.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\0.1 World Bosses.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\1 Karazhan (Raid).lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\2 Gruul's Lair.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\3 Magtheridon's Lair.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\4 Serpentshrine Cavern.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\5 The Eye.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\6 The Battle for Mount Hyjal.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\7 The Black Temple.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\7.5 Zul'Aman.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\8 Sunwell Plateau.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\Auchenai Crypts.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\Hellfire Ramparts.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\Magisters' Terrace.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\Mana Tombs.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\Old Hillsbrad Foothills.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\Sethekk Halls.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\Shadow Labyrinth.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Arcatraz.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Black Morass.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Blood Furnace.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Botanica.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Mechanar.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Shattered Halls.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Slave Pens.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Steamvault.lua
+-- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Underbog.lua
+
 -- World Events
 -- #IMPORT: 07 - Events\\The Ahn'Qiraj War Effort\\The Ahn'Qiraj War Effort.lua
 -- #IMPORT: 07 - Events\\The Opening of the Dark Portal\\The Opening of the Dark Portal.lua
