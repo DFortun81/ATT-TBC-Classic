@@ -238,7 +238,7 @@ _.Zones =
 					},
 					["lvl"] = 50,
 				}),
-				q(8415, {	-- Chillwind Point
+				q(8415, {	-- Chillwind Camp
 					["qgs"] = {
 						5149,	-- Brandur Ironhammer <Paladin Trainer>
 						928,	-- Lord Grayson Shadowbreaker <Paladin Trainer>
@@ -249,6 +249,7 @@ _.Zones =
 					},
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
+					["isBreadcrumb"] = true,
 					["lvl"] = 50,
 				}),
 				q(5524, {	-- Chromatic Mantle of the Dawn
