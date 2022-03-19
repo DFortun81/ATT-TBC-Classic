@@ -23,17 +23,28 @@ root("Instances", tier(CLASSIC_TIER, {
 		["lvl"] = 50,
 		["groups"] = {
 			n(QUESTS, {
+				q(27470, {	-- A Potential Ally
+					["qg"] = 14625,	-- Overseer Oilfist
+					["coord"] = { 38.1, 26.9, SEARING_GORGE },
+					["timeline"] = { "added 4.0.3.13277" },
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(57, 57, 20),
+				}),
 				q(6601, {	-- Ascension...
-					["qg"] = 10321,	-- Emberstrife
+					["providers"] = {
+						{ "n", 10321 },	-- Emberstrife
+						{ "i", 16888 },	-- Dull Drakefire Amulet
+					},
 					["sourceQuest"] = 6585,	-- The Test of Skulls, Axtroz
 					["coord"] = { 56.8, 87.4, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { DESOLACE },
-					["cost"] = { { "i", 16888, 1 } },	-- Dull Drakefire Amulet
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 				}),
 				q(5001, {	-- Bijou's Belongings (A)
 					["qg"] = 10257,	-- Bijou
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
@@ -45,6 +56,7 @@ root("Instances", tier(CLASSIC_TIER, {
 				q(4982, {	-- Bijou's Belongings (H)
 					["qg"] = 10257,	-- Bijou
 					["sourceQuest"] = 4981,	-- Operative Bijou
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
@@ -54,23 +66,39 @@ root("Instances", tier(CLASSIC_TIER, {
 					},
 				}),
 				q(4983, {	-- Bijou's Reconnaissance Report
-					["qg"] = 10257,	-- Bijou
+					["providers"] = {
+						{ "n", 10257 },	-- Bijou
+						{ "i", 12652 },	-- Bijou's Reconnaissance Report
+					},
 					["sourceQuest"] = 4982,	-- Bijou's Belongings (H)
-					["cost"] = { { "i", 12652, 1 } },	-- Bijou's Reconnaissance Report
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { BADLANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
-						i(15858),	-- Freewind Gloves
-						i(15859),	-- Seapost Girdle
+						i(15858, {	-- Freewind Gloves
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15859, {	-- Seapost Girdle
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(7761, {	-- Blackhand's Command
 					["qg"] = 9046,	-- Scarshield Quartermaster <Scarshield Legion>
 					["provider"] = { "i", 18987 },	-- Blackhand's Command
 					["coord"] = { 34.9, 27.9, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { BLACKROCK_MOUNTAIN },
 					["lvl"] = 55,
+				}),
+				q(27471, {	-- Blackrock Anomaly
+					["qg"] = 9562,	-- Hellendis Riverhorn
+					["coord"] = { 73.4, 66.2, BURNING_STEPPES },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(57, 57, 20),
 				}),
 				q(6602, {	-- Blood of the Black Dragon Champion
 					["qg"] = 10182,	-- Rexxar [Classic] / Rokaro [TBC+] <Champion of the Horde>
@@ -86,6 +114,7 @@ root("Instances", tier(CLASSIC_TIER, {
 						{ 40.8, 78.6, DESOLACE },
 						{ 42.4, 96.8, DESOLACE },
 					},
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
@@ -102,6 +131,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["sourceQuest"] = 5047,	-- Pip Quickwit, At Your Service!
 					["coord"] = { 61, 38.8, WINTERSPRING },
 					["maps"] = { SCHOLOMANCE, STRATHOLME },
+					["timeline"] = { "removed 4.0.3" },
 					["cost"] = {
 						{ "i", 12731, 1 },	-- Pristine Hide of the Beast
 						{ "i", 12735, 10 },	-- Frayed Abomination Stitching
@@ -112,7 +142,9 @@ root("Instances", tier(CLASSIC_TIER, {
 					["repeatable"] = true,
 					["lvl"] = 57,
 					["groups"] = {
-						i(12757), 	-- Breastplate of Bloodthirst
+						i(12757, { 	-- Breastplate of Bloodthirst
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5166, {	-- Breastplate of the Chromatic Flight
@@ -129,13 +161,16 @@ root("Instances", tier(CLASSIC_TIER, {
 					},
 					["lvl"] = 57,
 					["groups"] = {
-						i(12895),	-- Breastplate of the Chromatic Flight
+						i(12895, {	-- Breastplate of the Chromatic Flight
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5063, {	-- Cap of the Scarlet Savant
 					["qg"] = 10637,	-- Malyfous Darkhammer
 					["sourceQuest"] = 5047,	-- Pip Quickwit, At Your Service!
 					["coord"] = { 61, 38.8, WINTERSPRING },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { STRATHOLME },
 					["cost"] = {
 						{ "i", 12731, 1 },	-- Pristine Hide of the Beast
@@ -147,41 +182,57 @@ root("Instances", tier(CLASSIC_TIER, {
 					["repeatable"] = true,
 					["lvl"] = 57,
 					["groups"] = {
-						i(12752), 	-- Cap of the Scarlet Savant
+						i(12752, { 	-- Cap of the Scarlet Savant
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5164, {	-- Catalogue of the Wayward
 					["qg"] = 10976,	-- Jeziba
 					["sourceQuest"] = 5162,	-- Wrath of the Blue Flight (2/2)
 					["coord"] = { 39.4, 66.8, WESTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 57,
 				}),
 				q(8181, {	-- Confront Yeh'kinya
 					["qg"] = 10460,	-- Prospector Ironboot
 					["sourceQuest"] = 4788,	-- The Final Tablets
 					["coord"] = { 66.8, 24.0, TANARIS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 40,
 					["groups"] = {
-						i(20218),	-- Faded Hakkari Cloak
-						i(20219),	-- Tattered Hakkari Cape
+						i(20218, {	-- Faded Hakkari Cloak
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(20219, {	-- Tattered Hakkari Cape
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(4765, {	-- Delivery to Ridgewell
-					["qg"] = 9565,	-- Mayara Brightwing
+					["providers"] = {
+						{ "n", 9565 },	-- Mayara Brightwing
+						{ "i", 12437 },	-- Ridgewell's Crate
+					},
 					["sourceQuest"] = 4764,	-- Doomrigger's Clasp
 					["coord"] = { 84.8, 69, BURNING_STEPPES },
-					["cost"] = { { "i", 12437, 1 } },	-- Ridgewell's Crate
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 57,
 					["groups"] = {
-						i(15860),	-- Blinkstrike Armguards
-						i(15861),	-- Swiftfoot Treads
+						i(15860, {	-- Blinkstrike Armguards
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15861, {	-- Swiftfoot Treads
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(4764, {	-- Doomrigger's Clasp
 					["sourceQuest"] = 4766,	-- Mayara Brightwing
 					["qg"] = 9565,	-- Mayara Brightwing
 					["coord"] = { 84.8, 69, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 57,
 					["groups"] = {
@@ -194,6 +245,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 10267,	-- Tinkee Steamboil
 					["sourceQuest"] = 4734,	-- Egg Freezing
 					["coord"] = { 65.2, 23.8, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 57,
 					["groups"] = {
 						objective(1, {	-- 0/8 Collected Dragon Egg
@@ -209,13 +261,17 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 10267,	-- Tinkee Steamboil
 					["sourceQuest"] = 4907,	-- Tinkee Steamboil
 					["coord"] = { 65.2, 23.8, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 57,
 					["groups"] = {
 						objective(1, {	-- 	Test the Eggscilliscope Prototype
 							["provider"] = { "i", 12286 },	-- Eggscilloscope Prototype
 						}),
 						i(12144, {	-- Eggscilloscope
+							-- #if BEFORE 4.0.3
 							["description"] = "You don't need to keep this, but it might be nice to have just in case someone doesn't quite grasp the 'don't touch the eggs' rule.",
+							-- #endif
+							["timeline"] = { "removed 4.0.3" },
 						}),
 					},
 				}),
@@ -223,6 +279,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 9077,	-- Warlord Goretooth <Kargath Expeditionary Force>
 					["sourceQuest"] = 4903,	-- Warlord's Command
 					["coord"] = { 5.8, 47.6, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { ORGRIMMAR },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
@@ -234,42 +291,89 @@ root("Instances", tier(CLASSIC_TIER, {
 					},
 				}),
 				q(6570, {	-- Emberstrife
-					["qg"] = 11872,	-- Myranda the Hag
+					["providers"] = {
+						{ "n", 11872 },	-- Myranda the Hag
+						{ "i", 16787 },	-- Amulet of Draconic Subversion
+					},
 					["sourceQuest"] = 6569,	-- Oculus Illusions
 					["coord"] = { 50.8, 77.8, WESTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { DUSTWALLOW_MARSH },
-					["cost"] = { { "i", 16787, 1 } },	-- Amulet of Draconic Subversion
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 				}),
 				q(4862, {	-- En-Ay-Es-Tee-Why
 					["qg"] = 10260,	-- Kibler
 					["coord"] = { 65.8, 22.0, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
 						objective(1, {	-- 0/15 Spire Spider Egg
 							["provider"] = { "i", 12530 },	-- Spire Spider Egg
 						}),
-						i(12529),	-- Smolderweb Carrier
+						i(12529, {	-- Smolderweb Carrier
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(5124, {	-- Fiery Plate Gauntlets
+					["qg"] = 10637,	-- Malyfous Darkhammer <The Thorium Brotherhood>
+					["sourceQuest"] = 5103,	-- Hot Fiery Death
+					-- #if BEFORE TBC
+					["requireSkill"] = 9788,	-- Armorsmith
+					-- #else
+					["requireSkill"] = BLACKSMITHING,
+					-- #endif
+					["coord"] = { 61.0, 38.8, WINTERSPRING },
+					["timeline"] = { "removed 4.0.3" },
+					["cost"] = {
+						{ "i", 12812, 1 },	-- Unfired Plate Gauntlets
+						{ "i", 12655, 6 },	-- Enchanted Thorium Bar
+						{ "i", 7078, 2 },	-- Essence of Fire
+						{ "i", 7910, 4 },	-- Star Ruby
+					},
+					["lvl"] = 55,
+					["groups"] = {
+						i(12699, {	-- Plans: Fiery Plate Gauntlets
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(12631, {	-- Fiery Plate Gauntlets
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(4974, {	-- For The Horde!
 					["qg"] = 4949,	-- Thrall <Warchief>
 					["sourceQuest"] = 4941,	-- Eitrigg's Wisdom
 					["coord"] = { 32.0, 37.8, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
 						objective(1, {	-- 0/1 Head of Rend Blackhand
 							["provider"] = { "i", 12630 },	-- Head of Rend Blackhand
 						}),
-						i(13965),	-- Blackhand's Breadth
-						i(13968),	-- Eye of the Beast
-						i(13966),	-- Mark of Tyranny
+						i(13965, {	-- Blackhand's Breadth
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13968, {	-- Eye of the Beast
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13966, {	-- Mark of Tyranny
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
+				}),
+				q(27469, {	-- Friends on The Other Side [NOTE: Also available to Alliance, despite being in the Horde camp!]
+					["qg"] = 56899,	-- Ragged Jong
+					["coord"] = { 54.1, 23.8, BURNING_STEPPES },
+					["timeline"] = { "added 4.0.3.13277" },
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(57, 57, 20),
 				}),
 				q(5089, {	-- General Drakkisath's Command
 					["provider"] = { "i", 12780 },	-- General Drakkisath's Command
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 55,
 				}),
@@ -277,24 +381,78 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 9560,	-- Marshal Maxwell
 					["sourceQuest"] = 5089,	-- General Drakkisath's Command
 					["coord"] = { 84.6, 68.8, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
 						objective(1, {	-- 0/1 General Drakkisath slain
 							["provider"] = { "n", 10363 },	-- General Drakkisath
 						}),
-						i(13965),	-- Blackhand's Breadth
-						i(13968),	-- Eye of the Beast
-						i(13966),	-- Mark of Tyranny
+						i(13965, {	-- Blackhand's Breadth
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13968, {	-- Eye of the Beast
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13966, {	-- Mark of Tyranny
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(27445, {	-- General Drakkisath, Hand of Nefarian
+					["qg"] = 10299,	-- Acride <Scarshield Legion>
+					["sourceQuests"] = {
+						27470,	-- A Potential Ally
+						27471,	-- Blackrock Anomaly
+						27469,	-- Friends on The Other Side
+					},
+					["timeline"] = { "added 4.0.3.13277", "removed 6.0.2" },
+					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/1 General Drakkisath slain
+							["provider"] = { "n", 10363 },	-- General Drakkisath
+						}),
+						i(66001, {	-- Aeyla's Staff
+							["timeline"] = { "added 4.0.3.13277", "removed 6.0.2" },
+						}),
+						i(65934, {	-- Staff of the Second Orb
+							["timeline"] = { "added 4.0.3.13277", "removed 6.0.2" },
+						}),
+						i(65982, {	-- Sword of Nefarian's Hand
+							["timeline"] = { "added 4.0.3.13277", "removed 6.0.2" },
+						}),
+						i(65958, {	-- Vaelan's Claw
+							["timeline"] = { "added 4.0.3.13277", "removed 6.0.2" },
+						}),
+					},
+				}),
+				q(5103, {	-- Hot Fiery Death
+					["provider"] = { "o", 176090 },	-- Human Remains
+					-- #if BEFORE TBC
+					["requireSkill"] = 9788,	-- Armorsmith
+					-- #else
+					["requireSkill"] = BLACKSMITHING,
+					-- #endif
+					["description"] = "At the bottom floor of Lower Blackrock Spire near the lava.",
+					["timeline"] = { "removed 4.0.3" },
+					["lvl"] = 55,
+					["groups"] = {
+						i(12812, {	-- Unfired Plate Gauntlets
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(4729, {	-- Kibler's Exotic Pets
 					["qg"] = 10260,	-- Kibler
 					["coord"] = { 65.8, 22.0, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
 						objective(1, {	-- 0/1 Caged Worg Pup
 							["provider"] = { "i", 12263 },	-- Caged Worg Pup
+							["description"] = "Can be pulled outside of the room without engaging the boss.",
+							["cost"] = { { "i", 12262, 1 } },	-- Empty Worg Pup Cage
+							["cr"] = 10221,	-- Bloodaxe Worg Pup
 						}),
 						i(12264),	-- Worg Carrier (PET!)
 					},
@@ -304,6 +462,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["sourceQuest"] = 5047,	-- Pip Quickwit, At Your Service!
 					["coord"] = { 61, 38.8, WINTERSPRING },
 					["maps"] = { SCHOLOMANCE, STRATHOLME },
+					["timeline"] = { "removed 4.0.3" },
 					["cost"] = {
 						{ "i", 12731, 1 },	-- Pristine Hide of the Beast
 						{ "i", 12735, 5 },	-- Frayed Abomination Stitching
@@ -314,7 +473,9 @@ root("Instances", tier(CLASSIC_TIER, {
 					["repeatable"] = true,
 					["lvl"] = 57,
 					["groups"] = {
-						i(12756),	-- Leggings of Arcana
+						i(12756, {	-- Leggings of Arcana
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5167, {	-- Legplates of the Chromatic Defier
@@ -331,13 +492,18 @@ root("Instances", tier(CLASSIC_TIER, {
 					},
 					["lvl"] = 57,
 					["groups"] = {
-						i(12903), 	-- Legguards of the Chromatic Defier
-						i(12945),	-- Legplates of the Chromatic Defier
+						i(12903, { 	-- Legguards of the Chromatic Defier
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(12945, {	-- Legplates of the Chromatic Defier
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5126, {	-- Lorax's Tale
 					["qg"] = 10918,	-- Lorax
 					["coord"] = { 63.8, 73.8, WINTERSPRING },
+					["timeline"] = { "removed 4.0.3" },
 					["requireSkill"] = BLACKSMITHING,
 					["lvl"] = 55,
 				}),
@@ -345,6 +511,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 9560,	-- Marshal Maxwell
 					["sourceQuest"] = 5002,	-- Message to Maxwell
 					["coord"] = { 84.6, 68.8, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
@@ -357,11 +524,21 @@ root("Instances", tier(CLASSIC_TIER, {
 						objective(3, {	-- 0/1 Overlord Wyrmthalak slain
 							["provider"] = { "n", 9568 },	-- Overlord Wyrmthalak
 						}),
-						i(13961),	-- Halycon's Muzzle
-						i(13958),	-- Wyrmthalak's Shackles
-						i(13963),	-- Voone's Vice Grips
-						i(13959),	-- Omokk's Girth Restrainer
-						i(13962),	-- Vosh'gajin's Strand
+						i(13961, {	-- Halycon's Muzzle
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13958, {	-- Wyrmthalak's Shackles
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13963, {	-- Voone's Vice Grips
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13959, {	-- Omokk's Girth Restrainer
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13962, {	-- Vosh'gajin's Strand
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(4766, {	-- Mayara Brightwing
@@ -370,14 +547,18 @@ root("Instances", tier(CLASSIC_TIER, {
 						4764,	-- Doomrigger's Clasp [NOT SURE, but this quest constantly resets to Not Complete on Blizzard's Side.]
 					},
 					["coord"] = { 74, 30, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 57,
 				}),
 				q(5002, {	-- Message to Maxwell
-					["qg"] = 10257,	-- Bijou
+					["providers"] = {
+						{ "n", 10257 },	-- Bijou
+						{ "i", 12770 },	-- Bijou's Information
+					},
 					["sourceQuest"] = 5001,	-- Bijou's Belongings (A)
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { BURNING_STEPPES },
-					["cost"] = { { "i", 12770, 1 } },	-- Bijou's Information
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 55,
 				}),
@@ -399,6 +580,7 @@ root("Instances", tier(CLASSIC_TIER, {
 						{ 40.8, 78.6, DESOLACE },
 						{ 42.4, 96.8, DESOLACE },
 					},
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { WESTERN_PLAGUELANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
@@ -406,20 +588,26 @@ root("Instances", tier(CLASSIC_TIER, {
 				-- #endif
 				q(4866, {	-- Mother's Milk
 					["qg"] = 9563,	-- Ragged John
+					-- #if BEFORE 4.0.3
 					["description"] = "You need to setup a coordinated group ONLY for this. If the healer or ANYONE removes the poison, you have to reset and try again.\n\nBefore the group starts, set your hearth to Stormwind or have a mage for a quick port to Stormwind after the group has gotten their bites.",
+					-- #endif
 					["coord"] = { 65, 23.6, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
 						objective(1, {	-- Milked
 							["provider"] = { "n", 10596 },	-- Mother Smolderweb
 						}),
-						i(15873),	-- Ragged John's Neverending Cup
+						i(15873, {	-- Ragged John's Neverending Cup
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(6569, {	-- Oculus Illusions
 					["qg"] = 11872,	-- Myranda the Hag
 					["sourceQuest"] = 6568,	-- The Testament of Rexxar
 					["coord"] = { 50.8, 77.8, WESTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
@@ -431,34 +619,50 @@ root("Instances", tier(CLASSIC_TIER, {
 				q(4981, {	-- Operative Bijou
 					["qg"] = 9080,	-- Lexlort <Kargath Expeditionary Force>
 					["coord"] = { 5.8, 47.6, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 				}),
 				q(5047, {	-- Pip Quickwit, At Your Service!
-					["qg"] = 10776,	-- Pip Quickwit
+					["providers"] = {
+						{ "n", 10776 },	-- Pip Quickwit
+						{ "i", 12710 },	-- Glowing Hunk of the Beast's Flesh
+					},
+					-- #if BEFORE 4.0.3
 					["description"] = "Kill The Beast in UBRS. Using Pip's Skinner and a 300 Skill Skinner, skin the boss and Pip Quickwit will appear. Everyone in the raid can pick up this quest at that time.",
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { WINTERSPRING },
-					["cost"] = { { "i", 12710, 1 } },	-- Glowing Hunk of the Beast's Flesh
 					["cr"] = 10430,	-- The Beast
 					["lvl"] = 57
 				}),
 				q(4701, {	-- Put Her Down
 					["qg"] = 9562,	-- Helendis Riverhorn
 					["coord"] = { 85.6, 69, BURNING_STEPPES },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
 						objective(1, {	-- 0/1 Halycon slain
 							["provider"] = { "n", 10220 },	-- Halycon
 						}),
-						i(15824),	-- Astoria Robes
-						i(15827),	-- Jadescale Breastplate
-						i(15825),	-- Traphook Jerkin
+						i(15824, {	-- Astoria Robes
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15827, {	-- Jadescale Breastplate
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15825, {	-- Traphook Jerkin
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(4742, {	-- Seal of Ascension (1/2)
 					["qg"] = 10299,	-- Scarshield Infiltrator <Scarshield Legion>
+					-- #if BEFORE 4.0.3
 					["description"] = "Pickup this quest by going up to the hidden ledge in LBRS and speaking to the Infiltrator.",
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["cost"] = {
 						{ "i", 12336, 1 },	-- Gemstone of Spirestone
 						{ "i", 12335, 1 },	-- Gemstone of Smolderthorn
@@ -470,7 +674,10 @@ root("Instances", tier(CLASSIC_TIER, {
 				q(4743, {	-- Seal of Ascension (2/2)
 					["qg"] = 10299,	-- Scarshield Infiltrator <Scarshield Legion>
 					["sourceQuest"] = 4742,	-- Seal of Ascension (1/2)
+					-- #if BEFORE 4.0.3
 					["description"] = "Ask your party to come with you to Dustwallow Marsh. You will not be able to solo this quest.\n\nOnly one person can complete this quest per Emberstrife cooldown. Your party will need to kill Emberstrife to reset the cooldown. (Respawn is about 5 minutes.)",
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 57,
 					["groups"] = {
 						objective(1, {	-- 0/1 Forged Seal of Ascension
@@ -491,6 +698,7 @@ root("Instances", tier(CLASSIC_TIER, {
 						}),
 						i(12344, {	-- Seal of Ascension
 							["description"] = "This item must be in your bags to open the door to UBRS.",
+							["timeline"] = { "removed 4.0.3" },
 						}),
 					},
 				}),
@@ -498,6 +706,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 4949,	-- Thrall <Warchief>
 					["sourceQuest"] = 6566,	-- What the Wind Carries
 					["coord"] = { 32.0, 37.8, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { DESOLACE },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
@@ -506,14 +715,19 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 9078,	-- Shadowmage Vivian Lagrave <Kargath Expeditionary Force>
 					["sourceQuest"] = 4769,	-- Vivian Lagrave and the Darkstone Tablet
 					["coord"] = { 3, 47.6, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 57,
 					["groups"] = {
 						objective(1, {	-- 0/1 Darkstone Tablet
 							["provider"] = { "i", 12358 },	-- Darkstone Tablet
 						}),
-						i(15860),	-- Blinkstrike Armguards
-						i(15861),	-- Swiftfoot Treads
+						i(15860, {	-- Blinkstrike Armguards
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15861, {	-- Swiftfoot Treads
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5127, {	-- The Demon Forge
@@ -525,6 +739,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["requireSkill"] = BLACKSMITHING,
 					-- #endif
 					["coord"] = { 63.8, 73.8, WINTERSPRING },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
 						objective(1, {	-- 0/1 Soul Stained Pike
@@ -535,15 +750,35 @@ root("Instances", tier(CLASSIC_TIER, {
 						objective(2, {	-- 0/1 Unforged Rune Covered Breastplate
 							["provider"] = { "i", 12806 },	-- Unforged Rune Covered Breastplate
 						}),
-						i(12696),	-- Plans: Demon Forged Breastplate
+						i(12696, {	-- Plans: Demon Forged Breastplate
+							["timeline"] = { "removed 4.0.3" },
+						}),
 						i(9224),	-- Elixir of Demonslaying
-						i(12849),	-- Demon Kissed Sack
+						i(12849, {	-- Demon Kissed Sack
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(27444, {	-- The False Warchief
+					["qg"] = 10299,	-- Acride <Scarshield Legion>
+					["sourceQuests"] = {
+						27470,	-- A Potential Ally
+						27471,	-- Blackrock Anomaly
+						27469,	-- Friends on The Other Side
+					},
+					["timeline"] = { "added 4.0.3.13277", "removed 6.0.2" },
+					["lvl"] = 55,
+					["groups"] = {
+						objective(1, {	-- 0/1 Warchief Rend Blackhand slain
+							["provider"] = { "n", 10429 },	-- Warchief Rend Blackhand
+						}),
 					},
 				}),
 				q(4788, {	-- The Final Tablets
 					["qg"] = 10460,	-- Prospector Ironboot
 					["sourceQuest"] = 5065,	-- The Lost Tablets of Mosh'aru
 					["coord"] = { 66.8, 24.0, TANARIS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 40,
 					["groups"] = {
 						objective(1, {	-- 0/1 Fifth Mosh'aru Tablet
@@ -558,12 +793,14 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 10460,	-- Prospector Ironboot
 					["sourceQuest"] = 8181,	-- Confront Yeh'kinya
 					["coord"] = { 66.8, 24, TANARIS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 40,
 				}),
 				q(5065, {	-- The Lost Tablets of Mosh'aru
 					["qg"] = 10460,	-- Prospector Ironboot
 					["sourceQuest"] = 3528,	-- The God Hakkar
 					["coord"] = { 66.8, 24.0, TANARIS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { EASTERN_PLAGUELANDS },
 					["lvl"] = 40,
 					["groups"] = {
@@ -582,22 +819,32 @@ root("Instances", tier(CLASSIC_TIER, {
 						{ "n", 10740 },	-- Awbee
 						{ "i", 12923 },	-- Awbee's Scale
 					},
+					-- #if BEFORE 4.0.3
 					["description"] = "Speak with Awbee in UBRS to accept this quest. Most tanks skip the two mobs near Awbee, so you should mention it to them.",
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { WINTERSPRING },
 					["lvl"] = 57,
 				}),
 				q(4724, {	-- The Pack Mistress
 					["qg"] = 9081,	-- Galamav the Marksman <Kargath Expeditionary Force>
 					["coord"] = { 5.8, 47.6, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
 						objective(1, {	-- 0/1 Halycon slain
 							["provider"] = { "n", 10220 },	-- Halycon
 						}),
-						i(15824),	-- Astoria Robes
-						i(15827),	-- Jadescale Breastplate
-						i(15825),	-- Traphook Jerkin
+						i(15824, {	-- Astoria Robes
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15827, {	-- Jadescale Breastplate
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15825, {	-- Traphook Jerkin
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(6585, {	-- The Test of Skulls, Axtroz
@@ -608,6 +855,7 @@ root("Instances", tier(CLASSIC_TIER, {
 						6583,	-- The Test of Skulls, Somnus
 					},
 					["coord"] = { 56.8, 87.4, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { WETLANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
@@ -623,6 +871,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 10321,	-- Emberstrife
 					["sourceQuest"] = 6570,	-- Emberstrife
 					["coord"] = { 56.8, 87.4, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { TANARIS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
@@ -638,6 +887,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 10321,	-- Emberstrife
 					["sourceQuest"] = 6570,	-- Emberstrife
 					["coord"] = { 56.8, 87.4, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { WINTERSPRING },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
@@ -653,6 +903,7 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 10321,	-- Emberstrife
 					["sourceQuest"] = 6570,	-- Emberstrife
 					["coord"] = { 56.8, 87.4, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { SWAMP_OF_SORROWS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
@@ -682,6 +933,7 @@ root("Instances", tier(CLASSIC_TIER, {
 						{ 40.8, 78.6, DESOLACE },
 						{ 42.4, 96.8, DESOLACE },
 					},
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { WESTERN_PLAGUELANDS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
@@ -691,34 +943,74 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 10468,	-- Felnok Steelspring
 					["sourceQuest"] = 4810,	-- Return to Tinkee
 					["coord"] = { 61.6, 38.6, WINTERSPRING },
+					["timeline"] = { "removed 4.0.3" },
 					["isBreadcrumb"] = true,
 					["lvl"] = 57,
+				}),
+				q(27440, {	-- Trolls, Ogres, and Orcs, Oh My!
+					["qg"] = 10299,	-- Acride <Scarshield Legion>
+					["sourceQuests"] = {
+						27470,	-- A Potential Ally
+						27471,	-- Blackrock Anomaly
+						27469,	-- Friends on The Other Side
+					},
+					["timeline"] = { "added 4.0.3.13277" },
+					["lvl"] = lvlsquish(55, 55, 20),
+					["groups"] = {
+						objective(1, {	-- 0/1 War Master Voone slain
+							["provider"] = { "n", 9237 },	-- War Master Voone
+						}),
+						objective(2, {	-- 0/1 Highlord Omokk slain
+							["provider"] = { "n", 9196 },	-- Highlord Omokk
+						}),
+						objective(3, {	-- 0/1 Overlord Wyrmthalak slain
+							["provider"] = { "n", 9568 },	-- Overlord Wyrmthalak
+						}),
+						i(65933, {	-- Highlord's Chestpiece
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(65957, {	-- Overlord's Legplates
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(65981, {	-- War Master's Pauldrons
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
 				}),
 				q(4867, {	-- Urok Doomhowl
 					["providers"] = {
 						{ "n", 10799 },	-- Warosh <The Cursed>
 						{ "i", 12730 },	-- Warosh's Scroll
 					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 55,
 					["groups"] = {
 						objective(1, {	-- 0/1 Warosh's Mojo
 							["provider"] = { "i", 12712 },	-- Warosh's Mojo
 						}),
-						i(15867),	-- Prismcharm
+						i(15867, {	-- Prismcharm
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(4769, {	-- Vivian Lagrave and the Darkstone Tablet
 					["qg"] = 5204,	-- Apothecary Zinge <Royal Apothecary Society>
 					["coord"] = { 49.8, 68.2, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 57,
 				}),
 				q(4903, {	-- Warlord's Command
-					["qg"] = 9077,	-- Warlord Goretooth <Kargath Expeditionary Force>
-					["provider"] = { "i", 12563 },	-- Warlord Goretooth's Command
+					["providers"] = {
+						{ "n", 9077 },	-- Warlord Goretooth <Kargath Expeditionary Force>
+						{ "i", 12563 },	-- Warlord Goretooth's Command
+					},
+					-- #if BEFORE 4.0.3
 					["description"] = "Talk to Warlord Goretooth and read through his full dialog for the item that starts the quest to be given to you.",
+					-- #endif
 					["coord"] = { 5.8, 47.6, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 					["groups"] = {
@@ -732,20 +1024,31 @@ root("Instances", tier(CLASSIC_TIER, {
 							["provider"] = { "n", 9237 },	-- War Master Voone
 						}),
 						objective(4, {	-- 0/1 Important Blackrock Documents
-							["provider"] = { "n", 12562 },	-- Important Blackrock Documents
+							["provider"] = { "i", 12562 },	-- Important Blackrock Documents
 							["description"] = "On the ground next to Overlord Wyrmthalak.",
 						}),
-						i(13961),	-- Halycon's Muzzle
-						i(13958),	-- Wyrmthalak's Shackles
-						i(13963),	-- Voone's Vice Grips
-						i(13959),	-- Omokk's Girth Restrainer
-						i(13962),	-- Vosh'gajin's Strand
+						i(13961, {	-- Halycon's Muzzle
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13958, {	-- Wyrmthalak's Shackles
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13963, {	-- Voone's Vice Grips
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13959, {	-- Omokk's Girth Restrainer
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(13962, {	-- Vosh'gajin's Strand
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(6566, {	-- What the Wind Carries
 					["qg"] = 4949,	-- Thrall <Warchief>
 					["sourceQuest"] = 4974,	-- For The Horde!
 					["coord"] = { 32.0, 37.8, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 55,
 				}),
@@ -753,12 +1056,14 @@ root("Instances", tier(CLASSIC_TIER, {
 					["qg"] = 10929,	-- Haleh
 					["sourceQuest"] = 5160,	-- The Matron Protectorate
 					["coord"] = { 54.4, 51.2, WINTERSPRING },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 57,
 				}),
 				q(5162, {	-- Wrath of the Blue Flight (2/2)
 					["qg"] = 10929,	-- Haleh
 					["sourceQuest"] = 5161,	-- Wrath of the Blue Flight (1/2)
 					["coord"] = { 54.4, 51.2, WINTERSPRING },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { WESTERN_PLAGUELANDS },
 					["lvl"] = 57,
 				}),
@@ -1154,17 +1459,6 @@ root("Instances", tier(CLASSIC_TIER, {
 						}),
 					},
 				}),
-				-- #if BEFORE 4.0.3
-				n(10221, {	-- Bloodaxe Worg Pup
-					["description"] = "Can be pulled outside of the room without engaging the boss.",
-					["cost"] = { { "i", 12262, 1 } },	-- Empty Worg Pup Cage
-					["groups"] = {
-						i(12263, {	-- Caged Worg Pup
-							["timeline"] = { "removed 4.0.3" },
-						}),
-					},
-				}),
-				-- #endif
 				e(394, {	-- Halycon
 					["creatureID"] = 10220,	-- Halycon
 					["groups"] = {
@@ -1680,4 +1974,14 @@ root("HiddenQuestTriggers", {
 		q(36867),	-- Lower Blackrock Spires Bonus Reward Quest — kill Urok Doomhowl
 	}),
 });
+-- #endif
+-- #if AFTER CATA
+--[[
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+	tier(CATA_TIER, {
+		q(28070),	-- Adventurers Wanted: Blackrock Spire [Horde]
+		q(28071),	-- Adventurers Wanted: Blackrock Spire [Alliance]
+	}),
+}));
+--]]
 -- #endif

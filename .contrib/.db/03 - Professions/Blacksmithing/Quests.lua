@@ -120,28 +120,6 @@ profession(BLACKSMITHING, {
 				}),
 			},
 		}),
-		q(5124, {	-- Fiery Plate Gauntlets
-			["qg"] = 10637,	-- Malyfous Darkhammer <The Thorium Brotherhood>
-			["sourceQuest"] = 5103,	-- Hot Fiery Death
-			-- #if BEFORE TBC
-			["requireSkill"] = 9788,	-- Armorsmith
-			-- #else
-			["requireSkill"] = BLACKSMITHING,
-			-- #endif
-			["coord"] = { 61.0, 38.8, WINTERSPRING },
-			["maps"] = { BLACKROCK_SPIRE },
-			["cost"] = {
-				{ "i", 12812, 1 },	-- Unfired Plate Gauntlets
-				{ "i", 12655, 6 },	-- Enchanted Thorium Bar
-				{ "i", 7078, 2 },	-- Essence of Fire
-				{ "i", 7910, 4 },	-- Star Ruby
-			},
-			["lvl"] = 55,
-			["groups"] = {
-				i(12699),	-- Plans: Fiery Plate Gauntlets
-				i(12631),	-- Fiery Plate Gauntlets
-			},
-		}),
 		q(2764, {	-- Galvan's Finest Pupil
 			["qg"] = 7802,	-- Galvan the Ancient
 			["sourceQuests"] = {
@@ -184,20 +162,6 @@ profession(BLACKSMITHING, {
 				i(7980, {	-- Plans: Barbaric Iron Helm
 					["description"] = "This item can be sold on the Neutral Auction House to Alliance Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Horde Blacksmiths.",
 				}),
-			},
-		}),
-		q(5103, {	-- Hot Fiery Death
-			["provider"] = { "o", 176090 },	-- Human Remains
-			-- #if BEFORE TBC
-			["requireSkill"] = 9788,	-- Armorsmith
-			-- #else
-			["requireSkill"] = BLACKSMITHING,
-			-- #endif
-			["description"] = "At the bottom floor of Lower Blackrock Spire near the lava.",
-			["maps"] = { BLACKROCK_SPIRE },
-			["lvl"] = 55,
-			["groups"] = {
-				i(12812),	-- Unfired Plate Gauntlets
 			},
 		}),
 		q(10891, {	-- Imperial Plate Armor [A]
