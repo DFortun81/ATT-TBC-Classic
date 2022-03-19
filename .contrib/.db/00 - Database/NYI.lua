@@ -902,6 +902,7 @@ _.NeverImplemented =
 		i(27819),	-- Crazy Raptor 75
 		i(27853),	-- Crazy Raptor 150
 		i(28482),	-- Great Elite Elekk
+		i(28025),	-- Video Mount / Video Mount (MOUNT!)
 	}),
 	filter(BATTLE_PETS, {
 		-- #if BEFORE 7.0.3
