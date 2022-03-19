@@ -374,7 +374,7 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 				})),
-				q(1169, {	-- Items of Power
+				q(1948, {	-- Items of Power
 					["qg"] = 6546,	-- Tabetha
 					["sourceQuest"] = 1951,	-- Rituals of Power
 					["coord"] = { 46, 57, DUSTWALLOW_MARSH },
@@ -532,7 +532,7 @@ _.Zones =
 				}),
 				q(1952, {	-- Mage's Wand
 					["qg"] = 6546,	-- Tabetha
-					["sourceQuest"] = 1169,	-- Items of Power
+					["sourceQuest"] = 1948,	-- Items of Power
 					["coord"] = { 46.0, 57.0, DUSTWALLOW_MARSH },
 					["classes"] = { MAGE },
 					["lvl"] = 30,
