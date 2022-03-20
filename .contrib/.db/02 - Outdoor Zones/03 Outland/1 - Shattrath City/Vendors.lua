@@ -903,13 +903,13 @@ _.Zones =
 						applyclassicphase(TBC_PHASE_ONE, i(32084)), 	-- Helmet of the Steadfast Champion
 						applyclassicphase(TBC_PHASE_FOUR, i(33518)), 	-- High Justicar's Legplates
 						applyclassicphase(TBC_PHASE_ONE, i(29370)), 	-- Icon of the Silver Crescent
-						applyclassicphase(TBC_PHASE_ONE, i(33508, {	-- Idol of Budding Life
+						applyclassicphase(TBC_PHASE_FOUR, i(33508, {	-- Idol of Budding Life
 							["timeline"] = { "removed 5.0.4" },
 						})),
-						applyclassicphase(TBC_PHASE_ONE, i(33509, {	-- Idol of Terror
+						applyclassicphase(TBC_PHASE_FOUR, i(33509, {	-- Idol of Terror
 							["timeline"] = { "removed 5.0.4" },
 						})),
-						applyclassicphase(TBC_PHASE_ONE, i(33510, {	-- Idol of the Unseen Moon
+						applyclassicphase(TBC_PHASE_FOUR, i(33510, {	-- Idol of the Unseen Moon
 							["timeline"] = { "removed 5.0.4" },
 						})),
 						applyclassicphase(TBC_PHASE_FOUR, i(33207)), 	-- Implacable Guardian Sabatons
@@ -932,13 +932,13 @@ _.Zones =
 						applyclassicphase(TBC_PHASE_FOUR, i(33279)), 	-- Iron-Tusk Girdle
 						applyclassicphase(TBC_PHASE_ONE, i(29273)), 	-- Khadgar's Knapsack
 						applyclassicphase(TBC_PHASE_FOUR, i(33333)), 	-- Kharmaa's Shroud of Hope
-						applyclassicphase(TBC_PHASE_ONE, i(33503, {	-- Libram of Divine Judgement
+						applyclassicphase(TBC_PHASE_FOUR, i(33503, {	-- Libram of Divine Judgement
 							["timeline"] = { "removed 5.0.4" },
 						})),
-						applyclassicphase(TBC_PHASE_ONE, i(33504, {	-- Libram of Divine Purpose
+						applyclassicphase(TBC_PHASE_FOUR, i(33504, {	-- Libram of Divine Purpose
 							["timeline"] = { "removed 5.0.4" },
 						})),
-						applyclassicphase(TBC_PHASE_ONE, i(33502, {	-- Libram of Mending
+						applyclassicphase(TBC_PHASE_FOUR, i(33502, {	-- Libram of Mending
 							["timeline"] = { "removed 5.0.4" },
 						})),
 						applyclassicphase(TBC_PHASE_ONE, i(29388, {	-- Libram of Repentance
@@ -977,13 +977,13 @@ _.Zones =
 						applyclassicphase(TBC_PHASE_FOUR, i(33538)), 	-- Shallow-Grave Trousers
 						applyclassicphase(TBC_PHASE_ONE, i(29369)),	-- Shawl of Shifting Probabilities
 						applyclassicphase(TBC_PHASE_FOUR, i(33527)), 	-- Shifting Camouflage Pants
-						applyclassicphase(TBC_PHASE_ONE, i(33506, {	-- Skycall Totem
+						applyclassicphase(TBC_PHASE_FOUR, i(33506, {	-- Skycall Totem
 							["timeline"] = { "removed 5.0.4" },
 						})),
 						applyclassicphase(TBC_PHASE_FOUR, i(33593)), 	-- Slikk's Cloak of Placation
 						applyclassicphase(TBC_PHASE_FOUR, i(33559)), 	-- Starfire Waistband
 						applyclassicphase(TBC_PHASE_FOUR, i(33529)), 	-- Steadying Bracers
-						applyclassicphase(TBC_PHASE_ONE, i(33507, {	-- Stonebreaker's Totem
+						applyclassicphase(TBC_PHASE_FOUR, i(33507, {	-- Stonebreaker's Totem
 							["timeline"] = { "removed 5.0.4" },
 						})),
 						applyclassicphase(TBC_PHASE_ONE, i(32086)), 	-- Storm Master's Helmet
@@ -991,7 +991,7 @@ _.Zones =
 						applyclassicphase(TBC_PHASE_FOUR, i(33586)), 	-- Studious Wraps
 						applyclassicphase(TBC_PHASE_ONE, i(29271)), 	-- Talisman of Kalecgos
 						applyclassicphase(TBC_PHASE_ONE, i(29274)), 	-- Tears of Heaven
-						applyclassicphase(TBC_PHASE_ONE, i(33505, {	-- Totem of Living Water
+						applyclassicphase(TBC_PHASE_FOUR, i(33505, {	-- Totem of Living Water
 							["timeline"] = { "removed 5.0.4" },
 						})),
 						applyclassicphase(TBC_PHASE_ONE, i(29389, {	-- Totem of the Pulsing Earth
