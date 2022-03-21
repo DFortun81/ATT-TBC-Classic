@@ -411,7 +411,26 @@ app.L = {
 		[859] = { 14777, "Explore Eversong Woods", app.asset("achievement_zone_eversongwoods") },
 		
 		-- Kalimdor
+		[728] = { 14778, "Explore Durotar", app.asset("achievement_zone_durotar") },
+		[736] = { 14778, "Explore Mulgore", app.asset("achievement_zone_mulgore_01") },
+		[750] = { 14778, "Explore The Barrens", app.asset("achievement_zone_barrens_01") },
+		[842] = { 14778, "Explore Teldrassil", app.asset("achievement_zone_darnassus") },
+		[844] = { 14778, "Explore Darkshore", app.asset("achievement_zone_darkshore_01") },
+		[845] = { 14778, "Explore Ashenvale", app.asset("achievement_zone_ashenvale_01") },
+		[846] = { 14778, "Explore Thousand Needles", app.asset("achievement_zone_thousandneedles_01") },
+		[847] = { 14778, "Explore Stonetalon Mountains", app.asset("achievement_zone_stonetalon_01") },
+		[848] = { 14778, "Explore Desolace", app.asset("achievement_zone_desolace") },
+		[849] = { 14778, "Explore Feralas", app.asset("achievement_zone_feralas") },
+		[850] = { 14778, "Explore Dustwallow Marsh", app.asset("achievement_zone_dustwallowmarsh") },
+		[851] = { 14778, "Explore Tanaris", app.asset("achievement_zone_tanaris_01") },
+		[852] = { 14778, "Explore Azshara", app.asset("achievement_zone_azshara_01") },
+		[853] = { 14778, "Explore Felwood", app.asset("achievement_zone_felwood") },
+		[854] = { 14778, "Explore Un'Goro Crater", app.asset("achievement_zone_ungorocrater_01") },
+		[855] = { 14778, "Explore Moonglade", "Interface\\Icons\\spell_arcane_teleportmoonglade" },
+		[856] = { 14778, "Explore Silithus", app.asset("achievement_zone_silithus_01") },
 		[857] = { 14778, "Explore Winterspring", app.asset("achievement_zone_winterspring") },
+		[860] = { 14778, "Explore Azuremyst Isle", app.asset("achievement_zone_azuremystisle_01") },
+		[861] = { 14778, "Explore Bloodmyst Isle", app.asset("achievement_zone_bloodmystisle_01") },
 		
 		-- Outland
 		[843] = { 14779, "Explore Netherstorm", app.asset("achievement_zone_netherstorm_01") },
