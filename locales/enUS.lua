@@ -391,6 +391,7 @@ app.L = {
 		[518] = { 201, "30 Exalted Reputations", app.asset("achievement_reputation_06") },
 		[1014] = { 201, "35 Exalted Reputations", app.asset("achievement_reputation_07") },
 		[1015] = { 201, "40 Exalted Reputations", app.asset("achievement_reputation_08") },
+		[893] = { 201 },	-- Cenarion War Hippogryph, name and icon from providers
 		[896] = { 201, "A Quest a Day Keeps the Ogres at Bay", "Interface\\Icons\\inv_misc_apexis_crystal" },
 		
 		[292] = { 158, "Sinister Calling" },	-- Sinister Squashling, icon from providers

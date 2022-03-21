@@ -57,6 +57,14 @@ _.Zones =
 					["coord"] = { 79.3, 63.7, ZANGARMARSH },
 					["groups"] = {
 						i(31804),	-- Cenarion Expedition Tabard
+						removeclassicphase(ach(893, {	-- Cenarion War Hippogryph
+							["provider"] = { "i", 33999 },	-- Cenarion War Hippogryph
+							["filterID"] = MOUNTS,
+							-- #if BEFORE WRATH
+							["description"] = "Obtain the Cenarion War Hippogryph from the Cenarion Expedition in Zangarmarsh.",
+							["OnUpdate"] = [[_.CommonAchievementHandlers.ANY_ITEM_PROVIDER]],
+							-- #endif
+						})),
 						i(33999),	-- Cenarion War Hippogryph (MOUNT!)
 						i(30623, {	-- Reservoir Key [Revered]
 							["timeline"] = { "removed 4.2.0" },
