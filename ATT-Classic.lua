@@ -3343,6 +3343,16 @@ app.CreateAchievementCategory = function(id, t)
 end
 
 app.CommonAchievementHandlers = {
+["ALL_ITEM_PROVIDERS"] = function(t)
+	local collected = true;
+	for i,provider in ipairs(t.providers) do
+		if provider[1] == "i" and GetItemCount(provider[2], true) == 0 then
+			collected = false;
+			break;
+		end
+	end
+	t.SetAchievementCollected(t.achievementID, collected);
+end,
 ["ANY_ITEM_PROVIDER"] = function(t)
 	local collected = false;
 	for i,provider in ipairs(t.providers) do

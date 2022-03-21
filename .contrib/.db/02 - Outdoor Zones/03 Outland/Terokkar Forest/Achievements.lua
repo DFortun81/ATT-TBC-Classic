@@ -11,7 +11,7 @@ _.Zones =
 					["requireSkill"] = FISHING,
 					-- #if BEFORE WRATH
 					["description"] = "Fish your way to Mr. Pinchy's Magical Crawdad Box.",
-					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, GetItemCount(27445, true) > 0); end]],
+					["OnUpdate"] = [[_.CommonAchievementHandlers.ANY_ITEM_PROVIDER]],
 					-- #endif
 				})),
 				ach(905, applyclassicphase(WRATH_PHASE_ONE, {	-- Old Man Barlowned

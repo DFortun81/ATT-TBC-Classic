@@ -32,7 +32,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["requireSkill"] = FISHING,
 					-- #if BEFORE WRATH
 					["description"] = "Fish up Old Ironjaw in Ironforge.",
-					["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, GetItemCount(34484, true) > 0); end]],
+					["OnUpdate"] = [[_.CommonAchievementHandlers.ANY_ITEM_PROVIDER]],
 					-- #endif
 				})),
 			}),
