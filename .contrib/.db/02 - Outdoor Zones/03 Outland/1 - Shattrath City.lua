@@ -598,8 +598,8 @@ _.Zones =
 			["isRaid"] = true,
 			["lvl"] = 58,
 			["groups"] = {
-				-- #if AFTER MOP
 				n(ACHIEVEMENTS, {
+					-- #if AFTER MOP
 					ach(9069, {	-- An Awfully Big Adventure
 						["collectible"] = false,
 						["filterID"] = 101,	-- Battle Pet
@@ -610,7 +610,45 @@ _.Zones =
 							}),
 						},
 					}),
+					-- #endif
+					ach(1205, applyclassicphase(TBC_PHASE_ONE, {	-- Hero of Shattrath
+						-- #if BEFORE 3.0.1
+						["cost"] = {
+							{ "i", 31779, 1 },	-- Aldor Tabard
+							{ "i", 31780, 1 },	-- Scryers Tabard
+						},
+						["OnUpdate"] = [[_.CommonAchievementHandlers.ALL_ITEM_COSTS]],
+						["description"] = "Gained exalted status with The Scryers and The Aldor.\n\nNOTE: This can be accomplished now by learning both faction's Exalted recipes, their tabards, or their equipment that require Exalted reputation to buy. For the sake of simplicity, just buy both tabards as this will also count toward the 25 tabard achievement later.\n\nWARNING: You must maintain at least one of these requirements in order to acquire the achievement with prepatch!",
+						-- #endif
+					})),
+					ach(903, applyclassicphase(TBC_PHASE_ONE, {	-- Shattrath Divided
+						-- #if BEFORE 3.0.1
+						["OnClick"] = [[_.CommonAchievementHandlers.EXALTED_REPS_OnClick]],
+						["OnTooltip"] = [[_.CommonAchievementHandlers.EXALTED_REPS_OnTooltip]],
+						["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.EXALTED_REPS_ANY_OnUpdate(t, 932, 934); end]],
+						["description"] = "Raise your reputation with The Scryers or The Aldor to Exalted.",
+						-- #endif
+					})),
+					ach(764, applyclassicphase(TBC_PHASE_ONE, {	-- The Burning Crusader (A)
+						-- #if BEFORE 3.0.1
+						["OnClick"] = [[_.CommonAchievementHandlers.EXALTED_REPS_OnClick]],
+						["OnTooltip"] = [[_.CommonAchievementHandlers.EXALTED_REPS_OnTooltip]],
+						["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.EXALTED_REPS_OnUpdate(t, 942, 989, 1011, 935, 946); end]],
+						["description"] = "Raise all of The Burning Crusade dungeon reputations to exalted.",
+						-- #endif
+						["races"] = ALLIANCE_ONLY,
+					})),
+					ach(763, applyclassicphase(TBC_PHASE_ONE, {	-- The Burning Crusader (H)
+						-- #if BEFORE 3.0.1
+						["OnClick"] = [[_.CommonAchievementHandlers.EXALTED_REPS_OnClick]],
+						["OnTooltip"] = [[_.CommonAchievementHandlers.EXALTED_REPS_OnTooltip]],
+						["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.EXALTED_REPS_OnUpdate(t, 942, 989, 1011, 935, 947); end]],
+						["description"] = "Raise all of The Burning Crusade dungeon reputations to exalted.",
+						-- #endif
+						["races"] = HORDE_ONLY,
+					})),
 				}),
+				-- #if AFTER MOP
 				filter(BATTLE_PETS, {
 					q(31925, {	-- Morulu The Elder
 						["isDaily"] = true,

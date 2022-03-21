@@ -173,7 +173,7 @@ _.Zones =
 					}),
 					-- #endif
 				})),
-				removeclassicphase(ach(953, {	-- Guardian of Cenarius
+				ach(953, applyclassicphase(TBC_PHASE_ONE, {	-- Guardian of Cenarius
 					-- #if BEFORE 3.0.1
 					["OnClick"] = [[_.CommonAchievementHandlers.EXALTED_REPS_OnClick]],
 					["OnTooltip"] = [[_.CommonAchievementHandlers.EXALTED_REPS_OnTooltip]],
