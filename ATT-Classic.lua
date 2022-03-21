@@ -3599,6 +3599,29 @@ end,
 		t.SetAchievementCollected(t.achievementID, collected);
 	end
 end,
+["META_ACHCAT_OnUpdate"] = function(t, achievementCategoryID)
+	if t.collectible then
+		if not t.achievements then
+			local achievements;
+			for i,o in ipairs(t.parent.g) do
+				if o.achievementCategoryID == achievementCategoryID then
+					achievements = o.g;
+					break;
+				end
+			end
+			if not achievements then return true; end
+			t.achievements = achievements;
+		end
+		local collected = true;
+		for i,faction in ipairs(t.achievements) do
+			if not faction.collected then
+				collected = false;
+				break;
+			end
+		end
+		t.SetAchievementCollected(t.achievementID, collected);
+	end
+end,
 ["META_OnClick"] = function(row, button)
 	if button == "RightButton" then
 		local t = row.ref;

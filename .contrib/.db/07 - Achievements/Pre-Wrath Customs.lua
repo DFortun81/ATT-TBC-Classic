@@ -634,14 +634,36 @@ _.Achievements =
 			ach(1312),	-- Bloody Rare
 			ach(1311),	-- Medium Rare
 		}),
+		removeclassicphase(ach(42, {	-- Explore Eastern Kingdoms
+			-- #if BEFORE WRATH
+			["description"] = "Explore the regions of Eastern Kingdoms.",
+			["OnClick"] = [[_.CommonAchievementHandlers.META_OnClick]],
+			["OnTooltip"] = [[_.CommonAchievementHandlers.META_OnTooltip]],
+			["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_ACHCAT_OnUpdate(t, ]] .. ACHIEVEMENT_CATEGORY_EASTERN_KINGDOMS_EXP .. [[); end]],
+			-- #endif
+		})),
+		removeclassicphase(ach(43, {	-- Explore Kalimdor
+			-- #if BEFORE WRATH
+			["description"] = "Explore the regions of Kalimdor.",
+			["OnClick"] = [[_.CommonAchievementHandlers.META_OnClick]],
+			["OnTooltip"] = [[_.CommonAchievementHandlers.META_OnTooltip]],
+			["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_ACHCAT_OnUpdate(t, ]] .. ACHIEVEMENT_CATEGORY_KALIMDOR_EXP .. [[); end]],
+			-- #endif
+		})),
 		ach(44, applyclassicphase(TBC_PHASE_ONE, {	-- Explore Outland
 			-- #if BEFORE WRATH
 			["description"] = "Explore the regions of Outland.",
 			["OnClick"] = [[_.CommonAchievementHandlers.META_OnClick]],
 			["OnTooltip"] = [[_.CommonAchievementHandlers.META_OnTooltip]],
-			["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_OnUpdate(t, 865, 862, 866, 843, 864, 867, 863); end]],
+			["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_ACHCAT_OnUpdate(t, ]] .. ACHIEVEMENT_CATEGORY_OUTLAND_EXP .. [[); end]],
 			-- #endif
 		})),
+		ach(45, {	-- Explore Northrend
+			i(43348),	-- Tabard of the Explorer
+		}),
+		ach(46, {	-- World Explorer
+			title(78),	-- % the Explorer
+		}),
 	}),
 	pvp(achcat(ACHIEVEMENT_CATEGORY_PVP, {
 		ach(238, applyclassicphase(PHASE_TWO, {	-- An Honorable Kill

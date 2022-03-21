@@ -6,6 +6,13 @@ _.Zones =
 	m(EASTERN_KINGDOMS, {
 		m(STRANGLETHORN_VALE, {
 			n(ACHIEVEMENTS, {
+				removeclassicphase(ach(781, {	-- Explore Stranglethorn Vale
+					-- #if BEFORE WRATH
+					["description"] = "Explore Stranglethorn Vale, revealing the covered areas of the world map.",
+					["OnClick"] = [[_.CommonAchievementHandlers.EXPLORATION_OnClick]],
+					["OnUpdate"] = [[_.CommonAchievementHandlers.EXPLORATION_OnUpdate]],
+					-- #endif
+				})),
 				removeclassicphase(ach(940, {	-- The Green Hills of Stranglethorn
 					["sourceQuests"] = {
 						208,	-- Big Game Hunter
