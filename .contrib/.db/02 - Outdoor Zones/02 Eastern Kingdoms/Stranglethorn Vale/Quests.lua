@@ -73,9 +73,10 @@ _.Zones =
 					["lvl"] = 55,
 					["groups"] = {
 						ach(871, applyclassicphase(PHASE_ONE, {	-- Avast Ye, Admiral!
+							["sourceQuest"] = 4621,	-- Avast Ye, Admiral!
 							-- #if BEFORE WRATH
 							["description"] = "Obtain the Bloodsail Admiral's Hat... and try to get some fresh air every now and then.",
-							["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(4621)); end]],
+							["OnUpdate"] = [[_.CommonAchievementHandlers.ANY_SOURCE_QUEST]],
 							-- #endif
 							["groups"] = {
 								applyclassicphase(WRATH_PHASE_ONE, title(144)),	-- Bloodsail Admiral <Name>
