@@ -368,7 +368,7 @@ end]];
 _.Achievements =
 {
 	achcat(ACHIEVEMENT_CATEGORY_CHARACTER, {
-		-- Armored Brown Bear, located in Dalaran. [TOCO]
+		-- Armored Brown Bear, located in Dalaran.
 		ach(5180, applyclassicphase(CATA_PHASE_ONE, {	-- Breaking the Sound Barrier
 			["spellID"] = 90265,	-- Master Riding
 			["rank"] = 5,
@@ -398,18 +398,7 @@ _.Achievements =
 			["rank"] = 25,
 			["f"] = 100,
 		})),
-		ach(1254, {	-- Friend or Fowl? [TODO: Move to Howling Fjord]
-			["coords"] = {
-				{ 69.6, 65.8, HOWLING_FJORD },
-				{ 59.4, 63.6, HOWLING_FJORD },
-				{ 31.6, 41.4, HOWLING_FJORD },
-			},
-			["crs"] = {
-				23801,	-- Turkey
-				24746,	-- Fjord Turkey
-				29594,	-- Angry Turkey
-			},
-		}),
+		-- Friend or Fowl? Located in Howling Fjord.
 		ach(2097, {	-- Get to the Choppa!
 			["providers"] = {
 				{ "i", 44413 },	-- Mekgineer's Chopper
@@ -438,7 +427,7 @@ _.Achievements =
 			["rank"] = 25000,
 		}),
 		ach(558),	-- Greedy
-		-- 1956: Higher Learning [TODO: Add to Dalaran]
+		-- Higher Learning, located in Dalaran.
 		ach(890, applyclassicphase(TBC_PHASE_ONE, {	-- Into the Wild Blue Yonder
 			["spellID"] = 34090,	-- Expert Riding
 			["rank"] = 3,
@@ -560,7 +549,7 @@ _.Achievements =
 		ach(621, {	-- Represent [TODO]
 			["rank"] = 1,
 		}),
-		-- 2084: Ring of the Kirin Tor, located in Dalaran. [TODO]
+		-- Ring of the Kirin Tor, located in Dalaran.
 		removeclassicphase(ach(546, {	-- Safe Deposit
 			-- #if BEFORE WRATH
 			["description"] = "Buy 7 additional bank slots.",
@@ -597,7 +586,7 @@ _.Achievements =
 		})),
 		ach(1206),	-- To All The Squirrels I've Loved Before
 		ach(2557),	-- To All The Squirrels Who Shared My Life
-		-- 2078: Traveler's Tundra Mammoth, located in Dalaran. [TODO]
+		-- Traveler's Tundra Mammoth, located in Dalaran.
 		ach(1021, {	-- Twenty-Five Tabards [TODO]
 			["rank"] = 25,
 			["groups"] = {
@@ -605,7 +594,7 @@ _.Achievements =
 			},
 		}),
 		ach(1244),	-- Well Read
-		ach(2077),	-- Wooly Mammoth
+		-- Wooly Mammoth, located in Dalaran.
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_QUESTS, {
 		achcat(ACHIEVEMENT_CATEGORY_OUTLAND_QUESTS, {
