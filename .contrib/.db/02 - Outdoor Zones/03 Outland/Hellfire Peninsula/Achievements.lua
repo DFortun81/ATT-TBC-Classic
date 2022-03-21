@@ -158,11 +158,11 @@ _.Zones =
 						10255,	-- Testing the Antidote
 					},
 					-- #elseif BEFORE WRATH
-					["description"] = "Complete 90 quests in Hellfire Peninsula.",
+					["description"] = "Complete 89 quests in Hellfire Peninsula.",
 					["OnClick"] = [[_.CommonAchievementHandlers.LOREMASTER_OnClick]],
 					["OnTooltip"] = [[_.CommonAchievementHandlers.LOREMASTER_OnTooltip]],
 					["OnUpdate"] = [[_.CommonAchievementHandlers.LOREMASTER_OnUpdate]],
-					["rank"] = 90,
+					["rank"] = 89,
 					-- #endif
 					-- #else
 					["groups"] = {
