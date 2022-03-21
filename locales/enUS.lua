@@ -424,6 +424,8 @@ app.L = {
 		[942] = { 201, "The Diplomat", "Interface\\Icons\\inv_helmet_44" },
 		[943] = { 201, "The Diplomat", "Interface\\Icons\\inv_helmet_44" },
 		[953] = { 201, "Guardian of Cenarius", "Interface\\Icons\\ability_racial_ultravision" },
+		[958] = { 14865, "Sworn to the Deathsworn", "Interface\\Icons\\achievement_reputation_ashtonguedeathsworn" },
+		[1638] = { 14865, "Skyshattered", "Interface\\Icons\\ability_mount_netherdrakepurple" },
 		
 		[292] = { 158, "Sinister Calling" },	-- Sinister Squashling, icon from providers
 		[303] = { 162, "Have Keg, Will Travel", "Interface\\Icons\\inv_cask_01" },
