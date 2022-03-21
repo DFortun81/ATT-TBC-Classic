@@ -3421,7 +3421,7 @@ end,
 		end
 		local collected = true;
 		for i,o in ipairs(t.areas) do
-			if o.collected ~= 1 then
+			if o.collected ~= 1 and app.FilterItemClass_UnobtainableItem(o) then
 				collected = false;
 				break;
 			end
@@ -3614,7 +3614,7 @@ end,
 		end
 		local collected = true;
 		for i,faction in ipairs(t.achievements) do
-			if not faction.collected then
+			if not faction.collected and app.FilterItemClass_UnobtainableItem(faction) then
 				collected = false;
 				break;
 			end
