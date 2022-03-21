@@ -727,16 +727,7 @@ _.Achievements =
 			},
 			-- #if BEFORE WRATH
 			["description"] = "Obtain one of the war mounts through the honor system.",
-			["OnUpdate"] = [[function(t)
-				local collected = false;
-				for i,provider in ipairs(t.providers) do
-					if provider[1] == "i" and GetItemCount(provider[2], true) > 0 then
-						collected = true;
-						break;
-					end
-				end
-				t.SetAchievementCollected(t.achievementID, collected);
-			end]],
+			["OnUpdate"] = [[_.CommonAchievementHandlers.ANY_ITEM_PROVIDER]],
 			-- #endif
 		})),
 		ach(908, applyclassicphase(WRATH_PHASE_ONE, {	-- Call to Arms! (Alliance)
@@ -1068,16 +1059,7 @@ _.Achievements =
 				["requireSkill"] = FISHING,
 				-- #if BEFORE WRATH
 				["description"] = "Catch one of the rare fish in the list below.\n\nKeep one in your inventory somewhere to keep credit for this.",
-				["OnUpdate"] = [[function(t)
-					local collected = false;
-					for i,provider in ipairs(t.providers) do
-						if provider[1] == "i" and GetItemCount(provider[2], true) > 0 then
-							collected = true;
-							break;
-						end
-					end
-					t.SetAchievementCollected(t.achievementID, collected);
-				end]],
+				["OnUpdate"] = [[_.CommonAchievementHandlers.ANY_ITEM_PROVIDER]],
 				-- #endif
 			})),
 			ach(1225, {	-- Outland Angler

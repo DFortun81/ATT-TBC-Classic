@@ -3343,6 +3343,16 @@ app.CreateAchievementCategory = function(id, t)
 end
 
 app.CommonAchievementHandlers = {
+["ANY_ITEM_PROVIDER"] = function(t)
+	local collected = false;
+	for i,provider in ipairs(t.providers) do
+		if provider[1] == "i" and GetItemCount(provider[2], true) > 0 then
+			collected = true;
+			break;
+		end
+	end
+	t.SetAchievementCollected(t.achievementID, collected);
+end,
 ["EXPLORATION_OnUpdate"] = function(t)
 	if t.collectible and t.parent then
 		if not t.areas then

@@ -401,16 +401,7 @@ _.Zones =
 							["f"] = 100,
 							-- #if BEFORE WRATH
 							["description"] = "Obtain a Venomhide Ravasaur.",
-							["OnUpdate"] = [[function(t)
-								local collected = false;
-								for i,provider in ipairs(t.providers) do
-									if provider[1] == "i" and GetItemCount(provider[2], true) > 0 then
-										collected = true;
-										break;
-									end
-								end
-								t.SetAchievementCollected(t.achievementID, collected);
-							end]],
+							["OnUpdate"] = [[_.CommonAchievementHandlers.ANY_ITEM_PROVIDER]],
 							-- #endif
 						})),
 						i(46102, {	-- Whistle of the Venomhide Ravasaur
