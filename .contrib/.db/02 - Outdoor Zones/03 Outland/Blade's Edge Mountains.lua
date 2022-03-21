@@ -57,14 +57,14 @@ _.Zones =
 						["description"] = "Raise your reputation with Ogri'la to Exalted.",
 						-- #endif
 					})),
-					ach(865, applyclassicphase(TBC_PHASE_ONE, {	-- Explore Blade's Edge Mountains
+					removeclassicphase(ach(865, {	-- Explore Blade's Edge Mountains
 						-- #if BEFORE WRATH
 						["description"] = "Explore Blade's Edge Mountains, revealing the covered areas of the world map.",
 						["OnClick"] = [[_.CommonAchievementHandlers.EXPLORATION_OnClick]],
 						["OnUpdate"] = [[_.CommonAchievementHandlers.EXPLORATION_OnUpdate]],
 						-- #endif
 					})),
-					ach(1193, applyclassicphase(TBC_PHASE_ONE, {	-- On the Blade's Edge
+					removeclassicphase(ach(1193, {	-- On the Blade's Edge
 						-- #if ANYCLASSIC
 						-- #if AFTER CATA
 						["sourceQuests"] = {

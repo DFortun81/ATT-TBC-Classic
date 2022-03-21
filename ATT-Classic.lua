@@ -3444,6 +3444,72 @@ end,
 		GameTooltip:AddDoubleLine(" |T" .. t.rep.icon .. ":0|t " .. t.rep.text, app.L[t.rep.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 	end
 end,
+["EXALTED_REPS_OnUpdate"] = function(t, ...)
+	if t.collectible then
+		if not t.reps then
+			local reps = {};
+			for i,factionID in ipairs({ ... }) do
+				local f = app.SearchForField("factionID", factionID);
+				if f and #f > 0 then
+					tinsert(reps, f[1]);
+				else
+					return true;
+				end
+			end
+			if #reps < 1 then return true; end
+			t.reps = reps;
+		end
+		local collected = true;
+		for i,faction in ipairs(t.reps) do
+			if faction.standing < 8 then
+				collected = false;
+				break;
+			end
+		end
+		t.SetAchievementCollected(t.achievementID, collected);
+	end
+end,
+["EXALTED_REPS_ANY_OnUpdate"] = function(t, ...)
+	if t.collectible then
+		if not t.reps then
+			local reps = {};
+			for i,factionID in ipairs({ ... }) do
+				local f = app.SearchForField("factionID", factionID);
+				if f and #f > 0 then
+					tinsert(reps, f[1]);
+				else
+					return true;
+				end
+			end
+			if #reps < 1 then return true; end
+			t.reps = reps;
+		end
+		local collected = false;
+		for i,faction in ipairs(t.reps) do
+			if faction.standing < 8 then
+				collected = true;
+				break;
+			end
+		end
+		t.SetAchievementCollected(t.achievementID, collected);
+	end
+end,
+["EXALTED_REPS_OnClick"] = function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local clone = app.CreateMiniListForGroup(app.CreateAchievement(t[t.key], t.reps)).data;
+		clone.description = t.description;
+		return true;
+	end
+end,
+["EXALTED_REPS_OnTooltip"] = function(t)
+	if t.collectible and t.reps then
+		GameTooltip:AddLine(" ");
+		for i,faction in ipairs(t.reps) do
+			GameTooltip:AddDoubleLine(" |T" .. faction.icon .. ":0|t " .. faction.text, app.L[faction.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+		end
+	end
+end,
 ["LOREMASTER_OnUpdate"] = function(t)
 	if t.collectible and t.parent then
 		if not t.quests then
@@ -3461,10 +3527,12 @@ end,
 			end
 		end
 		local p = 0;
-		for i,o in ipairs(t.quests) do
-			if app.FilterItemClass(o) then
-				if o.collected == 1 then
-					p = p + 1;
+		if app.FilterItemClass_RequireRaces(t) then
+			for i,o in ipairs(t.quests) do
+				if app.FilterItemClass(o) then
+					if o.collected == 1 then
+						p = p + 1;
+					end
 				end
 			end
 		end
@@ -3484,6 +3552,47 @@ end,
 	if t.collectible and t.p and not t.collected then
 		GameTooltip:AddLine(" ");
 		GameTooltip:AddDoubleLine(" ", app.GetProgressText(min(t.rank, t.p),t.rank), 1, 1, 1);
+	end
+end,
+["META_OnUpdate"] = function(t, ...)
+	if t.collectible then
+		if not t.achievements then
+			local achievements = {};
+			for i,achievementID in ipairs({ ... }) do
+				local f = app.SearchForField("achievementID", achievementID);
+				if f and #f > 0 then
+					tinsert(achievements, f[1]);
+				else
+					return true;
+				end
+			end
+			if #achievements < 1 then return true; end
+			t.achievements = achievements;
+		end
+		local collected = true;
+		for i,faction in ipairs(t.achievements) do
+			if faction.collected then
+				collected = false;
+				break;
+			end
+		end
+		t.SetAchievementCollected(t.achievementID, collected);
+	end
+end,
+["META_OnClick"] = function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local clone = app.CreateMiniListForGroup(app.CreateAchievement(t[t.key], t.achievements)).data;
+		clone.description = t.description;
+		return true;
+	end
+end,
+["META_OnTooltip"] = function(t)
+	if t.collectible and t.reps then
+		GameTooltip:AddLine(" ");
+		for i,achievement in ipairs(t.achievements) do
+			GameTooltip:AddDoubleLine(" |T" .. achievement.icon .. ":0|t " .. achievement.text, app.L[achievement.collected and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+		end
 	end
 end,
 };

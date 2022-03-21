@@ -363,10 +363,26 @@ app.L = {
 		[907] = { 95, "The Justicar", "Interface\\Icons\\inv_misc_tabardpvp_03" },
 		
 		-- Quests
+		[939] = { 96, "Hills Like White Elekk", "Interface\\Icons\\ability_mount_ridingelekk" },
+		[940] = { 96, "The Green Hills of Stranglethorn", "Interface\\Icons\\ability_mount_whitetiger" },
+		[1189] = { 96, "To Hellfire and Back", app.asset("achievement_zone_hellfirepeninsula_01") },
+		[1190] = { 96, "Mysteries of the Marsh", app.asset("achievement_zone_zangarmarsh") },
+		[1191] = { 96, "Terror of Terokkar", app.asset("achievement_zone_terrokar") },
+		[1192] = { 96, "Nagrand Slam", app.asset("achievement_zone_nagrand_01") },
 		[1193] = { 96, "On the Blade's Edge", app.asset("achievement_zone_bladesedgemtns_01") },
+		[1194] = { 96, "Into the Nether", app.asset("achievement_zone_netherstorm_01") },
+		[1271] = { 96, "To Hellfire and Back", app.asset("achievement_zone_hellfirepeninsula_01") },
+		[1272] = { 96, "Terror of Terokkar", app.asset("achievement_zone_terrokar") },
+		[1273] = { 96, "Nagrand Slam", app.asset("achievement_zone_nagrand_01") },
 		
 		-- Exploration
+		[843] = { 97, "Explore Netherstorm", app.asset("achievement_zone_netherstorm_01") },
+		[862] = { 97, "Explore Hellfire Peninsula", app.asset("achievement_zone_hellfirepeninsula_01") },
+		[863] = { 97, "Explore Zangarmarsh", app.asset("achievement_zone_zangarmarsh") },
+		[864] = { 97, "Explore Shadowmoon Valley", app.asset("achievement_zone_shadowmoon") },
 		[865] = { 97, "Explore Blade's Edge Mountains", app.asset("achievement_zone_bladesedgemtns_01") },
+		[866] = { 97, "Explore Nagrand", app.asset("achievement_zone_nagrand_01") },
+		[867] = { 97, "Explore Terokkar Forest", app.asset("achievement_zone_terrokar") },
 		
 		-- Alterac Valley Achievements
 		[706] = { 14801 },	-- Frostwolf Howler, name and icon from providers
@@ -391,8 +407,19 @@ app.L = {
 		[518] = { 201, "30 Exalted Reputations", app.asset("achievement_reputation_06") },
 		[1014] = { 201, "35 Exalted Reputations", app.asset("achievement_reputation_07") },
 		[1015] = { 201, "40 Exalted Reputations", app.asset("achievement_reputation_08") },
-		[893] = { 201 },	-- Cenarion War Hippogryph, name and icon from providers
-		[896] = { 201, "A Quest a Day Keeps the Ogres at Bay", "Interface\\Icons\\inv_misc_apexis_crystal" },
+		[893] = { 14865 },	-- Cenarion War Hippogryph, name and icon from providers
+		[894] = { 14865, "Flying High Over Skettis", "Interface\\Icons\\ability_hunter_pet_netherray" },
+		[896] = { 14865, "A Quest a Day Keeps the Ogres at Bay", "Interface\\Icons\\inv_misc_apexis_crystal" },
+		[898] = { 14865, "On Wings of Nether", "Interface\\Icons\\ability_mount_netherdrakepurple" },
+		[899] = { 14865, "Oh My, Kurenai", "Interface\\Icons\\inv_misc_foot_centaur" },
+		[900] = { 14865, "The Czar of Sporeggar", "Interface\\Icons\\inv_mushroom_11" },
+		[901] = { 14865, "Mag'har of Draenor", "Interface\\Icons\\inv_misc_foot_centaur" },
+		[902] = { 14865, "Chief Exalted Officer", "Interface\\Icons\\inv_enchant_shardprismaticlarge" },
+		[948] = { 201, "Ambassador of the Alliance", app.asset("achievement_pvp_a_16") },
+		[762] = { 201, "Ambassador of the Horde", app.asset("achievement_pvp_h_16") },
+		[942] = { 201, "The Diplomat", "Interface\\Icons\\inv_helmet_44" },
+		[943] = { 201, "The Diplomat", "Interface\\Icons\\inv_helmet_44" },
+		[953] = { 201, "Guardian of Cenarius", "Interface\\Icons\\ability_racial_ultravision" },
 		
 		[292] = { 158, "Sinister Calling" },	-- Sinister Squashling, icon from providers
 		[303] = { 162, "Have Keg, Will Travel", "Interface\\Icons\\inv_cask_01" },
@@ -450,13 +477,15 @@ app.L = {
 		[158] = { 155, "Hallow's End" },
 		[162] = { 155, "Brewfest" },
 		[168] = { -1, "Dungeons & Raids" },
+		[14805] = { 168, "The Burning Crusade" },
+		[14808] = { 168, "Classic" },
 		[169] = { -1, "Professions" },
 		[170] = { 169, "Cooking" },
 		[171] = { 169, "Fishing" },
 		[172] = { 169, "First Aid" },
 		[201] = { -1, "Reputation" },
-		[14805] = { 168, "The Burning Crusade" },
-		[14808] = { 168, "Classic" },
+		[14865] = { 201, "The Burning Crusade" },
+		[14864] = { 201, "Classic" },
 		[15088] = { -1, "General" },
 		[15117] = { -1, "Pet Battles" },
 		[15246] = { -1, "Collections" },
