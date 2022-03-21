@@ -3341,6 +3341,112 @@ app.BaseAchievementCategory = app.BaseObjectFields(categoryFields);
 app.CreateAchievementCategory = function(id, t)
 	return setmetatable(constructor(id, t, "achievementCategoryID"), app.BaseAchievementCategory);
 end
+
+app.CommonAchievementHandlers = {
+["EXPLORATION_OnUpdate"] = function(t)
+	if t.collectible and t.parent then
+		if not t.areas then
+			local g = (t.sourceParent or t.parent).parent.g;
+			if g and #g > 0 then
+				for i,o in ipairs(g) do
+					if o.headerID == -15 then
+						t.areas = o.g;
+						break;
+					end
+				end
+				if not t.areas then return true; end
+			else
+				return true;
+			end
+		end
+		local collected = true;
+		for i,o in ipairs(t.areas) do
+			if o.collected ~= 1 then
+				collected = false;
+				break;
+			end
+		end
+		t.SetAchievementCollected(t.achievementID, collected);
+	end
+end,
+["EXPLORATION_OnClick"] = function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local clone = app.CreateMiniListForGroup(app.CreateAchievement(t[t.key], t.areas)).data;
+		clone.description = t.description;
+		return true;
+	end
+end,
+["EXALTED_REP_OnUpdate"] = function(t, factionID)
+	if t.collectible then
+		if not t.rep then
+			local f = app.SearchForField("factionID", factionID);
+			if f and #f > 0 then
+				t.rep = f[1];
+			else
+				return true;
+			end
+		end
+		t.SetAchievementCollected(t.achievementID, t.rep.standing == 8);
+	end
+end,
+["EXALTED_REP_OnClick"] = function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local clone = app.CreateMiniListForGroup(app.CreateAchievement(t[t.key], { t.rep })).data;
+		clone.description = t.description;
+		return true;
+	end
+end,
+["EXALTED_REP_OnTooltip"] = function(t)
+	if t.collectible then
+		GameTooltip:AddLine(" ");
+		GameTooltip:AddDoubleLine(" |T" .. t.rep.icon .. ":0|t " .. t.rep.text, app.L[t.rep.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
+	end
+end,
+["LOREMASTER_OnUpdate"] = function(t)
+	if t.collectible and t.parent then
+		if not t.quests then
+			local g = (t.sourceParent or t.parent).parent.g;
+			if g and #g > 0 then
+				for i,o in ipairs(g) do
+					if o.headerID == -17 then
+						t.quests = o.g;
+						break;
+					end
+				end
+				if not t.quests then return true; end
+			else
+				return true;
+			end
+		end
+		local p = 0;
+		for i,o in ipairs(t.quests) do
+			if app.FilterItemClass(o) then
+				if o.collected == 1 then
+					p = p + 1;
+				end
+			end
+		end
+		t.p = p;
+		t.SetAchievementCollected(t.achievementID, p >= t.rank);
+	end
+end,
+["LOREMASTER_OnClick"] = function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local clone = app.CreateMiniListForGroup(app.CreateAchievement(t[t.key], t.quests)).data;
+		clone.description = t.description;
+		return true;
+	end
+end,
+["LOREMASTER_OnTooltip"] = function(t)
+	if t.collectible and t.p and not t.collected then
+		GameTooltip:AddLine(" ");
+		GameTooltip:AddDoubleLine(" ", app.GetProgressText(min(t.rank, t.p),t.rank), 1, 1, 1);
+	end
+end,
+};
 end)();
 
 -- Battle Pet Lib

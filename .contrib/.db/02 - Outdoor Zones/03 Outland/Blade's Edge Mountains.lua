@@ -39,91 +39,29 @@ local OnTooltipForOgrila = [[function(t)
 		GameTooltip:AddDoubleLine("Complete Dailies Everyday", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 	end
 end]];
-local OGRILA_EXALTED_OnUpdate = [[function(t)
-	if t.collectible then
-		if not t.orgila then
-			local f = _.SearchForField("factionID", 1038);
-			if f and #f > 0 then
-				t.orgila = f[1];
-			else
-				return true;
-			end
-		end
-		t.SetAchievementCollected(t.achievementID, t.orgila.standing == 8);
-	end
-end]];
-local OGRILA_EXALTED_OnClick = [[function(row, button)
-	if button == "RightButton" then
-		local t = row.ref;
-		local clone = _.CreateMiniListForGroup(_.CreateAchievement(t[t.key], { t.orgila })).data;
-		clone.description = t.description;
-		return true;
-	end
-end]];
-local OGRILA_EXALTED_OnTooltip = [[function(t)
-	if t.collectible then
-		GameTooltip:AddLine(" ");
-		GameTooltip:AddDoubleLine(" |T" .. t.orgila.icon .. ":0|t " .. t.orgila.text, _.L[t.orgila.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
-	end
-end]];
-local LOREMASTER_OnUpdate = [[function(t)
-	if t.collectible and t.parent then
-		if not t.quests then
-			local g = (t.sourceParent or t.parent).parent.g;
-			if g and #g > 0 then
-				for i,o in ipairs(g) do
-					if o.headerID == ]] .. QUESTS .. [[ then
-						t.quests = o.g;
-						break;
-					end
-				end
-				if not t.quests then return true; end
-			else
-				return true;
-			end
-		end
-		local p = 0;
-		for i,o in ipairs(t.quests) do
-			if _.FilterItemClass(o) then
-				if o.collected == 1 then
-					p = p + 1;
-				end
-			end
-		end
-		t.p = p;
-		t.SetAchievementCollected(t.achievementID, p >= 86);
-	end
-end]];
-local LOREMASTER_OnClick = [[function(row, button)
-	if button == "RightButton" then
-		local t = row.ref;
-		local clone = _.CreateMiniListForGroup(_.CreateAchievement(t[t.key], t.quests)).data;
-		clone.description = t.description;
-		return true;
-	end
-end]];
-local LOREMASTER_OnTooltip = [[function(t)
-	if t.collectible and t.p and not t.collected then
-		GameTooltip:AddLine(" ");
-		GameTooltip:AddDoubleLine(" ", _.GetProgressText(min(86, t.p),86), 1, 1, 1);
-	end
-end]];
 _.Zones =
 {
 	m(OUTLAND, applyclassicphase(TBC_PHASE_ONE, {
 		m(BLADES_EDGE_MOUNTAINS, {
 			["lore"] = "Blade's Edge is a level 20-30 questing zone in Outland, filled with splintered mountain peaks, plunging lush valleys, and dusty canyons. Players learn about the presence of the Burning Legion through a mysterious Fel Mask, as well as how Blade's Edge was the original home of the Ogres. Ogri'la is a faction of friendly ogres that players with flying mounts can gain reputation with.",
 			-- #if AFTER WRATH
-			["achievementID"] = 865,
+			["icon"] = "Interface\\Icons\\achievement_zone_bladesedgemtns_01",
 			-- #endif
 			["groups"] = {
 				n(ACHIEVEMENTS, {
 					ach(896, applyclassicphase(TBC_PHASE_TWO_OGRILA, {	-- A Quest a Day Keeps the Ogres at Bay
 						-- #if BEFORE 3.0.1
-						["OnClick"] = OGRILA_EXALTED_OnClick,
-						["OnTooltip"] = OGRILA_EXALTED_OnTooltip,
-						["OnUpdate"] = OGRILA_EXALTED_OnUpdate,
+						["OnClick"] = [[_.CommonAchievementHandlers.EXALTED_REP_OnClick]],
+						["OnTooltip"] = [[_.CommonAchievementHandlers.EXALTED_REP_OnTooltip]],
+						["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.EXALTED_REP_OnUpdate(t, 1038); end]],
 						["description"] = "Raise your reputation with Ogri'la to Exalted.",
+						-- #endif
+					})),
+					ach(865, applyclassicphase(TBC_PHASE_ONE, {	-- Explore Blade's Edge Mountains
+						-- #if BEFORE WRATH
+						["description"] = "Explore Blade's Edge Mountains, revealing the covered areas of the world map.",
+						["OnClick"] = [[_.CommonAchievementHandlers.EXPLORATION_OnClick]],
+						["OnUpdate"] = [[_.CommonAchievementHandlers.EXPLORATION_OnUpdate]],
 						-- #endif
 					})),
 					ach(1193, applyclassicphase(TBC_PHASE_ONE, {	-- On the Blade's Edge
@@ -156,9 +94,10 @@ _.Zones =
 						},
 						-- #elseif BEFORE WRATH
 						["description"] = "Complete 86 quests in Blade's Edge Mountains.",
-						["OnClick"] = LOREMASTER_OnClick,
-						["OnTooltip"] = LOREMASTER_OnTooltip,
-						["OnUpdate"] = LOREMASTER_OnUpdate,
+						["OnClick"] = [[_.CommonAchievementHandlers.LOREMASTER_OnClick]],
+						["OnTooltip"] = [[_.CommonAchievementHandlers.LOREMASTER_OnTooltip]],
+						["OnUpdate"] = [[_.CommonAchievementHandlers.LOREMASTER_OnUpdate]],
+						["rank"] = 86,
 						-- #endif
 						-- #else
 						crit(1, {	-- Sylvanaar (A)

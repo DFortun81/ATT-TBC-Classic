@@ -365,6 +365,9 @@ app.L = {
 		-- Quests
 		[1193] = { 96, "On the Blade's Edge", app.asset("achievement_zone_bladesedgemtns_01") },
 		
+		-- Exploration
+		[865] = { 97, "Explore Blade's Edge Mountains", app.asset("achievement_zone_bladesedgemtns_01") },
+		
 		-- Alterac Valley Achievements
 		[706] = { 14801 },	-- Frostwolf Howler, name and icon from providers
 		[707] = { 14801 },	-- Stormpike Battle Charger, name and icon from providers
