@@ -608,7 +608,26 @@ _.Achievements =
 		ach(2077),	-- Wooly Mammoth
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_QUESTS, {
-		
+		achcat(ACHIEVEMENT_CATEGORY_OUTLAND_QUESTS, {
+			ach(1262, applyclassicphase(TBC_PHASE_ONE, {	-- Loremaster of Outland
+				-- #if BEFORE WRATH
+				["description"] = "Complete the Outland quest achievements listed below.",
+				["OnClick"] = [[_.CommonAchievementHandlers.META_OnClick]],
+				["OnTooltip"] = [[_.CommonAchievementHandlers.META_OnTooltip]],
+				["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_OnUpdate(t, 1194, 1190, 1192, 1193, 1195, 1191, 1189); end]],
+				-- #endif
+				["races"] = ALLIANCE_ONLY,
+			})),
+			ach(1274, applyclassicphase(TBC_PHASE_ONE, {	-- Loremaster of Outland
+				-- #if BEFORE WRATH
+				["description"] = "Complete the Outland quest achievements listed below.",
+				["OnClick"] = [[_.CommonAchievementHandlers.META_OnClick]],
+				["OnTooltip"] = [[_.CommonAchievementHandlers.META_OnTooltip]],
+				["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_OnUpdate(t, 1194, 1190, 1273, 1193, 1195, 1272, 1271); end]],
+				-- #endif
+				["races"] = HORDE_ONLY,
+			})),
+		}),
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_EXPLORATION, {
 		achcat(ACHIEVEMENT_CATEGORY_OUTLAND_EXP, {
