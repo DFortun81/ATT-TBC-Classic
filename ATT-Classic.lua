@@ -3363,6 +3363,26 @@ end,
 	end
 	t.SetAchievementCollected(t.achievementID, collected);
 end,
+["ALL_SOURCE_QUESTS"] = function(t)
+	local collected = true;
+	for i,questID in ipairs(t.sourceQuests) do
+		if not C_QuestLog.IsQuestFlaggedCompleted(questID) then
+			collected = false;
+			break;
+		end
+	end
+	t.SetAchievementCollected(t.achievementID, collected);
+end,
+["ANY_SOURCE_QUEST"] = function(t)
+	local collected = false;
+	for i,questID in ipairs(t.sourceQuests) do
+		if C_QuestLog.IsQuestFlaggedCompleted(questID) then
+			collected = true;
+			break;
+		end
+	end
+	t.SetAchievementCollected(t.achievementID, collected);
+end,
 ["EXPLORATION_OnUpdate"] = function(t)
 	if t.collectible and t.parent then
 		if not t.areas then
