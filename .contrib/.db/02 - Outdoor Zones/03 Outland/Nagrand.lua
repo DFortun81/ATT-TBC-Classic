@@ -53,10 +53,10 @@ _.Zones =
 			-- #endif
 			["groups"] = {
 				n(ACHIEVEMENTS, {
-					-- #if AFTER MOP
 					ach(9069, {	-- An Awfully Big Adventure
+						["timeline"] = { "added 6.0.2" },
 						["collectible"] = false,
-						["filterID"] = 101,	-- Battle Pet
+						["filterID"] = BATTLE_PETS,
 						["groups"] = {
 							crit(26, {	-- Narrok
 								["coord"] = { 61.0, 49.4, NAGRAND },
@@ -64,7 +64,6 @@ _.Zones =
 							}),
 						},
 					}),
-					-- #endif
 					removeclassicphase(ach(902, {	-- Chief Exalted Officer
 						-- #if BEFORE 3.0.1
 						["OnClick"] = [[_.CommonAchievementHandlers.EXALTED_REP_OnClick]],

@@ -599,10 +599,10 @@ _.Zones =
 			["lvl"] = 58,
 			["groups"] = {
 				n(ACHIEVEMENTS, {
-					-- #if AFTER MOP
 					ach(9069, {	-- An Awfully Big Adventure
+						["timeline"] = { "added 6.0.2" },
 						["collectible"] = false,
-						["filterID"] = 101,	-- Battle Pet
+						["filterID"] = BATTLE_PETS,
 						["groups"] = {
 							crit(25, {	-- Morolu the Elder
 								["coord"] = { 59.0, 70.0, SHATTRATH_CITY },
@@ -610,7 +610,6 @@ _.Zones =
 							}),
 						},
 					}),
-					-- #endif
 					ach(1205, applyclassicphase(TBC_PHASE_ONE, {	-- Hero of Shattrath
 						-- #if BEFORE 3.0.1
 						["cost"] = {
