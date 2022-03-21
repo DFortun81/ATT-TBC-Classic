@@ -362,6 +362,9 @@ app.L = {
 		[714] = { 95, "The Conqueror", "Interface\\Icons\\inv_misc_tabardpvp_04" },
 		[907] = { 95, "The Justicar", "Interface\\Icons\\inv_misc_tabardpvp_03" },
 		
+		-- Quests
+		[1193] = { 96, "On the Blade's Edge", app.asset("achievement_zone_bladesedgemtns_01") },
+		
 		-- Alterac Valley Achievements
 		[706] = { 14801 },	-- Frostwolf Howler, name and icon from providers
 		[707] = { 14801 },	-- Stormpike Battle Charger, name and icon from providers
@@ -385,6 +388,7 @@ app.L = {
 		[518] = { 201, "30 Exalted Reputations", app.asset("achievement_reputation_06") },
 		[1014] = { 201, "35 Exalted Reputations", app.asset("achievement_reputation_07") },
 		[1015] = { 201, "40 Exalted Reputations", app.asset("achievement_reputation_08") },
+		[896] = { 201, "A Quest a Day Keeps the Ogres at Bay", "Interface\\Icons\\inv_misc_apexis_crystal" },
 		
 		[292] = { 158, "Sinister Calling" },	-- Sinister Squashling, icon from providers
 		[303] = { 162, "Have Keg, Will Travel", "Interface\\Icons\\inv_cask_01" },

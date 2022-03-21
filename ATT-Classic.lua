@@ -9637,27 +9637,30 @@ function app:GetDataCache()
 					local achievement = app.CreateAchievement(tonumber(i));
 					for j,o in ipairs(_) do
 						for key,value in pairs(o) do rawset(achievement, key, value); end
-						if o.parent and not o.sourceQuests then
-							local questID = GetRelativeValue(o, "questID");
-							if questID then
-								if not achievement.sourceQuests then
-									achievement.sourceQuests = {};
-								end
-								if not contains(achievement.sourceQuests, questID) then
-									tinsert(achievement.sourceQuests, questID);
-								end
-							else
-								local sourceQuests = GetRelativeValue(o, "sourceQuests");
-								if sourceQuests then
+						if o.parent then
+							achievement.sourceParent = o.parent;
+							if not o.sourceQuests then
+								local questID = GetRelativeValue(o, "questID");
+								if questID then
 									if not achievement.sourceQuests then
 										achievement.sourceQuests = {};
-										for k,questID in ipairs(sourceQuests) do
-											tinsert(achievement.sourceQuests, questID);
-										end
-									else
-										for k,questID in ipairs(sourceQuests) do
-											if not contains(achievement.sourceQuests, questID) then
+									end
+									if not contains(achievement.sourceQuests, questID) then
+										tinsert(achievement.sourceQuests, questID);
+									end
+								else
+									local sourceQuests = GetRelativeValue(o, "sourceQuests");
+									if sourceQuests then
+										if not achievement.sourceQuests then
+											achievement.sourceQuests = {};
+											for k,questID in ipairs(sourceQuests) do
 												tinsert(achievement.sourceQuests, questID);
+											end
+										else
+											for k,questID in ipairs(sourceQuests) do
+												if not contains(achievement.sourceQuests, questID) then
+													tinsert(achievement.sourceQuests, questID);
+												end
 											end
 										end
 									end
