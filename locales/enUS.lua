@@ -424,7 +424,9 @@ app.L = {
 		[942] = { 201, "The Diplomat", "Interface\\Icons\\inv_helmet_44" },
 		[943] = { 201, "The Diplomat", "Interface\\Icons\\inv_helmet_44" },
 		[953] = { 201, "Guardian of Cenarius", "Interface\\Icons\\ability_racial_ultravision" },
-		[958] = { 14865, "Sworn to the Deathsworn", "Interface\\Icons\\achievement_reputation_ashtonguedeathsworn" },
+		[958] = { 14865, "Sworn to the Deathsworn", app.asset("achievement_reputation_ashtonguedeathsworn") },
+		[959] = { 14865, "The Scale of the Sands", "Interface\\Icons\\inv_enchant_dustillusion" },
+		[960] = { 14865, "The Violet Eye", "Interface\\Icons\\spell_holy_mindsooth" },
 		[1638] = { 14865, "Skyshattered", "Interface\\Icons\\ability_mount_netherdrakepurple" },
 		
 		[292] = { 158, "Sinister Calling" },	-- Sinister Squashling, icon from providers
