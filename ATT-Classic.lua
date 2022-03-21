@@ -3571,7 +3571,7 @@ end,
 		end
 		local collected = true;
 		for i,faction in ipairs(t.achievements) do
-			if faction.collected then
+			if not faction.collected then
 				collected = false;
 				break;
 			end

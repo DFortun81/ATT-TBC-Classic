@@ -611,7 +611,18 @@ _.Achievements =
 		
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_EXPLORATION, {
-		
+		achcat(ACHIEVEMENT_CATEGORY_OUTLAND_EXP, {
+			ach(1312),	-- Bloody Rare
+			ach(1311),	-- Medium Rare
+		}),
+		ach(44, applyclassicphase(TBC_PHASE_ONE, {	-- Explore Outland
+			-- #if BEFORE WRATH
+			["description"] = "Explore the regions of Outland.",
+			["OnClick"] = [[_.CommonAchievementHandlers.META_OnClick]],
+			["OnTooltip"] = [[_.CommonAchievementHandlers.META_OnTooltip]],
+			["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_OnUpdate(t, 865, 862, 866, 843, 864, 867, 863); end]],
+			-- #endif
+		})),
 	}),
 	pvp(achcat(ACHIEVEMENT_CATEGORY_PVP, {
 		ach(238, applyclassicphase(PHASE_TWO, {	-- An Honorable Kill
