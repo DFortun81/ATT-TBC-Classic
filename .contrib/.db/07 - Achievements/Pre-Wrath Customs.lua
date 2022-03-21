@@ -1203,7 +1203,7 @@ _.Achievements =
 				9737,	-- True Masters of the Light
 				-- #endif
 			},
-			["OnUpdate"] = [[function(t) t.SetAchievementCollected(t.achievementID, C_QuestLog.IsQuestFlaggedCompleted(6602) or C_QuestLog.IsQuestFlaggedCompleted(6502) or C_QuestLog.IsQuestFlaggedCompleted(5102)); end]],
+			["OnUpdate"] = [[_.CommonAchievementHandlers.ANY_SOURCE_QUEST]],
 			-- #endif
 		})),
 		-- #if AFTER 4.0.1
