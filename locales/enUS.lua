@@ -380,6 +380,7 @@ app.L = {
 		
 		-- Exploration
 		[44] = { 97, "Explore Outland", app.asset("achievement_zone_outland_01") },
+		[868] = { 14777, "Explore Isle of Quel'Danas", app.asset("achievement_zone_isleofqueldanas") },
 		[843] = { 14779, "Explore Netherstorm", app.asset("achievement_zone_netherstorm_01") },
 		[862] = { 14779, "Explore Hellfire Peninsula", app.asset("achievement_zone_hellfirepeninsula_01") },
 		[863] = { 14779, "Explore Zangarmarsh", app.asset("achievement_zone_zangarmarsh") },
@@ -414,6 +415,7 @@ app.L = {
 		[893] = { 14865 },	-- Cenarion War Hippogryph, name and icon from providers
 		[894] = { 14865, "Flying High Over Skettis", "Interface\\Icons\\ability_hunter_pet_netherray" },
 		[896] = { 14865, "A Quest a Day Keeps the Ogres at Bay", "Interface\\Icons\\inv_misc_apexis_crystal" },
+		[897] = { 14865, "You're So Offensive", "Interface\\Icons\\inv_shield_48" },
 		[898] = { 14865, "On Wings of Nether", "Interface\\Icons\\ability_mount_netherdrakepurple" },
 		[899] = { 14865, "Oh My, Kurenai", "Interface\\Icons\\inv_misc_foot_centaur" },
 		[900] = { 14865, "The Czar of Sporeggar", "Interface\\Icons\\inv_mushroom_11" },
