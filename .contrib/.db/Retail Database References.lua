@@ -68,6 +68,18 @@
 -- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Steamvault.lua
 -- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Underbog.lua
 
+-- Outdoor Zones
+-- Outland
+-- #IMPORT: 02 - Outdoor Zones\\03 Outland\\0 - Metadata.lua
+-- #IMPORT: 02 - Outdoor Zones\\03 Outland\\1 - Shattrath City.lua
+-- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Blade's Edge Mountains.lua
+-- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Hellfire Peninsula.lua
+-- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Nagrand.lua
+-- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Netherstorm.lua
+-- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Shadowmoon Valley.lua
+-- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Terokkar Forest.lua
+-- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Zangarmarsh.lua
+
 -- World Events
 -- #IMPORT: 07 - Events\\The Ahn'Qiraj War Effort\\The Ahn'Qiraj War Effort.lua
 -- #IMPORT: 07 - Events\\The Opening of the Dark Portal\\The Opening of the Dark Portal.lua
