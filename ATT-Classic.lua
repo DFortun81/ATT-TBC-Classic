@@ -777,6 +777,13 @@ local function RawCloneData(data)
 	end
 	return clone;
 end
+local function RawCloneArray(arr)
+	local clone = {};
+	for i,value in ipairs(arr) do
+		tinsert(clone, value);
+	end
+	return clone;
+end
 app.IsComplete = function(o)
 	if o.total then return o.total == o.progress; end
 	if o.collectible then return o.collected; end
@@ -3530,25 +3537,44 @@ end,
 		end
 	end
 end,
-["LOREMASTER_OnUpdate"] = function(t)
+["LOREMASTER_OnUpdate"] = function(t, ...)
 	if t.collectible and t.parent then
-		if not t.quests then
+		local quests = t.quests;
+		if not quests then
+			-- Get the quests list from the zone itself.
 			local g = (t.sourceParent or t.parent).parent.g;
 			if g and #g > 0 then
 				for i,o in ipairs(g) do
 					if o.headerID == -17 then
-						t.quests = o.g;
+						quests = o.g;
 						break;
 					end
 				end
-				if not t.quests then return true; end
 			else
 				return true;
 			end
+			
+			-- If additional questIDs were manually included, let's do some extra work.
+			local extraQuestIDs = { ... };
+			if #extraQuestIDs > 0 then
+				-- Clone the list to prevent dirtying the quest list in the zone.
+				quests = RawCloneArray(quests);
+				for i,questID in ipairs(extraQuestIDs) do
+					local results = SearchForField("questID", questID);
+					if results and #results > 0 then
+						tinsert(quests, 1, results[1]);
+					end
+				end
+			end
 		end
+		return app.CommonAchievementHandlers.LOREMASTER_EXPLICIT_OnUpdate(t, quests);
+	end
+end,
+["LOREMASTER_EXPLICIT_OnUpdate"] = function(t, quests)
+	if quests or #quests < 1 then
 		local p = 0;
 		if app.FilterItemClass_RequireRaces(t) then
-			for i,o in ipairs(t.quests) do
+			for i,o in ipairs(quests) do
 				if app.FilterItemClass(o) then
 					if o.collected == 1 then
 						p = p + 1;
@@ -3557,7 +3583,10 @@ end,
 			end
 		end
 		t.p = p;
+		t.quests = quests;
 		t.SetAchievementCollected(t.achievementID, p >= t.rank);
+	else
+		return true;
 	end
 end,
 ["LOREMASTER_OnClick"] = function(row, button)
