@@ -1209,9 +1209,6 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
 			i(29718),	-- Pattern: Drums of Speed
 			i(29730),	-- Pattern: Earthen Netherscale Boots
 			i(29727),	-- Pattern: Gloves of the Living Touch (BoE version)
-			applyclassicphase(TBC_PHASE_FOUR, i(185922, {	-- Pattern: Greater Drums of War
-				["description"] = "Not actually sure where this is going to come from. Let us know if anything is discovered! Might be ZA.",
-			})),
 			i(29726),	-- Pattern: Hood of Primal Life
 			i(29729),	-- Pattern: Living Dragonscale Helm
 			i(29733),	-- Pattern: Netherdrake Gloves (BoE version)
@@ -2682,7 +2679,9 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		i(35874),	-- Whizzlespark's Portable Pet Mansion
 	}),
 	filter(200, {	-- Recipe
-		
+		applyclassicphase(TBC_PHASE_FOUR, i(185922, {	-- Pattern: Greater Drums of War
+			["description"] = "Not actually sure if this is in the game at all since the spell trained by this recipe can be learned at the trainer.",
+		})),
 	}),
 });
 -- #endif
