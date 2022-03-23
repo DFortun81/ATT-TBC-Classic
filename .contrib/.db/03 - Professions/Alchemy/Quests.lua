@@ -160,6 +160,7 @@ profession(ALCHEMY, {
 				10905,	-- Master of Potions (1/2)
 				--10907,	-- Master of Transmutation (1/2)
 			},
+			["isBreadcrumb"] = true,
 			["lvl"] = 68,
 		})),
 		applyclassicphase(TBC_PHASE_ONE, q(10899, {	-- Master of Transmutation (2/2)
