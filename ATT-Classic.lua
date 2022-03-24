@@ -3020,24 +3020,35 @@ local SCARAB_LORD = {
 local function AttachTooltipRawSearchResults(self, group)
 	if group then
 		-- If there was info text generated for this search result, then display that first.
-		if group.info then
-			local left, right;
-			for i,entry in ipairs(group.info) do
-				left = entry.left;
-				right = entry.right;
-				if right then
-					self:AddDoubleLine(left or " ", right);
-				elseif entry.r then
-					if entry.wrap then
-						self:AddLine(left, entry.r / 255, entry.g / 255, entry.b / 255, 1);
+		if group.info and #group.info > 0 then
+			local found = false;
+			local line = group.info[1].left;
+			local name = self:GetName() .. "TextLeft";
+			for i=self:NumLines(),1,-1 do
+				if _G[name..i]:GetText() == line then
+					found = true;
+					break;
+				end
+			end
+			if not found then
+				local left, right;
+				for i,entry in ipairs(group.info) do
+					left = entry.left;
+					right = entry.right;
+					if right then
+						self:AddDoubleLine(left or " ", right);
+					elseif entry.r then
+						if entry.wrap then
+							self:AddLine(left, entry.r / 255, entry.g / 255, entry.b / 255, 1);
+						else
+							self:AddLine(left, entry.r / 255, entry.g / 255, entry.b / 255);
+						end
 					else
-						self:AddLine(left, entry.r / 255, entry.g / 255, entry.b / 255);
-					end
-				else
-					if entry.wrap then
-						self:AddLine(left, nil, nil, nil, 1);
-					else
-						self:AddLine(left);
+						if entry.wrap then
+							self:AddLine(left, nil, nil, nil, 1);
+						else
+							self:AddLine(left);
+						end
 					end
 				end
 			end
@@ -8628,7 +8639,12 @@ local function RowOnEnter(self)
 				GameTooltip:SetCurrencyByID(reference.currencyID, 1);
 			else
 				local link = reference.link;
-				if link then pcall(GameTooltip.SetHyperlink, GameTooltip, link); end
+				if link then
+					pcall(GameTooltip.SetHyperlink, GameTooltip, link);
+					if reference.spellID and GetRelativeValue(reference, "requireSkill") == 333 then
+						AttachTooltipSearchResults(GameTooltip, "spellID:" .. reference.spellID, SearchForField, "spellID", reference.spellID);
+					end
+				end
 			end
 		end
 		
@@ -8839,14 +8855,14 @@ local function RowOnEnter(self)
 			end
 			if reference.rwp then
 				local found = false;
-				local rwp = "|CFFFFAAAAThis gets removed in patch " .. reference.rwp .. "|r";
+				local rwp = "This gets removed in patch " .. reference.rwp;
 				for i=1,GameTooltip:NumLines() do
 					if _G["GameTooltipTextLeft"..i]:GetText() == rwp then
 						found = true;
 						break;
 					end
 				end
-				if not found then GameTooltip:AddLine(rwp, 1, 1, 1, 1); end
+				if not found then GameTooltip:AddLine(rwp, HexToARGB("FFFFAAAA")); end
 			end
 			if reference.questID and not reference.objectiveID then
 				local objectified = false;

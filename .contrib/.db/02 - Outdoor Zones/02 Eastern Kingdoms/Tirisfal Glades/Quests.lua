@@ -356,7 +356,7 @@ _.Zones =
 				}),
 				q(409, {	-- Proving Allegiance
 					["qg"] = 1497,	-- Gunther Arcanus
-					["sourceQuest"]= 366,	-- Return the Book
+					["sourceQuest"] = 366,	-- Return the Book
 					["coord"] = { 68.2, 42, TIRISFAL_GLADES },
 					["races"] = HORDE_ONLY,
 					["cost"] = {
