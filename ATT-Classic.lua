@@ -1252,6 +1252,7 @@ subroutines = {
 	end,
 };
 ResolveSymbolicLink = function(o)
+	if o.resolved then return o.resolved; end
 	if o and o.sym then
 		local searchResults, finalized = {}, {};
 		for j,sym in ipairs(o.sym) do
@@ -1495,6 +1496,30 @@ ResolveSymbolicLink = function(o)
 				else
 					print("Could not find subroutine", sym[2]);
 				end
+			elseif cmd == "achievement_criteria" then
+				-- Instruction to select the criteria provided by the achievement this is attached to. (maybe build this into achievements?)
+				if GetAchievementNumCriteria then
+					local achievementID = o.achievementID;
+					local cache;
+					for criteriaID=1,GetAchievementNumCriteria(achievementID),1 do
+						local criteriaString, criteriaType, completed, quantity, reqQuantity, charName, flags, assetID, quantityString = GetAchievementCriteriaInfo(achievementID, criteriaID);
+						if criteriaType == 27 then
+							cache = app.SearchForField("questID", assetID);
+						else
+							print("Unhandled Criteria Type", criteriaType);
+						end
+						if cache then
+							local uniques = {};
+							MergeObjects(uniques, cache);
+							for i,o in ipairs(uniques) do
+								o.g = nil;
+								app.CacheFields(o);
+								o.achievementID = achievementID;
+								tinsert(searchResults, app.CreateAchievementCriteria(criteriaID, o));
+							end
+						end
+					end
+				end
 			end
 		end
 		
@@ -1508,6 +1533,7 @@ ResolveSymbolicLink = function(o)
 		-- If we had any finalized search results, then return it.
 		if #finalized > 0 then
 			-- print("Symbolic Link for ", o.key, " ", o[o.key], " contains ", #finalized, " values after filtering.");
+			o.resolved = finalized;
 			return finalized;
 		else
 			-- print("Symbolic Link for ", o.key, " ", o[o.key], " contained no values after filtering.");
@@ -2805,6 +2831,14 @@ local function AddTomTomWaypoint(group, auto)
 				AddTomTomWaypoint(subgroup, auto);
 			end
 		end
+		if group.sym then
+			local searchResults = ResolveSymbolicLink(group);
+			if searchResults then
+				for i,subgroup in ipairs(searchResults) do
+					AddTomTomWaypoint(subgroup, auto);
+				end
+			end
+		end
 	end
 end
 local function OpenMainList()
@@ -3325,7 +3359,8 @@ local fields = {
 			end
 			t.SetAchievementCollected(t.achievementID, collected);
 		end
-	end
+	end,
+	["OnUpdate"] = function(t) ResolveSymbolicLink(t); end,
 };
 app.BaseAchievement = app.BaseObjectFields(fields);
 
