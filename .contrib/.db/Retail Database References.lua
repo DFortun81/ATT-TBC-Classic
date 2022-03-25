@@ -80,6 +80,21 @@
 -- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Terokkar Forest.lua
 -- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Zangarmarsh.lua
 
+-- Holidays
+-- #IMPORT: 21 - Holidays\\07 - Brewfest\\Brewfest.lua
+-- #IMPORT: 21 - Holidays\\04 - Children's Week\\Children's Week.lua
+-- #IMPORT: 21 - Holidays\\10 - Day of the Dead\\Day of the Dead.lua
+-- #IMPORT: 21 - Holidays\\12 - Feast of Winter Veil\\Feast of Winter Veil.lua
+-- #IMPORT: 21 - Holidays\\09 - Hallow's End\\Hallow's End.lua
+-- #IMPORT: 21 - Holidays\\08 - Harvest Festival\\Harvest Festival.lua
+-- #IMPORT: 21 - Holidays\\02 - Love is in the Air\\Love is in the Air.lua
+-- #IMPORT: 21 - Holidays\\01 - Lunar Festival\\Lunar Festival.lua
+-- #IMPORT: 21 - Holidays\\05 - Midsummer Fire Festival\\Midsummer Fire Festival.lua
+-- #IMPORT: 21 - Holidays\\03 - Noblegarden\\Noblegarden.lua
+-- #IMPORT: 21 - Holidays\\11 - Pilgrim's Bounty\\Pilgrim's Bounty.lua
+-- #IMPORT: 21 - Holidays\\06 Pirates' Day.lua
+-- #IMPORT: 21 - Holidays\\00b - Stranglethorn Fishing Extravaganza\\Stranglethorn Fishing Extravaganza.lua
+
 -- World Events
 -- #IMPORT: 07 - Events\\The Ahn'Qiraj War Effort\\The Ahn'Qiraj War Effort.lua
 -- #IMPORT: 07 - Events\\The Opening of the Dark Portal\\The Opening of the Dark Portal.lua

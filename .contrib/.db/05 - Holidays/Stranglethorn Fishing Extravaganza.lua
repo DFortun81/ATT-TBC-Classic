@@ -1,1 +1,0 @@
--- #IMPORT: 21 - Holidays\\00b - Stranglethorn Fishing Extravaganza\\Stranglethorn Fishing Extravaganza.lua

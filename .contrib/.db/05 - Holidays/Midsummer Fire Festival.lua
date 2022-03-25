@@ -1,1 +1,0 @@
--- #IMPORT: 21 - Holidays\\05 - Midsummer Fire Festival\\Midsummer Fire Festival.lua

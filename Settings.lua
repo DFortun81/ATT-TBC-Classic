@@ -242,6 +242,25 @@ settings.Initialize = function(self)
 		app:GetWindow("WorldQuests"):Show();
 	end
 end
+settings.CheckSeasonalDate = function(self, u, startMonth, startDay, endMonth, endDay)
+	local today = date("*t");
+	local now, start, ends = time({day=today.day,month=today.month,year=today.year,hour=0,min=0,sec=0});
+	if startMonth <= endMonth then
+		start = time({day=startDay,month=startMonth,year=today.year,hour=0,min=0,sec=0});
+		ends = time({day=endDay,month=endMonth,year=today.year,hour=0,min=0,sec=0});
+	else
+		local year = today.year;
+		if today.month < startMonth then year = year - 1; end
+		start = time({day=startDay,month=startMonth,year=year,hour=0,min=0,sec=0});
+		ends = time({day=endDay,month=endMonth,year=year + 1,hour=0,min=0,sec=0});
+	end
+	
+	local active = (now >= start and now <= ends);
+	UnobtainableSettingsBase.__index[u] = active;
+end
+settings.CheckWeekDay = function(self, u, weekDay)
+	UnobtainableSettingsBase.__index[u] = date("*t").wday == weekDay;
+end
 settings.Get = function(self, setting)
 	return ATTClassicSettings.General[setting];
 end
@@ -1539,7 +1558,17 @@ tab.OnRefresh = function(self)
 	end
 end;
 local UnobtainableFilterOnClick = function(self)
-	settings:SetUnobtainableFilter(self.u, self:GetChecked());
+	local checked = self:GetChecked();
+	if checked then
+		-- If the phase is active, fall through to the base setting.
+		if UnobtainableSettingsBase.__index[self.u] then
+			settings:SetUnobtainableFilter(self.u, nil);
+		else
+			settings:SetUnobtainableFilter(self.u, true);
+		end
+	else
+		settings:SetUnobtainableFilter(self.u, false);
+	end
 end;
 local UnobtainableOnRefresh = function(self)
 	if settings:Get("DebugMode") then
@@ -1555,6 +1584,11 @@ local UnobtainableOnRefresh = function(self)
 		else
 			self:Enable();
 			self:SetAlpha(1);
+			if UnobtainableSettingsBase.__index[self.u] then
+				self.Text:SetTextColor(0.6, 0.7, 1);
+			else
+				self.Text:SetTextColor(1, 1, 1);
+			end
 		end
 	end
 end;

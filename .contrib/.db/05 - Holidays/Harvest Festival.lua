@@ -1,1 +1,0 @@
--- #IMPORT: 21 - Holidays\\08 - Harvest Festival\\Harvest Festival.lua
