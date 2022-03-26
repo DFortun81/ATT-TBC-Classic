@@ -2798,189 +2798,7 @@ local function UpdateSearchResults(searchResults)
 end
 app.SearchForLink = SearchForLink;
 
--- Map Information Lib
-local function AddTomTomWaypoint(group, auto)
-	if TomTom and (group.visible or (group.objectiveID and not group.saved)) then
-		if group.coords or group.coord then
-			local opt = {
-				title = group.text or group.link,
-				persistent = nil,
-				minimap = true,
-				world = true
-			};
-			if group.title then opt.title = opt.title .. "\n" .. group.title; end
-			--if group.explorationID then opt.title = opt.title .. "\nExploration ID " .. group.explorationID; end
-			local defaultMapID = GetRelativeMap(group, app.CurrentMapID);
-			local displayID = GetDisplayID(group);
-			if displayID then
-				opt.minimap_displayID = displayID;
-				opt.worldmap_displayID = displayID;
-			end
-			if group.icon then
-				opt.minimap_icon = group.icon;
-				opt.worldmap_icon = group.icon;
-			end
-			if group.coords then
-				for i, coord in ipairs(group.coords) do
-					TomTom:AddWaypoint(coord[3] or defaultMapID, coord[1] / 100, coord[2] / 100, opt);
-				end
-			end
-			if group.coord then TomTom:AddWaypoint(group.coord[3] or defaultMapID, group.coord[1] / 100, group.coord[2] / 100, opt); end
-		end
-		if group.g then
-			for i,subgroup in ipairs(group.g) do
-				AddTomTomWaypoint(subgroup, auto);
-			end
-		end
-		if group.sym then
-			local searchResults = ResolveSymbolicLink(group);
-			if searchResults then
-				for i,subgroup in ipairs(searchResults) do
-					AddTomTomWaypoint(subgroup, auto);
-				end
-			end
-		end
-	end
-end
-local function OpenMainList()
-	app:OpenWindow("Prime");
-end
-local function RefreshSaves()
-	local waitTimer = 30;
-	while waitTimer > 0 do
-		coroutine.yield();
-		waitTimer = waitTimer - 1;
-	end
-	
-	-- While the player is in combat, wait for combat to end.
-	while InCombatLockdown() do coroutine.yield(); end
-	
-	-- While the player is still logging in, wait.
-	while not app.GUID do coroutine.yield(); end
-	
-	-- Cache the lockouts across your account.
-	local serverTime = GetServerTime();
-	
-	-- Check to make sure that the old instance data has expired
-	for guid,character in pairs(ATTCharacterData) do
-		local locks = character.Lockouts;
-		if locks then
-			for name,lock in pairs(locks) do
-				if serverTime >= lock.reset then
-					locks[name] = nil;
-				end
-			end
-		end
-	end
-	
-	-- While the player is still waiting for information, wait.
-	-- NOTE: Usually, this is only 1 wait.
-	local counter = 0;
-	while GetNumSavedInstances() < 1 do
-		coroutine.yield();
-		counter = counter + 1;
-		if counter > 600 then
-			app.refreshingSaves = false;
-			coroutine.yield(false);
-		end
-	end
-	
-	-- Update Saved Instances
-	local converter = L["SAVED_TO_DJ_INSTANCES"];
-	local myLockouts = app.CurrentCharacter.Lockouts;
-	for instanceIter=1,GetNumSavedInstances() do
-		local name, id, reset, difficulty, locked, _, _, isRaid, _, _, numEncounters = GetSavedInstanceInfo(instanceIter);
-		if locked then
-			-- Update the name of the instance and cache the lock for this instance
-			name = converter[name] or name;
-			reset = serverTime + reset;
-			local lock = myLockouts[name];
-			if not lock then
-				lock = { ["id"] = id, ["reset"] = reset, ["encounters"] = {}};
-				myLockouts[name] = lock;
-			end
-			
-			-- Check Encounter locks
-			for encounterIter=1,numEncounters do
-				local name, _, isKilled = GetSavedInstanceEncounterInfo(instanceIter, encounterIter);
-				if not lock.encounters[encounterIter] then
-					table.insert(lock.encounters, { ["name"] = name, ["isKilled"] = isKilled });
-				elseif isKilled then
-					lock.encounters[encounterIter].isKilled = true;
-				end
-			end
-		end
-	end
-	
-	-- Mark that we're done now.
-	app:UpdateWindows(nil, true);
-end
-local function RefreshSkills()
-	-- Store Skill Data
-	local activeSkills = app.CurrentCharacter.ActiveSkills;
-	wipe(activeSkills);
-	rawset(app.SpellNameToSpellID, 0, nil);
-	app.GetSpellName(0);
-	for index=GetNumSkillLines(),2,-1 do
-		local skillName, header, isExpanded, skillRank, numTempPoints, skillModifier,
-			skillMaxRank, isAbandonable, stepCost, rankCost, minLevel, skillCostType,
-			skillDescription = GetSkillLineInfo(index);
-		if not header then
-			local spellID = app.SpellNameToSpellID[skillName];
-			if spellID then
-				local spellName = GetSpellInfo(spellID);
-				for _,s in pairs(app.SkillIDToSpellID) do
-					if GetSpellInfo(s) == spellName then
-						spellID = s;
-						break;
-					end
-				end
-				activeSkills[spellID] = { skillRank, skillMaxRank };
-			else
-				-- print(skillName, header, isExpanded, skillRank, numTempPoints, skillModifier, skillMaxRank, isAbandonable, stepCost, rankCost, minLevel, skillCostType, skillDescription);
-			end
-		end
-	end
-	
-	-- Hunter Only
-	if app.ClassIndex == 3 then
-		activeSkills[5149] = { 1, 1 };
-	end
-	
-	-- Clone the data for the specializations.
-	for specID,spellID in pairs(app.SpecializationSpellIDs) do
-		local baseSpell = activeSkills[spellID];
-		if baseSpell and (app.CurrentCharacter.Spells[specID] or IsSpellKnown(specID)) then
-			activeSkills[specID] = baseSpell;
-		end
-	end
-end
-local function RefreshCollections()
-	StartCoroutine("RefreshingCollections", function()
-		while InCombatLockdown() do coroutine.yield(); end
-		app.print("Refreshing collection...");
-		app.events.QUEST_LOG_UPDATE();
-		
-		-- Wait a frame before harvesting item collection status.
-		coroutine.yield();
-		
-		RefreshSkills();
-		
-		-- Harvest Item Collections that are used by the addon.
-		app:GetDataCache();
-		
-		-- Refresh the Collection Windows!
-		app:RefreshData(false, false, true);
-		
-		-- Report success.
-		app.print("Done refreshing collection.");
-	end);
-end
-app.ToggleMainList = function()
-	app:ToggleWindow("Prime");
-end
-app.RefreshCollections = RefreshCollections;
-app.OpenMainList = OpenMainList;
+
 
 -- Tooltip Functions
 local EXTERMINATOR = {
@@ -3220,6 +3038,338 @@ end
 local function ClearTooltip(self)
 	self.ATTCProcessing = nil;
 end
+
+-- Map Information Lib
+(function()
+local __TomTomWaypointCacheIndexY = { __index = function(t, y)
+	local o = {};
+	rawset(t, y, o);
+	return o;
+end };
+local __TomTomWaypointCacheIndexX = { __index = function(t, x)
+	local o = setmetatable({}, __TomTomWaypointCacheIndexY);
+	rawset(t, x, o);
+	return o;
+end };
+local __TomTomWaypointCache, __TomTomWaypointFirst = setmetatable({}, { __index = function(t, mapID)
+	local o = setmetatable({}, __TomTomWaypointCacheIndexX);
+	rawset(t, mapID, o);
+	return o;
+end });
+local function AddTomTomWaypointCache(coord, group)
+	local mapID = coord[3];
+	if mapID then
+		__TomTomWaypointCache[mapID][math.floor(coord[1] * 10)][math.floor(coord[2] * 10)][group.key .. ":" .. group[group.key]] = group;
+	else
+		print("Missing mapID for", group.text, coord[1], coord[2], mapID);
+	end
+end
+local function AddTomTomWaypointInternal(group, depth)
+	if group.visible then
+		if group.plotting then return false; end
+		group.plotting = true;
+		if group.g then
+			depth = depth + 1;
+			for _,o in ipairs(group.g) do
+				AddTomTomWaypointInternal(o, depth);
+			end
+			depth = depth - 1;
+		end
+		
+		local searchResults = ResolveSymbolicLink(group);
+		if searchResults then
+			depth = depth + 1;
+			for _,o in ipairs(searchResults) do
+				AddTomTomWaypointInternal(o, depth);
+			end
+			depth = depth - 1;
+		end
+		group.plotting = nil;
+		
+		if TomTom then
+			if (depth == 0 and not __TomTomWaypointFirst) or not group.saved then
+				if group.coords or group.coord then
+					__TomTomWaypointFirst = false;
+					if group.coords then
+						for _,coord in ipairs(group.coords) do
+							AddTomTomWaypointCache(coord, group);
+						end
+					end
+					if group.coord then AddTomTomWaypointCache(coord, group); end
+				end
+			end
+		elseif C_SuperTrack then
+			if depth == 0 or __TomTomWaypointFirst then
+				local coord = group.coords and group.coords[1] or group.coord;
+				if coord then
+					__TomTomWaypointFirst = false;
+					C_SuperTrack.SetSuperTrackedUserWaypoint(false);
+					C_Map.ClearUserWaypoint();
+					C_Map.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(coord[3] or defaultMapID,coord[1]/100,coord[2]/100));
+					C_SuperTrack.SetSuperTrackedUserWaypoint(true);
+				end
+			end
+		end
+	end
+end
+AddTomTomWaypoint = function(group)
+	if TomTom or C_SuperTrack then
+		__TomTomWaypointFirst = true;
+		wipe(__TomTomWaypointCache);
+		AddTomTomWaypointInternal(group, 0);
+		if TomTom then
+			local xnormal;
+			for mapID,c in pairs(__TomTomWaypointCache) do
+				for x,d in pairs(c) do
+					xnormal = x / 1000;
+					for y,datas in pairs(d) do
+						-- Determine the Root
+						local creatureID, objectID;
+						for key,group in pairs(datas) do
+							if group.npcID or group.creatureID then
+								creatureID = group.npcID or group.creatureID;
+							elseif group.objectID then
+								objectID = group.objectID;
+							elseif group.providers then
+								for i,provider in ipairs(group.providers) do
+									if provider[1] == "n" then
+										if provider[2] > 0 then
+											creatureID = provider[2];
+										end
+									elseif provider[1] == "o" then
+										if provider[2] > 0 then
+											objectID = provider[2];
+										end
+									end
+								end
+							end
+							if group.qgs then
+								local count = #group.qgs;
+								if count > 1 and group.coords and #group.coords == count then
+									for i=count,1,-1 do
+										local coord = group.coords[i];
+										if coord[3] == mapID and math.floor(coord[1] * 10) == x and math.floor(coord[2] * 10) == y then
+											creatureID = group.qgs[i];
+											break;
+										end
+									end
+									if not creatureID then
+										creatureID = group.qgs[1];
+									end
+								else
+									creatureID = group.qgs[1];
+								end
+							end
+						end
+						
+						local opt = { from = "ATT", persistent = false };
+						local g, root = {};
+						if creatureID then
+							root = app.CreateNPC(creatureID);
+						elseif objectID then
+							root = app.CreateObject(objectID);
+						end
+						if root then
+							for key,group in pairs(datas) do
+								if key == root.key then
+									for key,value in pairs(groups) do
+										root[key] = value;
+									end
+								else
+									MergeObject(g, CreateObject(group));
+								end
+							end
+							root.g = g;
+						else
+							for key,group in pairs(datas) do
+								MergeObject(g, CreateObject(group));
+							end
+							root = g[1];
+							table.remove(g, 1);
+							if #g > 0 then root.g = g; end
+						end
+						if root.g then
+							app.UpdateGroups(root, root.g);
+						else
+							app.UpdateGroups({}, { root });
+						end
+						opt.title = root.text or RETRIEVING_DATA;
+						local displayID = GetDisplayID(root);
+						if displayID then
+							opt.minimap_displayID = displayID;
+							opt.worldmap_displayID = displayID;
+						end
+						if root.icon then
+							opt.minimap_icon = root.icon;
+							opt.worldmap_icon = root.icon;
+						end
+						
+						local callbacks = TomTom:DefaultCallbacks();
+						callbacks.minimap.tooltip_update = Nil;
+						callbacks.minimap.tooltip_show = function(event, tooltip, uid, dist)
+							tooltip:AddLine(root.text);
+							local key = root.key;
+							if key == "npcID" then key = "creatureID"; end
+							if root.title and not root.explorationID then tooltip:AddLine(root.title); end
+							AttachTooltipSearchResults(tooltip, key .. ":" .. root[root.key], SearchForField, key, root[root.key]);
+							tooltip:Show();
+						end
+						callbacks.world.tooltip_update = Nil;
+						callbacks.world.tooltip_show = callbacks.minimap.tooltip_show;
+						opt.callbacks = callbacks;
+						TomTom:AddWaypoint(mapID, xnormal, y / 1000, opt);
+					end
+				end
+			end
+			TomTom:SetClosestWaypoint();
+		end
+		if C_SuperTrack and group.questID and C_QuestLog.IsOnQuest(group.questID) then
+			C_SuperTrack.SetSuperTrackedQuestID(group.questID);
+		end
+	else
+		app.print("You must have TomTom installed to plot coordinates.");
+	end
+end
+end)();
+local function OpenMainList()
+	app:OpenWindow("Prime");
+end
+local function RefreshSaves()
+	local waitTimer = 30;
+	while waitTimer > 0 do
+		coroutine.yield();
+		waitTimer = waitTimer - 1;
+	end
+	
+	-- While the player is in combat, wait for combat to end.
+	while InCombatLockdown() do coroutine.yield(); end
+	
+	-- While the player is still logging in, wait.
+	while not app.GUID do coroutine.yield(); end
+	
+	-- Cache the lockouts across your account.
+	local serverTime = GetServerTime();
+	
+	-- Check to make sure that the old instance data has expired
+	for guid,character in pairs(ATTCharacterData) do
+		local locks = character.Lockouts;
+		if locks then
+			for name,lock in pairs(locks) do
+				if serverTime >= lock.reset then
+					locks[name] = nil;
+				end
+			end
+		end
+	end
+	
+	-- While the player is still waiting for information, wait.
+	-- NOTE: Usually, this is only 1 wait.
+	local counter = 0;
+	while GetNumSavedInstances() < 1 do
+		coroutine.yield();
+		counter = counter + 1;
+		if counter > 600 then
+			app.refreshingSaves = false;
+			coroutine.yield(false);
+		end
+	end
+	
+	-- Update Saved Instances
+	local converter = L["SAVED_TO_DJ_INSTANCES"];
+	local myLockouts = app.CurrentCharacter.Lockouts;
+	for instanceIter=1,GetNumSavedInstances() do
+		local name, id, reset, difficulty, locked, _, _, isRaid, _, _, numEncounters = GetSavedInstanceInfo(instanceIter);
+		if locked then
+			-- Update the name of the instance and cache the lock for this instance
+			name = converter[name] or name;
+			reset = serverTime + reset;
+			local lock = myLockouts[name];
+			if not lock then
+				lock = { ["id"] = id, ["reset"] = reset, ["encounters"] = {}};
+				myLockouts[name] = lock;
+			end
+			
+			-- Check Encounter locks
+			for encounterIter=1,numEncounters do
+				local name, _, isKilled = GetSavedInstanceEncounterInfo(instanceIter, encounterIter);
+				if not lock.encounters[encounterIter] then
+					table.insert(lock.encounters, { ["name"] = name, ["isKilled"] = isKilled });
+				elseif isKilled then
+					lock.encounters[encounterIter].isKilled = true;
+				end
+			end
+		end
+	end
+	
+	-- Mark that we're done now.
+	app:UpdateWindows(nil, true);
+end
+local function RefreshSkills()
+	-- Store Skill Data
+	local activeSkills = app.CurrentCharacter.ActiveSkills;
+	wipe(activeSkills);
+	rawset(app.SpellNameToSpellID, 0, nil);
+	app.GetSpellName(0);
+	for index=GetNumSkillLines(),2,-1 do
+		local skillName, header, isExpanded, skillRank, numTempPoints, skillModifier,
+			skillMaxRank, isAbandonable, stepCost, rankCost, minLevel, skillCostType,
+			skillDescription = GetSkillLineInfo(index);
+		if not header then
+			local spellID = app.SpellNameToSpellID[skillName];
+			if spellID then
+				local spellName = GetSpellInfo(spellID);
+				for _,s in pairs(app.SkillIDToSpellID) do
+					if GetSpellInfo(s) == spellName then
+						spellID = s;
+						break;
+					end
+				end
+				activeSkills[spellID] = { skillRank, skillMaxRank };
+			else
+				-- print(skillName, header, isExpanded, skillRank, numTempPoints, skillModifier, skillMaxRank, isAbandonable, stepCost, rankCost, minLevel, skillCostType, skillDescription);
+			end
+		end
+	end
+	
+	-- Hunter Only
+	if app.ClassIndex == 3 then
+		activeSkills[5149] = { 1, 1 };
+	end
+	
+	-- Clone the data for the specializations.
+	for specID,spellID in pairs(app.SpecializationSpellIDs) do
+		local baseSpell = activeSkills[spellID];
+		if baseSpell and (app.CurrentCharacter.Spells[specID] or IsSpellKnown(specID)) then
+			activeSkills[specID] = baseSpell;
+		end
+	end
+end
+local function RefreshCollections()
+	StartCoroutine("RefreshingCollections", function()
+		while InCombatLockdown() do coroutine.yield(); end
+		app.print("Refreshing collection...");
+		app.events.QUEST_LOG_UPDATE();
+		
+		-- Wait a frame before harvesting item collection status.
+		coroutine.yield();
+		
+		RefreshSkills();
+		
+		-- Harvest Item Collections that are used by the addon.
+		app:GetDataCache();
+		
+		-- Refresh the Collection Windows!
+		app:RefreshData(false, false, true);
+		
+		-- Report success.
+		app.print("Done refreshing collection.");
+	end);
+end
+app.ToggleMainList = function()
+	app:ToggleWindow("Prime");
+end
+app.RefreshCollections = RefreshCollections;
+app.OpenMainList = OpenMainList;
 
 -- Tooltip Hooks
 (function()
