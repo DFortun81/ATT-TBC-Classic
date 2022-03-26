@@ -2307,6 +2307,9 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 		-- If the user wants to show the progress of this search result, do so.
 		if app.Settings:GetTooltipSetting("Progress") and (not group.spellID or #info > 0) then
 			group.collectionText = (app.Settings:GetTooltipSetting("ShowIconOnly") and GetProgressTextForRow or GetProgressTextForTooltip)(group);
+			
+			-- add the progress as a new line for encounter tooltips instead of using right text since it can overlap the NPC name
+			if group.encounterID then tinsert(info, 1, { left = "Progress", right = group.collectionText }); end
 		end
 		
 		-- If there was any informational text generated, then attach that info.
@@ -2325,7 +2328,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 				end
 			end
 			
-			group.info = uniques;
+			group.tooltipInfo = uniques;
 			for i,item in ipairs(uniques) do
 				if item.color then item.a, item.r, item.g, item.b = HexToARGB(item.color); end
 			end
@@ -2870,13 +2873,13 @@ local SCARAB_LORD = {
 	["Player-4372-000B3C4D"] = true,	-- Congelatore
 	["Player-4372-00A64EA0"] = true,	-- Macpayn
 };
-local function AttachTooltipRawSearchResults(self, group, lineNumber)
+local function AttachTooltipRawSearchResults(self, lineNumber, group)
 	if group then
 		-- If there was info text generated for this search result, then display that first.
-		if group.info and #group.info > 0 then
+		if group.tooltipInfo and #group.tooltipInfo > 0 then
 			local left, right;
 			local name = self:GetName() .. "TextLeft";
-			for i,entry in ipairs(group.info) do
+			for i,entry in ipairs(group.tooltipInfo) do
 				local found = false;
 				left = entry.left;
 				for i=self:NumLines(),1,-1 do
@@ -2907,7 +2910,9 @@ local function AttachTooltipRawSearchResults(self, group, lineNumber)
 		end
 		
 		-- If the user has Show Collection Progress turned on.
-		if group.collectionText and self:NumLines() > 0 then
+		if group.encounterID then
+			self:Show();
+		elseif group.collectionText and self:NumLines() > 0 then
 			local rightSide = _G[self:GetName() .. "TextRight" .. (lineNumber or 1)];
 			if rightSide then
 				rightSide:SetText(group.collectionText);
@@ -2916,8 +2921,8 @@ local function AttachTooltipRawSearchResults(self, group, lineNumber)
 		end
 	end
 end
-local function AttachTooltipSearchResults(self, search, method, paramA, paramB, lineNumber)
-	AttachTooltipRawSearchResults(self, GetCachedSearchResults(search, method, paramA, paramB), lineNumber);
+local function AttachTooltipSearchResults(self, lineNumber, search, method, ...)
+	AttachTooltipRawSearchResults(self, lineNumber, GetCachedSearchResults(search, method, ...));
 end
 local function AttachTooltip(self)
 	if not self.ATTCProcessing then
@@ -2994,7 +2999,7 @@ local function AttachTooltip(self)
 							end
 						elseif type == "Creature" or type == "Vehicle" then
 							if app.Settings:GetTooltipSetting("creatureID") then self:AddDoubleLine(L["CREATURE_ID"], tostring(npcID)); end
-							AttachTooltipSearchResults(self, "creatureID:" .. npcID, SearchForField, "creatureID", tonumber(npcID));
+							AttachTooltipSearchResults(self, 1, "creatureID:" .. npcID, SearchForField, "creatureID", tonumber(npcID));
 						end
 						return true;
 					end
@@ -3003,7 +3008,7 @@ local function AttachTooltip(self)
 				-- Does the tooltip have a spell? [Mount Journal, Action Bars, etc]
 				local spellID = select(2, self:GetSpell());
 				if spellID then
-					AttachTooltipSearchResults(self, "spellID:" .. spellID, SearchForField, "spellID", spellID);
+					AttachTooltipSearchResults(self, 1, "spellID:" .. spellID, SearchForField, "spellID", spellID);
 					self:Show();
 					if owner and owner.ActiveTexture then
 						self.ATTCProcessing = nil;
@@ -3013,7 +3018,7 @@ local function AttachTooltip(self)
 				
 				-- Does the tooltip have an itemlink?
 				local link = select(2, self:GetItem());
-				if link then AttachTooltipSearchResults(self, link, SearchForLink, link); end
+				if link then AttachTooltipSearchResults(self, 1, link, SearchForLink, link); end
 				
 				-- If the owner has a ref, it's an ATT row. Ignore it.
 				if owner and owner.ref then return true; end
@@ -3224,7 +3229,7 @@ AddTomTomWaypoint = function(group)
 										tooltip:AddLine("Criteria for " .. GetAchievementLink(group.achievementID));
 									else
 										if key == "npcID" then key = "creatureID"; end
-										AttachTooltipSearchResults(tooltip, key .. ":" .. o[o.key], SearchForField, key, o[o.key], line);
+										AttachTooltipSearchResults(tooltip, 1, key .. ":" .. o[o.key], SearchForField, key, o[o.key], line);
 									end
 								end
 								tooltip:Show();
@@ -3395,7 +3400,7 @@ app.OpenMainList = OpenMainList;
 		GameTooltip_SetCurrencyByID(self, currencyID, count);
 		
 		if (not InCombatLockdown() or app.Settings:GetTooltipSetting("DisplayInCombat")) and app.Settings:GetTooltipSetting("Enabled") then
-			AttachTooltipSearchResults(self, "currencyID:" .. currencyID, SearchForField, "currencyID", currencyID);
+			AttachTooltipSearchResults(self, 1, "currencyID:" .. currencyID, SearchForField, "currencyID", currencyID);
 			if app.Settings:GetTooltipSetting("currencyID") then self:AddDoubleLine(L["CURRENCY_ID"], tostring(currencyID)); end
 			self:Show();
 		end
@@ -3416,7 +3421,7 @@ app.OpenMainList = OpenMainList;
 					for currencyID, _ in pairs(cache) do
 						-- Compare the name of the currency vs the name of the token
 						if select(1, GetCurrencyInfo(currencyID)) == name then
-							AttachTooltipSearchResults(self, "currencyID:" .. currencyID, SearchForField, "currencyID", currencyID);
+							AttachTooltipSearchResults(self, 1, "currencyID:" .. currencyID, SearchForField, "currencyID", currencyID);
 							if app.Settings:GetTooltipSetting("currencyID") then self:AddDoubleLine(L["CURRENCY_ID"], tostring(currencyID)); end
 							self:Show();
 							break;
@@ -8835,7 +8840,7 @@ local function RowOnEnter(self)
 						local reason = L["UNOBTAINABLE_ITEM_REASONS"][reference.u];
 						if reason and (not reason[5] or select(4, GetBuildInfo()) < reason[5]) then GameTooltip:AddLine(reason[2], 1, 1, 1, true); end
 					end
-					AttachTooltipSearchResults(GameTooltip, "itemID:" .. reference.itemID, SearchForField, "itemID", reference.itemID);
+					AttachTooltipSearchResults(GameTooltip, 1, "itemID:" .. reference.itemID, SearchForField, "itemID", reference.itemID);
 				end
 			elseif reference.currencyID then
 				GameTooltip:SetCurrencyByID(reference.currencyID, 1);
@@ -8844,7 +8849,7 @@ local function RowOnEnter(self)
 				if link then
 					pcall(GameTooltip.SetHyperlink, GameTooltip, link);
 					if reference.spellID and GetRelativeValue(reference, "requireSkill") == 333 then
-						AttachTooltipSearchResults(GameTooltip, "spellID:" .. reference.spellID, SearchForField, "spellID", reference.spellID);
+						AttachTooltipSearchResults(GameTooltip, 1, "spellID:" .. reference.spellID, SearchForField, "spellID", reference.spellID);
 					end
 				end
 			end
@@ -9101,7 +9106,7 @@ local function RowOnEnter(self)
 		end
 		if reference.titleID then
 			if app.Settings:GetTooltipSetting("titleID") then GameTooltip:AddDoubleLine(L["TITLE_ID"], tostring(reference.titleID)); end
-			AttachTooltipSearchResults(GameTooltip, "titleID:" .. reference.titleID, SearchForField, "titleID", reference.titleID);
+			AttachTooltipSearchResults(GameTooltip, 1, "titleID:" .. reference.titleID, SearchForField, "titleID", reference.titleID);
 		end
 		if reference.questID and app.Settings:GetTooltipSetting("questID") then GameTooltip:AddDoubleLine(L["QUEST_ID"], tostring(reference.questID)); end
 		if reference.qgs and app.Settings:GetTooltipSetting("QuestGivers") then
