@@ -3160,6 +3160,23 @@ AddTomTomWaypoint = function(group)
 									creatureID = group.qgs[1];
 								end
 							end
+							if group.crs then
+								local count = #group.crs;
+								if count > 1 and group.coords and #group.coords == count then
+									for i=count,1,-1 do
+										local coord = group.coords[i];
+										if coord[3] == mapID and math.floor(coord[1] * 10) == x and math.floor(coord[2] * 10) == y then
+											creatureID = group.crs[i];
+											break;
+										end
+									end
+									if not creatureID then
+										creatureID = group.crs[1];
+									end
+								else
+									creatureID = group.crs[1];
+								end
+							end
 						end
 						
 						local opt = { from = "ATT", persistent = false };
