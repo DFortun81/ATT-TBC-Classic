@@ -2870,23 +2870,22 @@ local SCARAB_LORD = {
 	["Player-4372-000B3C4D"] = true,	-- Congelatore
 	["Player-4372-00A64EA0"] = true,	-- Macpayn
 };
-local function AttachTooltipRawSearchResults(self, group)
+local function AttachTooltipRawSearchResults(self, group, lineNumber)
 	if group then
 		-- If there was info text generated for this search result, then display that first.
 		if group.info and #group.info > 0 then
-			local found = false;
-			local line = group.info[1].left;
+			local left, right;
 			local name = self:GetName() .. "TextLeft";
-			for i=self:NumLines(),1,-1 do
-				if _G[name..i]:GetText() == line then
-					found = true;
-					break;
+			for i,entry in ipairs(group.info) do
+				local found = false;
+				left = entry.left;
+				for i=self:NumLines(),1,-1 do
+					if _G[name..i]:GetText() == left then
+						found = true;
+						break;
+					end
 				end
-			end
-			if not found then
-				local left, right;
-				for i,entry in ipairs(group.info) do
-					left = entry.left;
+				if not found then
 					right = entry.right;
 					if right then
 						self:AddDoubleLine(left or " ", right);
@@ -2909,7 +2908,7 @@ local function AttachTooltipRawSearchResults(self, group)
 		
 		-- If the user has Show Collection Progress turned on.
 		if group.collectionText and self:NumLines() > 0 then
-			local rightSide = _G[self:GetName() .. "TextRight1"];
+			local rightSide = _G[self:GetName() .. "TextRight" .. (lineNumber or 1)];
 			if rightSide then
 				rightSide:SetText(group.collectionText);
 				rightSide:Show();
@@ -2917,8 +2916,8 @@ local function AttachTooltipRawSearchResults(self, group)
 		end
 	end
 end
-local function AttachTooltipSearchResults(self, search, method, paramA, paramB, ...)
-	AttachTooltipRawSearchResults(self, GetCachedSearchResults(search, method, paramA, paramB, ...));
+local function AttachTooltipSearchResults(self, search, method, paramA, paramB, lineNumber)
+	AttachTooltipRawSearchResults(self, GetCachedSearchResults(search, method, paramA, paramB), lineNumber);
 end
 local function AttachTooltip(self)
 	if not self.ATTCProcessing then
@@ -3123,118 +3122,118 @@ AddTomTomWaypoint = function(group)
 				for x,d in pairs(c) do
 					xnormal = x / 1000;
 					for y,datas in pairs(d) do
-						-- Determine the Root
-						local creatureID, objectID;
+						-- Determine the Root and simplify NPC/Object data.
+						-- An NPC/Object can contain all of the other types by reference and don't need individual entries.
+						local root,rootByCreatureID,rootByObjectID = {},{},{};
 						for key,group in pairs(datas) do
+							local creatureID, objectID;
 							if group.npcID or group.creatureID then
 								creatureID = group.npcID or group.creatureID;
 							elseif group.objectID then
 								objectID = group.objectID;
-							elseif group.providers then
-								for i,provider in ipairs(group.providers) do
-									if provider[1] == "n" then
-										if provider[2] > 0 then
-											creatureID = provider[2];
-										end
-									elseif provider[1] == "o" then
-										if provider[2] > 0 then
-											objectID = provider[2];
+							else
+								if group.providers then
+									for i,provider in ipairs(group.providers) do
+										if provider[1] == "n" then
+											if provider[2] > 0 then
+												creatureID = provider[2];
+											end
+										elseif provider[1] == "o" then
+											if provider[2] > 0 then
+												objectID = provider[2];
+											end
 										end
 									end
 								end
-							end
-							if group.qgs then
-								local count = #group.qgs;
-								if count > 1 and group.coords and #group.coords == count then
-									for i=count,1,-1 do
-										local coord = group.coords[i];
-										if coord[3] == mapID and math.floor(coord[1] * 10) == x and math.floor(coord[2] * 10) == y then
-											creatureID = group.qgs[i];
-											break;
+								if group.qgs then
+									local count = #group.qgs;
+									if count > 1 and group.coords and #group.coords == count then
+										for i=count,1,-1 do
+											local coord = group.coords[i];
+											if coord[3] == mapID and math.floor(coord[1] * 10) == x and math.floor(coord[2] * 10) == y then
+												creatureID = group.qgs[i];
+												break;
+											end
 										end
-									end
-									if not creatureID then
+										if not creatureID then
+											creatureID = group.qgs[1];
+										end
+									else
 										creatureID = group.qgs[1];
 									end
-								else
-									creatureID = group.qgs[1];
 								end
-							end
-							if group.crs then
-								local count = #group.crs;
-								if count > 1 and group.coords and #group.coords == count then
-									for i=count,1,-1 do
-										local coord = group.coords[i];
-										if coord[3] == mapID and math.floor(coord[1] * 10) == x and math.floor(coord[2] * 10) == y then
-											creatureID = group.crs[i];
-											break;
+								if group.crs then
+									local count = #group.crs;
+									if count > 1 and group.coords and #group.coords == count then
+										for i=count,1,-1 do
+											local coord = group.coords[i];
+											if coord[3] == mapID and math.floor(coord[1] * 10) == x and math.floor(coord[2] * 10) == y then
+												creatureID = group.crs[i];
+												break;
+											end
 										end
-									end
-									if not creatureID then
+										if not creatureID then
+											creatureID = group.crs[1];
+										end
+									else
 										creatureID = group.crs[1];
 									end
-								else
-									creatureID = group.crs[1];
 								end
+							end
+							if creatureID then
+								if not rootByCreatureID[creatureID] then
+									rootByCreatureID[creatureID] = group;
+									tinsert(root, app.CreateNPC(creatureID));
+								end
+							elseif objectID then
+								if not rootByObjectID[objectID] then
+									rootByObjectID[objectID] = group;
+									tinsert(root, app.CreateObject(objectID));
+								end
+							else
+								tinsert(root, group);
 							end
 						end
 						
-						local opt = { from = "ATT", persistent = false };
-						local g, root = {};
-						if creatureID then
-							root = app.CreateNPC(creatureID);
-						elseif objectID then
-							root = app.CreateObject(objectID);
-						end
-						if root then
-							for key,group in pairs(datas) do
-								if key == root.key then
-									for key,value in pairs(groups) do
-										root[key] = value;
+						local first = root[1];
+						if first then
+							local opt = { from = "ATT", persistent = false };
+							opt.title = first.text or RETRIEVING_DATA;
+							local displayID = GetDisplayID(first);
+							if displayID then
+								opt.minimap_displayID = displayID;
+								opt.worldmap_displayID = displayID;
+							end
+							if first.icon then
+								opt.minimap_icon = first.icon;
+								opt.worldmap_icon = first.icon;
+							end
+							
+							local callbacks = TomTom:DefaultCallbacks();
+							callbacks.minimap.tooltip_update = Nil;
+							callbacks.minimap.tooltip_show = function(event, tooltip, uid, dist)
+								tooltip:ClearLines();
+								for i,o in ipairs(root) do
+									local line = tooltip:NumLines() + 1;
+									tooltip:AddLine(o.text);
+									if o.title and not o.explorationID then tooltip:AddLine(o.title); end
+									local key = o.key;
+									if key == "objectiveID" then
+										if o.parent and o.parent.questID then tooltip:AddLine("Objective for " .. o.parent.text); end
+									elseif key == "criteriaID" then
+										tooltip:AddLine("Criteria for " .. GetAchievementLink(group.achievementID));
+									else
+										if key == "npcID" then key = "creatureID"; end
+										AttachTooltipSearchResults(tooltip, key .. ":" .. o[o.key], SearchForField, key, o[o.key], line);
 									end
-								else
-									MergeObject(g, CreateObject(group));
 								end
+								tooltip:Show();
 							end
-							root.g = g;
-						else
-							for key,group in pairs(datas) do
-								MergeObject(g, CreateObject(group));
-							end
-							root = g[1];
-							table.remove(g, 1);
-							if #g > 0 then root.g = g; end
+							callbacks.world.tooltip_update = Nil;
+							callbacks.world.tooltip_show = callbacks.minimap.tooltip_show;
+							opt.callbacks = callbacks;
+							TomTom:AddWaypoint(mapID, xnormal, y / 1000, opt);
 						end
-						if root.g then
-							app.UpdateGroups(root, root.g);
-						else
-							app.UpdateGroups({}, { root });
-						end
-						opt.title = root.text or RETRIEVING_DATA;
-						local displayID = GetDisplayID(root);
-						if displayID then
-							opt.minimap_displayID = displayID;
-							opt.worldmap_displayID = displayID;
-						end
-						if root.icon then
-							opt.minimap_icon = root.icon;
-							opt.worldmap_icon = root.icon;
-						end
-						
-						local callbacks = TomTom:DefaultCallbacks();
-						callbacks.minimap.tooltip_update = Nil;
-						callbacks.minimap.tooltip_show = function(event, tooltip, uid, dist)
-							tooltip:AddLine(root.text);
-							local key = root.key;
-							if key == "npcID" then key = "creatureID"; end
-							if root.title and not root.explorationID then tooltip:AddLine(root.title); end
-							AttachTooltipSearchResults(tooltip, key .. ":" .. root[root.key], SearchForField, key, root[root.key]);
-							tooltip:Show();
-						end
-						callbacks.world.tooltip_update = Nil;
-						callbacks.world.tooltip_show = callbacks.minimap.tooltip_show;
-						opt.callbacks = callbacks;
-						TomTom:AddWaypoint(mapID, xnormal, y / 1000, opt);
 					end
 				end
 			end
