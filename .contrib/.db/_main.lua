@@ -1027,25 +1027,11 @@ icon = function(path)
 end
 
 -- Classic / Retail Helper Functions
-isanyclassic = function(modifier, data)
-	-- #if ANYCLASSIC
-	return modifier(data);
-	-- #else
-	return data;
-	-- #endif
-end
 applyclassicphase = function(phase, data)
 	-- #if ANYCLASSIC
 	return bubbleDown({ ["u"] = phase }, data);
 	-- #else
 	return data;
-	-- #endif
-end
-applylegacyclassicphase = function(phase, data)
-	-- #if ANYCLASSIC
-	return bubbleDown({ ["u"] = phase }, data);
-	-- #else
-	return bubbleDown({ ["u"] = REMOVED_FROM_GAME }, data);
 	-- #endif
 end
 applyholiday = function(holiday, data)

@@ -9069,7 +9069,10 @@ local function RowOnEnter(self)
 						break;
 					end
 				end
-				if not found then GameTooltip:AddLine(rwp, HexToARGB("FFFFAAAA")); end
+				if not found then
+					local a,r,g,b = HexToARGB("FFFFAAAA");
+					GameTooltip:AddLine(rwp, r / 255, g / 255, b / 255, 1);
+				end
 			end
 			if reference.questID and not reference.objectiveID then
 				local objectified = false;
