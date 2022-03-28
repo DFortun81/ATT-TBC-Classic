@@ -696,7 +696,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 41429
 				},
 				-- #if BEFORE CATA
-				applyclassicphase(TBC_PHASE_THREE, {
+				applyclassicphase(TBC_PHASE_FIVE, {
 					["name"] = "Purified Shadowsong Amethyst",	-- NOTE: Actually removed from the game completely.
 					["timeline"] = { REMOVED_WITH_CATA },
 					["recipeID"] = 48789
