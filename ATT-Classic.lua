@@ -3099,7 +3099,7 @@ local function AddTomTomWaypointInternal(group, depth)
 							AddTomTomWaypointCache(coord, group);
 						end
 					end
-					if group.coord then AddTomTomWaypointCache(coord, group); end
+					if group.coord then AddTomTomWaypointCache(group.coord, group); end
 				end
 			end
 		elseif C_SuperTrack then
