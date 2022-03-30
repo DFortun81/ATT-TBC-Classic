@@ -3214,29 +3214,31 @@ AddTomTomWaypoint = function(group)
 								opt.worldmap_icon = first.icon;
 							end
 							
-							local callbacks = TomTom:DefaultCallbacks();
-							callbacks.minimap.tooltip_update = Nil;
-							callbacks.minimap.tooltip_show = function(event, tooltip, uid, dist)
-								tooltip:ClearLines();
-								for i,o in ipairs(root) do
-									local line = tooltip:NumLines() + 1;
-									tooltip:AddLine(o.text);
-									if o.title and not o.explorationID then tooltip:AddLine(o.title); end
-									local key = o.key;
-									if key == "objectiveID" then
-										if o.parent and o.parent.questID then tooltip:AddLine("Objective for " .. o.parent.text); end
-									elseif key == "criteriaID" then
-										tooltip:AddLine("Criteria for " .. GetAchievementLink(group.achievementID));
-									else
-										if key == "npcID" then key = "creatureID"; end
-										AttachTooltipSearchResults(tooltip, 1, key .. ":" .. o[o.key], SearchForField, key, o[o.key], line);
+							if TomTom.DefaultCallbacks then
+								local callbacks = TomTom:DefaultCallbacks();
+								callbacks.minimap.tooltip_update = nil;
+								callbacks.minimap.tooltip_show = function(event, tooltip, uid, dist)
+									tooltip:ClearLines();
+									for i,o in ipairs(root) do
+										local line = tooltip:NumLines() + 1;
+										tooltip:AddLine(o.text);
+										if o.title and not o.explorationID then tooltip:AddLine(o.title); end
+										local key = o.key;
+										if key == "objectiveID" then
+											if o.parent and o.parent.questID then tooltip:AddLine("Objective for " .. o.parent.text); end
+										elseif key == "criteriaID" then
+											tooltip:AddLine("Criteria for " .. GetAchievementLink(group.achievementID));
+										else
+											if key == "npcID" then key = "creatureID"; end
+											AttachTooltipSearchResults(tooltip, 1, key .. ":" .. o[o.key], SearchForField, key, o[o.key], line);
+										end
 									end
+									tooltip:Show();
 								end
-								tooltip:Show();
+								callbacks.world.tooltip_update = nil;
+								callbacks.world.tooltip_show = callbacks.minimap.tooltip_show;
+								opt.callbacks = callbacks;
 							end
-							callbacks.world.tooltip_update = Nil;
-							callbacks.world.tooltip_show = callbacks.minimap.tooltip_show;
-							opt.callbacks = callbacks;
 							TomTom:AddWaypoint(mapID, xnormal, y / 1000, opt);
 						end
 					end
