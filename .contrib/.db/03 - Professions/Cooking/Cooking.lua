@@ -2982,7 +2982,7 @@ profession(COOKING, {
 });
 
 -- Cooking Item Database
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 
 -- Recipe Cache (for Validation)
 local recipeCache, recipeCacheU = {}, {};
@@ -3025,7 +3025,7 @@ local itemrecipe = function(name, itemID, spellID, phase, timeline)
 		end
 		o.name = name;
 	end
-	_.ItemDB[itemID] = phase and type(phase) ~= "boolean" and applyclassicphase(phase, o) or o;
+	itemDB[itemID] = phase and type(phase) ~= "boolean" and applyclassicphase(phase, o) or o;
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
 	if recipeCache and (type(timeline) ~= "boolean" and type(phase) ~= "boolean") then
@@ -3163,7 +3163,7 @@ itemrecipe("Master Cookbook", 27736, 33359, TBC_PHASE_ONE, true).rank = 5;
 
 -- These items never made it in.
 recipeCache = nil;	-- Invalidate the cache.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(200, {	-- Recipe
 		itemrecipe("Recipe: Herb Baked Egg", 6891, 8604),	-- this is taught by trainer when you learn cooking; recipe item was never in game
 		itemrecipe("Deprecated Recipe: Kodo Skin Bag", 4997),
@@ -3200,4 +3200,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		i(115291),		-- Whole Pot-Roasted Elekk
 		-- #endif
 	}),
-});
+}));

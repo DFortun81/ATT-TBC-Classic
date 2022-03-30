@@ -365,8 +365,7 @@ local REPUTATIONS_OnTooltip = [[function(t)
 		end
 	end
 end]];
-_.Achievements =
-{
+root("Achievements", {
 	achcat(ACHIEVEMENT_CATEGORY_CHARACTER, {
 		-- Armored Brown Bear, located in Dalaran.
 		ach(5180, applyclassicphase(CATA_PHASE_ONE, {	-- Breaking the Sound Barrier
@@ -1323,4 +1322,4 @@ _.Achievements =
 	achcat(ACHIEVEMENT_CATEGORY_LEGACY, {
 		
 	}),
-};
+});

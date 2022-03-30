@@ -867,7 +867,7 @@ profession(ALCHEMY, {
 });
 
 -- Alchemy Item Database
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 
 -- Recipe Cache (for Validation)
 local recipeCache, recipeCacheU = {}, {};
@@ -910,7 +910,7 @@ local itemrecipe = function(name, itemID, spellID, phase, timeline)
 		end
 		o.name = name;
 	end
-	_.ItemDB[itemID] = phase and applyclassicphase(phase, o) or o;
+	itemDB[itemID] = phase and applyclassicphase(phase, o) or o;
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
 	if recipeCache and type(timeline) ~= "boolean" then
@@ -1066,7 +1066,7 @@ itemrecipe("Recipe: Assassin's Alchemist Stone", 35755, 47050, TBC_PHASE_FIVE);
 
 -- These items never made it in.
 recipeCache = nil;	-- Invalidate the cache.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(200, {	-- Recipe
 		itemrecipe("Recipe: Elixir of Tongues", 2556, 2336);
 		itemrecipe("Deprecated Recipe: Elixir of Fortitude", 2554);
@@ -1079,4 +1079,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		itemrecipe("Recipe: Alchemist's Stone", 13517, 17632);
 		-- #endif
 	}),
-});
+}));

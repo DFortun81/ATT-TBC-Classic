@@ -151,10 +151,10 @@ profession(ENGINEERING, {
 });
 
 -- Gnomish Engineering Recipes
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 local itemrecipe = function(itemID, spellID)
 	local o = { ["itemID"] = itemID, ["spellID"] = spellID };
-	_.ItemDB[itemID] = o;
+	itemDB[itemID] = o;
 	return o;
 end
 

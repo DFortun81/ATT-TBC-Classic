@@ -1,6 +1,6 @@
 -- NOTE: This database is for manually assigning the petTypeID values to items.
 -- This will only be necessary until the Pet Journal is implemented in WoW's API.
-_.ItemSpeciesDB = {
+root("ItemSpeciesDB", {
 	[34478] = {
 		["petTypeID"] = 3,
 	},
@@ -2974,4 +2974,4 @@ _.ItemSpeciesDB = {
 	[141530] = {
 		["petTypeID"] = 8,
 	},
-};
+});

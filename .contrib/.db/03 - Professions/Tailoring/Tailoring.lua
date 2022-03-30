@@ -5310,7 +5310,7 @@ for i,o in ipairs({
 }) do table.insert(TIME_LOST_TRADER_GROUPS, o); end
 
 -- Tailoring Item Database
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 
 -- Recipe Cache (for Validation)
 local recipeCache, recipeCacheU = {}, {};
@@ -5353,7 +5353,7 @@ local itemrecipe = function(name, itemID, spellID, phase, timeline)
 		end
 		o.name = name;
 	end
-	_.ItemDB[itemID] = phase and applyclassicphase(phase, o) or o;
+	itemDB[itemID] = phase and applyclassicphase(phase, o) or o;
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
 	if recipeCache and type(timeline) ~= "boolean" then
@@ -5625,10 +5625,10 @@ itemrecipe("Pattern: Unyielding Girdle", 35309, 31442, TBC_PHASE_FIVE, true);
 -- #endif
 
 -- Never Implemented Recipe and Crafted Item Database
+local nyi_ = root("NeverImplemented", {});
 local neverimplemented = function(thing)
-	table.insert(_.NeverImplemented, prof(TAILORING, { thing }));
+	table.insert(nyi_, prof(TAILORING, { thing }));
 end
-_.NeverImplemented = {};
 recipeCache = nil;	-- Disable the cache validation.
 
 -- Recipes that were created with the launch of the game, but never implemented. :(
@@ -5746,4 +5746,4 @@ neverimplemented(i(162430));	-- Pattern: Embroidered Deep Sea Breeches (Rank 3)
 -- #endif
 
 -- Apply the Never Implemented flag to the Never Implemented things.
-bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, _.NeverImplemented);
+bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, nyi_);

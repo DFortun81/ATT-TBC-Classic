@@ -1668,7 +1668,7 @@ profession(BLACKSMITHING, {
 });
 
 -- Blacksmithing Item Database
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 
 -- Recipe Cache (for Validation)
 local recipeCache, recipeCacheU = {}, {};
@@ -1711,7 +1711,7 @@ local itemrecipe = function(name, itemID, spellID, phase, timeline)
 		end
 		o.name = name;
 	end
-	_.ItemDB[itemID] = phase and applyclassicphase(phase, o) or o;
+	itemDB[itemID] = phase and applyclassicphase(phase, o) or o;
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
 	if recipeCache and type(timeline) ~= "boolean" then
@@ -1981,7 +1981,7 @@ itemrecipe("Plans: Adamantite Weapon Chain", 35296, 42688, TBC_PHASE_FIVE, true)
 
 -- These items never made it in.
 recipeCache = nil;	-- Invalidate the cache.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(200, {	-- Recipe
 		itemrecipe("Plans: Bleakwood Hew", 12817, 16965);
 		itemrecipe("Plans: Blood Talon", 12831, 16986);
@@ -2016,4 +2016,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		itemrecipe("Plans: Swiftsteel Shoulders", 35532, 41133);
 		-- #endif
 	}),
-});
+}));

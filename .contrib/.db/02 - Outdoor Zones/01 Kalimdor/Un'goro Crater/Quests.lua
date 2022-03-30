@@ -446,9 +446,9 @@ _.Zones =
 
 -- #if AFTER WRATH
 -- These quests never made it in.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	n(QUESTS, {
 		q(13908),	-- Gearing Up To Ride
 	}),
-});
+}));
 -- #endif

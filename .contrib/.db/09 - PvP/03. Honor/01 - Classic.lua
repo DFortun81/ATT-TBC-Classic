@@ -80,8 +80,7 @@ local THE_JUSTICAR_AND_THE_CONQUEROR_OnTooltip = [[function(t)
 		GameTooltip:AddDoubleLine(" |T" .. t.av.icon .. ":0|t " .. t.av.text, _.L[t.av.standing == 8 and "COLLECTED_ICON" or "NOT_COLLECTED_ICON"], 1, 1, 1);
 	end
 end]];
-_.PVP =
-{
+root("PVP", {
 	n(FACTION_HEADER_ALLIANCE, {
 		["races"] = ALLIANCE_ONLY,
 		["groups"] = {
@@ -1575,8 +1574,8 @@ _.PVP =
 			["f"] = 100,	-- Mount
 		})),
 	}),
-};
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+});
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(100, {	-- Mounts
 		i(16343),	-- Blood Guard's Mount
 		i(16339),	-- Commander's Steed
@@ -1584,4 +1583,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		i(29225),	-- zzoldSwift Warstrider
 		i(16344),	-- zzUNUSEDLieutenant General's Mount
 	}),
-});
+}));

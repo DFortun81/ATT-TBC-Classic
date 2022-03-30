@@ -5720,7 +5720,7 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 }));
 
 -- Jewelcrafting Item Database
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 
 -- Recipe Cache (for Validation)
 local recipeCache = {
@@ -5780,7 +5780,7 @@ local itemrecipe = function(name, itemID, spellID, spellIDAfterCata, timeline)
 		end
 		o.name = name;
 	end
-	_.ItemDB[itemID] = applyclassicphase(TBC_PHASE_ONE, o);
+	itemDB[itemID] = applyclassicphase(TBC_PHASE_ONE, o);
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
 	if recipeCache then
@@ -6335,10 +6335,10 @@ i(46952, {	-- Design: Willful Ametrine
 
 
 -- Never Implemented Recipe and Crafted Item Database
+local nyi_ = root("NeverImplemented", {});
 local neverimplemented = function(thing)
-	table.insert(_.NeverImplemented, prof(JEWELCRAFTING, { thing }));
+	table.insert(nyi_, prof(JEWELCRAFTING, { thing }));
 end
-_.NeverImplemented = {};
 recipeCache = nil;	-- Disable the cache validation.
 
 -- #if AFTER TBC
@@ -6409,4 +6409,4 @@ neverimplemented(i(52165));	-- Perfect Mystic Alicite
 -- #endif
 
 -- Apply the Never Implemented flag to the Never Implemented things.
-bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, _.NeverImplemented);
+bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, nyi_);

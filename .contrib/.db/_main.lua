@@ -1248,7 +1248,7 @@ prof = function(skillID, t)								-- Create a PROFESSION Object
 end
 profession = function(skillID, t)						-- Create a PROFESSION Container. (NOTE: Only use in the Profession Folder.)
 	local p = prof(skillID, t);
-	_.Professions = { p };
+	root("Professions", p);
 	return p;
 end
 pvp = function(t)										-- Flag all nested content as requiring PvP gameplay
@@ -1277,21 +1277,46 @@ recipe = function(id, t)								-- Create a RECIPE Object
 	return struct("recipeID", id, t);
 end
 root = function(category, g)							-- Create a ROOT CATEGORY Object
+	if not g then g = g or {}; end
 	local o = _[category];
 	if not o then
-		if #g > 0 and g[1] then
+		if isarray(g) then
 			o = g;
 		else
-			o = { g };
+			local isRef = true;
+			for key,value in pairs(g) do
+				if type(key) ~= "number" then
+					isRef = false;
+					break;
+				end
+			end
+			if isRef then
+				o = g;
+			else
+				o = { g };
+			end
 		end
 		_[category] = o;
 	else
-		if #g > 0 and g[1] then
+		if isarray(g) then
 			for i,t in ipairs(g) do
 				table.insert(o, t);
 			end
 		else
-			table.insert(o, g);
+			local isRef = true;
+			for key,value in pairs(g) do
+				if type(key) ~= "number" then
+					isRef = false;
+					break;
+				end
+			end
+			if isRef then
+				for key,value in pairs(g) do
+					o[key] = value;
+				end
+			else
+				table.insert(o, g);
+			end
 		end
 	end
 	return o;
@@ -1381,15 +1406,15 @@ un = function(u, t) t.u = u; return t; end						-- Mark an object unobtainable w
 
 -- Used by the Harvester (Parser)
 function Harvest(things)
-	if not _.ItemDB then _.ItemDB = {}; end
+	local itemDB = root("ItemDB", {});
 	local thing;
 	for i,j in pairs(things) do
-		thing = _.ItemDB[i];
+		thing = itemDB[i];
 		if not thing then
 			thing = {};
 			thing.mods = {};
 			thing.bonuses = {};
-			_.ItemDB[i] = thing;
+			itemDB[i] = thing;
 		else
 			if not thing.mods then thing.mods = {} end
 			if not thing.bonuses then thing.bonuses = {} end

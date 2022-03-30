@@ -981,7 +981,7 @@ profession(ENGINEERING, {
 });
 
 -- Engineering Item Database
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 
 -- Recipe Cache (for Validation)
 local recipeCache, recipeCacheU = {}, {};
@@ -1024,7 +1024,7 @@ local itemrecipe = function(name, itemID, spellID, phase, timeline)
 		end
 		o.name = name;
 	end
-	_.ItemDB[itemID] = phase and applyclassicphase(phase, o) or o;
+	itemDB[itemID] = phase and applyclassicphase(phase, o) or o;
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
 	if recipeCache and type(timeline) ~= "boolean" then
@@ -1183,7 +1183,7 @@ itemrecipe("Schematic: Rocket Boots Xtreme Lite", 35582, 46697, TBC_PHASE_ONE);
 
 -- These items never made it in.
 recipeCache = nil;	-- Invalidate the cache.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(200, {	-- Recipe
 		-- #if CLASSIC
 		i(22729),	-- Schematic: Steam Tonk Controller [This doesn't get added until TBC]
@@ -1196,4 +1196,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		itemrecipe("Schematic: Remote Mail Terminal", 23885, 30555);
 		-- #endif
 	}),
-});
+}));

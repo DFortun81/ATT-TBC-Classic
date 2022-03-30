@@ -1,5 +1,4 @@
-_.Skills =
-{
+root("Skills", {
 	cl(WARLOCK, {
 		["description"] = "Warlocks can teach their demons new tricks. Some of the higher level grimoires can only be purchased from the <Demon Trainer> in your faction's capital cities.",
 		["maps"] = { IRONFORGE, ORGRIMMAR, STORMWIND_CITY, UNDERCITY, ORGRIMMAR },
@@ -738,4 +737,4 @@ _.Skills =
 		["cost"] = 200000,
 	},
 	-- #endif
-};
+});

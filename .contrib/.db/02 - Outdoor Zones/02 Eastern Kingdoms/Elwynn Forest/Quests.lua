@@ -679,7 +679,7 @@ _.Zones =
 	}),
 };
 
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	n(QUESTS, {
 		q(7962),	-- Wabbit Pelts
 			-- i(13913),	-- 22 Pound Lobster
@@ -687,4 +687,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 			-- i(3300),	-- Rabbit's Foot
 			-- i(8497),	-- Rabbit Crate (Snowshoe)
 	}),
-});
+}));

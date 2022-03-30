@@ -1,7 +1,7 @@
 -----------------------------------------------------
 --       W O R L D   D R O P S   M O D U L E       --
 -----------------------------------------------------
-_.WorldDrops = { tier(CLASSIC_TIER, {
+root("WorldDrops", tier(CLASSIC_TIER, {
 	filter(3, {	-- Cloaks
 		i(9938),	-- Abjurer's Cloak
 		i(10258),	-- Adventurer's Cape
@@ -2988,10 +2988,10 @@ _.WorldDrops = { tier(CLASSIC_TIER, {
 			i(10301),	-- Pattern: White Bandit Mask
 		}),
 	}),
-})};
+}));
 
 -- These items never made it in.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(1, {	-- Held in Off-hand
 	
 	}),
@@ -3180,4 +3180,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(200, {	-- Recipe
 		
 	}),
-});
+}));

@@ -1,11 +1,11 @@
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 local i = function(itemID, filterID)
-	_.ItemDB[itemID] = { ["f"] = filterID };
+	itemDB[itemID] = { ["f"] = filterID };
 	return o;
 end
 
 -- Expert Cook
-_.ItemDB[16072] = { ["spellID"] = 0 };	-- Temporarily do not have a fix.
+itemDB[16072] = { ["spellID"] = 0 };	-- Temporarily do not have a fix.
 
 -- Axes
 i(9608, 21);	-- Shoni's Disarming Tool

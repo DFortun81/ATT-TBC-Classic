@@ -274,7 +274,7 @@ profession(FIRST_AID, {
 recipe = oldRecipe;
 
 -- First Aid Recipes
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 local itemrecipe = function(itemID, spellID, timeline, classicphase)
 	local o = { ["itemID"] = itemID };
 	if spellID and spellID > 0 then
@@ -286,7 +286,7 @@ local itemrecipe = function(itemID, spellID, timeline, classicphase)
 		o.timeline = timeline;
 	end
 	if classicphase then applyclassicphase(classicphase, o); end
-	_.ItemDB[itemID] = o;
+	itemDB[itemID] = o;
 	return o;
 end
 
@@ -310,11 +310,11 @@ itemrecipe(39152, 45546, "added 3.0.1.8714", WRATH_PHASE_ONE);	-- Manual: Heavy 
 -- #endif
 
 -- These items never made it in.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(200, {	-- Recipes
 		i(16085),	-- Artisan First Aid - Heal Thyself
 		i(8547),	-- Formula: Powerful Smelling Salts
 		i(23689),	-- Manual: Crystal Infused Bandage
 		i(23690),	-- Recipe: Crystal Flake Throat Lozenge
 	}),
-});
+}));

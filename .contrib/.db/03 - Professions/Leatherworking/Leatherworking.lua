@@ -1808,7 +1808,7 @@ profession(LEATHERWORKING, {
 });
 
 -- Leatherworking Item Database
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 
 -- Recipe Cache (for Validation)
 local recipeCache, recipeCacheU = {}, {};
@@ -1851,7 +1851,7 @@ local itemrecipe = function(name, itemID, spellID, phase, timeline)
 		end
 		o.name = name;
 	end
-	_.ItemDB[itemID] = phase and applyclassicphase(phase, o) or o;
+	itemDB[itemID] = phase and applyclassicphase(phase, o) or o;
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
 	if recipeCache and type(timeline) ~= "boolean" then
@@ -2179,7 +2179,7 @@ applyholiday(FEAST_OF_WINTER_VEIL, itemrecipe("Pattern: Winter Boots", 34262, 44
 
 -- These items never made it in.
 recipeCache = nil;	-- Invalidate the cache.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(200, {	-- Recipe
 		itemrecipe("Deprecated Pattern: Light Winter Cloak", 2404),
 		itemrecipe("Deprecated Pattern: Light Winter Boots", 2405),
@@ -2210,4 +2210,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		itemrecipe("Pattern: Sun-Drenched Scale Gloves", 35550),
 		-- #endif
 	}),
-});
+}));

@@ -410,7 +410,7 @@ profession(MINING, {
 });
 
 -- Mining Recipes
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 local itemrecipe = function(itemID, spellID, timeline, classicphase)
 	local o = { ["itemID"] = itemID };
 	if spellID and spellID > 0 then
@@ -422,7 +422,7 @@ local itemrecipe = function(itemID, spellID, timeline, classicphase)
 		o.timeline = timeline;
 	end
 	if classicphase then applyclassicphase(classicphase, o); end
-	_.ItemDB[itemID] = o;
+	itemDB[itemID] = o;
 	return o;
 end
 

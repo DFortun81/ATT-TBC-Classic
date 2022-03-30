@@ -1,7 +1,7 @@
 -----------------------------------------------------
 --       W O R L D   D R O P S   M O D U L E       --
 -----------------------------------------------------
-_.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
+root("WorldDrops", applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
 	category(251, {	-- Helms
 		i(31145),	-- Headdress of the Sleeper
 		i(31222),	-- Headdress of Inner Rage
@@ -1233,11 +1233,11 @@ _.WorldDrops = { applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
 			i(24301),	-- Pattern: White Remedy Cape
 		}),
 	}),
-}))};
+})));
 
 -- #if AFTER TBC
 -- These items never made it in.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(1, {	-- Held in Off-hand
 		i(26560),	-- 59 TEST Green Off Hand
 		i(26561),	-- 60 TEST Green Off Hand
@@ -2683,5 +2683,5 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 			["description"] = "Not actually sure if this is in the game at all since the spell trained by this recipe can be learned at the trainer.",
 		})),
 	}),
-});
+}));
 -- #endif

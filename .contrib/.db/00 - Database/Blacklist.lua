@@ -1,8 +1,7 @@
 ---------------------------------------
 --        B L A C K L I S T          --
 ---------------------------------------
-_.Blacklist =
-{
+root("Blacklist", {
 	-- Bind Type 0
 	-- Invalid
 	i(7909),	-- Aquamarine
@@ -50,4 +49,4 @@ _.Blacklist =
 	i(5759),	-- Thorium Lockbox
 	i(818),	-- Tigerseye
 	i(7911),	-- Truesilver Ore
-};
+});

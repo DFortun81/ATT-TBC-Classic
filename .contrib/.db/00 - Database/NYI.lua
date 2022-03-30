@@ -6,8 +6,7 @@ local oldI, oldQ, oldFP = i, q, fp;
 i = function(...) return un(NEVER_IMPLEMENTED, oldI(...)); end
 q = function(...) return un(NEVER_IMPLEMENTED, oldQ(...)); end
 fp = function(...) return un(NEVER_IMPLEMENTED, oldFP(...)); end
-_.NeverImplemented =
-{
+root("NeverImplemented", {
 	n(FLIGHT_PATHS, {
 		fp(84),	-- Plaguewood Tower, Eastern Plaguelands
 		fp(85),	-- Northpass Tower, Eastern Plaguelands
@@ -910,7 +909,7 @@ _.NeverImplemented =
 		-- #endif
 	}),
 	-- #endif
-};
+});
 i = oldI;
 q = oldQ;
 fp = oldFP;

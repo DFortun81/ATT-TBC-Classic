@@ -1,6 +1,6 @@
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 local i = function(itemID, ...)
-	_.ItemDB[itemID] = { ["classes"] = { ... } };
+	itemDB[itemID] = { ["classes"] = { ... } };
 	return o;
 end
 

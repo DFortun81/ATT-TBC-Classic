@@ -68,7 +68,7 @@ profession(FISHING, {
 });
 
 -- Fishing Recipes
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 local itemrecipe = function(itemID, spellID, timeline, classicphase)
 	local o = { ["itemID"] = itemID };
 	if spellID and spellID > 0 then
@@ -80,7 +80,7 @@ local itemrecipe = function(itemID, spellID, timeline, classicphase)
 		o.timeline = timeline;
 	end
 	if classicphase then applyclassicphase(classicphase, o); end
-	_.ItemDB[itemID] = o;
+	itemDB[itemID] = o;
 	return o;
 end
 
@@ -92,7 +92,7 @@ itemrecipe(34109, 43308, "added 2.3.0.7382", TBC_PHASE_ONE);	-- Weather-Beaten J
 -- #endif
 
 -- These items never made it in.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(200, {	-- Recipes
 		i(16082),	-- Artisan Fishing - The Way of the Lure
 		-- #if AFTER CATA
@@ -100,4 +100,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		i(46055),	-- Grand Master Fishing - Deep Sea Adventures
 		-- #endif
 	}),
-});
+}));

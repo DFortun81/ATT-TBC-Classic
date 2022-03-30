@@ -61,7 +61,7 @@ local OnTooltipForDarkmoonFaire = [[function(t)
 		GameTooltip:AddDoubleLine("Turn in Decks.", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
 	end
 end]];
-_.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
+root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 {
 	faction(909, {	-- Darkmoon Faire
 		["icon"] = asset("dmf"),
@@ -1113,7 +1113,7 @@ _.Holidays = bubbleDown({ ["u"] = DARKMOON_FAIRE },
 			}),
 		},
 	}),
-});
+}));
 
 -- Wipe out the unobtainable states.
 HEAVY_LEATHER_BALL.u = nil;

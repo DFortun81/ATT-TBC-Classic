@@ -1086,7 +1086,7 @@ profession(ENCHANTING, {
 });
 
 -- Enchanting Item Database
-_.ItemDB = {};
+local itemDB = root("ItemDB", {});
 
 -- Recipe Cache (for Validation)
 local recipeCache, recipeCacheU = {}, {};
@@ -1129,7 +1129,7 @@ local itemrecipe = function(name, itemID, spellID, phase, timeline)
 		end
 		o.name = name;
 	end
-	_.ItemDB[itemID] = phase and applyclassicphase(phase, o) or o;
+	itemDB[itemID] = phase and applyclassicphase(phase, o) or o;
 	
 	-- Ensure that this recipe's spellID exists in the profession database.
 	if recipeCache and type(timeline) ~= "boolean" then
@@ -1322,7 +1322,7 @@ itemrecipe("Formula: Enchant Cloak - Steelweave", 35756, 47051, TBC_PHASE_FIVE);
 
 -- These items never made it in.
 recipeCache = nil;	-- Invalidate the cache.
-_.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
+root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	filter(200, {	-- Recipe
 		itemrecipe("Formula: Imbue Chest - Minor Spirit", 6222);
 		itemrecipe("Formula: Imbue Chest - Spirit", 6343);
@@ -1334,4 +1334,4 @@ _.NeverImplemented = bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 		recipe(28021),	-- Arcane Dust
 		-- #endif
 	}),
-});
+}));
