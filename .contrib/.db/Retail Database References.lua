@@ -68,6 +68,14 @@
 -- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Steamvault.lua
 -- #IMPORT: 01 - Dungeons Raids\\2 - Burning Crusade\\The Underbog.lua
 
+-- Wrath of the Lich King
+-- #IMPORT: 01 - Dungeons Raids\\3 - Wrath of the Lich King\\0 - Metadata.lua
+-- #IMPORT: 01 - Dungeons Raids\\3 - Wrath of the Lich King\\1 Vault of Archavon.lua
+-- #IMPORT: 01 - Dungeons Raids\\3 - Wrath of the Lich King\\2 Naxxramas.lua
+-- #IMPORT: 01 - Dungeons Raids\\3 - Wrath of the Lich King\\3 The Obsidian Sanctum.lua
+-- #IMPORT: 01 - Dungeons Raids\\3 - Wrath of the Lich King\\4 The Eye of Eternity.lua
+-- #IMPORT: 01 - Dungeons Raids\\3 - Wrath of the Lich King\\9 The Ruby Sanctum.lua
+
 -- Outdoor Zones
 -- Outland
 -- #IMPORT: 02 - Outdoor Zones\\03 Outland\\0 - Metadata.lua
