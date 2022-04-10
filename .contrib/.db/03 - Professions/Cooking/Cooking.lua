@@ -22,7 +22,7 @@ profession(COOKING, {
 				},
 				{
 					["name"] = "Big Bear Steak",
-					["timeline"] = { "removed 4.0.3.10000" },
+					["timeline"] = { "removed 4.0.3.10000", "timewalking 9.1" },
 					["recipeID"] = 3397
 				},
 				{
@@ -213,12 +213,12 @@ profession(COOKING, {
 				},
 				{
 					["name"] = "Lean Venison",
-					["timeline"] = { "removed 4.0.3.10000" },
+					["timeline"] = { "removed 4.0.3.10000", "timewalking 9.1" },
 					["recipeID"] = 6419
 				},
 				{
 					["name"] = "Lean Wolf Steak",
-					["timeline"] = { "removed 5.0.4.10000" },
+					["timeline"] = { "removed 5.0.4.10000", "timewalking 9.1" },
 					["recipeID"] = 15853
 				},
 				-- #if AFTER WOD
@@ -296,9 +296,6 @@ profession(COOKING, {
 					["name"] = "Roasted Moongraze Tenderloin",
 					["timeline"] = { "added 2.0.1.6180" },
 					["recipeID"] = 33277,
-					-- #if AFTER 7.0.3
-					["races"] = ALLIANCE_ONLY,
-					-- #endif
 				}),
 				{
 					["name"] = "Rockscale Cod",
@@ -1104,7 +1101,8 @@ profession(COOKING, {
 				},
 				{
 					["name"] = "Four Senses Brew",
-					["recipeID"] = 126654
+					["recipeID"] = 126654,
+					["itemID"] = 86393,	--	Tablet of Ren Yun
 				},
 				{
 					["name"] = "Ginseng Tea",
@@ -2256,6 +2254,11 @@ profession(COOKING, {
 			["categoryID"] = 1326,
 			["groups"] = {
 				{
+					["name"] = "Empty Kettle of Stone Soup",
+					["recipeID"] = 359333,
+					["timeline"] = { "added 9.2.0" },
+				},
+				{
 					["name"] = "Feast of Gluttonous Hedonism",
 					["recipeID"] = 308403
 				},
@@ -2322,6 +2325,10 @@ profession(COOKING, {
 					["recipeID"] = 308410
 				},
 				{
+					["name"] = "Bonemeal Bread",
+					["recipeID"] = 354766
+				},
+				{
 					["name"] = "Butterscotch Marinated Ribs",
 					["recipeID"] = 308397
 				},
@@ -2338,9 +2345,17 @@ profession(COOKING, {
 					["recipeID"] = 308414
 				},
 				{
+					["name"] = "Porous Rock Candy",
+					["recipeID"] = 354768
+				},
+				{
 					["name"] = "Sweet Silvergill Sausages",
 					["recipeID"] = 308425
-				}
+				},
+				{
+					["name"] = "Twilight Tea",
+					["recipeID"] = 354764
+				},
 			}
 		}
 	})),
@@ -2381,7 +2396,12 @@ profession(COOKING, {
 			["groups"] = {
 				ach(7325),	-- Now I Am the Master
 				q(31820, {	-- A Present for Teacher
-					i(86468),	-- Apron
+					["description"] = "To get this quest you must Master all six of the Ways, complete the quest 'To Be a Master,' buy the Cooking School Bell for 50 Ironpaw Tokens, then max out your rep with Nomi.|r",
+					["cost"] = { { "i", 86425, 1 } },	-- Cooking School Bell
+					["provider"] = { "n", 64337 },	-- Nomi
+					["g"] = {
+						i(86468),	-- Apron
+					},
 				}),
 			},
 		}),
@@ -2391,9 +2411,7 @@ profession(COOKING, {
 	n(101846, {	-- Nomi
 		["description"] = "Takes various meat, fish, and animal byproducts for Work Orders (similar to the Draenor garrison), 5 at a time. He can maintain a maximum of 24 work orders at one time.\n\nEach Work Order takes 4 hours to complete. After a Work Order (or multiple Work Orders) complete, you will receive a recipe, meat/fish, Badly Burnt Food (often), or some combination of these when you collect them from the Test Kitchen Results table.\n\nThe Work Order options that Nomi gives you are based on the materials you have in your inventory (your bags, bank, and reagent bank). You can queue up all work orders with one material, or you can use multiple different materials for any number of Work Orders, as long as the total Work Orders active is maximum 24.",
 		["maps"] = { -- Do not include 626 as that is Rogue Class Hall
-			627,	-- Dalaran (Broken Isles)
-			628,	-- The Underbelly,
-			629,	-- Aegwynn's Gallery [May separate out later]
+			LEGION_DALARAN,
 		},
 		["groups"] = {
 			i(124119, {	-- Big Gamy Ribs
@@ -2539,7 +2557,7 @@ profession(COOKING, {
 			}),
 			{
 				["itemID"] = 151653,	-- Broken Isles Recipe Scrap
-				["description"] = "Use 10 of these to create an unlearned recipe. It appears as though you can only get Rank 2+ recipes from this item.",
+				["description"] = "Use 10 of these to create an unlearned recipe.",
 				["sym"] = {
 					{ "select", "itemID", 133842 },	-- Recipe: Azshari Salad [Rank 2]
 					{ "select", "itemID", 133862 },	-- Recipe: Azshari Salad [Rank 3]
@@ -2638,18 +2656,25 @@ profession(COOKING, {
 			n(QUESTS, {
 				q(40989, {	-- The Prodigal Sous Chef
 					["description"] = "If you cooked with Nomi while questing in Pandaria, you will receive this quest instead of 'Too Many Chefs'.",
+					-- ["sourceQuest"] = ,
+					["provider"] = { "n", 102546 },	-- Nomi
 					["groups"] = {
 						i(133826),	-- Recipe: Dried Mackerel Strips [Rank 1]
 					},
 				}),
 				q(40988, {	-- Too Many Chefs
 					["description"] = "If you did not cook with Nomi while questing in Pandaria, you will receive this quest instead of 'The Prodigal Sous Chef'.",
+					["provider"] = { "n", 102546 },	-- Nomi
 					["groups"] = {
 						i(133826),	-- Recipe: Dried Mackerel Strips [Rank 1]
 					},
 				}),
 				q(40991, {	-- Opening the Test Kitchen
-					ach(10591),	-- All Grown Up
+					["sourceQuests"] = { 40990 },	-- A Good Recipe List
+					["provider"] = { "n", 101846 },	-- Nomi
+					["g"] = {
+						ach(10591),	-- All Grown Up
+					},
 				}),
 			}),
 			n(VENDORS, {
@@ -2713,6 +2738,16 @@ profession(COOKING, {
 				-- #if AFTER WRATH
 				recipe(64054),	-- Clamlette Magnifique
 				-- #endif
+			},
+		}),
+		q(13825, {	-- Clamlette Surprise
+			["qg"] = 8125,	-- Dirge Quikcleave
+			["altQuests"] = { 6610 },	-- Clamlette Surprise
+			["coord"] = { 52.63, 28.12, TANARIS },
+			["timeline"] = { "added 3.1.0.9637", "removed 4.0.3" },
+			["requireSkill"] = COOKING,
+			["groups"] = {
+				i(16971),	-- Clamlette Surprise
 			},
 		}),
 		q(8307, {	-- Desert Recipe
@@ -2795,9 +2830,6 @@ profession(COOKING, {
 					["provider"] = { "i", 33849 },	-- Mana Berry
 					["coord"] = { 48, 54, NETHERSTORM },
 				}),
-				crit(3, {	-- Manalicious
-					["achievementID"] = 906,	-- Kickin' It Up a Notch
-				}),
 				i(33844),	-- Barrel of Fish
 				i(33857),	-- Crate of Meat
 			},
@@ -2834,9 +2866,6 @@ profession(COOKING, {
 						{ "i", 27659, 3 },	-- Warp Burger
 						{ "i", 33838, 1 },	-- Giant Kaliri Wing
 					},
-				}),
-				crit(1, {	-- Revenge is Tasty
-					["achievementID"] = 906,	-- Kickin' It Up a Notch
 				}),
 				i(33844),	-- Barrel of Fish
 				i(33857),	-- Crate of Meat
@@ -2911,9 +2940,6 @@ profession(COOKING, {
 						{ "i", 27658, 4 },	-- Roasted Clefthoof
 					},
 				}),
-				crit(4, {	-- Soup for the Soul
-					["achievementID"] = 906,	-- Kickin' It Up a Notch
-				}),
 				i(33844),	-- Barrel of Fish
 				i(33857),	-- Crate of Meat
 			},
@@ -2936,9 +2962,6 @@ profession(COOKING, {
 						{ "i", 31673, 1 },	-- Crunchy Serpent
 					},
 				}),
-				crit(2, {	-- Super Hot Stew
-					["achievementID"] = 906,	-- Kickin' It Up a Notch
-				}),
 				i(33844),	-- Barrel of Fish
 				i(33857),	-- Crate of Meat
 			},
@@ -2957,7 +2980,7 @@ profession(COOKING, {
 		}),
 	}),
 	-- #if NOT ANYCLASSIC
-	filter(200, { 	-- Recipes
+	filter(RECIPES, {
 		tier(CLASSIC_TIER, {
 			un(REMOVED_FROM_GAME, i(16072, {	-- Expert Cookbook
 				["spellID"] = 0,	-- replacing the spellID that is automatically pulled from the itemDB, which shows this item as "unknown" when it's not collectible
@@ -2966,8 +2989,6 @@ profession(COOKING, {
 				["spellID"] = 0,	-- replacing the spellID that is automatically pulled from the itemDB, which shows this item as "unknown" when it's not collectible
 			})),
 			un(REMOVED_FROM_GAME, i(5485)),	-- Recipe: Fillet of Frenzy
-			un(REMOVED_FROM_GAME, i(5489)),	-- Recipe: Lean Venison
-			un(REMOVED_FROM_GAME, i(12227)),	-- Recipe: Lean Wolf Steak
 			un(REMOVED_FROM_GAME, i(3736)),	-- Recipe: Tasty Lion Steak
 			un(REMOVED_FROM_GAME, i(13939)),	-- Recipe: Spotted Yellowtail
 			un(REMOVED_FROM_GAME, i(13942)),	-- Recipe: Grilled Squid
@@ -2975,7 +2996,6 @@ profession(COOKING, {
 			un(REMOVED_FROM_GAME, i(35566)),	-- Recipe: Juicy Bear Burger
 			un(REMOVED_FROM_GAME, i(13945)),	-- Recipe: Nightfin Soup
 			un(REMOVED_FROM_GAME, i(13946)),	-- Recipe: Poached Sunscale Salmon
-			un(REMOVED_FROM_GAME, i(21025)),	-- Recipe: Dirge's Kickin' Chimaerok Chops
 		}),
 	}),
 	-- #endif
@@ -3117,7 +3137,14 @@ itemrecipe("Recipe: Sagefish Delight", 21219, 25954);
 itemrecipe("Recipe: Runn Tum Tuber Surprise", 18267, 22761, PHASE_ONE_DIREMAUL);
 itemrecipe("Recipe: Heavy Crocolisk Stew", 20075, 24418);
 itemrecipe("Recipe: Dirge's Kickin' Chimaerok Chops", 21025, 25659, PHASE_FIVE);
+-- #if ANYCLASSIC
 itemrecipe("Expert Cookbook", 16072, 3413, nil, true).rank = 3;
+-- #else
+itemrecipe("Expert Cookbook", 16072, 0--[[3413]], nil, true);
+-- #endif
+-- #if NOT ANYCLASSIC
+un(REMOVED_FROM_GAME, itemrecipe("Recipe: Thistle Tea", 7678, 9513));
+-- #endif
 
 -- #if AFTER TBC
 -- TBC Recipes
@@ -3153,7 +3180,11 @@ itemrecipe("Recipe: Spicy Hot Talbuk", 33873, 43765, TBC_PHASE_ONE);
 itemrecipe("Recipe: Kibler's Bits", 33875, 43772, TBC_PHASE_ONE);
 itemrecipe("Recipe: Delicious Chocolate Cake", 33925, 43779, TBC_PHASE_ONE);
 itemrecipe("Recipe: Captain Rumsey's Lager", 34834, 45695, TBC_PHASE_ONE);
+-- #if ANYCLASSIC
 itemrecipe("Master Cookbook", 27736, 33359, TBC_PHASE_ONE, true).rank = 5;
+-- #else
+itemrecipe("Master Cookbook", 27736, 0--[[33359]], TBC_PHASE_ONE, true);
+-- #endif
 -- #endif
 
 -- #if AFTER WRATH
@@ -3164,10 +3195,12 @@ itemrecipe("Master Cookbook", 27736, 33359, TBC_PHASE_ONE, true).rank = 5;
 -- These items never made it in.
 recipeCache = nil;	-- Invalidate the cache.
 root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
-	filter(200, {	-- Recipe
+	filter(RECIPES, {
 		itemrecipe("Recipe: Herb Baked Egg", 6891, 8604),	-- this is taught by trainer when you learn cooking; recipe item was never in game
 		itemrecipe("Deprecated Recipe: Kodo Skin Bag", 4997),
+		-- #if ANYCLASSIC
 		itemrecipe("Recipe: Thistle Tea", 7678, 9513),
+		-- #endif
 		itemrecipe("Artisan Cookbook", 16073, 19887),
 		
 		-- #if AFTER WRATH
