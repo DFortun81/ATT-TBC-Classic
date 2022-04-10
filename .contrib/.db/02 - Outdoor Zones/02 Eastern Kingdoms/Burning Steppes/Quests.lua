@@ -16,7 +16,11 @@ _.Zones =
 					["coord"] = { 12.4, 31.6, BURNING_STEPPES },
 					["classes"] = { WARLOCK },
 					["cost"] = {
+						-- #if AFTER TBC
+						{ "i", 12360, 1 },	-- Arcanite Bar
+						-- #else
 						{ "i", 12360, 3 },	-- Arcanite Bar
+						-- #endif
 					},
 					["lvl"] = 60,
 				}),
@@ -26,7 +30,11 @@ _.Zones =
 					["coord"] = { 12.6, 31.6, BURNING_STEPPES },
 					["classes"] = { WARLOCK },
 					["cost"] = {
+						-- #if AFTER TBC
+						{ "i", 9264, 2 },	-- Elixir of Shadow Power
+						-- #else
 						{ "i", 9264, 10 },	-- Elixir of Shadow Power
+						-- #endif
 					},
 					["lvl"] = 60,
 				}),
@@ -48,7 +56,11 @@ _.Zones =
 					["coord"] = { 12.6, 31.6, BURNING_STEPPES },
 					["classes"] = { WARLOCK },
 					["cost"] = {
+						-- #if AFTER TBC
+						{ "i", 15416, 3 },	-- Black Dragonscale
+						-- #else
 						{ "i", 15416, 35 },	-- Black Dragonscale
+						-- #endif
 					},
 					["lvl"] = 60,
 				}),
