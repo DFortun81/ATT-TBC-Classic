@@ -218,7 +218,9 @@ _.Zones =
 				}),
 				q(7623, {	-- Lord Banehollow
 					["qg"] = 14437,	-- Gorzeeki Wildeyes
+					-- #if BEFORE TBC
 					["sourceQuest"] = 7564,	-- Wildeyes
+					-- #endif
 					["description"] = "Do not leave the Blasted Lands without purchasing a Shadowy Potion or two.",
 					["coord"] = { 12.4, 31.6, BURNING_STEPPES },
 					["maps"] = { FELWOOD },
