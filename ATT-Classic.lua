@@ -892,6 +892,17 @@ end
 -- Quest Completion Lib
 local DirtyQuests = {};
 local IgnoreErrorQuests = {
+	[1476]=1,	-- Hearts of the Pure (Horde Pre-req for the Undercity Succubus Binding quest)
+	[1474]=1,	-- The Binding (Succubus) [Undercity]
+	[1508]=1,	-- Blind Cazul (Horde Pre-req for the Orgrimmar Succubus Binding quest)
+	[1509]=1,	-- News of Dogran (1/2) (Horde Pre-req for the Orgrimmar Succubus Binding quest)
+	[1510]=1,	-- News of Dogran (2/2) (Horde Pre-req for the Orgrimmar Succubus Binding quest)
+	[1511]=1,	-- Ken'zigla's Draught (Horde Pre-req for the Orgrimmar Succubus Binding quest)
+	[1515]=1,	-- Dogran's Captivity (Horde Pre-req for the Orgrimmar Succubus Binding quest)
+	[1512]=1,	-- Love's Gift (Horde Pre-req for the Orgrimmar Succubus Binding quest)
+	[1513]=1,	-- The Binding (Succubus) [Orgrimmar]
+	[1738]=1,	-- Heartswood (Alliance Pre-req for the Stormwind City Succubus Binding quest)
+	[1739]=1,	-- The Binding (Succubus) [Stormwind City]
 	[1516]=1, 	-- Call of Earth (1/3 Durotar)
 	[1519]=1, 	-- Call of Earth (1/3 Mulgore)
 	[9449]=1, 	-- Call of Earth (1/3 Ammen Vale)
@@ -960,6 +971,10 @@ local IgnoreErrorQuests = {
 	[9522]=1,	-- Never Again! [Alliance]
 	[9536]=1,	-- Never Again! [Horde]
 	[10371]=1,	-- Yorus Barleybrew (Draenei)
+	[10621]=1,	-- Illidari Bane-Shard (A)
+	[10623]=1,	-- Illidari Bane-Shard (H)
+	[10759]=1,	-- Find the Deserter (A)
+	[10761]=1,	-- Find the Deserter (H)
 	[11185]=1,	-- The Apothecary's Letter
 	[11186]=1,	-- Signs of Treachery?
 	[11201]=1,	-- The Grimtotem Plot
@@ -978,30 +993,30 @@ local CompletedQuests = setmetatable({}, {__newindex = function (t, key, value)
 		if app.Settings:GetTooltipSetting("Report:CompletedQuests") then
 			local searchResults = app.SearchForField("questID", key);
 			if searchResults and #searchResults > 0 then
-				local questID, nmr, nmc = key, false, false;
+				local questID, nmr, nmc, text = key, false, false, "";
 				for i,searchResult in ipairs(searchResults) do
 					if searchResult.questID == questID and not IgnoreErrorQuests[questID] and not GetRelativeField(searchResult, "headerID", -420) then
-						if searchResult.nmr then
-							if not nmr then
-								nmr = true;
-								key = key .. " [WRONG RACES]";
-							end
+						if searchResult.nmr and not nmr then
+							nmr = true;
+							text = searchResult.text;
 						end
-						if searchResult.nmc then
-							if not nmc then
-								nmc = true;
-								key = key .. " [WRONG CLASSES]";
-							end
+						if searchResult.nmc and not nmc then
+							nmc = true;
+							text = searchResult.text;
 						end
 					end
 				end
 				if not (nmr or nmc) and app.Settings:GetTooltipSetting("Report:UnsortedQuests") then
 					return true;
 				end
+				if nmc then key = key .. " [C]"; end
+				if nmr then key = key .. " [R]"; end
+				key = key .. " (" .. text .. ")";
 			else
-				key = key .. " [MISSING]";
+				local text = C_QuestLog.GetQuestInfo(key) or RETRIEVING_DATA;
+				key = key .. " [M] (" .. text .. ")";
 			end
-			print("Completed Quest ID #" .. key);
+			print("Completed Quest #" .. key);
 		end
 	end
 end});

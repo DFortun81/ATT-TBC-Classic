@@ -210,24 +210,18 @@ _.Zones =
 					["maps"] = { SILVERPINE_FOREST, WETLANDS },
 					["classes"] = { WARLOCK },
 					["races"] = { ORC, UNDEAD },
-					["cost"] = {
-						{ "i", 6312, 1 },	-- Dalin's Heart
-						{ "i", 6313, 1 },	-- Comar's Heart
-					},
 					["lvl"] = 20,
 					["groups"] = {
-						{
-							["itemID"] = 6312,	-- Dalin's Heart
-							["questID"] = 1476,	-- Hearts of the Pure
-							["cr"] = 5682,	-- Dalin Forgewright
+						objective(1, {	-- 0/1 Dalin's Heart
+							["provider"] = { "i", 6312 },	-- Dalin's Heart
 							["coord"] = { 46.6, 84.2, SILVERPINE_FOREST },
-						},
-						{
-							["itemID"] = 6313,	-- Comar's Heart
-							["questID"] = 1476,	-- Hearts of the Pure
-							["cr"] = 5683,	-- Comar Villard
+							["cr"] = 5682,	-- Dalin Forgewright
+						}),
+						objective(2, {	-- 0/1 Comar's Heart
+							["provider"] = { "i", 6313 },	-- Comar's Heart
 							["coord"] = { 50.6, 12.6, WETLANDS },
-						},
+							["cr"] = 5683,	-- Comar Villard
+						}),
 					},
 				}),
 				q(243, {	-- Into the Field
