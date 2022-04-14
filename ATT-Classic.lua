@@ -14008,7 +14008,6 @@ app.events.VARIABLES_LOADED = function()
 	
 	-- Wipe the Debugger Data
 	ATTClassicDebugData = nil;
-	ATTClassicAuctionData = nil;
 	
 	-- Tooltip Settings
 	app.Settings:Initialize();
@@ -14084,7 +14083,7 @@ app.events.ADDON_LOADED = function(addonName)
 			["options"] = {
 				{
 					["text"] = "Perform a Full Scan",
-					["icon"] = "INTERFACE/ICONS/INV_DARKMOON_EYE",
+					["icon"] = "INTERFACE/ICONS/Ability_Ambush",
 					["description"] = "Click this button to perform a full scan of the auction house. This information will appear within this window and clear out the existing data.",
 					["visible"] = true,
 					["OnClick"] = function() 
@@ -14233,12 +14232,12 @@ app.events.ADDON_LOADED = function(addonName)
 		-- Function to Update the State of the Scan button. (Coroutines, do not call manually.)
 		local ObjectTypeMetas = {
 			["mountID"] = setmetatable({	-- Mounts
-				["f"] = 100,
+				["filterID"] = 100,
 				["description"] = "All mounts that you have not collected yet are displayed here.",
 				["priority"] = 3,
 			}, app.BaseFilter),
 			["recipeID"] = setmetatable({	-- Recipes
-				["f"] = 200,
+				["filterID"] = 200,
 				["description"] = "All recipes that you have not collected yet are displayed here.",
 				["priority"] = 6,
 			}, app.BaseFilter),
@@ -14250,7 +14249,7 @@ app.events.ADDON_LOADED = function(addonName)
 			},
 			["itemID"] = {	-- Items
 				["text"] = "Items",
-				["icon"] = "Interface/ICONS/ACHIEVEMENT_GUILDPERK_BARTERING",
+				["icon"] = "Interface/ICONS/INV_Box_02",
 				["description"] = "All items that could potentially be upgrades are listed here.",
 				["priority"] = 7,
 			},
