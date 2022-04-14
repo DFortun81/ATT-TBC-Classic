@@ -7352,7 +7352,7 @@ local spellFields = {
 		return "spellID";
 	end,
 	["text"] = function(t)
-		return t.craftTypeID and Colorize(t.name, CraftTypeIDToColor(t.craftTypeID)) or t.name;
+		return t.craftTypeID and Colorize(t.name, CraftTypeIDToColor(t.craftTypeID)) or t.link;
 	end,
 	["icon"] = function(t)
 		local icon = t.baseIcon;
@@ -7413,7 +7413,7 @@ local spellFields = {
 		return link;
 	end,
 	["nameAsItem"] = function(t)
-		return select(2, GetItemInfo(t.itemID)) or t.nameAsSpell;
+		return select(1, GetItemInfo(t.itemID)) or t.nameAsSpell;
 	end,
 	["nameAsSpell"] = function(t)
 		return select(1, GetSpellLink(t.spellID)) or RETRIEVING_DATA;
@@ -14118,6 +14118,7 @@ app.events.ADDON_LOADED = function(addonName)
 							data.trackable = nil;
 							data.saved = nil;
 						end
+						return true;
 					end,
 				},
 				{
@@ -14141,6 +14142,7 @@ app.events.ADDON_LOADED = function(addonName)
 								data.saved = nil;
 							end
 						end
+						return true;
 					end,
 				},
 				{
@@ -14164,6 +14166,7 @@ app.events.ADDON_LOADED = function(addonName)
 								data.saved = nil;
 							end
 						end
+						return true;
 					end,
 				},
 			},
