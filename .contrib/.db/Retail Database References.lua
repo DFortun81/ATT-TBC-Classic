@@ -117,6 +117,7 @@
 -- Professions
 -- #IMPORT: 11 - Professions\\Beast Training\\Beast Training.lua
 -- #IMPORT: 11 - Professions\\Cooking\\Cooking.lua
+-- #IMPORT: 11 - Professions\\First Aid\\First Aid.lua
 -- #IMPORT: 11 - Professions\\Herbalism\\Herbalism.lua
 -- #IMPORT: 11 - Professions\\Jewelcrafting\\Jewelcrafting.lua
 -- #IMPORT: 11 - Professions\\Mining\\Mining.lua
