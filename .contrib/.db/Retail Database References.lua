@@ -119,6 +119,7 @@
 -- #IMPORT: 11 - Professions\\Cooking\\Cooking.lua
 -- #IMPORT: 11 - Professions\\Herbalism\\Herbalism.lua
 -- #IMPORT: 11 - Professions\\Poisons\\Poisons.lua
+-- #IMPORT: 11 - Professions\\Skinning\\Skinning.lua
 
 -- Promotions
 -- #IMPORT: 12 - Promotions\\BlizzCon.lua

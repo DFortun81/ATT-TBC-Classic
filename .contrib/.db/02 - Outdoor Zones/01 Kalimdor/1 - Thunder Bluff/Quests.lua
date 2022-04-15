@@ -98,6 +98,20 @@ _.Zones =
 						i(5810),	-- Fresh Carcass
 					},
 				}),
+				q(768, {	-- Gathering Leather
+					["qg"] = 3050,	-- Veren Tallstrider
+					["requireSkill"] = SKINNING,
+					["coord"] = { 44.0, 44.6, THUNDER_BLUFF },
+					["cost"] = {
+						{ "i", 2318, 12 },	-- Light Leather
+					},
+					["races"] = HORDE_ONLY,
+					["lvl"] = 4,
+					["groups"] = {
+						i(5936),	-- Animal Skin Belt
+						i(4962),	-- Double-layered Gloves
+					},
+				}),
 				q(1065, {	-- Journey to Tarren Mill
 					["qg"] = 3419,	-- Apothecary Zamah
 					["coord"] = { 22.85, 20.90, THUNDER_BLUFF },
