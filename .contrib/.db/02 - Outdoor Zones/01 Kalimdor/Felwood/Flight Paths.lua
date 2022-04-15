@@ -11,11 +11,10 @@ _.Zones =
 					["coord"] = { 34.4, 53.8, FELWOOD },
 					["races"] = HORDE_ONLY,
 				}),
-				fp(166, {	-- Emerald Sanctuary, Felwood
+				applyclassicphase(TBC_PHASE_ONE, fp(166, {	-- Emerald Sanctuary, Felwood
 					["cr"] = 22931,	-- Gorrim <Emerald Circle Flight Master>
 					["coord"] = { 51.5, 82.2, FELWOOD },
-					["u"] = TBC_PHASE_ONE,
-				}),
+				})),
 				fp(65, {	-- Talonbranch Glade, Felwood
 					["cr"] = 12578,	-- Mishellena <Hippogryph Master>
 					["coord"] = { 62.6, 24.2, FELWOOD },

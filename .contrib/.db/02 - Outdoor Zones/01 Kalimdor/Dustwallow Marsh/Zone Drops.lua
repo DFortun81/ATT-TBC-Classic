@@ -16,14 +16,13 @@ _.Zones =
 						4415,	-- Giant Darkfang Spider
 					},
 				}),
-				i(33085, {	-- Bloodfen Feather
+				applyclassicphase(TBC_PHASE_ONE, i(33085, {	-- Bloodfen Feather
 					["crs"] = {
 						4356,	-- Bloodfen Razormaw
 						4357,	-- Bloodfen Lashtail
 						23873,	-- Goreclaw the Ravenous
 					},
-					["u"] = TBC_PHASE_ONE,
-				}),
+				})),
 				applyclassicphase(PHASE_FIVE, i(22094, {	-- Bloodkelp
 					["crs"] = {
 						4368,	-- Strashaz Myrmidon
@@ -47,24 +46,19 @@ _.Zones =
 						4396,	-- Mudrock Tortoise
 					},
 				}),
-				i(33051, {	-- Grimtotem Battle Plan
-					["cost"] = {
-						{ "i", 33050, 4 },	-- Grimtotem Note
-					},
-					["u"] = TBC_PHASE_ONE,
-				}),
-				i(33061, {	-- Grimtotem Key
+				applyclassicphase(TBC_PHASE_ONE, i(33051, {	-- Grimtotem Battle Plan
+					["cost"] = {{ "i", 33050, 4 }},	-- Grimtotem Note
+				})),
+				applyclassicphase(TBC_PHASE_ONE, i(33061, {	-- Grimtotem Key
 					["crs"] = {
 						23592,	-- Grimtotem Breaker
 						23714,	-- Grimtotem Elder
 						23593,	-- Grimtotem Spirit-Shifter
 					},
-					["u"] = TBC_PHASE_ONE,
-				}),
-				i(33050, {	-- Grimtotem Note
+				})),
+				applyclassicphase(TBC_PHASE_ONE, i(33050, {	-- Grimtotem Note
 					["cr"] = 23714,	-- Grimtotem Elder
-					["u"] = TBC_PHASE_ONE,
-				}),
+				})),
 				i(5942, {	-- Jeweled Pendant
 					["races"] = HORDE_ONLY,
 					["crs"] = {
@@ -76,17 +70,15 @@ _.Zones =
 						4402,	-- Muckshell Snapclaw
 					},
 				}),
-				i(33202, {	-- Marsh Frog Leg
+				applyclassicphase(TBC_PHASE_ONE, i(33202, {	-- Marsh Frog Leg
 					["cr"] = 23979,	-- Giant Marsh Frog
-					["u"] = TBC_PHASE_ONE,
-				}),
-				i(33103, {	-- Marsh Venom
+				})),
+				applyclassicphase(TBC_PHASE_ONE, i(33103, {	-- Marsh Venom
 					["crs"] = {
 						4412,	-- Darkfang Creeper
 						4348,	-- Noxious Shredder
 					},
-					["u"] = TBC_PHASE_ONE,
-				}),
+				})),
 				i(5847, {	-- Mirefin Head
 					["crs"] = {
 						14230,	-- Burgle Eye
@@ -120,16 +112,14 @@ _.Zones =
 						4391,	-- Swamp Ooze
 					},
 				}),
-				i(33114, {	-- Sealed Letter
+				applyclassicphase(TBC_PHASE_ONE, i(33114, {	-- Sealed Letter
 					["cr"] = 23881,	-- Apothecary Cylla
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
-				}),
-				i(33115, {	-- Sealed Letter
+				})),
+				applyclassicphase(TBC_PHASE_ONE, i(33115, {	-- Sealed Letter
 					["cr"] = 23881,	-- Apothecary Cylla
 					["races"] = HORDE_ONLY,
-					["u"] = TBC_PHASE_ONE,
-				}),
+				})),
 				i(5841, {	-- Searing Heart
 					["races"] = HORDE_ONLY,
 					["crs"] = {
@@ -144,11 +134,10 @@ _.Zones =
 						4324,	-- Searing Whelp
 					},
 				}),
-				i(33126, {	-- Thresher Oil
+				applyclassicphase(TBC_PHASE_ONE, i(33126, {	-- Thresher Oil
 					["cr"] = 4388,	-- Young Murk Thresher
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
-				}),
+				})),
 				i(5884, {	-- Unpopped Darkmist Eye
 					["crs"] = {
 						4377,	-- Darkmist Lurker

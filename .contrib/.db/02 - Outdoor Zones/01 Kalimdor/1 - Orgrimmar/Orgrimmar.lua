@@ -629,10 +629,9 @@ root("Zones", m(KALIMDOR, {
 						i(16042, {	-- Schematic: Thorium Widget
 							["isLimited"] = true,
 						}),
-						i(22729, {	-- Schematic: Steam Tonk Controller
+						applyclassicphase(TBC_PHASE_ONE, i(22729, {	-- Schematic: Steam Tonk Controller
 							["isLimited"] = true,
-							["u"] = TBC_PHASE_ONE,
-						}),
+						})),
 					},
 				}),
 				n(3356, {	-- Sumi <Blacksmithing Supplier>

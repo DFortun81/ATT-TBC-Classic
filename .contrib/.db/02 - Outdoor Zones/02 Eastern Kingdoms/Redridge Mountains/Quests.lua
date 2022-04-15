@@ -489,16 +489,15 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 20,
 				}),
-				q(10371, {	-- Yorus Barleybrew (Draenei)
+				applyclassicphase(TBC_PHASE_ONE, q(10371, {	-- Yorus Barleybrew (Draenei)
 					["qg"] = 16771,	-- Ahonan
 					["coord"] = { 55.0, 83.4, THE_EXODAR },
 					["timeline"] = { "removed 4.0.3.10000" },
 					["races"] = { DRAENEI },
 					["classes"] = { WARRIOR },
 					["isBreadcrumb"] = true,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 20,
-				}),
+				})),
 			}),
 		}),
 	}),

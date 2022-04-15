@@ -163,11 +163,10 @@ profession(ENGINEERING, {
 					["name"] = "Snowmaster 9000",
 					["recipeID"] = 21940
 				},
-				{
+				applyclassicphase(TBC_PHASE_ONE, {
 					["name"] = "Steam Tonk Controller",
 					["recipeID"] = 28327,
-					["u"] = TBC_PHASE_ONE,
-				},
+				}),
 				{
 					["name"] = "Target Dummy",
 					["recipeID"] = 3932

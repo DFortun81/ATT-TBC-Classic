@@ -162,7 +162,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19296),	-- Greater Darkmoon Prize
 					},
 				}),
-				q(9249, {	-- 40 Tickets - Schematic: Steam Tonk Controller
+				applyclassicphase(TBC_PHASE_ONE, q(9249, {	-- 40 Tickets - Schematic: Steam Tonk Controller
 					["qg"] = 14828,  -- Gelvas Grimegate <Darkmoon Faire Ticket Redemption>
 					["coords"] = {
 						{ 37.3, 37.7, MULGORE },
@@ -172,14 +172,13 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						-- #endif
 					},
 					["repeatable"] = true,
-					["u"] = TBC_PHASE_ONE,
 					["cost"] = {
 						{ "i", 19182, 40 },	-- Darkmoon Faire Prize Ticket
 					},
 					["groups"] = {
 						STEAM_TONK_CONTROLLER,
 					},
-				}),
+				})),
 				q(7934, {	-- 50 Tickets - Darkmoon Storage Box
 					["qg"] = 14828,  -- Gelvas Grimegate <Darkmoon Faire Ticket Redemption>
 					["coords"] = {

@@ -370,24 +370,19 @@ _.Zones =
 					},
 					["lvl"] = 50,
 				}),
-				q(9444, {	-- Defiling Uther's Tomb
+				applyclassicphase(TBC_PHASE_ONE, q(9444, {	-- Defiling Uther's Tomb
 					["qg"] = 17099,	-- Mehlar Dawnblade
 					["sourceQuest"] = 9443,	-- The So-Called Mark of the Lightbringer
 					["coord"] = { 26.6, 58.5, WESTERN_PLAGUELANDS },
 					["races"] = HORDE_ONLY,
-					["u"] = TBC_PHASE_ONE,
-					["cost"] = {
-						{ "i", 23691, 1 },	-- Corrupted Mark of the Lightbringer
-					},
 					["lvl"] = 55,
 					["groups"] = {
-						{
-							["itemID"] = 23691,	-- Corrupted Mark of the Lightbringer
-							["questID"] = 9443,	-- The So-Called Mark of the Lightbringer
+						objective(1, {	-- 0/1 Uther's Tomb Defiled
+							["provider"] = { "i", 23691 },	-- Corrupted Mark of the Lightbringer
 							["coord"] = { 52.1, 83.5, WESTERN_PLAGUELANDS },
-						},
+						}),
 					},
-				}),
+				})),
 				q(8414, {	-- Dispelling Evil
 					["qg"] = 10838,	-- Commander Ashlam Valorfist
 					["sourceQuest"] = 8415,	-- Chillwind Point
@@ -873,23 +868,18 @@ _.Zones =
 					},
 					["lvl"] = 50,
 				}),
-				q(9474, {	-- The Mark of the Lightbringer
+				applyclassicphase(TBC_PHASE_ONE, q(9474, {	-- The Mark of the Lightbringer
 					["qg"] = 17238,	-- Anchorite Truuen
 					["coord"] = { 42.9, 84.5, WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
-					["cost"] = {
-						{ "i", 23661, 1 },	-- Mark of the Lightbringer
-					},
 					["lvl"] = 55,
 					["groups"] = {
-						{
-							["itemID"] = 23661,	-- Mark of the Lightbringer
-							["questID"] = 9474,	-- The Mark of the Lightbringer
+						objective(1, {	-- 0/1 Mark of the Lightbringer
+							["provider"] = { "i", 23661 },	-- Mark of the Lightbringer
 							["coord"] = { 53.8, 24.4, WESTERN_PLAGUELANDS },
-						},
+						}),
 					},
-				}),
+				})),
 				q(5215, {	-- The Scourge Cauldrons
 					["qg"] = 10838,	-- Commander Ashlam Valorfist
 					["sourceQuest"] = 5092,	-- Clear the Way
@@ -904,23 +894,18 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 50,
 				}),
-				q(9443, {	-- The So-Called Mark of the Lightbringer
+				applyclassicphase(TBC_PHASE_ONE, q(9443, {	-- The So-Called Mark of the Lightbringer
 					["qg"] = 17099,	-- Mehlar Dawnblade
 					["coord"] = { 26.6, 58.5, WESTERN_PLAGUELANDS },
 					["races"] = HORDE_ONLY,
-					["u"] = TBC_PHASE_ONE,
-					["cost"] = {
-						{ "i", 23661, 1 },	-- Mark of the Lightbringer
-					},
 					["lvl"] = 55,
 					["groups"] = {
-						{
-							["itemID"] = 23661,	-- Mark of the Lightbringer
-							["questID"] = 9443,	-- The So-Called Mark of the Lightbringer
+						objective(1, {	-- 0/1 Mark of the Lightbringer
+							["provider"] = { "i", 23661 },	-- Mark of the Lightbringer
 							["coord"] = { 53.8, 24.4, WESTERN_PLAGUELANDS },
-						},
+						}),
 					},
-				}),
+				})),
 				q(4984, {	-- The Wildlife Suffers Too
 					["qg"] = 10739,	-- Mulgris Deepriver
 					["coord"] = { 53.6, 64.6, WESTERN_PLAGUELANDS },
@@ -932,14 +917,13 @@ _.Zones =
 					["coord"] = { 53.6, 64.6, WESTERN_PLAGUELANDS },
 					["lvl"] = 51,
 				}),
-				q(9446, {	-- Tomb of the Lightbringer
+				applyclassicphase(TBC_PHASE_ONE, q(9446, {	-- Tomb of the Lightbringer
 					["qg"] = 17238,	-- Anchorite Truuen
 					["sourceQuest"] = 9474,	-- The Mark of the Lightbringer
 					["coord"] = { 42.9, 84.5, WESTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 55,
-				}),
+				})),
 				q(5051, {	-- Two Halves Become One
 					["qg"] = 10778,	-- Janice Felstone
 					["sourceQuest"] = 5050,	-- Good Luck Charm

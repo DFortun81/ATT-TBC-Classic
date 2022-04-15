@@ -102,7 +102,6 @@ _.Zones =
 					["cost"] = {
 						{ "i", 33175, 8 },	-- Wyrmtail
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 37,
 					["groups"] = {
 						i(33271),	-- Battlecaster's Edge
@@ -664,7 +663,6 @@ _.Zones =
 					["sourceQuest"] = 11209,	-- Nat's Bargain
 					["coord"] = { 58.8, 60.2, DUSTWALLOW_MARSH },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 30,
 				})),
 				q(1166, {	-- Overlord Mok'Morokk's Concern

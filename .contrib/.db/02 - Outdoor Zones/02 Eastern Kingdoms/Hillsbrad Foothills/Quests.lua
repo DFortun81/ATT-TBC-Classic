@@ -364,23 +364,18 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
 				}),
-				q(9435, {	-- Missing Crystals
+				applyclassicphase(TBC_PHASE_ONE, q(9435, {	-- Missing Crystals
 					["qg"] = 17218,	-- Huraan
 					["coord"] = { 51.0, 58.7, HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
-					["cost"] = {
-						{ "i", 23646, 1 },	-- Shipment of Rare Crystals
-					},
 					["lvl"] = 25,
 					["groups"] = {
-						{
-							["itemID"] = 23646,	-- Shipment of Rare Crystals
-							["questID"] = 9435,	-- Missing Crystals
+						objective(1, {	-- 0/1 Shipment of Rare Crystals
+							["provider"] = { "i", 23646 },	-- Shipment of Rare Crystals
 							["coord"] = { 55.6, 35.2, HILLSBRAD_FOOTHILLS },
-						},
+						}),
 					},
-				}),
+				})),
 				q(540, {	-- Preserving Knowledge
 					["qg"] = 2277,	-- Loremaster Dibbs
 					["sourceQuest"] = 538,	-- Southshore

@@ -6,14 +6,13 @@ _.Zones =
 	m(KALIMDOR, {
 		m(ASHENVALE, {
 			n(QUESTS, {
-				q(9533, {	-- A Helping Hand
+				applyclassicphase(TBC_PHASE_ONE, q(9533, {	-- A Helping Hand
 					["qg"] = 17106,	-- Vindicator Palanaar
 					["coord"] = { 34.9, 49.7, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 22,
-				}),
-				q(9517, {	-- A Shameful Waste
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(9517, {	-- A Shameful Waste
 					["qg"] = 17291,	-- Architect Nemos
 					["coord"] = { 86.8, 44.8, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
@@ -21,16 +20,14 @@ _.Zones =
 						{ "i", 23776, 15 },	-- Warsong Lumber
 						{ "i", 24081, 5 },	-- Satyrnaar Fel Wood
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 24,
-				}),
-				q(9518, {	-- Agents of Destruction
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(9518, {	-- Agents of Destruction
 					["qg"] = 17287,	-- Sentinel Luciel Starwhisper <Silverwing Sentinels>
 					["coord"] = { 86.0, 44.4, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 24,
-				}),
+				})),
 				q(1025, {	-- An Aggressive Defense
 					["qg"] = 3691,	-- Raene Wolfrunner
 					["sourceQuest"] = 1023,	-- Raene's Cleansing (2)
@@ -84,38 +81,34 @@ _.Zones =
 						i(1970),	-- Restoring Balm
 					},
 				}),
-				q(9516, {	-- Destroy the Legion [Alliance]
+				applyclassicphase(TBC_PHASE_ONE, q(9516, {	-- Destroy the Legion [Alliance]
 					["qg"] = 17303,	-- Vindicator Vedaar <Hand of Argus>
 					["coord"] = { 86.5, 44.2, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 26,
-				}),
-				q(9534, {	-- Destroy the Legion [Horde]
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(9534, {	-- Destroy the Legion [Horde]
 					["qg"] = 17355,	-- Valusha
 					["coord"] = { 73.2, 60.4, ASHENVALE },
 					["races"] = HORDE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 26,
-				}),
-				q(9520, {	-- Diabolical Plans [Alliance]
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(9520, {	-- Diabolical Plans [Alliance]
 					["provider"] = { "i", 23777 },	-- Diabolical Plans
 					["cost"] = {
 						{ "i", 23780, 1 },	-- Diabolical Plans
 					},
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 27,
-				}),
-				q(9535, {	-- Diabolical Plans [Horde]
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(9535, {	-- Diabolical Plans [Horde]
 					["provider"] = { "i", 23797 },	-- Diabolical Plans
 					["cost"] = {
 						{ "i", 23798, 1 },	-- Diabolical Plans
 					},
 					["races"] = HORDE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 27,
-				}),
+				})),
 				q(1016, {	-- Elemental Bracers
 					["qg"] = 3885,	-- Sentinel Velene Starstrike
 					["coord"] = { 49.8, 67.2, ASHENVALE },
@@ -296,44 +289,30 @@ _.Zones =
 					},
 					["lvl"] = 14,
 				}),
-				q(9522, {	-- Never Again! [Alliance]
+				applyclassicphase(TBC_PHASE_ONE, q(9522, {	-- Never Again! [Alliance]
 					["qg"] = 17303,	-- Vindicator Vedaar <Hand of Argus>
 					["sourceQuest"] = 9520,	-- Diabolical Plans [Alliance]
 					["coord"] = { 86.5, 44.2, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 27,
 					["groups"] = {
-						i(24119, {	-- Band of Argas
-							["u"] = TBC_PHASE_ONE,
-						}),
-						i(24120, {	-- Seal of Argas
-							["u"] = TBC_PHASE_ONE,
-						}),
-						i(24118, {	-- Signet of Argas
-							["u"] = TBC_PHASE_ONE,
-						}),
+						i(24119),	-- Band of Argas
+						i(24120),	-- Seal of Argas
+						i(24118),	-- Signet of Argas
 					},
-				}),
-				q(9536, {	-- Never Again! [Horde]
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(9536, {	-- Never Again! [Horde]
 					["qg"] = 17355,	-- Valusha
 					["sourceQuest"] = 9535,	-- Diabolical Plans [Horde]
 					["coord"] = { 73.2, 60.4, ASHENVALE },
 					["races"] = HORDE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 27,
 					["groups"] = {
-						i(24119, {	-- Band of Argas
-							["u"] = TBC_PHASE_ONE,
-						}),
-						i(24120, {	-- Seal of Argas
-							["u"] = TBC_PHASE_ONE,
-						}),
-						i(24118, {	-- Signet of Argas
-							["u"] = TBC_PHASE_ONE,
-						}),
+						i(24119),	-- Band of Argas
+						i(24120),	-- Seal of Argas
+						i(24118),	-- Signet of Argas
 					},
-				}),
+				})),
 				q(1070, {	-- On Guard in Stonetalon
 					["qg"] = 4079,	-- Sentinel Thenysil
 					["coord"] = { 34.9, 49.8, ASHENVALE },
@@ -520,26 +499,24 @@ _.Zones =
 						i(6678),	-- Band of Elven Grace
 					},
 				}),
-				q(9526, {	-- Reclaiming Felfire Hill
+				applyclassicphase(TBC_PHASE_ONE, q(9526, {	-- Reclaiming Felfire Hill
 					["qg"] = 17310,	-- Gnarl <Ancient of War>
 					["coord"] = { 84.2, 45.6, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 23788, 1 },	-- Tree Seedlings
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 24,
-				}),
-				q(9521, {	-- Report from the Northern Front
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(9521, {	-- Report from the Northern Front
 					["qg"] = 17287,	-- Sentinel Luciel Starwhisper <Silverwing Sentinels>
 					["coord"] = { 86.0, 44.4, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 23778, 1 },	-- Sentinel Luciel's Report
 					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 21,
-				}),
+				})),
 				q(1009, {	-- Ruuzel
 					["qg"] = 3846,	-- Talen
 					["sourceQuest"] = 1007,	-- The Ancient Statuette
@@ -690,21 +667,18 @@ _.Zones =
 						i(16658),	-- Wildhunter Cloak
 					},
 				}),
-				q(9519, {	-- The Lost Chalice
+				applyclassicphase(TBC_PHASE_ONE, q(9519, {	-- The Lost Chalice
 					["qg"] = 3848,	-- Kayneth Stillwind
 					["coord"] = { 85.3, 44.7, ASHENVALE },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 23760, 1 },	-- Chalice of Elune
-					},
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 23,
 					["groups"] = {
-						i(23760, {	-- Chalice of Elune
+						objective(1, {	-- 0/1 Chalice of Elune
+							["provider"] = { "i", 23760 },	-- Chalice of Elune
 							["coord"] = { 81.4, 48.9, ASHENVALE },
 						}),
 					},
-				}),
+				})),
 				q(6504, {	-- The Lost Pages
 					["qg"] = 12718,	-- Gurda Ragescar
 					["coord"] = { 70.00, 71.16, ASHENVALE },

@@ -7,11 +7,8 @@ _.Zones =
 	m(EASTERN_KINGDOMS, {
 		m(DEADWIND_PASS, {
 			n(VENDORS, {
-				n(18255, {  -- Mage Darius
+				applyclassicphase(TBC_PHASE_ONE, n(18255, {  -- Mage Darius
 					["coord"] = { 47.2, 75.0, DEADWIND_PASS },
-					-- #if ANYCLASSIC
-					["u"] = TBC_PHASE_ONE,
-					-- #endif
 					["groups"] = {
 						i(31401),	-- Design: The Frozen Eye
 						applyclassicphase(TBC_PHASE_THREE, i(33165)),	-- Formula: Enchant Weapon - Greater Agility
@@ -36,7 +33,7 @@ _.Zones =
 						})),
 						-- #endif
 					},
-				}),
+				})),
 			}),
 		}),
 	}),

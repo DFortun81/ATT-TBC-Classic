@@ -686,10 +686,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(7560, {	-- Schematic: Gnomish Universal Remote
 							["isLimited"] = true,
 						}),
-						i(22729, {	-- Schematic: Steam Tonk Controller
+						applyclassicphase(TBC_PHASE_ONE, i(22729, {	-- Schematic: Steam Tonk Controller
 							["isLimited"] = true,
-							["u"] = TBC_PHASE_ONE,
-						}),
+						})),
 						i(16041, {	-- Schematic: Thorium Grenade
 							["isLimited"] = true,
 						}),

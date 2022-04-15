@@ -6,13 +6,12 @@ _.Zones =
 	m(EASTERN_KINGDOMS, {
 		m(THE_HINTERLANDS, {
 			n(QUESTS, {
-				q(9470, {	-- A Gesture of Goodwill
+				applyclassicphase(TBC_PHASE_ONE, q(9470, {	-- A Gesture of Goodwill
 					["qg"] = 17223,	-- Ambassador Rualeth
 					["coord"] = { 15.1, 47.2, THE_HINTERLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 41,
-				}),
+				})),
 				q(77, {	-- A Sticky Situation
 					["qg"] = 7801,	-- Gilveradin Sunchaser
 					["sourceQuest"] = 650,	-- Ripple Recovery
@@ -95,13 +94,12 @@ _.Zones =
 						i(19118),	-- Nature's Breath
 					},
 				}),
-				q(9469, {	-- Featherbeard's Endorsement
+				applyclassicphase(TBC_PHASE_ONE, q(9469, {	-- Featherbeard's Endorsement
 					["qg"] = 17223,	-- Ambassador Rualeth
 					["coord"] = { 15.1, 47.2, THE_HINTERLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 42,
-				}),
+				})),
 				q(485, {	-- Find OOX-09/HL!
 					["provider"] = { "i", 8704 },	-- OOX-09/HL Distress Beacon
 					["lvl"] = 43,
@@ -156,14 +154,13 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 44,
 				}),
-				q(9476, {	-- In Pursuit of Featherbeard
+				applyclassicphase(TBC_PHASE_ONE, q(9476, {	-- In Pursuit of Featherbeard
 					["provider"] = { "o", 181649 },	-- Featherbeard's Journal
 					["sourceQuest"] = 9469,	-- Featherbeard's Endorsement
 					["coord"] = { 13.4, 55.2, THE_HINTERLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 42,
-				}),
+				})),
 				q(7862, {	-- Job Opening: Guard Captain of Revantusk Village
 					["provider"] = { "o", 179913 },	-- Call to Arms!
 					["coord"] = { 79.0, 79.0, THE_HINTERLANDS },
@@ -203,28 +200,24 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 44,
 				}),
-				q(9471, {	-- Preying on the Predators
+				applyclassicphase(TBC_PHASE_ONE, q(9471, {	-- Preying on the Predators
 					["qg"] = 17223,	-- Ambassador Rualeth
 					["coord"] = { 15.1, 47.2, THE_HINTERLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
 					["lvl"] = 39,
-				}),
-				q(9475, {	-- Reclaiming the Eggs
-					["provider"] = { "o", 181643 },	-- Featherbeard's Remains
+				})),
+				applyclassicphase(TBC_PHASE_ONE, q(9475, {	-- Reclaiming the Eggs
+					["providers"] = {
+						{ "o", 181643 },	-- Featherbeard's Remains
+						{ "i",  23695 },	-- Featherbeard's Map
+					},
 					["sourceQuest"] = 9476,	-- In Pursuit of Featherbeard
 					["coord"] = { 37.1, 71.5, THE_HINTERLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
-					["cost"] = {
-						{ "i", 23695, 1 },	-- Featherbeard's Map
-						{ "i", 23694, 5 },	-- Gryphon Egg
-					},
 					["lvl"] = 42,
 					["groups"] = {
-						{
-							["itemID"] = 23694,	-- Gryphon Egg
-							["questID"] = 9475,	-- Reclaiming the Eggs
+						objective(1, {	-- 0/5 Gryphon Egg
+							["provider"] = { "i", 23694 },	-- Gryphon Egg
 							["coords"] = {
 								{ 39.9, 66.0, THE_HINTERLANDS },
 								{ 36.7, 71.2, THE_HINTERLANDS },
@@ -232,9 +225,9 @@ _.Zones =
 								{ 34.2, 72.8, THE_HINTERLANDS },
 								{ 33.7, 75.0, THE_HINTERLANDS },
 							},
-						},
+						}),
 					},
-				}),
+				})),
 				q(7846, {	-- Recover the Key!
 					["qg"] = 14757,	-- Elder Torntusk
 					["sourceQuest"] = 7845,	-- Kidnapped Elder Torntusk!

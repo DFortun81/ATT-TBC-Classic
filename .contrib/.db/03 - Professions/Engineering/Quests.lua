@@ -406,13 +406,12 @@ profession(ENGINEERING, {
 			},
 			["lvl"] = 30,
 		}),
-		q(9636, {	-- The Zapthrottle Mote Extractor! [A]
+		applyclassicphase(TBC_PHASE_ONE, q(9636, {	-- The Zapthrottle Mote Extractor! [A]
 			["qg"] = 17634,	-- K. Lee Smallfry <Engineering Trainer>
 			["altQuests"] = { 9635 },	-- The Zapthrottle Mote Extractor! [H]
 			["coord"] = { 68.6, 50.2, ZANGARMARSH },
 			["requireSkill"] = ENGINEERING,
 			["races"] = ALLIANCE_ONLY,
-			["u"] = TBC_PHASE_ONE,
 			["groups"] = {
 				objective(1, {	-- 0/15 Steam Pump Part
 					["provider"] = { "i", 23981 },	-- Steam Pump Part
@@ -420,14 +419,13 @@ profession(ENGINEERING, {
 				}),
 				i(23888),	-- Schematic: Zapthrottle Mote Extractor
 			},
-		}),
-		q(9635, {	-- The Zapthrottle Mote Extractor! [H]
+		})),
+		applyclassicphase(TBC_PHASE_ONE, q(9635, {	-- The Zapthrottle Mote Extractor! [H]
 			["qg"] = 17637,	-- Mack Diver <Engineering Trainer>
 			["altQuests"] = { 9636 },	-- The Zapthrottle Mote Extractor! [A]
 			["coord"] = { 34, 51, ZANGARMARSH },
 			["requireSkill"] = ENGINEERING,
 			["races"] = HORDE_ONLY,
-			["u"] = TBC_PHASE_ONE,
 			["groups"] = {
 				objective(1, {	-- 0/15 Steam Pump Part
 					["provider"] = { "i", 23981 },	-- Steam Pump Part
@@ -435,6 +433,6 @@ profession(ENGINEERING, {
 				}),
 				i(23888),	-- Schematic: Zapthrottle Mote Extractor
 			},
-		}),
+		})),
 	}),
 });

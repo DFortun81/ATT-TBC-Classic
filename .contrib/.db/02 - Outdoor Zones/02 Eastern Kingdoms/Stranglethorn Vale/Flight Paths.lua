@@ -21,12 +21,11 @@ _.Zones =
 					["coord"] = { 32.6, 29.2, STRANGLETHORN_VALE },
 					["races"] = HORDE_ONLY,
 				}),
-				fp(195, {	-- Rebel Camp, Stranglethorn
+				applyclassicphase(TBC_PHASE_ONE, fp(195, {	-- Rebel Camp, Stranglethorn
 					["cr"] = 24366,	-- Nizzle <Gryphon Master>
 					["coord"] = { 38.2, 4.0, STRANGLETHORN_VALE },
 					["races"] = ALLIANCE_ONLY,
-					["u"] = TBC_PHASE_ONE,
-				}),
+				})),
 			}),
 		}),
 	}),
