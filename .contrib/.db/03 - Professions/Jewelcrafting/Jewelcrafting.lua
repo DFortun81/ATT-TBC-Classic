@@ -284,13 +284,13 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				["recipeID"] = 26881
 			}
 		}),
-		filter(34, {	-- Fist Weapons
+		filter(FIST_WEAPONS, {
 			{
 				["name"] = "Heavy Iron Knuckles",
 				["recipeID"] = 25612
 			}
 		}),
-		filter(50, {	-- Miscellaneous
+		filter(MISC, {
 			{
 				["name"] = "Coarse Stone Statue",
 				["recipeID"] = 32801
@@ -2679,7 +2679,8 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				},
 				{
 					["name"] = "Resolute Hessonite",
-					["recipeID"] = 73259
+					["recipeID"] = 73259,
+					["timeline"] = { "created 4.0.3" },
 				},
 				{
 					["name"] = "Resolute Lava Coral",
@@ -2981,7 +2982,8 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				},
 				{
 					["name"] = "Mystic Alicite",
-					["recipeID"] = 73233
+					["recipeID"] = 73233,
+					["timeline"] = { "created 4.0.3" },
 				},
 				{
 					["name"] = "Mystic Amberjewel",
@@ -4131,7 +4133,8 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 				},
 				{
 					["name"] = "Taladite Crystal",
-					["recipeID"] = 170832
+					["recipeID"] = 170832,
+					["timeline"] = { "created 6.0.1.18566" },
 				},
 				{
 					["name"] = "Taladite Crystal",
@@ -5521,6 +5524,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 311951
 				},
 				{
+					["name"] = "Mass Prospect Progenium",
+					["recipeID"] = 359492,
+					["timeline"] = { "added 9.2.0" },
+				},
+				{
 					["name"] = "Mass Prospect Sinvyr",
 					["recipeID"] = 311952
 				},
@@ -5535,6 +5543,11 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 			["categoryID"] = 1421,
 			["groups"] = {
 				{
+					["name"] = "Aealic Harmonizing Stone",
+					["recipeID"] = 360016,
+					["timeline"] = { "added 9.2.0" },
+				},
+				{
 					["name"] = "Crafter's Mark I",
 					["recipeID"] = 343697
 				},
@@ -5543,9 +5556,29 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 343696
 				},
 				{
+					["name"] = "Crafter's Mark IV",
+					["recipeID"] = 359663,
+					["timeline"] = { "added 9.2.0" },
+				},
+				{
+					["name"] = "Crafter's Mark of the First Ones",
+					["recipeID"] = 359672,
+					["timeline"] = { "added 9.2.0" },
+				},
+				{
+					["name"] = "Devourer Essence Stone",
+					["recipeID"] = 360317,
+					["timeline"] = { "added 9.2.0" },
+				},
+				{
 					["name"] = "Novice Crafter's Mark",
 					["recipeID"] = 343693
-				}
+				},
+				{
+					["name"] = "Vestige of the Eternal",
+					["recipeID"] = 359701,
+					["timeline"] = { "added 9.2.0" },
+				},
 			}
 		},
 		{
@@ -5671,7 +5704,15 @@ applyclassicphase(TBC_PHASE_ONE, profession(JEWELCRAFTING, {
 					["recipeID"] = 334548
 				}
 			}
-		}
+		},
+		category(178, {	-- Statues
+			recipe(355187, {	-- Porous Stone Statue
+				["name"] = "Porous Stone Statue",
+			}),
+			recipe(355189, {	-- Shaded Stone Statue
+				["name"] = "Shaded Stone Statue",
+			}),
+		}),
 	})),
 	-- #if AFTER CATA
 	n(QUESTS, applyclassicphase(CATA_PHASE_ONE, {
@@ -5751,7 +5792,7 @@ cacheRecipes(_.Professions);
 
 -- Jewelcrafting Item Recipe Database
 local itemrecipe = function(name, itemID, spellID, spellIDAfterCata, timeline)
-	local o = { ["itemID"] = itemID, ["spellID"] = spellID, ["requireSkill"] = JEWELCRAFTING, ["f"] = 200 };
+	local o = { ["itemID"] = itemID, ["spellID"] = spellID, ["requireSkill"] = JEWELCRAFTING, ["f"] = RECIPES };
 	if spellIDAfterCata then
 		if type(spellIDAfterCata) == "number" then
 			-- #if AFTER CATA
@@ -5811,6 +5852,7 @@ local itemrecipe = function(name, itemID, spellID, spellIDAfterCata, timeline)
 	return o;
 end
 
+-- #if AFTER TBC
 -- Recipes introduced with Burning Crusade
 itemrecipe("Design: Amulet of Flowing Life", 35202, 46126);
 itemrecipe("Design: Amulet of the Moon", 20854, 25339);
@@ -6058,7 +6100,7 @@ itemrecipe({"Design: Sparkling Azure Moonstone [TBC]", "Design: Sparkling Azure 
 itemrecipe({"Design: Teardrop Blood Garnet [TBC]", "Design: Brilliant Blood Garnet [CATA+]"}, 23130, 28903, 28903, REMOVED_WITH_CATA);
 itemrecipe({"Design: Thick Lionseye [TBC]", "Design: Subtle Lionseye [CATA+]"}, 35261, 39723, 39713, REMOVED_WITH_CATA);
 itemrecipe({"Design: Glowing Shadow Draenite [TBC]", "Design: Timeless Shadow Draenite [CATA+]"}, 23144, 28925, 28925, REMOVED_WITH_CATA);
-
+-- #endif
 
 -- #if AFTER WRATH
 --[[
@@ -6353,9 +6395,9 @@ neverimplemented(itemrecipe("Design: Chaotic Skyfire Diamond", 34221, 44794));	-
 neverimplemented(itemrecipe("Design: Cut Emerald - Deprecated", 21950));
 neverimplemented(itemrecipe("Design: Cut Azerothian Diamond", 21951));
 neverimplemented(itemrecipe("Design: Primal Stone Statue", 25888, 32810));
-neverimplemented(recipe(32810));	-- Primal Stone Statue
 neverimplemented(itemrecipe("Design: Relentless Earthstorm Diamond", 32412, 39961));	-- Originally Consortium Quartermaster, never made it out of Beta. A Different version was added later.
 neverimplemented(itemrecipe("Design: Teardrop Crimson Spinel [TBC] / Design: Brilliant Crimson Spinel [CATA]", 35250, 39710));	-- Originally Shattered Sun Offensive Vendor, never made it out of Beta. A Different version was added later.
+neverimplemented(recipe(32810));	-- Primal Stone Statue
 neverimplemented(i(25884));	-- Primal Stone Statue
 neverimplemented(itemrecipe("Design: Silver Rose Pendant", 20972, 25614));
 neverimplemented(recipe(25614));	-- Silver Rose Pendant
@@ -6410,3 +6452,9 @@ neverimplemented(i(52165));	-- Perfect Mystic Alicite
 
 -- Apply the Never Implemented flag to the Never Implemented things.
 bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, nyi_);
+
+-- #if AFTER BFA
+root("HiddenQuestTriggers", {
+	q(55631),	-- Jewelcrafting Diode shrine. harvesting gems from them triggered this quest. Nazmir location
+});
+-- #endif
