@@ -118,6 +118,7 @@
 -- #IMPORT: 11 - Professions\\Beast Training\\Beast Training.lua
 -- #IMPORT: 11 - Professions\\Cooking\\Cooking.lua
 -- #IMPORT: 11 - Professions\\Herbalism\\Herbalism.lua
+-- #IMPORT: 11 - Professions\\Jewelcrafting\\Jewelcrafting.lua
 -- #IMPORT: 11 - Professions\\Poisons\\Poisons.lua
 -- #IMPORT: 11 - Professions\\Skinning\\Skinning.lua
 
