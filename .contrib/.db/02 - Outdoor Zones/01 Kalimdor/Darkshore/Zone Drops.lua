@@ -5,6 +5,9 @@ _.Zones =
 {
 	m(KALIMDOR, {
 		m(DARKSHORE, {
+			prof(FISHING, {
+				i(12238),	-- Darkshore Grouper
+			}),
 			n(ZONE_DROPS, {
 				i(5338, {	-- Ancient Moonstone Seal
 					["questID"] = 956,	-- Bashal'Aran (3/4)

@@ -294,6 +294,24 @@ _.Zones =
 						i(15402),	-- Noosegrip Gauntlets
 					},
 				}),
+				q(1580, {	-- Electropellers
+					["qg"] = 3666,	-- Wizbang Cranktoggle
+					["sourceQuest"] = 1579,	-- Gaffer Jacks
+					["coord"] = { 37.0, 44.0, DARKSHORE },
+					["requireSkill"] = FISHING,
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 10,
+					["groups"] = {
+						objective(1, {	-- 0/12 Electropeller
+							["provider"] = { "i", 6718 },	-- Electropeller
+							["coords"] = {
+								{ 52.0, 28.9, DARKSHORE },
+								{ 41.5, 73.4, DARKSHORE },
+							},
+						}),
+						i(6811),	-- Aquadynamic Fish Lens
+					},
+				}),
 				q(994, {	-- Escape Through Force
 					["qg"] = 3692,	-- Volcor
 					["sourceQuest"] = 993,	-- A Lost Master
@@ -347,6 +365,19 @@ _.Zones =
 					["groups"] = {
 						i(15405),	-- Shucking Gloves
 						i(15406),	-- Crustacean Boots
+					},
+				}),
+				q(1579, {	-- Gaffer Jacks
+					["qg"] = 3666,	-- Wizbang Cranktoggle
+					["description"] = 'Requires fishing skill level 30',
+					["coord"] = { 37.0, 44.0, DARKSHORE },
+					["requireSkill"] = FISHING,
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 10,
+					["groups"] = {
+						objective(1, {	-- 0/8 Gaffer Jack
+							["provider"] = { "i", 6717 },	-- Gaffer Jack
+						}),
 					},
 				}),
 				q(6123, {	-- Gathering the Cure
@@ -641,6 +672,18 @@ _.Zones =
 					["coord"] = { 40.3, 59.7, DARKSHORE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 9,
+				}),
+				q(1141, {	-- The Family and the Fishing Pole
+					["qg"] = 10216,	-- Gubber Blump
+					["description"] = "Talk to Gubber Blump after accepting the quest to learn Fishing. Buy a Fishing Pole for 23c and a Shiny Bauble for 50c from Gubber Blump. Start fishing next to Gubber Blump to catch the fish required for the quest.",
+					["coord"] = { 36.1, 44.9, DARKSHORE },
+					["requireSkill"] = FISHING,
+					["races"] = ALLIANCE_ONLY,
+					["cost"] = { { "i", 12238, 6 } },	-- Darkshore Grouper
+					["lvl"] = 10,
+					["groups"] = {
+						i(12225),	-- Blump Family Fishing Pole
+					},
 				}),
 				q(4813, {	-- The Fragments Within
 					["provider"] = { "o", 175524 },	-- Mysterious Red Crystal

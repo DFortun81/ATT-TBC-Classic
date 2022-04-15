@@ -371,6 +371,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 10,
 				}),
+				q(6609, {	-- I Got Nothin' Left!
+					["qg"] = 5161,	-- Grimnur Stonebrand <Fishing Trainer>
+					["description"] = "Requires 225 Fishing to start this quest.",
+					["coord"] = { 48.4, 6.4, IRONFORGE },
+					["requireSkill"] = FISHING,
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 35,
+				}),
 				q(1073, {	-- Ineptitude + Chemicals = Fun (1/2)
 					["qg"] = 4081,	-- Lomac Gearstrip
 					["sourceQuest"] = 1072,	-- An Old Colleague

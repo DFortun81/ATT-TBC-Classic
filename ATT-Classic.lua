@@ -1312,6 +1312,20 @@ ResolveSymbolicLink = function(o)
 					-- Select the direct parent object.
 					table.insert(searchResults, o.parent);
 				end
+			elseif cmd == "selectprofession" then
+				local requireSkill, response = sym[2];
+				if app.Categories.Achievements then
+					response = app:BuildSearchResponse(app.Categories.Achievements, "requireSkill", requireSkill);
+					if response then tinsert(searchResults, {text=ACHIEVEMENTS,icon = app.asset("Category_Achievements"),g=response}); end
+				end
+				response = app:BuildSearchResponse(app.Categories.Instances, "requireSkill", requireSkill);
+				if response then tinsert(searchResults, {text=GROUP_FINDER,icon = app.asset("Category_D&R"),g=response}); end
+				response = app:BuildSearchResponse(app.Categories.Zones, "requireSkill", requireSkill);
+				if response then tinsert(searchResults, {text=BUG_CATEGORY2,icon = app.asset("Category_Zones"),g=response});  end
+				response = app:BuildSearchResponse(app.Categories.WorldDrops, "requireSkill", requireSkill);
+				if response then tinsert(searchResults, {text=TRANSMOG_SOURCE_4,icon = app.asset("Category_WorldDrops"),g=response});  end
+				response = app:BuildSearchResponse(app.Categories.Craftables, "requireSkill", requireSkill);
+				if response then tinsert(searchResults, {text=LOOT_JOURNAL_LEGENDARIES_SOURCE_CRAFTED_ITEM,icon = app.asset("Category_Crafting"),g=response});  end
 			elseif cmd == "fill" then
 				-- Instruction to fill with identical content cached elsewhere for this group
 				local cache = app.SearchForField(o.key, o[o.key]);
@@ -6866,6 +6880,9 @@ local fields = {
 	["requireSkill"] = function(t)
 		return t.professionID;
 	end,
+	["sym"] = function(t)
+		return {{"selectprofession", t.professionID}};
+	end
 };
 app.BaseProfession = app.BaseObjectFields(fields);
 app.CreateProfession = function(id, t)
@@ -13328,19 +13345,12 @@ app:GetWindow("Tradeskills", UIParent, function(self, ...)
 							if not cache then
 								cache = CloneData(group);
 								self.cache[group.spellID] = cache;
-								local requireSkill, response = cache.requireSkill;
-								if app.Categories.Achievements then
-									response = app:BuildSearchResponse(app.Categories.Achievements, "requireSkill", requireSkill);
-									if response then tinsert(cache.g, {text=ACHIEVEMENTS,icon = app.asset("Category_Achievements"),g=response}); end
+								local searchResults = ResolveSymbolicLink(group);
+								if searchResults and #searchResults then
+									for j,o in ipairs(searchResults) do
+										tinsert(cache.g, o);
+									end
 								end
-								response = app:BuildSearchResponse(app.Categories.Instances, "requireSkill", requireSkill);
-								if response then tinsert(cache.g, {text=GROUP_FINDER,icon = app.asset("Category_D&R"),g=response}); end
-								response = app:BuildSearchResponse(app.Categories.Zones, "requireSkill", requireSkill);
-								if response then tinsert(cache.g, {text=BUG_CATEGORY2,icon = app.asset("Category_Zones"),g=response});  end
-								response = app:BuildSearchResponse(app.Categories.WorldDrops, "requireSkill", requireSkill);
-								if response then tinsert(cache.g, {text=TRANSMOG_SOURCE_4,icon = app.asset("Category_WorldDrops"),g=response});  end
-								response = app:BuildSearchResponse(app.Categories.Craftables, "requireSkill", requireSkill);
-								if response then tinsert(cache.g, {text=LOOT_JOURNAL_LEGENDARIES_SOURCE_CRAFTED_ITEM,icon = app.asset("Category_Crafting"),g=response});  end
 							end
 							table.insert(g, cache);
 						end

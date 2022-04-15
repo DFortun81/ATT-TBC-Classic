@@ -509,6 +509,15 @@ root("Zones", m(KALIMDOR, {
 					["classes"] = { ROGUE },
 					["lvl"] = 16,
 				}),
+				q(6608, {	-- You Too Good.
+					["qg"] = 3332,	-- Lumak <Fishing Trainer>
+					["description"] = "Requires 225 Fishing to start this quest.",
+					["coord"] = { 69.8, 29.6, ORGRIMMAR },
+					["requireSkill"] = FISHING,
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 35,
+				}),
 				q(2379, {	-- Zando'zan
 					["qg"] = 3401,	-- Shenthul
 					["sourceQuests"] = {

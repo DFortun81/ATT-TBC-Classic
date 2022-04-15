@@ -1,71 +1,4 @@
-profession(FISHING, {
-	n(QUESTS, {
-		q(1580, {	-- Electropellers
-			["qg"] = 3666,	-- Wizbang Cranktoggle
-			["sourceQuest"] = 1579,	-- Gaffer Jacks
-			["requireSkill"] = FISHING,
-			["coord"] = { 37.0, 44.0, DARKSHORE },
-			["races"] = ALLIANCE_ONLY,
-			["cost"] = {
-				{ "i", 6718, 12 },	-- Electropeller
-			},
-			["lvl"] = 10,
-			["groups"] = {
-				{
-					["itemID"] = 6718,	-- Electropeller
-					["questID"] = 1580,	-- Electropellers
-					["coords"] = {
-						{ 52.0, 28.9, DARKSHORE },
-						{ 41.5, 73.4, DARKSHORE },
-					},
-				},
-				i(6811),	-- Aquadynamic Fish Lens
-			},
-		}),
-		q(1579, {	-- Gaffer Jacks
-			["qg"] = 3666,	-- Wizbang Cranktoggle
-			["requireSkill"] = FISHING,
-			["description"] = 'Requires fishing skill level 30',
-			["coord"] = { 37.0, 44.0, DARKSHORE },
-			["races"] = ALLIANCE_ONLY,
-			["cost"] = {
-				{ "i", 6717, 8 },	-- Gaffer Jack
-			},
-			["lvl"] = 10,
-		}),
-		q(6609, {	-- I Got Nothin' Left!
-			["qg"] = 5161,	-- Grimnur Stonebrand <Fishing Trainer>
-			["requireSkill"] = FISHING,
-			["description"] = "Requires 225 Fishing to start this quest.",
-			["coord"] = { 48.4, 6.4, IRONFORGE },
-			["races"] = ALLIANCE_ONLY,
-			["isBreadcrumb"] = true,
-			["lvl"] = 35,
-		}),
-		q(1141, {	-- The Family and the Fishing Pole
-			["qg"] = 10216,	-- Gubber Blump
-			["description"] = "Talk to Gubber Blump after accepting the quest to learn Fishing. Buy a Fishing Pole for 23c and a Shiny Bauble for 50c from Gubber Blump. Start fishing next to Gubber Blump to catch the fish required for the quest.",
-			["coord"] = { 36.1, 44.9, DARKSHORE },
-			["races"] = ALLIANCE_ONLY,
-			["cost"] = {
-				{ "i", 12238, 6 },	-- Darkshore Grouper
-			},
-			["lvl"] = 10,
-			["groups"] = {
-				i(12225),	-- Blump Family Fishing Pole
-			},
-		}),
-		q(6608, {	-- You Too Good.
-			["qg"] = 3332,	-- Lumak <Fishing Trainer>
-			["requireSkill"] = FISHING,
-			["description"] = "Requires 225 Fishing to start this quest.",
-			["coord"] = { 69.8, 29.6, ORGRIMMAR },
-			["races"] = HORDE_ONLY,
-			["isBreadcrumb"] = true,
-			["lvl"] = 35,
-		}),
-	}),
-});
+profession(FISHING);
 
 -- Fishing Recipes
 local itemDB = root("ItemDB", {});
@@ -93,7 +26,7 @@ itemrecipe(34109, 43308, "added 2.3.0.7382", TBC_PHASE_ONE);	-- Weather-Beaten J
 
 -- These items never made it in.
 root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
-	filter(200, {	-- Recipes
+	filter(RECIPES, {
 		i(16082),	-- Artisan Fishing - The Way of the Lure
 		-- #if AFTER CATA
 		i(46054),	-- Journeyman Fishing - Fishing for Dummies
