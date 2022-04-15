@@ -114,6 +114,12 @@
 -- #IMPORT: 10 - Craftables\\01 - Classic.lua
 -- #IMPORT: 10 - Craftables\\02 - Burning Crusade.lua
 
+-- Professions
+-- #IMPORT: 11 - Professions\\Beast Training\\Beast Training.lua
+-- #IMPORT: 11 - Professions\\Cooking\\Cooking.lua
+-- #IMPORT: 11 - Professions\\Herbalism\\Herbalism.lua
+-- #IMPORT: 11 - Professions\\Poisons\\Poisons.lua
+
 -- Promotions
 -- #IMPORT: 12 - Promotions\\BlizzCon.lua
 -- #IMPORT: 12 - Promotions\\Collector's Editions.lua

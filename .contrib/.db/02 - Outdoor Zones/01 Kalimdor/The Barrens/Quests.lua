@@ -1118,6 +1118,18 @@ _.Zones =
 					["races"] = HORDE_ONLY,
 					["lvl"] = 14,
 				}),
+				q(866,	{	-- Root Samples
+					["qg"] = 3446,	-- Mebok Mizzyrix
+					["coord"] = { 62.4, 37.6, THE_BARRENS },
+					["requireSkill"] = HERBALISM,
+					["cost"] = {
+						{ "i", 5056, 8 },	-- Root Sample
+					},
+					["lvl"] = 9,
+					["groups"] = {
+						i(5341),	-- Spore-Covered Tunic
+					},
+				}),
 				q(894, {	-- Samophlange
 					["qg"] = 3442,	-- Sputtervalve
 					["coord"] = { 62.98, 37.21, THE_BARRENS },
