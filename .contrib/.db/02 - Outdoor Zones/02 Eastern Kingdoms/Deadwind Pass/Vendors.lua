@@ -22,7 +22,16 @@ _.Zones =
 							["requireSkill"] = LEATHERWORKING,
 							["f"] = 200,
 						})),
-						applyclassicphase(TBC_PHASE_THREE, i(33209)),	-- Recipe: Flask of Chromatic Wonder
+						applyclassicphase(TBC_PHASE_THREE, i(33209, {	-- Recipe: Flask of Chromatic Wonder
+							-- #if BEFORE MOP
+							["spellID"] = 42736,	-- Flask of Chromatic Wonder
+							["requireSkill"] = ALCHEMY,
+							["f"] = RECIPES,
+							-- #else
+							["spellID"] = 0,
+							-- #endif
+							["timeline"] = { "removed 5.0.1.20000" },
+						})),
 						i(29187),	-- Inscription of Endurance
 						-- #if BEFORE CATA
 						applyclassicphase(TBC_PHASE_THREE, i(34581, {	-- Mysterious Arrow
