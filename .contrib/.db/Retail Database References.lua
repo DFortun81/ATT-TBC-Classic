@@ -77,6 +77,13 @@
 -- #IMPORT: 01 - Dungeons Raids\\3 - Wrath of the Lich King\\9 The Ruby Sanctum.lua
 
 -- Outdoor Zones
+
+-- Eastern Kingdoms
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Deeprun Tram.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Eversong Woods\\Eversong Woods.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Ghostlands\\Ghostlands.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Isle of Quel'Danas\\Isle of Quel'Danas.lua
+
 -- Outland
 -- #IMPORT: 02 - Outdoor Zones\\03 Outland\\0 - Metadata.lua
 -- #IMPORT: 02 - Outdoor Zones\\03 Outland\\1 - Shattrath City.lua

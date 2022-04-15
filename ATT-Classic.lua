@@ -6300,8 +6300,10 @@ local onMapUpdate = function(t)
 			end
 		else
 			explorationHeader = app.CreateNPC(-15, newExplorationObjects);
+			explorationHeader.u = t.u;
 			for i,o in ipairs(newExplorationObjects) do
 				o.parent = explorationHeader;
+				if not o.u then o.u = t.u; end
 			end
 			explorationHeader.parent = t;
 			tinsert(t.g, 1, explorationHeader);
@@ -6392,8 +6394,10 @@ app.CreateMap = function(id, t)
 				end
 			else
 				explorationHeader = app.CreateNPC(-15, newExplorationObjects);
+				explorationHeader.u = t.u;
 				for i,o in ipairs(newExplorationObjects) do
 					o.parent = explorationHeader;
+					if not o.u then o.u = t.u; end
 				end
 				explorationHeader.parent = t;
 				tinsert(t.g, 1, explorationHeader);
