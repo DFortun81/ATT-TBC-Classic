@@ -123,6 +123,7 @@
 -- #IMPORT: 11 - Professions\\Jewelcrafting\\Jewelcrafting.lua
 -- #IMPORT: 11 - Professions\\Mining\\Mining.lua
 -- #IMPORT: 11 - Professions\\Poisons\\Poisons.lua
+-- #IMPORT: 11 - Professions\\Runeforging\\Runeforging.lua
 -- #IMPORT: 11 - Professions\\Skinning\\Skinning.lua
 
 -- Promotions
