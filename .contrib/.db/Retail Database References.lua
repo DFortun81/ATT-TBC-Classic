@@ -79,10 +79,12 @@
 -- Outdoor Zones
 
 -- Eastern Kingdoms
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\0 - Metadata.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Silvermoon City.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Deeprun Tram.lua
--- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Eversong Woods\\Eversong Woods.lua
--- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Ghostlands\\Ghostlands.lua
--- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Isle of Quel'Danas\\Isle of Quel'Danas.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Eversong Woods.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Ghostlands.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Isle of Quel'Danas.lua
 
 -- Outland
 -- #IMPORT: 02 - Outdoor Zones\\03 Outland\\0 - Metadata.lua
