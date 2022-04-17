@@ -247,7 +247,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19426),	-- Orb of the Darkmoon
 					},
 				}),
-				q(7885,  {	-- Armor Kits [Tier 5]
+				q(7885, {	-- Armor Kits [Tier 5]
 					["qg"] = 14833,  -- Chronos <He Who Never Forgets!>
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
@@ -266,7 +266,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7892,  {	-- Big Black Mace [Tier 4]
+				q(7892, {	-- Big Black Mace [Tier 4]
 					["qg"] = 14832,  -- Kerri Hicks <The Strongest Woman Alive!>
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
@@ -285,7 +285,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7881,  {	-- Carnival Boots [Tier 1]
+				q(7881, {	-- Carnival Boots [Tier 1]
 					["qg"] = 14833,  -- Chronos <He Who Never Forgets!>
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
@@ -303,7 +303,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7882,  {	-- Carnival Jerkins [Tier 2]
+				q(7882, {	-- Carnival Jerkins [Tier 2]
 					["qg"] = 14833,  -- Chronos <He Who Never Forgets!>
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
@@ -322,7 +322,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7889,  {	-- Coarse Weightstone [Tier 1]
+				q(7889, {	-- Coarse Weightstone [Tier 1]
 					["qg"] = 14832,  -- Kerri Hicks <The Strongest Woman Alive!>
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
@@ -340,7 +340,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7894,  {	-- Copper Modulator [Tier 1]
+				q(7894, {	-- Copper Modulator [Tier 1]
 					["qg"] = 14841,  -- Rinling
 					["coords"] = {
 						{ 41.7, 70.7, ELWYNN_FOREST },
@@ -358,7 +358,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7884,  {	-- Crocolisk Boy and the Bearded Murloc [Tier 4]
+				q(7884, {	-- Crocolisk Boy and the Bearded Murloc [Tier 4]
 					["qg"] = 14833,  -- Chronos <He Who Never Forgets!>
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
@@ -377,7 +377,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				applyclassicphase(PHASE_THREE, q(7907,  {	-- Darkmoon Beast Deck
+				applyclassicphase(PHASE_THREE, q(7907, {	-- Darkmoon Beast Deck
 					["provider"] = { "i", 19228 },  -- Beasts Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -385,7 +385,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19288),	-- Darkmoon Card: Blue Dragon
 					},
 				})),
-				applyclassicphase(TBC_PHASE_THREE, q(10938,  {	-- Darkmoon Blessings Deck
+				applyclassicphase(TBC_PHASE_THREE, q(10938, {	-- Darkmoon Blessings Deck
 					["provider"] = { "i", 31890 },  -- Blessings Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -401,7 +401,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(42989),	-- Darkmoon Card: Berserker!
 					},
 				})),
-				applyclassicphase(PHASE_THREE, q(7929,  {	-- Darkmoon Elementals Deck
+				applyclassicphase(PHASE_THREE, q(7929, {	-- Darkmoon Elementals Deck
 					["provider"] = { "i", 19267 },  -- Elementals Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -409,7 +409,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19289),	-- Darkmoon Card: Maelstrom
 					},
 				})),
-				applyclassicphase(TBC_PHASE_THREE, q(10940,  {	-- Darkmoon Furies Deck
+				applyclassicphase(TBC_PHASE_THREE, q(10940, {	-- Darkmoon Furies Deck
 					["provider"] = { "i", 31907 },  -- Furies Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -417,7 +417,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(31858),	-- Darkmoon Card: Vengeance
 					},
 				})),
-				applyclassicphase(TBC_PHASE_THREE, q(10941,  {	-- Darkmoon Lunacy Deck
+				applyclassicphase(TBC_PHASE_THREE, q(10941, {	-- Darkmoon Lunacy Deck
 					["provider"] = { "i", 31914 },  -- Lunacy Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -425,7 +425,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(31859),	-- Darkmoon Card: Madness
 					},
 				})),
-				applyclassicphase(PHASE_THREE, q(7927,  {	-- Darkmoon Portals Deck
+				applyclassicphase(PHASE_THREE, q(7927, {	-- Darkmoon Portals Deck
 					["provider"] = { "i", 19277 },  -- Portals Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -433,7 +433,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19290),	-- Darkmoon Card: Twisting Nether
 					},
 				})),
-				applyclassicphase(TBC_PHASE_THREE, q(10939,  {	-- Darkmoon Storms Deck
+				applyclassicphase(TBC_PHASE_THREE, q(10939, {	-- Darkmoon Storms Deck
 					["provider"] = { "i", 31891 },  -- Storms Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -441,7 +441,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(31857),	-- Darkmoon Card: Wrath
 					},
 				})),
-				applyclassicphase(PHASE_THREE, q(7928,  {	-- Darkmoon Warlords Deck
+				applyclassicphase(PHASE_THREE, q(7928, {	-- Darkmoon Warlords Deck
 					["provider"] = { "i", 19257 },  -- Warlords Deck
 					["maxReputation"] = DECK_MAX_REPUTATION,
 					["repeatable"] = true,
@@ -449,7 +449,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19287),	-- Darkmoon Card: Heroism
 					},
 				})),
-				q(7903,  {	-- Evil Bat Eyes [Tier 5]
+				q(7903, {	-- Evil Bat Eyes [Tier 5]
 					["qg"] = 14829,  -- Yebb Neblegear
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
@@ -468,7 +468,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(8222,  {	-- Glowing Scorpid Blood [Tier 5]
+				q(8222, {	-- Glowing Scorpid Blood [Tier 5]
 					["qg"] = 14829,  -- Yebb Neblegear
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
@@ -487,7 +487,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7896,  {	-- Green Fireworks [Tier 3]
+				q(7896, {	-- Green Fireworks [Tier 3]
 					["qg"] = 14841,  -- Rinling
 					["coords"] = {
 						{ 41.7, 70.7, ELWYNN_FOREST },
@@ -506,7 +506,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7891,  {	-- Green Iron Bracers [Tier 3]
+				q(7891, {	-- Green Iron Bracers [Tier 3]
 					["qg"] = 14832,  -- Kerri Hicks <The Strongest Woman Alive!>
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
@@ -525,7 +525,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7890,  {	-- Heavy Grinding Stone [Tier 2]
+				q(7890, {	-- Heavy Grinding Stone [Tier 2]
 					["qg"] = 14832,  -- Kerri Hicks <The Strongest Woman Alive!>
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
@@ -544,7 +544,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7897,  {	-- Mechanical Repair Kits [Tier 4]
+				q(7897, {	-- Mechanical Repair Kits [Tier 4]
 					["qg"] = 14841,  -- Rinling
 					["coords"] = {
 						{ 41.7, 70.7, ELWYNN_FOREST },
@@ -563,7 +563,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7941,  {	-- More Armor Kits [Tier 5] (Not Really)
+				q(7941, {	-- More Armor Kits [Tier 5] (Not Really)
 					["qg"] = 14833,  -- Chronos <He Who Never Forgets!>
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
@@ -582,7 +582,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7943,  {	-- More Bat Eyes [Tier 5] (Not Really)
+				q(7943, {	-- More Bat Eyes [Tier 5] (Not Really)
 					["qg"] = 14829,  -- Yebb Neblegear
 					["sourceQuest"] = 7903,	-- Evil Bat Eyes
 					["coords"] = {
@@ -601,7 +601,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7939,  {	-- More Dense Grinding Stones [Tier 5] (Not Really)
+				q(7939, {	-- More Dense Grinding Stones [Tier 5] (Not Really)
 					["qg"] = 14832,  -- Kerri Hicks <The Strongest Woman Alive!>
 					["sourceQuest"] = 7893,	-- Rituals of Strength
 					["coords"] = {
@@ -620,7 +620,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(8223,  {	-- More Glowing Scorpid Blood [Tier 5] (Not Really)
+				q(8223, {	-- More Glowing Scorpid Blood [Tier 5] (Not Really)
 					["qg"] = 14829,  -- Yebb Neblegear
 					["sourceQuest"] = 8222,	-- Glowing Scorpid Blood
 					["coords"] = {
@@ -639,7 +639,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7942,  {	-- More Thorium Widgets [Tier 5] (Not Really)
+				q(7942, {	-- More Thorium Widgets [Tier 5] (Not Really)
 					["qg"] = 14841,  -- Rinling
 					["sourceQuest"] = 7898,	-- Thorium Widget
 					["coords"] = {
@@ -658,7 +658,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7893,  {	-- Rituals of Strength [Tier 5]
+				q(7893, {	-- Rituals of Strength [Tier 5]
 					["qg"] = 14832,  -- Kerri Hicks <The Strongest Woman Alive!>
 					["coords"] = {
 						{ 40.5, 69.9, ELWYNN_FOREST },
@@ -677,7 +677,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7899,  {	-- Small Furry Paws [Tier 1]
+				q(7899, {	-- Small Furry Paws [Tier 1]
 					["qg"] = 14829,  -- Yebb Neblegear
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
@@ -695,7 +695,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7901,  {	-- Soft Bushy Tails [Tier 3]
+				q(7901, {	-- Soft Bushy Tails [Tier 3]
 					["qg"] = 14829,  -- Yebb Neblegear
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
@@ -714,7 +714,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7946,  {	-- Spawn of Jubjub
+				q(7946, {	-- Spawn of Jubjub
 					["qg"] = 14871,  -- Morja
 					["coords"] = {
 						{ 43.3, 70.3, ELWYNN_FOREST },
@@ -759,7 +759,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7883,  {	-- The World's Largest Gnome! [Tier 3]
+				q(7883, {	-- The World's Largest Gnome! [Tier 3]
 					["qg"] = 14833,  -- Chronos <He Who Never Forgets!>
 					["coords"] = {
 						{ 43.5, 71.1, ELWYNN_FOREST },
@@ -778,7 +778,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7898,  {	-- Thorium Widgets [Tier 5]
+				q(7898, {	-- Thorium Widgets [Tier 5]
 					["qg"] = 14841,  -- Rinling
 					["coords"] = {
 						{ 41.7, 70.7, ELWYNN_FOREST },
@@ -797,7 +797,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7900,  {	-- Torn Bear Pelts [Tier 2]
+				q(7900, {	-- Torn Bear Pelts [Tier 2]
 					["qg"] = 14829,  -- Yebb Neblegear
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
@@ -816,7 +816,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7902,  {	-- Vibrant Plumes [Tier 4]
+				q(7902, {	-- Vibrant Plumes [Tier 4]
 					["qg"] = 14829,  -- Yebb Neblegear
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
@@ -835,7 +835,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7895,  {	-- Whirring Bronze Gizmo [Tier 2]
+				q(7895, {	-- Whirring Bronze Gizmo [Tier 2]
 					["qg"] = 14829,  -- Yebb Neblegear
 					["coords"] = {
 						{ 40.2, 69.7, ELWYNN_FOREST },
@@ -854,7 +854,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19182),	-- Darkmoon Faire Prize Ticket
 					},
 				}),
-				q(7938,  {	-- Your Fortune Awaits You... [Deadmines]
+				q(7938, {	-- Your Fortune Awaits You... [Deadmines]
 					["provider"] = { "i", 19424 },	-- Sayge's Fortune #24
 					["maps"] = { DEADMINES },
 					["cr"] = 14822,	-- Sayge
@@ -864,7 +864,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19425),	-- Mysterious Lockbox
 					},
 				}),
-				q(7937,  {	-- Your Fortune Awaits You... [Elwynn Forest]
+				q(7937, {	-- Your Fortune Awaits You... [Elwynn Forest]
 					["provider"] = { "i", 19423 },	-- Sayge's Fortune #23
 					["coord"] = { 84.7, 64.4, ELWYNN_FOREST },
 					["cr"] = 14822,	-- Sayge
@@ -874,7 +874,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19425),	-- Mysterious Lockbox
 					},
 				}),
-				q(7945,  {	-- Your Fortune Awaits You... [Mulgore]
+				q(7945, {	-- Your Fortune Awaits You... [Mulgore]
 					["provider"] = { "i", 19452 },	-- Sayge's Fortune #27
 					["coord"] = { 35, 61.5, MULGORE },
 					["cr"] = 14822,	-- Sayge
@@ -884,7 +884,7 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 						i(19425),	-- Mysterious Lockbox
 					},
 				}),
-				q(7944,  {	-- Your Fortune Awaits You... [Wailing Caverns]
+				q(7944, {	-- Your Fortune Awaits You... [Wailing Caverns]
 					["provider"] = { "i", 19443 },	-- Sayge's Fortune #25
 					["maps"] = { WAILING_CAVERNS },
 					["cr"] = 14822,	-- Sayge

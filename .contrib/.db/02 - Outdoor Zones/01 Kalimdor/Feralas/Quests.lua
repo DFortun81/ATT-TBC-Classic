@@ -414,11 +414,6 @@ _.Zones =
 					["provider"] = { "i", 18969 },	-- Pristine Yeti Hide
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
-					["crs"] = {
-						5297,	-- Elder Rage Scar
-						5299,	-- Ferocious Rage Scar
-						5296,	-- Rage Scar Yeti
-					},
 					["lvl"] = 40,
 				}),
 				q(4130, {	-- Psychometric Reading

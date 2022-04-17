@@ -93,6 +93,13 @@ _.Zones =
 						7584,	-- Wandering Forest Walker
 					},
 				}),
+				i(18969, {	-- Pristine Yeti Hide
+					["crs"] = {
+						5297,	-- Elder Rage Scar
+						5299,	-- Ferocious Rage Scar
+						5296,	-- Rage Scar Yeti
+					},
+				}),
 				i(18947, {	-- Rage Scar Yeti Hide
 					["allianceQuestID"] = 7733,	-- Improved Quality
 					["hordeQuestID"] = 7734,	-- Improved Quality
