@@ -757,7 +757,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cr"] = 442,	-- Tarantula
 				}),
 				i(1962, {	-- Glowing Shadowhide Pendant
-					["questID"] = 178,	-- Theocritus' Retrieval
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						703,	-- Lieutenant Fangore

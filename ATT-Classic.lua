@@ -5658,8 +5658,17 @@ local itemFields = {
 									end
 								end
 							end
-						else
-							return false;
+						end
+						if ref.providers then
+							for k,v in ipairs(ref.providers) do
+								if v[2] == id and v[1] == "i" then
+									if GetItemCount(id, true) > 0 then
+										partial = true;
+									else
+										return false;
+									end
+								end
+							end
 						end
 					elseif (ref.total and ref.total > 0 and not GetRelativeField(t, "parent", ref) and ref.progress < ref.total) then
 						if ref.cost then
@@ -5672,8 +5681,17 @@ local itemFields = {
 									end
 								end
 							end
-						else
-							return false;
+						end
+						if ref.providers then
+							for k,v in ipairs(ref.providers) do
+								if v[2] == id and v[1] == "i" then
+									if GetItemCount(id, true) > 0 then
+										partial = true;
+									else
+										return false;
+									end
+								end
+							end
 						end
 					end
 				end
