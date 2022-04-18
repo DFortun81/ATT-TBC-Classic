@@ -421,6 +421,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2610,	-- Shakes O'Breen
 					["sourceQuest"] = 668,	-- Sunken Treasure (3/5)
 					["coord"] = { 32.2, 81.4, ARATHI_HIGHLANDS },
+					["maps"] = { STRANGLETHORN_VALE },
 					["cost"] = {
 						{ "i", 4502, 1 },	-- Sample Elven Gem
 					},

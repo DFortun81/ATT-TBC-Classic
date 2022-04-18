@@ -15,7 +15,6 @@ _.Zones =
 					["cr"] = 2212,	-- Deth'ryll Satyr
 				}),
 				i(5352, { 	-- Book: The Powers Below
-					["questID"] = 968,	-- The Powers Below
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						2339,	-- Twilight Thug

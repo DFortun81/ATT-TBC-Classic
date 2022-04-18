@@ -281,9 +281,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				q(725, {	-- Passing Word of a Threat
-					["sourceQuest"] = 724,	-- Prospect of Faith
 					["qg"] = 2916,	-- Historian Karnik
+					["sourceQuest"] = 724,	-- Prospect of Faith
 					["coord"] = { 77.5, 11.8, IRONFORGE },
+					["cost"] = { { "i", 4622, 1 } },	-- Sealed Note to Advisor Belgrum
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 				}),
@@ -615,9 +616,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				q(727, {	-- To Ironforge for Yagyin's Digest
-					["sourceQuest"] = 709,	-- Solution to Doom
 					["qg"] = 2785,	-- Theldurin the Lost
+					["sourceQuest"] = 709,	-- Solution to Doom
 					["coord"] = { 51.4, 76.9, BADLANDS },
+					["cost"] = { { "i", 4648, 1 } },	-- Sigil of the Hammer
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),

@@ -242,7 +242,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				applyclassicphase(TBC_PHASE_ONE, q(9448, {	-- Mercy for the Cursed
 					["qg"] = 17127,	-- Anchorite Avuun
-					["coord"] = { 25.8, 31.8, DUSTWALLOW_MARSH },
+					["coord"] = { 25.8, 31.8, SWAMP_OF_SORROWS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 					["groups"] = {
@@ -265,7 +265,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				applyclassicphase(TBC_PHASE_ONE, q(9610, {	-- Pool of Tears [Alliance]
 					["qg"] = 18221,	-- Holaaru
-					["coord"] = { 25.9, 32.4, DUSTWALLOW_MARSH },
+					["coord"] = { 25.9, 32.4, SWAMP_OF_SORROWS },
 					["races"] = ALLIANCE_ONLY,
 					-- #if AFTER WRATH
 					["cost"] = {

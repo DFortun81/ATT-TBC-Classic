@@ -450,6 +450,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				q(178, {	-- Theocritus' Retrieval
 					["provider"] = { "i", 1962 },	-- Glowing Shadowhide Pendant
+					["maps"] = { ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 1956, 1 },	-- Faded Shadowhide Pendant
