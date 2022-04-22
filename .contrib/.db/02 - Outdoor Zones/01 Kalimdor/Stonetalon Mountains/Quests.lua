@@ -391,6 +391,7 @@ _.Zones =
 					["qg"] = 4078,	-- Collin Mauren
 					["sourceQuest"] = 1076,	-- Devils in Westfall
 					["coord"] = { 43.1, 80.3, STORMWIND_CITY },
+					["cost"] = { { "i", 5731, 1 } },	-- Scroll of Messaging
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 17,
 				}),

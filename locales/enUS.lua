@@ -906,6 +906,7 @@ app.L = {
 	["ALT_ZONE_TEXT_TO_MAP_ID"] = {
 		["Ahn'Qiraj"] = 320,
 		["The Deadmines"] = 291,
+		["The Wailing Caverns"] = 279,
 		["Gates of Ahn'Qiraj"] = 1451,
 		["The Temple of Atal'Hakkar"] = 220,
 		["The Battle for Mount Hyjal"] = 329,

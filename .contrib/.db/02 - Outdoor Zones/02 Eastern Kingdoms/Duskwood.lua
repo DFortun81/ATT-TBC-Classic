@@ -70,6 +70,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 661,	-- Jonathan Carevin
 					["sourceQuest"] = 1043,	-- The Scythe of Elune
 					["coord"] = { 75.3, 49.2, DUSKWOOD },
+					["maps"] = { DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 25,
 					["groups"] = {

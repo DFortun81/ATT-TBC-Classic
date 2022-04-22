@@ -214,6 +214,52 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = HORDE_ONLY,
 					["qg"] = 2792,	-- Gor'mul
 				}),
+				q(659, {	-- Hints of a New Plague? (1/5)
+					["qg"] = 2711,	-- Phin Odelic
+					["coord"] = { 50.3, 59.0, HILLSBRAD_FOOTHILLS },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 30,
+				}),
+				q(658, {	-- Hints of a New Plague? (2/5)
+					["qg"] = 2712,	-- Quae
+					["sourceQuest"] = 659,	-- Hints of a New Plague? (1/5)
+					["coord"] = { 60.2, 53.8, ARATHI_HIGHLANDS },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/1 Sealed Folder
+							["provider"] = { "i", 4482 },	-- Sealed Folder
+							["coord"] = { 52.6, 61.6, ARATHI_HIGHLANDS },
+							["cr"] = 2714,	-- Forsaken Courier
+						}),
+					},
+				}),
+				q(657, {	-- Hints of a New Plague? (3/5)
+					["qg"] = 2712,	-- Quae
+					["sourceQuest"] = 658,	-- Hints of a New Plague? (2/5)
+					["coord"] = { 60.2, 53.8, ARATHI_HIGHLANDS },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 30,
+				}),
+				q(660, {	-- Hints of a New Plague? (4/5)
+					["qg"] = 2713,	-- Kinelory
+					["sourceQuest"] = 657,	-- Hints of a New Plague? (3/5)
+					["maps"] = { HILLSBRAD_FOOTHILLS },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 30,
+				}),
+				q(661, {	-- Hints of a New Plague? (5/5)
+					["qg"] = 2712,	-- Quae
+					["sourceQuest"] = 660,	-- Hints of a New Plague? (4/5)
+					["coord"] = { 60.2, 53.8, ARATHI_HIGHLANDS },
+					["maps"] = { HILLSBRAD_FOOTHILLS },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 30,
+					["groups"] = {
+						i(15455),	-- Dustfall Robes
+						i(15456),	-- Lightstep Leggings
+					},
+				}),
 				q(663, {	-- Land Ho!
 					["lvl"] = 35,
 					["qg"] = 2766,	-- Lolo the Lookout

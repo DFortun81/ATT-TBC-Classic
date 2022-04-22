@@ -337,48 +337,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["classes"] = { ROGUE },
 					["sourceQuest"] = 2479,	-- Hinott's Assistance
 				}),
-				q(661, {	-- Hints of a New Plague?
-					["lvl"] = 30,
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 2712,	-- Quae
-					["groups"] = {
-						i(15455),	-- Dustfall Robes
-						i(15456),	-- Lightstep Leggings
-					},
-				}),
-				q(660, {	-- Hints of a New Plague?
-					["lvl"] = 30,
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 2713,	-- Kinelory
-				}),
-				q(659, {	-- Hints of a New Plague?
-					["lvl"] = 30,
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 2711,	-- Phin Odelic
-					["coord"] = { 50.3, 59.0, HILLSBRAD_FOOTHILLS },
-				}),
-				q(657, {	-- Hints of a New Plague?
-					["lvl"] = 30,
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 2712,	-- Quae
-				}),
-				q(658, {	-- Hints of a New Plague?
-					["qg"] = 2712,	-- Quae
-					["maps"] = { ARATHI_HIGHLANDS },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4482, 1 },	-- Sealed Folder
-					},
-					["lvl"] = 30,
-					["groups"] = {
-						{
-							["itemID"] = 4482,	-- Sealed Folder
-							["questID"] = 658,	-- Hints of a New Plague?
-							["cr"] = 2714,	-- Forsaken Courier
-							["coord"] = { 52.6, 61.6, ARATHI_HIGHLANDS },
-						},
-					},
-				}),
 				q(547, {	-- Humbert's Sword
 					["qg"] = 2419,	-- Deathguard Humbert
 					["coord"] = { 62.74, 20.21, HILLSBRAD_FOOTHILLS },
