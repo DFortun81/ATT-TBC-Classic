@@ -224,6 +224,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2712,	-- Quae
 					["sourceQuest"] = 659,	-- Hints of a New Plague? (1/5)
 					["coord"] = { 60.2, 53.8, ARATHI_HIGHLANDS },
+					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -244,7 +245,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(660, {	-- Hints of a New Plague? (4/5)
 					["qg"] = 2713,	-- Kinelory
 					["sourceQuest"] = 657,	-- Hints of a New Plague? (3/5)
-					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
