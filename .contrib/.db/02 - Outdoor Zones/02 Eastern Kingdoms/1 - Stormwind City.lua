@@ -738,16 +738,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 20,
 				}),
-				q(141, {	-- The Defias Brotherhood (4/7)
-					["qg"] = 332,	-- Master Mathias Shaw
-					["sourceQuest"] = 135,	-- The Defias Brotherhood (3/7)
-					["coord"] = { 75.8, 59.8, STORMWIND_CITY },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1353, 1 },	-- Shaw's Report
-					},
-					["lvl"] = 14,
-				}),
 				q(6182, {	-- The First and the Last
 					["qg"] = 1748,	-- Highlord Bolvar Fordragon
 					["coord"] = { 78, 18, STORMWIND_CITY },
@@ -947,6 +937,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(1794, {	-- The Tome of Valor [Dwarf]
 					["qg"] = 5149,	-- Brandur Ironhammer <Paladin Trainer>
 					["coord"] = { 23.6, 6.4, IRONFORGE },
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { PALADIN },
 					["races"] = { DWARF },
 					["isBreadcrumb"] = true,
@@ -955,6 +946,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(1793, {	-- The Tome of Valor [Human]
 					["qg"] = 6171,	-- Duthorian Rall
 					["coord"] = { 39.8, 30.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { PALADIN },
 					["races"] = { HUMAN },
 					["isBreadcrumb"] = true,
@@ -967,6 +959,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						1793,	-- The Tome of Valor [Human]
 					},
 					["coord"] = { 39.8, 30.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
 					["cost"] = {
@@ -978,6 +971,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 6171,	-- Duthorian Rall
 					["sourceQuest"] = 1649,	-- The Tome of Valor (1/4)
 					["coord"] = { 39.8, 30.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
 					["lvl"] = 20,
@@ -986,6 +980,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 6182,	-- Daphne Stilwell
 					["sourceQuest"] = 1650,	-- The Tome of Valor (2/4)
 					["coord"] = { 42.4, 88.4, WESTFALL },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
 					["lvl"] = 20,
@@ -994,12 +989,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 6171,	-- Duthorian Rall
 					["sourceQuest"] = 1651,	-- The Tome of Valor (3/4)
 					["coord"] = { 39.8, 30.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
 					["lvl"] = 20,
 					["groups"] = {
+						-- #if BEFORE 4.0.3
 						recipe(5502),	-- Sense Undead
-						i(9607),	-- Bastion of Stormwind
+						-- #endif
+						i(9607, {	-- Bastion of Stormwind
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(2607, {	-- The Touch of Zanzil

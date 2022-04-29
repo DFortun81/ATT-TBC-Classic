@@ -974,7 +974,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(1972, {	-- Westfall Deed
-					["questID"] = 184,	-- Furlbrow's Deed
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						116,	-- Defias Bandit
