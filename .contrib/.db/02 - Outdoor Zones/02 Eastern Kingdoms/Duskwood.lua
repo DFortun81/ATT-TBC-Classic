@@ -846,23 +846,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(VENDORS, {
-				n(844, {	-- Antonio Perelli <Traveling Salesman>
-					["coords"] = {
-						{ 19.6, 60.6, DUSKWOOD },
-						{ 50.8, 66.6, DUSKWOOD },
-						{ 75.0, 46.4, DUSKWOOD },
-					},
-					["races"] = ALLIANCE_ONLY,
-					["groups"] = {
-						i(4817),	-- Blessed Claymore
-						i(4818),	-- Executioner's Sword
-						i(4778),	-- Heavy Spiked Mace
-						i(4777),	-- Ironwood Maul
-						i(4795),	-- Bear Bracers
-						i(4796),	-- Owl Bracers
-						i(4794),	-- Wolf Bracers
-					},
-				}),
 				n(228, {	-- Avette Fellwood <Bowyer>
 					["coord"] = { 73.2, 44.8, DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,

@@ -605,22 +605,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(VENDORS, {
-				n(844, {	-- Antonio Perelli <Traveling Salesman>
-					["coords"] = {
-						{ 57.4, 52.2, WESTFALL },
-						{ 57.8, 65.0, WESTFALL },
-					},
-					["races"] = ALLIANCE_ONLY,
-					["groups"] = {
-						i(4777),	-- Ironwood Maul
-						i(4778),	-- Heavy Spiked Mace
-						i(4794),	-- Wolf Bracers
-						i(4795),	-- Bear Bracers
-						i(4796),	-- Owl Bracers
-						i(4817),	-- Blessed Claymore
-						i(4818),	-- Executioner's Sword
-					},
-				}),
 				n(1669, {	-- Defias Profiteer <Free Wheeling Merchant>
 					["coord"] = { 43.4, 66.8, WESTFALL },
 					["races"] = ALLIANCE_ONLY,

@@ -82,6 +82,7 @@
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\0 - Metadata.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Silvermoon City.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Blackrock Mountain.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Deadwind Pass.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Deeprun Tram.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Eversong Woods.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Ghostlands.lua

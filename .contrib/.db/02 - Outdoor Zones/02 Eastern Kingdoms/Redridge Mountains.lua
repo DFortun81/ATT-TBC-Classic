@@ -3,7 +3,14 @@
 ---------------------------------------------------
 root("Zones", m(EASTERN_KINGDOMS, {
 	m(REDRIDGE_MOUNTAINS, {
-		["lore"] = "The Redridge Mountains, or the Red Ridge Mountains, are located east of Elwynn Forest, northeast of Duskwood, and south of the Burning Steppes. Although it may be considered contested, Horde characters have no settlements or NPCs and it is thus a place they use mostly for passing through to reach Flame Crest or Stonard.\n\nAn idyllic region of rushing rivers, towering elms and rising elevations, the Redridge Mountains are under Stormwind's protection (though since the second war it is technically independent), and remain one of the last peaceful regions in Azeroth. The people are content and calm, and supply Stormwind with timber, fish, and crops. A force of Blackrock orcs from the Burning Steppes has secured Stonewatch Keep, but so far the orcs keep to themselves.",
+		-- #if AFTER CATA
+		["lore"] = "Redridge Mountains is a sleepy zone that is primarily Alliance. However, threats come from the Blackrock Invasion, which is revealed to be tied to the Black Dragonflight and Deathwing. The main series of quests follows John J. Keeshan, a clear tribute to Rambo.",
+		-- #else
+		["lore"] = "The Redridge Mountains are located east of Elwynn Forest, northeast of Duskwood, and south of the Burning Steppes. Although it may be considered contested, Horde characters have no settlements or NPCs and it is thus a place they use mostly for passing through to reach Flame Crest or Stonard.\n\nAn idyllic region of rushing rivers, towering elms and rising elevations, the Redridge Mountains are under Stormwind's protection (though since the second war it is technically independent), and remain one of the last peaceful regions in Azeroth. The people are content and calm, and supply Stormwind with timber, fish, and crops. A force of Blackrock orcs from the Burning Steppes has secured Stonewatch Keep, but so far the orcs keep to themselves.",
+		-- #endif
+		-- #if AFTER WRATH
+		["icon"] = "Interface\\Icons\\achievement_zone_redridgemountains",
+		-- #endif
 		["groups"] = {
 			n(ACHIEVEMENTS, {
 				removeclassicphase(ach(780, {	-- Explore Redridge Mountains
@@ -13,7 +20,44 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["OnUpdate"] = [[_.CommonAchievementHandlers.EXPLORATION_OnUpdate]],
 					-- #endif
 				})),
+				ach(4902, {	-- Redridge Mountain Quests
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						crit(1, {	-- The Gnoll Offensive
+							["sourceQuest"] = 26545,	-- Yowler Must Die!
+						}),
+						crit(2, {	-- Keeshan's Raiders
+							["sourceQuest"] = 26607,	-- They Drew First Blood
+						}),
+						crit(3, {	-- First Blood
+							["sourceQuest"] = 26726,	-- Triumphant Return
+						}),
+					},
+				}),
 			}),
+			-- #if AFTER MOP
+			petbattle(filter(BATTLE_PETS, {
+				p(646, {	-- Chicken
+					["crs"] = { 62664 },	-- Chicken
+				}),
+				p(395, {	-- Fledgling Buzzard
+					["crs"] = { 61171 },	-- Fledgling Buzzard
+				}),
+				p(391, {	-- Mountain Cottontail
+					["crs"] = { 61167 },	-- Mountain Cottontail
+				}),
+				p(378, {	-- Rabbit
+					["crs"] = { 61080 },	-- Rabbit
+				}),
+				p(392, {	-- Redridge Rat
+					["crs"] = { 61168 },	-- Redridge Rat
+				}),
+				p(424, {	-- Roach
+					["crs"] = { 61169 },	-- Roach
+				}),
+			})),
+			-- #endif
 			-- #if ANYCLASSIC
 			n(EXPLORATION, explorationBatch({
 				["235:270:399:129"] = 97,	-- Alther's Mill
@@ -37,9 +81,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 			})),
 			-- #endif
 			n(FLIGHT_PATHS, {
+				fp(615, {	-- Camp Everstill, Redridge
+					["cr"] = 43371,	-- Arlen Marsters <Gryphon Master>
+					["coord"] = { 52.8, 54.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				fp(5, {	-- Lakeshire, Redridge
 					["cr"] = 931,	-- Ariena Stormfeather <Gryphon Master>
+					-- #if AFTER CATA
+					["coord"] = { 29.4, 53.6, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coord"] = { 30.6, 59.6, REDRIDGE_MOUNTAINS },
+					-- #endif
+					["races"] = ALLIANCE_ONLY,
+				}),
+				fp(596, {	-- Shalewind Canyon, Redridge
+					["cr"] = 43072,	-- Nora Baldwin <Gryphon Master>
+					["coord"] = { 77.8, 65.8, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3.13277" },
 					["races"] = ALLIANCE_ONLY,
 				}),
 			}),
@@ -117,10 +177,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 382,	-- Marshal Marris
 					["coord"] = { 33.4, 49.0, REDRIDGE_MOUNTAINS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3014, 10 },	-- Battleworn Axe
-					},
 					["lvl"] = 18,
+					["groups"] = {
+						objective(1, {	-- 0/10 Battleworn Axe
+							["provider"] = { "i", 3014 },	-- Battleworn Axe
+							["crs"] = {
+								435,	-- Blackrock Champion
+								4464,	-- Blackrock Gladiator
+								440,	-- Blackrock Grunt
+								4462,	-- Blackrock Hunter
+								485,	-- Blackrock Outrunner
+								437,	-- Blackrock Renegade
+								4064,	-- Blackrock Scout
+								4065,	-- Blackrock Sentry
+								436,	-- Blackrock Shadowcaster
+								4463,	-- Blackrock Summoner
+								615,	-- Blackrock Tracker
+							},
+						}),
+					},
 				}),
 				q(131, {	-- Delivering Daffodils
 					["qg"] = 342,	-- Martie Jainrose
@@ -346,10 +421,23 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 900,	-- Bailiff Conacher
 					["coord"] = { 29.6, 44.3, REDRIDGE_MOUNTAINS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1075, 10 },	-- Shadowhide Pendant
-					},
 					["lvl"] = 17,
+					["groups"] = {
+						objective(1, {	-- 0/10 Shadowhide Pendant
+							["provider"] = { "i", 1075 },	-- Shadowhide Pendant
+							["crs"] = {
+								703,	-- Lieutenant Fangore
+								434,	-- Rabid Shadowhide Gnoll
+								947,	-- Rohh the Silent
+								579,	-- Shadowhide Assassin
+								432,	-- Shadowhide Brute
+								429,	-- Shadowhide Darkweaver
+								433,	-- Shadowhide Gnoll
+								431,	-- Shadowhide Slayer
+								568,	-- Shadowhide Warrior
+							},
+						}),
+					},
 				}),
 				q(19, {	-- Tharil'zun
 					["qg"] = 382,	-- Marshal Marris
@@ -384,12 +472,28 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(89, {	-- The Everstill Bridge
 					["qg"] = 341,	-- Foreman Oslow
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2856, 5 },	-- Iron Pike
-						{ "i", 1013, 5 },	-- Iron Rivet
-					},
 					["lvl"] = 15,
 					["groups"] = {
+						objective(1, {	-- 0/5 Iron Pike
+							["provider"] = { "i", 2856 },	-- Iron Pike
+							["crs"] = {
+								446,	-- Redridge Basher
+								426,	-- Redridge Brute
+								580,	-- Redridge Drudger
+								430,	-- Redridge Mystic
+								14271,	-- Ribchaser
+							},
+						}),
+						objective(1, {	-- 0/5 Iron Rivet
+							["provider"] = { "i", 1013 },	-- Iron Rivet
+							["crs"] = {
+								446,	-- Redridge Basher
+								426,	-- Redridge Brute
+								580,	-- Redridge Drudger
+								430,	-- Redridge Mystic
+								14271,	-- Ribchaser
+							},
+						}),
 						i(1310),	-- Smith's Trousers
 						i(1303),	-- Bridgeworker's Gloves
 						i(1304),	-- Riding Gloves
@@ -464,11 +568,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 415,	-- Verner Osgood
 					["coord"] = { 31.0, 47.4, REDRIDGE_MOUNTAINS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1221, 6},	-- Underbelly Whelp Scale
-					},
 					["lvl"] = 14,
 					["groups"] = {
+						objective(1, {	-- 0/6 Underbelly Whelp Scale
+							["provider"] = { "i", 1221 },	-- Underbelly Whelp Scale
+							["crs"] = {
+								14272,	-- Snarlflare
+								441,	-- Black Dragon Whelp
+							},
+						}),
 						i(6092),	-- Black Whelp Boots
 						i(1302),	-- Black Whelp Gloves
 					},
@@ -540,9 +648,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 			}),
 			n(RARES, {
 				n(14273, {  -- Boulderheart
+					-- #if AFTER CATA
+					["coord"] = { 56.6, 51.6, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coord"] = { 88.8, 67.0, REDRIDGE_MOUNTAINS },
+					-- #endif
 				}),
 				n(616, {  -- Chatter
+					-- #if AFTER CATA
+					["coord"] = { 38.2, 35.8, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coords"] = {
 						{ 51.2, 37.2, REDRIDGE_MOUNTAINS },
 						{ 56.0, 41.4, REDRIDGE_MOUNTAINS },
@@ -551,11 +666,32 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 53.6, 48.6, REDRIDGE_MOUNTAINS },
 						{ 49.2, 41.8, REDRIDGE_MOUNTAINS },
 					},
+					-- #endif
 					["groups"] = {
-						i(3229),	-- Tarantula Silk Sash
+						i(3229, {	-- Tarantula Silk Sash
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				n(52146, {	-- Chitter
+					["coord"] = { 63.8, 65.2, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3.13682" },
+				}),
+				n(147222, {	-- Gnollfeaster
+					["questID"] = 54214,
+					["coord"] = { 24.4, 70.9, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 8.1.0.28724" },
+					["isDaily"] = true,
+					["groups"] = {
+						i(165722, {	-- Redridge Tarantula Egg (PET!)
+							["timeline"] = { "added 8.1.0.28724" },
+						}),
 					},
 				}),
 				n(584, {  -- Kazon
+					-- #if AFTER CATA
+					["coord"] = { 34.8, 12.2, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coords"] = {
 						{ 33.0, 6.6, REDRIDGE_MOUNTAINS },
 						{ 36.0, 8.6, REDRIDGE_MOUNTAINS },
@@ -563,12 +699,24 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 38.4, 13.6, REDRIDGE_MOUNTAINS },
 						{ 42.4, 15.4, REDRIDGE_MOUNTAINS },
 					},
+					-- #endif
 					["groups"] = {
-						i(3231),	-- Cutthroat Pauldrons
-						i(2058),	-- Kazon's Maul
+						i(3231, {	-- Cutthroat Pauldrons
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(2058, {	-- Kazon's Maul
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				n(14271, {  -- Ribchaser
+					-- #if AFTER CATA
+					["coords"] = {
+						{ 30.0, 57.6, REDRIDGE_MOUNTAINS },
+						{ 30.0, 60.2, REDRIDGE_MOUNTAINS },
+						{ 29.6, 64.2, REDRIDGE_MOUNTAINS },
+					},
+					-- #else
 					["coords"] = {
 						{ 16.2, 60.6, REDRIDGE_MOUNTAINS },
 						{ 14.0, 64.2, REDRIDGE_MOUNTAINS },
@@ -578,8 +726,12 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 32.6, 78.8, REDRIDGE_MOUNTAINS },
 						{ 33.6, 84.8, REDRIDGE_MOUNTAINS },
 					},
+					-- #endif
 				}),
 				n(947, {  -- Rohh the Silent
+					-- #if AFTER CATA
+					["coord"] = { 68.0, 35.6, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coords"] = {
 						{ 76.0, 29.4, REDRIDGE_MOUNTAINS },
 						{ 76.0, 34.2, REDRIDGE_MOUNTAINS },
@@ -591,12 +743,23 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 83.2, 51.0, REDRIDGE_MOUNTAINS },
 						{ 83.4, 57.6, REDRIDGE_MOUNTAINS },
 					},
+					-- #endif
 					["groups"] = {
-						i(4446),	-- Blackvenom Blade
-						i(4447),	-- Cloak of Night
+						-- #if BEFORE 4.0.3
+						-- This item can now be found in Battered Junkboxes.
+						i(4446, {	-- Blackvenom Blade
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						-- #endif
+						i(4447, {	-- Cloak of Night
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				n(14269, {  -- Seeker Aqualon
+					-- #if AFTER CATA
+					["coord"] = { 71.05, 55.0, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coords"] = {
 						{ 46.2, 59.6, REDRIDGE_MOUNTAINS },
 						{ 50.2, 61.4, REDRIDGE_MOUNTAINS },
@@ -606,16 +769,24 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 75.8, 67.4, REDRIDGE_MOUNTAINS },
 						{ 73.2, 71.2, REDRIDGE_MOUNTAINS },
 					},
+					-- #endif
 				}),
 				n(14272, {  -- Snarlflare
+					-- #if AFTER CATA
+					["coord"] = { 34.0, 57.0, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coords"] = {
 						{ 36.4, 66.8, REDRIDGE_MOUNTAINS },
 						{ 43.4, 30.0, REDRIDGE_MOUNTAINS },
 						{ 49.2, 33.0, REDRIDGE_MOUNTAINS },
 						{ 54.6, 37.2, REDRIDGE_MOUNTAINS },
 					},
+					-- #endif
 				}),
 				n(14270, {  -- Squiddic
+					-- #if AFTER CATA
+					["coord"] = { 37.4, 42.6, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coords"] = {
 						{ 42.8, 52.8, REDRIDGE_MOUNTAINS },
 						{ 39.0, 60.8, REDRIDGE_MOUNTAINS },
@@ -624,6 +795,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 54.6, 60.0, REDRIDGE_MOUNTAINS },
 						{ 47.6, 54.4, REDRIDGE_MOUNTAINS },
 					},
+					-- #endif
 				}),
 			}),
 			prof(SKINNING, {
@@ -637,24 +809,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 			}),
 			n(VENDORS, {
 				n(777, {	-- Amy Davenport <Tradeswoman>
+					-- #if AFTER CATA
+					["coord"] = { 28.0, 43.6, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coord"] = { 29.0, 47.6, REDRIDGE_MOUNTAINS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(5772),	-- Pattern: Red Woolen Bag
-						i(20576),	-- Pattern: Black Whelp Tunic
-					},
-				}),
-				n(844, {	-- Antonio Perelli <Traveling Salesman>
-					["coord"] = { 29.1, 47.4, REDRIDGE_MOUNTAINS },
-					["races"] = ALLIANCE_ONLY,
-					["groups"] = {
-						i(4777),	-- Ironwood Maul
-						i(4778),	-- Heavy Spiked Mace
-						i(4794),	-- Wolf Bracers
-						i(4795),	-- Bear Bracers
-						i(4796),	-- Owl Bracers
-						i(4817),	-- Blessed Claymore
-						i(4818),	-- Executioner's Sword
+						i(20576, {	-- Pattern: Black Whelp Tunic
+							["isLimited"] = true,
+						}),
+						i(5772, {	-- Pattern: Red Woolen Bag
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(3097, {	-- Bernard Brubaker <Leather Armor Merchant>
@@ -710,54 +877,44 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(ZONE_DROPS, {
-				i(3014, {	-- Battleworn Axe
-					["questID"] = 20,	-- Blackrock Menace
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						435,	-- Blackrock Champion
-						4464,	-- Blackrock Gladiator
-						440,	-- Blackrock Grunt
-						4462,	-- Blackrock Hunter
-						485,	-- Blackrock Outrunner
-						437,	-- Blackrock Renegade
-						4064,	-- Blackrock Scout
-						4065,	-- Blackrock Sentry
-						436,	-- Blackrock Shadowcaster
-						4463,	-- Blackrock Summoner
-						615,	-- Blackrock Tracker
-					},
-				}),
 				i(1446, {	-- Blackrock Boots
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 440,	-- Blackrock Grunt
 				}),
 				i(1455, {	-- Blackrock Champion's Axe
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						435,	-- Blackrock Champion
 						4464,	-- Blackrock Gladiator
 					},
 				}),
 				i(1448, {	-- Blackrock Gauntlets
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						485,	-- Blackrock Outrunner
 						4064,	-- Blackrock Scout
 					},
 				}),
 				i(1296, {	-- Blackrock Mace
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						437,	-- Blackrock Renegade
 						4065,	-- Blackrock Sentry
 					},
 				}),
 				i(1445, {	-- Blackrock Pauldrons
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						615,	-- Blackrock Tracker
 						4462,	-- Blackrock Hunter
 					},
 				}),
 				i(1287, {	-- Giant Tarantula Fang
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 442,	-- Tarantula
 				}),
 				i(1962, {	-- Glowing Shadowhide Pendant
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						703,	-- Lieutenant Fangore
@@ -772,133 +929,105 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(1213, {	-- Gnoll Kindred Bracers
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 712,	-- Redridge Thrasher
 				}),
 				i(1214, {	-- Gnoll Punisher
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						14271,	-- Ribchaser
 						426,	-- Redridge Brute
 					},
 				}),
 				i(1440, {	-- Gnoll Skull Basher
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 446,	-- Redridge Basher
 				}),
 				i(1211, {	-- Gnoll War Harness
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 423,	-- Redridge Mongrel
 				}),
+				-- #if BEFORE 4.0.3
 				i(2296, {	-- Great Goretusk Snout
-					["questID"] = 92,	-- Redridge Goulash
-					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						345,	-- Bellygrub
 						547,	-- Great Goretusk
 					},
 				}),
+				-- #endif
 				i(1218, {	-- Heavy Gnoll War Club
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 445,	-- Redridge Alpha
 				}),
-				i(2856, {	-- Iron Pike
-					["questID"] = 89,	-- The Everstill Bridge
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						446,	-- Redridge Basher
-						426,	-- Redridge Brute
-						580,	-- Redridge Drudger
-						430,	-- Redridge Mystic
-						14271,	-- Ribchaser
-					},
-				}),
-				i(1013, {	-- Iron Rivet
-					["questID"] = 89,	-- The Everstill Bridge
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						446,	-- Redridge Basher
-						426,	-- Redridge Brute
-						580,	-- Redridge Drudger
-						430,	-- Redridge Mystic
-						14271,	-- Ribchaser
-					},
-				}),
 				i(1299, {	-- Lesser Belt of the Spire
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 436,	-- Blackrock Shadowcaster
 				}),
 				i(1300, {	-- Lesser Staff of the Spire
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 436,	-- Blackrock Shadowcaster
 				}),
 				i(1220, {	-- Lupine Axe
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 580,	-- Redridge Drudger
 				}),
 				i(1406, {	-- Pearl-encrusted Spear
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 544,	-- Murloc Nightcrawler
 				}),
 				i(1219, {	-- Redridge Machete
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 424,	-- Redridge Poacher
 				}),
 				i(2798, {	-- Rethban Ore
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 580,	-- Redridge Drudger
-					["questID"] = 347,	-- Rethban Ore
-					["races"] = ALLIANCE_ONLY,
 				}),
 				i(1462, {	-- Ring of the Shadow
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 429,	-- Shadowhide Darkweaver
 				}),
 				i(1473, {	-- Riverside Staff
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 545,	-- Murloc Tidecaller
 				}),
 				i(2566, {	-- Sacrificial Robes
-					["cr"] = 397,	-- Morganth
+					["timeline"] = { "removed 4.0.3" },
+					["cr"] = 397,	-- Morganth / Grand Magus Doane [CATA+]
 				}),
 				i(1469, {	-- Scimitar of Atun
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						14270,	-- Squiddic
 						578,	-- Murloc Scout
 					},
 				}),
 				i(2175, {	-- Shadowhide Battle Axe
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 568,	-- Shadowhide Warrior
 				}),
 				i(1457, {	-- Shadowhide Mace
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 433,	-- Shadowhide Gnoll
 				}),
 				i(1458, {	-- Shadowhide Maul
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 432,	-- Shadowhide Brute
 				}),
-				i(1075, {	-- Shadowhide Pendant
-					["questID"] = 91,	-- Solomon's Law
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						703,	-- Lieutenant Fangore
-						434,	-- Rabid Shadowhide Gnoll
-						947,	-- Rohh the Silent
-						579,	-- Shadowhide Assassin
-						432,	-- Shadowhide Brute
-						429,	-- Shadowhide Darkweaver
-						433,	-- Shadowhide Gnoll
-						431,	-- Shadowhide Slayer
-						568,	-- Shadowhide Warrior
-					},
-				}),
 				i(1459, {	-- Shadowhide Scalper
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 579,	-- Shadowhide Assassin
 				}),
 				i(1460, {	-- Shadowhide Two-handed Sword
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 434,	-- Rabid Shadowhide Gnoll
 				}),
 				i(1461, {	-- Slayer's Battle Axe
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 431,	-- Shadowhide Slayer
 				}),
 				i(1080, {	-- Tough Condor Meat
-					["questID"] = 92,	-- Redridge Goulash
 					["cr"] = 428,	-- Dire Condor
-					["races"] = ALLIANCE_ONLY,
-				}),
-				i(1221, {	-- Underbelly Whelp Scale
-					["questID"] = 122,	-- Underbelly Scales
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						14272,	-- Snarlflare
-						441,	-- Black Dragon Whelp
-					},
 				}),
 			}),
 		},
