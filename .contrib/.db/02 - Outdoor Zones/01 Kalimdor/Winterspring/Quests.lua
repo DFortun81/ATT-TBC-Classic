@@ -493,6 +493,12 @@ _.Zones =
 					["lvl"] = 52,
 					["groups"] = {
 						i(13158),	-- Words of the High Chief
+						i(34424, {	-- Power of the High Chief
+							["timeline"] = { "added 2.3.0.7382" },
+						}),
+						i(34423, {	-- Strength of the High Chief
+							["timeline"] = { "added 2.3.0.7382" },
+						}),
 					},
 				}),
 			}),

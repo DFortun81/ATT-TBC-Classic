@@ -7,7 +7,6 @@ _.Zones =
 		m(DESOLACE, {
 			n(ZONE_DROPS, {
 				i(6249, {	-- Aged Kodo Hide
-					["questID"] = 1459,	-- Reagents for Reclaimers Inc. (2/4)
 					["races"] = ALLIANCE_ONLY,
 					["cr"] = 4700,	-- Aged Kodo
 				}),
@@ -15,7 +14,6 @@ _.Zones =
 					["cr"] = 4684,	-- Nether Sorceress
 				}),
 				i(6079, {	-- Crude Charm
-					["questID"] = 1384,	-- Raid on the Kolkar
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						12977,	-- Kolkar Ambusher
@@ -29,7 +27,6 @@ _.Zones =
 					},
 				}),
 				i(6082, {	-- Deepstrider Tumor
-					["questID"] = 1383,	-- Nothing But The Truth
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						4686,	-- Deepstrider Giant
@@ -37,7 +34,6 @@ _.Zones =
 					},
 				}),
 				i(6252, {	-- Doomwarder Blood
-					["questID"] = 1466,	-- Reagents for Reclaimers Inc. (3/4)
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						4680,	-- Doomwarder Captain
@@ -46,7 +42,6 @@ _.Zones =
 					},
 				}),
 				i(6250, {	-- Felhound Brain
-					["questID"] = 1466,	-- Reagents for Reclaimers Inc. (3/4)
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						4685,	-- Ley Hunter
@@ -55,7 +50,6 @@ _.Zones =
 					},
 				}),
 				i(20310, {	-- Flayed Demon Skin
-					["questID"] = 1480,	-- The Corrupter (1/5)
 					["races"] = HORDE_ONLY,
 					["crs"] = {
 						4665,	-- Burning Blade Adept
@@ -69,7 +63,6 @@ _.Zones =
 					},
 				}),
 				i(6246, {	-- Hatefury Claw
-					["questID"] = 1458,	-- Reagents for Reclaimers Inc. (1/4)
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						4673,	-- Hatefury Betrayer
@@ -82,7 +75,6 @@ _.Zones =
 					},
 				}),
 				i(6247, {	-- Hatefury Horn
-					["questID"] = 1458,	-- Reagents for Reclaimers Inc. (1/4)
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						4673,	-- Hatefury Betrayer
@@ -99,7 +91,6 @@ _.Zones =
 					["coord"] = { 55.0, 77.8, DESOLACE },
 				}),
 				i(6245, {	-- Karnitol's Satchel
-					["questID"] = 1456,	-- The Karnitol Shipwreck (3/4)
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						4719,	-- Slitherblade Sea Witch
@@ -107,12 +98,10 @@ _.Zones =
 					},
 				}),
 				i(6990, {	-- Lesser Infernal Stone
-					["questID"] = 4783,	-- Components for the Enchanted Gold Bloodrobe (4/5)
 					["classes"] = { WARLOCK },
 					["cr"] = 4676,	-- Lesser Infernal
 				}),
 				i(6251, {	-- Nether Wing
-					["questID"] = 1466,	-- Reagents for Reclaimers Inc. (3/4)
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						4679,	-- Nether Maiden
@@ -121,7 +110,6 @@ _.Zones =
 					},
 				}),
 				i(15881, {	-- Rackmore's Golden Key
-					["questID"] = 6161,	-- Claim Rackmore's Treasure!
 					["crs"] = {
 						14229,	-- Accursed Slitherblade
 						4714,	-- Slitherblade Myrmidon
@@ -135,14 +123,12 @@ _.Zones =
 					},
 				}),
 				i(15878, {	-- Rackmore's Silver Key
-					["questID"] = 6161,	-- Claim Rackmore's Treasure!
 					["crs"] = {
 						11562,	-- Drysnap Crawler
 						11563,	-- Drysnap Pincer
 					},
 				}),
 				i(6248, {	-- Scorpashi Venom
-					["questID"] = 1459,	-- Reagents for Reclaimers Inc. (2/4)
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						4697,	-- Scorpashi Lasher
@@ -172,7 +158,6 @@ _.Zones =
 					},
 				}),
 				i(6989, {	-- Vial of Hatefury Blood
-					["questID"] = 4783,	-- Components for the Enchanted Gold Bloodrobe (4/5)
 					["classes"] = { WARLOCK },
 					["crs"] = {
 						4673,	-- Hatefury Betrayer
@@ -182,6 +167,18 @@ _.Zones =
 						4674,	-- Hatefury Shadowstalker
 						4671,	-- Hatefury Trickster
 						14225,	-- Prince Kellen
+					},
+				}),
+				i(6074, {	-- War Horn Mouthpiece
+					["crs"] = {
+						6070,	-- Maraudine Khan Advisor
+						6069,	-- Maraudine Khan Guard
+						4659,	-- Maraudine Marauder
+						4656,	-- Maraudine Mauler
+						4654,	-- Maraudine Scout
+						4658,	-- Maraudine Stormer
+						4657,	-- Maraudine Windchaser
+						4655,	-- Maraudine Wrangler
 					},
 				}),
 			}),

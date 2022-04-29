@@ -345,17 +345,12 @@ _.Zones =
 					},
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 6074,	-- War Horn Mouthpiece
-							["groups"] = {
-								{
-									["itemID"] = 6077,	-- Maraudine Key Fragment
-									["questID"] = 1381,	-- Khan Hratha
-									["cr"] = 5402,	-- Khan Hratha
-									["coord"] = { 29.8, 52.8, DESOLACE },
-								},
-							},
-						},
+						objective(1, {	-- 0/1 Maraudine Key Fragment
+							["provider"] = { "i", 6077 },	-- Maraudine Key Fragment
+							["cost"] = { { "i", 6074, 1 } },	-- War Horn Mouthpiece
+							["coord"] = { 29.8, 52.8, DESOLACE },
+							["cr"] = 5402,	-- Khan Hratha
+						}),
 						i(6788),	-- Magram Hunter's Belt
 						i(6789),	-- Ceremonial Centaur Blanket
 					},
@@ -365,25 +360,16 @@ _.Zones =
 					["sourceQuest"] = 1374,	-- Khan Jehn
 					["coord"] = { 36.2, 79.2, DESOLACE },
 					["minReputation"] = { 92, FRIENDLY },	-- Gelkis Clan Centaur, Friendly.
-					["cost"] = {
-						{ "i", 6077, 1 },	-- Maraudine Key Fragment
-					},
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 6074,	-- War Horn Mouthpiece
-							["groups"] = {
-								{
-									["itemID"] = 6077,	-- Maraudine Key Fragment
-									["questID"] = 1380,	-- Khan Hratha
-									["cr"] = 5402,	-- Khan Hratha
-									["coord"] = { 29.8, 52.8, DESOLACE },
-								},
-							},
-						},
+						objective(1, {	-- 0/1 Maraudine Key Fragment
+							["provider"] = { "i", 6077 },	-- Maraudine Key Fragment
+							["cost"] = { { "i", 6074, 1 } },	-- War Horn Mouthpiece
+							["coord"] = { 29.8, 52.8, DESOLACE },
+							["cr"] = 5402,	-- Khan Hratha
+						}),
 						i(6773),	-- Gelkis Marauder Chain
 						i(6774),	-- Uthek's Finger
-						i(6074),	-- War Horn Mouthpiece
 					},
 				}),
 				q(1374, {	-- Khan Jehn
