@@ -107,75 +107,155 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(124, {	-- A Baying of Gnolls
 					["qg"] = 415,	-- Verner Osgood
 					["coord"] = { 31.0, 47.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 15,
+					["groups"] = {
+						objective(1, {	-- 0/10 Redridge Brute
+							["provider"] = { "n", 426 },	-- Redridge Brute
+						}),
+						objective(2, {	-- 0/10 Redridge Mystic
+							["provider"] = { "n", 430 },	-- Redridge Mystic
+						}),
+					},
 				}),
 				q(129, {	-- A Free Lunch
-					["qg"] = 379,	-- Darcy
-					["coord"] = { 26.7, 44.3, REDRIDGE_MOUNTAINS },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 5534, 1 },	-- Parker's Lunch
+					["providers"] = {
+						{ "n", 379 },	-- Darcy
+						{ "i", 5534 },	-- Parker's Lunch
 					},
+					["coord"] = { 26.7, 44.3, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 12,
 				}),
 				q(94, {	-- A Watchful Eye
-					["qg"] = 313,	-- Theocritus
-					["coord"] = { 65.2, 69.8, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1083, 1 },	-- Glyph of Azora
+					["providers"] = {
+						{ "n", 313 },	-- Theocritus
+						{ "i", 1083 },	-- Glyph of Azora
 					},
+					["coord"] = { 65.2, 69.8, ELWYNN_FOREST },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
 				}),
+				q(26708, {	-- AHHHHHHHHHHHH! AHHHHHHHHH!!!
+					["qg"] = 43733,	-- Colonel Troteman
+					["sourceQuest"] = 26694,	-- The Grand Magus Doane
+					["coord"] = { 77.2, 65.9, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3.13287" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(131588, {	-- Bravo Company Amice
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(60722, {	-- Bravo Company Mantle
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(60723, {	-- Bravo Company Monnions
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(60725, {	-- Bravo Company Pauldrons
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(60724, {	-- Bravo Company Shoulderguards
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(131589, {	-- Bravo Company Spaulders
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
+				}),
 				q(2282, {	-- Alther's Mill
-					["qg"] = 6966,	-- Lucius
+					["providers"] = {
+						{ "n", 6966 },	-- Lucius
+						{ "i", 5060 },	-- Thieves' Tools
+					},
 					["sourceQuest"] = 2281,	-- Redridge Rendezvous
+					["coord"] = { 28.2, 52.2, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { ROGUE },
-					["cost"] = {
-						{ "i", 5060, 1 },	-- Thieves' Tools
-						{ "i", 7871, 1 },	-- Token of Thievery
-					},
 					["lvl"] = 16,
 					["groups"] = {
-						{
-							["itemID"] = 7871,	-- Token of Thievery
-							["questID"] = 2282,	-- Alther's Mill
+						objective(1, {	-- 0/1 Token of Thievery
+							["provider"] = { "i", 7871 },	-- Token of Thievery
 							["coord"] = { 52.0, 44.8, REDRIDGE_MOUNTAINS },
-						},
-						i(7907),	-- Certificate of Thievery
+						}),
+						i(7907, {	-- Certificate of Thievery
+							["description"] = "This item has no function, but if you get caught, just hand them this like you're Ron Swanson.",
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(34, {	-- An Unwelcome Guest
 					["qg"] = 342,	-- Martie Jainrose
 					["coord"] = { 21.9, 46.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 18,
 					["groups"] = {
-						{
-							["itemID"] = 3631,	-- Bellygrub's Tusk
-							["questID"] = 34,	-- An Unwelcome Guest
-							["cr"] = 345,	-- Bellygrub
+						objective(1, {	-- 0/1 Bellygrub's Tusk
+							["provider"] = { "i", 3631 },	-- Bellygrub's Tusk
 							["coord"] = { 16.6, 49.8, REDRIDGE_MOUNTAINS },
-						},
+							["cr"] = 345,	-- Bellygrub
+						}),
 						i(2562),	-- Bouquet of Scarlet Begonias
 					},
 				}),
+				q(26509, {	-- An Unwelcome Guest
+					["qg"] = 342,	-- Martie Jainrose
+					["coord"] = { 22.0, 42.7, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						objective(1, {	-- 0/1 Bellygrub's Tusk
+							["provider"] = { "i", 3631 },	-- Bellygrub's Tusk
+							["coord"] = { 17.4, 45, REDRIDGE_MOUNTAINS },
+							["cr"] = 345,	-- Bellygrub
+						}),
+						i(2562),	-- Bouquet of Scarlet Begonias
+					},
+				}),
+				q(26562, {	-- And Last But Not Least... Danforth
+					["qg"] = 43303,	-- Krakauer
+					["sourceQuest"] = 26561,	-- Krakauer
+					["coord"] = { 25.9, 10.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(246, {	-- Assessing the Threat
 					["qg"] = 1070,	-- Deputy Feldon
+					["sourceQuest"] = 244,	-- Encroaching Gnolls
+					["coord"] = { 30.8, 60, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 11,
+					["groups"] = {
+						objective(1, {	-- 0/10 Redridge Mongrel
+							["provider"] = { "n", 423 },	-- Redridge Mongrel
+						}),
+						objective(2, {	-- 0/10 Redridge Poacher
+							["provider"] = { "n", 424 },	-- Redridge Poacher
+						}),
+					},
 				}),
 				q(128, {	-- Blackrock Bounty
 					["qg"] = 903,	-- Guard Howe
 					["coord"] = { 31.5, 58.0, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/15 Blackrock Champion
+							["provider"] = { "n", 435 },	-- Blackrock Champion
+						}),
+					},
 				}),
 				q(20, {	-- Blackrock Menace
 					["qg"] = 382,	-- Marshal Marris
 					["coord"] = { 33.4, 49.0, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 18,
 					["groups"] = {
@@ -197,229 +277,602 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(26636, {	-- Bravo Company Field Kit: Camouflage
+					["qg"] = 43461,	-- Krakauer
+					["sourceQuest"] = 26616,	-- It's Never Over
+					["coord"] = { 52.4, 55.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26637, {	-- Bravo Company Field Kit: Chloroform
+					["qg"] = 43459,	-- Messner
+					["sourceQuest"] = 26616,	-- It's Never Over
+					["coord"] = { 52.4, 55.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60717, {	-- Everstill Breastplate
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60716, {	-- Muckdweller Gloves
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131569, {	-- Muckdweller Handguards
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(60715, {	-- Vial of Chloroform
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
+				}),
+				q(26587, {	-- Breaking Out is Hard to Do
+					["qg"] = 43270,	-- Messner
+					["sourceQuest"] = 26586,	-- In Search of Bravo Company
+					["coord"] = { 47.5, 41.8, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26514, {	-- Canyon Romp
+					["qg"] = 344,	-- Magistrate Solomon
+					["sourceQuest"] = 26512,	-- Tuning the Gnomecorder
+					["coord"] = { 32.3, 39.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26714, {	-- Darkblaze, Brood of the Worldbreaker
+					["qg"] = 43733,	-- Colonel Troteman
+					["sourceQuest"] = 26713,	-- Showdown at Stonewatch
+					["coord"] = { 60.6, 36.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(131, {	-- Delivering Daffodils
-					["qg"] = 342,	-- Martie Jainrose
+					["providers"] = {
+						{ "n", 342 },	-- Martie Jainrose
+						{ "i", 1325 },	-- Daffodil Bouquet
+					},
 					["sourceQuest"] = 130,	-- Visit the Herbalist
 					["coord"] = { 21.9, 46.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1325, 1 },	-- Daffodil Bouquet
-					},
 					["lvl"] = 12,
 					["groups"] = {
 						i(1326),	-- Sauteed Sunfish
 					},
 				}),
+				q(26668, {	-- Detonation
+					["qg"] = 43611,	-- John J. Keeshan
+					["sourceQuest"] = 26651,	-- To Win a War, You Gotta Become War
+					["coord"] = { 77.6, 65.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60712, {	-- Exterminator's Armbands
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131576, {	-- Exterminator's Bracers
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(156953, {	-- 'Liberated' Greataxe
+							["timeline"] = { "added 7.3.5.25716" },
+						}),
+						i(60714, {	-- Massive Firearm of Death
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60711, {	-- Messner's Cuffs
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60713, {	-- Redridge Legguards
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
+				}),
 				q(116, {	-- Dry Times
 					["qg"] = 346,	-- Barkeep Daniels
 					["coord"] = { 26.5, 44.2, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = {
 						DUSKWOOD,
 						ELWYNN_FOREST,
 						STORMWIND_CITY,
 						WESTFALL,
 					},
-					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 1942, 1 },	-- Bottle of Moonshine
 						{ "i", 1941, 1 },	-- Cask of Merlot
 						{ "i", 1262, 1 },	-- Keg of Thunderbrew
 						{ "i", 1939, 1 },	-- Skin of Sweet Rum
 					},
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 12,
 					["groups"] = {
-						i(1270),	-- Finely Woven Cloak
-						i(10456),	-- A Bulging Coin Purse
+						i(1270, {	-- Finely Woven Cloak
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(10456, {	-- A Bulging Coin Purse
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(244, {	-- Encroaching Gnolls
 					["qg"] = 464,	-- Guard Parker
 					["coord"] = { 17.3, 69.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 11,
+				}),
+				q(26506, {	-- Franks and Beans
+					["qg"] = 379,	-- Darchy Parker
+					["coord"] = { 15.6, 65.3, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26519, {	-- He Who Controls the Ettins
+					["provider"] = { "i", 58898 },	-- Dirt-Stained Scroll
+					["sourceQuest"] = 26512,	-- Tuning the Gnomecorder
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26728, {	-- Hero's Call: Duskwood!
+					["qg"] = 900,	-- Bailiff Conacher
+					["coord"] = { 28.7, 40.9, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
 				}),
 				q(3741, {	-- Hilary's Necklace
 					["qg"] = 8965,	-- Shawn
 					["coord"] = { 29.3, 53.4, REDRIDGE_MOUNTAINS },
-					["cost"] = {
-						{ "i", 10958, 1 },	-- Hilary's Necklace
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 12,
+					["groups"] = {
+						objective(1, {	-- 0/1 Hilary's Necklace
+							["provider"] = { "i", 10958 },	-- Hilary's Necklace
+							["coords"] = {
+								{ 19.3, 51.8, REDRIDGE_MOUNTAINS },
+								{ 25.9, 54.1, REDRIDGE_MOUNTAINS },
+								{ 37.8, 54.4, REDRIDGE_MOUNTAINS },
+							},
+						}),
+					},
+				}),
+				q(26573, {	-- His Heart Must Be In It
+					["qg"] = 43221,	-- Colonel Troteman
+					["sourceQuest"] = 26571,	-- Weapons of War
+					["coord"] = { 28.6, 40.7, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(131557, {	-- Hauberk of the Changing Heart
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(60710, {	-- Troteman's Bracers
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60709, {	-- Vest of the Changing Heart
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
 				}),
 				q(126, {	-- Howling in the Hills
 					["qg"] = 415,	-- Verner Osgood
 					["coord"] = { 31.0, 47.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3614, 1},	-- Yowler's Paw
-					},
 					["lvl"] = 15,
 					["groups"] = {
-						{
-							["itemID"] = 3614,	-- Yowler's Paw
-							["questID"] = 126,	-- Howling in the Hills
-							["cr"] = 518,	-- Yowler
+						objective(1, {	-- 0/1 Yowler's Paw
+							["provider"] = { "i", 3614 },	-- Yowler's Paw
 							["coord"] = { 28.8, 23.2, REDRIDGE_MOUNTAINS },
-						},
-						i(1319),	-- Ring of Iron Will
-						i(2910),	-- Gold Militia Boots
+							["cr"] = 518,	-- Yowler
+						}),
+						i(1319, {	-- Ring of Iron Will
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(2910, {	-- Gold Militia Boots
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26638, {	-- Hunting the Hunters
+					["qg"] = 43462,	-- Danforth
+					["sourceQuest"] = 26616,	-- It's Never Over
+					["coord"] = { 52.5, 55.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26586, {	-- In Search of Bravo Company
+					["qg"] = 43221,	-- Colonel Troteman
+					["sourceQuest"] = 26568,	-- This Ain't My War
+					["coord"] = { 28.6, 40.7, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26616, {	-- It's Never Over
+					["qg"] = 43184,	-- John J. Keeshan
+					["sourceQuest"] = 26607,	-- They Drew First Blood
+					["coord"] = { 26.3, 40.1, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26567, {	-- John J. Keeshan
+					["qg"] = 43221,	-- Colonel Troteman
+					["sourceQuest"] = 26545,	-- Yowler Must Die!
+					["coord"] = { 28.6, 40.7, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26560, {	-- Jorgensen
+					["qg"] = 43300,	-- Messner
+					["sourceQuest"] = 26587,	-- Breaking Out is Hard to Do
+					["coord"] = { 47.5, 41.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26561, {	-- Krakauer
+					["qg"] = 43305,	-- Jorgensen
+					["sourceQuest"] = 26560,	-- Jorgensen
+					["coord"] = { 33.5, 11.8, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26511, {	-- Lake Everstill Clean Up
+					["qg"] = 900,	-- Bailiff Conacher
+					["coord"] = { 28.6, 40.9, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60699, {	-- Bailiff's Gloves
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60698, {	-- Belt of Recurring Raids
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131539, {	-- Chain of Recurring Raids
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(157001, {	-- Everstill Hewer
+							["timeline"] = { "added 7.3.5.25744" },
+						}),
+						i(60697, {	-- Indiscriminate Wand
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60696, {	-- Shield of the Lesson
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
+				}),
+				q(26513, {	-- Like a Fart in the Wind
+					["qg"] = 382,	-- Marshal Marris
+					["sourceQuest"] = 26510,	-- We Must Prepare!
+					["coord"] = { 31.8, 44.9, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60692, {	-- Breadwinner's Gloves
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60695, {	-- Cloak of Insomnia
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131540, {	-- Starvation Leggings
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(60694, {	-- Starvation Vest
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60693, {	-- Ventillated Leggings
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131541, {	-- Ventillated Vest
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 					},
 				}),
 				q(248, {	-- Looking Further
-					["provider"] = { "o", 31 },	-- Old Lion Statue
+					["providers"] = {
+						{ "o", 31 },	-- Old Lion Statue
+						{ "i", 1083 },	-- Glyph of Azora
+					},
+					["sourceQuest"] = 94,	-- A Watchful Eye
+					["coord"] = { 84.3, 46.9, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
 				}),
 				q(145, {	-- Messenger to Darkshire (1/2)
-					["qg"] = 344,	-- Magistrate Solomon
+					["providers"] = {
+						{ "n", 344 },	-- Magistrate Solomon
+						{ "i", 1409 },	-- Solomon's Plea to Darkshire
+					},
 					["sourceQuest"] = 144,	-- Messenger to Westfall (2/2)
 					["coord"] = { 30.0, 44.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1409, 1 },	-- Solomon's Plea to Darkshire
-					},
 					["lvl"] = 18,
 				}),
 				q(146, {	-- Messenger to Darkshire (2/2)
-					["qg"] = 263,	-- Lord Ello Ebonlocke
+					["providers"] = {
+						{ "n", 263 },	-- Lord Ello Ebonlocke
+						{ "i", 1410 },	-- Ebonlocke's Response to Solomon
+					},
 					["sourceQuest"] = 145,	-- Messenger to Darkshire (1/2)
 					["coord"] = { 72.0, 46.6, DUSKWOOD },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1410, 1 },	-- Ebonlocke's Response to Solomon
-					},
 					["lvl"] = 18,
 				}),
 				q(120, {	-- Messenger to Stormwind (1/2)
-					["qg"] = 344,	-- Magistrate Solomon
-					["coord"] = { 30.0, 44.4, REDRIDGE_MOUNTAINS },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1293, 1 },	-- The State of Lakeshire
+					["providers"] = {
+						{ "n", 344 },	-- Magistrate Solomon
+						{ "i", 1293 },	-- The State of Lakeshire
 					},
+					["coord"] = { 30.0, 44.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 14,
 				}),
 				q(121, {	-- Messenger to Stormwind (2/2)
-					["qg"] = 466,	-- General Marcus Jonathan
+					["providers"] = {
+						{ "n", 466 },	-- General Marcus Jonathan
+						{ "i", 1294 },	-- The General's Response
+					},
 					["sourceQuest"] = 120,	-- Messenger to Stormwind (1/2)
 					["coord"] = { 63.8, 75.4, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1294, 1 },	-- The General's Response
-					},
 					["lvl"] = 14,
 				}),
 				q(143, {	-- Messenger to Westfall (1/2)
-					["qg"] = 344,	-- Magistrate Solomon
+					["providers"] = {
+						{ "n", 344 },	-- Magistrate Solomon
+						{ "i", 1407 },	-- Solomon's Plea to Westfall
+					},
 					["sourceQuest"] = 121,	-- Messenger to Stormwind (2/2)
 					["coord"] = { 30.0, 44.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1407, 1 },	-- Solomon's Plea to Westfall
-					},
 					["lvl"] = 14,
 				}),
 				q(144, {	-- Messenger to Westfall (2/2)
-					["qg"] = 234,	-- Gryan Stoutmantle
+					["providers"] = {
+						{ "n", 234 },	-- Gryan Stoutmantle
+						{ "i", 1408 },	-- Stoutmantle's Response to Solomon
+					},
 					["sourceQuest"] = 143,	-- Messenger to Westfall (1/2)
 					["coord"] = { 56.2, 47.6, WESTFALL },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1408, 1 },	-- Stoutmantle's Response to Solomon
-					},
 					["lvl"] = 14,
 				}),
 				q(219, {	-- Missing In Action
 					["qg"] = 349,	-- Corporal Keeshan
+					["coord"] = { 28.4, 12.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 19,
 					["groups"] = {
-						i(3555),	-- Robe of Solomon
-						i(1275),	-- Deputy Chain Coat
-						i(3431),	-- Bone-studded Leather
+						i(3555, {	-- Robe of Solomon
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(1275, {	-- Deputy Chain Coat
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(3431, {	-- Bone-studded Leather
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(249, {	-- Morganth
-					["provider"] = { "o", 31 },	-- Old Lion Statue
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3617, 1 },	-- Pendant of Shadow
+					["providers"] = {
+						{ "o", 31 },	-- Old Lion Statue
+						{ "n", 313 },	-- Theocritus <Mage of Tower Azora>
 					},
+					["sourceQuest"] = 248,	-- Looking Further
+					["coords"] = {
+						{ 84.5, 47.1, REDRIDGE_MOUNTAINS },
+						{ 65.2, 69.8, ELWYNN_FOREST },
+					},
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
 					["groups"] = {
-						{
-							["itemID"] = 3617,	-- Pendant of Shadow
-							["questID"] = 249,	-- Morganth
-							["cr"] = 397,	-- Morganth
+						objective(1, {	-- 0/1 Pendant of Shadow
+							["provider"] = { "i", 3617 },	-- Pendant of Shadow
 							["coord"] = { 80, 49, REDRIDGE_MOUNTAINS },
-						},
-						i(5274),	-- Rose Mantle
+							["cr"] = 397,	-- Morganth
+						}),
+						i(5274, {	-- Rose Mantle
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(150, {	-- Murloc Poachers
 					["qg"] = 381,	-- Dockmaster Baren
 					["coord"] = { 27.7, 47.3, REDRIDGE_MOUNTAINS },
-					["races"] = ALLIANCE_ONLY,
+					["timeline"] = { "removed 4.0.3" },
 					["cost"] = {
 						{ "i", 1468, 8 },	-- Murloc Fin
 					},
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
 					["groups"] = {
-						i(3567),	-- Dwarven Fishing Pole
+						i(3567, {	-- Dwarven Fishing Pole
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
+				}),
+				q(26508, {	-- Nida's Necklace
+					["qg"] = 8965,	-- Shawn
+					["coord"] = { 28.3, 48.8, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26505, {	-- Parker's Report
+					["qg"] = 464,	-- Watch Captain Parker
+					["sourceQuest"] = 26503,	-- Still Assessing the Threat
+					["coord"] = { 15.3, 64.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26639, {	-- Point of Contact: Brubaker
+					["qg"] = 43458,	-- John J. Keeshan
+					["sourceQuest"] = 26616,	-- It's Never Over
+					["coord"] = { 52.5, 55.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26646, {	-- Prisoners of War
+					["qg"] = 43458,	-- John J. Keeshan
+					["sourceQuests"] = {
+						26637,	-- Bravo Company Field Kit: Chloroform
+						26636,	-- Bravo Company Field Kit: Camouflage
+						26638,	-- Hunting the Hunters
+						26640,	-- Unspeakable Atrocities
+					},
+					["coord"] = { 52.5, 55.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(92, {	-- Redridge Goulash
 					["qg"] = 343,	-- Chef Breanna
 					["coord"] = { 22.7, 44.0, REDRIDGE_MOUNTAINS },
-					["races"] = ALLIANCE_ONLY,
+					["timeline"] = { "removed 4.0.3" },
 					["cost"] = {
 						{ "i", 2296, 5 },	-- Great Goretusk Snout
 						{ "i", 1080, 5 },	-- Tough Condor Meat
 						{ "i", 1081, 5 },	-- Crisp Spider Meat
 					},
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 15,
 					["groups"] = {
 						i(1082),	-- Redridge Goulash
 						i(2699),	-- Recipe: Redridge Goulash
 					},
 				}),
+				q(26570, {	-- Render's Army
+					["qg"] = 382,	-- Marshal Marris
+					["sourceQuest"] = 26568,	-- This Ain't My War
+					["coord"] = { 31.8, 44.8, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(347, {	-- Rethban Ore
 					["qg"] = 341,	-- Foreman Oslow
 					["sourceQuest"] = 345,	-- Ink Supplies (Elwynn Forest)
+					["coord"] = { 32.2, 48.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
+					["cost"] = { { "i", 2798, 5 } },	-- Rethban Ore
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2798, 5 },	-- Rethban Ore
-					},
 					["lvl"] = 20,
 				}),
-				q(119, {	-- Return to Verner
-					["qg"] = 514,	-- Smith Argus
-					["coord"] = { 41.7, 65.5, ELWYNN_FOREST },
+				q(26563, {	-- Return of the Bravo Company
+					["qg"] = 43302,	-- Danforth
+					["sourceQuest"] = 26562,	-- And Last But Not Least... Danforth
+					["coord"] = { 28.3, 17.0, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1284, 1 },	-- Crate of Horseshoes
+				}),
+				q(119, {	-- Return to Verner
+					["providers"] = {
+						{ "n", 514 },	-- Smith Argus
+						{ "i", 1284 },	-- Crate of Horseshoes
 					},
+					["coord"] = { 41.7, 65.5, ELWYNN_FOREST },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 13,
+				}),
+				q(26520, {	-- Saving Foreman Oslow
+					["provider"] = { "o", 204351 },	-- Ettin Control Orb
+					["sourceQuest"] = 26519,	-- He Who Controls the Ettins
+					["coord"] = { 17.8, 18.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60701, {	-- Leverage Bracers
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131543, {		-- Leverage Wriststraps
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(60700, {	-- Solomon's Gavel
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60702, {	-- Sword of the Falling Sky
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
 				}),
 				q(127, {	-- Selling Fish
 					["qg"] = 381,	-- Dockmaster Baren
+					["coord"] = { 27.8, 47.2, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 16,
 					["groups"] = {
+						objective(1, {	-- 0/10 Spotted Sunfish
+							["provider"] = { "i", 1467 },	-- Spotted Sunfish
+							["crs"] = {
+								422,	-- Murloc Flesheater
+								548,	-- Murloc Minor Tidecaller
+								544,	-- Murloc Nightcrawler
+								578,	-- Murloc Scout
+								1083,	-- Murloc Shorestriker
+								545,	-- Murloc Tidecaller
+								14270,	-- Squiddic
+							},
+						}),
 						i(3663),	-- Murloc Fin Soup
-						i(1322),	-- Fishliver Oil
+						i(1322, {	-- Fishliver Oil
+							["timeline"] = { "removed 4.0.3" },
+						}),
 						i(3680),	-- Recipe: Murloc Fin Soup
 					},
 				}),
 				q(115, {	-- Shadow Magic
 					["qg"] = 382,	-- Marshal Marris
 					["coord"] = { 33.4, 49.0, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 18,
+					["groups"] = {
+						objective(1, {	-- 0/3 Midnight Orb
+							["provider"] = { "i", 1261 },	-- Midnight Orb
+							["coord"] = { 68.6, 57.6, REDRIDGE_MOUNTAINS },
+							["cr"] = 436,	-- Blackrock Shadowcaster
+						}),
+					},
+				}),
+				q(26692, {	-- Shadowhide Extinction
+					["qg"] = 43607,	-- Danforth
+					["sourceQuest"] = 26668,	-- Detonation
+					["coord"] = { 77.6, 65.3, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60719, {	-- Danforth's Breastplate
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60718, {	-- Shadowhide Boots
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131583, {	-- Shadowhide Footguards
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
+				}),
+				q(26713, {	-- Showdown at Stonewatch
+					["qg"] = 43733,	-- Colonel Troteman
+					["sourceQuest"] = 26708,	-- AHHHHHHHHHHHH! AHHHHHHHHH!!!
+					["coord"] = { 60.6, 36.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(91, {	-- Solomon's Law
 					["qg"] = 900,	-- Bailiff Conacher
 					["coord"] = { 29.6, 44.3, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 17,
 					["groups"] = {
@@ -439,38 +892,90 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(26503, {	-- Still Assessing the Threat
+					["qg"] = 464,	-- Watch Captain Parker
+					["sourceQuest"] = 26365,	-- Hero's Call: Redridge Mountains!
+					["coord"] = { 15.3, 64.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60687, {	-- Belt of the Sons
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60686, {	-- Boots of the Prolific Sire
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131538, {	-- Striders of the Prolific Sire
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(60685, {	-- Yowling Cloak
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
+				}),
+				q(26569, {	-- Surveying Equipment
+					["qg"] = 43194,	-- Foreman Oslow
+					["sourceQuest"] = 26568,	-- This Ain't My War
+					["coord"] = { 29.6, 44.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60708, {	-- Blackrock Shield
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60707, {	-- Lakeshire Gloves
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131556, {	-- Lakeshire Handwraps
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(60706, {	-- Sandals of the Neverending Bridge
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
+				}),
 				q(19, {	-- Tharil'zun
 					["qg"] = 382,	-- Marshal Marris
 					["coord"] = { 33.4, 49.0, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1260, 1},	-- Tharil'zun's Head
-					},
 					["lvl"] = 18,
 					["groups"] = {
-						{
-							["itemID"] = 1260,	-- Tharil'zun's Head
-							["questID"] = 19,	-- Tharil'zun
-							["cr"] = 486,	-- Tharil'zun
+						objective(1, {	-- 0/1 Tharil'zun's Head
+							["provider"] = { "i", 1260 },	-- Tharil'zun's Head
 							["coord"] = { 68.4, 58.8, REDRIDGE_MOUNTAINS },
-						},
-						i(1276),	-- Fire Hardened Buckler
-						i(6093),	-- Orc Crusher
+							["cr"] = 486,	-- Tharil'zun
+						}),
+						i(1276, {	-- Fire Hardened Buckler
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(6093, {	-- Orc Crusher
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
+				q(26693, {	-- The Dark Tower
+					["qg"] = 43611,	-- John J. Keeshan
+					["sourceQuest"] = 26668,	-- Detonation
+					["coord"] = { 77.6, 65.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(132, {	-- The Defias Brotherhood (2/7)
-					["qg"] = 266,	-- Wiley the Black
+					["providers"] = {
+						{ "n", 266 },	-- Wiley the Black
+						{ "i", 1327 },	-- Wiley's Note
+					},
 					["sourceQuest"] = 65,	-- The Defias Brotherhood (1/7)
 					["coord"] = { 26.6, 45.3, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1327, 1 },	-- Wiley's Note
-					},
 					["lvl"] = 14,
 				}),
 				q(89, {	-- The Everstill Bridge
 					["qg"] = 341,	-- Foreman Oslow
+					["coord"] = { 32.2, 48.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 15,
 					["groups"] = {
@@ -484,7 +989,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								14271,	-- Ribchaser
 							},
 						}),
-						objective(1, {	-- 0/5 Iron Rivet
+						objective(2, {	-- 0/5 Iron Rivet
 							["provider"] = { "i", 1013 },	-- Iron Rivet
 							["crs"] = {
 								446,	-- Redridge Basher
@@ -494,35 +999,57 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								14271,	-- Ribchaser
 							},
 						}),
-						i(1310),	-- Smith's Trousers
-						i(1303),	-- Bridgeworker's Gloves
-						i(1304),	-- Riding Gloves
+						i(1310, {	-- Smith's Trousers
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(1303, {	-- Bridgeworker's Gloves
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(1304, {	-- Riding Gloves
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26694, {	-- The Grand Magus Doane
+					["qg"] = 43611,	-- John J. Keeshan
+					["sourceQuest"] = 26693,	-- The Dark Tower
+					["coord"] = { 77.6, 65.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60721, {	-- Shalewind Belt
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131584, {	-- Treacherous Boots
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(60720, {	-- Treacherous Treads
+							["timeline"] = { "added 4.0.3" },
+						}),
 					},
 				}),
 				q(125, {	-- The Lost Tools
 					["qg"] = 341,	-- Foreman Oslow
 					["coord"] = { 32.2, 48.7, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1309, 1 },	-- Oslow's Toolbox
-					},
 					["lvl"] = 15,
 					["groups"] = {
-						{
-							["itemID"] = 1309,	-- Oslow's Toolbox
-							["questID"] = 125,	-- The Lost Tools
+						objective(1, {	-- 0/1 Oslow's Toolbox
+							["provider"] = { "i", 1309 },	-- Oslow's Toolbox
 							["coord"] = { 41.4, 54.4, REDRIDGE_MOUNTAINS },
-						},
+						}),
 						i(2313),	-- Medium Armor Kit
 					},
 				}),
 				q(118, {	-- The Price of Shoes
-					["qg"] = 415,	-- Verner Osgood
-					["coord"] = { 31.0, 47.4, REDRIDGE_MOUNTAINS },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1283, 1 },	-- Verner's Notes
+					["providers"] = {
+						{ "n", 415 },	-- Verner Osgood
+						{ "i", 1283 },	-- Verner's Notes
 					},
+					["coord"] = { 31.0, 47.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 14,
 				}),
 				q(1699, {	-- The Rethban Gauntlet
@@ -530,43 +1057,107 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					-- #if AFTER TBC
 					["sourceQuests"] = {
 						1698,	-- Yorus Barleybrew
-						10371,	-- Yorus Barleybrew
+						10371,	-- Yorus Barleybrew (Draenei)
 					},
 					-- #else
 					["sourceQuest"] = 1698,	-- Yorus Barleybrew
 					-- #endif
+					["coord"] = { 26.6, 44.8, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
 					["lvl"] = 20,
 				}),
 				q(1702, {	-- The Shieldsmith
-					["qg"] = 6166,	-- Yorus Barleybrew
-					["sourceQuest"] = 1699,	-- The Rethban Gauntlet
-					["races"] = ALLIANCE_ONLY,
-					["classes"] = { WARRIOR },
-					["cost"] = {
-						{ "i", 6843, 1 },	-- Cask of Scalder
+					["providers"] = {
+						{ "n", 6166 },	-- Yorus Barleybrew
+						{ "i", 6843 },	-- Cask of Scalder
 					},
+					["sourceQuest"] = 1699,	-- The Rethban Gauntlet
+					["coord"] = { 26.6, 44.8, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
+					["classes"] = { WARRIOR },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
 					["groups"] = {
-						i(6970),	-- Furen's Favor
+						i(6970, {	-- Furen's Favor
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(178, {	-- Theocritus' Retrieval
-					["provider"] = { "i", 1962 },	-- Glowing Shadowhide Pendant
+					["providers"] = {
+						{ "i", 1962 },	-- Glowing Shadowhide Pendant
+						{ "i", 1956 },	-- Faded Shadowhide Pendant
+					},
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1956, 1 },	-- Faded Shadowhide Pendant
-					},
 					["lvl"] = 15,
 					["groups"] = {
 						i(1970),	-- Restoring Balm
 					},
 				}),
+				q(26607, {	-- They Drew First Blood
+					["qg"] = 43221,	-- Colonel Troteman
+					["sourceQuests"] = {
+						26573,	-- His Heart Must Be In It
+						26563,	-- Return of the Bravo Company
+					},
+					["coord"] = { 28.6, 40.7, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26544, {	-- They've Wised Up...
+					["qg"] = 344,	-- Magistrate Solomon
+					["sourceQuest"] = 26514,	-- Canyon Romp
+					["coord"] = { 28.9, 41.1, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26568, {	-- This Ain't My War
+					["qg"] = 43184,	-- John J. Keeshan
+					["sourceQuest"] = 26567,	-- John J. Keeshan
+					["coord"] = { 26.3, 40.1, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26651, {	-- To Win a War, You Gotta Become War
+					["qg"] = 43458,	-- John J. Keeshan
+					["sourceQuest"] = 26646,	-- Prisoners of War
+					["coord"] = { 52.5, 55.3, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26726, {	-- Triumphant Return
+					["qg"] = 43733,	-- Colonel Troteman
+					["sourceQuest"] = 26714,	-- Darkblaze, Brood of the Worldbreaker
+					["coord"] = { 60.6, 36.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60727, {	-- Keeshan's Bow
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60726, {	-- Keeshan's Dagger
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60730, {	-- Bravo Company Signet
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
+				}),
+				q(26512, {	-- Tuning the Gnomecorder
+					["qg"] = 344,	-- Magistrate Solomon
+					["sourceQuest"] = 26510,	-- We Must Prepare!
+					["coord"] = { 28.9, 41.1, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(122, {	-- Underbelly Scales
 					["qg"] = 415,	-- Verner Osgood
 					["coord"] = { 31.0, 47.4, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 14,
 					["groups"] = {
@@ -577,50 +1168,86 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								441,	-- Black Dragon Whelp
 							},
 						}),
-						i(6092),	-- Black Whelp Boots
-						i(1302),	-- Black Whelp Gloves
+						i(6092, {	-- Black Whelp Boots
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(1302, {	-- Black Whelp Gloves
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
+				}),
+				q(26640, {	-- Unspeakable Atrocities
+					["qg"] = 43508,	-- Brubaker
+					["sourceQuest"] = 26639,	-- Point of Contact: Brubaker
+					["coord"] = { 53.0, 67.8, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(130, {	-- Visit the Herbalist
 					["qg"] = 464,	-- Guard Parker
 					["sourceQuest"] = 129,	-- A Free Lunch
 					["coord"] = { 17.3, 69.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 12,
 				}),
 				q(169, {	-- Wanted: Gath'Ilzogg
 					["provider"] = { "o", 60 },	-- Wanted: Gath'Ilzogg
 					["coord"] = { 29.6, 46.2, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3633, 1 },	-- Head of Gath'Ilzogg
-					},
 					["lvl"] = 15,
 					["groups"] = {
-						{
-							["itemID"] = 3633,	-- Head of Gath'Ilzogg
-							["questID"] = 169,	-- Wanted: Gath'Ilzogg
-							["cr"] = 334,	-- Gath'Ilzogg <Warlord of the Blackrock Clan>
+						objective(1, {	-- 0/1 Head of Gath'Ilzogg
+							["provider"] = { "i", 3633 },	-- Head of Gath'Ilzogg
 							["coord"] = { 69.6, 55.8, REDRIDGE_MOUNTAINS },
-						},
+							["cr"] = 334,	-- Gath'Ilzogg <Warlord of the Blackrock Clan>
+						}),
 					},
 				}),
 				q(180, {	-- Wanted: Lieutenant Fangore
 					["provider"] = { "o", 47 },	-- Wanted: Lieutenant Fangore
 					["coord"] = { 26.7, 46.5, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3632, 1 },	-- Fangore's Paw
-					},
 					["lvl"] = 15,
 					["groups"] = {
-						{
-							["itemID"] = 3632,	-- Fangore's Paw
-							["questID"] = 180,	-- Wanted: Lieutenant Fangore
-							["cr"] = 703,	-- Lieutenant Fangore
+						objective(1, {	-- 0/1 Fangore's Paw
+							["provider"] = { "i", 3632 },	-- Fangore's Paw
 							["coord"] = { 80.0, 39.0, REDRIDGE_MOUNTAINS },
-						},
+							["cr"] = 703,	-- Lieutenant Fangore
+						}),
 					},
+				}),
+				q(26504, {	-- Wanted: Redridge Gnolls
+					["provider"] = { "o", 204344 },	-- Wanted!
+					["coord"] = { 16.0, 64.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60684, {	-- Royal Guard Breastplate
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60683, {	-- Tower Watch Bracers
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60682, {	-- Watch Captain's Cloak
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
+				}),
+				q(26510, {	-- We Must Prepare!
+					["qg"] = 344,	-- Magistrate Solomon
+					["coord"] = { 28.9, 41.1, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26571, {	-- Weapons of War
+					["qg"] = 43221,	-- Colonel Troteman
+					["sourceQuest"] = 26568,	-- This Ain't My War
+					["coord"] = { 28.6, 40.7, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(1698, {	-- Yorus Barleybrew
 					["qgs"] = {
@@ -631,7 +1258,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 48.6, 35.6, DARNASSUS },
 						{ 78.8, 45.6, STORMWIND_CITY },
 					},
-					["races"] = ALLIANCE_ONLY,
+					["timeline"] = { "removed 4.0.3.10000" },
+					["races"] = exclude(DRAENEI, ALLIANCE_ONLY),
 					["classes"] = { WARRIOR },
 					["isBreadcrumb"] = true,
 					["lvl"] = 20,
@@ -645,6 +1273,27 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 20,
 				})),
+				q(26545, {	-- Yowler Must Die!
+					["qg"] = 344,	-- Magistrate Solomon
+					["sourceQuest"] = 26544,	-- They've Wised Up...
+					["coord"] = { 28.9, 41.1, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(60703, {	-- Escalation Britchers
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(60705, {	-- Legguards of Invasion
+							["timeline"] = { "added 4.0.3" },
+						}),
+						i(131552, {	-- Mongrel Greaves
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(60704, {	-- Mongrel Leggings
+							["timeline"] = { "added 4.0.3" },
+						}),
+					},
+				}),
 			}),
 			n(RARES, {
 				n(14273, {  -- Boulderheart
@@ -798,6 +1447,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					-- #endif
 				}),
 			}),
+			-- #if BEFORE 4.0.3
 			prof(SKINNING, {
 				["crs"] = {
 					441,	-- Black Dragon Whelp
@@ -807,6 +1457,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					i(7286),	-- Black Whelp Scale
 				},
 			}),
+			-- #endif
 			n(VENDORS, {
 				n(777, {	-- Amy Davenport <Tradeswoman>
 					-- #if AFTER CATA
@@ -824,55 +1475,101 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				-- #if BEFORE 4.0.3
 				n(3097, {	-- Bernard Brubaker <Leather Armor Merchant>
 					["coord"] = { 88.2, 71.6, REDRIDGE_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(4794),	-- Wolf Bracers
-						i(4795),	-- Bear Bracers
-						i(4796),	-- Owl Bracers
+						i(4795, {	-- Bear Bracers
+							["isLimited"] = true,
+						}),
+						i(4796, {	-- Owl Bracers
+							["isLimited"] = true,
+						}),
+						i(4794, {	-- Wolf Bracers
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(3096, {	-- Captured Servant of Azora <Specialist Tailoring Supplies>
 					["coord"] = { 74.5, 79.6, REDRIDGE_MOUNTAINS },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(4790),	-- Inferno Cloak
-						i(4792),	-- Spirit Cloak
-						i(4793),	-- Sylvan Cloak
+						-- No longer sells any of this stuff after 4.0.3
+						i(4790, {	-- Inferno Cloak
+							["isLimited"] = true,
+						}),
+						i(4792, {	-- Spirit Cloak
+							["isLimited"] = true,
+						}),
+						i(4793, {	-- Sylvan Cloak
+							["isLimited"] = true,
+						}),
 					},
 				}),
+				-- #endif
 				n(2697, {	-- Clyde Ranthal <Leatherworking Supplies>
+					-- #if AFTER CATA
+					["coord"] = { 78.8, 63.5, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coord"] = { 89.0, 70.2, REDRIDGE_MOUNTAINS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(7289),	-- Pattern: Black Whelp Cloak
+						i(7289, {	-- Pattern: Black Whelp Cloak
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(3091, {	-- Franklin Hamar <Tailoring Supplies>
+					-- #if AFTER CATA
+					["coord"] = { 26.5, 42.0, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coord"] = { 27.2, 45.4, REDRIDGE_MOUNTAINS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(4781),	-- Whispering Vest
-						i(4782),	-- Solstice Robe
-						i(4786),	-- Wise Man's Belt
+						i(4782, {	-- Solstice Robe
+							["isLimited"] = true,
+						}),
+						i(4781, {	-- Whispering Vest
+							["isLimited"] = true,
+						}),
+						i(4786, {	-- Wise Man's Belt
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(3085, {	-- Gloria Femmel <Cooking Supplies>
+					-- #if AFTER CATA
+					["coord"] = { 26.1, 40.3, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coord"] = { 26.7, 43.6, REDRIDGE_MOUNTAINS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(21099),	-- Recipe: Smoked Sagefish
 						i(21219),	-- Recipe: Sagefish Delight
+						i(21099),	-- Recipe: Smoked Sagefish
 					},
 				}),
 				n(793, {	-- Kara Adams <Shield Crafter>
+					-- #if AFTER CATA
+					["coord"] = { 29.4, 42.9, REDRIDGE_MOUNTAINS },
+					-- #else
 					["coord"] = { 30.6, 46.6, REDRIDGE_MOUNTAINS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(4820),	-- Guardian Buckler
-						i(4821),	-- Bear Buckler
-						i(4822),	-- Owl's Disk
+						i(4821, {	-- Bear Buckler
+							["isLimited"] = true,
+						}),
+						i(4820, {	-- Guardian Buckler
+							["isLimited"] = true,
+						}),
+						i(4822, {	-- Owl's Disk
+							["isLimited"] = true,
+						}),
 					},
 				}),
 			}),
@@ -908,6 +1605,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						615,	-- Blackrock Tracker
 						4462,	-- Blackrock Hunter
 					},
+				}),
+				i(58898, {	-- Dirt-Stained Scroll
+					["timeline"] = { "added 4.0.3" },
 				}),
 				i(1287, {	-- Giant Tarantula Fang
 					["timeline"] = { "removed 4.0.3" },
@@ -971,7 +1671,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 580,	-- Redridge Drudger
 				}),
-				i(1406, {	-- Pearl-encrusted Spear
+				i(1406, {	-- Pearl-encrusted Spear / Pearl-Encrusted Spear
 					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 544,	-- Murloc Nightcrawler
 				}),
@@ -1018,7 +1718,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 579,	-- Shadowhide Assassin
 				}),
-				i(1460, {	-- Shadowhide Two-handed Sword
+				i(1460, {	-- Shadowhide Two-handed Sword / Shadowhide Two-Handed Sword
 					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 434,	-- Rabid Shadowhide Gnoll
 				}),

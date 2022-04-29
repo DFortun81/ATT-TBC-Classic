@@ -592,13 +592,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			prof(SKINNING, {
-				["crs"] = {
-					1069,	-- Crimson Whelp
-					1044,	-- Flamesnorting Whelp
-				},
-				["groups"] = {
-					i(7287),	-- Red Whelp Scale
-				},
+				-- #if AFTER 4.0.3
+				i(7286, {	-- Black Whelp Scale
+					["cr"] = 42042,	-- Ebon Whelp
+				}),
+				-- #endif
+				i(7287, {	-- Red Whelp Scale
+					["crs"] = {
+						1069,	-- Crimson Whelp
+						1044,	-- Flamesnorting Whelp
+					},
+				}),
 			}),
 			n(VENDORS, {
 				n(1441, {	-- Brak Durnad <Weaponsmith>
