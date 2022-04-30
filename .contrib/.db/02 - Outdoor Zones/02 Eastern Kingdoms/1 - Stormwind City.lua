@@ -80,12 +80,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				q(335, {	-- A Noble Brew (1)
 					["qg"] = 1435,	-- Zardeth of the Black Claw
+					["maps"] = { DUSKWOOD, WETLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2784, 1 },	-- Musquash Root
-						{ "i", 2779, 1 },	-- Tear of Tilloa
-					},
 					["lvl"] = 25,
+					["groups"] = {
+						objective(1, {	-- 0/1 Tear of Tilloa
+							["provider"] = { "i", 2779 },	-- Tear of Tilloa
+							["coord"] = { 78.5, 36.0, DUSKWOOD },
+						}),
+						objective(2, {	-- 0/1 Musquash Root
+							["provider"] = { "i", 2784 },	-- Musquash Root
+							["coord"] = { 64.7, 75.5, WETLANDS },
+						}),
+					},
 				}),
 				q(336, {	-- A Noble Brew (2)
 					["qg"] = 1435,	-- Zardeth of the Black Claw
@@ -257,11 +264,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["maps"] = { DUSKWOOD },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARRIOR },
-					["cost"] = {
-						{ "i", 6844, 20 },	-- Burning Blood
-						{ "i", 6845, 1 },	-- Burning Rock
-					},
 					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/20 Burning Blood
+							["provider"] = { "i", 6844 },	-- Burning Blood
+							["coord"] = { 74.2, 77.8, DUSKWOOD },
+							["crs"] = {
+								205,	-- Nightbane Dark Runner
+								533,	-- Nightbane Shadow Weaver
+								920,	-- Nightbane Tainted One
+								206,	-- Nightbane Vile Fang
+								898,	-- Nightbane Worgen
+							},
+						}),
+						objective(1, {	-- 0/1 Burning Rock
+							["provider"] = { "i", 6845 },	-- Burning Rock
+							["coord"] = { 74.2, 77.8, DUSKWOOD },
+							["cr"] = 6170,	-- Gutspill
+						}),
+					},
 				}),
 				q(8254, {	-- Cenarion Aid
 					["qg"] = 5489,	-- Brother Joshua <Priest Trainer>
@@ -583,10 +604,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["maps"] = { DUSKWOOD },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
-					["cost"] = {
-						{ "i", 7267, 8 },	-- Pristine Spider Silk
-					},
 					["lvl"] = 26,
+					["groups"] = {
+						objective(1, {	-- 0/8 Pristine Spider Silk
+							["provider"] = { "i", 7267 },	-- Pristine Spider Silk
+							["crs"] = {
+								949,	-- Carrion Recluse
+								930,	-- Black Widow Hatchling
+							},
+						}),
+					},
 				}),
 				q(2281, {	-- Redridge Rendezvous
 					["qg"] = 6946,	-- Renzik "The Shiv"
@@ -786,6 +813,29 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cost"] = {
 						{ "i", 5960, 1 },	-- Sealed Note to Watcher Backus
 					},
+				}),
+				q(1244, {	-- The Missing Diplomat (5/17)
+					["qg"] = 840,	-- Watcher Backus
+					["sourceQuest"] = 1243,	-- The Missing Diplomat (4/17)
+					["coord"] = { 73.21, 38.81, DUSKWOOD },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 28,
+					["groups"] = {
+						objective(1, {	-- 0/1 Defias Docket
+							["provider"] = { "i", 5947 },	-- Defias Docket
+							["coord"] = { 24.0, 72.1, DUSKWOOD },
+						}),
+					},
+				}),
+				q(1245, {	-- The Missing Diplomat (6/17)
+					["providers"] = {
+						{ "n", 840 },	-- Watcher Backus
+						{ "i", 5947 },	-- Defias Docket
+					},
+					["sourceQuest"] = 1244,	-- The Missing Diplomat (5/17)
+					["coord"] = { 73.21, 38.81, DUSKWOOD },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 28,
 				}),
 				q(1246, {	-- The Missing Diplomat (7/17)
 					["lvl"] = 28,
@@ -1067,12 +1117,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							["description"] = "Located in one of the bookshelves at the top of the tower.",
 						},
 					},
-				}),
-				q(1477,	{	-- Vital Supplies
-					["qg"] = 5694,	-- High Sorcerer Andromath
-					["isBreadcrumb"] = true,
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = 40,
 				}),
 				q(332, {	-- Wine Shop Advert
 					["qg"] = 1432,	-- Renato Gallina

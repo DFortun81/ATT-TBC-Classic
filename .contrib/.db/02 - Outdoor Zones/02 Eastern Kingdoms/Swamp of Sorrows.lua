@@ -586,10 +586,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						766,	-- Tangled Horror
 					},
 				}),
-				i(6081, {	-- Mire Lord Fungus
-					["races"] = HORDE_ONLY,
-					["cr"] = 1081,	-- Mire Lord
-				}),
 				i(6184, {	-- Monstrous Crawler Leg
 					["races"] = HORDE_ONLY,
 					["cr"] = 1088,	-- Monstrous Crawler
@@ -604,10 +600,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				i(6168, {	-- Sawtooth Snapper Claw
 					["races"] = HORDE_ONLY,
 					["cr"] = 1087,	-- Sawtooth Snapper
-				}),
-				i(6080, {	-- Shadow Panther Heart
-					["races"] = HORDE_ONLY,
-					["cr"] = 768,	-- Shadow Panther
 				}),
 				i(5803, {	-- Speck of Dream Dust
 					["crs"] = {

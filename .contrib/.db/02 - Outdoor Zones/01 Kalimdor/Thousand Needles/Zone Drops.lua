@@ -17,6 +17,12 @@ _.Zones =
 						4107,	-- Highperch Wyvern
 					},
 				}),
+				-- #if AFTER TBC
+				i(5773, {	-- Pattern: Robes of Arcana
+					["timeline"] = { "removed 4.0.3" },
+					["cr"] = 10760,	-- Grimtotem Geomancer
+				}),
+				-- #endif
 			}),
 		}),
 	}),

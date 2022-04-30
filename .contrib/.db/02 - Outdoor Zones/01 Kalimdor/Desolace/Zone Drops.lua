@@ -26,13 +26,6 @@ _.Zones =
 						4635,	-- Kolkar Windchaser
 					},
 				}),
-				i(6082, {	-- Deepstrider Tumor
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						4686,	-- Deepstrider Giant
-						4687,	-- Deepstrider Searcher
-					},
-				}),
 				i(6252, {	-- Doomwarder Blood
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {

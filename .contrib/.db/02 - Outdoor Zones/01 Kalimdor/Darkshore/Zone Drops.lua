@@ -115,6 +115,7 @@ _.Zones =
 					},
 				}),
 				i(5773, {	-- Pattern: Robes of Arcana
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2337,	-- Dark Strand Voidcaller
 				}),
 				i(5568, {	-- Smooth Pebble
