@@ -323,6 +323,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ "i", 9556, 1 },	-- Hallowed Rune
 					},
 				}),
+				-- #if AFTER 4.0.3
+				q(6387, {	-- Honor Students
+					["providers"] = {
+						{ "n", 1699 },	-- Gremlock Stoneseeker
+						{ "i", 16310 },	-- Gremlock's List
+					},
+					["coord"] = { 54.7, 50.5, DUN_MOROGH },
+					["races"] = { DARKIRON, DWARF, GNOME },
+				}),
+				-- #endif
 				q(5626, {	-- In Favor of the Light
 					["qg"] = 837,	-- Branstock Khalder <Priest Trainer>
 					["coord"] = { 28.6, 66.4, DUN_MOROGH },
@@ -434,6 +444,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 2,
 				}),
+				-- #if AFTER 4.0.3
+				q(6391, {	-- Ride to Ironforge
+					["providers"] = {
+						{ "n", 43701 },	-- Brolan Galebeard
+						{ "i", 16310 },	-- Gremlock's List
+					},
+					["sourceQuest"] = 6387,	-- Honor Students
+					["coord"] = { 53.8, 52.6, DUN_MOROGH },
+					["races"] = { DARKIRON, DWARF, GNOME },
+				}),
+				-- #endif
 				q(2218, {	-- Road to Salvation
 					["qg"] = 1234,	-- Hogral Bakkan
 					["coord"] = { 47.6, 52.6, DUN_MOROGH },

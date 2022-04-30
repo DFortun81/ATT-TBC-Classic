@@ -128,13 +128,41 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(2258, {	-- Badlands Reagent Run
 					["qg"] = 6868,	-- Jarkal Mossmeld
 					["coord"] = { 2.6, 46, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 7847, 5 },	-- Buzzard Gizzard
-						{ "i", 7846, 10 },	-- Crag Coyote Fang
-						{ "i", 7848, 5 },	-- Rock Elemental Shard
-					},
 					["lvl"] = 36,
+					["groups"] = {
+						objective(1, {	-- 0/5 Buzzard Gizzard
+							["provider"] = { "i", 7847 },	-- Buzzard Gizzard
+							["crs"] = {
+								2830,	-- Buzzard
+								2831,	-- Giant Buzzard
+								2829,	-- Starving Buzzard
+							},
+						}),
+						objective(2, {	-- 0/10 Crag Coyote Fang
+							["provider"] = { "i", 7846 },	-- Crag Coyote Fang
+							["crs"] = {
+								2727,	-- Crag Coyote
+								2729,	-- Elder Crag Coyote
+								2728,	-- Feral Crag Coyote
+								2730,	-- Rabid Crag Coyote
+							},
+						}),
+						objective(3, {	-- 0/5 Rock Elemental Shard
+							["provider"] = { "i", 7848 },	-- Rock Elemental Shard
+							["crs"] = {
+								2745,	-- Ambassador Infernus
+								2791,	-- Enraged Rock Elemental
+								2919,	-- Fam'retor Guardian
+								2736,	-- Greater Rock Elemental
+								2735,	-- Lesser Rock Elemental
+								92,		-- Rock Elemental
+								2752,	-- Rumbler
+								8278,	-- Smoldar
+							},
+						}),
+					},
 				}),
 				q(703, {	-- Barbecued Buzzard Wings
 					["qg"] = 2817,	-- Rigglefuzz
@@ -772,31 +800,12 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["questID"] = 712,	-- Study of the Elements: Rock
 					["cr"] = 2736,	-- Greater Rock Elemental
 				}),
-				i(7847, {	-- Buzzard Gizzard
-					["allianceQuestID"] = 2500,	-- Badlands Reagent Run
-					["hordeQuestID"] = 2258,	-- Badlands Reagent Run
-					["crs"] = {
-						2830,	-- Buzzard
-						2831,	-- Giant Buzzard
-						2829,	-- Starving Buzzard
-					},
-				}),
 				i(2621, {	-- Cowl of Necromancy
 					["cr"] = 2740,	-- Shadowforge Darkweaver
 				}),
 				i(6166, {	-- Coyote Jawbone
 					["questID"] = 1419,	-- Coyote Thieves
 					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2727,	-- Crag Coyote
-						2729,	-- Elder Crag Coyote
-						2728,	-- Feral Crag Coyote
-						2730,	-- Rabid Crag Coyote
-					},
-				}),
-				i(7846, {	-- Crag Coyote Fang
-					["allianceQuestID"] = 2500,	-- Badlands Reagent Run
-					["hordeQuestID"] = 2258,	-- Badlands Reagent Run
 					["crs"] = {
 						2727,	-- Crag Coyote
 						2729,	-- Elder Crag Coyote
@@ -844,20 +853,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				i(1993, {	-- Ogremind Ring
 					["cr"] = 2907,	-- Dustbelcher Mystic
-				}),
-				i(7848, {	-- Rock Elemental Shard
-					["allianceQuestID"] = 2500,	-- Badlands Reagent Run
-					["hordeQuestID"] = 2258,	-- Badlands Reagent Run
-					["crs"] = {
-						2745,	-- Ambassador Infernus
-						2791,	-- Enraged Rock Elemental
-						2919,	-- Fam'retor Guardian
-						2736,	-- Greater Rock Elemental
-						2735,	-- Lesser Rock Elemental
-						92,		-- Rock Elemental
-						2752,	-- Rumbler
-						8278,	-- Smoldar
-					},
 				}),
 				i(4616, {	-- Ryedol's Lucky Pick
 					["questID"] = 719,	-- A Dwarf and His Tools

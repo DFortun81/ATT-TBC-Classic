@@ -338,19 +338,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(18042),	-- Thorium Headed Arrow
 					},
 				}),
-				q(3201, {	-- At Last!
-					["qg"] = 8256,	-- Curator Thorius
-					["sourceQuest"] = 3182,	-- Proof of Deed
-					["coord"] = { 71.4, 16.2, IRONFORGE },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 10022, 1 },	-- Proof of Deed
-					},
-					["lvl"] = 40,
-					["groups"] = {
-						i(5396),	-- Key to Searing Gorge
-					},
-				}),
 				q(2039, {	-- Find Bingles
 					["qg"] = 6569,	-- Gnoarn
 					["coord"] = { 69.4, 50.8, IRONFORGE },
@@ -381,14 +368,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				q(6388, {	-- Gryth Thurden
-					["qg"] = 4256,	-- Golnir Bouldertoe
+					["providers"] = {
+						{ "n", 4256 },	-- Golnir Bouldertoe
+						{ "i", 16311 },	-- Honorary Picks
+					},
 					["sourceQuest"] = 6391,	-- Ride to Ironforge
 					["coord"] = { 51, 26, IRONFORGE },
-					["races"] = { DWARF, GNOME },
-					["cost"] = {
-						{ "i", 16311, 1 },	-- Honorary Picks
-					},
+					["races"] = { DARKIRON, DWARF, GNOME },
+					-- #if BEFORE 4.0.3
 					["lvl"] = 10,
+					-- #endif
 				}),
 				q(6609, {	-- I Got Nothin' Left!
 					["qg"] = 5161,	-- Grimnur Stonebrand <Fishing Trainer>
@@ -502,15 +491,23 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 45,
 				}),
-				q(6392, {	-- Return to Brock
-					["qg"] = 1573,	-- Gryth Thurden
-					["sourceQuest"] = 6388,	-- Gryth Thurden
-					["coord"] = { 55.6, 48, IRONFORGE },
-					["races"] = { DWARF, GNOME },
-					["cost"] = {
-						{ "i", 16311, 1 },	-- Honorary Picks
+				q(6392, {	-- Return to Brock / Return to Gremlock [CATA+]
+					["providers"] = {
+						{ "n", 1573 },	-- Gryth Thurden
+						{ "i", 16311 },	-- Honorary Picks
 					},
+					["sourceQuest"] = 6388,	-- Gryth Thurden
+					-- #if AFTER 4.0.3
+					["coord"] = { 55.8, 47.8, IRONFORGE },
+					["maps"] = { DUN_MOROGH },
+					-- #else
+					["coord"] = { 55.6, 48, IRONFORGE },
+					["maps"] = { LOCH_MODAN },
+					-- #endif
+					["races"] = { DARKIRON, DWARF, GNOME },
+					-- #if BEFORE 4.0.3
 					["lvl"] = 10,
+					-- #endif
 				}),
 				q(3461, {	-- Return to Tymor
 					["qg"] = 8392,	-- Pilot Xiggs Fuselighter

@@ -88,6 +88,7 @@
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Eversong Woods.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Ghostlands.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Isle of Quel'Danas.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Loch Modan.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Redridge Mountains.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Searing Gorge.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Westfall.lua
