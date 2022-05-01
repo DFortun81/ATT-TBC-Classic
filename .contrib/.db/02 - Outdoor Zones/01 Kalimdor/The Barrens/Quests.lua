@@ -84,20 +84,38 @@ _.Zones =
 					["lvl"] = 14,
 				}),
 				q(1838, {	-- Brutal Armor
-					["qg"] = 5878,	-- Thun'grim Firegaze
+					["providers"] = {
+						{ "n", 5878 },	-- Thun'grim Firegaze
+						{ "i", 7587 },	-- Thun'grim's Instructions
+					},
 					["sourceQuest"] = 1825,	-- Speak with Thun'grim
 					["coord"] = { 57.23, 30.34, THE_BARRENS },
 					["maps"] = { HILLSBRAD_FOOTHILLS, RAZORFEN_KRAUL, STONETALON_MOUNTAINS },
+					["cost"] = { { "i", 3575, 10 } },	-- Iron Bar
 					["classes"] = { WARRIOR },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 7587, 1 },	-- Thun'grim's Instructions
-						{ "i", 3575, 10 },	-- Iron Bar
-						{ "i", 7127, 10 },	-- Powdered Azurite
-						{ "i", 7126, 15 },	-- Smoky Iron Ingot
-						{ "i", 6841, 1 },	-- Vial of Phlogiston
-					},
 					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/15 Smoky Iron Ingot
+							["provider"] = { "i", 7126 },	-- Smoky Iron Ingot
+							["crs"] = {
+								3999,	-- Windshear Digger
+								4003,	-- Windshear Geomancer
+								4004,	-- Windshear Overlord
+								4002,	-- Windshear Stonecutter
+								4001,	-- Windshear Tunnel Rat
+								3998,	-- Windshear Vermin
+							},
+						}),
+						objective(2, {	-- 0/10 Powdered Azurite
+							["provider"] = { "i", 7127 },	-- Powdered Azurite
+							["cr"] = 2269,	-- Hillsbrad Miner
+						}),
+						objective(4, {	-- 0/1 Vial of Phlogiston
+							["provider"] = { "i", 6841 },	-- Vial of Phlogiston
+							["cr"] = 6168,	-- Roogug
+						}),
+					},
 				}),
 				q(1848, {	-- Brutal Hauberk
 					["qg"] = 5878,	-- Thun'grim Firegaze

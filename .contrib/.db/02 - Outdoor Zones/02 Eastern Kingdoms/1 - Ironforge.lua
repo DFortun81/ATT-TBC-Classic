@@ -600,17 +600,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 30,
 				}),
 				q(1804, {	-- Tome of the Cabal (3/3 Alliance)
-					["qg"] = 6294,	-- Krom Stoutarm
+					["providers"] = {
+						{ "n", 6294 },	-- Krom Stoutarm
+						{ "i", 7006 },	-- Reconstructed Tome
+					},
 					["sourceQuest"] = 1802,	-- Tome of the Cabal (2/3 Alliance)
 					["coord"] = { 74.4, 9.4, IRONFORGE },
 					["maps"] = { WETLANDS },
 					["classes"] = { WARLOCK },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 7006, 1 },	-- Reconstructed Tome
-						{ "i", 6930, 3 },	-- Rod of Channeling
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/3 Rod of Channeling
+							["provider"] = { "i", 6930 },	-- Rod of Channeling
+							["crs"] = {
+								1057,	-- Dragonmaw Bonewarder
+								1038,	-- Dragonmaw Shadowwarder
+							},
+						}),
+					},
 				}),
 				q(1680, {	-- Tormus Deepforge
 					["qg"] = 6114,	-- Muren Stormpike

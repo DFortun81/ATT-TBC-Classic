@@ -92,6 +92,7 @@
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Redridge Mountains.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Searing Gorge.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Westfall.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Wetlands.lua
 root("Zones", m(EASTERN_KINGDOMS, {
 	["OnUpdate"] = [[function(t) table.sort(t.g, function (a, b) return string.lower(a.isRaid and (" " .. a.text) or a.text) < string.lower(b.isRaid and (" " .. b.text) or b.text) end)  end]],
 }));

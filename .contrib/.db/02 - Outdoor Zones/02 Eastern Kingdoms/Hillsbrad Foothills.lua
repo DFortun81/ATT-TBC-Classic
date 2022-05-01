@@ -989,12 +989,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						2266,	-- Hillsbrad Farmer
 					},
 				}),
-				i(7127, {	-- Powdered Azurite
-					["questID"] = 1838,	-- Brutal Armor
-					["races"] = HORDE_ONLY,
-					["classes"] = { WARRIOR },
-					["cr"] = 2269,	-- Hillsbrad Miner
-				}),
 				applyclassicphase(PHASE_FIVE, i(22229, {	-- Soul Ashes of the Banished
 					["crs"] = {
 						7071,	-- Cursed Paladin

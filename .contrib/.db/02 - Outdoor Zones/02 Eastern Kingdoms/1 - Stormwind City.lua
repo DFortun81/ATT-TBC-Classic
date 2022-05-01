@@ -348,20 +348,40 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 10,
 				}),
 				q(1701, {	-- Fire Hardened Mail
-					["qg"] = 5413,	-- Furen Longbeard
+					["providers"] = {
+						{ "n", 5413 },	-- Furen Longbeard
+						{ "i", 6842 },	-- Furen's Instructions
+					},
 					["sourceQuest"] = 1702,	-- The Shieldsmith
 					["coord"] = { 58.0, 16.8, STORMWIND_CITY },
 					["maps"] = { RAZORFEN_KRAUL, WETLANDS, STONETALON_MOUNTAINS },
 					["classes"] = { WARRIOR },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 6842, 1 },	-- Furen's Instructions
-						{ "i", 6838, 50 },	-- Scorched Spider Fang
-						{ "i", 6839, 12 },	-- Charred Horn
-						{ "i", 6840, 1 },	-- Galvanized Horn
-						{ "i", 6841, 1 },	-- Vial of Phlogiston
-					},
 					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/50 Scorched Spider Fang
+							["provider"] = { "i", 6838 },	-- Scorched Spider Fang
+							["crs"] = {
+								4040,	-- Cave Stalker
+								1111,	-- Leech Stalker
+							},
+						}),
+						objective(2, {	-- 0/12 Charred Horn
+							["provider"] = { "i", 6839 },	-- Charred Horn
+							["crs"] = {
+								4031,	-- Fledgling Chimaera
+								4032,	-- Young Chimaera
+							},
+						}),
+						objective(3, {	-- 0/1 Galvanized Horn
+							["provider"] = { "i", 6840 },	-- Galvanized Horn
+							["cr"] = 6167,	-- Chimaera Matriarch
+						}),
+						objective(4, {	-- 0/1 Vial of Phlogiston
+							["provider"] = { "i", 6841 },	-- Vial of Phlogiston
+							["cr"] = 6168,	-- Roogug
+						}),
+					},
 				}),
 				q(6184, {	-- Flint Shadowmore
 					["qg"] = 332,	-- Master Mathias Shaw <Leader of SI:7>

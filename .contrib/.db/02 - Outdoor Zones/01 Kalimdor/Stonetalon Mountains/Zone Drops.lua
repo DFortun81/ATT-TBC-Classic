@@ -6,15 +6,6 @@ _.Zones =
 	m(KALIMDOR, {
 		m(STONETALON_MOUNTAINS, {
 			n(ZONE_DROPS, {
-				i(6839, {	-- Charred Horn
-					["questID"] = 1701,	-- Fire Hardened Mail
-					["races"] = ALLIANCE_ONLY,
-					["classes"] = { WARRIOR },
-					["crs"] = {
-						4031,	-- Fledgling Chimaera
-						4032,	-- Young Chimaera
-					},
-				}),
 				i(5664, {	-- Corroded Shrapnel
 					["questID"] = 1084,	-- Wounded Ancients
 					["races"] = ALLIANCE_ONLY,
@@ -59,9 +50,6 @@ _.Zones =
 					},
 				}),
 				i(6840, {	-- Galvanized Horn
-					["allianceQuestID"] = 1701,	-- Fire Hardened Mail
-					["hordeQuestID"] = 1844,	-- Chimaeric Horn
-					["classes"] = { WARRIOR },
 					["cr"] = 6167,	-- Chimaera Matriarch
 				}),
 				i(16312, {	-- Incendrites
@@ -89,19 +77,6 @@ _.Zones =
 					["questID"] = 6421,	-- Boulderslide Ravine
 					["races"] = HORDE_ONLY,
 					["cr"] = 11920,	-- Goggeroc
-				}),
-				i(7126, {	-- Smoky Iron Ingot
-					["questID"] = 1838,	-- Brutal Armor
-					["races"] = HORDE_ONLY,
-					["classes"] = { WARRIOR },
-					["crs"] = {
-						3999,	-- Windshear Digger
-						4003,	-- Windshear Geomancer
-						4004,	-- Windshear Overlord
-						4002,	-- Windshear Stonecutter
-						4001,	-- Windshear Tunnel Rat
-						3998,	-- Windshear Vermin
-					},
 				}),
 				i(5659, {	-- Smoldering Embers
 					["questID"] = 1083,	-- Enraged Spirits

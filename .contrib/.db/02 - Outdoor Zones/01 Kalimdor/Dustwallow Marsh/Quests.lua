@@ -286,6 +286,16 @@ _.Zones =
 						i(5951),	-- Moist Towelette
 					},
 				}),
+				-- #if BEFORE TBC
+				q(1132, {	-- Fiora Longears
+					["qg"] = 4455,	-- Red Jack Flint
+					["coord"] = { 9.9, 57.9, WETLANDS },
+					["timeline"] = { "removed 3.3.0" },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 18,
+				}),
+				-- #endif
 				applyclassicphase(TBC_PHASE_ONE, q(11211, {	-- Help for Mudsprocket
 					["qg"] = 6546,	-- Tabetha
 					["coord"] = { 46, 57, DUSTWALLOW_MARSH },

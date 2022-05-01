@@ -336,6 +336,16 @@ _.Zones =
 						i(6659),	-- Scarab Trousers
 					},
 				}),
+				-- #if AFTER TBC
+				q(1132, {	-- Fiora Longears
+					["qg"] = 4455,	-- Red Jack Flint
+					["coord"] = { 9.9, 57.9, WETLANDS },
+					["timeline"] = { "removed 3.3.0" },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 18,
+				}),
+				-- #endif
 				q(963, {	-- For Love Eternal
 					["qg"] = 3644,	-- Cerellean Whiteclaw
 					["coord"] = { 35.8, 43.7, DARKSHORE },

@@ -168,10 +168,22 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["maps"] = { WETLANDS },
 					["classes"] = { WARRIOR },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 7134, 8 },	-- Sturdy Dragonmaw Shinbone
-					},
 					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/8 Sturdy Dragonmaw Shinbone
+							["provider"] = { "i", 7134 },	-- Sturdy Dragonmaw Shinbone
+							["cost"] = {{ "i", 7131, 1 }},	-- Dragonmaw Shinbone
+							["crs"] = {
+								2091,	-- Chieftain Nek'rosh
+								1037,	-- Dragonmaw Battlemaster
+								1057,	-- Dragonmaw Bonewarder
+								1036,	-- Dragonmaw Centurion
+								1034,	-- Dragonmaw Raider
+								1038,	-- Dragonmaw Shadowwarder
+								1035,	-- Dragonmaw Swamprunner
+							},
+						}),
+					},
 				}),
 				q(232, {	-- Errand for Apothecary Zinge (1/2)
 					["qg"] = 5204,	-- Apothecary Zinge
@@ -662,17 +674,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 30,
 				}),
 				q(1805, {	-- Tome of the Cabal (3/3 Horde)
-					["qg"] = 6293,	-- Jorah Annison
+					["providers"] = {
+						{ "n", 6293 },	-- Jorah Annison
+						{ "i", 7006 },	-- Reconstructed Tome
+					},
 					["sourceQuest"] = 1803,	-- Tome of the Cabal (2/3 Horde)
 					["coord"] = { 76.6, 36.8, UNDERCITY },
 					["maps"] = { WETLANDS },
 					["races"] = { ORC, UNDEAD },
 					["classes"] = { WARLOCK },
-					["cost"] = {
-						{ "i", 7006, 1 },	-- Reconstructed Tome
-						{ "i", 6930, 3 },	-- Rod of Channeling
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/3 Rod of Channeling
+							["provider"] = { "i", 6930 },	-- Rod of Channeling
+							["crs"] = {
+								1057,	-- Dragonmaw Bonewarder
+								1038,	-- Dragonmaw Shadowwarder
+							},
+						}),
+					},
 				}),
 				q(5658, {	-- Touch of Weakness
 					["qgs"] = {
