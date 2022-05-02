@@ -10520,7 +10520,7 @@ function app:GetDataCache()
 				end
 			end
 			for i,_ in pairs(fieldCache["toyID"]) do
-				if not self.toys[i] then
+				if not self.toys[i] and i < 160000 then
 					self.toys[i] = buildCategoryEntry(self, headers, _, app.CreateToy(tonumber(i)));
 				end
 			end
