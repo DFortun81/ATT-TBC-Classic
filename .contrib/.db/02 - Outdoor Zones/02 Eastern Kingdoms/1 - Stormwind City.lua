@@ -597,7 +597,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(6187, {	-- Order Must Be Restored
 					["qg"] = 1748,	-- Highlord Bolvar Fordragon
 					["sourceQuest"] = 6186,	-- The Blightcaller Cometh
-					["coord"] = { 78, 18, STORMWIND },
+					["coord"] = { 78, 18, STORMWIND_CITY },
 					["maps"] = { EASTERN_PLAGUELANDS },
 					["races"] = ALLIANCE_ONLY,
 					["cr"] = 11878,	-- Nathanos Blightcaller <Champion of the Banshee Queen>
