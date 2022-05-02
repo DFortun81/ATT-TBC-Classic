@@ -641,6 +641,12 @@ local function GetProgressTextForTooltip(data)
 		return GetCompletionText(data.saved);
 	end
 end
+local function GetRemovedWithPatchString(rwp)
+	if rwp then
+		rwp = tonumber(rwp);
+		return "This gets removed in patch " .. math.floor(rwp / 10000) .. "." .. (math.floor(rwp / 100) % 10) .. "." .. (rwp % 10);
+	end
+end
 app.GetProgressText = GetProgressTextDefault;
 app.GetProgressTextDefault = GetProgressTextDefault;
 app.GetProgressTextRemaining = GetProgressTextRemaining;
@@ -2107,7 +2113,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 		end
 		
 		if group.rwp then
-			tinsert(info, 1, { left = "This gets removed in patch " .. group.rwp, wrap = true, color = "FFFFAAAA" });
+			tinsert(info, 1, { left = GetRemovedWithPatchString(group.rwp), wrap = true, color = "FFFFAAAA" });
 		end
 		
 		if group.isLimited then
@@ -5793,6 +5799,11 @@ app.CreateItem = function(id, t)
 			end
 		elseif rawget(t, "questID") then
 			return setmetatable(constructor(id, t, "itemID"), app.BaseItemWithQuestID);
+		elseif rawget(t, "spellID") and rawget(t, "f") == 200 then
+			-- Temporary fix until someone fixes parser. (this is slower than using parser)
+			rawset(t, "f", nil);
+			rawset(t, "itemID", id);
+			return setmetatable(constructor(rawget(t, "spellID"), t, "spellID"), app.BaseRecipeWithItem);
 		end
 	end
 	return setmetatable(constructor(id, t, "itemID"), app.BaseItem);
@@ -9118,7 +9129,7 @@ local function RowOnEnter(self)
 			end
 			if reference.rwp then
 				local found = false;
-				local rwp = "This gets removed in patch " .. reference.rwp;
+				local rwp = GetRemovedWithPatchString(reference.rwp);
 				for i=1,GameTooltip:NumLines() do
 					if _G["GameTooltipTextLeft"..i]:GetText() == rwp then
 						found = true;

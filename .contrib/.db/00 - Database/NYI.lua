@@ -234,14 +234,11 @@ root("NeverImplemented", {
 	i(6130),	-- Trapper's Shirt (deprecated)
 	
 	-- Mounts
-	i(13328),	-- Black Ram
 	i(20221),	-- Foror's Fabled Steed
 	i(13325),	-- Fluorescent Green Mechanostrider
-	i(13329),	-- Frost Ram
 	i(15292),	-- Green Kodo
 	i(12351),	-- Horn of the Arctic Wolf
 	i(12330),	-- Horn of the Red Wolf
-	i(13327),	-- Icy Blue Mechanostrider Mod A
 	i(12354),	-- Palomino Bridle
 	i(13323),	-- Purple Mechanostrider
 	i(13324),	-- Red & Blue Mechanostrider
@@ -257,7 +254,6 @@ root("NeverImplemented", {
 	i(15293),	-- Teal Kodo
 	i(13317),	-- Whistle of the Ivory Raptor
 	i(8586),	-- Whistle of the Mottled Red Raptor
-	i(13326),	-- White Mechanostrider Mod A
 	i(12353),	-- White Stallion Bridle
 	
 	-- Pets
