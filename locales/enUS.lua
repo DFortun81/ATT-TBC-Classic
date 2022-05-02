@@ -623,7 +623,9 @@ app.L = {
 		[-86] = "Interface\\Icons\\INV_Misc_Book_13",										-- Library (SM)
 		[-87] = "Interface\\Icons\\inv_helmet_25",											-- Armory (SM)
 		[-88] = "Interface\\Icons\\inv_helmet_12",											-- Cathedral (SM)
-
+		
+		[-165] = "Interface\\Icons\\inv_box_01",											-- Junkboxes
+		
 		[-297] = "Interface\\Icons\\inv_letter_17", 								-- Mailbox
 		[-304] = "Interface\\Icons\\INV_BannerPVP_02",								-- Battlegrounds
 		[-318] = "Interface\\Icons\\INV_Chest_Plate03",								-- Armor
@@ -726,6 +728,8 @@ app.L = {
 		[-86] = "Library",
 		[-87] = "Armory",
 		[-88] = "Cathedral",
+		
+		[-165] = GetItemSubClassInfo(13,1),										-- Junkboxes
 -- Other
 		[-297] = MINIMAP_TRACKING_MAILBOX,										-- Mailbox
 		[-304] = BATTLEGROUNDS,													-- Battlegrounds

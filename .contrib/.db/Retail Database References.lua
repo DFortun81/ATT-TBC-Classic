@@ -132,6 +132,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 -- #IMPORT: 11 - Professions\\Fishing\\Fishing.lua
 -- #IMPORT: 11 - Professions\\Herbalism\\Herbalism.lua
 -- #IMPORT: 11 - Professions\\Jewelcrafting\\Jewelcrafting.lua
+-- #IMPORT: 11 - Professions\\Lockpicking\\Lockpicking.lua
 -- #IMPORT: 11 - Professions\\Mining\\Mining.lua
 -- #IMPORT: 11 - Professions\\Poisons\\Poisons.lua
 -- #IMPORT: 11 - Professions\\Runeforging\\Runeforging.lua
