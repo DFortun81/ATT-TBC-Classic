@@ -145,7 +145,7 @@ _.Zones =
 				q(4725, {	-- Beached Sea Turtle (2/5)
 					["provider"] = { "o", 176197 },	-- Beached Sea Creature
 					["sourceQuest"] = 4681,	-- Washed Ashore (2/2)
-					["coord"] = { 44.2, 20.7, Darkshore },
+					["coord"] = { 44.2, 20.7, DARKSHORE },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 12292, 1 },	-- Strangely Marked Box
