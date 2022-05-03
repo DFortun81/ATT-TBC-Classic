@@ -1247,7 +1247,7 @@ un(FEAST_OF_WINTER_VEIL, itemrecipe("Formula: Enchant Weapon - Winter's Might", 
 -- TBC Recipes
 itemrecipe("Formula: Enchant Bracer - Major Defense", 22530, 27906, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Bracer - Superior Healing", 22531, 27911, TBC_PHASE_ONE);
-itemrecipe("Formula: Enchant Bracer - Restore Mana Prime", 22532, 27911, TBC_PHASE_ONE);
+itemrecipe("Formula: Enchant Bracer - Restore Mana Prime", 22532, 27913, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Bracer - Fortitude", 22533, 27914, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Bracer - Spellpower", 22534, 27917, TBC_PHASE_ONE);
 itemrecipe("Formula: Enchant Ring - Striking", 22535, 27920, TBC_PHASE_ONE, "removed 6.0.2.10000");
