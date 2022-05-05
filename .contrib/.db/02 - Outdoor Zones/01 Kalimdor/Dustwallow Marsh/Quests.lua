@@ -1169,10 +1169,8 @@ _.Zones =
 				})),
 				applyclassicphase(TBC_PHASE_ONE, q(11161, {	-- The Essence of Enmity
 					["qg"] = 23579,	-- Brogg <Stonemaul Survivor>
+					["sourceQuest"] = 11158,	-- Bloodfen Feathers
 					["coord"] = { 41.9, 74.0, DUSTWALLOW_MARSH },
-					["cost"] = {
-						{ "i", 33087, 10 },	-- Black Dragonkin Essence
-					},
 					["lvl"] = 35,
 					["groups"] = {
 						objective(1, {	-- 0/10 Black Dragonkin Essence
