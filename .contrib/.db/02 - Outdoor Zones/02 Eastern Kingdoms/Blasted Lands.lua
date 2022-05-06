@@ -230,7 +230,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				q(2992, {	-- The Divination
-					["provider"] = { "n", 8022 },	-- Thadius Grimshade
+					["qg"] = 8022,	-- Thadius Grimshade
 					["sourceQuest"] = 2991,	-- Nekrum's Medallion
 					["coord"] = { 67.0, 19.4, BLASTED_LANDS },
 					["maps"] = { THE_HINTERLANDS },
