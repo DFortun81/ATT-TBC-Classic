@@ -5668,7 +5668,7 @@ local itemFields = {
 						if ref.providers then
 							for k,v in ipairs(ref.providers) do
 								if v[2] == id and v[1] == "i" then
-									if GetItemCount(id, true) > 0 then
+									if GetItemCount(id, true) > 0 and (not ref.objectiveID or ref.saved) then
 										partial = true;
 									else
 										return false;
