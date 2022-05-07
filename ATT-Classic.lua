@@ -8273,7 +8273,7 @@ local function CreateMiniListForGroup(group)
 							for i=1,#sourceQuest,1 do
 								-- Only care about the first search result.
 								local sq = sourceQuest[i];
-								if sq and sq.questID then
+								if sq and sq.questID and not sq.objectiveID then
 									questID = sq.questID;
 									if sq.parent and sq.parent.questID == questID then
 										sq = sq.parent;
