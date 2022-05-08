@@ -9983,11 +9983,10 @@ function app:GetDataCache()
 			return calculateAccessibility(a) <= calculateAccessibility(b);
 		end
 		local buildCategoryEntry = function(self, headers, searchResults, inst)
-			local header = self;
+			local header, headerType, atLeastOne = self, "drop", false;
 			for j,o in ipairs(searchResults) do
-				if o.u and o.u == 1 then
-					return nil;
-				else
+				if not o.u or o.u ~= 1 then
+					atLeastOne = true;
 					for key,value in pairs(o) do rawset(inst, key, value); end
 					if o.parent then
 						if not o.sourceQuests then
@@ -10019,107 +10018,30 @@ function app:GetDataCache()
 						end
 						
 						if GetRelativeValue(o, "isHolidayCategory") then
-							header = headers["holiday"];
-							if not header then
-								header = app.CreateNPC(-5);
-								headers["holiday"] = header;
-								tinsert(self.g, header);
-								header.parent = self;
-								header.g = {};
-							end
+							headerType = "holiday";
 						elseif GetRelativeValue(o, "isPromotionCategory") then
-							header = headers["promo"];
-							if not header then
-								header = {};
-								header.text = BATTLE_PET_SOURCE_8;
-								header.icon = app.asset("Category_Promo");
-								headers["promo"] = header;
-								tinsert(self.g, header);
-								header.parent = self;
-								header.g = {};
-							end
+							headerType = "promo";
 						elseif GetRelativeValue(o, "isPVPCategory") then
-							header = headers["pvp"];
-							if not header then
-								header = {};
-								header.text = PVP;
-								header.icon = app.asset("Category_PvP");
-								headers["pvp"] = header;
-								tinsert(self.g, header);
-								header.parent = self;
-								header.g = {};
-							end
+							headerType = "pvp";
 						elseif GetRelativeValue(o, "isEventCategory") then
-							header = headers["event"];
-							if not header then
-								header = {};
-								header.text = BATTLE_PET_SOURCE_7;
-								header.icon = app.asset("Category_Event");
-								headers["event"] = header;
-								tinsert(self.g, header);
-								header.parent = self;
-								header.g = {};
-							end
+							headerType = "event";
 						elseif o.parent.headerID == 0 or o.parent.headerID == -1 or o.parent.headerID == -82 or GetRelativeValue(o, "isWorldDropCategory") then
-							header = headers["drop"];
-							if not header then
-								header = {};
-								header.text = BATTLE_PET_SOURCE_1;
-								header.icon = app.asset("Category_WorldDrops");
-								headers["drop"] = header;
-								tinsert(self.g, header);
-								header.parent = self;
-								header.g = {};
-							end
+							headerType = "drop";
 						elseif o.parent.key == "npcID" then
 							if GetRelativeValue(o, "headerID") == -2 then
-								header = headers[-2];
-								if not header then
-									header = app.CreateNPC(-2);
-									headers[-2] = header;
-									tinsert(self.g, header);
-									header.parent = self;
-									header.g = {};
-								end
+								headerType = -2;
 							else
-								header = headers["drop"];
-								if not header then
-									header = {};
-									header.text = BATTLE_PET_SOURCE_1;
-									header.icon = app.asset("Category_WorldDrops");
-									headers["drop"] = header;
-									tinsert(self.g, header);
-									header.parent = self;
-									header.g = {};
-								end
+								headerType = "drop";
 							end
 						elseif o.parent.key == "categoryID" then
-							header = headers["crafted"];
-							if not header then
-								header = {};
-								header.text = LOOT_JOURNAL_LEGENDARIES_SOURCE_CRAFTED_ITEM;
-								header.icon = app.asset("Category_Crafting");
-								headers["crafted"] = header;
-								tinsert(self.g, header);
-								header.parent = self;
-								header.g = {};
-							end
-						else
-							local headerID = GetDeepestRelativeValue(o, "headerID");
-							if headerID then
-								header = headers[headerID];
-								if not header then
-									header = app.CreateNPC(headerID);
-									headers[headerID] = header;
-									tinsert(self.g, header);
-									header.parent = self;
-									header.g = {};
-								end
-							end
+							headerType = "crafted";
+						elseif not headerType then
+							headerType = GetDeepestRelativeValue(o, "headerID");
 						end
 					end
 				end
 			end
+			if not atLeastOne then return nil; end
 			local sources, sourcesByItemID, sourcesBySpellID = {}, {}, {};
 			for j,o in ipairs(searchResults) do
 				local source;
@@ -10178,11 +10100,53 @@ function app:GetDataCache()
 					inst[key] = value;
 				end
 			end
+			
+			-- Determine the type of header to put the thing into.
+			if not headerType then headerType = "drop"; end
+			header = headers[headerType];
+			if not header then
+				if headerType == "holiday" then
+					header = app.CreateNPC(-5);
+				elseif headerType == "promo" then
+					header = {};
+					header.text = BATTLE_PET_SOURCE_8;
+					header.icon = app.asset("Category_Promo");
+				elseif headerType == "pvp" then
+					header = {};
+					header.text = PVP;
+					header.icon = app.asset("Category_PvP");
+				elseif headerType == "event" then
+					header = {};
+					header.text = BATTLE_PET_SOURCE_7;
+					header.icon = app.asset("Category_Event");
+				elseif headerType == "drop" then
+					header = {};
+					header.text = BATTLE_PET_SOURCE_1;
+					header.icon = app.asset("Category_WorldDrops");
+				elseif headerType == "crafted" then
+					header = {};
+					header.text = LOOT_JOURNAL_LEGENDARIES_SOURCE_CRAFTED_ITEM;
+					header.icon = app.asset("Category_Crafting");
+				elseif type(headerType) == "number" then
+					header = app.CreateNPC(headerType);
+				else
+					print("Unhandled Header Type", headerType);
+				end
+				if not headers[headerType] then
+					headers[headerType] = header;
+					tinsert(self.g, header);
+					header.parent = self;
+					header.g = {};
+				end
+			end
+			if inst.spellID == 24242 then
+						print("HEADER TYPE", headerType);
+					end
 			inst.parent = header;
 			inst.progress = nil;
 			inst.total = nil;
 			inst.g = nil;
-			tinsert(inst.parent.g, inst);
+			tinsert(header.g, inst);
 			return inst;
 		end
 		
@@ -10430,7 +10394,7 @@ function app:GetDataCache()
 		mountsCategory.OnUpdate = function(self)
 			local headers = {};
 			for i,header in ipairs(self.g) do
-				if header.headerID and header.key == "headerID" then
+				if header.headerID then
 					headers[header.headerID] = header;
 					if not header.g then
 						header.g = {};
@@ -10456,7 +10420,7 @@ function app:GetDataCache()
 			end
 			for i=#self.g,1,-1 do
 				header = self.g[i];
-				if header.g and #header.g < 1 and header.headerID and header.key == "headerID" then
+				if header.g and #header.g < 1 and header.headerID then
 					headers[header.headerID] = nil;
 					table.remove(self.g, i);
 				end
