@@ -9983,7 +9983,7 @@ function app:GetDataCache()
 			return calculateAccessibility(a) <= calculateAccessibility(b);
 		end
 		local buildCategoryEntry = function(self, headers, searchResults, inst)
-			local header, headerType, atLeastOne = self, "drop", false;
+			local atLeastOne, header, headerType = false, self;
 			for j,o in ipairs(searchResults) do
 				if not o.u or o.u ~= 1 then
 					atLeastOne = true;
@@ -10139,9 +10139,6 @@ function app:GetDataCache()
 					header.g = {};
 				end
 			end
-			if inst.spellID == 24242 then
-						print("HEADER TYPE", headerType);
-					end
 			inst.parent = header;
 			inst.progress = nil;
 			inst.total = nil;
