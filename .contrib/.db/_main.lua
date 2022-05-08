@@ -5,6 +5,31 @@ _ = AllTheThings;
 -- The values are based on a "distance from zero" to match what Blizzard tracks internally as "totalEarned" rep
 HATED, HOSTILE, UNFRIENDLY, NEUTRAL, FRIENDLY, HONORED, REVERED, EXALTED = -42000, -6000, -3000, 0, 3000, 9000, 21000, 42000
 
+-- Root constants
+-- Usage: ROOTS.[Constant]
+ROOTS = {
+	["ExpansionFeatures"] = "ExpansionFeatures",
+	["Instances"] = "Instances",
+	["Zones"] = "Zones",
+	["WorldDrops"] = "WorldDrops",
+	["GroupFinder"] = "GroupFinder",
+	["Achievements"] = "Achievements",
+	["WorldEvents"] = "WorldEvents",
+	["PVP"] = "PVP",
+	["Craftables"] = "Craftables",
+	["Professions"] = "Professions",
+	["Secrets"] = "Secrets",
+	["GearSets"] = "GearSets",
+	["Promotions"] = "Promotions",
+	["BlackMarket"] = "BlackMarket",
+	["InGameShop"] = "InGameShop",
+	["PetBattles"] = "PetBattles",
+	["HiddenQuestTriggers"] = "HiddenQuestTriggers",
+	["NeverImplemented"] = "NeverImplemented",
+	["Factions"] = "Factions",
+	["Holidays"] = "Holidays",
+};
+
 -- Map Constants for quick and easy replacement when we can get mapIDs on live!
 -- Raids (Classic)
 BLACKWING_LAIR = 287;
@@ -860,6 +885,7 @@ INSCRIPTION = 773;
 JEWELCRAFTING = 755;
 JUNKYARD_TINKERING = 2720;
 LEATHERWORKING = 165;
+LOCKPICKING = 633;
 MINING = 186;
 PROTOFORM_SYNTHESIS = 2819;
 SKINNING = 393;

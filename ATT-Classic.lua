@@ -9052,25 +9052,24 @@ local function RowOnEnter(self)
 		if reference.artID and app.Settings:GetTooltipSetting("artID") then GameTooltip:AddDoubleLine(L["ART_ID"], tostring(reference.artID)); end
 		--if reference.hash then GameTooltip:AddDoubleLine("Hash", tostring(reference.hash)); end
 		if reference.coords and app.Settings:GetTooltipSetting("Coordinates") then
-			if #reference.coords > 8 then
-				GameTooltip:AddDoubleLine("Coordinates", "Literally everywhere.", 1, 1, 1, 1, 1, 1);
-			else
-				local currentMapID, j, str = app.CurrentMapID, 0;
-				for i,coord in ipairs(reference.coords) do
-					local x, y = coord[1], coord[2];
-					local mapID = coord[3] or currentMapID;
-					if mapID ~= currentMapID then
-						str = app.GetMapName(mapID) or "??";
-						if app.Settings:GetTooltipSetting("mapID") then
-							str = str .. " (" .. mapID .. ")";
-						end
-						str = str .. ": ";
-					else
-						str = "";
+			local currentMapID, j, str = app.CurrentMapID, 0;
+			for i,coord in ipairs(reference.coords) do
+				local x, y = coord[1], coord[2];
+				local mapID = coord[3] or currentMapID;
+				if mapID ~= currentMapID then
+					str = app.GetMapName(mapID) or "??";
+					if app.Settings:GetTooltipSetting("mapID") then
+						str = str .. " (" .. mapID .. ")";
 					end
-					GameTooltip:AddDoubleLine(j == 0 and "Coordinates" or " ", 
-						str.. GetNumberWithZeros(math.floor(x * 10) * 0.1, 1) .. ", " .. GetNumberWithZeros(math.floor(y * 10) * 0.1, 1), 1, 1, 1, 1, 1, 1);
-					j = j + 1;
+					str = str .. ": ";
+				else
+					str = "";
+				end
+				GameTooltip:AddDoubleLine(j == 0 and "Coordinates" or " ", 
+					str.. GetNumberWithZeros(math.floor(x * 10) * 0.1, 1) .. ", " .. GetNumberWithZeros(math.floor(y * 10) * 0.1, 1), 1, 1, 1, 1, 1, 1);
+				j = j + 1;
+				if j > 8 then
+					break;
 				end
 			end
 		end

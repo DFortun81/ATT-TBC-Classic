@@ -944,10 +944,19 @@ profession(ENCHANTING, {
 					["name"] = "Battlemaster",
 					["recipeID"] = 28004
 				},
+				-- #if ANYCLASSIC
 				applyclassicphase(TBC_PHASE_THREE, {
 					["name"] = "Deathfrost",
-					["recipeID"] = 46578
+					["recipeID"] = 46578,
+					-- This script makes it so that it's filtered out until Phase 3, but also applies the holiday filter when the appropriate phase is turned on.
+					["OnUpdate"] = [[function(t) t.u = ATTClassicSettings.Unobtainables[]] .. TBC_PHASE_THREE .. [[] and ]] .. MIDSUMMER_FIRE_FESTIVAL .. [[ or ]] .. TBC_PHASE_THREE .. [[; end]],
 				}),
+				-- #else
+				applyholiday(MIDSUMMER_FIRE_FESTIVAL, {
+					["name"] = "Deathfrost",
+					["recipeID"] = 46578,
+				}),
+				-- #endif
 				applyclassicphase(TBC_PHASE_FOUR, {
 					["name"] = "Executioner",
 					["recipeID"] = 42974
