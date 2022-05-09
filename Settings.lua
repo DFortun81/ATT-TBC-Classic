@@ -122,6 +122,7 @@ local TooltipSettingsBase = {
 	__index = {
 		["Auto:MiniList"] = true,
 		["Auto:ProfessionList"] = true,
+		["Integrate:LFGBulletinBoard"] = true,
 		["Celebrate"] = true,
 		["Channel"] = "master",
 		["ClassRequirements"] = true,
@@ -2291,6 +2292,16 @@ function(self)
 end);
 OpenRaidAssistantAutomatically:SetATTTooltip("Enable this option if you want to see an alternative group/party/raid settings manager called the 'Raid Assistant'. The list will automatically update whenever group settings change.\n\nYou can also bind this setting to a Key.\n\nKey Bindings -> Addons -> ALL THE THINGS -> Toggle Raid Assistant\n\nShortcut Command: /attra");
 OpenRaidAssistantAutomatically:SetPoint("TOPLEFT", OpenProfessionListAutomatically, "BOTTOMLEFT", 0, 4);
+
+local IntegrateWithLFGBulletinBoard = settings:CreateCheckBox("Integrate With LFG Bulletin Board",
+function(self)
+	self:SetChecked(settings:GetTooltipSetting("Integrate:LFGBulletinBoard"));
+end,
+function(self)
+	settings:SetTooltipSetting("Integrate:LFGBulletinBoard", self:GetChecked());
+end);
+IntegrateWithLFGBulletinBoard:SetATTTooltip("Enable this option if you want ATT to inject completion data on to the headers of LFG Bulletin Board if it is installed. In addition, holding Shift while Right Clicking the instance header will open the instance in an ATT mini list.\n\nDefault: On");
+IntegrateWithLFGBulletinBoard:SetPoint("TOPLEFT", OpenRaidAssistantAutomatically, "BOTTOMLEFT", 0, -4);
 
 local CelebrationsLabel = settings:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge");
 CelebrationsLabel:SetPoint("TOPRIGHT", line, "BOTTOMRIGHT", -50, -8);

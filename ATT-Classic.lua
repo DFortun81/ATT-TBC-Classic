@@ -14045,6 +14045,44 @@ app.events.VARIABLES_LOADED = function()
 	StartCoroutine("RefreshSaves", RefreshSaves);
 	app:RefreshData(false);
 	app:RefreshLocation();
+	
+	if GroupBulletinBoard_Addon then
+		local oldGroupBulletinBoard_Addon_ClickDungeon = GroupBulletinBoard_Addon.ClickDungeon;
+		GroupBulletinBoard_Addon.ClickDungeon = function(self,button,...)
+			if button == "RightButton" and self.attRef and IsShiftKeyDown() then
+				CreateMiniListForGroup(self.attRef);
+				return;
+			end
+			oldGroupBulletinBoard_Addon_ClickDungeon(self, button, ...);
+		end
+		local oldGroupBulletinBoard_Addon_UpdateList = GroupBulletinBoard_Addon.UpdateList;
+		GroupBulletinBoard_Addon.UpdateList = function(...) 
+			oldGroupBulletinBoard_Addon_UpdateList(...);
+			if not GroupBulletinBoardFrame:IsVisible() or not app.Settings:GetTooltipSetting("Integrate:LFGBulletinBoard") then
+				return;
+			end
+			for key,f in pairs(GroupBulletinBoard_Addon.FramesEntries) do
+				if f:IsVisible() and type(key) == "string" then
+					if not f.attRef then
+						local instanceID = L.INSTANCE_ACRONYM_TO_INSTANCE_ID[key];
+						if instanceID then
+							local searchResults = app.SearchForField(type(instanceID) == "number" and "instanceID" or "mapID", tonumber(instanceID));
+							if searchResults and #searchResults > 0 then
+								f.attRef = searchResults[1];
+								local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " ..GetProgressTextForTooltip(f.attRef);
+								_G[f:GetName().."_name"]:SetText(attString .. "  " .. _G[f:GetName().."_name"]:GetText());
+							end
+						else
+							--print("Unknown Acronym for ", key);
+						end
+					else
+						local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " ..GetProgressTextForTooltip(f.attRef);
+						_G[f:GetName().."_name"]:SetText(attString .. "  " .. _G[f:GetName().."_name"]:GetText());
+					end
+				end
+			end
+		end
+	end
 end
 app.events.PLAYER_DEAD = function()
 	ATTAccountWideData.Deaths = ATTAccountWideData.Deaths + 1;
