@@ -923,6 +923,7 @@ app.L = {
 		[C_Map.GetAreaInfo(3529)] = 468,	-- Ammen Vale (Nestlewood Thicket)
 		[C_Map.GetAreaInfo(3530)] = 468,	-- Ammen Vale (Shadow Ridge)
 		[C_Map.GetAreaInfo(3561)] = 468,	-- Ammen Vale (The Sacred Grove)
+		[C_Map.GetAreaInfo(4095)] = 348,	-- Magisters' Terrace
 	};
 	
 	-- This is a conversion table for acronyms to instanceIDs for LFG Bulletin Board integration.
