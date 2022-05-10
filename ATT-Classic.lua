@@ -14070,14 +14070,14 @@ app.events.VARIABLES_LOADED = function()
 							if searchResults and #searchResults > 0 then
 								f.attRef = searchResults[1];
 								local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " ..GetProgressTextForTooltip(f.attRef);
-								_G[f:GetName().."_name"]:SetText(attString .. "  " .. _G[f:GetName().."_name"]:GetText());
+								_G[f:GetName().."_name"]:SetText(attString .. "  " .. (_G[f:GetName().."_name"]:GetText() or RETRIEVING_DATA));
 							end
 						else
 							--print("Unknown Acronym for ", key);
 						end
 					else
 						local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " ..GetProgressTextForTooltip(f.attRef);
-						_G[f:GetName().."_name"]:SetText(attString .. "  " .. _G[f:GetName().."_name"]:GetText());
+						_G[f:GetName().."_name"]:SetText(attString .. "  " .. (_G[f:GetName().."_name"]:GetText() or RETRIEVING_DATA));
 					end
 				end
 			end
