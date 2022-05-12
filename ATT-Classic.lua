@@ -873,6 +873,28 @@ local function GetBestMapForGroup(group)
 		return group.mapID or (group.maps and group.maps[1]) or (group.coords and group.coords[1][3]) or GetBestMapForGroup(group.parent);
 	end
 end
+local function GetRelativeDifficulty(group, difficultyID)
+	if group then
+		if group.difficultyID then
+			if group.difficultyID == difficultyID then
+				return true;
+			end
+			if group.difficulties then
+				for i, difficulty in ipairs(group.difficulties) do
+					if difficulty == difficultyID then
+						return true;
+					end
+				end
+			end
+			return false;
+		end
+		if group.parent then
+			return GetRelativeDifficulty(group.sourceParent or group.parent, difficultyID);
+		else
+			return true;
+		end
+	end
+end
 local function GetRelativeMap(group, currentMapID)
 	if group then
 		return group.mapID or (group.maps and (contains(group.maps, currentMapID) and currentMapID or group.maps[1])) or GetRelativeMap(group.parent, currentMapID);
@@ -1653,8 +1675,19 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 		if b then paramB = b; end
 		
 		-- For Creatures that are inside of an instance, we only want the data relevant for the instance.
-		if paramA == "creatureID" then
+		if paramA == "creatureID" or paramA == "encounterID" then
 			if group and #group > 0 then
+				local difficultyID = (IsInInstance() and select(3, GetInstanceInfo())) or (paramA == "encounterID" and EJ_GetDifficulty and EJ_GetDifficulty()) or 0;
+				if difficultyID > 0 then
+					local subgroup = {};
+					for _,j in ipairs(group) do
+						if GetRelativeDifficulty(j, difficultyID) then
+							tinsert(subgroup, j);
+						end
+					end
+					group = subgroup;
+				end
+			
 				local regroup = {};
 				if app.Settings:Get("DebugMode") then
 					for i,j in ipairs(group) do
@@ -4896,6 +4929,18 @@ end)();
 
 -- Difficulty Lib
 (function()
+local difficulties = {
+	[1] = { 9, 148, 173 },
+	[2] = { 174 },
+	[3] = { 175 },
+	[4] = { 176 },
+	[9] = { 1 },
+	[148] = { 1 },
+	[173] = { 1 },
+	[174] = { 2 },
+	[175] = { 3 },
+	[176] = { 4 },
+};
 app.DifficultyColors = {
 	[2] = "ff0070dd",
 	[5] = "ff0070dd",
@@ -4963,6 +5008,9 @@ local fields = {
 				end
 			end
 		end
+	end,
+	["difficulties"] = function(t)
+		return difficulties[t.difficultyID];
 	end,
 	["u"] = function(t)
 		if t.difficultyID == 24 or t.difficultyID == 33 then
