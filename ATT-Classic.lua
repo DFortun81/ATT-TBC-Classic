@@ -9384,7 +9384,7 @@ local function RowOnEnter(self)
 					if sqs and #sqs > 0 then
 						local bestMatch = nil;
 						for j,sq in ipairs(sqs) do
-							if sq.questID == sourceQuestID then
+							if sq.questID == sourceQuestID and not sq.objectiveID then
 								if isDebugMode or (app.RecursiveClassAndRaceFilter(sq) and not IsQuestFlaggedCompleted(sourceQuestID)) then
 									if sq.sourceQuests then
 										-- Always prefer the source quest with additional source quest data.
