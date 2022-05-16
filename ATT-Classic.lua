@@ -2523,28 +2523,7 @@ local function ProcessIncomingChunk(sender, uid, index, chunk)
 		app.print("Update complete for " .. character.text .. ".");
 	end
 	
-	for key,data in pairs(ATTAccountWideData) do
-		if type(data) == "table" then
-			data = {};
-			for guid,character in pairs(ATTCharacterData) do
-				local characterData = character[key];
-				if characterData then
-					for index,_ in pairs(characterData) do
-						data[index] = 1;
-					end
-				end
-			end
-			ATTAccountWideData[key] = data;
-		end
-	end
-	local deaths = 0;
-	for guid,character in pairs(ATTCharacterData) do
-		if character.Deaths then
-			deaths = deaths + character.Deaths;
-		end
-	end
-	ATTAccountWideData.Deaths = deaths;
-	
+	app:RecalculateAccountWideData();
 	app.Settings:Refresh();
 	return false;
 end
@@ -2572,6 +2551,29 @@ end
 
 function app:IsAccountLinked(sender)
 	return ATTClassicAD.LinkedAccounts[sender] or ATTClassicAD.LinkedAccounts[strsplit("-", sender)[1]];
+end
+function app:RecalculateAccountWideData()
+	for key,data in pairs(ATTAccountWideData) do
+		if type(data) == "table" then
+			data = {};
+			for guid,character in pairs(ATTCharacterData) do
+				local characterData = character[key];
+				if characterData then
+					for index,_ in pairs(characterData) do
+						data[index] = 1;
+					end
+				end
+			end
+			ATTAccountWideData[key] = data;
+		end
+	end
+	local deaths = 0;
+	for guid,character in pairs(ATTCharacterData) do
+		if character.Deaths then
+			deaths = deaths + character.Deaths;
+		end
+	end
+	ATTAccountWideData.Deaths = deaths;
 end
 function app:ReceiveSyncRequest(sender, battleTag)
 	if battleTag ~= select(2, BNGetInfo()) then
@@ -13465,6 +13467,7 @@ app:GetWindow("Sync", UIParent, function(self)
 					app:ShowPopupDialog("CHARACTER DATA: " .. (row.ref.text or RETRIEVING_DATA) .. "\n \nAre you sure you want to delete this?",
 					function()
 						ATTCharacterData[row.ref.datalink] = nil;
+						app:RecalculateAccountWideData();
 						self:Reset();
 					end);
 				end
@@ -13534,6 +13537,7 @@ app:GetWindow("Sync", UIParent, function(self)
 									['visible'] = true,
 								});
 							end
+							insertionSort(data.g, syncHeader.Sort);
 							BuildGroups(data, data.g);
 							return app.AlwaysShowUpdate(data);
 						end,
