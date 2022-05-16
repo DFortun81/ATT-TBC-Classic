@@ -248,7 +248,9 @@ settings.Initialize = function(self)
 	-- Account Synchronization
 	self.TabsByName["Features"]:InitializeSyncWindow();
 	if self:GetTooltipSetting("Auto:Sync") then
-		app:Synchronize(true);
+		C_Timer.After(1, function()
+			app:Synchronize(true);
+		end);
 	end
 end
 settings.CheckSeasonalDate = function(self, u, startMonth, startDay, endMonth, endDay)
