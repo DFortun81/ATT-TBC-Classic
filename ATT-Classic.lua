@@ -2671,22 +2671,28 @@ function app:ReceiveSyncSummaryResponse(sender, summary)
 end
 function app:Synchronize(automatically)
 	-- Update the last played timestamp. This ensures the sync process does NOT destroy unsaved progress on this character.
-	app.CurrentCharacter.lastPlayed = time();
-	local any, msg = false, "?\tsync\t" .. select(2, BNGetInfo());
-	for playerName,allowed in pairs(ATTClassicAD.LinkedAccounts) do
-		if allowed and not string.find(playerName, "#") then
-			C_ChatInfo.SendAddonMessage("ATTC", msg, "WHISPER", playerName);
-			any = true;
+	local battleTag = select(2, BNGetInfo());
+	if battleTag then
+		app.CurrentCharacter.lastPlayed = time();
+		local any, msg = false, "?\tsync\t" .. battleTag;
+		for playerName,allowed in pairs(ATTClassicAD.LinkedAccounts) do
+			if allowed and not string.find(playerName, "#") then
+				C_ChatInfo.SendAddonMessage("ATTC", msg, "WHISPER", playerName);
+				any = true;
+			end
 		end
-	end
-	if not any and not automatically then
-		app.print("You need to link a character or BNET account in the settings first before you can Sync accounts.");
+		if not any and not automatically then
+			app.print("You need to link a character or BNET account in the settings first before you can Sync accounts.");
+		end
 	end
 end
 function app:SynchronizeWithPlayer(playerName)
 	-- Update the last played timestamp. This ensures the sync process does NOT destroy unsaved progress on this character.
-	app.CurrentCharacter.lastPlayed = time();
-	C_ChatInfo.SendAddonMessage("ATTC", "?\tsync\t" .. select(2, BNGetInfo()), "WHISPER", playerName);
+	local battleTag = select(2, BNGetInfo());
+	if battleTag then
+		app.CurrentCharacter.lastPlayed = time();
+		C_ChatInfo.SendAddonMessage("ATTC", "?\tsync\t" .. battleTag, "WHISPER", playerName);
+	end
 end
 end)();
 
