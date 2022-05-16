@@ -14111,21 +14111,27 @@ app.events.VARIABLES_LOADED = function()
 			end
 			for key,f in pairs(GroupBulletinBoard_Addon.FramesEntries) do
 				if f:IsVisible() and type(key) == "string" then
-					if not f.attRef then
-						local instanceID = L.INSTANCE_ACRONYM_TO_INSTANCE_ID[key];
-						if instanceID then
-							local searchResults = app.SearchForField(type(instanceID) == "number" and "instanceID" or "mapID", tonumber(instanceID));
-							if searchResults and #searchResults > 0 then
-								f.attRef = searchResults[1];
+					local frameName = f:GetName();
+					if frameName then
+						local nameFrame = _G[frameName .. "_name"];
+						if nameFrame then
+							if not f.attRef then
+								local instanceID = L.INSTANCE_ACRONYM_TO_INSTANCE_ID[key];
+								if instanceID then
+									local searchResults = app.SearchForField(type(instanceID) == "number" and "instanceID" or "mapID", tonumber(instanceID));
+									if searchResults and #searchResults > 0 then
+										f.attRef = searchResults[1];
+										local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " ..GetProgressTextForTooltip(f.attRef);
+										nameFrame:SetText(attString .. "  " .. (nameFrame:GetText() or RETRIEVING_DATA));
+									end
+								else
+									--print("Unknown Acronym for ", key);
+								end
+							else
 								local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " ..GetProgressTextForTooltip(f.attRef);
-								_G[f:GetName().."_name"]:SetText(attString .. "  " .. (_G[f:GetName().."_name"]:GetText() or RETRIEVING_DATA));
+								nameFrame:SetText(attString .. "  " .. (nameFrame:GetText() or RETRIEVING_DATA));
 							end
-						else
-							--print("Unknown Acronym for ", key);
 						end
-					else
-						local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " ..GetProgressTextForTooltip(f.attRef);
-						_G[f:GetName().."_name"]:SetText(attString .. "  " .. (_G[f:GetName().."_name"]:GetText() or RETRIEVING_DATA));
 					end
 				end
 			end
