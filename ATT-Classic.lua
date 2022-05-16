@@ -2443,6 +2443,251 @@ local function SendGUIDWhisper(msg, guid)
 	if name then SendChatMessage(msg, "WHISPER", nil, name); end
 end
 
+-- Synchronization Functions
+(function()
+local outgoing,incoming = {},{};
+local whiteListedFields = { "FlightPaths", "Exploration", "BattlePets", "Achievements", "Spells", "Titles", "Toys", "Quests", "Factions"};
+function splittoarray(sep, inputstr)
+	local t = {};
+	for str in string.gmatch(inputstr, "([^" .. (sep or "%s") .. "]+)") do
+		table.insert(t, str);
+	end
+	return t;
+end
+
+function app:AcknowledgeIncomingChunks(sender, uid, total)
+	local incomingFromSender = incoming[sender];
+	if not incomingFromSender then
+		incomingFromSender = {};
+		incoming[sender] = incomingFromSender;
+	end
+	incomingFromSender[uid] = { ["chunks"] = {}, ["total"] = total };
+	C_ChatInfo.SendAddonMessage("ATTC", "chksack\t" .. uid, "WHISPER", sender);
+end
+local function ProcessIncomingChunk(sender, uid, index, chunk)
+	if not (chunk and index and uid and sender) then return false; end
+	local incomingFromSender = incoming[sender];
+	if not incomingFromSender then return false; end
+	local incomingForUID = incomingFromSender[uid];
+	if not incomingForUID then return false; end
+	incomingForUID.chunks[index] = chunk;
+	if index < incomingForUID.total then
+		return true;
+	end
+	
+	incomingFromSender[uid] = nil;
+	
+	local msg = "";
+	for i=1,incomingForUID.total,1 do
+		msg = msg .. incomingForUID.chunks[i];
+	end
+	-- app:ShowPopupDialogWithMultiLineEditBox(msg);
+	local characters = splittoarray("\t", msg);
+	for _,characterString in ipairs(characters) do
+		local data = splittoarray(":", characterString);
+		local guid = data[1];
+		local character = ATTCharacterData[guid];
+		if not character then
+			character = {};
+			character.guid = guid;
+			ATTCharacterData[guid] = character;
+		end
+		character.name = data[2];
+		character.lvl = tonumber(data[3]);
+		character.text = data[4];
+		character.realm = data[5];
+		character.factionID = tonumber(data[6]);
+		character.classID = tonumber(data[7]);
+		character.raceID = tonumber(data[8]);
+		character.lastPlayed = tonumber(data[9]);
+		character.Deaths = tonumber(data[10]);
+		character.class = C_CreatureInfo.GetClassInfo(character.classID).classFile;
+		character.race = C_CreatureInfo.GetRaceInfo(character.raceID).clientFileString;
+		for i=11,#data,1 do
+			local piece = splittoarray("/", data[i]);
+			local key = piece[1];
+			local field = {};
+			character[key] = field;
+			if key == "ActiveSkills" then
+				for j=2,#piece,1 do
+					local skill = splittoarray("|", piece[j]);
+					field[tonumber(skill[1])] = { tonumber(skill[2]), tonumber(skill[3]) };
+				end
+			else
+				for j=2,#piece,1 do
+					local index = tonumber(piece[j]);
+					if index then field[index] = 1; end
+				end
+			end
+		end
+		app.print("Update complete for " .. character.text .. ".");
+	end
+	
+	for key,data in pairs(ATTAccountWideData) do
+		if type(data) == "table" then
+			data = {};
+			for guid,character in pairs(ATTCharacterData) do
+				local characterData = character[key];
+				if characterData then
+					for index,_ in pairs(characterData) do
+						data[index] = 1;
+					end
+				end
+			end
+			ATTAccountWideData[key] = data;
+		end
+	end
+	local deaths = 0;
+	for guid,character in pairs(ATTCharacterData) do
+		if character.Deaths then
+			deaths = deaths + character.Deaths;
+		end
+	end
+	ATTAccountWideData.Deaths = deaths;
+	
+	app.Settings:Refresh();
+	return false;
+end
+function app:AcknowledgeIncomingChunk(sender, uid, index, chunk)
+	if chunk and ProcessIncomingChunk(sender, uid, index, chunk) then
+		C_ChatInfo.SendAddonMessage("ATTC", "chkack\t" .. uid .. "\t" .. index .. "\t1", "WHISPER", sender);
+	else
+		C_ChatInfo.SendAddonMessage("ATTC", "chkack\t" .. uid .. "\t" .. index .. "\t0", "WHISPER", sender);
+	end
+end
+function app:SendChunk(sender, uid, index, success)
+	local outgoingForSender = outgoing[sender];
+	if outgoingForSender then
+		local chunksForUID = outgoingForSender.uids[uid];
+		if chunksForUID and success == 1 then
+			local chunk = chunksForUID[index];
+			if chunk then
+				C_ChatInfo.SendAddonMessage("ATTC", "chk\t" .. uid .. "\t" .. index .. "\t" .. chunk, "WHISPER", sender);
+			end
+		else
+			outgoingForSender.uids[uid] = nil;
+		end
+	end
+end
+
+function app:IsAccountLinked(sender)
+	return ATTClassicAD.LinkedAccounts[sender] or ATTClassicAD.LinkedAccounts[strsplit("-", sender)[1]];
+end
+function app:ReceiveSyncRequest(sender, battleTag)
+	if battleTag ~= select(2, BNGetInfo()) then
+		-- Check to see if the the character/account is linked.
+		if not (ATTClassicAD.LinkedAccounts[sender] or ATTClassicAD.LinkedAccounts[battleTag]) then
+			return false;
+		end
+	end
+	
+	-- Whitelist the character name, if not already. (This is needed for future sync methods)
+	ATTClassicAD.LinkedAccounts[sender] = true;
+	
+	-- Generate the sync string (there may be several depending on how many alts there are)
+	local msgs = {};
+	local msg = "?\tsyncsum";
+	for guid,character in pairs(ATTCharacterData) do
+		if character.lastPlayed then
+			local charsummary = "\t" .. guid .. ":" .. character.lastPlayed;
+			if (string.len(msg) + string.len(charsummary)) < 255 then
+				msg = msg .. charsummary;
+			else
+				C_ChatInfo.SendAddonMessage("ATTC", msg, "WHISPER", sender);
+				msg = "?\tsyncsum" .. charsummary;
+			end
+		end
+	end
+	C_ChatInfo.SendAddonMessage("ATTC", msg, "WHISPER", sender);
+end
+function app:ReceiveSyncSummary(sender, summary)
+	if app:IsAccountLinked(sender) then
+		for i,data in ipairs(summary) do
+			local guid,lastPlayed = strsplit(":", data);
+			local character = ATTCharacterData[guid];
+			if not character or not character.lastPlayed or (character.lastPlayed < tonumber(lastPlayed)) then
+				app.print("Updating " .. (character and character.text or guid) .. " from " .. sender .. "...");
+				C_ChatInfo.SendAddonMessage("ATTC", "!\tsyncsum\t" .. guid, "WHISPER", sender);
+			end
+		end
+	end
+end
+function app:ReceiveSyncSummaryResponse(sender, summary)
+	if app:IsAccountLinked(sender) then
+		local rawMsg;
+		for i,guid in ipairs(summary) do
+			local character = ATTCharacterData[guid];
+			if character then
+				-- Put easy character data into a raw data string
+				local rawData = character.guid .. ":" .. character.name .. ":" .. character.lvl .. ":" .. character.text .. ":" .. character.realm .. ":" .. character.factionID .. ":" .. character.classID .. ":" .. character.raceID .. ":" .. character.lastPlayed .. ":" .. character.Deaths;
+				
+				-- Difficult character data
+				rawData = rawData .. ":ActiveSkills";
+				for skillID,skill in pairs(character.ActiveSkills) do
+					rawData = rawData .. "/" .. skillID .. "|" .. skill[1] .. "|" .. skill[2];
+				end
+				
+				for i,field in ipairs(whiteListedFields) do
+					if character[field] then
+						rawData = rawData .. ":" .. field;
+						for index,value in pairs(character[field]) do
+							if value then
+								rawData = rawData .. "/" .. index;
+							end
+						end
+					end
+				end
+				
+				if not rawMsg then
+					rawMsg = rawData;
+				else
+					rawMsg = rawMsg .. "\t" .. rawData;
+				end
+			end
+		end
+		
+		if rawMsg then
+			-- Send Addon Message Back
+			local length = string.len(rawMsg);
+			local chunks = {};
+			for i=1,length,241 do
+				tinsert(chunks, string.sub(rawMsg, i, math.min(length, i + 240)));
+			end
+			local outgoingForSender = outgoing[sender];
+			if not outgoingForSender then
+				outgoingForSender = { ["total"] = 0, ["uids"] = {}};
+				outgoing[sender] = outgoingForSender;
+			end
+			local uid = outgoingForSender.total + 1;
+			outgoingForSender.uids[uid] = chunks;
+			outgoingForSender.total = uid;
+			
+			-- Send Addon Message Back
+			C_ChatInfo.SendAddonMessage("ATTC", "chks\t" .. uid .. "\t" .. #chunks, "WHISPER", sender);
+		end
+	end
+end
+function app:Synchronize(automatically)
+	-- Update the last played timestamp. This ensures the sync process does NOT destroy unsaved progress on this character.
+	app.CurrentCharacter.lastPlayed = time();
+	local any, msg = false, "?\tsync\t" .. select(2, BNGetInfo());
+	for playerName,allowed in pairs(ATTClassicAD.LinkedAccounts) do
+		if allowed and not string.find(playerName, "#") then
+			C_ChatInfo.SendAddonMessage("ATTC", msg, "WHISPER", playerName);
+			any = true;
+		end
+	end
+	if not any and not automatically then
+		app.print("You need to link a character or BNET account in the settings first before you can Sync accounts.");
+	end
+end
+function app:SynchronizeWithPlayer(playerName)
+	-- Update the last played timestamp. This ensures the sync process does NOT destroy unsaved progress on this character.
+	app.CurrentCharacter.lastPlayed = time();
+	C_ChatInfo.SendAddonMessage("ATTC", "?\tsync\t" .. select(2, BNGetInfo()), "WHISPER", playerName);
+end
+end)();
+
 -- Lua Constructor Lib
 local fieldCache = {};
 local CacheField, CacheFields;
@@ -4818,11 +5063,27 @@ local fields = {
 				rawset(t, "classID", GetClassIDFromClassFile(classFile));
 			end
 			return name;
+		else
+			for guid,character in pairs(ATTCharacterData) do
+				if guid == t.unit or character.name == t.unit then
+					rawset(t, "text", character.text);
+					rawset(t, "level", character.lvl);
+					if character.classID then
+						rawset(t, "classID", character.classID);
+						rawset(t, "class", C_CreatureInfo.GetClassInfo(character.classID).className);
+					end
+					if character.raceID then
+						rawset(t, "raceID", character.raceID);
+						rawset(t, "race", C_CreatureInfo.GetRaceInfo(character.raceID).raceName);
+					end
+					return character.text;
+				end
+			end
 		end
 		return t.unit;
 	end,
 	["icon"] = function(t)
-		if t.classID and not app.Settings:GetTooltipSetting("Models") then return classIcons[t.classID]; end
+		if t.classID then return classIcons[t.classID]; end
 	end,
 	["name"] = function(t)
 		return UnitName(t.unit);
@@ -4837,7 +5098,16 @@ local fields = {
 		end
 	end,
 	["description"] = function(t)
-		return LEVEL .. " " .. (UnitLevel(t.unit) or RETRIEVING_DATA) .. " " .. (UnitRace(t.unit) or RETRIEVING_DATA) .. " " .. (UnitClass(t.unit) or RETRIEVING_DATA);
+		return LEVEL .. " " .. (t.level or RETRIEVING_DATA) .. " " .. (t.race or RETRIEVING_DATA) .. " " .. (t.class or RETRIEVING_DATA);
+	end,
+	["level"] = function(t)
+		return UnitLevel(t.unit);
+	end,
+	["race"] = function(t)
+		return UnitRace(t.unit);
+	end,
+	["class"] = function(t)
+		return UnitClass(t.unit);
 	end,
 };
 app.BaseUnit = app.BaseObjectFields(fields);
@@ -13185,6 +13455,199 @@ app:GetWindow("SoftReserves", UIParent, function(self)
 		app.VisibilityFilter = visibilityFilter;
 	end
 end);
+app:GetWindow("Sync", UIParent, function(self)
+	if self:IsVisible() then
+		if not self.initialized then
+			self.initialized = true;
+			
+			local function OnRightButtonDeleteCharacter(row, button)
+				if button == "RightButton" then
+					app:ShowPopupDialog("CHARACTER DATA: " .. (row.ref.text or RETRIEVING_DATA) .. "\n \nAre you sure you want to delete this?",
+					function()
+						ATTCharacterData[row.ref.datalink] = nil;
+						self:Reset();
+					end);
+				end
+				return true;
+			end
+			local function OnRightButtonDeleteLinkedAccount(row, button)
+				if button == "RightButton" then
+					app:ShowPopupDialog("LINKED ACCOUNT: " .. (row.ref.text or RETRIEVING_DATA) .. "\n \nAre you sure you want to delete this?",
+					function()
+						ATTClassicAD.LinkedAccounts[row.ref.datalink] = nil;
+						app:SynchronizeWithPlayer(row.ref.datalink);
+						self:Reset();
+					end);
+				end
+				return true;
+			end
+			
+			local syncHeader;
+			syncHeader = {
+				['text'] = "Account Management",
+				['icon'] = app.asset("Achievement_Dungeon_HEROIC_GloryoftheRaider"), 
+				["description"] = "This list shows you all of the functionality related to syncing account data.",
+				['visible'] = true,
+				['expanded'] = true,
+				['back'] = 1,
+				['OnUpdate'] = app.AlwaysShowUpdate,
+				['g'] = {
+					{
+						['text'] = "Add Linked Character / Account",
+						['icon'] = app.asset("Ability_Priest_VoidShift"),
+						['description'] = "Click here to link a character or account to your account.",
+						['visible'] = true,
+						['OnClick'] = function(row, button)
+							app:ShowPopupDialogWithEditBox("Please type the name of the character or BNET account to link to.", "", function(cmd)
+								if cmd and cmd ~= "" then
+									ATTClassicAD.LinkedAccounts[cmd] = true;
+									
+									self:Reset();
+								end
+							end);
+							return true;
+						end,
+						['OnUpdate'] = app.AlwaysShowUpdate,
+					},
+					-- Characters Section
+					{
+						['text'] = "Characters",
+						['icon'] = "Interface\\FriendsFrame\\Battlenet-Portrait",
+						["description"] = "This shows all of the characters on your account.",
+						['OnUpdate'] = function(data)
+							data.g = {};
+							for guid,character in pairs(ATTCharacterData) do
+								if character then
+									table.insert(data.g, app.CreateUnit(guid, {
+										['datalink'] = guid,
+										['OnClick'] = OnRightButtonDeleteCharacter,
+										['OnUpdate'] = app.AlwaysShowUpdate,
+										['visible'] = true,
+									}));
+								end
+							end
+							
+							if #data.g < 1 then
+								table.insert(data.g, {
+									['text'] = "No characters found.",
+									['icon'] = "Interface\\FriendsFrame\\Battlenet-Portrait",
+									['visible'] = true,
+								});
+							end
+							BuildGroups(data, data.g);
+							return app.AlwaysShowUpdate(data);
+						end,
+						['visible'] = true, 
+						['expanded'] = true,
+						['g'] = {},
+					},
+					
+					-- Linked Accounts Section
+					{
+						['text'] = "Linked Accounts",
+						['icon'] = "Interface\\FriendsFrame\\Battlenet-Portrait",
+						["description"] = "This shows all of the linked accounts you have defined so far.",
+						['OnUpdate'] = function(data)
+							data.g = {};
+							--[[
+							local count = GetNumGroupMembers();
+							if count > 0 then
+								for raidIndex = 1, 40, 1 do
+									local name, rank, subgroup, level, class, fileName, zone, online, isDead, role, isML = GetRaidRosterInfo(raidIndex);
+									if name then
+										table.insert(data.g, app.CreateUnit(name, {
+											['isML'] = isML,
+											['name'] = name,
+											['visible'] = true,
+											['OnClick'] = function(row, button)
+												SetLootMethod("master", row.ref.name);
+												self:Reset();
+												return true;
+											end,
+										}));
+									end
+								end
+							end
+							]]
+							local charactersByName = {};
+							for guid,character in pairs(ATTCharacterData) do
+								charactersByName[character.name] = character;
+							end
+							
+							for playerName,allowed in pairs(ATTClassicAD.LinkedAccounts) do
+								local character = charactersByName[playerName];
+								if character then
+									table.insert(data.g, app.CreateUnit(playerName, {
+										['datalink'] = playerName,
+										['OnClick'] = OnRightButtonDeleteLinkedAccount,
+										['OnUpdate'] = app.AlwaysShowUpdate,
+										['visible'] = true,
+									}));
+								elseif string.find("#", playerName) then
+									-- Garbage click handler for unsync'd account data.
+									table.insert(data.g, {
+										['text'] = playerName,
+										['datalink'] = playerName,
+										['icon'] = "Interface\\FriendsFrame\\Battlenet-Portrait",
+										['OnClick'] = OnRightButtonDeleteLinkedAccount,
+										['OnUpdate'] = app.AlwaysShowUpdate,
+										['visible'] = true,
+									});
+								else
+									-- Garbage click handler for unsync'd character data.
+									table.insert(data.g, {
+										['text'] = playerName,
+										['datalink'] = playerName,
+										['icon'] = "Interface\\FriendsFrame\\Battlenet-WoWicon",
+										['OnClick'] = OnRightButtonDeleteLinkedAccount,
+										['OnUpdate'] = app.AlwaysShowUpdate,
+										['visible'] = true,
+									});
+								end
+							end
+							
+							if #data.g < 1 then
+								table.insert(data.g, {
+									['text'] = "No linked accounts found.",
+									['icon'] = "Interface\\FriendsFrame\\Battlenet-Portrait",
+									['visible'] = true,
+								});
+							end
+							BuildGroups(data, data.g);
+							return app.AlwaysShowUpdate(data);
+						end,
+						['visible'] = true, 
+						['expanded'] = true,
+						['g'] = {},
+					},
+				},
+				['Sort'] = function(a, b)
+					return b.text > a.text;
+				end,
+			};
+			
+			self.Reset = function()
+				self.data = syncHeader;
+				self:Update(true);
+			end
+			self:Reset();
+		end
+		
+		-- Update the groups without forcing Debug Mode.
+		local visibilityFilter, groupFilter = app.VisibilityFilter, app.GroupFilter;
+		app.GroupFilter = app.ObjectVisibilityFilter;
+		app.VisibilityFilter = app.ObjectVisibilityFilter;
+		if self.data.OnUpdate then self.data.OnUpdate(self.data, self); end
+		BuildGroups(self.data, self.data.g);
+		for i,g in ipairs(self.data.g) do
+			if g.OnUpdate then g.OnUpdate(g, self); end
+		end
+		UpdateGroups(self.data, self.data.g);
+		UpdateWindow(self, true);
+		app.GroupFilter = groupFilter;
+		app.VisibilityFilter = visibilityFilter;
+	end
+end);
 app:GetWindow("Tradeskills", UIParent, function(self, ...)
 	if not self.initialized then
 		self.initialized = true;
@@ -14015,6 +14478,7 @@ app.events.VARIABLES_LOADED = function()
 	
 	
 	-- Check to see if we have a leftover ItemDB cache
+	GetDataMember("LinkedAccounts", {});
 	GetDataMember("GroupQuestsByGUID", {});
 	GetDataMember("AddonMessageProcessor", {});
 	GetDataMember("ValidSuffixesPerItemID", {});
@@ -14042,6 +14506,7 @@ app.events.VARIABLES_LOADED = function()
 	for i,key in ipairs({
 		"AddonMessageProcessor",
 		"GroupQuestsByGUID",
+		"LinkedAccounts",
 		"LocalizedCategoryNames",
 		"LocalizedFlightPathDB",
 		"Position",
@@ -14665,6 +15130,12 @@ app.events.CHAT_MSG_ADDON = function(prefix, text, channel, sender, target, zone
 						else
 							response = "srpersistence\t" .. (app.Settings:GetTooltipSetting("SoftReservePersistence") and 1 or 0);
 						end
+					elseif a == "sync" then
+						app:ReceiveSyncRequest(target, a);
+					elseif a == "syncsum" then
+						table.remove(args, 1);
+						table.remove(args, 1);
+						app:ReceiveSyncSummary(target, args);
 					end
 				else
 					local data = app:GetWindow("Prime").data;
@@ -14710,6 +15181,10 @@ app.events.CHAT_MSG_ADDON = function(prefix, text, channel, sender, target, zone
 							wipe(searchCache);
 							app:RefreshSoftReserveWindow(true);
 						end
+					elseif a == "syncsum" then
+						table.remove(args, 1);
+						table.remove(args, 1);
+						app:ReceiveSyncSummaryResponse(target, args);
 					end
 				end
 			elseif cmd == "to" then	-- To Command
@@ -14720,6 +15195,14 @@ app.events.CHAT_MSG_ADDON = function(prefix, text, channel, sender, target, zone
 				end
 			elseif cmd == "sr" then -- Soft Reserve Command
 				app:ParseSoftReserve(UnitGUID(target), a, true);
+			elseif cmd == "chks" then	-- Total Chunks Command [sender, uid, total]
+				app:AcknowledgeIncomingChunks(target, tonumber(a), tonumber(args[3]));
+			elseif cmd == "chk" then	-- Incoming Chunk Command [sender, uid, index, chunk]
+				app:AcknowledgeIncomingChunk(target, tonumber(a), tonumber(args[3]), args[4]);
+			elseif cmd == "chksack" then	-- Chunks Acknowledge Command [sender, uid]
+				app:SendChunk(target, tonumber(a), 1, 1);
+			elseif cmd == "chkack" then	-- Chunk Acknowledge Command [sender, uid, index, success]
+				app:SendChunk(target, tonumber(a), tonumber(args[3]) + 1, tonumber(args[4]));
 			end
 		end
 	end

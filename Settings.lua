@@ -35,6 +35,7 @@ settings.name = app:GetName();
 settings.MostRecentTab = nil;
 settings:Hide();
 settings.Tabs = {};
+settings.TabsByName = {};
 settings:SetBackdrop({
 	bgFile = "Interface/RAIDFRAME/UI-RaidFrame-GroupBg",
 	edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
@@ -122,6 +123,7 @@ local TooltipSettingsBase = {
 	__index = {
 		["Auto:MiniList"] = true,
 		["Auto:ProfessionList"] = true,
+		["Auto:Sync"] = true,
 		["Integrate:LFGBulletinBoard"] = true,
 		["Celebrate"] = true,
 		["Channel"] = "master",
@@ -241,6 +243,12 @@ settings.Initialize = function(self)
 	end
 	if self:GetTooltipSetting("Auto:WorldQuestsList") then
 		app:GetWindow("WorldQuests"):Show();
+	end
+	
+	-- Account Synchronization
+	self.TabsByName["Features"]:InitializeSyncWindow();
+	if self:GetTooltipSetting("Auto:Sync") then
+		app:Synchronize(true);
 	end
 end
 settings.CheckSeasonalDate = function(self, u, startMonth, startDay, endMonth, endDay)
@@ -380,6 +388,7 @@ settings.CreateTab = function(self, text)
 	tab.objects = {};
 	tab:SetID(id);
 	tab:SetText(text);
+	self.TabsByName[text] = tab;
 	PanelTemplates_TabResize(tab, 0);
 	tab:SetScript('OnClick', OnClickForTab);
 	return tab;
@@ -2352,6 +2361,52 @@ function(self)
 end);
 WarnRemovedThingsCheckBox:SetATTTooltip("Enable this option if you want to hear a warning sound effect when you accidentally sell back or trade an item that granted you an appearance that would cause you to lose that appearance from your collection.\n\nThis can be extremely helpful if you vendor an item with a purchase timer. The addon will tell you that you've made a mistake.");
 WarnRemovedThingsCheckBox:SetPoint("TOPLEFT", DeathSoundCheckBox, "BOTTOMLEFT", 0, 4);
+
+local SyncLabel = settings:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge");
+SyncLabel:SetPoint("LEFT", ModulesLabel, "LEFT", 0, 0);
+SyncLabel:SetPoint("TOP", IntegrateWithLFGBulletinBoard, "BOTTOM", 0, -4);
+SyncLabel:SetJustifyH("LEFT");
+SyncLabel:SetText("Account Synchronization");
+SyncLabel:Show();
+table.insert(settings.MostRecentTab.objects, SyncLabel);
+
+local AutomaticallySyncAccountDataCheckBox = settings:CreateCheckBox("Automatically Sync Account Data",
+function(self)
+	self:SetChecked(settings:GetTooltipSetting("Auto:Sync"));
+end,
+function(self)
+	local checked = self:GetChecked();
+	settings:SetTooltipSetting("Auto:Sync", checked);
+	if checked then app:Synchronize(true); end
+end);
+AutomaticallySyncAccountDataCheckBox:SetATTTooltip("Enable this option if you want ATT to attempt to automatically synchronize account data between accounts when logging in or reloading the UI.");
+AutomaticallySyncAccountDataCheckBox:SetPoint("TOPLEFT", SyncLabel, "BOTTOMLEFT", 4, 0);
+
+function settings.MostRecentTab:InitializeSyncWindow()
+	local syncWindow = app:GetWindow("Sync");
+	local syncWindow_Show,naughty = syncWindow.Show;
+	syncWindow.OnRefresh = syncWindow.Update;
+	syncWindow.Show = function(self)
+		if not naughty then
+			naughty = true;
+			syncWindow_Show(self);
+			self:Update();
+		end
+		naughty = nil;
+	end
+	syncWindow.CloseButton:Disable();
+	syncWindow:SetClampedToScreen(false);
+	syncWindow:SetUserPlaced(false);
+	syncWindow:SetToplevel(false);
+	syncWindow:SetMovable(false);
+	syncWindow:SetResizable(false);
+	syncWindow:SetParent(settings);
+	syncWindow:SetPoint("LEFT", SyncLabel, "LEFT", 0, 0);
+	syncWindow:SetPoint("RIGHT", SyncLabel, "LEFT", 300, 0);
+	syncWindow:SetPoint("TOP", AutomaticallySyncAccountDataCheckBox, "BOTTOM", 0, 4);
+	syncWindow:SetPoint("BOTTOM", settings, "BOTTOM", 0, 4);
+	table.insert(tab.objects, syncWindow);
+end
 end)();
 
 ------------------------------------------
