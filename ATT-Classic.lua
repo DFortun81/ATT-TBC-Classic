@@ -13616,29 +13616,11 @@ app:GetWindow("Sync", UIParent, function(self)
 						["description"] = "This shows all of the linked accounts you have defined so far.",
 						['OnUpdate'] = function(data)
 							data.g = {};
-							--[[
-							local count = GetNumGroupMembers();
-							if count > 0 then
-								for raidIndex = 1, 40, 1 do
-									local name, rank, subgroup, level, class, fileName, zone, online, isDead, role, isML = GetRaidRosterInfo(raidIndex);
-									if name then
-										table.insert(data.g, app.CreateUnit(name, {
-											['isML'] = isML,
-											['name'] = name,
-											['visible'] = true,
-											['OnClick'] = function(row, button)
-												SetLootMethod("master", row.ref.name);
-												self:Reset();
-												return true;
-											end,
-										}));
-									end
-								end
-							end
-							]]
 							local charactersByName = {};
 							for guid,character in pairs(ATTCharacterData) do
-								charactersByName[character.name] = character;
+								if character.name then
+									charactersByName[character.name] = character;
+								end
 							end
 							
 							for playerName,allowed in pairs(ATTClassicAD.LinkedAccounts) do
