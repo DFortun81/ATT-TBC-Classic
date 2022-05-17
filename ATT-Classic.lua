@@ -13516,6 +13516,36 @@ app:GetWindow("Sync", UIParent, function(self)
 				end
 				return true;
 			end
+			local function OnTooltipForCharacter(t)
+				local character = ATTCharacterData[t.unit];
+				if character then
+					local total = 0;
+					for i,field in ipairs({ "Achievements", "BattlePets", "Exploration", "Factions", "FlightPaths", "Spells", "Titles", "Toys", "Quests" }) do
+						local values = character[field];
+						if values then
+							local subtotal = 0;
+							for key,value in pairs(values) do
+								if value then
+									subtotal = subtotal + 1;
+								end
+							end
+							total = total + subtotal;
+							GameTooltip:AddDoubleLine(field, tostring(subtotal), 1, 1, 1);
+						end
+					end
+					GameTooltip:AddLine(" ", 1, 1, 1);
+					GameTooltip:AddDoubleLine("Total", tostring(total), 0.8, 0.8, 1);
+					GameTooltip:AddLine("Right Click to Delete this Character", 1, 0.8, 0.8);
+				end
+			end
+			local function OnTooltipForLinkedAccount(t)
+				if t.unit then
+					GameTooltip:AddLine("This character's account will be synchronized with automatically when they log in. For optimal play, you should whitelist a bank character and probably not your main as to not affect your ability to play your character when syncing account data.", 0.8, 0.8, 1, true);
+					GameTooltip:AddLine("Right Click to Delete this Linked Character", 1, 0.8, 0.8);
+				else
+					GameTooltip:AddLine("Right Click to Delete this Linked Account", 1, 0.8, 0.8);
+				end
+			end
 			
 			local syncHeader;
 			syncHeader = {
@@ -13556,6 +13586,7 @@ app:GetWindow("Sync", UIParent, function(self)
 									table.insert(data.g, app.CreateUnit(guid, {
 										['datalink'] = guid,
 										['OnClick'] = OnRightButtonDeleteCharacter,
+										['OnTooltip'] = OnTooltipForCharacter,
 										['OnUpdate'] = app.AlwaysShowUpdate,
 										['visible'] = true,
 									}));
@@ -13616,6 +13647,7 @@ app:GetWindow("Sync", UIParent, function(self)
 									table.insert(data.g, app.CreateUnit(playerName, {
 										['datalink'] = playerName,
 										['OnClick'] = OnRightButtonDeleteLinkedAccount,
+										['OnTooltip'] = OnTooltipForLinkedAccount,
 										['OnUpdate'] = app.AlwaysShowUpdate,
 										['visible'] = true,
 									}));
@@ -13626,6 +13658,7 @@ app:GetWindow("Sync", UIParent, function(self)
 										['datalink'] = playerName,
 										['icon'] = "Interface\\FriendsFrame\\Battlenet-Portrait",
 										['OnClick'] = OnRightButtonDeleteLinkedAccount,
+										['OnTooltip'] = OnTooltipForLinkedAccount,
 										['OnUpdate'] = app.AlwaysShowUpdate,
 										['visible'] = true,
 									});
@@ -13636,6 +13669,7 @@ app:GetWindow("Sync", UIParent, function(self)
 										['datalink'] = playerName,
 										['icon'] = "Interface\\FriendsFrame\\Battlenet-WoWicon",
 										['OnClick'] = OnRightButtonDeleteLinkedAccount,
+										['OnTooltip'] = OnTooltipForLinkedAccount,
 										['OnUpdate'] = app.AlwaysShowUpdate,
 										['visible'] = true,
 									});
