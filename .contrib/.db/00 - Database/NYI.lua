@@ -196,22 +196,6 @@ root("NeverImplemented", {
 	q(8565),	-- Past Victories in Arathi
 	q(8566),	-- Past Victories in Arathi
 	
-	-- Mount Upgrade Quests
-	q(7674),	-- Black Ram Exchange
-	q(7673),	-- Frost Ram Exchange
-	q(7671),	-- Frostsaber Replacement
-	q(7675),	-- Icy Blue Mechanostrider Replacement
-	q(7664),	-- Ivory Raptor Replacement
-	q(7678),	-- Palomino Exchange
-	q(7663),	-- New Kodo - Green
-	q(7662),	-- New Kodo - Teal
-	q(7672),	-- Nightsaber Replacement
-	q(7665),	-- Red Raptor Replacement
-	q(7676),	-- White Mechanostrider Replacement
-	q(7677),	-- White Stallion Exchange
-	q(7660),	-- Wolf Swapping - Arctic Wolf
-	q(7661),	-- Wolf Swapping - Red Wolf
-	
 	-- Rogue Quests
 	q(2019),	-- Tools of the Trade (Obsolete)
 	
@@ -236,25 +220,15 @@ root("NeverImplemented", {
 	-- Mounts
 	i(20221),	-- Foror's Fabled Steed
 	i(13325),	-- Fluorescent Green Mechanostrider
-	i(15292),	-- Green Kodo
-	i(12351),	-- Horn of the Arctic Wolf
-	i(12330),	-- Horn of the Red Wolf
-	i(12354),	-- Palomino Bridle
 	i(13323),	-- Purple Mechanostrider
 	i(13324),	-- Red & Blue Mechanostrider
 	i(8630),	-- Reins of the Bengal Tiger
-	i(12302),	-- Reins of the Frostsaber
 	i(12327),	-- Reins of the Golden Sabercat
-	i(12303),	-- Reins of the Nightsaber
 	i(12325),	-- Reins of the Primal Leopard
 	i(18768),	-- Reins of the Swift Dawnsaber
 	i(12326),	-- Reins of the Tawny Sabercat
 	i(21736),	-- Riding Gryphon Reins
 	i(23193),	-- Skeletal Steed Reins
-	i(15293),	-- Teal Kodo
-	i(13317),	-- Whistle of the Ivory Raptor
-	i(8586),	-- Whistle of the Mottled Red Raptor
-	i(12353),	-- White Stallion Bridle
 	
 	-- Pets
 	i(18963),	-- Turtle Egg (Albino)

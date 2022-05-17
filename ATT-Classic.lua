@@ -1301,26 +1301,30 @@ ResolveSymbolicLink = function(o)
 		for j,sym in ipairs(o.sym) do
 			local cmd = sym[1];
 			if cmd == "select" then
-				-- Instruction to search the full database for something.
-				local cache = app.SearchForField(sym[2], sym[3]);
-				if cache then
-					for k,s in ipairs(cache) do
-						local ref = ResolveSymbolicLink(s);
-						if ref then
-							if s.g then
-								for i,m in ipairs(s.g) do
+				-- Instruction to search the full database for multiple of a given type
+				local field = sym[2];
+				local cache;
+				for i=3,#sym do
+					local cache = app.SearchForField(field, sym[i]);
+					if cache then
+						for k,s in ipairs(cache) do
+							local ref = ResolveSymbolicLink(s);
+							if ref then
+								if s.g then
+									for i,m in ipairs(s.g) do
+										table.insert(searchResults, m);
+									end
+								end
+								for i,m in ipairs(ref) do
 									table.insert(searchResults, m);
 								end
+							else
+								table.insert(searchResults, s);
 							end
-							for i,m in ipairs(ref) do
-								table.insert(searchResults, m);
-							end
-						else
-							table.insert(searchResults, s);
 						end
+					else
+						print("Failed to select ", field, sym[i]);
 					end
-				else
-					print("Failed to select ", sym[2], sym[3]);
 				end
 			elseif cmd == "selectparent" then
 				-- Instruction to select the parent object of the parent that owns the symbolic link.
@@ -8564,7 +8568,29 @@ local function CreateMiniListForGroup(group)
 					group = group.parent;
 				end
 			end
+			
 			local mainQuest = CloneData(group);
+			if mainQuest.sym then
+				mainQuest.collectible = true;
+				mainQuest.visible = true;
+				mainQuest.progress = 0;
+				mainQuest.total = 0;
+				if not mainQuest.g then
+					local resolved = ResolveSymbolicLink(group);
+					if resolved then
+						for i=#resolved,1,-1 do
+							resolved[i] = CreateObject(resolved[i]);
+						end
+						mainQuest.g = resolved;
+					end
+				else
+					local resolved = ResolveSymbolicLink(group);
+					if resolved then
+						MergeObjects(mainQuest.g, resolved);
+					end
+				end
+			end
+			
 			if questID then mainQuest.collectible = true; end
 			local g = { mainQuest };
 			

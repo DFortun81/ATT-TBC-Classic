@@ -1318,6 +1318,25 @@ root("Achievements", {
 			["OnUpdate"] = INSANE_IN_THE_MEMBRANE_OnUpdate,
 			["description"] = "Insane in the Membrane is a Feat of Strength that rewards the title <The Insane>. This feat requires you to become honored with the Bloodsail Buccaneers and exalted with the Steamwheedle Cartel (Booty Bay, Everlook, Gadgetzan, Ratchet), Ravenholdt, Darkmoon Faire, and the Shen'dralar. It does not require that all of these reputation levels be reached at the same time, however, this may not be a thing until the achievement itself is introduced. Raising reputation with these factions is typically very difficult, time-consuming, and costly.",
 		})),
+		ach(879, applyclassicphase(PHASE_ONE, {	-- Old School Ride
+			["providers"] = {
+				{ "i", 13328 },	-- Black Ram
+				{ "i", 13329 },	-- Frost Ram
+				{ "i", 13327 },	-- Icy Blue Mechanostrider Mod A
+				{ "i", 13326 },	-- White Mechanostrider Mod B
+				{ "i", 12354 },	-- Palomino Bridle
+				{ "i", 12353 },	-- White Stallion Bridle
+				{ "i", 12302 },	-- Reins of the Ancient Frostsaber
+				{ "i", 12303 },	-- Reins of the Nightsaber
+				{ "i", 12351 },	-- Horn of the Arctic Wolf
+				{ "i", 12330 },	-- Horn of the Red Wolf
+				{ "i", 15292 },	-- Green Kodo
+				{ "i", 15293 },	-- Teal Kodo
+				{ "i", 13317 },	-- Whistle of the Ivory Raptor
+				{ "i", 8586 },	-- Whistle of the Mottled Red Raptor
+			},
+			["timeline"] = { "removed 1.4.0" },
+		})),
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_LEGACY, {
 		

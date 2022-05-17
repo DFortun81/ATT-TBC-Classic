@@ -398,6 +398,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 5,
 				}),
+				q(7678, {	-- Palomino Exchange
+					["qg"] = 384,	-- Katie Hunter
+					["coord"] = { 84.0, 65.4, ELWYNN_FOREST },
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 12354, 1 } },	-- Palomino (MOUNT!)
+					["sym"] = { { "select", "itemID", 18777, 18776, 18778 } },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
 				q(86, {	-- Pie for Billy
 					["qg"] = 247,	-- Billy Maclure
 					["sourceQuest"] = 85,	-- Lost Necklace
@@ -693,6 +704,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 6,
 				}),
+				q(7677, {	-- White Stallion Exchange
+					["qg"] = 384,	-- Katie Hunter
+					["coord"] = { 84.0, 65.4, ELWYNN_FOREST },
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 12353, 1 } },	-- White Stallion (MOUNT!)
+					["sym"] = { { "select", "itemID", 18777, 18776, 18778 } },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
 				q(33, {	-- Wolves Across the Border
 					["qg"] = 196,	-- Eagan Peltskinner
 					["sourceQuest"] = 5261,	-- Eagan Peltskinner
@@ -836,6 +858,18 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(8486),	-- Cat Carrier (Cornish Rex)
 						i(8487),	-- Cat Carrier (Orange Tabby)
 						i(8488),	-- Cat Carrier (Silver Tabby)
+					},
+				}),
+				n(6749, {	-- Erma <Stable Master>
+					["coord"] = { 42.8, 65.8, ELWYNN_FOREST },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(12354, {	-- Palomino (MOUNT!)
+							["timeline"] = { "removed 1.4.0" },
+						}),
+						i(12353, {	-- White Stallion (MOUNT!)
+							["timeline"] = { "removed 1.4.0" },
+						}),
 					},
 				}),
 				n(384, {	-- Katie Hunter <Horse Breeder>

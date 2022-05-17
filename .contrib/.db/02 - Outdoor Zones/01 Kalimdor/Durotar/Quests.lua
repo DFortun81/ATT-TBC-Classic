@@ -373,6 +373,17 @@ _.Zones =
 					["races"] = { TROLL },
 					["lvl"] = 5
 				}),
+				q(7664, {	-- Ivory Raptor Replacement
+					["qg"] = 7952,	-- Zjolnir
+					["coord"] = { 55.2, 75.6, DUROTAR },
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 13317, 1 } },	-- Ivory Raptor (MOUNT!)
+					["sym"] = { { "select", "itemID", 18788, 18789, 18990 } },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
 				q(1884, {	-- Ju-Ju Heaps
 					["qg"] = 5880,	-- Un'Thuwa <Mage Trainer>
 					["sourceQuests"] = {
@@ -466,6 +477,17 @@ _.Zones =
 						{ "i", 4892, 4 },	-- Durotar Tiger Fur
 					},
 					["lvl"] = 5,
+				}),
+				q(7665, {	-- Red Raptor Replacement
+					["qg"] = 7952,	-- Zjolnir
+					["coord"] = { 55.2, 75.6, DUROTAR },
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 8586, 1 } },	-- Mottled Red Raptor (MOUNT!)
+					["sym"] = { { "select", "itemID", 18788, 18789, 18990 } },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
 				}),
 				q(823, {	-- Report to Orgnil
 					["qg"] = 3188,	-- Master Gadrin

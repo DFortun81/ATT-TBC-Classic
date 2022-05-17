@@ -226,6 +226,36 @@ _.Zones =
 						i(4973),	-- Plains Hunter Wristguards
 					},
 				}),
+				q(7663, {	-- New Kodo - Green
+					["qg"] = 3685,	-- Harb Clawhoof
+					-- #if AFTER CATA
+					["coord"] = { 47.6, 58.0, MULGORE },
+					-- #else
+					["coord"] = { 47.6, 58.4, MULGORE },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 15292, 1 } },	-- Green Kodo (MOUNT!)
+					["sym"] = { { "select", "itemID", 18794, 18795, 18793 } },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
+				q(7662, {	-- New Kodo - Teal
+					["qg"] = 3685,	-- Harb Clawhoof
+					-- #if AFTER CATA
+					["coord"] = { 47.6, 58.0, MULGORE },
+					-- #else
+					["coord"] = { 47.6, 58.4, MULGORE },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 15293, 1 } },	-- Teal Kodo (MOUNT!)
+					["sym"] = { { "select", "itemID", 18794, 18795, 18793 } },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
 				q(748, {	-- Poison Water
 					["qg"] = 2948,	-- Mull Thunderhorn
 					["coord"] = { 48.5, 60.4, MULGORE },

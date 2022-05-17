@@ -501,6 +501,36 @@ root("Zones", m(KALIMDOR, {
 						},
 					},
 				}),
+				q(7660, {	-- Wolf Swapping - Arctic Wolf
+					["qg"] = 3362,	-- Ogunaro Wolfrunner
+					-- #if AFTER CATA
+					["coord"] = { 61.6, 35.6, ORGRIMMAR },
+					-- #else
+					["coord"] = { 69.4, 12.4, ORGRIMMAR },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 12351, 1 } },	-- Arctic Wolf
+					["sym"] = { { "select", "itemID", 18796, 18798, 18797 } },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
+				q(7661, {	-- Wolf Swapping - Red Wolf
+					["qg"] = 3362,	-- Ogunaro Wolfrunner
+					-- #if AFTER CATA
+					["coord"] = { 61.6, 35.6, ORGRIMMAR },
+					-- #else
+					["coord"] = { 69.4, 12.4, ORGRIMMAR },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 12330, 1 } },	-- Red Wolf (MOUNT!)
+					["sym"] = { { "select", "itemID", 18796, 18798, 18797 } },
+					["races"] = HORDE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
 				q(2382, {	-- Wrenix of Ratchet
 					["qg"] = 3402,	-- Zando'zan
 					["sourceQuest"] = 2379,	-- Zando'zan
@@ -596,15 +626,26 @@ root("Zones", m(KALIMDOR, {
 					},
 				}),
 				n(3362, {	-- Ogunaro Wolfrunner <Kennel Master>
+					-- #if AFTER CATA
+					["coord"] = { 61.6, 35.6, ORGRIMMAR },
+					-- #else
 					["coord"] = { 69.4, 12.4, ORGRIMMAR },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(1132),	-- Horn of the Timber Wolf
-						i(5665),	-- Horn of the Dire Wolf
-						i(5668),	-- Horn of the Brown Wolf
-						i(18796),	-- Horn of the Swift Brown Wolf
-						i(18797),	-- Horn of the Swift Timber Wolf
-						i(18798),	-- Horn of the Swift Gray Wolf
+						i(46099),	-- Black Wolf (MOUNT!)
+						i(5668),	-- Brown Wolf (MOUNT!)
+						i(5665),	-- Dire Wolf (MOUNT!)
+						i(18796),	-- Swift Brown Wolf (MOUNT!)
+						i(18797),	-- Swift Timber Wolf (MOUNT!)
+						i(18798),	-- Swift Gray Wolf (MOUNT!)
+						i(1132),	-- Timber Wolf (MOUNT!)
+						i(12351, {	-- Arctic Wolf (MOUNT!)
+							["timeline"] = { "removed 1.4.0" },
+						}),
+						i(12330, {	-- Red Wolf (MOUNT!)
+							["timeline"] = { "removed 1.4.0" },
+						}),
 					},
 				}),
 				n(3333, {	-- Shankys <Fishing Supplies>

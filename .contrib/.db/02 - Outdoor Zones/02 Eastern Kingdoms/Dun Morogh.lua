@@ -3,51 +3,149 @@
 ---------------------------------------------------
 root("Zones", m(EASTERN_KINGDOMS, {
 	m(DUN_MOROGH, {
-		["lore"] = "Dun Morogh is a snowy region located between the magma-strewn wasteland of the Searing Gorge to the south, the gentle ridges of Loch Modan to the east, and the swampy Wetlands to the north. Dun Morogh is home to both the gnomes of Gnomeregan and the Ironforge dwarves and is the location of the major city of Ironforge. The Khaz Modan mountains surround Dun Morogh on all sides, making it accessible only by certain passes that are currently watched over by dwarven troops.\n\nThe center of dwarven culture and ingenuity, Dun Morogh holds the capital of Ironforge. The region is snow-swept and forested, with gray, craggy mountains and slinking wolves. Troggs recently overran Gnomeregan, the gnomes’ former capital, and drove its citizens to Ironforge. Frostmane trolls menace dwarven patrols. Several villages and towns dot the landscape, and though the trade routes can be perilous, dwarven mountaineers and warriors keep their settlements safe.",
+		["lore"] = "Dun Morogh is home to both the gnomes of Gnomeregan and the Ironforge dwarves and is the location of the major city of Ironforge. The Khaz Modan mountains surround Dun Morogh on all sides, making it accessible only by certain passes that are currently watched over by dwarven troops.\n\nThe center of dwarven culture and ingenuity, Dun Morogh holds the capital of Ironforge. The region is snow-swept and forested, with gray, craggy mountains and slinking wolves. Troggs recently overran Gnomeregan, the gnomes’ former capital, and drove its citizens to Ironforge. Frostmane trolls menace dwarven patrols. Several villages and towns dot the landscape, and though the trade routes can be perilous, dwarven mountaineers and warriors keep their settlements safe.",
+		["maps"] = {
+			29,		-- The Grizzled Den
+			470,	-- Frostmane Hold
+		},
+		-- #if AFTER WRATH
+		["icon"] = "Interface\\Icons\\achievement_zone_dunmorogh",
+		-- #endif
 		["groups"] = {
 			m(COLDRIDGE_VALLEY, {
 				["lore"] = "Coldridge Valley is the starting area for young dwarven recruits, and contains the base camp of Anvilmar. It is located in the southwestern corner of Dun Morogh, and is linked to the greater area by Coldridge Pass to the northeast.",
 				["icon"] = "Interface\\Icons\\Achievement_Character_Dwarf_Male",
+				["maps"] = {
+					28,		-- Coldridge Pass
+					31,		-- Coldridge Valley
+					428,	-- Frostmane Hovel (Coldridge Valley)
+				},
 				["groups"] = {
 					n(QUESTS, {
 						q(170, {	-- A New Threat
 							["qg"] = 713,	-- Balir Frosthammer
 							["sourceQuest"] = 179,	-- Dwarven Outfitters
 							["coord"] = { 29.6, 71.2, DUN_MOROGH },
+							["timeline"] = { "removed 4.0.3" },
 							["races"] = ALLIANCE_ONLY,
 							["groups"] = {
-								i(6185),	-- Bear Shawl
-								i(2172),	-- Rustic Belt
-								i(6173),	-- Snow Boots
+								objective(1, {	-- 0/6 Rockjaw Trogg
+									["provider"] = { "n", 707 },	-- Rockjaw Trogg
+								}),
+								objective(2, {	-- 0/6 Burly Rockjaw Trogg
+									["provider"] = { "n", 724 },	-- Burly Rockjaw Trogg
+								}),
+								i(6185, {	-- Bear Shawl
+									["timeline"] = { "removed 4.0.3" },
+								}),
+								i(2172, {	-- Rustic Belt
+									["timeline"] = { "removed 4.0.3" },
+								}),
+								i(6173, {	-- Snow Boots
+									["timeline"] = { "removed 4.0.3" },
+								}),
 							},
 						}),
 						q(3361, {	-- A Refugee's Quandary
 							["qg"] = 8416,	-- Felix Whindlebolt
+							-- #if AFTER CATA
+							["sourceQuest"] = 24487,	-- Whitebeard Needs Ye
+							["coord"] = { 41.8, 63.7, COLDRIDGE_VALLEY },
+							-- #else
 							["coord"] = { 28.6, 67.8, DUN_MOROGH },
+							-- #endif
 							["races"] = ALLIANCE_ONLY,
-							["cost"] = {
-								{ "i", 10438, 1 },	-- Felix's Box
-								{ "i", 16314, 1 },	-- Felix's Bucket of Bolts
-								{ "i", 16313, 1 },	-- Felix's Chest
-							},
-							["lvl"] = 3,
+							["lvl"] = lvlsquish(3, 3, 1),
 							["groups"] = {
-								{
-									["itemID"] = 10438,	-- Felix's Box
-									["questID"] = 3361,	-- A Refugee's Quandary
+								objective(1, {	-- 0/1 Felix's Box
+									["provider"] = { "i", 10438 },	-- Felix's Box
 									["coord"] = { 20.9, 76.1, DUN_MOROGH },
-								},
-								{
-									["itemID"] = 16314,	-- Felix's Bucket of Bolts
-									["questID"] = 3361,	-- A Refugee's Quandary
-									["coord"] = { 26.3, 79.2, DUN_MOROGH },
-								},
-								{
-									["itemID"] = 16313,	-- Felix's Chest
-									["questID"] = 3361,	-- A Refugee's Quandary
+								}),
+								objective(2, {	-- 0/1 Felix's Chest
+									["provider"] = { "i", 16313 },	-- Felix's Chest
 									["coord"] = { 22.8, 79.9, DUN_MOROGH },
-								},
+								}),
+								objective(3, {	-- 0/1 Felix's Bucket of Bolts
+									["provider"] = { "i", 16314 },	-- Felix's Bucket of Bolts
+									["coord"] = { 26.3, 79.2, DUN_MOROGH },
+								}),
 							},
+						}),
+						q(24490, {	-- A Trip to Ironforge
+							["qg"] = 786,	-- Grelin Whitebeard
+							["sourceQuest"] = 218,	-- Ice and Fire
+							["coord"] = { 42.7, 62.1, COLDRIDGE_VALLEY },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = ALLIANCE_ONLY,
+						}),
+						q(24471, {	-- Aid for the Wounded
+							["qg"] = 658,	-- Sten Stoutarm
+							["sourceQuest"] = 24469,	-- Hold the Line!
+							["coord"] = { 65.5, 41.9, COLDRIDGE_VALLEY },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = ALLIANCE_ONLY,
+						}),
+						q(24475, {	-- All the Other Stuff
+							["qg"] = 37087,	-- Jona Ironstock
+							["sourceQuest"] = 24474,	-- First Things First: We're Gonna Need Some Beer
+							["coord"] = { 60.6, 21.0, COLDRIDGE_VALLEY },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = ALLIANCE_ONLY,
+						}),
+						q(24496, {	-- Arcane Rune
+							["qg"] = 37087,	-- Jona Ironstock
+							["coord"] = { 61.4, 19.4, COLDRIDGE_VALLEY },
+							["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+							["races"] = { DWARF },
+							["classes"] = { MAGE },
+						}),
+						q(1599, {	-- Beginnings
+							["qg"] = 460,	-- Alamar Grimm <Warlock Trainer>
+							["coord"] = { 28.6, 66.1, DUN_MOROGH },
+							["altQuests"] = { 1598 },	-- The Stolen Tome
+							["timeline"] = { "removed 4.0.3" },
+							["races"] = ALLIANCE_ONLY,
+							["classes"] = { WARLOCK },
+							["groups"] = {
+								objective(1, {	-- 0/3 Feather Charm
+									["provider"] = { "i", 6753 },	-- Feather Charm
+									["cr"] = 946,	-- Frostmane Novice
+								}),
+								-- #if BEFORE 4.0.3
+								recipe(688),	-- Summon Imp
+								-- #endif
+							},
+						}),
+						q(3365, {	-- Bring Back the Mug
+							["providers"] = {
+								{ "n", 836 },	-- Durnan Furcutter
+								{ "i", 10440 },	-- Nori's Mug
+							},
+							["sourceQuest"] = 3364,	-- Scalding Mornbrew Delivery
+							["coord"] = { 28.8, 66.4, DUN_MOROGH },
+							["timeline"] = { "removed 4.0.3" },
+							["races"] = ALLIANCE_ONLY,
+							["lvl"] = 4,
+						}),
+						q(233, {	-- Coldridge Valley Mail Delivery (1/2)
+							["providers"] = {
+								{ "n", 658 },	-- Sten Stoutarm
+								{ "i", 2187 },	-- A Stack of Letters
+							},
+							["sourceQuest"] = 179,	-- Dwarven Outfitters
+							["coord"] = { 29.8, 71.2, DUN_MOROGH },
+							["timeline"] = { "removed 4.0.3" },
+							["races"] = ALLIANCE_ONLY,
+						}),
+						q(234, {	-- Coldridge Valley Mail Delivery (2/2)
+							["providers"] = {
+								{ "n", 714 },	-- Talin Keeneye
+								{ "i", 2188 },	-- A Letter to Grelin Whitebeard
+							},
+							["sourceQuest"] = 233,	-- Coldridge Valley Mail Delivery (1/2)
+							["coord"] = { 22.6, 71.4, DUN_MOROGH },
+							["timeline"] = { "removed 4.0.3" },
+							["races"] = ALLIANCE_ONLY,
 						}),
 					}),
 				},
@@ -136,99 +234,136 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 1374,	-- Rejold Barleybrew
 					["sourceQuest"] = 318,	-- Evershine
 					["coord"] = { 30.2, 45.8, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 2,
+					["groups"] = {
+						objective(1, {	-- 0/6 Ice Claw Bear
+							["provider"] = { "n", 1196 },	-- Ice Claw Bear
+						}),
+						objective(2, {	-- 0/8 Elder Crag Boar
+							["provider"] = { "n", 1127 },	-- Elder Crag Boar
+						}),
+						objective(3, {	-- 0/8 Snow Leopard
+							["provider"] = { "n", 1201 },	-- Snow Leopard
+						}),
+					},
 				}),
-				
+				q(25882, {	-- A Hand at the Ranch
+					["qg"] = 41298,	-- Slamp Wobblecog
+					["sourceQuests"] = {
+						25840,	-- Eliminate the Resistance
+						25841,	-- Strike From Above
+					},
+					["coord"] = { 62.5, 53.7, DUN_MOROGH },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+				}),
 				q(417, {	-- A Pilot's Revenge
-					["provider"] = { "o", 2059 },	-- A Dwarven Corpse
+					["providers"] = {
+						{ "o", 2059 },	-- A Dwarven Corpse
+						{ "i", 3117 },	-- Hildelve's Journal
+					},
 					["sourceQuest"] = 419,	-- The Lost Pilot
 					["coord"] = { 79.7, 36.2, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3117, 1 },	-- Hildelve's Journal
-						{ "i", 3183, 1 },	-- Mangy Claw
-					},
 					["lvl"] = 8,
 					["groups"] = {
-						{
-							["itemID"] = 3183, 	-- Mangy Claw
-							["questID"] = 417,	-- A Pilot's Revenge
-							["cr"] = 1961,	-- Mangeclaw
+						objective(1, {	-- 0/1 Mangy Claw
+							["provider"] = { "i", 3183 }, 	-- Mangy Claw
 							["coord"] = { 78.34, 37.74, DUN_MOROGH },
-						},
-						i(2218),	-- Craftsman's Dagger
-						i(1009),	-- Compact Hammer
+							["cr"] = 1961,	-- Mangeclaw
+						}),
+						i(2218, {	-- Craftsman's Dagger
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(1009, {	-- Compact Hammer
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
-				
+				q(26855, {	-- A Pilot's Revenge
+					["providers"] = {
+						{ "o", 2059 },	-- A Dwarven Corpse
+						{ "i", 3117 },	-- Hildelve's Journal
+					},
+					["sourceQuest"] = 26854,	-- The Lost Pilot
+					["coord"] = { 87.6, 50.2, DUN_MOROGH },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						objective(1, {	-- 0/1 Mangy Claw
+							["provider"] = { "i", 3183 }, 	-- Mangy Claw
+							["coord"] = { 78.34, 37.74, DUN_MOROGH },
+							["cr"] = 1961,	-- Mangeclaw
+						}),
+						i(57560, {	-- Mangy Claw Mitts
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(57566, {	-- Siege Engineer's Belt
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(57562, {	-- Hammerfoot's Plate Leggings
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(57563, {	-- South Gate Blunderbuss
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131612, {	-- Siege Engineer's Waistband
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
+				}),
 				q(5541, {	-- Ammo for Rumbleshot
 					["qg"] = 1694,	-- Loslor Rudge
 					["coord"] = { 50.0, 49.4, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 13850, 1 },	-- Rumbleshot's Ammo
-					},
 					["lvl"] = 5,
 					["groups"] = {
-						{
-							["itemID"] = 13850,	-- Rumbleshot's Ammo
-							["questID"] = 5541,	-- Ammo for Rumbleshot
+						objective(1, {	-- 0/1 Rumbleshot's Ammo
+							["provider"] = { "i", 13850 },	-- Rumbleshot's Ammo
 							["coord"] = { 44.13, 56.95, DUN_MOROGH },
-						},
-					},
-				}),
-				q(1599, {	-- Beginnings
-					["qg"] = 460,	-- Alamar Grimm <Warlock Trainer>
-					["coord"] = { 28.6, 66.1, DUN_MOROGH },
-					["altQuests"] = { 1598 },	-- The Stolen Tome
-					["races"] = ALLIANCE_ONLY,
-					["classes"] = { WARLOCK },
-					["groups"] = {
-						objective(1, {	-- 0/3 Feather Charm
-							["provider"] = { "i", 6753 },	-- Feather Charm
-							["cr"] = 946,	-- Frostmane Novice
 						}),
-						recipe(688),	-- Summon Imp
 					},
 				}),
 				q(310, {	-- Bitter Rivals
-					["qg"] = 1375,	-- Marleth Barleybrew
-					["coord"] = { 30.2, 45.6, DUN_MOROGH },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2548, 1 },	-- Barrel of Barleybrew Scalder
+					["providers"] = {
+						{ "n", 1375 },	-- Marleth Barleybrew
+						{ "i", 2548 },	-- Barrel of Barleybrew Scalder
 					},
+					["coord"] = { 30.2, 45.6, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 2,
 				}),
-				q(3365, {	-- Bring Back the Mug
-					["qg"] = 836,	-- Durnan Furcutter
-					["sourceQuest"] = 3364,	-- Scalding Mornbrew Delivery
-					["coord"] = { 28.8, 66.4, DUN_MOROGH },
+				q(7674, {	-- Black Ram Exchange
+					["qg"] = 1261,	-- Veron Amberstill
+					-- #if AFTER CATA
+					["coord"] = { 70.6, 48.9, DUN_MOROGH },
+					-- #else
+					["coord"] = { 63.4, 50.6, DUN_MOROGH },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 13328, 1 } },	-- Black Ram
+					["sym"] = { { "select", "itemID", 18785, 18786, 18787 } },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 10440, 1 },	-- Nori's Mug
-					},
-					["lvl"] = 4,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
 				}),
-				q(233, {	-- Coldridge Valley Mail Delivery (1/2)
-					["qg"] = 658,	-- Sten Stoutarm
-					["sourceQuest"] = 179,	-- Dwarven Outfitters
-					["coord"] = { 29.8, 71.2, DUN_MOROGH },
+				q(26380, {	-- Bound for Kharanos
+					["providers"] = {
+						{ "n", 42933 },	-- Ciara Deepstone
+						{ "i", 58271 },	-- Sample Casks
+					},
+					["coord"] = { 49.9, 44.9, DUN_MOROGH },
+					["timeline"] = { "added 4.0.3.13277" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2187, 1 },	-- A Stack of Letters
-					},
 				}),
-				q(234, {	-- Coldridge Valley Mail Delivery (2/2)
-					["qg"] = 714,	-- Talin Keeneye
-					["sourceQuest"] = 233,	-- Coldridge Valley Mail Delivery (1/2)
-					["coord"] = { 22.6, 71.4, DUN_MOROGH },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2188, 1 },	-- A Letter to Grelin Whitebeard
-					},
-				}),
+				
 				q(3107, {	-- Consecrated Rune
 					["qg"] = 658,	-- Sten Stoutarm
 					["sourceQuest"] = 179,	-- Dwarven Outfitters
@@ -301,6 +436,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 2,
 				}),
+				q(7673, {	-- Frost Ram Exchange
+					["qg"] = 1261,	-- Veron Amberstill
+					-- #if AFTER CATA
+					["coord"] = { 70.6, 48.9, DUN_MOROGH },
+					-- #else
+					["coord"] = { 63.4, 50.6, DUN_MOROGH },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 13329, 1 } },	-- Frost Ram
+					["sym"] = { { "select", "itemID", 18785, 18786, 18787 } },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
 				q(287, {	-- Frostmane Hold
 					["qg"] = 1252,	-- Senir Whitebeard
 					["sourceQuest"] = 420,	-- Senir's Observations (2/2)
@@ -364,6 +514,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = { DARKIRON, DWARF, GNOME },
 				}),
 				-- #endif
+				q(7675, {	-- Icy Blue Mechanostrider Replacement
+					["qg"] = 7955,	-- Milli Featherwhistle
+					-- #if AFTER CATA
+					["coord"] = { 56.2, 46.3, DUN_MOROGH },
+					-- #else
+					["coord"] = { 49.0, 48.0, DUN_MOROGH },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 13327, 1 } },	-- Icy Blue Mechanostrider Mod A
+					["sym"] = { { "select", "itemID", 18772, 18773, 18774 } },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
 				q(5626, {	-- In Favor of the Light
 					["qg"] = 837,	-- Branstock Khalder <Priest Trainer>
 					["coord"] = { 28.6, 66.4, DUN_MOROGH },
@@ -888,6 +1053,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(6177),	-- Ironwrought Bracers
 						i(10550),	-- Wooly Mittens
 					},
+				}),
+				q(7676, {	-- White Mechanostrider Replacement
+					["qg"] = 7955,	-- Milli Featherwhistle
+					-- #if AFTER CATA
+					["coord"] = { 56.2, 46.3, DUN_MOROGH },
+					-- #else
+					["coord"] = { 49.0, 48.0, DUN_MOROGH },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 13326, 1 } },	-- White Mechanostrider Mod A
+					["sym"] = { { "select", "itemID", 18772, 18773, 18774 } },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
 				}),
 			}),
 			n(RARES, {

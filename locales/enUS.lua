@@ -507,6 +507,7 @@ app.L = {
 		[725] = { 81 },	-- Thori'dal, the Stars' Fury, name and icon from providers
 		[729] = { 81 },	-- Deathcharger's Reins, name and icon from providers
 		[871] = { 81, "Avast Ye, Admiral!", "Interface\\Icons\\inv_helmet_66" },
+		[879] = { 81, "Old School Ride" },	-- Old School Ride, icon from providers
 		[880] = { 81 },	-- Swift Zulian Tiger, name and icon from providers
 		[881] = { 81 },	-- Swift Razzashi Raptor, name and icon from providers
 		[882] = { 81 },	-- Fiery Warhorse's Reins, name and icon from providers

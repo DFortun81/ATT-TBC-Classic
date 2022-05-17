@@ -25,12 +25,18 @@ _.Zones =
 					["coord"] = { 55.2, 75.6, DUROTAR },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(8588),	-- Whistle of the Emerald Raptor
-						i(8591),	-- Whistle of the Turquoise Raptor
-						i(8592),	-- Whistle of the Violet Raptor
-						i(18788),	-- Swift Blue Raptor
-						i(18789),	-- Swift Olive Raptor
-						i(18790),	-- Swift Orange Raptor
+						i(8588),	-- Emerald Raptor (MOUNT!)
+						i(18788),	-- Swift Blue Raptor (MOUNT!)
+						i(18789),	-- Swift Olive Raptor (MOUNT!)
+						i(18790),	-- Swift Orange Raptor (MOUNT!)
+						i(8591),	-- Turquoise Raptor (MOUNT!)
+						i(8592),	-- Violet Raptor (MOUNT!)
+						i(13317, {	-- Ivory Raptor (MOUNT!)
+							["timeline"] = { "removed 1.4.0" },
+						}),
+						i(8586, {	-- Mottled Red Raptor (MOUNT!)
+							["timeline"] = { "removed 1.4.0" },
+						}),
 					},
 				}),
 			}),

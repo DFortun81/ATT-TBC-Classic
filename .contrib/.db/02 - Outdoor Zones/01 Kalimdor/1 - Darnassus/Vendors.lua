@@ -40,15 +40,26 @@ _.Zones =
 					},
 				}),
 				n(4730, {	-- Lelanai <Saber Handler>
+					-- #if AFTER CATA
+					["coord"] = { 42.6, 32.8, DARNASSUS },
+					-- #else
 					["coord"] = { 38.3, 15.3, DARNASSUS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(8629),	-- Reins of the Striped Nightsaber
-						i(8631),	-- Reins of the Striped Frostsaber
-						i(8632),	-- Reins of the Spotted Frostsaber
-						i(18766),	-- Reins of the Swift Frostsaber
-						i(18767),	-- Reins of the Swift Mistsaber
-						i(18902),	-- Reins of the Swift Stormsaber
+						i(8632),	-- Spotted Frostsaber (MOUNT!)
+						i(47100),	-- Striped Dawnsaber (MOUNT!)
+						i(8629),	-- Striped Nightsaber (MOUNT!)
+						i(8631),	-- Striped Frostsaber (MOUNT!)
+						i(18766),	-- Swift Frostsaber (MOUNT!)
+						i(18767),	-- Swift Mistsaber (MOUNT!)
+						i(18902),	-- Swift Stormsaber (MOUNT!)
+						i(12302, {	-- Ancient Frostsaber (MOUNT!)
+							["timeline"] = { "removed 1.4.0" },
+						}),
+						i(12303, {	-- Nightsaber (MOUNT!)
+							["timeline"] = { "removed 1.4.0" },
+						}),
 					},
 				}),
 				n(4229, {	-- Mythrin'dir <General Trade Supplier>

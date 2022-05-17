@@ -135,6 +135,21 @@ _.Zones =
 					["isBreadcrumb"] = true,
 					["lvl"] = 16,
 				}),
+				q(7671, {	-- Frostsaber Replacement
+					["qg"] = 4730,	-- Lelanai
+					-- #if AFTER CATA
+					["coord"] = { 42.6, 32.8, DARNASSUS },
+					-- #else
+					["coord"] = { 38.3, 15.3, DARNASSUS },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 12302, 1 } },	-- Ancient Frostsaber (MOUNT!)
+					["sym"] = { { "select", "itemID", 18766, 18767, 18902 } },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
+				}),
 				q(952, {	-- Grove of the Ancients
 					["qg"] = 3516,	-- Arch Druid Fandral Staghelm
 					["sourceQuest"] = 940,	-- Teldrassil
@@ -181,6 +196,21 @@ _.Zones =
 					["races"] = { NIGHTELF },
 					["isBreadcrumb"] = true,
 					["lvl"] = 10,
+				}),
+				q(7672, {	-- Nightsaber Replacement
+					["qg"] = 4730,	-- Lelanai
+					-- #if AFTER CATA
+					["coord"] = { 42.6, 32.8, DARNASSUS },
+					-- #else
+					["coord"] = { 38.3, 15.3, DARNASSUS },
+					-- #endif
+					["description"] = "If you are one of the poor unfortunate souls that turned in your unique mount for one of the generic mounts I'm so sorry.",
+					["timeline"] = { "removed 1.4.0" },
+					["cost"] = { { "i", 12303, 1 } },	-- Nightsaber (MOUNT!)
+					["sym"] = { { "select", "itemID", 18766, 18767, 18902 } },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+					["_drop"] = { "g" },
 				}),
 				q(2520, {	-- Sathrah's Sacrifice
 					["qg"] = 7313,	-- Priestess A'moora
