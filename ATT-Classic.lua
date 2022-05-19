@@ -14638,15 +14638,21 @@ app.events.VARIABLES_LOADED = function()
 									local searchResults = app.SearchForField(type(instanceID) == "number" and "instanceID" or "mapID", tonumber(instanceID));
 									if searchResults and #searchResults > 0 then
 										f.attRef = searchResults[1];
-										local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " ..GetProgressTextForTooltip(f.attRef);
-										nameFrame:SetText(attString .. "  " .. (nameFrame:GetText() or RETRIEVING_DATA));
+										local progressText = GetProgressTextForTooltip(f.attRef);
+										if progressText then
+											local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " .. progressText;
+											nameFrame:SetText(attString .. "  " .. (nameFrame:GetText() or RETRIEVING_DATA));
+										end
 									end
 								else
 									--print("Unknown Acronym for ", key);
 								end
 							else
-								local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " ..GetProgressTextForTooltip(f.attRef);
-								nameFrame:SetText(attString .. "  " .. (nameFrame:GetText() or RETRIEVING_DATA));
+								local progressText = GetProgressTextForTooltip(f.attRef);
+								if progressText then
+									local attString = "|T" .. app.asset("logo_32x32") .. ":0|t " .. progressText;
+									nameFrame:SetText(attString .. "  " .. (nameFrame:GetText() or RETRIEVING_DATA));
+								end
 							end
 						end
 					end
