@@ -2449,7 +2449,7 @@ end
 
 -- Synchronization Functions
 (function()
-local outgoing,incoming = {},{};
+local outgoing,incoming,queue,active = {},{},{};
 local whiteListedFields = { "FlightPaths", "Exploration", "BattlePets", "Achievements", "Spells", "Titles", "Toys", "Quests", "Factions"};
 function splittoarray(sep, inputstr)
 	local t = {};
@@ -2457,6 +2457,15 @@ function splittoarray(sep, inputstr)
 		table.insert(t, str);
 	end
 	return t;
+end
+local function processQueue()
+	if #queue > 0 and not active then
+		local data = queue[1];
+		table.remove(queue, 1);
+		active = data[1];
+		app.print("Updating " .. data[2] .. " from " .. data[3] .. "...");
+		C_ChatInfo.SendAddonMessage("ATTC", "!\tsyncsum\t" .. data[1], "WHISPER", data[3]);
+	end
 end
 
 function app:AcknowledgeIncomingChunks(sender, uid, total)
@@ -2529,6 +2538,8 @@ local function ProcessIncomingChunk(sender, uid, index, chunk)
 	
 	app:RecalculateAccountWideData();
 	app.Settings:Refresh();
+	active = nil;
+	processQueue();
 	return false;
 end
 function app:AcknowledgeIncomingChunk(sender, uid, index, chunk)
@@ -2608,13 +2619,14 @@ function app:ReceiveSyncRequest(sender, battleTag)
 end
 function app:ReceiveSyncSummary(sender, summary)
 	if app:IsAccountLinked(sender) then
+		local first = #queue == 0;
 		for i,data in ipairs(summary) do
 			local guid,lastPlayed = strsplit(":", data);
 			local character = ATTCharacterData[guid];
-			if not character or not character.lastPlayed or (character.lastPlayed < tonumber(lastPlayed)) then
-				app.print("Updating " .. (character and character.text or guid) .. " from " .. sender .. "...");
-				C_ChatInfo.SendAddonMessage("ATTC", "!\tsyncsum\t" .. guid, "WHISPER", sender);
+			if not character or not character.lastPlayed or (character.lastPlayed < tonumber(lastPlayed)) and guid ~= active then
+				tinsert(queue, { guid, character and character.text or guid, sender });
 			end
+			if first then processQueue(); end
 		end
 	end
 end
