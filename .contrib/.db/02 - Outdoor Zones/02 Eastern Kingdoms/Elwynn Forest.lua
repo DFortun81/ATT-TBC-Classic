@@ -580,13 +580,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 5,
 				}),
 				q(1860, {	-- Speak with Jennea
-					["questID"] = 1860,	-- Speak with Jennea
 					["qg"] = 328,	-- Zaldimar Wefhellt <Mage Trainer>
+					["altQuests"] = { 1879 },	-- Speak with Bink
 					["coord"] = { 43.3, 66.2, ELWYNN_FOREST },
-					["description"] = "Zaldimar Wefhellt is located on the 2nd floor of the Lion's Pride Inn.",
-					["altQuests"] = {
-						1879,	-- Speak with Bink
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { MAGE },
 					["isBreadcrumb"] = true,

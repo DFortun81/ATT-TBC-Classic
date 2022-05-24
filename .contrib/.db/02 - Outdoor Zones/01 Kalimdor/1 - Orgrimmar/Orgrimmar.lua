@@ -439,6 +439,7 @@ root("Zones", m(KALIMDOR, {
 					["qg"] = 6446,	-- Therzok
 					["sourceQuest"] = 1963,	-- The Shattered Hand (1/2)
 					["coord"] = { 42.74, 53.52, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { ORC, TROLL },
 					["classes"] = { ROGUE },
 					["cost"] = {
@@ -463,7 +464,9 @@ root("Zones", m(KALIMDOR, {
 								},
 							},
 						}),
-						i(7298),	-- Blade of Cunning
+						i(7298, {	-- Blade of Cunning
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(2460, {	-- The Shattered Salute

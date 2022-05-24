@@ -109,6 +109,7 @@ _.Zones =
 					["qg"] = 4163,	-- Syurna
 					["sourceQuest"] = 2241,	-- The Apple Falls
 					["coord"] = { 37.0, 21.9, DARNASSUS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { TELDRASSIL },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { ROGUE },
@@ -124,7 +125,9 @@ _.Zones =
 							["description"] = "This item can only be pickpocketed.",
 							["coord"] = { 37.6, 22.2, TELDRASSIL },
 						},
-						i(7298),	-- Blade of Cunning
+						i(7298, {	-- Blade of Cunning
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(2260, {	-- Erion's Behest

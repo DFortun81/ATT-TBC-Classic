@@ -557,11 +557,14 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(1978, {	-- The Deathstalkers (4/4)
 					["qg"] = 6467,	-- Mennet Carkad
 					["sourceQuest"] = 1899,	-- The Deathstalkers (3/4)
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { UNDEAD },
 					["classes"] = { ROGUE },
 					["lvl"] = 10,
 					["groups"] = {
-						i(7298),	-- Blade of Cunning
+						i(7298, {	-- Blade of Cunning
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(410, {	-- The Dormant Shade

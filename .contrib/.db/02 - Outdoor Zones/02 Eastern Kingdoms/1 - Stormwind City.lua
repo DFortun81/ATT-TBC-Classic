@@ -674,14 +674,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				q(2206, {	-- Snatch and Grab
-					["lvl"] = 10,
-					["races"] = ALLIANCE_ONLY,
-					["classes"] = { ROGUE },
 					["qg"] = 332,	-- Master Mathias Shaw
 					["sourceQuest"] = 2205,	-- Seek out SI:7
 					["coord"] = { 75.8, 59.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { ROGUE },
+					["lvl"] = 10,
 					["groups"] = {
-						i(7298),	-- Blade of Cunning
+						i(7298, {	-- Blade of Cunning
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(343, {	-- Speaking of Fortitude

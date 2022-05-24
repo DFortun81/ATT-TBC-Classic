@@ -470,17 +470,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(1880,	{	-- Mage-tastic Gizmonitor
 					["qg"] = 5144,	-- Bink <Mage Trainer>
 					["sourceQuest"] = 1879,	-- Speak with Bink
+					["altQuests"] = { 1861 },	-- Mirror Lake
 					["coord"] = { 27, 8.2, IRONFORGE },
+					["maps"] = { DUN_MOROGH },
 					["classes"] = { MAGE },
 					["races"] = ALLIANCE_ONLY,
-					["altQuests"] = {
-						1861,	-- Mirror Lake
-					},
-					["cost"] = {
-						{ "i", 7226, 1 },	-- Mage-tastic Gizmonitor
-					},
 					["lvl"] = 10,
 					["groups"] = {
+						objective(1, {	-- 0/1 Mage-tastic Gizmonitor
+							["provider"] = { "i", 7226 },	-- Mage-tastic Gizmonitor
+							["coord"] = { 27.7, 36.5, DUN_MOROGH },
+						}),
 						i(7507),	-- Arcane Orb
 						i(9514),	-- Arcane Staff
 					},
