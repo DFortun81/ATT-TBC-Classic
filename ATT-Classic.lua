@@ -9938,6 +9938,7 @@ local function UpdateWindow(self, force, got)
 		end
 		
 		UpdateVisibleRowData(self);
+		if self.Refresh then self:Refresh(); end
 		return true;
 	else
 		UpdateVisibleRowData(self);

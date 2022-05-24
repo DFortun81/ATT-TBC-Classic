@@ -2384,7 +2384,7 @@ end);
 AutomaticallySyncAccountDataCheckBox:SetATTTooltip("Enable this option if you want ATT to attempt to automatically synchronize account data between accounts when logging in or reloading the UI.");
 AutomaticallySyncAccountDataCheckBox:SetPoint("TOPLEFT", SyncLabel, "BOTTOMLEFT", 4, 0);
 
-function settings.MostRecentTab:InitializeSyncWindow()
+function tab:InitializeSyncWindow()
 	local syncWindow = app:GetWindow("Sync");
 	local syncWindow_Show,naughty = syncWindow.Show;
 	syncWindow.OnRefresh = syncWindow.Update;
@@ -2403,10 +2403,13 @@ function settings.MostRecentTab:InitializeSyncWindow()
 	syncWindow:SetMovable(false);
 	syncWindow:SetResizable(false);
 	syncWindow:SetParent(settings);
-	syncWindow:SetPoint("LEFT", SyncLabel, "LEFT", 0, 0);
-	syncWindow:SetPoint("RIGHT", SyncLabel, "LEFT", 300, 0);
-	syncWindow:SetPoint("TOP", AutomaticallySyncAccountDataCheckBox, "BOTTOM", 0, 4);
-	syncWindow:SetPoint("BOTTOM", settings, "BOTTOM", 0, 4);
+	syncWindow.Refresh = function(self)
+		self:ClearAllPoints();
+		self:SetPoint("LEFT", SyncLabel, "LEFT", 0, 0);
+		self:SetPoint("RIGHT", SyncLabel, "LEFT", 300, 0);
+		self:SetPoint("TOP", AutomaticallySyncAccountDataCheckBox, "BOTTOM", 0, 4);
+		self:SetPoint("BOTTOM", settings, "BOTTOM", 0, 4);
+	end
 	table.insert(tab.objects, syncWindow);
 end
 end)();
