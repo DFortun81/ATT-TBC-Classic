@@ -17,7 +17,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 		["groups"] = {
 			m(NORTHSHIRE_VALLEY, {
 				["lore"] = "Northshire was the pride of Stormwind's vineyards until recently when Defias bandits drove off the farmers and occupied the farm and fields. This is where the human starting area is located, though the serene valley is visited by adventurers from all over the world.",
-				-- #if AFTER WRATH
+				-- #if ANYCLASSIC
+				["icon"] = asset("Achievement_Character_Human_Female"),
+				-- #else
 				["icon"] = "Interface\\Icons\\Achievement_Character_Human_Female",
 				-- #endif
 				["groups"] = {
@@ -220,7 +222,42 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								i(11192),	-- Outfitter Gloves
 							},
 						}),
+						q(1598, {	-- The Stolen Tome
+							["qg"] = 459,	-- Drusilla La Salle
+							["altQuests"] = { 1599 },	-- Beginnings
+							["coord"] = { 49.9, 42.6, ELWYNN_FOREST },
+							["timeline"] = { "removed 3.3.0" },
+							["races"] = ALLIANCE_ONLY,
+							["classes"] = { WARLOCK },
+							-- #if BEFORE 3.3.0
+							["groups"] = {
+								objective(1, {	-- 0/1 Powers of the Void
+									["provider"] = { "i", 6785 },	-- Powers of the Void
+									["coord"] = { 56.7, 44.0, ELWYNN_FOREST },
+								}),
+								recipe(688),	-- Summon Imp
+							},
+							-- #endif
+						}),
+						q(33, {	-- Wolves Across the Border
+							["qg"] = 196,	-- Eagan Peltskinner
+							["sourceQuest"] = 5261,	-- Eagan Peltskinner
+							["coord"] = { 48.9, 40.1, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["groups"] = {
+								objective(1, {	-- 0/8 Tough Wolf Meat
+									["provider"] = { "i", 750 },
+									["crs"] = {
+										299,	-- Young Wolf
+										69,	-- Timber Wolf
+									},
+								}),
+								i(80),	-- Soft Fur-lined Shoes
+								i(6070),	-- Wolfskin Bracers
+							},
+						}),
 					}),
+					-- #if AFTER 4.0.3
 					n(RARES, {
 						n(62, {	-- Gug Fatcandle
 							["coord"] = { 31.6, 16.7, NORTHSHIRE_VALLEY },
@@ -232,6 +269,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 					}),
+					-- #endif
 				},
 			}),
 			n(ACHIEVEMENTS, {
@@ -758,31 +796,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 4,
 				}),
-				
-				
-				q(1598, {	-- The Stolen Tome
-					["qg"] = 459,	-- Drusilla La Salle
-					["coord"] = { 49.9, 42.6, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["classes"] = { WARLOCK },
-					["altQuests"] = {
-						1599,	-- Beginnings
-					},
-					["cost"] = {
-						{ "i", 6785, 1 },	-- Powers of the Void
-					},
-					["groups"] = {
-						{
-							["itemID"] = 6785,	-- Powers of the Void
-							["questID"] = 1598,	-- The Stolen Tome
-							["coord"] = { 56.7, 44.0, ELWYNN_FOREST },
-							["altQuests"] = {
-								1599,	-- Beginnings
-							},
-						},
-						recipe(688),	-- Summon Imp
-					},
-				}),
 				q(176, {	-- Wanted: "Hogger"
 					["providers"] = {
 						{ "o", 68 },	-- Wanted Poster
@@ -790,19 +803,14 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["sourceQuest"] = 239,	-- Westbrook Garrison Needs Help!
 					["coord"] = { 24.6, 78.2, ELWYNN_FOREST },
-					["description"] = "Click on the Wanted Poster to accept this quest.",
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1931, 1 },	-- Huge Gnoll Claw
-					},
 					["lvl"] = 5,
 					["groups"] = {
-						{
-							["itemID"] = 1931,	-- Huge Gnoll Claw
-							["questID"] = 176,	-- Wanted: "Hogger"
-							["cr"] = 448,	-- Hogger
+						objective(1, {	-- 0/1 Huge Gnoll Claw
+							["provider"] = { "i", 1931 },	-- Huge Gnoll Claw
 							["coord"] = { 26.6, 89.8, ELWYNN_FOREST },
-						},
+							["cr"] = 448,	-- Hogger
+						}),
 						i(6085),	-- Footman Tunic
 						i(6084),	-- Stormwind Guard Leggings
 						i(6215),	-- Balanced Fighting Stick
@@ -826,26 +834,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["repeatable"] = true,
 					["_drop"] = { "g" },
 				}),
-				q(33, {	-- Wolves Across the Border
-					["qg"] = 196,	-- Eagan Peltskinner
-					["sourceQuest"] = 5261,	-- Eagan Peltskinner
-					["coord"] = { 48.9, 40.1, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 750, 8 },	-- Tough Wolf Meat
-					},
-					["groups"] = {
-						i(80),	-- Soft Fur-lined Shoes
-						i(6070),	-- Wolfskin Bracers
-					},
-				}),
 				q(106, {	-- Young Lovers
-					["qg"] = 251,	-- Maybell Maclure
+					["providers"] = {
+						{ "n", 251 },	-- Maybell Maclure
+						{ "i", 1208 },	-- Maybell's Love Letter
+					},
 					["coord"] = { 43, 89.6, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1208, 1 },	-- Maybell's Love Letter
-					},
 					["lvl"] = 5,
 				}),
 			}),
@@ -1132,15 +1127,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(778, {	-- Kobold Excavation Pick
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 476,	-- Kobold Geomancer
 				}),
 				i(1389, {	-- Kobold Mining Mallet
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 40,	-- Kobold Miner
 				}),
 				i(1195, {	-- Kobold Mining Shovel
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 475,	-- Kobold Tunneler
 				}),
 				i(1399, {	-- Magic Candle
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 476,	-- Kobold Geomancer
 				}),
 				-- #if BEFORE 8.1.0.28724
@@ -1150,9 +1149,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				-- #endif
 				i(2055, {	-- Small Wooden Hammer
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 80,	-- Kobold Laborer
 				}),
 				i(781, {	-- Stone Gnoll Hammer
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						478,	-- Riverpaw Outrunner
 						97,		-- Riverpaw Runt
