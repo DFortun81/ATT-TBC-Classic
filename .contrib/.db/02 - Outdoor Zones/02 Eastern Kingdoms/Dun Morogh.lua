@@ -550,6 +550,31 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							["races"] = { GNOME },
 							["classes"] = { WARLOCK },
 						}),
+						q(183, {	-- The Boar Hunter
+							["qg"] = 714,	-- Talin Keeneye
+							["coord"] = { 22.6, 71.4, DUN_MOROGH },
+							["timeline"] = { "removed 4.0.3" },
+							["races"] = ALLIANCE_ONLY,
+							["groups"] = {
+								objective(1, {	-- 0/12 Small Crag Boars slain
+									["provider"] = { "n", 708 },	-- Small Crag Boar
+								}),
+								i(79, {	-- Dwarven Cloth Britches
+									["timeline"] = { "removed 4.0.3" },
+								}),
+								i(61, {	-- Dwarven Leather Pants
+									["timeline"] = { "removed 4.0.3" },
+								}),
+							},
+						}),
+						q(24528, {	-- The Power of the Light
+							["qg"] = 926,	-- Bromos Grummner
+							["sourceQuest"] = 3107,	-- Consecrated Rune
+							["coord"] = { 61.8, 24.4, COLDRIDGE_VALLEY },
+							["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+							["races"] = { DWARF },
+							["classes"] = { PALADIN },
+						}),
 						-- #if BEFORE CATA
 						q(218, {	-- The Stolen Journal
 							["qg"] = 786,	-- Grelin Whitebeard
@@ -618,6 +643,437 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					}),
 				},
 			}),
+			-- #if AFTER 4.0.3
+			m(NEW_TINKERTOWN, {
+				["lore"] = "New Tinkertown is a small town built just outside of Gnomeregan. It is here surviving gnomes teleport to after having escaped their radiated city.",
+				["icon"] = "Interface\\Icons\\Achievement_Character_Gnome_Female",
+				["maps"] = { NEW_TINKERTOWN_LOWER },
+				["groups"] = {
+					-- #if AFTER MOP
+					petbattle(filter(BATTLE_PETS, {
+						p(1162, {	-- Fluxfire Feline
+							["crs"] = { 68838 },	-- Fluxfire Feline
+						}),
+						p(442, {	-- Irradiated Roach
+							["crs"] = { 61691 },	-- Irradiated Roach
+						}),
+					})),
+					-- #endif
+					n(QUESTS, {
+						q(26205, {	-- A Job for the Multi-Bot
+							["qg"] = 42553,	-- Engineer Grindspark
+							["sourceQuest"] = 26222,	-- Scrounging for Parts
+							["coord"] = { 40.5, 28.0, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26566, {	-- A Triumph of Gnomish Ingenuity
+							["qg"] = 42317,	-- High Tinker Mekkatorque
+							["sourceQuest"] = 26208,	-- The Fight Continues
+							["coord"] = { 38.7, 32.7, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26331, {	-- Crushcog's Minions
+							["qg"] = 42317,	-- High Tinker Mekkatorque
+							["sourceQuest"] = 26329,	-- One More Thing
+							["coord"] = { 38.7, 32.7, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26265, {	-- Dealing with the Fallout
+							["qg"] = 42630,	-- Corporal Fizzwhistle
+							["sourceQuest"] = 26222,	-- Scrounging for Parts
+							["coord"] = { 38.2, 40.2, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["groups"] = {
+								i(59038, {	-- Fallout Cover
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(59053, {	-- Airfield Courier Bag
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+							},
+						}),
+						q(27635, {	-- Decontamination
+							["qg"] = 46274,	-- Gaffer Coilspring
+							["sourceQuest"] = 28169,	-- Withdraw to the Loading Room!
+							["coord"] = { 53.0, 82.3, NEW_TINKERTOWN_LOWER },
+							["_drop"] = { "races" },	-- drop Mechagnome
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26364, {	-- Down with Crushcog!
+							["qg"] = 42353,	-- Jarvi Shadowstep
+							["sourceQuest"] = 26342,	-- Paint it Black
+							["coord"] = { 48.7, 52.8, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["groups"] = {
+								i(59052, {	-- Belt of Static Equilibrium
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(59051, {	-- Bracers of Angular Momentum
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(59050, {	-- Gloves of Potential Energy
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(131516, {	-- Angular Momentum Wristguards
+									["timeline"] = { "added 7.0.3.22248" },
+								}),
+							},
+						}),
+						q(26318, {	-- Finishin' the Job
+							["qg"] = 42708,	-- Jessup McCree
+							["sourceQuests"] = {
+								26285,	-- Get Me Explosives Back!
+								26284,	-- Missing in Action
+							},
+							["coord"] = { 37.2, 65.1, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["groups"] = {
+								i(59046, {	-- Friction Gloves
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(59045, {	-- Acceleration Belt
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(59044, {	-- Velocity Bracers
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(131512, {	-- Quickening Cinch
+									["timeline"] = { "added 7.0.3.22248" },
+								}),
+							},
+						}),
+						q(26285, {	-- Get Me Explosives Back!
+							["qg"] = 42708,	-- Jessup McCree
+							["sourceQuest"] = 26316,	-- What's Keeping jessup?
+							["coord"] = { 37.2, 65.1, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26423, {	-- Meet the High Tinker
+							["qg"] = 42366,	-- Kelsey Steelspark
+							["sourceQuest"] = 26206,	-- The Future of Gnomeregan
+							["coord"] = { 38.0, 33.6, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { ROGUE },
+						}),
+						q(31137, {	-- Meet the High Tinker
+							["qg"] = 63238,	-- Xi, Friend to the Small
+							["sourceQuest"] = 31135,	-- The Future of Gnomeregan
+							["coord"] = { 40.1, 35.6, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { MONK },
+						}),
+						q(26422, {	-- Meet the High Tinker
+							["qg"] = 42323,	-- "Doc" Cogspin
+							["sourceQuest"] = 26199,	-- The Future of Gnomeregan
+							["coord"] = { 39.4, 28.4, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { PRIEST },
+						}),
+						q(26421, {	-- Meet the High Tinker
+							["qg"] = 42331,	-- Bipsi Frostflinger
+							["sourceQuest"] = 26197,	-- The Future of Gnomeregan
+							["coord"] = { 41.1, 29.1, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { MAGE },
+						}),
+						q(26425, {	-- Meet the High Tinker
+							["qg"] = 42324,	-- Drill Sergeant Steamcrank
+							["sourceQuest"] = 26203,	-- The Future of Gnomeregan
+							["coord"] = { 40.6, 36.1, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { WARRIOR },
+						}),
+						q(26424, {	-- Meet the High Tinker
+							["qg"] = 460,	-- Alamar Grimm
+							["sourceQuest"] = 26202,	-- The Future of Gnomeregan
+							["coord"] = { 37.7, 38.0, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { WARLOCK },
+						}),
+						q(41218, {	-- Meet the High Tinker
+							["qg"] = 103614,	-- Muffinus Chromebrew
+							["sourceQuest"] = 41217,	-- The Future of Gnomeregan
+							["coord"] = { 41.9, 31.6, NEW_TINKERTOWN },
+							["timeline"] = { "added 7.0.1.20773" },
+							["races"] = { GNOME },
+							["classes"] = { HUNTER },
+						}),
+						q(26284, {	-- Missing in Action
+							["qg"] = 42708,	-- Jessup McCree
+							["sourceQuest"] = 26316,	-- What's Keeping jessup?
+							["coord"] = { 37.2, 65.1, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26333, {	-- No Tanks!
+							["qg"] = 42491,	-- Hinkles Fastblast
+							["sourceQuest"] = 26329,	-- One More Thing
+							["coord"] = { 38.1, 33.6, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["groups"] = {
+								i(59049, {	-- Inertial Bracers
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(59048, {	-- Torque-Applying Gloves
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(59047, {	-- Free Body Belt
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+								i(131514, {	-- Torque-Applying Grips
+									["timeline"] = { "added 7.0.3.22248" },
+								}),
+							},
+						}),
+						q(26373, {	-- On to Kharanos
+							["qg"] = 42353,	-- Jarvi Shadowstep
+							["sourceQuest"] = 26364,	-- Down with Crushcog!
+							["coord"] = { 48.7, 52.8, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["isBreadcrumb"] = true,
+						}),
+						q(26329, {	-- One More Thing
+							["qg"] = 42708,	-- Jessup McCree
+							["sourceQuest"] = 26318,	-- Finishin' the Job
+							["coord"] = { 37.2, 65.1, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26342, {	-- Paint it Black
+							["qg"] = 42353,	-- Jarvi Shadowstep
+							["sourceQuest"] = 26339,	-- Staging in Brewnall
+							["coord"] = { 48.7, 52.8, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(27670, {	-- Pinned Down
+							["qg"] = 45966,	-- Nevin Twistwrench
+							["coord"] = { 34.1, 32.2, NEW_TINKERTOWN_LOWER },
+							["_drop"] = { "races" },	-- drop Mechagnome
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(28167, {	-- Report to Carvo Blastbolt
+							["qg"] = 45966,	-- Nevin Twistwrench
+							["sourceQuest"] = 27670,	-- Pinned Down
+							["coord"] = { 34.0, 32.2, NEW_TINKERTOWN_LOWER },
+							["_drop"] = { "races" },	-- drop Mechagnome
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26222, {	-- Scrounging for Parts
+							["qg"] = 42553,	-- Engineer Grindspark
+							["sourceQuest"] = 26566,	-- A Triumph of Gnomish Ingenuity
+							["coord"] = { 40.5, 28.0, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(27671, {	-- See to the Survivors
+							["qg"] = 47250,	-- Carvo Blastbolt
+							["sourceQuest"] = 28167,	-- Report to Carvo Blastbolt
+							["coord"] = { 50.9, 31.9, NEW_TINKERTOWN_LOWER },
+							["_drop"] = { "races" },	-- drop Mechagnome
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26339, {	-- Staging in Brewnall
+							["qg"] = 42366,	-- Kelsey Steelspark
+							["sourceQuests"] = {
+								26331,	-- Crushcog's Minions
+								26333,	-- No Tanks!
+							},
+							["coord"] = { 38.0, 33.5, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(31138, {	-- The Arts of a Monk
+							["qg"] = 63238,	-- Xi, Friend to the Small
+							["coord"] = { 40.1, 35.6, NEW_TINKERTOWN },
+							["timeline"] = { "added 5.0.1.15640", "removed 7.0.3" },
+							["races"] = { GNOME },
+							["classes"] = { MONK },
+							-- #if BEFORE 7.0.3
+							["groups"] = {
+								i(59042, {	-- Electro-Staff
+									-- NOTE: Item is still obtainable via quest 26197 for Mages (do not flag as unobtainable)
+									["timeline"] = { "added 4.0.3.13287" },
+								}),
+							},
+							-- #endif
+						}),
+						q(26207, {	-- The Arts of a Rogue
+							["qg"] = 42366,	-- Kelsey Steelspark
+							["coord"] = { 38.0, 33.5, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+							["races"] = { GNOME },
+							["classes"] = { ROGUE },
+							-- #if BEFORE 7.0.3
+							["groups"] = {
+								i(59043, {	-- Death Star
+									-- NOTE: Item is still obtainable via quest 26206 for Rogues (do not flag as unobtainable)
+									["timeline"] = { "added 4.0.3.13287" },
+								}),
+							},
+							-- #endif
+						}),
+						q(26208, {	-- The Fight Continues
+							["qg"] = 42317,	-- High Tinker Mekkatorque
+							["sourceQuests"] = {
+								26423,	-- Meet the High Tinker (Rogue)
+								31137,	-- Meet the High Tinker (Monk)
+								26422,	-- Meet the High Tinker (Priest)
+								26421,	-- Meet the High Tinker (Mage)
+								26425,	-- Meet the High Tinker (Warrior)
+								26424,	-- Meet the High Tinker (Warlock)
+								41218,	-- Meet the High Tinker (Hunter)
+							},
+							["coord"] = { 38.7, 32.7, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26197, {	-- The Future of Gnomeregan
+							["qg"] = 42396,	-- Nevin Twistwrench
+							["sourceQuest"] = 27674,	-- To the Surface
+							["coord"] = { 39.4, 38.3, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13287" },
+							["races"] = { GNOME },
+							["classes"] = { MAGE },
+							["groups"] = {
+								i(59042, {	-- Electro-Staff
+									["timeline"] = { "added 4.0.3.13287" },
+								}),
+							},
+						}),
+						q(26199, {	-- The Future of Gnomeregan
+							["qg"] = 42396,	-- Nevin Twistwrench
+							["sourceQuest"] = 27674,	-- To the Surface
+							["coord"] = { 39.4, 38.3, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { PRIEST },
+							["groups"] = {
+								i(59040, {	-- Staff of the Force
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+							},
+						}),
+						q(26202, {	-- The Future of Gnomeregan
+							["qg"] = 42396,	-- Nevin Twistwrench
+							["sourceQuest"] = 27674,	-- To the Surface
+							["coord"] = { 39.4, 38.3, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { WARLOCK },
+							["groups"] = {
+								i(59041, {	-- Vibro Knife
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+							},
+						}),
+						q(26203, {	-- The Future of Gnomeregan
+							["qg"] = 42396,	-- Nevin Twistwrench
+							["sourceQuest"] = 27674,	-- To the Surface
+							["coord"] = { 39.4, 38.3, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { WARRIOR },
+							["groups"] = {
+								i(59039, {	-- Very Light Sabre
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+							},
+						}),
+						q(26206, {	-- The Future of Gnomeregan
+							["qg"] = 42396,	-- Nevin Twistwrench
+							["sourceQuest"] = 27674,	-- To the Surface
+							["coord"] = { 39.4, 38.3, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+							["classes"] = { ROGUE },
+							["groups"] = {
+								i(59043, {	-- Death Star
+									["timeline"] = { "added 4.0.3.13287" },
+								}),
+								i(59041, {	-- Vibro Knife
+									["timeline"] = { "added 4.0.3.13277" },
+								}),
+							},
+						}),
+						q(31135, {	-- The Future of Gnomeregan
+							["qg"] = 42396,	-- Nevin Twistwrench
+							["sourceQuest"] = 27674,	-- To the Surface
+							["coord"] = { 39.4, 38.3, NEW_TINKERTOWN },
+							["timeline"] = { "added 5.0.1.15640" },
+							["races"] = { GNOME },
+							["classes"] = { MONK },
+						}),
+						q(41217, {	-- The Future of Gnomeregan
+							["qg"] = 42396,	-- Nevin Twistwrench
+							["sourceQuest"] = 27674,	-- To the Surface
+							["coord"] = { 39.4, 38.3, NEW_TINKERTOWN },
+							["timeline"] = { "added 7.0.1.20773" },
+							["races"] = { GNOME },
+							["classes"] = { HUNTER },
+							["groups"] = {
+								i(134123, {	-- "Reliable" Boom-O-Tronic
+									["timeline"] = { "added 7.0.1.20773" },
+								}),
+							},
+						}),
+						q(27674, {	-- To the Surface
+							["qg"] = 46255,	-- Technician Braggle
+							["sourceQuest"] = 27635,	-- Decontamination
+							["coord"] = { 66.3, 81.6, NEW_TINKERTOWN_LOWER },
+							["_drop"] = { "races" },	-- drop Mechagnome
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26316, {	-- What's Keeping Jessup?
+							["qg"] = 42489,	-- Captain Tread Sparknozzle
+							["sourceQuests"] = {
+								26205,	-- A Job for the Multi-Bot
+								26265,	-- Dealing with the Fallout
+								26264,	-- What's Left Behind
+							},
+							["coord"] = { 38.3, 33.4, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(26264, {	-- What's Left Behind
+							["qg"] = 42611,	-- Tock Sprysprocket
+							["sourceQuest"] = 26222,	-- Scrounging for Parts
+							["coord"] = { 39.2, 26.5, NEW_TINKERTOWN },
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+						q(28169, {	-- Withdraw to the Loading Room!
+							["qg"] = 47250,	-- Carvo Blastbolt
+							["sourceQuest"] = 27671,	-- See to the Survivors
+							["coord"] = { 50.9, 31.9, NEW_TINKERTOWN_LOWER },
+							["_drop"] = { "races" },	-- drop Mechagnome
+							["timeline"] = { "added 4.0.3.13277" },
+							["races"] = { GNOME },
+						}),
+					}),
+				},
+			}),
+			-- #endif
 			n(ACHIEVEMENTS, {
 				removeclassicphase(ach(627, {	-- Explore Dun Morogh
 					-- #if BEFORE WRATH
@@ -1405,6 +1861,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				-- #endif
 				q(2218, {	-- Road to Salvation
 					["qg"] = 1234,	-- Hogral Bakkan
+					["altQuests"] = {
+						2205,	-- Seek out SI: 7
+						2241,	-- The Apple Falls
+					},
 					["coord"] = { 47.6, 52.6, DUN_MOROGH },
 					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
@@ -1538,6 +1998,12 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = { DWARF },
 					["classes"] = { HUNTER },
 					["lvl"] = 10,
+					["groups"] = {
+						objective(1, {	-- 0/1 Tame a Large Crag Boar
+							["provider"] = { "i", 15911 },	-- Taming Rod
+							["cr"] = 1126,	-- Large Crag Boar
+						}),
+					},
 				}),
 				q(6084, {	-- Taming the Beast (2/3)
 					["qg"] = 1231,	-- Grif Wildheart <Hunter Trainer>
@@ -1547,6 +2013,12 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = { DWARF },
 					["classes"] = { HUNTER },
 					["lvl"] = 10,
+					["groups"] = {
+						objective(1, {	-- 0/1 Tame a Snow Leopard
+							["provider"] = { "i", 15913 },	-- Taming Rod
+							["cr"] = 1201,	-- Snow Leopard
+						}),
+					},
 				}),
 				q(6085, {	-- Taming the Beast (3/3)
 					["qg"] = 1231,	-- Grif Wildheart <Hunter Trainer>
@@ -1556,14 +2028,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = { DWARF },
 					["classes"] = { HUNTER },
 					["lvl"] = 10,
-				}),
-				q(183, {	-- The Boar Hunter
-					["qg"] = 714,	-- Talin Keeneye
-					["coord"] = { 22.6, 71.4, DUN_MOROGH },
-					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(79),	-- Dwarven Cloth Britches
-						i(61),	-- Dwarven Leather Pants
+						objective(1, {	-- 0/1 
+							["provider"] = { "i", 15908 },	-- Taming Rod
+							["cr"] = 1196,	-- Ice Claw Bear
+						}),
 					},
 				}),
 				-- #if BEFORE CATA
@@ -1588,6 +2057,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(6074, {	-- The Hunter's Path
 					["qg"] = 5116,	-- Olmin Burningbeard <Hunter Trainer>
 					["coord"] = { 70, 84.6, IRONFORGE },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { DWARF },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,
@@ -1596,6 +2066,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(6075, {	-- The Hunter's Path
 					["qg"] = 11807,	-- Tristane Shadowstone
 					["coord"] = { 30.6, 45.4, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { DWARF },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,
@@ -1604,6 +2075,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(6076, {	-- The Hunter's Path
 					["qg"] = 5515,	-- Einris Brightspear <Hunter Trainer>
 					["coord"] = { 61.6, 15.4, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { DWARF },
 					["classes"] = { HUNTER },
 					["isBreadcrumb"] = true,
@@ -1612,42 +2084,82 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(419, {	-- The Lost Pilot
 					["qg"] = 1960,	-- Pilot Hammerfoot
 					["coord"] = { 83.8, 39.2, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 8,
 					["groups"] = {
-						i(3151),	-- Siege Brigade Vest
+						i(3151, {	-- Siege Brigade Vest
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(315, {	-- The Perfect Stout
 					["qg"] = 1374,	-- Rejold Barleybrew
 					["sourceQuest"] = 415,	-- Rejold's New Brew
+					-- #if AFTER CATA
+					["coord"] = { 54.1, 51.1, DUN_MOROGH },
+					-- #else
 					["coord"] = { 30.2, 45.8, DUN_MOROGH },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 5,
 					["groups"] = {
-						objective(1, {	-- 0/6 Shimmerweed
+						objective(1, {	-- 0/6 Shimmerweed (7 after CATA)
 							["provider"] = { "i", 2676 },	-- Shimmerweed
 							["cr"] = 1397,	-- Frostmane Seer
 						}),
-						i(2905),	-- Goat Fur Cloak
 						i(2326),	-- Ivy-weave Bracers
+						i(57547, {	-- Shimmerweed Boots
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(57548, {	-- Herb-Stained Gauntlets
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(131206, {	-- Shimmerweed Brewer Treads
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(2905, {	-- Goat Fur Cloak
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(433, {	-- The Public Servant
 					["qg"] = 1977,	-- Senator Mehr Stonehallow
+					-- #if AFTER CATA
+					["coord"] = { 75.9, 54.3, DUN_MOROGH },
+					-- #else
 					["coord"] = { 68.6, 56, DUN_MOROGH },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["isYearly"] = true,
 					["lvl"] = 6,
+					["groups"] = {
+						i(57570, {	-- Gol'Bolar Miner's Belt
+							["timeline"] = { "removed 4.0.3.13287" },
+						}),
+						i(57568, {	-- Senator's Dignified Pants
+							["timeline"] = { "removed 4.0.3.13287" },
+						}),
+						i(57569, {	-- Stonehallow's Arm Bands
+							["timeline"] = { "removed 4.0.3.13287" },
+						}),
+						i(131208, {	-- Senator's Handsome Leggings
+							["timeline"] = { "removed 7.0.3.22248" },
+						}),
+						i(131209, {	-- Stonehallow's Pressed Cuffs
+							["timeline"] = { "removed 7.0.3.22248" },
+						}),
+					},
 				}),
 				q(291, {	-- The Reports
-					["qg"] = 1252,	-- Senir Whitebeard
+					["providers"] = {
+						{ "n", 1252 },	-- Senir Whitebeard
+						{ "i", 2628 },	-- Senir's Report
+					},
 					["sourceQuest"] = 287,	-- Frostmane Hold
 					["coord"] = { 46.6, 53.8, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2628, 1 },	-- Senir's Report
-					},
 				}),
 				q(1653, {	-- The Test of Righteousness (1/3)
 					["qg"] = 6171,	-- Duthorian Rall
@@ -1659,7 +2171,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 20,
 				}),
 				q(1654, {	-- The Test of Righteousness (2/3)
-					["qg"] = 6181,	-- Jordan Stilwell
+					["providers"] = {
+						{ "n", 6181 },	-- Jordan Stilwell
+						{ "i", 6996 },	-- Jordan's Weapon Notes
+					},
 					["sourceQuest"] = 1653,	-- The Test of Righteousness (1/3)
 					["coord"] = { 52.6, 36.8, DUN_MOROGH },
 					["timeline"] = { "removed 4.0.3" },
@@ -1667,6 +2182,20 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { PALADIN },
 					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/1 Whitestone Oak Lumber
+							["provider"] = { "i", 6994 },	-- Whitestone Oak Lumber
+						}),
+						objective(2, {	-- 0/1 Jordan's Refined Ore Shipment
+							["provider"] = { "i", 6993 },	-- Jordan's Refined Ore Shipment
+						}),
+						objective(3, {	-- 0/1 Jordan's Smithing Hammer
+							["provider"] = { "i", 6895 },	-- Jordan's Smithing Hammer
+						}),
+						objective(4, {	-- 0/1 Purified Kor Gem
+							["provider"] = { "i", 7083 },	-- Purified Kor Gem
+						}),
+					},
 				}),
 				q(1806, {	-- The Test of Righteousness (3/3)
 					["qg"] = 6181,	-- Jordan Stilwell
@@ -1682,62 +2211,102 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(25839, {	-- The Ultrasafe Personnel Launcher
+					["qg"] = 41363,	-- Delber Cranktoggle
+					["sourceQuest"] = 25838,	-- Help from Steelgrill's Depot
+					["coord"] = { 56.8, 47.1, DUN_MOROGH },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(28868, {	-- The View from Down Here
+					["qg"] = 50601,	-- Snevik the Blade
+					["sourceQuest"] = 25839,	-- The Ultrasafe Personnel Launcher
+					["coord"] = { 62.5, 53.8, DUN_MOROGH },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(432, {	-- Those Blasted Troggs!
 					["qg"] = 1254,	-- Foreman Stonebrow
+					-- #if AFTER CATA
+					["coord"] = { 76.3, 54.6, DUN_MOROGH },
+					-- #else
 					["coord"] = { 69, 56.2, DUN_MOROGH },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 5,
+					-- #if BEFORE CATA
+					["groups"] = {
+						objective(1, {	-- 0/6 Rockjaw Skullthumper
+							["provider"] = { "n", 1115 },	-- Rockjaw Skullthumper
+						}),
+					},
+					-- #endif
 				}),
 				q(2299, {	-- To Hulfdan!
 					["qg"] = 1234,	-- Hogral Bakkan
 					["sourceQuest"] = 2218,	-- Road to Salvation
-					["altQuests"] = {
-						2205,	-- Seek out SI:7
-					},
 					["coord"] = { 47.6, 52.6, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { ROGUE },
 					["isBreadcrumb"] = true,
 					["lvl"] = 16,
 				}),
 				q(400, {	-- Tools for Steelgrill
-					["qg"] = 1872,	-- Tharek Blackstone
-					["coord"] = { 46, 51.6, DUN_MOROGH },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2999, 1 },	-- Steelgrill's Tools
+					["providers"] = {
+						{ "n", 1872 },	-- Tharek Blackstone
+						{ "i", 2999 },	-- Steelgrill's Tools
 					},
+					["coord"] = { 46, 51.6, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 2,
 				}),
 				q(6086, {	-- Training the Beast
 					["qg"] = 1231,	-- Grif Wildheart <Hunter Trainer>
 					["sourceQuest"] = 6085,  -- Taming the Beast (3/3)
 					["coord"] = { 45.8, 53.0, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { DWARF },
 					["classes"] = { HUNTER },
 					["lvl"] = 10,
+					-- #if BEFORE 4.0.3
 					["groups"] = {
 						recipe(883),	-- Call Pet
 						recipe(2641),	-- Dismiss Pet
 						recipe(1515),	-- Tame Beast
 					},
+					-- #endif
+				}),
+				q(25986, {	-- Trouble at the Lake
+					["qg"] = 1977,	-- Senator Mehr Stonehallow
+					["sourceQuests"] = {
+						25937,	-- Priceless Treasures
+						433,	-- The Public Servant
+						432,	-- Those Blasted Troggs!
+					},
+					["coord"] = { 75.8, 54.2, DUN_MOROGH },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
 				}),
 				q(312, {	-- Tundra MacGrann's Stolen Stash
 					["qg"] = 1266,	-- Tundra MacGrann
 					["coord"] = { 34.6, 51.6, DUN_MOROGH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2667, 1 },	-- MacGrann's Dried Meats
-					},
 					["lvl"] = 7,
 					["groups"] = {
-						{
-							["itemID"] = 2667,	-- MacGrann's Dried Meats
-							["questID"] = 312,	-- Tundra MacGrann's Stolen Stash
+						objective(1, {	-- 0/1 MacGrann's Dried Meats
+							["provider"] = { "i", 2667 },	-- MacGrann's Dried Meats
 							["coord"] = { 38.5, 53.93, DUN_MOROGH },
-						},
-						i(6177),	-- Ironwrought Bracers
-						i(10550),	-- Wooly Mittens
+						}),
+						i(6177, {	-- Ironwrought Bracers
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(10550, {	-- Wooly Mittens
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(7676, {	-- White Mechanostrider Replacement

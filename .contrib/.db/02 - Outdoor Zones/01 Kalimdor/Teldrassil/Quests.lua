@@ -498,6 +498,10 @@ _.Zones =
 				}),
 				q(2241, {	-- The Apple Falls
 					["qg"] = 3599,	-- Jannok Breezesong
+					["altQuests"] = {
+						2218,	-- Road to Salvation
+						2205,	-- Seek out SI: 7
+					},
 					["coord"] = { 56.4, 60.1, TELDRASSIL },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { ROGUE },

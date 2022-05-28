@@ -524,13 +524,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(2238),	-- Urchin's Pants
 					},
 				}),
-				q(2205, {	-- Seek out SI:7
+				q(2205, {	-- Seek out SI: 7
 					["qg"] = 917,	-- Keryn Sylvius
-					["isBreadcrumb"] = true,
+					["altQuests"] = {
+						2218,	-- Road to Salvation
+						2241,	-- The Apple Falls
+					},
 					["coord"] = { 43.9, 65.9, ELWYNN_FOREST },
-					["description"] = "Keryn Sylvius is located on the 2nd floor of the Lion's Pride Inn.",
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { ROGUE },
+					["isBreadcrumb"] = true,
 					["lvl"] = 10,
 				}),
 				q(61, {	-- Shipment to Stormwind
