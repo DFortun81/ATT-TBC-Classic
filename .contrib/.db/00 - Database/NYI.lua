@@ -97,7 +97,7 @@ root("NeverImplemented", {
 	q(1283),	-- Fire at the Shady Rest <CHANGE TO GOSSIP>
 	q(1281),	-- Jim's Song <CHANGE TO GOSSIP>
 	q(1263),	-- The Burning Inn <CHANGE TO GOSSIP>
-	q(1),	-- The "Chow" Quest (123)aa
+	q(1),	-- Kanrethad's Quest,		TBC: Alexander's Quest,		CLASSIC: The "Chow" Quest (123)aa
 	q(9065),	-- The "Chow" Quest (123)aa
 	q(1288, {	-- Vimes's Report
 		["cost"] = {
