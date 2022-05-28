@@ -917,65 +917,135 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["repeatable"] = true,
 					["lvl"] = 12,
 				}),
-				q(1641, {	-- The Tome of Divinity (1)
-					["qg"] = 6171,	-- Duthorian Rall
+				q(2998, {	-- The Tome of Divinity (1a/10)
+					["qg"] = 927,	-- Brother Wilhelm
 					["altQuests"] = {
-						2998,	-- The Tome of Divinity
-						3681,	-- The Tome of Divinity
+						3681,	-- The Tome of Divinity (1b/10)
 						1787,	-- The Tome of Divinity (8)
 					},
+					["coord"] = { 41, 66, ELWYNN_FOREST },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN },
 					["classes"] = { PALADIN },
 					["lvl"] = 12,
 				}),
-				q(1642, {	-- The Tome of Divinity (2)
-					["provider"] = { "i", 6775 },	-- Tome of Divinity
-					["sourceQuest"] = 1641,	-- The Tome of Divinity (1)
+				q(3681, {	-- The Tome of Divinity (1b/10)
+					["qg"] = 5149,	-- Brandur Ironhammer
+					["altQuests"] = {
+						2998, 	-- The Tome of Divinity (1a/10)
+						1787,	-- The Tome of Divinity (8)
+					},
+					["coord"] = { 23.4, 6.2, IRONFORGE },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN },
 					["classes"] = { PALADIN },
 					["lvl"] = 12,
 				}),
-				q(1643, {	-- The Tome of Divinity (3)
+				q(1641, {	-- The Tome of Divinity (2/10)
 					["qg"] = 6171,	-- Duthorian Rall
-					["sourceQuest"] = 1642,	-- The Tome of Divinity (2)
+					["sourceQuests"] = {
+						2998,	-- The Tome of Divinity (1a/10)
+						3681,	-- The Tome of Divinity (1b/10)
+					},
+					["altQuests"] = { 1787 },	-- The Tome of Divinity (8)
+					["coord"] = { 40, 29.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN },
 					["classes"] = { PALADIN },
 					["lvl"] = 12,
 				}),
-				q(1644, {	-- The Tome of Divinity (4)
-					["qg"] = 6174,	-- Stephanie Turner
-					["sourceQuest"] = 1643,	-- The Tome of Divinity (3)
+				q(1642, {	-- The Tome of Divinity (3/10)
+					["providers"] = {
+						{ "n", 6171 },	-- Duthorian Rall
+						{ "i", 6775 },	-- Tome of Divinity
+					},
+					["sourceQuest"] = 1641,	-- The Tome of Divinity (2/10)
+					["coord"] = { 40, 29.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN },
 					["classes"] = { PALADIN },
 					["lvl"] = 12,
 				}),
-				q(1780, {	-- The Tome of Divinity (5)
-					["qg"] = 6174,	-- Stephanie Turner
-					["sourceQuest"] = 1644,	-- The Tome of Divinity (4)
-					["races"] = { HUMAN },
-					["classes"] = { PALADIN },
-					["lvl"] = 12,
-				}),
-				q(1781, {	-- The Tome of Divinity (6)
+				q(1643, {	-- The Tome of Divinity (4/10)
 					["qg"] = 6171,	-- Duthorian Rall
-					["sourceQuest"] = 1644,	-- The Tome of Divinity (5)
+					["sourceQuest"] = 1642,	-- The Tome of Divinity (3/10)
+					["coord"] = { 40, 29.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN },
 					["classes"] = { PALADIN },
 					["lvl"] = 12,
 				}),
-				q(1786, {	-- The Tome of Divinity (7)
-					["qg"] = 6173,	-- Gazin Tenorm
-					["sourceQuest"] = 1781,	-- The Tome of Divinity (6)
+				q(1644, {	-- The Tome of Divinity (5/10)
+					["qg"] = 6174,	-- Stephanie Turner
+					["sourceQuest"] = 1643,	-- The Tome of Divinity (4/10)
+					["coord"] = { 57, 61.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["cost"] = { { "i", 2589, 10 } },	-- Linen Cloth
 					["races"] = { HUMAN },
 					["classes"] = { PALADIN },
 					["lvl"] = 12,
 				}),
-				q(1788, {	-- The Tome of Divinity (9)
-					["qg"] = 6173,	-- Gazin Tenorm
-					["sourceQuest"] = 1787,	-- The Tome of Divinity (8)
+				q(1780, {	-- The Tome of Divinity (6/10)
+					["qg"] = 6174,	-- Stephanie Turner
+					["sourceQuest"] = 1644,	-- The Tome of Divinity (5/10)
+					["coord"] = { 57, 61.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN },
 					["classes"] = { PALADIN },
 					["lvl"] = 12,
+				}),
+				q(1781, {	-- The Tome of Divinity (7/10)
+					["providers"] = {
+						{ "n", 6171 },	-- Duthorian Rall
+						{ "i", 6866 },	-- Symbol of Life
+					},
+					["sourceQuest"] = 1644,	-- The Tome of Divinity (6/10)
+					["coord"] = { 40, 29.8, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = { HUMAN },
+					["classes"] = { PALADIN },
+					["lvl"] = 12,
+				}),
+				q(1786, {	-- The Tome of Divinity (8/10)
+					["providers"] = {
+						{ "n", 6173 },	-- Gazin Tenorm
+						{ "i", 6866 },	-- Symbol of Life
+					},
+					["sourceQuest"] = 1781,	-- The Tome of Divinity (7/10)
+					["coord"] = { 38.6, 26.6, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = { HUMAN },
+					["classes"] = { PALADIN },
+					["lvl"] = 12,
+				}),
+				q(1787, {	-- The Tome of Divinity (9/10)
+					["qg"] = 6172,	-- Henze Faulk
+					["sourceQuest"] = 1786,	-- The Tome of Divinity (8/10)
+					["coord"] = { 72.6, 51.6, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = { HUMAN },
+					["classes"] = { PALADIN },
+					["lvl"] = 12,
+					["groups"] = {
+						objective(1, {	-- 0/1 Defias Script
+							["provider"] = { "i", 6846 },	-- Defias Script
+							["cr"] = 474,	-- Defias Rogue Wizard
+						}),
+					},
+				}),
+				q(1788, {	-- The Tome of Divinity (10/10)
+					["qg"] = 6173,	-- Gazin Tenorm
+					["sourceQuest"] = 1787,	-- The Tome of Divinity (9/10)
+					["coord"] = { 38.6, 26.6, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = { HUMAN },
+					["classes"] = { PALADIN },
+					["lvl"] = 12,
+					-- #if BEFORE 4.0.1
+					["groups"] = {
+						--recipe(7328),	-- Redemption [Rank 1]
+					},
+					-- #endif
 				}),
 				q(4485, {	-- The Tome of Nobility
 					["qg"] = 5491,	-- Arthur the Faithful <Paladin Trainer>
@@ -1341,11 +1411,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 52.0, 67.8, STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						{
-							["itemID"] = 1941,	-- Cask of Merlot
-							["questID"] = 116,	-- Dry Times
-							["races"] = ALLIANCE_ONLY,
-						},
+						i(1941),	-- Cask of Merlot
 					},
 				}),
 			}),

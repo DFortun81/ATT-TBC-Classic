@@ -3,8 +3,237 @@
 ---------------------------------------------------
 root("Zones", m(EASTERN_KINGDOMS, {
 	m(ELWYNN_FOREST, {
-		["lore"] = "Northshire was the pride of Stormwind's vineyards until recently when Defias bandits drove off the farmers and occupied the farm and fields. In addition, the Echo Ridge Mine north of the abbey has been infested by kobolds.\n\nKobolds infested the Jasperlode Mine and Fargodeep Mine. Gnolls have erected camps in the Forest's Edge region and the northern rim of Stone Cairn Lake. It is rumored that both the kobolds and gnolls are somehow associated with the Defias Brotherhood. Murlocs have taken up residence in and around Stone Cairn Lake and Crystal Lake. Defias presence in the region has been growing and their people have holdings at Mirror Lake Orchard, Northshire Vineyards, the Brackwell Pumpkin Patch, Jerod's Landing and Stone Cairn Lake.",
+		["lore"] = "Elwynn Forest is the starting zone for Human characters. It is a lush valley with farmers and loggers, with Stormwind City at its center. The mines are infested by kobolds and the farmlands have been taken over by the Defias.",
+		-- #if AFTER WRATH
+		["icon"] = "Interface\\Icons\\achievement_zone_elwynnforest",
+		-- #endif
+		-- #if AFTER CATA
+		["maps"] = {
+			38,	-- Fargodeep Mine Lv1
+			39,	-- Fargodeep Mine Lv2
+			40,	-- Jasperlode Mine
+		},
+		-- #endif
 		["groups"] = {
+			m(NORTHSHIRE_VALLEY, {
+				["lore"] = "Northshire was the pride of Stormwind's vineyards until recently when Defias bandits drove off the farmers and occupied the farm and fields. This is where the human starting area is located, though the serene valley is visited by adventurers from all over the world.",
+				-- #if AFTER WRATH
+				["icon"] = "Interface\\Icons\\Achievement_Character_Human_Female",
+				-- #endif
+				["groups"] = {
+					n(QUESTS, {
+						q(783, {	-- A Threat Within
+							["qg"] = 823,	-- Deputy Willem
+							["coord"] = { 48.1, 42.9, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+						}),
+						q(6, {	-- Bounty on Garrick Padfoot
+							["qg"] = 823,	-- Deputy Willem
+							["sourceQuest"] = 18,	-- Brotherhood of Thieves
+							["coord"] = { 48.1, 42.9, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["lvl"] = 2,
+							["groups"] = {
+								objective(1, {	-- 0/1 Garrick's Head
+									["provider"] = { "i", 182 },	-- Garrick's Head
+									["coord"] = { 57.4, 48.6, ELWYNN_FOREST },
+									["cr"] = 103,	-- Garrick Padfoot
+								}),
+								i(6076),	-- Tapered Pants
+								i(60),	-- Layered Tunic
+								i(3070),	-- Ensign Cloak
+							},
+						}),
+						q(18, {	-- Brotherhood of Thieves
+							["qg"] = 823,	-- Deputy Willem
+							["coord"] = { 48.2, 42.8, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["lvl"] = 2,
+							["groups"] = {
+								objective(1, {	-- 0/12 Red Burlap Bandana
+									["provider"] = { "i", 752 },	-- Red Burlap Bandana
+									["cr"] = 38,	-- Defias Thug
+								}),
+								i(2224),	-- Militia Dagger
+								i(5580),	-- Militia Hammer
+								i(1161),	-- Militia Shortsword
+								i(5579),	-- Militia Warhammer
+								i(1159),	-- Militia Quarterstaff
+							},
+						}),
+						q(3101, {	-- Consecrated Letter
+							["providers"] = {
+								{ "n", 197 },	-- Marshal McBride
+								{ "i", 9570 },	-- Consecrated Letter
+							},
+							["sourceQuest"] = 7,	-- Kobold Camp Cleanup
+							["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
+							["classes"] = { PALADIN },
+							["races"] = { HUMAN },
+						}),
+						q(5261, {	-- Eagan Peltskinner
+							["qg"] = 823,	-- Deputy Willem
+							["sourceQuest"] = 783,	-- A Threat Within
+							["coord"] = { 48.17, 42.94, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["isBreadcrumb"] = true,
+						}),
+						q(3102, {	-- Encrypted Letter
+							["providers"] = {
+								{ "n", 197 },	-- Marshal McBride
+								{ "i", 9555 },	-- Encrypted Letter
+							},
+							["sourceQuest"] = 7,	-- Kobold Camp Cleanup
+							["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
+							["races"] = { HUMAN },
+							["classes"] = { ROGUE },
+						}),
+						q(3104, {	-- Glyphic Letter
+							["providers"] = {
+								{ "n", 197 },	-- Marshal McBride
+								{ "i", 9571 },	-- Glyphic Letter
+							},
+							["sourceQuest"] = 7,	-- Kobold Camp Cleanup
+							["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
+							["races"] = { HUMAN },
+							["classes"] = { MAGE },
+						}),
+						q(3905, {	-- Grape Manifest
+							["providers"] = {
+								{ "n", 9296 },	-- Milly Osworth
+								{ "i", 11125 },	-- Grape Manifest
+							},
+							["sourceQuest"] = 3904,	-- Milly's Harvest
+							["coord"] = { 50.7, 39.3, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["lvl"] = 2,
+							["groups"] = {
+								i(11475),	-- Wine-stained Cloak
+								i(2690),	-- Latched Belt
+							},
+						}),
+						q(3103, {	-- Hallowed Letter
+							["providers"] = {
+								{ "n", 197 },	-- Marshal McBride
+								{ "i", 9548 },	-- Hallowed Letter
+							},
+							["sourceQuest"] = 7,	-- Kobold Camp Cleanup
+							["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
+							["races"] = { HUMAN },
+							["classes"] = { PRIEST },
+						}),
+						q(7, {	-- Kobold Camp Cleanup
+							["qg"] = 197,	-- Marshal McBride
+							["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["groups"] = {
+								objective(1, {	-- 0/10 Kobold Vermin
+									["provider"] = { "n", 6 },	-- Kobold Vermin
+								}),
+							},
+						}),
+						q(5623, {	-- In Favor of the Light
+							["qg"] = 375,	-- Priestess Anetta <Priest Trainer>
+							["coord"] = { 49.8, 39.6, ELWYNN_FOREST },
+							["races"] = { HUMAN },
+							["classes"] = { PRIEST },
+							["lvl"] = 5,
+						}),
+						q(345, {	-- Ink Supplies
+							["qg"] = 951,	-- Brother Paxton
+							["sourceQuest"] = 344,	-- Brother Paxton (quest in Stormwind)
+							["coord"] = { 49.6, 40.4, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["lvl"] = 20,
+						}),
+						q(15, {	-- Investigate Echo Ridge
+							["qg"] = 197,	-- Marshal McBride
+							["sourceQuest"] = 7,	-- Kobold Camp Cleanup
+							["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+						}),
+						q(3903, {	-- Milly Osworth
+							["qg"] = 823,	-- Deputy Willem
+							["sourceQuest"] = 18,	-- Brotherhood of Thieves
+							["coord"] = { 48.2, 42.8, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["lvl"] = 2,
+						}),
+						q(3904, {	-- Milly's Harvest
+							["qg"] = 9296,	-- Milly Osworth
+							["sourceQuest"] = 3903,	-- Milly Osworth
+							["coord"] = { 50.7, 39.3, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["lvl"] = 2,
+							["groups"] = {
+								objective(1, {	-- 0/8 Milly's Harvest
+									["provider"] = { "i", 11119 },	-- Milly's Harvest
+								}),
+							},
+						}),
+						q(54, {	-- Report to Goldshire
+							["providers"] = {
+								{ "n", 197 },	-- Marshal McBride
+								{ "i", 745 },	-- Marshal McBride's Documents
+							},
+							["sourceQuest"] = 21,	-- Skirmish at Echo Ridge
+							["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["groups"] = {
+								i(6078),	-- Pikeman Shield
+							},
+						}),
+						q(346, {	-- Return to Kristoff
+							["providers"] = {
+								{ "n", 951 },	-- Brother Paxton
+								{ "i", 2795 },	-- Book: Stresses of Iron
+							},
+							["sourceQuest"] = 347,	-- Rethban Ore (quest in Redridge Mountains)
+							["coord"] = { 49.6, 40.4, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["lvl"] = 20,
+							["groups"] = {
+								i(6095),
+							},
+						}),
+						q(3100, {	-- Simple Letter
+							["providers"] = {
+								{ "n", 197 },	-- Marshal McBride
+								{ "i", 9542 },	-- Simple Letter
+							},
+							["sourceQuest"] = 7,	-- Kobold Camp Cleanup
+							["coord"] = { 48.8, 41.6, ELWYNN_FOREST },
+							["races"] = { HUMAN },
+							["classes"] = { WARRIOR },
+						}),
+						q(21, {	-- Skirmish at Echo Ridge
+							["qg"] = 197,	-- Marshal McBride
+							["sourceQuest"] = 15,	-- Investigate Echo Ridge
+							["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
+							["races"] = ALLIANCE_ONLY,
+							["groups"] = {
+								objective(1, {	-- 0/12 Kobold Laborer
+									["provider"] = { "n", 80 },	-- Kobold Laborer
+								}),
+								i(2186),	-- Outfitter Belt
+								i(2691),	-- Outfitter Boots
+								i(11192),	-- Outfitter Gloves
+							},
+						}),
+					}),
+					n(RARES, {
+						n(62, {	-- Gug Fatcandle
+							["coord"] = { 31.6, 16.7, NORTHSHIRE_VALLEY },
+							["timeline"] = { "added 4.0.3" },
+							["groups"] = {
+								i(56147, {	-- Fatcandle Bag
+									["timeline"] = { "added 4.0.3" },
+								}),
+							},
+						}),
+					}),
+				},
+			}),
 			n(ACHIEVEMENTS, {
 				removeclassicphase(ach(776, {	-- Explore Elwynn Forest
 					-- #if BEFORE WRATH
@@ -14,6 +243,34 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					-- #endif
 				})),
 			}),
+			-- #if AFTER MOP
+			petbattle(filter(BATTLE_PETS, {
+				p(374, {	-- Black Lamb
+					["crs"] = { 60649 },	-- Black Lamb
+				}),
+				p(459, {	-- Cat
+					["crs"] = { 62019 },	-- Cat
+				}),
+				p(646, {	-- Chicken
+					["crs"] = { 62664 },	-- Chicken
+				}),
+				p(447, {	-- Fawn
+					["crs"] = { 61165 },	-- Fawn
+				}),
+				p(378, {	-- Rabbit
+					["crs"] = { 61080 },	-- Rabbit
+				}),
+				p(419, {	-- Small Frog
+					["crs"] = { 61071 },	-- Small Frog
+				}),
+				p(379, {	-- Squirrel
+					["crs"] = { 61081 },	-- Squirrel
+				}),
+				p(675, {	-- Stormwind Rat
+					["crs"] = { 62954 },	-- Stormwind Rat
+				}),
+			})),
+			-- #endif
 			-- #if ANYCLASSIC
 			n(EXPLORATION, explorationBatch({
 				["225:220:422:332"] = 18,	-- Crystal Lake
@@ -46,89 +303,74 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				]]--
 			})),
 			-- #endif
+			-- #if AFTER 4.0.1.12984
+			n(FLIGHT_PATHS, {
+				fp(589, {	-- Eastvale Logging Camp, Elwynn
+					["coord"] = { 81.8, 66.4, ELWYNN_FOREST },
+					["timeline"] = { "added 4.0.1.12984" },
+					["cr"] = 43000,	-- Goss the Swift <Gryphon Master>
+				}),
+				fp(582, {	-- Goldshire, Elwynn
+					["coord"] = { 41.8, 64.6, ELWYNN_FOREST },
+					["timeline"] = { "added 4.0.1.12984" },
+					["cr"] = 42983,	-- Bartlett the Brave <Gryphon Master>
+				}),
+			}),
+			-- #endif
 			n(QUESTS, {
 				q(5545, {	-- A Bundle of Trouble
 					["qg"] = 10616,	-- Supervisor Raelen
 					["coord"] = { 81.4, 66.2, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 13872, 8 },	-- Bundle of Wood
-					},
 					["lvl"] = 5,
+					["groups"] = {
+						objective(1, {	-- 0/8 Bundle of Wood
+							["provider"] = { "i", 13872 },	-- Bundle of Wood
+						}),
+					},
 				}),
 				q(40, {	-- A Fishy Peril
-					["lvl"] = 7,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 241,	-- Remy "Two Times"
-				}),
-				q(783, {	-- A Threat Within
+					["coord"] = { 42.2, 67.2, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["qg"] = 823,	-- Deputy Willem
-					["coord"] = { 48.1, 42.9, ELWYNN_FOREST },
+					["lvl"] = 7,
 				}),
 				q(84, {	-- Back to Billy
-					["qg"] = 246,	-- "Auntie" Bernice Stonefield
+					["providers"] = {
+						{ "n", 246 },	-- "Auntie" Bernice Stonefield
+						{ "i", 962 },	-- Pork Belly Pie
+					},
 					["sourceQuest"] = 86,	-- Pie for Billy
+					["coord"] = { 34.4, 84.2, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 962, 1 },	-- Pork Belly Pie
-					},
 					["lvl"] = 5,
-				}),
-				q(6, {	-- Bounty on Garrick Padfoot
-					["qg"] = 823,	-- Deputy Willem
-					["sourceQuest"] = 18,	-- Brotherhood of Thieves
-					["coord"] = { 48.1, 42.9, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 182, 1 },	-- Garrick's Head
-					},
-					["lvl"] = 2,
-					["groups"] = {
-						{
-							["itemID"] = 182,	-- Garrick's Head
-							["questID"] = 6,	-- Bounty on Garrick Padfoot
-							["cr"] = 103,	-- Garrick Padfoot
-							["coord"] = { 57.4, 48.6, ELWYNN_FOREST },
-						},
-						i(6076),	-- Tapered Pants
-						i(60),	-- Layered Tunic
-						i(3070),	-- Ensign Cloak
-					},
 				}),
 				q(46, {	-- Bounty on Murlocs
 					["qg"] = 261,	-- Guard Thomas
+					["coord"] = { 74, 72.2, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 7,
 					["groups"] = {
+						objective(1, {	-- 0/8 Torn Murloc Fin
+							["provider"] = { "i", 780 },	-- Torn Murloc Fin
+							["crs"] = {
+								46,		-- Murloc Forager
+								732,	-- Murloc Lurker
+							},
+						}),
 						i(4840),	-- Long Bayonet
 						i(1158),	-- Solid Metal Club
 						i(1008),	-- Well-used Sword
 					},
 				}),
-				q(18, {	-- Brotherhood of Thieves
-					["qg"] = 823,	-- Deputy Willem
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 752, 12 },	-- Red Burlap Bandana
-					},
-					["lvl"] = 2,
-					["groups"] = {
-						i(2224),	-- Militia Dagger
-						i(5580),	-- Militia Hammer
-						i(1161),	-- Militia Shortsword
-						i(5579),	-- Militia Warhammer
-						i(1159),	-- Militia Quarterstaff
-					},
-				}),
 				q(59, {	-- Cloth and Leather Armor
-					["qg"] = 240,	-- Marshal Dughan
+					["providers"] = {
+						{ "n", 240 },	-- Marshal Dughan
+						{ "i", 748 },	-- Stormwind Armor Marker
+					},
 					["sourceQuest"] = 83,	-- Red Linen Goods
 					["coord"] = { 42.2, 65.8, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 748, 1 },	-- Stormwind Armor Marker
-					},
 					["lvl"] = 7,
 					["groups"] = {
 						i(1171),	-- Well-stitched Robe
@@ -140,31 +382,31 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["sourceQuest"] = 107,	-- Note to William
 					["coord"] = { 43.2, 65.8, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1256, 4 },	-- Crystal Kelp Frond
-					},
 					["lvl"] = 5,
-				}),
-				q(3101, {	-- Consecrated Letter
-					["qg"] = 197,	-- Marshal McBride
-					["sourceQuest"] = 7,	-- Kobold Camp Cleanup
-					["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
-					["classes"] = { PALADIN },
-					["races"] = { HUMAN },
+					["groups"] = {
+						objective(1, {	-- 0/4 Crystal Kelp Frond
+							["provider"] = { "i", 1256 },	-- Crystal Kelp Frond
+							["crs"] = {
+								285,	-- Murloc
+								735,	-- Murloc Streamrunner
+							},
+						}),
+					},
 				}),
 				q(1667, {	-- Dead-tooth Jack
 					["qg"] = 294,	-- Marshal Haggard
 					["sourceQuest"] = 1666,	-- Marshal Haggard
+					["coord"] = { 84.6, 69.4, ELWYNN_FOREST },
 					["classes"] = { WARRIOR },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 10,
 					["groups"] = {
-						{
-							["itemID"] = 6783,	-- Dead-tooth's Key
-							["questID"] = 1667,	-- Dead-tooth Jack
-							["cr"] = 6093,	-- Dead-Tooth Jack
+						objective(1, {	-- 0/1 Marshal Haggard's Badge
+							["provider"] = { "i", 6782 },	-- Marshal Haggard's Badge
+							["cost"] = { { "i", 6783, 1 } },	-- Dead-tooth's Key
 							["coord"] = { 89.2, 80.6, ELWYNN_FOREST },
-						},
+							["cr"] = 6093,	-- Dead-Tooth Jack
+						}),
 						i(6979),	-- Haggard's Axe
 						i(6980),	-- Haggard's Dagger
 						i(6983),	-- Haggard's Hammer
@@ -174,21 +416,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(39, {	-- Deliver Thomas' Report
 					["qg"] = 261,	-- Guard Thomas
 					["sourceQuest"] = 71,	-- Report to Thomas
+					["coord"] = { 74, 72.2, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 7,
 				}),
 				q(45, {	-- Discover Rolf's Fate
 					["provider"] = { "o", 55 },	-- A half-eaten body
 					["sourceQuest"] = 37,	-- Find the Lost Guards
+					["coord"] = { 72.7, 60.3, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 7,
-				}),
-				q(5261, {	-- Eagan Peltskinner
-					["qg"] = 823,	-- Deputy Willem
-					["sourceQuest"] = 783,	-- A Threat Within
-					["coord"] = { 48.17, 42.94, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["isBreadcrumb"] = true,
 				}),
 				q(1097, {	-- Elmore's Task
 					["qgs"] = {
@@ -203,16 +440,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 9,
 				}),
-				q(3102, {	-- Encrypted Letter
-					["qg"] = 197,	-- Marshal McBride
-					["sourceQuest"] = 7,	-- Kobold Camp Cleanup
-					["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
-					["races"] = { HUMAN },
-					["classes"] = { ROGUE },
-				}),
 				q(37, {	-- Find the Lost Guards
 					["qg"] = 261,	-- Guard Thomas
 					["sourceQuest"] = 35,	-- Further Concerns
+					["coord"] = { 74, 72.2, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 7,
 				}),
@@ -226,9 +457,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(1685, {	-- Gakin's Summons
 					["qg"] = 6121,	-- Remen Marcot
 					["coord"] = { 44.4, 66.2, ELWYNN_FOREST },
-					["altQuests"] = {
-						1715, -- The Slaughtered Lamb
-					},
+					["altQuests"] = { 1715 }, -- The Slaughtered Lamb
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { WARLOCK },
 					["isBreadcrumb"] = true,
@@ -247,155 +476,95 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				q(16, {	-- Give Gerard a Drink
 					["qg"] = 255,	-- Gerard Tiller
+					["coord"] = { 43.0, 85.6, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
 					["groups"] = {
 						i(4536),	-- Shiny Red Apple
 					},
 				}),
-				q(3104, {	-- Glyphic Letter
-					["qg"] = 197,	-- Marshal McBride
-					["sourceQuest"] = 7,	-- Kobold Camp Cleanup
-					["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
-					["races"] = { HUMAN },
-					["classes"] = { MAGE },
-				}),
 				q(47, {	-- Gold Dust Exchange
 					["qg"] = 241,	-- Remy "Two Times"
 					["sourceQuest"] = 54,	-- Report to Goldshire
 					["coord"] = { 41.7, 65.5, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 773, 8 },	-- Gold Dust
-					},
 					["lvl"] = 4,
 					["groups"] = {
+						objective(1, {	-- 0/10 Gold Dust
+							["provider"] = { "i", 773 },	-- Gold Dust
+							["crs"] = {
+								327,	-- Goldtooth
+								476,	-- Kobold Geomancer
+								40,		-- Kobold Miner
+								475,	-- Kobold Tunneler
+							},
+						}),
 						i(1191),	-- Bag of Marbles
 					},
 				}),
 				q(87, {	-- Goldtooth
 					["qg"] = 247,	-- Billy Maclure
+					["coord"] = { 43, 85.8, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 981, 1 },	-- Bernice's Necklace
-					},
 					["lvl"] = 5,
 					["groups"] = {
-						{
-							["itemID"] = 981,	-- Bernice's Necklace
-							["cr"] = 327,	-- Goldtooth
+						objective(1, {	-- 0/1 Bernice's Necklace
+							["provider"] = { "i", 981 },	-- Bernice's Necklace
 							["coord"] = { 41.6, 78.8, ELWYNN_FOREST },
-						},
+							["cr"] = 327,	-- Goldtooth
+						}),
 						i(1359),	-- Lion-stamped Gloves
 					},
-				}),
-				q(3905, {	-- Grape Manifest
-					["qg"] = 9296,	-- Milly Osworth
-					["sourceQuest"] = 3904,	-- Milly's Harvest
-					["coord"] = { 50.7, 39.3, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 11125, 1 },	-- Grape Manifest
-					},
-					["lvl"] = 2,
-					["groups"] = {
-						i(11475),	-- Wine-stained Cloak
-						i(2690),	-- Latched Belt
-					},
-				}),
-				q(3103, {	-- Hallowed Letter
-					["races"] = { HUMAN },
-					["qg"] = 197,	-- Marshal McBride
-					["classes"] = { PRIEST },
-					["sourceQuest"] = 7,	-- Kobold Camp Cleanup
-					["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
-				}),
-				q(5623, {	-- In Favor of the Light
-					["qg"] = 375,	-- Priestess Anetta <Priest Trainer>
-					["coord"] = { 49.8, 39.6, ELWYNN_FOREST },
-					["races"] = { HUMAN },
-					["classes"] = { PRIEST },
-					["lvl"] = 5,
-				}),
-				q(345, {	-- Ink Supplies
-					["lvl"] = 20,
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 951,	-- Brother Paxton
-					["sourceQuest"] = 344,	-- Brother Paxton (quest in Stormwind)
-					["coord"] = { 49.6, 40.4, ELWYNN_FOREST },
-				}),
-				q(15, {	-- Investigate Echo Ridge
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 197,	-- Marshal McBride
-					["sourceQuest"] = 7,	-- Kobold Camp Cleanup
-					["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
-				}),
-				q(7, {	-- Kobold Camp Cleanup
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 197,	-- Marshal McBride
-					["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
 				}),
 				q(60, {	-- Kobold Candles
 					["qg"] = 253,	-- William Pestle
 					["sourceQuest"] = 54,	-- Report to Goldshire
+					["coord"] = { 43.2, 65.8, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 772, 8 },	-- Large Candle
-					},
 					["lvl"] = 3,
 					["groups"] = {
+						objective(1, {	-- 0/8 Large Candle
+							["provider"] = { "i", 772 },	-- Large Candle
+							["crs"] = {
+								327,	-- Goldtooth
+								476,	-- Kobold Geomancer
+								40,		-- Kobold Miner
+								475,	-- Kobold Tunneler
+							},
+						}),
 						i(1434),	-- Glowing Wax Stick
 					},
 				}),
 				q(85, {	-- Lost Necklace
 					["qg"] = 246,	-- "Auntie" Bernice Stonefield
+					["coord"] = { 34.4, 84.2, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 5,
 				}),
 				q(147, {	-- Manhunt
-					["lvl"] = 7,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 240,	-- Marshal Dughan
 					["sourceQuest"] = 123,	-- The Collector
 					["coord"] = { 42.1, 65.9, ELWYNN_FOREST },
-					["cost"] = {
-						{ "i", 2239, 1 },	-- The Collector's Ring
-					},
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 7,
 					["groups"] = {
-						{
-							["itemID"] = 2239,	-- The Collector's Ring
-							["questID"] = 147,	-- Manhunt
-							["cr"] = 473,	-- Morgan the Collector
+						objective(1, {	-- 0/1 The Collector's Ring
+							["provider"] = { "i", 2239 },	-- The Collector's Ring
 							["coord"] = { 71.0, 80.6, ELWYNN_FOREST },
-						},
+							["cr"] = 473,	-- Morgan the Collector
+						}),
 						i(1360),	-- Stormwind Chain Gloves
 						i(1183),	-- Elastic Wristguards
 					},
 				}),
-				q(3903, {	-- Milly Osworth
-					["lvl"] = 2,
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 823,	-- Deputy Willem
-					["sourceQuest"] = 18,	-- Brotherhood of Thieves
-				}),
-				q(3904, {	-- Milly's Harvest
-					["qg"] = 9296,	-- Milly Osworth
-					["sourceQuest"] = 3903,	-- Milly Osworth
-					["coord"] = { 50.7, 39.3, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 11119, 8 },	-- Milly's Harvest
-					},
-					["lvl"] = 2,
-				}),
 				q(107, {	-- Note to William
-					["qg"] = 248,	-- Gramma Stonefield
+					["providers"] = {
+						{ "n", 248 },	-- Gramma Stonefield
+						{ "i", 1252 },	-- Gramma Stonefield's Note
+					},
 					["sourceQuest"] = 111,	-- Speak with Gramma
 					["coord"] = { 34.8, 83.8, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1252, 1 },	-- Gramma Stonefield's Note
-					},
 					["lvl"] = 5,
 				}),
 				q(7678, {	-- Palomino Exchange
@@ -412,114 +581,94 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(86, {	-- Pie for Billy
 					["qg"] = 247,	-- Billy Maclure
 					["sourceQuest"] = 85,	-- Lost Necklace
+					["coord"] = { 43, 85.8, ELWYNN_FOREST },
+					["cost"] = { { "i", 769, 4 } },	-- Chunk of Boar Meat
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 769, 4 },	-- Chunk of Boar Meat
-					},
 					["lvl"] = 5,
 				}),
 				q(88, {	-- Princess Must Die!
 					["qg"] = 244,	-- Ma Stonefield
+					["coord"] = { 34.6, 84.4, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1006, 1 },	-- Brass Collar
-					},
 					["lvl"] = 6,
 					["groups"] = {
-						{
-							["itemID"] = 1006,	-- Brass Collar
-							["questID"] = 88,	-- Princess Must Die!
-							["cr"] = 330,	-- Princess
+						objective(1, {	-- 0/1 Brass Collar
+							["provider"] = { "i", 1006 },	-- Brass Collar
 							["coord"] = { 69.8, 79.4, ELWYNN_FOREST },
-						},
+							["cr"] = 330,	-- Princess
+						}),
 						i(1173),	-- Weather-worn Boots
 						i(1182),	-- Brass-studded Bracers
 						i(11191),	-- Farmer's Boots
 					},
 				}),
 				q(52, {	-- Protect the Frontier
-					["lvl"] = 7,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 261,	-- Guard Thomas
+					["coord"] = { 74, 72.2, ELWYNN_FOREST },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 7,
 					["groups"] = {
-						i(858),	-- Lesser Healing Potion
+						objective(1, {	-- 0/8 Prowler
+							["provider"] = { "n", 118 },	-- Prowler
+						}),
+						objective(2, {	-- 0/5 Young Forest Bear
+							["provider"] = { "n", 822 },	-- Young Forest Bear
+						}),
 					},
 				}),
 				q(83, {	-- Red Linen Goods
 					["qg"] = 278,	-- Sara Timberlain
 					["coord"] = { 79.5, 68.7, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1019, 8 },	-- Red Linen Bandana
-					},
 					["lvl"] = 4,
 					["groups"] = {
+						objective(1, {	-- 0/6 Red Linen Bandana
+							["provider"] = { "i", 1019 },	-- Red Linen Bandana
+							["crs"] = {
+								583,	-- Defias Ambusher
+								116,	-- Defias Bandit
+								6866,	-- Defias Bodyguard
+								6846,	-- Defias Dockmaster
+								6927,	-- Defias Dockworker
+								474,	-- Defias Rogue Wizard
+								880,	-- Erlan Drudgemoor
+								473,	-- Morgan the Collector
+								881,	-- Surena Caledon
+							},
+						}),
 						i(2575),	-- Red Linen Shirt
 						i(983),		-- Red Linen Sash
 					},
 				}),
-				q(54, {	-- Report to Goldshire
-					["qg"] = 197,	-- Marshal McBride
-					["sourceQuest"] = 21,	-- Skirmish at Echo Ridge
-					["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 745, 1 },	-- Marshal McBride's Documents
-					},
-					["groups"] = {
-						i(6078),	-- Pikeman Shield
-					},
-				}),
-				q(109, {	-- Report to Gryan Stoutmantle
-					["qgs"] = {
-						237,	-- Farmer Furlbrow
-						240,	-- Marshal Dughan
-						261,	-- Guard Thomas
-						963,	-- Deputy Rainer
-					},
-					["maps"] = { WESTFALL },
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = 9,
-				}),
 				q(71, {	-- Report to Thomas
-					["provider"] = { "o", 56 },	-- Rolf's corpse
-					["sourceQuest"] = 45,	-- Discover Rolf's Fate
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 735, 1 },	-- Rolf and Malakai's Medallions
+					["providers"] = {
+						{ "o", 56 },	-- Rolf's corpse
+						{ "i", 735 },	-- Rolf and Malakai's Medallions
 					},
+					["sourceQuest"] = 45,	-- Discover Rolf's Fate
+					["coord"] = { 79.8, 55.6, ELWYNN_FOREST },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 7,
 				}),
 				q(2158, {	-- Rest and Relaxation
 					["qg"] = 6774,	-- Falkhaan Isenstrider
+					["coord"] = { 45.6, 47.8, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["groups"] = {
-						i(4656),	-- Small Pumpkin
-						i(159),	-- Refreshing Spring Water
-					},
-				}),
-				q(346, {	-- Return to Kristoff
-					["qg"] = 951,	-- Brother Paxton
-					["sourceQuest"] = 347,	-- Rethban Ore (quest in Redridge Mountains)
-					["coord"] = { 49.6, 40.4, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2795, 1 },	-- Book: Stresses of Iron
-					},
-					["lvl"] = 20,
-					["groups"] = {
-						i(6095),
-					},
 				}),
 				q(11, {	-- Riverpaw Gnoll Bounty
 					["qg"] = 963,	-- Deputy Rainer
 					["sourceQuest"] = 239,	-- Westbrook Garrison Needs Help!
+					["coord"] = { 24.2, 74.6, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 782, 8 },	-- Painted Gnoll Armband
-					},
 					["lvl"] = 6,
 					["groups"] = {
+						objective(1, {	-- 0/8 Painted Gnoll Armband
+							["provider"] = { "i", 782 },	-- Painted Gnoll Armband
+							["crs"] = {
+								478,	-- Riverpaw Outrunner
+								97,		-- Riverpaw Runt
+							},
+						}),
 						i(2249),	-- Militia Buckler
 						i(2238),	-- Urchin's Pants
 					},
@@ -537,12 +686,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 10,
 				}),
 				q(61, {	-- Shipment to Stormwind
-					["qg"] = 253,	-- William Pestle
-					["sourceQuest"] = 47,	-- Gold Dust Exchange
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 957, 1 },	-- William's Shipment
+					["providers"] = {
+						{ "n", 253 },	-- William Pestle
+						{ "i", 957 },	-- William's Shipment
 					},
+					["sourceQuest"] = 47,	-- Gold Dust Exchange
+					["coord"] = { 43.2, 65.8, ELWYNN_FOREST },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 3,
 					["groups"] = {
 						i(1178),	-- Explosive Rocket
@@ -553,27 +703,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(2300, {	-- SI:7
 					["qg"] = 917,	-- Keryn Sylvius
 					["sourceQuest"] = 2205,	-- Seek out SI:7
+					["coord"] = { 43.8, 65.8, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { ROGUE },
 					["isBreadcrumb"] = true,
 					["lvl"] = 16,
-				}),
-				q(3100, {	-- Simple Letter
-					["qg"] = 197,	-- Marshal McBride
-					["sourceQuest"] = 7,	-- Kobold Camp Cleanup
-					["races"] = { HUMAN },
-					["classes"] = { WARRIOR },
-				}),
-				q(21, {	-- Skirmish at Echo Ridge
-					["qg"] = 197,	-- Marshal McBride
-					["sourceQuest"] = 15,	-- Investigate Echo Ridge
-					["coord"] = { 48.9, 41.6, ELWYNN_FOREST },
-					["races"] = ALLIANCE_ONLY,
-					["groups"] = {
-						i(2186),	-- Outfitter Belt
-						i(2691),	-- Outfitter Boots
-						i(11192),	-- Outfitter Gloves
-					},
 				}),
 				q(111, {	-- Speak with Gramma
 					["qg"] = 252,	-- Tommy Joe Stonefield
@@ -593,26 +727,22 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 10,
 				}),
 				q(123, {	-- The Collector
-					["provider"] = { "i", 1307 },	-- Gold Pickup Schedule
-					["crs"] = { 100 },	-- Gruff Swiftbite
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2223, 1 },	-- The Collector's Schedule
+					["providers"] = {
+						{ "i", 1307 },	-- Gold Pickup Schedule
+						{ "i", 2223 },	-- The Collector's Schedule
 					},
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 7,
 				}),
 				q(114, {	-- The Escape
-					["qg"] = 253,	-- William Pestle
+					["providers"] = {
+						{ "n", 253 },	-- William Pestle
+						{ "i", 1257 },	-- Invisibility Liquor
+					},
 					["sourceQuest"] = 112,	-- Collecting Kelp
 					["coord"] = { 43.2, 65.8, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 1257, 1 },	-- Invisibility Liquor
-					},
 					["lvl"] = 5,
-					["groups"] = {
-						i(118),	-- Minor Healing Potion
-					},
 				}),
 				q(62, {	-- The Fargodeep Mine
 					["qg"] = 240,	-- Marshal Dughan
@@ -628,27 +758,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 4,
 				}),
-				q(2998, {	-- The Tome of Divinity
-					["qg"] = 927,	-- Brother Wilhelm
-					["altQuests"] = {
-						3681,	-- The Tome of Divinity
-						1787,	-- The Tome of Divinity (8)
-					},
-					["races"] = { HUMAN },
-					["classes"] = { PALADIN },
-					["lvl"] = 12,
-				}),
-				q(1787, {	-- The Tome of Divinity (8)
-					["qg"] = 6172,	-- Henze Faulk
-					["sourceQuest"] = 1786,	-- The Tome of Divinity (7)
-					["cr"] = 474,	-- Defias Rogue Wizard
-					["races"] = { HUMAN },
-					["classes"] = { PALADIN },
-					["cost"] = {
-						{ "i", 6846, 1 },	-- Defias Script
-					},
-					["lvl"] = 12,
-				}),
+				
+				
 				q(1598, {	-- The Stolen Tome
 					["qg"] = 459,	-- Drusilla La Salle
 					["coord"] = { 49.9, 42.6, ELWYNN_FOREST },
@@ -739,51 +850,157 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(RARES, {
+				n(51077, {	-- Bushtail
+					["coords"] = {
+						{ 83.8, 85.0, ELWYNN_FOREST },
+						{ 83.0, 82.8, ELWYNN_FOREST },
+						{ 81.6, 85.2, ELWYNN_FOREST },
+					},
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
 				n(472, {	-- Fedfennel
+					-- #if AFTER CATA
+					["coords"] = {
+						{ 66.4, 40.4, ELWYNN_FOREST },
+						{ 66.8, 41.6, ELWYNN_FOREST },
+						{ 67.0, 39.2, ELWYNN_FOREST },
+						{ 67.8, 39.4, ELWYNN_FOREST },
+						{ 67.8, 47.0, ELWYNN_FOREST },
+						{ 68.0, 44.4, ELWYNN_FOREST },
+						{ 69.2, 38.6, ELWYNN_FOREST },
+						{ 70.2, 40.0, ELWYNN_FOREST },
+					},
+					-- #else
 					["coord"] = { 68.0, 40.6, ELWYNN_FOREST },
+					-- #endif
 					["groups"] = {
 						i(3233),	-- Gnoll Hide Sack
 						i(5744),	-- Pale Skinner
 					},
 				}),
+				n(50926, {	-- Grizzled Ben
+					["coord"] = { 27.2, 67.5, ELWYNN_FOREST },
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
 				n(100, {	-- Gruff Swiftbite
+					-- #if AFTER CATA
+					["coord"] = { 25.9, 92.0, ELWYNN_FOREST },
+					-- #else
 					["coord"] = { 27.6, 88.4, ELWYNN_FOREST },
+					-- #endif
+					["groups"] = {
+						i(38513, {	-- Boarhide Leggings
+							["timeline"] = { "added 3.0.1.8634" },
+						}),
+					},
+				}),
+				n(50916, {	-- Lamepaw the Whimperer
+					["coord"] = { 51.3, 64.6, ELWYNN_FOREST },
+					["timeline"] = { "added 5.1.0.16309" },
 				}),
 				n(99, {	-- Morgaine the Sly
+					-- #if AFTER CATA
+					["coord"] = { 30.8, 64.6, ELWYNN_FOREST },
+					-- #else
 					["coord"] = { 31.8, 65.6, ELWYNN_FOREST },
+					-- #endif
 					["groups"] = {
-						i(1917),	-- Jeweled Dagger
-						i(6201),	-- Lithe Boots
-						i(2091),	-- Magic Dust
+						i(1917, {	-- Jeweled Dagger
+							["timeline"] = { "removed 4.0.1", "added 8.0.1" },
+						}),
+						i(6201, {	-- Lithe Boots
+							["timeline"] = { "removed 4.0.1", "added 8.0.1" },
+						}),
+						i(2091, {	-- Magic Dust
+							["timeline"] = { "removed 4.0.1" },
+						}),
 					},
 				}),
 				n(471, {	-- Mother Fang
+					-- #if AFTER CATA
+					["coord"] = { 54.3, 31.1, 40 },
+					-- #else
 					["coord"] = { 61.8, 47.8, ELWYNN_FOREST },
+					-- #endif
 					["groups"] = {
-						i(3000),	-- Brood Mother Carapace
-						i(6148),	-- Web-covered Boots
+						i(3000, {	-- Brood Mother Carapace
+							["timeline"] = { "removed 4.0.1", "added 8.0.1" },
+						}),
+						i(6148, {	-- Web-covered Boots
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				n(79, {	-- Narg the Taskmaster
+					-- #if AFTER CATA
+					["coord"] = { 38.1, 83.3, ELWYNN_FOREST },
+					-- #else
 					["coord"] = { 41.2, 78.8, ELWYNN_FOREST },
+					-- #endif
 					["groups"] = {
 						i(6147),	-- Ratty Old Belt
 						i(1913),	-- Studded Blackjack
 					},
 				}),
+				n(50942, {	-- Snoot the Rooter
+					["coord"] = { 69.7, 80.0, ELWYNN_FOREST },
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
+				n(50752, {	-- Tarantis
+					["coords"] = {
+						{ 65.8, 65.0, ELWYNN_FOREST },
+						{ 67.6, 63.2, ELWYNN_FOREST },
+					},
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
+				n(51014, {	-- Terrapis
+					["coords"] = {
+						{ 73.5, 86.0, ELWYNN_FOREST },
+						{ 70.2, 85.4, ELWYNN_FOREST },
+						{ 67.4, 84.4, ELWYNN_FOREST },
+						{ 62.6, 82.4, ELWYNN_FOREST },
+						{ 59.6, 83.0, ELWYNN_FOREST },
+						{ 56.2, 85.4, ELWYNN_FOREST },
+						{ 53.8, 87.8, ELWYNN_FOREST },
+						{ 50.6, 87.2, ELWYNN_FOREST },
+					},
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
 				n(61, {	-- Thuros Lightfingers
+					-- #if AFTER CATA
+					["coord"] = { 50.6, 83.0, ELWYNN_FOREST },
+					-- #else
 					["coords"] = {
 						{ 30.0, 59.6, ELWYNN_FOREST },
 						{ 51.4, 60.8, ELWYNN_FOREST },
 						{ 51.2, 85.0, ELWYNN_FOREST },
 						{ 89.6, 78.6, ELWYNN_FOREST },
 					},
+					-- #endif
 					["groups"] = {
 						i(6202),	-- Fingerless Gloves
 						i(6203),	-- Thuggish Shield
 					},
 				}),
 			}),
+			-- #if AFTER 8.1.0.28724
+			n(TREASURES, {
+				o(310709, {	-- Waterlogged Chest
+					["model"] = 196989,
+					["questID"] = 54131,
+					["coord"] = { 32.3, 63.6, ELWYNN_FOREST },
+					["timeline"] = { "added 8.1.0.28724" },
+					["lvl"] = 110,
+					["groups"] = {
+						i(3678),	-- Recipe: Crocolisk Steak
+						i(7997),	-- Red Defias Mask
+						i(2057, {	-- Pitted Defias Shortsword
+							["timeline"] = { "removed 4.0.3", "added 8.1.0.28724" },
+						}),
+					},
+				}),
+			}),
+			-- #endif
 			n(VENDORS, {
 				n(844, {	-- Antonio Perelli <Traveling Salesman>
 					["description"] = "This vendor travels in a big circuit from Elwynn Forest (stopping in Goldshire) to Westfall (stopping in Sentinel Hill) to Duskwood (stopping in Darkshire) to Redridge Mountains (stopping in Lakeshire) and then back to Elwynn Forest.  If you cannot find him in this zone, check one of the other three.",
@@ -843,11 +1060,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 43.8, 65.8, ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						{
-							["itemID"] = 1939,	-- Skin of Sweet Rum
-							["questID"] = 116,	-- Dry Times
-							["races"] = ALLIANCE_ONLY,
-						},
+						i(1939),	-- Skin of Sweet Rum
 					},
 				}),
 				n(6367, {	-- Donni Anthania <Crazy Cat Lady>
@@ -909,26 +1122,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(ZONE_DROPS, {
-				i(1256, {	-- Crystal Kelp Frond
-					["questID"] = 112,	-- Collecting Kelp
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						285,	-- Murloc
-						735,	-- Murloc Streamrunner
-					},
-				}),
-				i(773, {	-- Gold Dust
-					["questID"] = 47,	-- Gold Dust Exchange
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						327,	-- Goldtooth
-						476,	-- Kobold Geomancer
-						40,		-- Kobold Miner
-						475,	-- Kobold Tunneler
-					},
-				}),
 				i(1307, {	-- Gold Pickup Schedule
-					["questID"] = 123,	-- The Collector
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
 						100,	-- Gruff Swiftbite
@@ -946,50 +1140,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				i(1195, {	-- Kobold Mining Shovel
 					["cr"] = 475,	-- Kobold Tunneler
 				}),
-				i(772, {	-- Large Candle
-					["questID"] = 60,	-- Kobold Candles
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						327,	-- Goldtooth
-						476,	-- Kobold Geomancer
-						40,		-- Kobold Miner
-						475,	-- Kobold Tunneler
-					},
-				}),
 				i(1399, {	-- Magic Candle
 					["cr"] = 476,	-- Kobold Geomancer
 				}),
-				i(782, {	-- Painted Gnoll Armband
-					["questID"] = 11,	-- Riverpaw Gnoll Bounty
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						478,	-- Riverpaw Outrunner
-						97,		-- Riverpaw Runt
-					},
-				}),
+				-- #if BEFORE 8.1.0.28724
 				i(2057, {	-- Pitted Defias Shortsword
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 38,	-- Defias Thug
 				}),
-				i(752, {	-- Red Burlap Bandana
-					["questID"] = 18,	-- Brotherhood of Thieves
-					["races"] = ALLIANCE_ONLY,
-					["cr"] = 38,	-- Defias Thug
-				}),
-				i(1019, {	-- Red Linen Bandana
-					["questID"] = 83,	-- Red Linen Goods
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						583,	-- Defias Ambusher
-						116,	-- Defias Bandit
-						6866,	-- Defias Bodyguard
-						6846,	-- Defias Dockmaster
-						6927,	-- Defias Dockworker
-						474,	-- Defias Rogue Wizard
-						880,	-- Erlan Drudgemoor
-						473,	-- Morgan the Collector
-						881,	-- Surena Caledon
-					},
-				}),
+				-- #endif
 				i(2055, {	-- Small Wooden Hammer
 					["cr"] = 80,	-- Kobold Laborer
 				}),
@@ -997,14 +1156,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["crs"] = {
 						478,	-- Riverpaw Outrunner
 						97,		-- Riverpaw Runt
-					},
-				}),
-				i(780, {	-- Torn Murloc Fin
-					["questID"] = 46,	-- Bounty on Murlocs
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						46,		-- Murloc Forager
-						732,	-- Murloc Lurker
 					},
 				}),
 				i(1972, {	-- Westfall Deed
@@ -1026,9 +1177,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
 	n(QUESTS, {
 		q(7962),	-- Wabbit Pelts
-			-- i(13913),	-- 22 Pound Lobster
 		q(7961),	-- Waskily Wabbits!
-			-- i(3300),	-- Rabbit's Foot
-			-- i(8497),	-- Rabbit Crate (Snowshoe)
 	}),
 }));

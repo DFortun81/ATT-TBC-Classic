@@ -861,6 +861,7 @@ app.L = {
 		["Maraudon"] = 280,
 		["Molten Core"] = 232,
 		["Naxxramas"] = 162,
+		[C_Map.GetAreaInfo(9)] = 425,	-- Northshire Valley
 		["Onyxia's Lair"] = 248,
 		["Ragefire Chasm"] = 213,
 		["Razorfen Downs"] = 300,

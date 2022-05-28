@@ -75,6 +75,7 @@
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Blackrock Mountain.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Deadwind Pass.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Deeprun Tram.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Dun Morogh.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Duskwood.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Eversong Woods.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Ghostlands.lua

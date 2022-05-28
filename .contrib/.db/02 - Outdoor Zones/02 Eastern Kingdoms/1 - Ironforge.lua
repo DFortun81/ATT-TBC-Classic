@@ -576,17 +576,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 10,
 				}),
-				q(3681, {	-- The Tome of Divinity
-					["qg"] = 5149,	-- Brandur Ironhammer
-					["coord"] = { 23.4, 6.2, IRONFORGE },
-					["altQuests"] = {
-						2998, 	-- The Tome of Divinity
-						1787,	-- The Tome of Divinity (8)
-					},
-					["races"] = { HUMAN },
-					["classes"] = { PALADIN },
-					["lvl"] = 12,
-				}),
 				q(1802, {	-- Tome of the Cabal (2/3 Alliance)
 					["qg"] = 6294,	-- Krom Stoutarm
 					["sourceQuest"] = 1758,	-- Tome of the Cabal (1/3 Alliance)
