@@ -400,6 +400,23 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(6972),	-- Fire Hardened Hauberk
 					},
 				}),
+				q(1685, {	-- Gakin's Summons
+					["qg"] = 6121,	-- Remen Marcot
+					["coord"] = { 44.4, 66.2, ELWYNN_FOREST },
+					["altQuests"] = { 1715 }, -- The Slaughtered Lamb
+					["races"] = { HUMAN, GNOME },
+					["classes"] = { WARLOCK },
+					["isBreadcrumb"] = true,
+					["lvl"] = 10,
+				}),
+				q(1717, {	-- Gakin's Summons
+					["qg"] = 6120,	-- Lago Blackwrench
+					["coord"] = { 47.6, 9.6, IRONFORGE },
+					["races"] = { HUMAN, GNOME },
+					["classes"] = { WARLOCK },
+					["isBreadcrumb"] = true,
+					["lvl"] = 20,
+				}),
 				q(1921, {	-- Gathering Materials
 					["qg"] = 5497,	-- Jennea Cannon <Mage Trainer>
 					["sourceQuest"] = 1920,	-- Investigate the Blue Recluse

@@ -345,14 +345,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 12,
 				}),
-				q(1717, {	-- Gakin's Summons
-					["qg"] = 6120,	-- Lago Blackwrench
-					["coord"] = { 47.6, 9.6, IRONFORGE },
-					["races"] = { HUMAN, GNOME },
-					["classes"] = { WARLOCK },
-					["isBreadcrumb"] = true,
-					["lvl"] = 20,
-				}),
 				q(1682, {	-- Grey Iron Weapons
 					["qg"] = 6031,	-- Tormus Deepforge
 					["sourceQuest"] = 1681,	-- Ironband's Compound
