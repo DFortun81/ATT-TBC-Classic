@@ -77,6 +77,7 @@
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Deeprun Tram.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Dun Morogh.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Duskwood.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Elwynn Forest.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Eversong Woods.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Ghostlands.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Isle of Quel'Danas.lua
