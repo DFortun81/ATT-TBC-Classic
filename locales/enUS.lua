@@ -814,8 +814,8 @@ app.L = {
 	["SAVED_TO_DJ_INSTANCES"] = {
 		-- Classic
 		["Stormwind Stockade"] = "The Stockade";
-		["Ahn'Qiraj"] = "Temple of Ahn'Qiraj";
-		["Ahn'Qiraj Temple"] = "Temple of Ahn'Qiraj";
+		["Temple of Ahn'Qiraj"] = "Ahn'Qiraj";
+		["Ahn'Qiraj Temple"] = "Ahn'Qiraj";
 		["Sunken Temple"] = "The Temple of Atal'hakkar";
 		["Auchindoun: Auchenai Crypts"] = "Auchenai Crypts";
 		["Auchindoun: Crypts"] = "Auchenai Crypts";

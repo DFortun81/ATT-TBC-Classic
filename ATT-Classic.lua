@@ -6449,16 +6449,14 @@ local C_Map_GetBestMapForUnit = C_Map.GetBestMapForUnit;
 local C_MapExplorationInfo_GetExploredMapTextures = C_MapExplorationInfo.GetExploredMapTextures;
 local C_MapExplorationInfo_GetExploredAreaIDsAtPosition = C_MapExplorationInfo.GetExploredAreaIDsAtPosition;
 app.GetCurrentMapID = function()
-	local ZONE_TEXT_TO_MAP_ID = app.L["ZONE_TEXT_TO_MAP_ID"];
-	local ALT_ZONE_TEXT_TO_MAP_ID = app.L["ALT_ZONE_TEXT_TO_MAP_ID"];
 	local real = GetRealZoneText();
 	if real then
-		local otherMapID = ZONE_TEXT_TO_MAP_ID[real] or ALT_ZONE_TEXT_TO_MAP_ID[real];
+		local otherMapID = L.ZONE_TEXT_TO_MAP_ID[real] or L.ALT_ZONE_TEXT_TO_MAP_ID[real];
 		if otherMapID then return otherMapID; end
 	end
 	local zone = GetSubZoneText();
 	if zone then
-		local otherMapID = ZONE_TEXT_TO_MAP_ID[zone] or ALT_ZONE_TEXT_TO_MAP_ID[zone];
+		local otherMapID = L.ZONE_TEXT_TO_MAP_ID[zone] or L.ALT_ZONE_TEXT_TO_MAP_ID[zone];
 		if otherMapID then return otherMapID; end
 	end
 	return C_Map_GetBestMapForUnit("player");
