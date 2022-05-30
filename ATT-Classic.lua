@@ -2178,7 +2178,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 							if item.group.questID and not item.group.repeatable and showOtherCharacterQuests then
 								local incompletes = {};
 								for guid,character in pairs(ATTCharacterData) do
-									if character.realm == realmName
+									if not character.ignored and character.realm == realmName
 										and (not item.group.r or (character.factionID and item.group.r == character.factionID))
 										and (not item.group.races or (character.raceID and contains(item.group.races, character.raceID)))
 										and (not item.group.c or (character.classID and contains(item.group.c, character.classID)))
@@ -2210,7 +2210,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 							if item.group.questID and not item.group.repeatable and showOtherCharacterQuests then
 								local incompletes = {};
 								for guid,character in pairs(ATTCharacterData) do
-									if character.realm == realmName and character.Quests and not character.Quests[item.group.questID] then
+									if not character.ignored and character.realm == realmName and character.Quests and not character.Quests[item.group.questID] then
 										incompletes[guid] = character;
 									end
 								end
@@ -2463,8 +2463,14 @@ local function processQueue()
 		local data = queue[1];
 		table.remove(queue, 1);
 		active = data[1];
-		app.print("Updating " .. data[2] .. " from " .. data[3] .. "...");
-		C_ChatInfo.SendAddonMessage("ATTC", "!\tsyncsum\t" .. data[1], "WHISPER", data[3]);
+		if data[4] then
+			C_ChatInfo.SendAddonMessage("ATTC", "!\tsyncsumchar\t" .. data[1], "WHISPER", data[3]);
+			active = nil;
+			processQueue();
+		else
+			app.print("Updating " .. data[2] .. " from " .. data[3] .. "...");
+			C_ChatInfo.SendAddonMessage("ATTC", "!\tsyncsum\t" .. data[1], "WHISPER", data[3]);
+		end
 	end
 end
 
@@ -2605,7 +2611,7 @@ function app:ReceiveSyncRequest(sender, battleTag)
 	local msgs = {};
 	local msg = "?\tsyncsum";
 	for guid,character in pairs(ATTCharacterData) do
-		if character.lastPlayed then
+		if character.lastPlayed and not character.ignored then
 			local charsummary = "\t" .. guid .. ":" .. character.lastPlayed;
 			if (string.len(msg) + string.len(charsummary)) < 255 then
 				msg = msg .. charsummary;
@@ -2617,14 +2623,16 @@ function app:ReceiveSyncRequest(sender, battleTag)
 	end
 	C_ChatInfo.SendAddonMessage("ATTC", msg, "WHISPER", sender);
 end
-function app:ReceiveSyncSummary(sender, summary)
+function app:ReceiveSyncSummary(sender, summary, shouldPrint)
 	if app:IsAccountLinked(sender) then
 		local first = #queue == 0;
 		for i,data in ipairs(summary) do
 			local guid,lastPlayed = strsplit(":", data);
 			local character = ATTCharacterData[guid];
-			if not character or not character.lastPlayed or (character.lastPlayed < tonumber(lastPlayed)) and guid ~= active then
+			if not character or not character.lastPlayed or (character.lastPlayed < tonumber(lastPlayed)) and guid ~= app.GUID then
 				tinsert(queue, { guid, character and character.text or guid, sender });
+			elseif shouldPrint then
+				tinsert(queue, { guid, character and character.text or guid, sender, true });
 			end
 			if first then processQueue(); end
 		end
@@ -9689,6 +9697,31 @@ local function RowOnEnter(self)
 		end
 		
 		if reference.OnTooltip then reference:OnTooltip(); end
+				
+		if reference.questID and app.Settings:GetTooltipSetting("SummarizeThings") then
+			if not reference.repeatable and app.Settings:GetTooltipSetting("Show:OtherCharacterQuests") then
+				local incompletes, realmName = {}, GetRealmName();
+				for guid,character in pairs(ATTCharacterData) do
+					if not character.ignored and character.realm == realmName
+						and (not reference.r or (character.factionID and reference.r == character.factionID))
+						and (not reference.races or (character.raceID and contains(reference.races, character.raceID)))
+						and (not reference.c or (character.classID and contains(reference.c, character.classID)))
+						and (character.Quests and not character.Quests[reference.questID]) then
+						incompletes[guid] = character;
+					end
+				end
+				incompletes[app.GUID] = nil;
+				local desc, j = "", 0;
+				for guid,character in pairs(incompletes) do
+					if j > 0 then desc = desc .. ", "; end
+					desc = desc .. (character.text or guid);
+					j = j + 1;
+				end
+				if j > 0 then
+					GameTooltip:AddLine("Incomplete on " .. string.gsub(desc, "-" .. realmName, ""), 1, 1, 1, true);
+				end
+			end
+		end
 		
 		-- Show Quest Prereqs
 		local isDebugMode = app.Settings:Get("DebugMode");
@@ -13507,18 +13540,34 @@ app:GetWindow("Sync", UIParent, function(self)
 		if not self.initialized then
 			self.initialized = true;
 			
-			local function OnRightButtonDeleteCharacter(row, button)
+			local function OnClickForCharacter(row, button)
 				if button == "RightButton" then
-					app:ShowPopupDialog("CHARACTER DATA: " .. (row.ref.text or RETRIEVING_DATA) .. "\n \nAre you sure you want to delete this?",
-					function()
-						ATTCharacterData[row.ref.datalink] = nil;
-						app:RecalculateAccountWideData();
+					if IsAltKeyDown() then
+						local character = ATTCharacterData[row.ref.datalink];
+						if character then character.ignored = not character.ignored; end
 						self:Reset();
-					end);
+					else
+						app:ShowPopupDialog("CHARACTER DATA: " .. (row.ref.text or RETRIEVING_DATA) .. "\n \nAre you sure you want to delete this?",
+						function()
+							ATTCharacterData[row.ref.datalink] = nil;
+							app:RecalculateAccountWideData();
+							self:Reset();
+						end);
+					end
+				elseif button == "LeftButton" then
+					local character = ATTCharacterData[row.ref.datalink];
+					if character then 
+						local msg = "?\tsyncsumchar\t" .. row.ref.datalink .. ":" .. character.lastPlayed;
+						for playerName,allowed in pairs(ATTClassicAD.LinkedAccounts) do
+							if allowed and not string.find(playerName, "#") then
+								C_ChatInfo.SendAddonMessage("ATTC", msg, "WHISPER", playerName);
+							end
+						end
+					end
 				end
 				return true;
 			end
-			local function OnRightButtonDeleteLinkedAccount(row, button)
+			local function OnClickForLinkedAccount(row, button)
 				if button == "RightButton" then
 					app:ShowPopupDialog("LINKED ACCOUNT: " .. (row.ref.text or RETRIEVING_DATA) .. "\n \nAre you sure you want to delete this?",
 					function()
@@ -13548,7 +13597,15 @@ app:GetWindow("Sync", UIParent, function(self)
 					end
 					GameTooltip:AddLine(" ", 1, 1, 1);
 					GameTooltip:AddDoubleLine("Total", tostring(total), 0.8, 0.8, 1);
+					GameTooltip:AddLine("Left Click to Sync this Character", 0.8, 1, 0.8);
 					GameTooltip:AddLine("Right Click to Delete this Character", 1, 0.8, 0.8);
+					if character.ignored then
+						GameTooltip:AddLine("Alt-Right Click to Unignore this Character", 1, 0.8, 0.8);
+						GameTooltip:AddLine(" ");
+						GameTooltip:AddLine("Ignored Characters will not appear in the tooltip when using 'Show Other Characters' nor will they be sync'd with your other accounts. Characters from other accounts that are ignored on your current account will still receive updates from your other accounts.", 1, 1, 1, true);
+					else
+						GameTooltip:AddLine("Alt-Right Click to Ignore this Character", 1, 0.8, 0.8);
+					end
 				end
 			end
 			local function OnTooltipForLinkedAccount(t)
@@ -13598,9 +13655,11 @@ app:GetWindow("Sync", UIParent, function(self)
 								if character then
 									table.insert(data.g, app.CreateUnit(guid, {
 										['datalink'] = guid,
-										['OnClick'] = OnRightButtonDeleteCharacter,
+										['OnClick'] = OnClickForCharacter,
 										['OnTooltip'] = OnTooltipForCharacter,
 										['OnUpdate'] = app.AlwaysShowUpdate,
+										["saved"] = not character.ignored,
+										["trackable"] = true,
 										['visible'] = true,
 									}));
 								end
@@ -13641,7 +13700,7 @@ app:GetWindow("Sync", UIParent, function(self)
 								if character then
 									table.insert(data.g, app.CreateUnit(playerName, {
 										['datalink'] = playerName,
-										['OnClick'] = OnRightButtonDeleteLinkedAccount,
+										['OnClick'] = OnClickForLinkedAccount,
 										['OnTooltip'] = OnTooltipForLinkedAccount,
 										['OnUpdate'] = app.AlwaysShowUpdate,
 										['visible'] = true,
@@ -13652,7 +13711,7 @@ app:GetWindow("Sync", UIParent, function(self)
 										['text'] = playerName,
 										['datalink'] = playerName,
 										['icon'] = "Interface\\FriendsFrame\\Battlenet-Portrait",
-										['OnClick'] = OnRightButtonDeleteLinkedAccount,
+										['OnClick'] = OnClickForLinkedAccount,
 										['OnTooltip'] = OnTooltipForLinkedAccount,
 										['OnUpdate'] = app.AlwaysShowUpdate,
 										['visible'] = true,
@@ -13663,7 +13722,7 @@ app:GetWindow("Sync", UIParent, function(self)
 										['text'] = playerName,
 										['datalink'] = playerName,
 										['icon'] = "Interface\\FriendsFrame\\Battlenet-WoWicon",
-										['OnClick'] = OnRightButtonDeleteLinkedAccount,
+										['OnClick'] = OnClickForLinkedAccount,
 										['OnTooltip'] = OnTooltipForLinkedAccount,
 										['OnUpdate'] = app.AlwaysShowUpdate,
 										['visible'] = true,
@@ -15263,6 +15322,10 @@ app.events.CHAT_MSG_ADDON = function(prefix, text, channel, sender, target, zone
 						table.remove(args, 1);
 						table.remove(args, 1);
 						app:ReceiveSyncSummary(target, args);
+					elseif a == "syncsumchar" then
+						table.remove(args, 1);
+						table.remove(args, 1);
+						app:ReceiveSyncSummary(target, args, true);
 					end
 				else
 					local data = app:GetWindow("Prime").data;
@@ -15312,6 +15375,15 @@ app.events.CHAT_MSG_ADDON = function(prefix, text, channel, sender, target, zone
 						table.remove(args, 1);
 						table.remove(args, 1);
 						app:ReceiveSyncSummaryResponse(target, args);
+					elseif a == "syncsumchar" then
+						table.remove(args, 1);
+						table.remove(args, 1);
+						for i,guid in ipairs(args) do
+							local character = ATTCharacterData[guid];
+							if character then
+								print(character.text .. " is already up-to-date.");
+							end
+						end
 					end
 				end
 			elseif cmd == "to" then	-- To Command
