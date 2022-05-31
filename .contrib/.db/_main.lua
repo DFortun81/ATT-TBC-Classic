@@ -1300,6 +1300,22 @@ bubbleDown = function(data, t)
 		return t;
 	end
 end
+bubbleDownFiltered = function(data, filter, t)
+	if t then
+		if t.g or t.groups then
+			if filter(t) then applyData(data, t); end
+			bubbleDownFiltered(data, filter, t.groups);
+			bubbleDownFiltered(data, filter, t.g);
+		elseif isarray(t) then
+			for _,group in ipairs(t) do
+				bubbleDownFiltered(data, filter, group);
+			end
+		else
+			if filter(t) then applyData(data, t); end
+		end
+		return t;
+	end
+end
 bubbleDownAndReplace = function(data, t)
 	if t then
 		if t.g or t.groups then
