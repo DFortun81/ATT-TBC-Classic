@@ -14358,6 +14358,12 @@ SlashCmdList["ATTCU"] = function(cmd)
 	if name then SendResponseMessage("?", server and (name .. "-" .. server) or name); end
 end
 
+SLASH_ATTCUYELL1 = "/attyell";
+SLASH_ATTCUYELL2 = "/attrohduh";
+SlashCmdList["ATTCUYELL"] = function(cmd)
+	C_ChatInfo.SendAddonMessage("ATTC", "?", "YELL");
+end
+
 local oldItemSetHyperlink = ItemRefTooltip.SetHyperlink;
 function ItemRefTooltip:SetHyperlink(link, a, b, c, d, e, f)
 	-- Make sure to call the default function, but with a try-catch.
