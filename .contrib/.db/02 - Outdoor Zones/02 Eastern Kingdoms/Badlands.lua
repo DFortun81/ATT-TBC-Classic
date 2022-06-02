@@ -231,22 +231,23 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				q(737, {	-- Forbidden Knowledge
-					["sourceQuests"] = {
-						735,	-- To Ironforge for Yagyin's Digest
-						736,	-- The Star, the Hand and the Heart
+					["allianceQuestData"] = {
+						["providers"] = {
+							{ "n", 2786 },	-- Gerrig Bonegrip
+							{ "i", 4647 },	-- Yagyin's Digest
+						},
+						["sourceQuest"] = 735,	-- The Star, the Hand and the Heart [A]
+						["coord"] = { 50.8, 5.6, IRONFORGE },
 					},
-					["qgs"] = {
-						2786,	-- Gerrig Bonegrip
-						2934,	-- Keeper Bel'dugur
-					},
-					["coords"] = {
-						{ 50.8, 5.6, IRONFORGE },
-						{ 53.7, 54.5, UNDERCITY },
+					["hordeQuestData"] = {
+						["providers"] = {
+							{ "n", 2934 },	-- Keeper Bel'dugur
+							{ "i", 4647 },	-- Yagyin's Digest
+						},
+						["sourceQuest"] = 736,	-- The Star, the Hand and the Heart [H]
+						["coord"] = { 53.7, 54.5, UNDERCITY },
 					},
 					["lvl"] = 30,
-					["cost"] = {
-						{ "i", 4647, 1 },	-- Yagyin's Digest
-					},
 					["groups"] = {
 						i(4984),	-- Skull of Impending Doom
 					},
@@ -442,35 +443,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["groups"] = {
 						{
 							["itemID"] = 4843,	-- Amethyst Runestone
-							["allianceQuestID"] = 717,	-- Tremors of the Earth
-							["hordeQuestID"] = 793,	-- Broken Alliances
 							["coord"] = { 81.27, 64.29, BADLANDS },
 						},
 						{
 							["itemID"] = 4845,	-- Diamond Runestone
-							["allianceQuestID"] = 717,	-- Tremors of the Earth
-							["hordeQuestID"] = 793,	-- Broken Alliances
 							["coord"] = { 83.5, 32.9, BADLANDS },
 						},
 						{
 							["itemID"] = 4844,	-- Opal Runestone
-							["allianceQuestID"] = 717,	-- Tremors of the Earth
-							["hordeQuestID"] = 793,	-- Broken Alliances
 							["coord"] = { 72.38, 66.94, BADLANDS },
 						},
 						{
 							["itemID"] = 4615,	-- Blacklash's Bindings
-							["allianceQuestID"] = 717,	-- Tremors of the Earth
-							["hordeQuestID"] = 793,	-- Broken Alliances
-							["cr"] = 2757,	-- Blacklash
 							["coord"] = { 82.6, 48.8, BADLANDS },
+							["cr"] = 2757,	-- Blacklash
 						},
-						{	--
+						{
 							["itemID"] = 4645,	-- Chains of Hematus
-							["allianceQuestID"] = 717,	-- Tremors of the Earth
-							["hordeQuestID"] = 793,	-- Broken Alliances
-							["cr"] = 2759,	-- Hematus
 							["coord"] = { 81.4, 50.6, BADLANDS },
+							["cr"] = 2759,	-- Hematus
 						},
 					},
 				},
@@ -549,26 +540,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				{	-- The Star, the Hand and the Heart
 					["allianceQuestData"] = q(735, {	-- The Star, the Hand and the Heart [A]
 						["providers"] = {
-							{ "n", 2934 },	-- Keeper Bel'dugur
-							{ "i", 4650 },	-- Bel'dugur's Note
+							{ "n", 2786 },	-- Gerrig Bonegrip
+							{ "i", 4649 },	-- Bonegrip's Note
 						},
 						["sourceQuest"] = 727,	-- To Ironforge for Yagyin's Digest
 						["coord"] = { 50.8, 5.6, IRONFORGE },
 					}),
 					["hordeQuestData"] = q(736, {	-- The Star, the Hand and the Heart [H]
 						["providers"] = {
-							{ "n", 2786 },	-- Gerrig Bonegrip
-							{ "i", 4649 },	-- Bonegrip's Note
+							{ "n", 2934 },	-- Keeper Bel'dugur
+							{ "i", 4650 },	-- Bel'dugur's Note
 						},
 						["sourceQuest"] = 728,	-- To the Undercity for Yagyin's Digest
 						["coord"] = { 53.7, 54.5, UNDERCITY },
 					}),
 					["maps"] = { ALTERAC_MOUNTAINS, DUSTWALLOW_MARSH, STRANGLETHORN_VALE },
-					["cost"] = {
-						{ "i", 4641, 1 },	-- Hand of Dagun
-						{ "i", 4646, 1 },	-- Star of Xil'yeh
-						{ "i", 4644, 1 },	-- The Legacy Heart
-					},
 					["lvl"] = 30,
 					["groups"] = {
 						objective(1, {	-- 0/1 Star of Xil'yeh
