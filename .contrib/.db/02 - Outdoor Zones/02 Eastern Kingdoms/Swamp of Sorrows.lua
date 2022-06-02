@@ -3,7 +3,10 @@
 ---------------------------------------------------
 root("Zones", m(EASTERN_KINGDOMS, {
 	m(SWAMP_OF_SORROWS, {
-		["lore"] = "The Swamp of Sorrows (also once known as the Swamps of Sorrow) is a contested territory in the southern part of the Eastern Kingdoms. Among its murk-ridden marshes the green dragonspawn patrol at the behest of their dreaming mistress, Ysera. The great Dragon Aspect has warned of a lurking terror within the Temple of Atal'Hakkar, and her loyal servants are determined to protect the land from the emerging doom.",
+		["lore"] = "The Swamp of Sorrows is a marshland in southern Eastern Kingdoms filled with green dragons serving Ysera. When the Dark Portal imploded during the Second War, The Black Morass was split in half--the northern part became the Swamp, while the southern half became the barren Blasted Lands.",
+		-- #if AFTER WRATH
+		["icon"] = "Interface\\Icons\\achievement_zone_swampsorrows_01",
+		-- #endif
 		["groups"] = {
 			n(ACHIEVEMENTS, {
 				removeclassicphase(ach(782, {	-- Explore Swamp of Sorrows

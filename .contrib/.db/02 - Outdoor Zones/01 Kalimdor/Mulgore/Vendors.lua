@@ -34,7 +34,9 @@ _.Zones =
 						i(18793),	-- Great White Kodo (MOUNT!)
 						i(18794),	-- Great Brown Kodo (MOUNT!)
 						i(18795),	-- Great Gray Kodo (MOUNT!)
-						i(46100),	-- White Kodo (MOUNT!)
+						i(46100, {	-- White Kodo (MOUNT!)
+							["timeline"] = { "added 3.1.0.9684" },
+						}),
 						i(15292, {	-- Green Kodo (MOUNT!)
 							["timeline"] = { "removed 1.4.0" },
 						}),

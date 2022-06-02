@@ -636,7 +636,9 @@ root("Zones", m(KALIMDOR, {
 					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(46099),	-- Black Wolf (MOUNT!)
+						i(46099, {	-- Black Wolf (MOUNT!)
+							["timeline"] = { "added 3.1.0.9684" },
+						}),
 						i(5668),	-- Brown Wolf (MOUNT!)
 						i(5665),	-- Dire Wolf (MOUNT!)
 						i(18796),	-- Swift Brown Wolf (MOUNT!)

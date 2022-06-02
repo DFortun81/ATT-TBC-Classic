@@ -596,6 +596,7 @@ root("Achievements", {
 		-- Wooly Mammoth, located in Dalaran.
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_QUESTS, {
+		-- #if AFTER 2.0.1
 		achcat(ACHIEVEMENT_CATEGORY_OUTLAND_QUESTS, {
 			ach(1262, applyclassicphase(TBC_PHASE_ONE, {	-- Loremaster of Outland
 				-- #if BEFORE WRATH
@@ -616,12 +617,15 @@ root("Achievements", {
 				["races"] = HORDE_ONLY,
 			})),
 		}),
+		-- #endif
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_EXPLORATION, {
+		-- #if AFTER 2.0.1
 		achcat(ACHIEVEMENT_CATEGORY_OUTLAND_EXP, {
 			ach(1312),	-- Bloody Rare
 			ach(1311),	-- Medium Rare
 		}),
+		-- #endif
 		removeclassicphase(ach(42, {	-- Explore Eastern Kingdoms
 			-- #if BEFORE WRATH
 			["description"] = "Explore the regions of Eastern Kingdoms.",
@@ -1041,6 +1045,7 @@ root("Achievements", {
 				["rank"] = 6,
 			})),
 			removeclassicphase(ach(1243, {	-- Fish Don't Leave Footprints
+				["timeline"] = { "added 2.3.0" },
 				-- #if BEFORE WRATH
 				["description"] = "Learn the ability to find fish.",
 				-- #endif
