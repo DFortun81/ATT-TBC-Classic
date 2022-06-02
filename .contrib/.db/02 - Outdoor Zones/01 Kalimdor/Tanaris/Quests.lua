@@ -74,10 +74,12 @@ _.Zones =
 					["hordeQuestData"] = q(4509, {	-- Calm Before the Storm (1/2) [H]
 						["maps"] = { ORGRIMMAR },
 					}),
-                    ["qg"] = 5594,    -- Alchemist Pestlezugg <Alchemy Supplies>
+					["providers"] = {
+						{ "n", 5594 },	-- Alchemist Pestlezugg <Alchemy Supplies>
+						{ "i", 11844 },	-- Pestlezugg's Un'Goro Report
+					},
                     ["sourceQuest"] = 4507,    -- Pawn Captures Queen
                     ["coord"] = { 50.8, 27.0, TANARIS },
-                    ["cost"] = { { "i", 11844, 1 } },    -- Pestlezugg's Un'Goro Report
                     ["lvl"] = 50,
 				},
 				q(2882, {	-- Cuergo's Gold
