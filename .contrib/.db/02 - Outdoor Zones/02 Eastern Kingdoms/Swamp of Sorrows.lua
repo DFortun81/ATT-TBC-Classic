@@ -402,12 +402,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(3627, {	-- Uniting the Shattered Amulet
 					["qg"] = 7572,	-- Fallen Hero of the Horde
 					["sourceQuest"] = 3626,	-- Return to the Blasted Lands
-					["cost"] = {
-						{ "i", 10755, 1 },	-- Amulet of Allistarj
-						{ "i", 10753, 1 },	-- Amulet of Grol
-						{ "i", 10754, 1 },	-- Amulet of Sevine
-					},
 					["coord"] = { 34.3, 66.2, SWAMP_OF_SORROWS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { BLASTED_LANDS },
 					["lvl"] = 45,
 					["groups"] = {

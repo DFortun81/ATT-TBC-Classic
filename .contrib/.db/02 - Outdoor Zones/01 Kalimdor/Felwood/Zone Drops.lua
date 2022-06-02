@@ -61,11 +61,6 @@ _.Zones =
 						14345,	-- The Ongar
 					},
 				}),
-				i(18622, {	-- Flawless Fel Essence (Jaedenar)
-					["questID"] = 7602,	-- Flawless Fel Essence
-					["cr"] = 9862,	-- Jaedenar Legionnaire
-					["classes"] = { WARLOCK },
-				}),
 				i(11674, {	-- Jadefire Felbind
 					["questID"] = 939,	-- Flute of Xavaric
 					["races"] = ALLIANCE_ONLY,

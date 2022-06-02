@@ -582,14 +582,28 @@ _.Zones =
 					["qg"] = 14470,	-- Impsy <Niby's Minion>
 					["sourceQuest"] = 7601,	-- What Niby Commands
 					["coord"] = { 41.6, 44.8, FELWOOD },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { AZSHARA, BLASTED_LANDS },
 					["classes"] = { WARLOCK },
-					["cost"] = {
-						{ "i", 18624, 1 },	-- Flawless Fel Essence (Azshara)
-						{ "i", 18623, 1 },	-- Flawless Fel Essence (Dark Portal)
-						{ "i", 18622, 1 },	-- Flawless Fel Essence (Jaedenar)
-					},
 					["lvl"] = 50,
+					["groups"] = {
+						objective(1, {	-- 0/1 Flawless Fel Essence (Azshara)
+							["provider"] = { "i", 18624 },	-- Flawless Fel Essence (Azshara)
+							["crs"] = {
+								6202,	-- Legashi Hellcaller
+								6201,	-- Legashi Rogue
+								6200,	-- Legashi Satyr
+							},
+						}),
+						objective(2, {	-- 0/1 Flawless Fel Essence (Jaedenar)
+							["provider"] = { "i", 18622 },	-- Flawless Fel Essence (Jaedenar)
+							["cr"] = 9862,	-- Jaedenar Legionnaire
+						}),
+						objective(3, {	-- 0/1 Flawless Fel Essence (Dark Portal)
+							["provider"] = { "i", 18623 },	-- Flawless Fel Essence (Dark Portal)
+							["cr"] = 6011,	-- Felguard Sentry
+						}),
+					},
 				}),
 				q(939, {	-- Flute of Xavaric
 					["provider"] = { "i", 11668 },	-- Flute of Xavaric

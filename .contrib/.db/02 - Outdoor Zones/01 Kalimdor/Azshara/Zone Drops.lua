@@ -30,15 +30,6 @@ _.Zones =
 						8660,	-- The Evalcharr
 					},
 				}),
-				i(18624, {	-- Flawless Fel Essence (Azshara)
-					["questID"] = 7602,	-- Flawless Fel Essence
-					["classes"] = { WARLOCK },
-					["crs"] = {
-						6202,	-- Legashi Hellcaller
-						6201,	-- Legashi Rogue
-						6200,	-- Legashi Satyr
-					},
-				}),
 				i(16219, {	-- Formula: Enchant Gloves - Greater Agility
 					["cr"] = 6201,	-- Legashi Rogue
 				}),

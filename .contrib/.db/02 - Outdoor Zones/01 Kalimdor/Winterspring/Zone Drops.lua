@@ -67,15 +67,6 @@ _.Zones =
 						7429,	-- Frostmaul Preserver
 					},
 				})),
-				i(18604, {	-- Tears of the Hederine
-					["questID"] = 7582,	-- The Prison's Casing
-					["classes"] = { WARLOCK },
-					["crs"] = {
-						7461,	-- Hederine Initiate
-						7463,	-- Hederine Slayer
-						7462,	-- Hederine Manastalker
-					},
-				}),
 				i(18665, {	-- The Eye of Shadow
 					["classes"] = { PRIEST },
 					["crs"] = {
