@@ -298,8 +298,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				{
 					["provider"] = { "o", 2688 },	-- Keystone
-					["allianceQuestID"] = 653,	-- Myzrael's Allies
-					["hordeQuestID"] = 688,	-- Myzrael's Allies
+					["allianceQuestData"] = q(653),	-- Myzrael's Allies [A]
+					["hordeQuestData"] = q(688),	-- Myzrael's Allies [H]
 					["sourceQuest"] = 652,	-- Breaking the Keystone
 					["coord"] = { 36.1, 57.9, ARATHI_HIGHLANDS },
 				},

@@ -68,39 +68,18 @@ _.Zones =
 					["lvl"] = 50,
 				}),
 				{
-					["allianceQuestID"] = 4508,	-- Calm Before the Storm (1/2)
-					["hordeQuestID"] = 4509,	-- Calm Before the Storm (1/2)
-					["sourceQuest"] = 4507,	-- Pawn Captures Queen
-					["qg"] = 5594,	-- Alchemist Pestlezugg <Alchemy Supplies>
-					["coord"] = { 50.8, 27.0, TANARIS },
-					["maps"] = { DARNASSUS, ORGRIMMAR },
-					["cost"] = {
-						{ "i", 11844, 1 },	-- Pestlezugg's Un'Goro Report
-					},
-					["lvl"] = 50,
+					["allianceQuestData"] = q(4508, {	-- Calm Before the Storm (1/2) [A]
+						["maps"] = { DARNASSUS },
+					}),
+					["hordeQuestData"] = q(4509, {	-- Calm Before the Storm (1/2) [H]
+						["maps"] = { ORGRIMMAR },
+					}),
+                    ["qg"] = 5594,    -- Alchemist Pestlezugg <Alchemy Supplies>
+                    ["sourceQuest"] = 4507,    -- Pawn Captures Queen
+                    ["coord"] = { 50.8, 27.0, TANARIS },
+                    ["cost"] = { { "i", 11844, 1 } },    -- Pestlezugg's Un'Goro Report
+                    ["lvl"] = 50,
 				},
-				q(4508, {	-- Calm Before the Storm (1/2) [ALLIANCE]
-					["qg"] = 5594,	-- Alchemist Pestlezugg <Alchemy Supplies>
-					["sourceQuest"] = 4507,	-- Pawn Captures Queen
-					["coord"] = { 50.8, 27.0, TANARIS },
-					["maps"] = { DARNASSUS },
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 11844, 1 },	-- Pestlezugg's Un'Goro Report
-					},
-					["lvl"] = 50,
-				}),
-				q(4509, {	-- Calm Before the Storm (1/2) [HORDE]
-					["qg"] = 5594,	-- Alchemist Pestlezugg <Alchemy Supplies>
-					["sourceQuest"] = 4507,	-- Pawn Captures Queen
-					["coord"] = { 50.8, 27.0, TANARIS },
-					["maps"] = { ORGRIMMAR },
-					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 11844, 1 },	-- Pestlezugg's Un'Goro Report
-					},
-					["lvl"] = 50,
-				}),
 				q(2882, {	-- Cuergo's Gold
 					["coord"] = { 55.4, 92.2, TANARIS },
 					["provider"] = { "i", 9254 },	-- Cuergo's Treasure Map
@@ -259,15 +238,15 @@ _.Zones =
 					},
 				}),
 				{
-					["allianceQuestID"] = 162,	-- Rise of the Silithid
-					["hordeQuestID"] = 32,	-- Rise of the Silithid
+					["allianceQuestData"] = q(162, {	-- Rise of the Silithid [A]
+						["maps"] = { DARNASSUS },
+					}),
+					["hordeQuestData"] = q(32, {	-- Rise of the Silithid [H]
+						["maps"] = { ORGRIMMAR },
+					}),
 					["qg"] = 7724,	-- Senior Surveyor Fizzledowser
 					["sourceQuest"] = 113,	-- Insect Part Analysis (2/2)
 					["coord"] = { 50.2, 27.5, TANARIS },
-					["maps"] = { ORGRIMMAR, DARNASSUS },
-					["cost"] = {
-						{ "i", 8594, 1 },	-- Insect Analysis Report
-					},
 					["lvl"] = 39,
 				},
 				q(3520, {	-- Screecher Spirits

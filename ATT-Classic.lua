@@ -7462,6 +7462,7 @@ app.CreateQuest = function(id, t)
 	return setmetatable(constructor(id, t, "questID"), app.BaseQuest);
 end
 app.CreateQuestWithFactionData = function(t)
+	rawset(t, "r", app.FactionID);
 	local questData = app.FactionID == Enum.FlightPathFaction.Horde and t.hqd or t.aqd;
 	for key,value in pairs(questData) do t[key] = value; end
 	return setmetatable(t, app.BaseQuest);

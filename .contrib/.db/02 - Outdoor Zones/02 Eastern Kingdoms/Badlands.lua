@@ -425,8 +425,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				{
 					["provider"] = { "o", 2933 },	-- Seal of the Earth
-					["allianceQuestID"] = 779,	-- Seal of the Earth
-					["hordeQuestID"] = 795,	-- Seal of the Earth
+					["allianceQuestData"] = q(779),	-- Seal of the Earth [A]
+					["hordeQuestData"] = q(795),	-- Seal of the Earth [H]
 					["description"] = "This quest is repeatable but can only be completed while \"Broken Alliances\" (H) or \"Tremors of the Earth\" (A) is in your quest log.",
 					["altQuests"] =	{
 						793,	-- Broken Alliances
@@ -547,20 +547,22 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 30,
 				}),
 				{	-- The Star, the Hand and the Heart
-					["allianceQuestID"] = 735,	-- The Star, the Hand and the Heart
-					["hordeQuestID"] = 736,	-- The Star, the Hand and the Heart
-					["sourceQuests"] = {
-						727,	-- To Ironforge for Yagyin's Digest
-						728,	-- To the Undercity for Yagyin's Digest
-					},
-					["qgs"] = {
-						2786,	-- Gerrig Bonegrip
-						2934,	-- Keeper Bel'dugur
-					},
-					["coords"] = {
-						{ 50.8, 5.6, IRONFORGE },
-						{ 53.7, 54.5, UNDERCITY },
-					},
+					["allianceQuestData"] = q(735, {	-- The Star, the Hand and the Heart [A]
+						["providers"] = {
+							{ "n", 2934 },	-- Keeper Bel'dugur
+							{ "i", 4650 },	-- Bel'dugur's Note
+						},
+						["sourceQuest"] = 727,	-- To Ironforge for Yagyin's Digest
+						["coord"] = { 50.8, 5.6, IRONFORGE },
+					}),
+					["hordeQuestData"] = q(736, {	-- The Star, the Hand and the Heart [H]
+						["providers"] = {
+							{ "n", 2786 },	-- Gerrig Bonegrip
+							{ "i", 4649 },	-- Bonegrip's Note
+						},
+						["sourceQuest"] = 728,	-- To the Undercity for Yagyin's Digest
+						["coord"] = { 53.7, 54.5, UNDERCITY },
+					}),
 					["maps"] = { ALTERAC_MOUNTAINS, DUSTWALLOW_MARSH, STRANGLETHORN_VALE },
 					["cost"] = {
 						{ "i", 4641, 1 },	-- Hand of Dagun
@@ -569,46 +571,22 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4639,	-- Enchanted Sea Kelp
-							["allianceQuestID"] = 735,	-- The Star, the Hand and the Heart
-							["hordeQuestID"] = 736,	-- The Star, the Hand and the Heart
-							["qg"] = 4363,	-- Mirefin Oracle
-						},
-						{
-							["itemID"] = 4641,	-- Hand of Dagun
-							["allianceQuestID"] = 735,	-- The Star, the Hand and the Heart
-							["hordeQuestID"] = 736,	-- The Star, the Hand and the Heart
-							["qg"] = 2937,	-- Dagun the Ravenous
-							["cost"] = {
-								{ "i", 4639, 1 },	-- Enchanted Sea Kelp
-							},
-							["coord"] = { 60.4, 12.2, DUSTWALLOW_MARSH },
-						},
-						{
-							["itemID"] = 4644,	-- The Legacy Heart
-							["allianceQuestID"] = 735,	-- The Star, the Hand and the Heart
-							["hordeQuestID"] = 736,	-- The Star, the Hand and the Heart
-							["qg"] = 1060,	-- Mogh the Undying <Skullsplitter Clan Witchdoctor>
-							["coord"] = { 47.6, 44.2, STRANGLETHORN_VALE },
-						},
-						{
-							["itemID"] = 4646,	-- Star of Xil'yeh
-							["allianceQuestID"] = 735,	-- The Star, the Hand and the Heart
-							["hordeQuestID"] = 736,	-- The Star, the Hand and the Heart
-							["qg"] = 2417,	-- Grel'borg the Miser
+						objective(1, {	-- 0/1 Star of Xil'yeh
+							["provider"] = { "i", 4646 },	-- Star of Xil'yeh
 							["coord"] = { 39.6, 51.8, ALTERAC_MOUNTAINS },
-						},
-						{
-							["itemID"] = 4650,	-- Bel'dugur's Note
-							["allianceQuestID"] = 735,	-- The Star, the Hand and the Heart
-							["hordeQuestID"] = 736,	-- The Star, the Hand and the Heart
-						},
-						{
-							["itemID"] = 4649,	-- Bonegrip's Note
-							["allianceQuestID"] = 735,	-- The Star, the Hand and the Heart
-							["hordeQuestID"] = 736,	-- The Star, the Hand and the Heart
-						},
+							["cr"] = 2417,	-- Grel'borg the Miser
+						}),
+						objective(2, {	-- 0/1 Hand of Dagun
+							["itemID"] = 4641,	-- Hand of Dagun
+							["coord"] = { 60.4, 12.2, DUSTWALLOW_MARSH },
+							["cost"] = { { "i", 4639, 1 } },	-- Enchanted Sea Kelp
+							["cr"] = 2937,	-- Dagun the Ravenous
+						}),
+						objective(3, {	-- 0/1 The Legacy Heart
+							["provider"] = { "i", 4644 },	-- The Legacy Heart
+							["coord"] = { 47.6, 44.2, STRANGLETHORN_VALE },
+							["cr"] = 1060,	-- Mogh the Undying <Skullsplitter Clan Witchdoctor>
+						}),
 					},
 				},
 				q(777, {	-- This Is Going to Be Hard
@@ -834,6 +812,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						7290,	-- Shadowforge Sharpshooter
 						7091,	-- Shadowforge Ambusher
 					},
+				}),
+				i(4639, {	-- Enchanted Sea Kelp
+					["cr"] = 4363,	-- Mirefin Oracle
 				}),
 				i(5797, {	-- Indurium Flake
 					["questID"] = 1108,	-- Indurium
