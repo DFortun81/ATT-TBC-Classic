@@ -740,11 +740,10 @@ BATTLEGROUNDS = -304;
 RATED_BATTLEGROUNDS = -650;
 
 -- PvP Seasons
---PRE_SEASON = -658;
---SEASON_GLADIATOR = -664;
---SEASON_MERCILESS = -665;
---SEASON_VENGEFUL = -666;
---SEASON_BRUTAL = -667;
+SEASON_GLADIATOR = -664;
+SEASON_MERCILESS = -665;
+SEASON_VENGEFUL = -666;
+SEASON_BRUTAL = -667;
 --PRE_SEASON_HATEFUL = -657;
 --SEASON_DEADLY = -668;
 --SEASON_FURIOUS = -669;
@@ -910,6 +909,7 @@ REMOVED_FROM_GAME = 2;
 BLACK_MARKET = 3;
 BLIZZARD_BALANCE = 3;
 TCG = 3;
+ELITE_PVP_REQUIREMENT = 4;
 
 -- #if ANYCLASSIC
 -- Classic Phases
@@ -1266,6 +1266,16 @@ appendGroups = function(common, groups)
 	end
 	return groups;
 end
+-- Simply applies keys from 'data' into 't' where each key does not already exist
+applyData = function(data, t)
+	if data and t then
+		for key, value in pairs(data) do
+			if t[key] == nil then	-- dont' replace existing data
+				t[key] = value;
+			end
+		end
+	end
+end
 sharedData = function(data, t)
 	for i, group in ipairs(t) do
 		for key, value in pairs(data) do
@@ -1424,6 +1434,22 @@ merge = function(...)
 		end
 	end
 	return t;
+end
+run = function(method, t)
+	if t then
+		if t.g or t.groups then
+			method(t);
+			run(method, t.groups);
+			run(method, t.g);
+		elseif isarray(t) then
+			for _,group in ipairs(t) do
+				run(method, group);
+			end
+		else
+			method(t);
+		end
+		return t;
+	end
 end
 unpack = function(t, i)
   i = i or 1

@@ -1849,7 +1849,7 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 						if j.u and (not j.crs or paramA == "itemID") then
 							local reason = L["UNOBTAINABLE_ITEM_REASONS"][j.u];
 							if reason and (not reason[5] or select(4, GetBuildInfo()) < reason[5]) then
-								tinsert(info, { left = reason[2] });
+								tinsert(info, { left = reason[2], wrap = true });
 							end
 							break;
 						end

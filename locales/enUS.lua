@@ -668,6 +668,24 @@ app.L = {
 		[-577] = "Interface\\Icons\\INV_MISC_FILM_01",								-- Warcraft Movie
 		[-578] = app.asset("Expansion_CLASSIC"),									-- World of Warcraft 15th Anniversary
 		[-579] = "Interface\\Icons\\achievement_dungeon_outland_dungeonmaster",		-- Dark Portal Pass
+		
+	-- PvP Set Names
+		[-659] = "Interface\\Worldmap\\GlowSkull_64Green",									-- Aspirant PvP Gear
+		[-660] = "Interface\\Worldmap\\GlowSkull_64Blue",									-- Combatant PvP Gear
+		[-661] = "Interface\\Worldmap\\GlowSkull_64Purple",									-- Gladator PvP Gear
+		[-662] = "Interface\\Worldmap\\GlowSkull_64Red",									-- Elite PvP Gear
+	-- The Burning Crusade PvP Seasons
+		[-664] = app.asset("achievement_featsofstrength_gladiator_01"),				-- Gladiator: Season 1
+		[-665] = app.asset("achievement_featsofstrength_gladiator_02"),				-- Merciless Gladiator: Season 2
+		[-666] = app.asset("achievement_featsofstrength_gladiator_03"),				-- Vengeful Gladiator: Season 3
+		[-667] = app.asset("achievement_featsofstrength_gladiator_04"),				-- Brutal Gladiator: Season 4
+	-- Wrath of the Lich-King PvP Seasons
+		[-668] = "Interface\\Icons\\ability_mount_redfrostwyrm_01",							-- Deadly Gladiator: Season 5
+		[-669] = "Interface\\Icons\\ability_mount_redfrostwyrm_01",							-- Furious Gladiator: Season 6
+		[-670] = "Interface\\Icons\\ability_mount_redfrostwyrm_01",							-- Relentless Gladiator: Season 7
+		[-671] = "Interface\\Icons\\ability_mount_redfrostwyrm_01",							-- Wrathful Gladiator: Season 8
+		
+		[-9983] = "Interface\\Icons\\inv_jewelry_amulet_03",				-- Honor
 	};
 	["HEADER_NAMES"] = {
 		[0] = ZONE.." "..BATTLE_PET_SOURCE_1, 									-- Zone Drop
@@ -790,6 +808,25 @@ app.L = {
 		[-577] = "Warcraft Movie",
 		[-578] = "World of Warcraft 15th Anniversary",
 		[-579] = "Dark Portal Pass",
+		
+	-- PvP Set Names
+		[-659] = "Aspirant Gear",												-- Aspirant PvP Gear (WoD, BfA)
+		[-660] = "Combatant Gear",												-- Combatant PvP Gear (WoD, Legion)
+		[-661] = "Gladiator Gear",												-- Gladiator PvP Gear
+		[-662] = "Elite Gear",													-- Elite PvP Gear
+	-- The Burning Crusade PvP Seasons
+		[-664] = "Gladiator",						-- Gladiator: Season 1
+		[-665] = "Merciless Gladiator",				-- Merciless Gladiator: Season 2
+		[-666] = "Vengeful Gladiator",				-- Vengeful Gladiator: Season 3
+		[-667] = "Brutal Gladiator",				-- Brutal Gladiator: Season 4
+	-- Wrath of the Lich-King PvP Seasons
+		[-668] = "Deadly Gladiator",				-- Deadly Gladiator: Season 5
+		[-657] = "Hateful Gladiator",				-- Hateful Gladiator: Season 5
+		[-669] = "Furious Gladiator",				-- Furious Gladiator: Season 6
+		[-670] = "Relentless Gladiator",			-- Relentless Gladiator: Season 7
+		[-671] = "Wrathful Gladiator",				-- Wrathful Gladiator: Season 8
+		
+		[-9983] = HONOR,							-- Honor
 -- Factions / Cities
 		[-10066] = "Legendary",
 	},
@@ -1010,7 +1047,8 @@ app.L = {
 		[1] = {1, "|CFFFF0000This was never available to players.|r", "Never Implemented"},
 		[2] = {1, "|CFFFF0000This has been removed from the game.|r", "Removed From Game"},
 		[3] = {2, "|CFFFF0000This is locked behind a paywall such as the in-game shop, another Blizzard product, or the Recruit-A-Friend service.|r", "Blizzard Balance", nil, nil, "\n \n|CFFFFAAAAThe act of encouraging the use of real money in the Classic version of the game is widely frowned upon. Participate in this content at your own risk.|r" },
-
+		[4] = {3, "|CFFFF0000This can no longer be purchased or unlocked as Transmog unless you have the required PvP Title, required PvP Rating or were in the Top % of that season.|r", "PvP Elite/Gladiator"},
+		
 		-- Future Content Releases
 		[11] = {2, "|CFFAAFFAAThis was not available until Phase 1 of WoW Classic.|r", "Phase 1", 1130100, 11301, "\n \n|CFFFFAAAAIncluded Molten Core and Onyxia's Lair.|r" },
 		[1101] = {2, "|CFFAAFFAAThis became available with the Dire Maul Phase Release of WoW Classic.|r", "Dire Maul", 11301, 11301 },
