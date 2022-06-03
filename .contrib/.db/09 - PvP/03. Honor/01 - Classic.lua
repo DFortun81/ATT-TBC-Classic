@@ -1570,8 +1570,6 @@ root("PVP", {
 		applyclassicphase(TBC_PHASE_FIVE, i(43516, {	-- Brutal Nether Drake
 			["description"] = "Awarded to members of the Arena teams during TBC Season 4 that were in the 0.5% bracket of their battlegroup.",
 			["timeline"] = { "added 2.4.3.8600", "removed 3.0.1" },
-			["spellID"] = 58615,	-- Brutal Nether Drake
-			["f"] = 100,	-- Mount
 		})),
 	}),
 });

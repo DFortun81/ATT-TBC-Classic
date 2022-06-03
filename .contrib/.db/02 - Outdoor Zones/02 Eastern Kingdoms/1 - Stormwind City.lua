@@ -1424,6 +1424,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				n(28347, {	-- Miles Sidney <Poison Supplies>
+					["coord"] = { 74.2, 58.0, STORMWIND_CITY },
+					["timeline"] = { "added 3.0.1.8634" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(38579, {	-- Venomous Tome
+							["timeline"] = { "created 2.4.2", "added 3.0.1.8634" },
+						}),
+					},
+				}),
 				n(277, {	-- Roberto Pupellyverbos <Merlot Connoisseur>
 					["coord"] = { 52.0, 67.8, STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
@@ -1435,3 +1445,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 		},
 	}),
 }));
+
+-- #if BEFORE 3.0.1.8634
+root("NeverImplemented", {
+	i(38579, {	-- Venomous Tome
+		["timeline"] = { "created 2.4.2", "added 3.0.1.8634" },
+	}),
+});
+-- #endif
