@@ -2450,7 +2450,7 @@ end
 -- Synchronization Functions
 (function()
 local outgoing,incoming,queue,active = {},{},{};
-local whiteListedFields = { "FlightPaths", "Exploration", "BattlePets", "Achievements", "Spells", "Titles", "Toys", "Quests", "Factions"};
+local whiteListedFields = { "FlightPaths", "Exploration", "BattlePets", "Achievements", "RWP", "Spells", "Titles", "Toys", "Quests", "Factions"};
 function splittoarray(sep, inputstr)
 	local t = {};
 	for str in string.gmatch(inputstr, "([^" .. (sep or "%s") .. "]+)") do
@@ -5880,6 +5880,9 @@ local BestItemLinkPerItemID = setmetatable({}, { __index = function(t, id)
 		return link;
 	end
 end });
+local BlacklistedRWPItems = {
+	[22736] = true,	-- Andonisus, Reaper of Souls
+};
 app.ParseItemID = function(itemName)
 	if type(itemName) == "number" then
 		return itemName;
@@ -5948,7 +5951,7 @@ local itemFields = {
 		return true;
 	end,
 	["collectible"] = function(t)
-		return t.collectibleAsCost;
+		return t.collectibleAsCost or t.collectibleAsRWP;
 	end,
 	["collectibleAsCost"] = function(t)
 		local id = t.itemID;
@@ -5968,8 +5971,6 @@ local itemFields = {
 				end
 			end
 			return false;
-		--elseif t.rwp then
-		--	return true;
 		elseif t.metaAfterFailure then
 			setmetatable(t, t.metaAfterFailure);
 			return false;
@@ -5977,6 +5978,17 @@ local itemFields = {
 	end,
 	["collectibleAsCostAfterFailure"] = function(t)
 		return false;
+	end,
+	["collectibleAsRWP"] = function(t)
+		if t.rwp then
+			if app.CollectibleRWP and t.f and not BlacklistedRWPItems[t.itemID] then
+				if app.Settings:Get("AccountMode") or app.Settings:Get("DebugMode") or ((not t.b or t.b == 2 or t.b == 3) and app.Settings:Get("Filter:BoEs")) then
+					return app.Settings:GetFilterForRWPBase(t.f);
+				elseif app.RecursiveClassAndRaceFilter(t) and app.RecursiveGroupRequirementsFilter(t) then
+					return app.Settings:GetFilterForRWP(t.f) and app.Settings:GetFilter(t.f);
+				end
+			end
+		end
 	end,
 	["collectibleAsFaction"] = function(t)
 		return app.CollectibleReputations or t.collectibleAsCost;
@@ -5994,7 +6006,7 @@ local itemFields = {
 		return t.collectibleAsCost;
 	end,
 	["collected"] = function(t)
-		return t.collectedAsCost;
+		return t.collectedAsCost or t.collectedAsRWP;
 	end,
 	["collectedAsCost"] = function(t)
 		local id, partial = t.itemID;
@@ -6057,12 +6069,50 @@ local itemFields = {
 			end
 			return partial and 2 or 1;
 		end
-		--if t.rwp then
-		--	return GetItemCount(id, true) > 0;
-		--end
 	end,
 	["collectedAsCostAfterFailure"] = function(t)
 		
+	end,
+	["collectedAsRWP"] = function(t)
+		if t.rwp and app.CollectibleRWP and t.f then
+			local id = t.itemID;
+			if not t.b or t.b == 2 or t.b == 3 then
+				if GetItemCount(id, true) > 0 then
+					if not ATTAccountWideData.RWP[id] and app.lastMsg then
+						print((t.text or RETRIEVING_DATA) .. " was added to your collection!");
+						app:PlayFanfare();
+					end
+					app.CurrentCharacter.RWP[id] = 1;
+					ATTAccountWideData.RWP[id] = 1;
+					return 1;
+				elseif app.CurrentCharacter.RWP[id] then
+					app.CurrentCharacter.RWP[id] = nil;
+					for guid,character in pairs(ATTCharacterData) do
+						if character.RWP and character.RWP[id] then
+							ATTAccountWideData.RWP[id] = 1;
+							return app.AccountWideRWP and 2;
+						end
+					end
+					if ATTAccountWideData.RWP[id] then
+						print((t.text or RETRIEVING_DATA) .. " was removed from your collection!");
+						ATTAccountWideData.RWP[id] = nil;
+						app:PlayRemoveSound();
+					end
+					return 0;
+				end
+			elseif app.Settings:GetFilterForRWP(t.f) and app.RecursiveDefaultClassAndRaceFilter(t) then
+				if t.parent and t.parent.key == "questID" and t.parent.saved then
+					if not ATTAccountWideData.RWP[id] and app.lastMsg then
+						print((t.text or RETRIEVING_DATA) .. " was added to your collection!");
+						app:PlayFanfare();
+					end
+					app.CurrentCharacter.RWP[id] = 1;
+					ATTAccountWideData.RWP[id] = 1;
+					return 1;
+				end
+			end
+			if app.AccountWideRWP and ATTAccountWideData.RWP[id] then return 2; end
+		end
 	end,
 	["collectedAsFaction"] = function(t)
 		return t.collectedAsFactionOnly or t.collectedAsCost;
@@ -8221,6 +8271,13 @@ end
 app.RecursiveClassAndRaceFilter = function(group)
 	if app.ClassRequirementFilter(group) and app.RaceRequirementFilter(group) then
 		if group.parent then return app.RecursiveClassAndRaceFilter(group.parent); end
+		return true;
+	end
+	return false;
+end
+app.RecursiveDefaultClassAndRaceFilter = function(group)
+	if app.FilterItemClass_RequireClasses(group) and app.FilterItemClass_RequireRaces(group) then
+		if group.parent then return app.RecursiveDefaultClassAndRaceFilter(group.parent); end
 		return true;
 	end
 	return false;
@@ -13600,7 +13657,7 @@ app:GetWindow("Sync", UIParent, function(self)
 				local character = ATTCharacterData[t.unit];
 				if character then
 					local total = 0;
-					for i,field in ipairs({ "Achievements", "BattlePets", "Exploration", "Factions", "FlightPaths", "Spells", "Titles", "Toys", "Quests" }) do
+					for i,field in ipairs({ "Achievements", "BattlePets", "Exploration", "Factions", "FlightPaths", "RWP", "Spells", "Titles", "Toys", "Quests" }) do
 						local values = character[field];
 						if values then
 							local subtotal = 0;
@@ -14474,6 +14531,7 @@ app.events.VARIABLES_LOADED = function()
 	if not currentCharacter.FlightPaths then currentCharacter.FlightPaths = {}; end
 	if not currentCharacter.Lockouts then currentCharacter.Lockouts = {}; end
 	if not currentCharacter.Quests then currentCharacter.Quests = {}; end
+	if not currentCharacter.RWP then currentCharacter.RWP = {}; end
 	if not currentCharacter.Spells then currentCharacter.Spells = {}; end
 	if not currentCharacter.SpellRanks then currentCharacter.SpellRanks = {}; end
 	if not currentCharacter.Titles then currentCharacter.Titles = {}; end
@@ -14608,6 +14666,7 @@ app.events.VARIABLES_LOADED = function()
 	if not accountWideData.Factions then accountWideData.Factions = {}; end
 	if not accountWideData.FlightPaths then accountWideData.FlightPaths = {}; end
 	if not accountWideData.Quests then accountWideData.Quests = {}; end
+	if not accountWideData.RWP then accountWideData.RWP = {}; end
 	if not accountWideData.Spells then accountWideData.Spells = {}; end
 	if not accountWideData.Titles then accountWideData.Titles = {}; end
 	if not accountWideData.Toys then accountWideData.Toys = {}; end

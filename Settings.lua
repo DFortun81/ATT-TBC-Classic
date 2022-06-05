@@ -95,6 +95,7 @@ local GeneralSettingsBase = {
 		["AccountWide:Quests"] = false,
 		["AccountWide:Recipes"] = true,
 		["AccountWide:Reputations"] = true,
+		["AccountWide:RWP"] = true,
 		["AccountWide:Titles"] = true,
 		["AccountWide:Toys"] = true,
 		["Thing:Achievements"] = true,
@@ -108,6 +109,7 @@ local GeneralSettingsBase = {
 		["Thing:Quests"] = true,
 		["Thing:Recipes"] = true,
 		["Thing:Reputations"] = true,
+		--["Thing:RWP"] = false,
 		["Thing:Titles"] = true,
 		["Thing:Toys"] = true,
 		["Show:CompletedGroups"] = false,
@@ -115,6 +117,11 @@ local GeneralSettingsBase = {
 	},
 };
 local FilterSettingsBase = {
+	__index = {
+
+	},
+};
+local RWPFilterSettingsBase = {
 	__index = {
 
 	},
@@ -218,8 +225,11 @@ settings.Initialize = function(self)
 	-- Assign the preset filters for your character class as the default states
 	if not ATTClassicSettingsPerCharacter then ATTClassicSettingsPerCharacter = {}; end
 	if not ATTClassicSettingsPerCharacter.Filters then ATTClassicSettingsPerCharacter.Filters = {}; end
+	if not ATTClassicSettingsPerCharacter.RWPFilters then ATTClassicSettingsPerCharacter.RWPFilters = {}; end
 	setmetatable(ATTClassicSettingsPerCharacter.Filters, FilterSettingsBase);
+	setmetatable(ATTClassicSettingsPerCharacter.RWPFilters, RWPFilterSettingsBase);
 	FilterSettingsBase.__index = app.Presets[app.Class] or app.Presets.ALL;
+	RWPFilterSettingsBase.__index = app.PresetRWPs[app.Class] or app.PresetRWPs.ALL;
 
 	self.LocationsSlider:SetValue(self:GetTooltipSetting("Locations"));
 	self.MainListScaleSlider:SetValue(self:GetTooltipSetting("MainListScale"));
@@ -278,6 +288,12 @@ end
 settings.GetFilter = function(self, filterID)
 	return ATTClassicSettingsPerCharacter.Filters[filterID];
 end
+settings.GetFilterForRWPBase = function(self, filterID)
+	return app.PresetRWPs.ALL[filterID];
+end
+settings.GetFilterForRWP = function(self, filterID)
+	return ATTClassicSettingsPerCharacter.RWPFilters[filterID];
+end
 settings.GetModeString = function(self)
 	local mode = "Mode";
 	if self:Get("DebugMode") then
@@ -317,6 +333,9 @@ settings.GetModeString = function(self)
 		
 		if self:Get("Thing:Mounts") then
 			mode = mode .. " + Mounts";
+		end
+		if self:Get("Thing:RWP") then
+			mode = mode .. " + RWP";
 		end
 	end
 	if self:Get("Filter:ByLevel") then
@@ -491,6 +510,7 @@ settings.UpdateMode = function(self)
 		app.CollectibleQuests = true;
 		app.CollectibleRecipes = true;
 		app.CollectibleReputations = true;
+		app.CollectibleRWP = true;
 		app.CollectibleTitles = true;
 		app.CollectibleToys = true;
 	else
@@ -512,6 +532,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideQuests = self:Get("AccountWide:Quests");
 		app.AccountWideRecipes = self:Get("AccountWide:Recipes");
 		app.AccountWideReputations = self:Get("AccountWide:Reputations");
+		app.AccountWideRWP = self:Get("AccountWide:RWP");
 		app.AccountWideTitles = self:Get("AccountWide:Titles");
 		app.AccountWideToys = self:Get("AccountWide:Toys");
 
@@ -525,6 +546,7 @@ settings.UpdateMode = function(self)
 		app.CollectibleQuests = self:Get("Thing:Quests");
 		app.CollectibleRecipes = self:Get("Thing:Recipes");
 		app.CollectibleReputations = self:Get("Thing:Reputations");
+		app.CollectibleRWP = self:Get("Thing:RWP");
 		app.CollectibleTitles = self:Get("Thing:Titles");
 		app.CollectibleToys = self:Get("Thing:Toys");
 
@@ -982,6 +1004,43 @@ end);
 LootCheckBox:SetATTTooltip("Enable this option to track loot.\n\nLoot being any item you can get from a mob, quest, or container. Loot that qualifies for one of the other filters will still appear in ATT if this filter is turned off.\n\nYou can change which sort of loot displays for you based on the Filters tab.\n\nDefault: Class Defaults, Disabled.");
 LootCheckBox:SetPoint("TOPLEFT", FlightPathsCheckBox, "BOTTOMLEFT", 0, 4);
 
+local RWPCheckBox = settings:CreateCheckBox("Removed With Patch Loot",
+function(self)
+	self:SetChecked(settings:Get("Thing:RWP"));
+	if settings:Get("DebugMode") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("Thing:RWP", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+RWPCheckBox:SetATTTooltip("Enable this option to track future removed from game loot. Only Items tagged with 'removed with patch' data count toward this. If you find an item not tagged that should be tagged, please let me know!\n\nYou can change which sort of loot displays for you based on the Filters tab.\n\nDefault: Class Defaults, Disabled.");
+RWPCheckBox:SetPoint("TOPLEFT", LootCheckBox, "BOTTOMLEFT", 0, 4);
+
+local RWPAccountWideCheckBox = settings:CreateCheckBox("Account Wide",
+function(self)
+	self:SetChecked(settings:Get("AccountWide:RWP"));
+	if settings:Get("DebugMode") or not settings:Get("Thing:RWP") then
+		self:Disable();
+		self:SetAlpha(0.2);
+	else
+		self:Enable();
+		self:SetAlpha(1);
+	end
+end,
+function(self)
+	settings:Set("AccountWide:RWP", self:GetChecked());
+	settings:UpdateMode();
+	app:RefreshData();
+end);
+RWPAccountWideCheckBox:SetATTTooltip("Removed from Game Items should be collected account wide. Certain items cannot be learned by every class, so ATT will do its best to only show you things that you can collect on your current character.");
+RWPAccountWideCheckBox:SetPoint("TOPLEFT", RWPCheckBox, "TOPLEFT", 220, 0);
 
 local MountsCheckBox = settings:CreateCheckBox("Mounts",
 function(self)
@@ -1000,7 +1059,7 @@ function(self)
 	app:RefreshData();
 end);
 MountsCheckBox:SetATTTooltip("Enable this option to track mounts.\n\nFair warning! Do this at your own risk, it will take up a lot of inventory space across your account and they can not be sent between characters!\n\nAdditionally, the cost of all Vendor mounts is reduced to 1/10 of their current prices with Wrath.");
-MountsCheckBox:SetPoint("TOPLEFT", LootCheckBox, "BOTTOMLEFT", 0, 4);
+MountsCheckBox:SetPoint("TOPLEFT", RWPCheckBox, "BOTTOMLEFT", 0, 4);
 
 local MountsAccountWideCheckBox = settings:CreateCheckBox("Account Wide",
 function(self)
@@ -1482,7 +1541,7 @@ end
 
 -- Miscellaneous
 yoffset = -4;
-for i,filterID in ipairs({ 113, 55, 104 }) do
+for i,filterID in ipairs({ 113, 55, 104, 11 }) do
 	local filter = settings:CreateCheckBox(itemFilterNames[filterID] or tostring(filterID), ItemFilterOnRefresh, ItemFilterOnClick);
 	filter:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, yoffset);
 	filter.filterID = filterID;
