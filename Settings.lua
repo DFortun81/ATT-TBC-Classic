@@ -1541,7 +1541,7 @@ end
 
 -- Miscellaneous
 yoffset = -4;
-for i,filterID in ipairs({ 113, 55, 104, 11 }) do
+for i,filterID in ipairs({ 113, 55, 104, 36 }) do
 	local filter = settings:CreateCheckBox(itemFilterNames[filterID] or tostring(filterID), ItemFilterOnRefresh, ItemFilterOnClick);
 	filter:SetPoint("TOPLEFT", last, "BOTTOMLEFT", 0, yoffset);
 	filter.filterID = filterID;

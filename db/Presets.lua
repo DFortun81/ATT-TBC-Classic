@@ -39,7 +39,7 @@ select(2, ...).Presets = {
 		false, -- [33]
 		false, -- [34]
 		false, -- [35]
-		true, -- [36]
+		false, -- [36]
 		[50] = true,
 		[51] = true,
 		[52] = true,
@@ -92,7 +92,7 @@ select(2, ...).Presets = {
 		false, -- [33]
 		true, -- [34]
 		false, -- [35]
-		true, -- [36]
+		false, -- [36]
 		[50] = true,
 		[51] = true,
 		[52] = true,
@@ -145,7 +145,7 @@ select(2, ...).Presets = {
 		true, -- [33]
 		true, -- [34]
 		false, -- [35]
-		true, -- [36]
+		false, -- [36]
 		[50] = true,
 		[51] = true,
 		[52] = true,
@@ -198,7 +198,7 @@ select(2, ...).Presets = {
 		false, -- [33]
 		false, -- [34]
 		false, -- [35]
-		true, -- [36]
+		false, -- [36]
 		[50] = true,
 		[51] = true,
 		[52] = true,
@@ -251,7 +251,7 @@ select(2, ...).Presets = {
 		false, -- [33]
 		false, -- [34]
 		false, -- [35]
-		true, -- [36]
+		false, -- [36]
 		[50] = true,
 		[51] = true,
 		[52] = true,
@@ -295,7 +295,7 @@ select(2, ...).Presets = {
 		[33] = false,
 		[34] = false,
 		[35] = false,
-		[36] = true,
+		[36] = false,
 		[50] = true,
 		[51] = true,
 		[52] = true,
@@ -348,6 +348,7 @@ select(2, ...).Presets = {
 		true, -- [33]
 		true, -- [34]
 		false, -- [35]
+		true,	-- [36]
 		[50] = true,
 		[51] = true,
 		[52] = true,
@@ -435,7 +436,7 @@ select(2, ...).Presets = {
 		[33] = false,
 		[34] = false,
 		[35] = false,
-		[36] = true,
+		[36] = false,
 		[50] = true,
 		[51] = true,
 		[52] = true,

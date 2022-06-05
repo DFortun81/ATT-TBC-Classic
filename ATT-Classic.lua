@@ -6076,31 +6076,7 @@ local itemFields = {
 	["collectedAsRWP"] = function(t)
 		if t.rwp and app.CollectibleRWP and t.f then
 			local id = t.itemID;
-			if not t.b or t.b == 2 or t.b == 3 then
-				if GetItemCount(id, true) > 0 then
-					if not ATTAccountWideData.RWP[id] and app.lastMsg then
-						print((t.text or RETRIEVING_DATA) .. " was added to your collection!");
-						app:PlayFanfare();
-					end
-					app.CurrentCharacter.RWP[id] = 1;
-					ATTAccountWideData.RWP[id] = 1;
-					return 1;
-				elseif app.CurrentCharacter.RWP[id] then
-					app.CurrentCharacter.RWP[id] = nil;
-					for guid,character in pairs(ATTCharacterData) do
-						if character.RWP and character.RWP[id] then
-							ATTAccountWideData.RWP[id] = 1;
-							return app.AccountWideRWP and 2;
-						end
-					end
-					if ATTAccountWideData.RWP[id] then
-						print((t.text or RETRIEVING_DATA) .. " was removed from your collection!");
-						ATTAccountWideData.RWP[id] = nil;
-						app:PlayRemoveSound();
-					end
-					return 0;
-				end
-			elseif app.Settings:GetFilterForRWP(t.f) and app.RecursiveDefaultClassAndRaceFilter(t) then
+			if t.b and t.b == 1 and app.Settings:GetFilterForRWP(t.f) and app.RecursiveDefaultClassAndRaceFilter(t) then
 				if t.parent and t.parent.key == "questID" and t.parent.saved then
 					if not ATTAccountWideData.RWP[id] and app.lastMsg then
 						print((t.text or RETRIEVING_DATA) .. " was added to your collection!");
@@ -6110,6 +6086,30 @@ local itemFields = {
 					ATTAccountWideData.RWP[id] = 1;
 					return 1;
 				end
+			end
+			
+			if GetItemCount(id, true) > 0 then
+				if not ATTAccountWideData.RWP[id] and app.lastMsg then
+					print((t.text or RETRIEVING_DATA) .. " was added to your collection!");
+					app:PlayFanfare();
+				end
+				app.CurrentCharacter.RWP[id] = 1;
+				ATTAccountWideData.RWP[id] = 1;
+				return 1;
+			elseif app.CurrentCharacter.RWP[id] then
+				app.CurrentCharacter.RWP[id] = nil;
+				for guid,character in pairs(ATTCharacterData) do
+					if character.RWP and character.RWP[id] then
+						ATTAccountWideData.RWP[id] = 1;
+						return app.AccountWideRWP and 2;
+					end
+				end
+				if ATTAccountWideData.RWP[id] then
+					print((t.text or RETRIEVING_DATA) .. " was removed from your collection!");
+					ATTAccountWideData.RWP[id] = nil;
+					app:PlayRemoveSound();
+				end
+				return 0;
 			end
 			if app.AccountWideRWP and ATTAccountWideData.RWP[id] then return 2; end
 		end
