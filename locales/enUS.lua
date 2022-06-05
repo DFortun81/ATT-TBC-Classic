@@ -891,6 +891,7 @@ app.L = {
 		["Blackrock Spire"] = 250,
 		[DUNGEON_FLOOR_TANARIS18] = 75,	-- Caverns of Time
 		[C_Map.GetAreaInfo(132)] = 427,	-- Coldridge Valley
+		[C_Map.GetAreaInfo(800)] = 427,	-- Coldridge Pass
 		["Deadmines"] = 291,
 		["Dire Maul"] = 234,
 		["Deeprun Tram"] = 499,
