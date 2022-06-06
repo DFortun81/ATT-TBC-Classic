@@ -13,7 +13,7 @@ local OnTooltipForRavenholdt = [[function(t)
 		else
 			GameTooltip:AddLine("Protip: Bring a stack of Repair Bots with you.", 0.5, 1, 0.5);
 			local repPerTurnIn = isHuman and 82.5 or 75;
-			local x, n = math.ceil((41999 - reputation) / repPerTurnIn), math.ceil(21000 / repPerTurnIn);
+			local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(21000 / repPerTurnIn);
 			GameTooltip:AddDoubleLine("Turn in Heavy Junkboxes.", ((n - x) * 5) .. " / " .. (n * 5) .. " (" .. (x * 5) .. ")", 1, 1, 1);
 		end
 	end
