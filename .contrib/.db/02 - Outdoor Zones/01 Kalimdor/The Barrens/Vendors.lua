@@ -9,7 +9,14 @@ _.Zones =
 				n(3495, {	-- Gagsprocket <Engineering Goods>
 					["coord"] = { 62.7, 36.3, THE_BARRENS },
 					["groups"] = {
-						i(18648),	-- Schematic: Green Firework
+						i(18648, {	-- Schematic: Green Firework
+							["isLimited"] = true,
+						}),
+						-- #if AFTER TBC
+						i(14639, {	-- Schematic: Minor Recombobulator
+							["isLimited"] = true,
+						}),
+						-- #endif
 					},
 				}),
 				n(3493, {	-- Grazlix <Armorer & Shieldcrafter>
