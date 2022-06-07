@@ -6087,7 +6087,7 @@ local itemFields = {
 						if searchResults and #searchResults > 0 then
 							local any = false;
 							for i,o in ipairs(searchResults) do
-								if o.parent and o.parent.key == "questID" and o.parent.saved and app.RecursiveDefaultClassAndRaceFilter(o) then
+								if ((o.key == "questID" and o.saved) or (o.parent and o.parent.key == "questID" and o.parent.saved)) and app.RecursiveDefaultClassAndRaceFilter(o) then
 									any = true;
 								end
 							end
