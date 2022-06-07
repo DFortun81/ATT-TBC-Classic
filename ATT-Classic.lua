@@ -13737,6 +13737,17 @@ app:GetWindow("Sync", UIParent, function(self)
 						end,
 						['OnUpdate'] = app.AlwaysShowUpdate,
 					},
+					{
+						['text'] = "Sync All Characters",
+						['icon'] = app.asset("Ability_Priest_VoidShift"),
+						['description'] = "Click here to sync all of your characters.",
+						['visible'] = true,
+						['OnClick'] = function(row, button)
+							app:Synchronize();
+							return true;
+						end,
+						['OnUpdate'] = app.AlwaysShowUpdate,
+					},
 					-- Characters Section
 					{
 						['text'] = "Characters",
@@ -13751,7 +13762,7 @@ app:GetWindow("Sync", UIParent, function(self)
 										['OnClick'] = OnClickForCharacter,
 										['OnTooltip'] = OnTooltipForCharacter,
 										['OnUpdate'] = app.AlwaysShowUpdate,
-										["saved"] = not character.ignored,
+										["saved"] = not character.ignored and 1,
 										["trackable"] = true,
 										['visible'] = true,
 									}));
