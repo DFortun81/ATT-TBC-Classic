@@ -5980,7 +5980,7 @@ local itemFields = {
 		return false;
 	end,
 	["collectibleAsRWP"] = function(t)
-		if t.rwp then
+		if (t.rwp or (t.u and (t.u == 2 or t.u == 3 or t.u == 4))) then
 			if app.CollectibleRWP and t.f and not BlacklistedRWPItems[t.itemID] then
 				return app.Settings:GetFilterForRWPBase(t.f);
 				--[[
@@ -6077,28 +6077,36 @@ local itemFields = {
 		
 	end,
 	["collectedAsRWP"] = function(t)
-		if t.rwp and app.CollectibleRWP and t.f and app.Settings:GetFilterForRWPBase(t.f) then
-			local id = t.itemID;
-			if t.b and t.b == 1 then
+		if (t.rwp or (t.u and (t.u == 2 or t.u == 3 or t.u == 4))) and app.CollectibleRWP and t.f and app.Settings:GetFilterForRWPBase(t.f) then
+			local id, b = t.itemID, t.b;
+			if b and b == 1 then
 				-- BOP Rules
 				if t.parent and t.parent.key == "questID" and not t.parent.repeatable then
-					if t.parent.saved and app.Settings:GetFilterForRWP(t.f) and app.RecursiveDefaultClassAndRaceFilter(t) then
-						if not ATTAccountWideData.RWP[id] and app.lastMsg then
-							print((t.text or RETRIEVING_DATA) .. " was added to your collection!");
-							app:PlayFanfare();
+					if app.Settings:GetFilterForRWP(t.f) then
+						local searchResults = app.SearchForField("itemID", id);
+						if searchResults and #searchResults > 0 then
+							local any = false;
+							for i,o in ipairs(searchResults) do
+								if o.parent and o.parent.key == "questID" and o.parent.saved and app.RecursiveDefaultClassAndRaceFilter(o) then
+									any = true;
+								end
+							end
+							if any then
+								if not ATTAccountWideData.RWP[id] and app.lastMsg then
+									print((t.text or RETRIEVING_DATA) .. " was added to your collection!");
+									app:PlayFanfare();
+								end
+								app.CurrentCharacter.RWP[id] = 1;
+								ATTAccountWideData.RWP[id] = 1;
+								return 1;
+							end
 						end
-						app.CurrentCharacter.RWP[id] = 1;
-						ATTAccountWideData.RWP[id] = 1;
-						return 1;
 					end
-					
-					if app.AccountWideRWP and ATTAccountWideData.RWP[id] then return 2; end
-					return 0;
 				end
 			end
 			
 			-- BOE Rules
-			if GetItemCount(id, true) > 0 then
+			if GetItemCount(id, true) > 0 and ((not b or b == 2 or b == 3) or app.Settings:GetFilterForRWP(t.f)) then
 				if not ATTAccountWideData.RWP[id] and app.lastMsg then
 					print((t.text or RETRIEVING_DATA) .. " was added to your collection!");
 					app:PlayFanfare();
