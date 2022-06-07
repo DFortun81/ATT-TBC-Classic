@@ -25,6 +25,7 @@ ROOTS = {
 	["InGameShop"] = "InGameShop",
 	["PetBattles"] = "PetBattles",
 	["HiddenQuestTriggers"] = "HiddenQuestTriggers",
+	["HiddenAchievementTriggers"] = "HiddenAchievementTriggers",
 	["NeverImplemented"] = "NeverImplemented",
 	["Factions"] = "Factions",
 	["Holidays"] = "Holidays",
@@ -243,6 +244,7 @@ SHADOWMOON_VALLEY = 1948;
 
 -- Cataclysm
 MOUNT_HYJAL = 198;
+DEEPHOLM = 207;
 
 -- Wrath of the Lich King
 NORTHREND = 113;
@@ -302,6 +304,39 @@ HELHEIM = 649;
 HIGHMOUNTAIN = 650;
 SURAMAR = 680;
 EYE_OF_AZSHARA = 790;
+-- Class Halls
+ACHERUS_THE_EBON_HOLD_THE_HEART_OF_ACHERUS = 647;
+ACHERUS_THE_EBON_HOLD_HALL_OF_COMMAND = 648;
+DREADSCAR_RIFT = 717;
+HALL_OF_THE_GUARDIAN = 734;
+HALL_OF_THE_GUARDIAN_2ND_FLOOR = 735;
+MARDUM_THE_SHATTERED_ABYSS_UPPER_COMMAND_CENTER = 720;
+MARDUM_THE_SHATTERED_ABYSS_LOWER_COMMAND_CENTER = 721;
+NETHERLIGHT_TEMPLE = 702;
+SANCTUM_OF_LIGHT = LIGHTS_HOPE_CHAPEL; -- = 24
+SKYHOLD = 695;
+THE_DREAMGROVE = 747;
+THE_HALL_OF_SHADOWS = 626;
+THE_HEART_Of_AZEROTH = 726;
+THE_WANDERING_ISLE = 709;
+TRUESHOT_LODGE = 739;
+CLASS_HALL_MAPS = {
+	ACHERUS_THE_EBON_HOLD_THE_HEART_OF_ACHERUS,
+	ACHERUS_THE_EBON_HOLD_HALL_OF_COMMAND,
+	DREADSCAR_RIFT,
+	HALL_OF_THE_GUARDIAN,
+	HALL_OF_THE_GUARDIAN_2ND_FLOOR,
+	MARDUM_THE_SHATTERED_ABYSS_UPPER_COMMAND_CENTER,
+	MARDUM_THE_SHATTERED_ABYSS_LOWER_COMMAND_CENTER,
+	NETHERLIGHT_TEMPLE,
+	SANCTUM_OF_LIGHT,
+	SKYHOLD,
+	THE_DREAMGROVE,
+	THE_HALL_OF_SHADOWS,
+	THE_HEART_Of_AZEROTH,
+	THE_WANDERING_ISLE,
+	TRUESHOT_LODGE,
+};
 
 -- Battle for Azeroth
 ZULDAZAR = 862;
@@ -340,6 +375,7 @@ ARCHONS_RISE = 1707;
 SANCTUM_OF_BINDING = 1708;
 KORTHIA = 1961;
 TAZAVESH_THE_VEILED_MARKET_WORLD = 2016;
+TORGHAST = 1627;
 ZERETH_MORTIS = 1970;
 
 -- RACES
@@ -777,6 +813,8 @@ SEASON_BRUTAL = -667;
 --SEASON_CORRUPTED = -692;
 --SEASON_SINFUL = -693;
 --SEASON_UNCHAINED = -694;
+--SEASON_COSMIC = -695;
+--SEASON_ETERNAL = -696;
 
 -- Expansion Features
 --LEGENDARIES = -364;
@@ -863,9 +901,16 @@ FIST_WEAPONS = 34;
 WARGLAIVES = 35;
 THROWN = 36;
 MISC = 50;
+NECK_F = 51;
+FINGER_F = 52;
+TRINKET_F = 53;
+CONSUMABLES = 55;
 MOUNTS = 100;
 BATTLE_PETS = 101;
 TOYS = 102;
+QUEST_ITEMS = 104;
+TITLES = 110;
+BAGS = 113;
 RECIPES = 200;
 
 -- Professions
@@ -903,6 +948,16 @@ WOD_TIER = 6;
 LEGION_TIER = 7;
 BFA_TIER = 8;
 SL_TIER = 9;
+
+-- #if AFTER CATA
+CURRENT_TIER = CATA_TIER;
+-- #elseif AFTER WRATH
+CURRENT_TIER = WRATH_TIER;
+-- #elseif AFTER TBC
+CURRENT_TIER = TBC_TIER;
+-- #else
+CURRENT_TIER = CLASSIC_TIER;
+-- #endif
 
 -- Unobtainable Filters
 NEVER_IMPLEMENTED = 1;
@@ -1236,6 +1291,7 @@ ItemClassInfo = {
 		["class"] = "Consumable",
 	},
 };
+TIMEWALKING_DUNGEON_CREATURE_IDS = {};
 POST_PROCESSING_FUNCTIONS = {};
 
 -- Construct a commonly formatted object.
@@ -1252,7 +1308,18 @@ end
 
 -- Helper Functions
 isarray = function(t)
-	return type(t) == 'table' and (#t > 0 or next(t) == nil);
+	return t and type(t) == 'table' and (#t > 0 or next(t) == nil);
+end
+-- Ensures that 't' has a 'groups' field containing the array data of the table
+togroups = function(t)
+	if isarray(t) then
+		local groups = {};
+		for _,group in ipairs(t) do
+			table.insert(groups, group);
+		end
+		t = { ["groups"] = groups };
+	end
+	return t;
 end
 addObject = function(o, t)
 	table.insert(t, o);
@@ -1277,40 +1344,42 @@ applyData = function(data, t)
 		end
 	end
 end
+-- Applies a copy of the provided data into the tables of the provided array
 sharedData = function(data, t)
-	for i, group in ipairs(t) do
-		for key, value in pairs(data) do
-			if not group[key] then
-				group[key] = value;
-			end
+	if t then
+		for _,group in ipairs(t) do
+			applyData(data, group);
 		end
 	end
 	return t;
 end
+-- Performs sharedData logic but also applies the data to the top-level table
+sharedDataSelf = function(data, t)
+	-- if this is an array, convert to .g container first to prevent merge confusion
+	t = togroups(t);
+	-- then apply the data to itself
+	applyData(data, t);
+	-- then apply regular sharedData on the group
+	return sharedData(data, t);
+end
+-- Applies a copy of the provided data into all sub-groups of the provided table/array
 bubbleDown = function(data, t)
 	if t then
 		if t.g or t.groups then
-			for key, value in pairs(data) do
-				if not t[key] then
-					t[key] = value;
-				end
-			end
+			applyData(data, t);
 			bubbleDown(data, t.groups);
 			bubbleDown(data, t.g);
 		elseif isarray(t) then
-			for i,group in ipairs(t) do
+			for _,group in ipairs(t) do
 				bubbleDown(data, group);
 			end
 		else
-			for key, value in pairs(data) do
-				if not t[key] then
-					t[key] = value;
-				end
-			end
+			applyData(data, t);
 		end
 		return t;
 	end
 end
+-- Applies a copy of the provided data into all sub-groups of the provided table/array assuming that table matches the requirements of the filter.
 bubbleDownFiltered = function(data, filter, t)
 	if t then
 		if t.g or t.groups then
@@ -1347,39 +1416,48 @@ bubbleDownAndReplace = function(data, t)
 		return t;
 	end
 end
+-- Performs bubbleDown logic but also applies the data to the top-level table
+bubbleDownSelf = function(data, t)
+	-- if this is an array, convert to .g container first to prevent merge confusion
+	t = togroups(t);
+	-- then apply regular bubbleDown on the group
+	return bubbleDown(data, t);
+end
 bubbleUp = function(t)
-	local t2 = {};
-	for i, group in pairs(t) do
-		table.insert(t2, group);
-	end
-	for i=#t,1,-1 do
-		table.remove(t, i);
-	end
-	for i, group in pairs(t2) do
-		if type(i) ~= "number" then
-			print("You're trying to use '" .. i .. "' in a 'groups' field. (can't do that!)");
-		elseif type(group) ~= "table" then
-			print("You're trying to use '" .. group .. "' in a 'groups' field. (can't do that!)");
-		else
-			if group.bubble then
-				-- this isn't just a normal group object, merge up the contents.
-				if group.groups or group.g then
-					for j,subgroup in pairs(group.groups or group.g) do
-						if type(j) ~= "number" then
-							print("You're trying to use '" .. j .. "' in a 'groups' field. (can't do that!)");
-						elseif type(subgroup) ~= "table" then
-							print("You're trying to use '" .. subgroup .. "' in a 'groups' field. (can't do that!)");
-						else
-							table.insert(t, subgroup);
+	if t then
+		local t2 = {};
+		for i, group in pairs(t) do
+			table.insert(t2, group);
+		end
+		for i=#t,1,-1 do
+			table.remove(t, i);
+		end
+		for i, group in pairs(t2) do
+			if type(i) ~= "number" then
+				print("You're trying to use '" .. i .. "' in a 'groups' field. (can't do that!)");
+			elseif type(group) ~= "table" then
+				print("You're trying to use '" .. group .. "' in a 'groups' field. (can't do that!)");
+			else
+				if group.bubble then
+					-- this isn't just a normal group object, merge up the contents.
+					if group.groups or group.g then
+						for j,subgroup in pairs(group.groups or group.g) do
+							if type(j) ~= "number" then
+								print("You're trying to use '" .. j .. "' in a 'groups' field. (can't do that!)");
+							elseif type(subgroup) ~= "table" then
+								print("You're trying to use '" .. subgroup .. "' in a 'groups' field. (can't do that!)");
+							else
+								table.insert(t, subgroup);
+							end
 						end
 					end
+				else
+					table.insert(t, group);
 				end
-			else
-				table.insert(t, group);
 			end
 		end
+		return t;
 	end
-	return t;
 end
 contains = function(arr, value)
 	for i,value2 in ipairs(arr) do
@@ -1539,7 +1617,25 @@ end
 category = function(id, t)								-- Create a CATEGORY Object.
 	return struct("categoryID", id, t);
 end
-cl = function(id, t)									-- Create a CHARACTER CLASS Object
+cl = function(id, specc, t)									-- Create a CHARACTER CLASS Object
+	-- specc is optional
+	if not t then
+		t = specc;
+	else
+		if specc == FROST or specc == RESTORATION or specc == HOLY or specc == PROTECTION then
+			if id == MAGE then
+				specc = 64;
+			elseif id == SHAMAN then
+				specc = 264;
+			elseif id == PRIEST then
+				specc = 257
+			elseif id == WARRIOR then
+				specc = 73;
+			end
+		end
+		id = id + (specc / 1000 )
+		t = togroups(t)
+	end;
 	return struct("classID", id, t);
 end
 creature = function(id, t)								-- Create a CREATURE Object
@@ -1613,6 +1709,32 @@ fp = flightpath;										-- Create a FLIGHT PATH Object (Alternative)
 filter = function(id, t)								-- Create a FILTER Object
 	return struct("f", id, t);
 end
+f = filter;												-- Create a FILTER Object (Alternative)
+follower = function(id, t)								-- Create a FOLLOWER Object
+	return struct("followerID", id, t);
+end
+garrisonBuilding = function(id, t)						-- Create a GARRISON BUILDING Object
+	return struct("buildingID", id, t);
+end
+gb = garrisonBuilding;									-- Create a GARRISON BUILDING Object (Alternative)
+garrisonTalent = function(id, t)						-- Create a GARRISON TALENT Object
+	return struct("talentID", id, t);
+end
+gt = function(id, t)									-- Create an GARRISON TALENT Object (Alternative)
+	return struct("talentID", id, t);
+end
+gs = function(id, t)									-- Create a GEAR SET Object (IE: "Vestments of Prophecy")
+	return struct("setID", id, t);
+end
+gsh = function(id, t)									-- Create a GEAR SET HEADER Object (IE: "Season 1")
+	return struct("setHeaderID", id, t);
+end
+gssh = function(id, t)									-- Create a GEAR SET SUB HEADER Object (IE: "Gladiator")
+	return struct("setSubHeaderID", id, t);
+end
+heir = function(id, t)									-- Create an HEIRLOOM Object(NOTE: You should only use this if not an appearance)
+	return struct("itemID", id, t);
+end
 holiday = function(id, t)								-- Create an HOLIDAY Object
 	return struct("holidayID", id, t);
 end
@@ -1620,11 +1742,19 @@ ho = holiday;											-- Create an HOLIDAY Object (alternative shortcut)
 illusion = function(id, t)								-- Create an ILLUSION Object (only necessary for illusions without itemIDs)
 	return struct("illusionID", id, t);
 end
+ill = illusion;											-- Create an ILLUSION Object
 item = function(id, t)									-- Create an ITEM Object
 	return struct("itemID", id, t);
 end
 i = item;												-- Create an ITEM Object (alternative shortcut)
-inst = function(id, t)									-- Create an INSTANT Object
+ig = function(id, t)									-- Create an ITEM Object that ignores bonus IDs.
+	t = struct("itemID", id, t);
+	-- #if NOT ANYCLASSIC
+	t.ignoreBonus = true;
+	-- #endif
+	return t;
+end
+inst = function(id, t)									-- Create an INSTANCE Object
 	if t then
 		t.instanceID = id;
 		-- #if BEFORE WRATH
@@ -1654,8 +1784,26 @@ inst = function(id, t)									-- Create an INSTANT Object
 		return struct("instanceID", id, t);
 	end
 end
-ill = function(id, t)									-- Create an ILLUSION Object
-	return struct("illusionID", id, t);
+inst_tw = function(id ,t)								-- Create a TIMEWALKING INSTANCE Object
+	t = inst(id, t);
+	t.u = TIMEWALKING;
+	-- Look for the CreatureID's
+	local groups = t.groups or t.g;
+	if groups then
+		for _,data in ipairs(groups) do
+			if data.encounterID then
+				if data.creatureID and data.creatureID > 0 then
+					table.insert(TIMEWALKING_DUNGEON_CREATURE_IDS, data.creatureID);
+				end
+				if data.crs then
+					for _,creatureID in ipairs(data.crs) do
+						table.insert(TIMEWALKING_DUNGEON_CREATURE_IDS, creatureID);
+					end
+				end
+			end
+		end
+	end
+	return t;
 end
 map = function(id, t)									-- Create a MAP Object
 	return struct("mapID", id, t);
@@ -1666,6 +1814,12 @@ mark = function(cost, item)								-- Assign a Mark of Honor cost to an item wit
 	item["cost"] = { { "i", 137642, cost } };	-- Mark of Honor
 	-- #endif
 	return item;
+end
+mission = function(id, t)								-- Create an MISSION Object
+	return struct("missionID", id, t);
+end
+mi = function(id, t)									-- Create a MISSION Object (Alternative)
+	return struct("missionID", id, t);
 end
 mount = function(id, t)									-- Create a MOUNT Object, which is just a spellID with a filter.
 	return struct("mountID", id, t);
@@ -1722,6 +1876,7 @@ end
 recipe = function(id, t)								-- Create a RECIPE Object
 	return struct("recipeID", id, t);
 end
+r = recipe;												-- Create a RECIPE Object (alternative shortcut)
 root = function(category, g)							-- Create a ROOT CATEGORY Object
 	if not g then g = g or {}; end
 	local o = _[category];
@@ -1771,7 +1926,19 @@ spell = function(id, t)									-- Create a SPELL Object
 	return struct("spellID", id, t);
 end
 sp = spell;												-- Create a SPELL Object (alternative shortcut)
-tier = function(id, t)									-- Create a TIER Object
+tier = function(id, patch, t)							-- Create a TIER Object
+	-- patch is optional
+	if not t then
+		t = patch;
+	else
+		id = id + (patch / 100);
+		t = togroups(t);
+	end
+	--[[
+	if id > CURRENT_TIER then
+		return nil;
+	end
+	]]--
 	return struct("tierID", id, t);
 end
 title = function(id, t)									-- Create a TITLE Object
@@ -1821,6 +1988,14 @@ crit = function(criteriaID, t)           -- Create an Achievement Criteria Objec
 end
 model = function(displayID, t)
 	t.displayID = displayID;
+	return t;
+end
+crs = function(id, t)											-- Add a Creature List to an object.
+	if type(id) == "number" then
+		t.cr = id;
+	else
+		t.crs = id;
+	end
 	return t;
 end
 h = function(t) -- Flag as Horde Only
