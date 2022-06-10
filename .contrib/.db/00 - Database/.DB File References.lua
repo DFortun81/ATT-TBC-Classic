@@ -6,3 +6,18 @@
 -- #IMPORT: 00 - DB\\ObjectDB.lua
 -- #IMPORT: 00 - DB\\PetDB.lua
 -- #IMPORT: 00 - DB\\ToyDB.lua
+-- #IMPORT: 00 - Item Database\Build NYI.lua
+-- #IMPORT: 00 - Item Database\ProfessionDB
+-- #IMPORT: 00 - Item Database\BindOnAccountItems.lua
+-- #IMPORT: 00 - Item Database\Blueprints.lua
+-- #IMPORT: 00 - Item Database\Conduits.lua
+-- #IMPORT: 00 - Item Database\Garrison Buildings.lua
+-- #IMPORT: 00 - Item Database\Grand Commendations.lua
+-- #IMPORT: 00 - Item Database\Illusions.lua
+-- Can't use 00 - Item Database\ItemRecipes.lua
+-- #IMPORT: 00 - Item Database\MusicRolls.lua
+-- #IMPORT: 00 - Item Database\RuneforgePowers.lua
+-- Can't use 00 - Item Database\SourceIDs.lua
+-- #IMPORT: 00 - Item Database\Specializations.lua
+-- #IMPORT: 00 - Item Database\Uncollectable.lua
+-- #IMPORT: 00 - Item Database\UnobtainableItems.lua

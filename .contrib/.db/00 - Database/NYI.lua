@@ -867,12 +867,6 @@ root("NeverImplemented", {
 		i(25798),	-- 130 Epic Warrior Trinket
 		i(25801),	-- 130 Test Caster Trinket
 	}),
-	filter(100, {	-- Mounts
-		i(27819),	-- Crazy Raptor 75
-		i(27853),	-- Crazy Raptor 150
-		i(28482),	-- Great Elite Elekk
-		i(28025),	-- Video Mount / Video Mount (MOUNT!)
-	}),
 	filter(BATTLE_PETS, {
 		-- #if BEFORE 7.0.3
 		i(23712),	-- White Tiger Cub -- later reused for Ash'ana.

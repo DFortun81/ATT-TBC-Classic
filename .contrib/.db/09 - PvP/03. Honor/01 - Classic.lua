@@ -1573,12 +1573,3 @@ root("PVP", {
 		})),
 	}),
 });
-root("NeverImplemented", bubbleDown({ ["u"] = NEVER_IMPLEMENTED }, {
-	filter(100, {	-- Mounts
-		i(16343),	-- Blood Guard's Mount
-		i(16339),	-- Commander's Steed
-		i(16338),	-- Knight-Lieutenant's Steed
-		i(29225),	-- zzoldSwift Warstrider
-		i(16344),	-- zzUNUSEDLieutenant General's Mount
-	}),
-}));
