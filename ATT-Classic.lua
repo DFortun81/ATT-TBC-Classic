@@ -4017,7 +4017,18 @@ end,
 		if not t.rep then
 			local f = app.SearchForField("factionID", factionID);
 			if f and #f > 0 then
-				t.rep = f[1];
+				if #f == 1 then
+					t.rep = f[1];
+				else
+					for i,o in ipairs(f) do
+						if o.key == "factionID" then
+							t.rep = o;
+						end
+					end
+					if not t.rep then
+						return true;
+					end
+				end
 			else
 				return true;
 			end
