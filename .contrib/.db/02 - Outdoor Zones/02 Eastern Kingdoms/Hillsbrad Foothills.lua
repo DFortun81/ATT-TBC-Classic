@@ -989,6 +989,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						2266,	-- Hillsbrad Farmer
 					},
 				}),
+				-- #if BEFORE CATA
+				i(6211, {	-- Recipe: Elixir of Ogre's Strength
+					["cr"] = 2373,	-- Mudsnout Shaman
+				}),
+				-- #endif
 				applyclassicphase(PHASE_FIVE, i(22229, {	-- Soul Ashes of the Banished
 					["crs"] = {
 						7071,	-- Cursed Paladin
