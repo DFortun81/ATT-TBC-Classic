@@ -16,7 +16,62 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["OnUpdate"] = [[_.CommonAchievementHandlers.EXPLORATION_OnUpdate]],
 					-- #endif
 				})),
+				ach(4904, {	-- Swamp of Sorrows Quests
+					["timeline"] = { "added 4.0.3" },
+					["groups"] = {
+						crit(1, {	-- Bogpaddle
+							["sourceQuest"] = 27600,	-- In With a Bang
+						}),
+						crit(2, {	-- The Bloodmire (alliance)
+							["races"] = ALLIANCE_ONLY,
+							["sourceQuests"] = {
+								27849,	-- Assault on Stonard
+								27851,	-- Cutting Supply
+							},
+						}),
+						crit(2, {	-- The Bloodmire (horde)
+							["races"] = HORDE_ONLY,
+							["sourceQuest"] = 27857,	-- We're Under Attack!
+						}),
+						crit(3, {	-- The Shifting Mire (alliance)
+							["races"] = ALLIANCE_ONLY,
+							["sourceQuest"] = 24913,	-- Remember the Light
+						}),
+						crit(3, {	-- The Shifting Mire (horde)
+							["races"] = HORDE_ONLY,
+							["sourceQuest"] = 27911,	-- With Dying Breath
+						}),
+						crit(4, {	-- The Sunken Temple
+							["sourceQuest"] = 27914,	-- Blessing of the Green Dragonflight
+						}),
+					},
+				}),
 			}),
+			-- #if AFTER MOP
+			petbattle(filter(BATTLE_PETS, {
+				p(648, {	-- Huge Toad
+					["crs"] = { 61368 },	-- Huge Toad
+				}),
+				p(422, {	-- Moccasin
+					["crs"] = { 61372 },	-- Moccasin
+				}),
+				p(403, {	-- Parrot
+					["crs"] = { 61313 },	-- Parrot
+				}),
+				p(401, {	-- Strand Crab
+					["crs"] = { 61312 },	-- Strand Crab
+				}),
+				p(402, {	-- Swamp Moth
+					["crs"] = { 61370 },	-- Swamp Moth
+				}),
+				p(420, {	-- Toad
+					["crs"] = { 61369 },	-- Toad
+				}),
+				p(418, {	-- Water Snake
+					["crs"] = { 61367 },	-- Water Snake
+				}),
+			})),
+			-- #endif
 			-- #if ANYCLASSIC
 			n(EXPLORATION, explorationBatch({
 				["215:365:724:120"] = 1778,	-- Sorrowmurk
@@ -41,7 +96,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 			n(FLIGHT_PATHS, {
 				fp(56, {	-- Stonard, Swamp of Sorrows
 					["cr"] = 6026,	-- Breyk <Wind Rider Master>
+					-- #if AFTER CATA
+					["coord"] = { 47.6, 55.0, SWAMP_OF_SORROWS },
+					-- #else
 					["coord"] = { 46.0, 54.6, SWAMP_OF_SORROWS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 				}),
 			}),

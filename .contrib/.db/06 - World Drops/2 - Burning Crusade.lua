@@ -959,6 +959,10 @@ root("WorldDrops", applyclassicphase(TBC_PHASE_ONE, tier(TBC_TIER, {
 	filter(50, {	-- Miscellaneous
 		i(29739),	-- Arcane Tome
 		i(29740),	-- Fel Armament
+		i(29426),	-- Firewing Signet [The Scryers]
+		i(29425),	-- Mark of Kil'jaden [The Aldor]
+		i(30809),	-- Mark of Sargeras [The Aldor]
+		i(30810),	-- Sunfury Signet [The Scryers]
 	}),
 	applyclassicphase(TBC_PHASE_THREE, category(106, {	-- Tarrot Cards
 		-- Blessings Deck
