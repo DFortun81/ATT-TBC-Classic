@@ -12,11 +12,15 @@ _.Zones =
 					["coord"] = { 66.4, 45.5, DUSTWALLOW_MARSH },
 					["maps"] = { SWAMP_OF_SORROWS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 5938, 12 },	-- Pristine Crawler Leg
-					},
 					["lvl"] = 33,
 					["groups"] = {
+						objective(1, {	-- 0/12 Pristine Crawler Leg
+							["provider"] = { "i", 5938 },	-- Pristine Crawler Leg
+							["crs"] = {
+								1088,	-- Monstrous Crawler
+								922,	-- Silt Crawler
+							},
+						}),
 						i(6801),	-- Baroque Apron
 					},
 				}),

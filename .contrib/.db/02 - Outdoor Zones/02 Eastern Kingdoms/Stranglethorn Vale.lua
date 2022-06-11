@@ -514,6 +514,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 29.5, 89.3, STRANGLETHORN_VALE },
 						{ 33.6, 88.3, STRANGLETHORN_VALE },
 					},
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { SWAMP_OF_SORROWS },
 					["lvl"] = 35,
 				}),
@@ -521,6 +522,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["provider"] = { "o", 2553 },	-- A Soggy Scroll
 					["sourceQuest"] = 624,	-- Cortello's Riddle (1/3)
 					["coord"] = { 22.8, 48.1, SWAMP_OF_SORROWS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { DUSTWALLOW_MARSH },
 					["lvl"] = 35,
 				}),
@@ -528,13 +530,14 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["provider"] = { "o", 255 },	-- Musty Scroll
 					["sourceQuest"] = 625,	-- Cortello's Riddle (2/3)
 					["coord"] = { 31.1, 66.1, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { THE_HINTERLANDS },
 					["lvl"] = 35,
 					["groups"] = {
 						{
 							["itemID"] = 11324,	-- Explorer's Knapsack
-							["questID"] = 626,	-- Cortello's Riddle
 							["coord"] = { 80.8, 46.8, THE_HINTERLANDS },
+							["timeline"] = { "removed 4.0.3" },
 						},
 					},
 				}),
@@ -555,10 +558,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["sourceQuest"] = 1115,	-- The Rumormonger
 					["coord"] = { 27, 77.2, STRANGLETHORN_VALE },
 					["maps"] = { SWAMP_OF_SORROWS },
-					["cost"] = {
-						{ "i", 5803, 10 },	-- Speck of Dream Dust
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/10 Speck of Dream Dust
+							["provider"] = { "i", 5803 },	-- Speck of Dream Dust
+							["crs"] = {
+								740,	-- Adolescent Whelp
+								741,	-- Dreaming Whelp
+								746,	-- Elder Dragonkin
+								744,	-- Green Scalebane
+								742,	-- Green Wyrmkin
+								14445,	-- Lord Captain Wyrmak
+								745,	-- Scalebane Captain
+							},
+						}),
+					},
 				}),
 				q(9272, {	-- Dressing the Part
 					["qg"] = 2546,	-- Fleet Master Firallon
