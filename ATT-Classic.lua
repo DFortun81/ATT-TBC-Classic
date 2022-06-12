@@ -635,7 +635,7 @@ end
 local function GetProgressTextForTooltip(data)
 	if data.total and (data.total > 1 or (data.total > 0 and not data.collectible)) then
 		return GetProgressColorText(data.progress or 0, data.total);
-	elseif data.collectible then
+	elseif data.collectible or (data.spellID and data.itemID and data.trackable) then
 		return GetCollectionText(data.collected);
 	elseif data.trackable then
 		return GetCompletionText(data.saved);
