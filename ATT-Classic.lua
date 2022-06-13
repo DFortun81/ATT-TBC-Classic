@@ -8355,7 +8355,7 @@ UpdateGroup = function(parent, group)
 			visible = UpdateGroups(group, group.g);
 			
 			-- If the 'can equip' filter says true
-			if app.GroupFilter(group) then
+			if app.GroupFilter(group) and app.ClassRequirementFilter(group) and app.RaceRequirementFilter(group) then
 				-- Increment the parent group's totals.
 				parent.total = (parent.total or 0) + group.total;
 				parent.progress = (parent.progress or 0) + group.progress;
@@ -12075,6 +12075,10 @@ app:GetWindow("CurrentInstance", UIParent, function(self, force, got)
 							clone[key] = value;
 						end
 					end
+					local c = GetRelativeValue(group, "c");
+					if c then clone.c = c; end
+					local r = GetRelativeValue(group, "r");
+					if r then clone.r = r; end
 					setmetatable(clone, getmetatable(group));
 					
 					-- If this is relative to a holiday, let's do something special
