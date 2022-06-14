@@ -187,3 +187,4 @@ root("PVP", n(-32, {	-- Honor Titles
 
 -- NYI
 -- #IMPORT: 17 - NYI\\NYI Mounts.lua
+-- #IMPORT: 17 - NYI\\NYI Recipes.lua

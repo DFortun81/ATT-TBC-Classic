@@ -527,7 +527,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 35,
 				}),
 				q(626, {	-- Cortello's Riddle (3/3)
-					["provider"] = { "o", 255 },	-- Musty Scroll
+					["provider"] = { "o", 2555 },	-- Musty Scroll
 					["sourceQuest"] = 625,	-- Cortello's Riddle (2/3)
 					["coord"] = { 31.1, 66.1, DUSTWALLOW_MARSH },
 					["timeline"] = { "removed 4.0.3" },
