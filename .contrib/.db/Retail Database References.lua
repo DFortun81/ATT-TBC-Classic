@@ -74,6 +74,7 @@
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Silvermoon City.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Blackrock Mountain.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Blasted Lands.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Burning Steppes.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Deadwind Pass.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Deeprun Tram.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Dun Morogh.lua
