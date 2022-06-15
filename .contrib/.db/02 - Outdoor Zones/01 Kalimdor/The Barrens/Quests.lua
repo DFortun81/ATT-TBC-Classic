@@ -1426,14 +1426,20 @@ _.Zones =
 						1805,	-- Tome of the Cabal (3/3 Horde)
 					},
 					["coord"] = { 62.6, 35.4, THE_BARRENS },
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { WARLOCK },
-					["cost"] = {
-						{ "i", 6999, 1 },	-- Tome of the Cabal
-					},
 					["lvl"] = 30,
 					["groups"] = {
+						objective(1, {	-- Summoned Felhunter slain
+							["provider"] = { "n", 6268 },	-- Summoned Felhunter
+							["cost"] = { { "i", 6999, 1 } },	-- Tome of the Cabal
+						}),
+						-- #if BEFORE 4.0.3
 						recipe(691),	-- Summon Felhunter
-						i(22244),	-- Box of Souls
+						-- #endif
+						i(22244, {	-- Box of Souls
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(4964, {	-- The Completed Orb of Dar'Orahil

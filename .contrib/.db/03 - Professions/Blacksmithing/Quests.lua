@@ -131,21 +131,6 @@ profession(BLACKSMITHING, {
 			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
 			["lvl"] = 40,
 		}),
-		q(1618, {	-- Gearing Redridge
-			["qg"] = 6031,	-- Tormus Deepforge
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 48.6, 43, IRONFORGE },
-			["races"] = ALLIANCE_ONLY,
-			["cost"] = {
-				{ "i", 2857, 4 },	-- Runed Copper Belt
-				{ "i", 6214, 4 },	-- Heavy Copper Maul
-			},
-			["groups"] = {
-				i(6735, {	-- Plans: Ironforge Breastplate
-					["description"] = "This item can be sold on the Neutral Auction House to Horde Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Alliance Blacksmiths.",
-				}),
-			},
-		}),
 		q(2754, {	-- Horns of Frenzy
 			["qg"] = 7790,	-- Orokk Omosh
 			["sourceQuest"] = 2753,	-- Trampled Under Foot
@@ -348,23 +333,6 @@ profession(BLACKSMITHING, {
 			["lvl"] = 50,
 			["groups"] = {
 				i(12821),	-- Plans: Dawn's Edge
-			},
-		}),
-		q(1578, {	-- Supplying the Front
-			["qg"] = 6031,	-- Tormus Deepforge
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 48.5, 43, IRONFORGE },
-			["races"] = ALLIANCE_ONLY,
-			["cost"] = {
-				{ "i", 2845, 6 },	-- Copper Axe
-				{ "i", 2851, 6 },	-- Copper Chain Belt
-			},
-			["groups"] = {
-				-- #if AFTER TBC
-				i(33792), 	-- Plans: Heavy Copper Longsword
-				-- #else
-				i(3609),	-- Plans: Copper Chain Vest
-				-- #endif
 			},
 		}),
 		q(5305, {	-- Sweet Serenity

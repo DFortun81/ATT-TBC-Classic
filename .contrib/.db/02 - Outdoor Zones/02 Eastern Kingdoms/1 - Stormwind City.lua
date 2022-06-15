@@ -967,6 +967,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["classes"] = { PALADIN },
 					["repeatable"] = true,
 					["lvl"] = 12,
+					["groups"] = {
+						i(6866),	-- Symbol of Life
+					},
 				}),
 				q(2998, {	-- The Tome of Divinity (1a/10)
 					["qg"] = 927,	-- Brother Wilhelm
