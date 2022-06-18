@@ -980,6 +980,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(2624, {	-- Thinking Cap
+					["timeline"] = { "removed 4.0.3", "added 8.0.0" },
 					["cr"] = 2718,	-- Dustbelcher Shaman
 				}),
 				i(9428, {	-- Unearthed Bands
