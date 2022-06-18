@@ -14,6 +14,31 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					-- #endif
 				})),
 			}),
+			-- #if AFTER MOP
+			petbattle(filter(BATTLE_PETS, {
+				p(406, {	-- Beetle
+					["crs"] = { 61319 },
+				}),
+				p(398, {	-- Black Rat
+					["crs"] = { 61257 },
+				}),
+				p(430, {	-- Gold Beetle
+					["crs"] = { 61438 },
+				}),
+				p(438, {	-- King Snake
+					["crs"] = { 61443 },
+				}),
+				p(431, {	-- Rattlesnake
+					["crs"] = { 61439 },
+				}),
+				p(433, {	-- Spiky Lizard
+					["crs"] = { 61441 },
+				}),
+				p(432, {	-- Stripe-Tailed Scorpid
+					["crs"] = { 61440 },
+				}),
+			})),
+			-- #endif
 			-- #if ANYCLASSIC
 			n(EXPLORATION, {
 				exploration(345, "265:270:345:389"),	-- Agmond's End
@@ -65,11 +90,18 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2910,	-- Prospector Ryedol <Explorers' League>
 					["coord"] = { 53.4, 43.2, BADLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4616, 1 },	-- Ryedol's Lucky Pick
-					},
 					["lvl"] = 35,
 					["groups"] = {
+						objective(1, {	-- 0/1 Ryedol's Lucky Pick
+							["provider"] = { "i", 4616 },	-- Ryedol's Lucky Pick
+							["crs"] = {
+								2742,	-- Shadowforge Chanter
+								2744,	-- Shadowforge Commander
+								2740,	-- Shadowforge Darkweaver
+								2739,	-- Shadowforge Tunneler
+								2743,	-- Shadowforge Warrior
+							},
+						}),
 						i(4978),	-- Ryedol's Hammer
 					},
 				}),
@@ -179,10 +211,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(782, {	-- Broken Alliances
 					["qg"] = 1068,	-- Gorn
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4640, 1 },	-- Sign of the Earth
-					},
 					["lvl"] = 40,
+					["groups"] = {
+						objective(1, {	-- 0/1 Sign of the Earth
+							["provider"] = { "i", 4640 },	-- Sign of the Earth
+							["cr"] = 2944,	-- Boss Tho'grun
+						}),
+					},
 				}),
 				q(793, {	-- Broken Alliances
 					["qg"] = 1068,	-- Gorn
@@ -208,10 +243,18 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(1419, {	-- Coyote Thieves
 					["qg"] = 5394,	-- Neeka Bloodscar
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 6166, 30 },	-- Coyote Jawbone
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/30 Coyote Jawbone
+							["provider"] = { "i", 6166 },	-- Coyote Jawbone
+							["crs"] = {
+								2727,	-- Crag Coyote
+								2729,	-- Elder Crag Coyote
+								2728,	-- Feral Crag Coyote
+								2730,	-- Rabid Crag Coyote
+							},
+						}),
+					},
 				}),
 				q(3821, {	-- Dreadmaul Rock
 					["qg"] = 9082,	-- Thal'trak Proudtusk
@@ -222,11 +265,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(706, {	-- Fiery Blaze Enchantments
 					["qg"] = 2860,	-- Sigrun Ironhew
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4612, 1 },	-- Black Drake's Heart
-					},
 					["lvl"] = 40,
 					["groups"] = {
+						objective(1, {	-- Black Drake's Heart
+							["provider"] = { "i", 4612 },	-- Black Drake's Heart
+							["crs"] = {
+								2726,	-- Scorched Guardian
+								2725,	-- Scalding Whelp
+							},
+						}),
 						i(5421),	-- Fiery Blaze Enchantment
 					},
 				}),
@@ -264,10 +311,18 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 4618,	-- Martek the Exiled
 					["sourceQuest"] = 1106,	-- Martek the Exiled
 					["coord"] = { 42.22, 52.69, BADLANDS },
-					["cost"] = {
-						{ "i", 5797, 10 },	-- Indurium Flake
-					},
 					["lvl"] = 28,
+					["groups"] = {
+						objective(1, {	-- 0/10 Indurium Flake
+							["provider"] = { "i", 5797 },	-- Indurium Flake
+							["crs"] = {
+								6733,	-- Stonevault Basher
+								2893,	-- Stonevault Bonesnapper
+								2892,	-- Stonevault Seer
+								2894,	-- Stonevault Shaman
+							},
+						}),
+					},
 				}),
 				q(715, {	-- Liquid Stone
 					["qg"] = 2920,	-- Lucien Tosselwrench
@@ -342,12 +397,34 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2817,	-- Rigglefuzz
 					["coord"] = { 42.39, 52.93, BADLANDS },
 					["maps"] = { ULDAMAN },
-					["cost"] = {
-						{ "i", 8052, 8 },	-- An'Alleum Power Stone
-						{ "i", 8009, 8 },	-- Dentrium Power Stone
-					},
 					["lvl"] = 30,
 					["groups"] = {
+						objective(1, {	-- 0/8 Dentrium Power Stone
+							["crs"] = {
+								4844,	-- Shadowforge Surveyor
+								4845,	-- Shadowforge Ruffian
+								4846,	-- Shadowforge Digger
+								4847,	-- Shadowforge Relic Hunter
+								4848,	-- Shadowforge Darkcaster
+								4849,	-- Shadowforge Archaeologist
+								7030,	-- Shadowforge Geologist
+								7290,	-- Shadowforge Sharpshooter
+								7091,	-- Shadowforge Ambusher
+							},
+						}),
+						objective(2, {	-- 0/8 An'Alleum Power Stone
+							["crs"] = {
+								4844,	-- Shadowforge Surveyor
+								4845,	-- Shadowforge Ruffian
+								4846,	-- Shadowforge Digger
+								4847,	-- Shadowforge Relic Hunter
+								4848,	-- Shadowforge Darkcaster
+								4849,	-- Shadowforge Archaeologist
+								7030,	-- Shadowforge Geologist
+								7290,	-- Shadowforge Sharpshooter
+								7091,	-- Shadowforge Ambusher
+							},
+						}),
 						i(9522),	-- Energized Stone Circle
 						i(10358),	-- Duracin Bracers
 						i(10359),	-- Everlast Boots
@@ -415,11 +492,22 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["sourceQuest"] = 718,	-- Mirages
 					["coord"] = { 53.8, 43.3, BADLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4630, 7 },	-- Scrap Metal
-					},
 					["lvl"] = 35,
 					["groups"] = {
+						objective(1, {	-- 0/7 Scrap Metal
+							["provider"] = { "i", 4630 },	-- Scrap Metal
+							["crs"] = {
+								2715,	-- Dustbelcher Brute
+								2719,	-- Dustbelcher Lord
+								2717,	-- Dustbelcher Mauler
+								2907,	-- Dustbelcher Mystic
+								2701,	-- Dustbelcher Ogre
+								2720,	-- Dustbelcher Ogre Mage
+								2718,	-- Dustbelcher Shaman
+								2906,	-- Dustbelcher Warrior
+								2716,	-- Dustbelcher Wyrmhunter
+							},
+						}),
 						i(4652),	-- Salbac Shield
 						i(4653),	-- Ironheel Boots
 					},
@@ -498,27 +586,36 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2921,	-- Lotwil Veriatus
 					["sourceQuest"] = 711,	-- Study of the Elements: Rock
 					["coord"] = { 25.8, 45, BADLANDS },
-					["cost"] = {
-						{ "i", 4628, 5 },	-- Bracers of Rock Binding
-					},
 					["lvl"] = 35,
+					["groups"] = {
+						objective(1, {	-- 0/5 Bracers of Rock Binding
+							["provider"] = { "i", 4628 },	-- Bracers of Rock Binding
+							["cr"] = 2736,	-- Greater Rock Elemental
+						}),
+					},
 				}),
 				q(711, {	-- Study of the Elements: Rock
 					["qg"] = 2921,	-- Lotwil Veriatus
 					["sourceQuest"] = 710,	-- Study of the Elements: Rock
 					["coord"] = { 25.8, 45, BADLANDS },
-					["cost"] = {
-						{ "i", 4627, 3 },	-- Large Stone Slab
-					},
 					["lvl"] = 35,
+					["groups"] = {
+						objective(1, {	-- 0/3 Large Stone Slab
+							["provider"] = { "i", 4627 },	-- Large Stone Slab
+							["cr"] = 92,	-- Rock Elemental
+						}),
+					},
 				}),
 				q(710, {	-- Study of the Elements: Rock
 					["qg"] = 2921,	-- Lotwil Veriatus
 					["coord"] = { 25.8, 45, BADLANDS },
-					["cost"] = {
-						{ "i", 4626, 10 },	-- Small Stone Shard
-					},
 					["lvl"] = 35,
+					["groups"] = {
+						objective(1, {	-- 0/10 Small Stone Shard
+							["provider"] = { "i", 4626 },	-- Small Stone Shard
+							["cr"] = 2735,	-- Lesser Rock Elemental
+						}),
+					},
 				}),
 				un(NEVER_IMPLEMENTED, q(708, {	-- The Black Box
 					["provider"] = { "i", 4613 },	-- Corroded Black Box
@@ -530,12 +627,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2785,	-- Theldurin the Lost
 					["sourceQuest"] = 687,	-- Theldurin the Lost
 					["coord"] = { 51.4, 76.9, BADLANDS },
-					["cost"] = {
-						{ "i", 4519, 1 },	-- Crumpled Scroll Fragment
-						{ "i", 4520, 1 },	-- Singed Scroll Fragment
-						{ "i", 4518, 1 },	-- Torn Scroll Fragment
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/1 Torn Scroll Fragment
+							["provider"] = { "i", 4518 },	-- Torn Scroll Fragment
+							["cr"] = 2791,	-- Enraged Rock Elemental
+						}),
+						objective(2, {	-- 0/1 Crumpled Scroll Fragment
+							["provider"] = { "i", 4519 },	-- Crumpled Scroll Fragment
+							["cr"] = 2791,	-- Enraged Rock Elemental
+						}),
+						objective(3, {	-- 0/1 Singed Scroll Fragment
+							["provider"] = { "i", 4520 },	-- Singed Scroll Fragment
+							["cr"] = 2791,	-- Enraged Rock Elemental
+						}),
+					},
 				}),
 				{	-- The Star, the Hand and the Heart
 					["allianceQuestData"] = q(735, {	-- The Star, the Hand and the Heart [A]
@@ -643,10 +749,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2888,	-- Garek
 					["sourceQuest"] = 718,	-- Mirages
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4640, 1 },	-- Sign of the Earth
-					},
 					["lvl"] = 40,
+					["groups"] = {
+						objective(1, {	-- 0/1 Sign of the Earth
+							["provider"] = { "i", 4640 },	-- Sign of the Earth
+							["cr"] = 2944,	-- Boss Tho'grun
+						}),
+					},
 				}),
 				q(2202, {	-- Uldaman Reagent Run
 					["sourceQuest"] = 2258,	-- Badlands Reagent Run
@@ -661,7 +770,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 			}),
 			n(RARES, {
 				n(14224, {	-- 7:XT <Long Distance Recovery Unit>
-					["races"] = ALLIANCE_ONLY,
+					-- #if AFTER CATA
+					["coord"] = { 78.6, 31.6, BADLANDS },
+					-- #else
 					["coords"] = {
 						{ 24.0, 52.6, BADLANDS },
 						{ 12.8, 67.0, BADLANDS },
@@ -671,8 +782,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 58.4, 67.6, BADLANDS },
 						{ 55.4, 83.8, BADLANDS },
 					},
+					["races"] = ALLIANCE_ONLY,
+					-- #endif
 				}),
 				n(2754, {	-- Anathemus
+					-- #if AFTER CATA
+					["coord"] = { 8.8, 67.0, BADLANDS },
+					-- #else
 					["coords"] = {
 						{ 48.0, 47.4, BADLANDS },
 						{ 58.0, 57.0, BADLANDS },
@@ -684,13 +800,46 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 35.4, 58.0, BADLANDS },
 						{ 43.0, 54.2, BADLANDS },
 					},
+					-- #endif
+				}),
+				n(2753, {	-- Barnabus
+					-- #if AFTER CATA
+					["coord"] = { 40.8, 58.8, BADLANDS },
+					-- #else
+					["coords"] = {
+						{ 57.2, 57.0, BADLANDS },
+						{ 54.0, 68.6, BADLANDS },
+						{ 46.2, 74.2, BADLANDS },
+						{ 38.2, 69.4, BADLANDS },
+					},
+					-- #endif
+				}),
+				-- #if AFTER CATA
+				n(2749, {	-- Barricade [CATA+] / Siege Golem
+					["coords"] = {
+						{ 9.60, 48.8, BADLANDS },
+						{ 27.2, 37.4, BADLANDS },
+					},
+				}),
+				-- #endif
+				n(51000, {	-- Blackshell the Impenetrable
+					["coord"] = { 72.2, 27.4, BADLANDS },
+					["timeline"] = { "added 5.2.0.16650" },
 				}),
 				n(2850, {	-- Broken Tooth
+					-- #if AFTER CATA
+					["coord"] = { 22.6, 60.6, BADLANDS },
+					-- #else
 					["coords"] = {
 						{ 54.0, 16.6, BADLANDS },
 						{ 45.4, 36.8, BADLANDS },
 						{ 62.0, 32.8, BADLANDS },
 					},
+					-- #endif
+				}),
+				n(50728, {	-- Deathstrike
+					["coord"] = { 70.2, 53.8, BADLANDS },
+					["timeline"] = { "added 5.1.0.16309" },
 				}),
 				n(2752, {	-- Rumbler
 					["coords"] = {
@@ -701,7 +850,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				n(2744, {	-- Shadowforge Commander
 					["coord"] = { 41.2, 26.2, BADLANDS },
 				}),
-				n(2749, {	-- Siege Golem
+				-- #if BEFORE CATA
+				n(2749, {	-- Siege Golem / Barricade [CATA+]
 					["coords"] = {
 						{ 5.6, 59.8, BADLANDS },
 						{ 13.4, 65.4, BADLANDS },
@@ -711,6 +861,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 43.0, 39.0, BADLANDS },
 					},
 				}),
+				-- #endif
 				n(2751, {	-- War Golem
 					["coords"] = {
 						{ 47.8, 13.2, BADLANDS },
@@ -729,144 +880,114 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(VENDORS, {
+				n(49918, {	-- Buckslappy <Engineering Supply Specialist>
+					["coord"] = { 91.0, 38.4, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(18649, {	-- Schematic: Blue Firework
+							["isLimited"] = true,
+						}),
+						i(18650, {	-- Schematic: EZ-Thro Dynamite II
+							["isLimited"] = true,
+						}),
+						i(18648, {	-- Schematic: Green Firework
+							["isLimited"] = true,
+						}),
+						i(18647, {	-- Schematic: Red Firework
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				n(48060, {	-- "Chef" Overheat <Cooking Supplies>
+					["coord"] = { 65.0, 38.8, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(21219),	-- Recipe: Sagefish Delight
+						i(21099),	-- Recipe: Smoked Sagefish
+						i(16767, {	-- Recipe: Undermine Clam Chowder
+							["isLimited"] = true,
+						}),
+					},
+				}),
 				n(9179, {	-- Jazzrik <Blacksmithing Supplies>
 					["coord"] = { 42.4, 52.5, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					-- #if BEFORE 4.0.3
 					["groups"] = {
 						i(10858),	-- Plans: Solid Iron Maul
 					},
+					-- #endif
 				}),
 			}),
 			n(ZONE_DROPS, {
-				i(8052, {	-- An'Alleum Power Stone
-					["questID"] = 2418,	-- Power Stones
-					["maps"] = { ULDAMAN },
+				i(9393, {	-- Beacon of Hope
 					["crs"] = {
-						4844,	-- Shadowforge Surveyor
-						4845,	-- Shadowforge Ruffian
 						4846,	-- Shadowforge Digger
-						4847,	-- Shadowforge Relic Hunter
-						4848,	-- Shadowforge Darkcaster
-						4849,	-- Shadowforge Archaeologist
-						7030,	-- Shadowforge Geologist
-						7290,	-- Shadowforge Sharpshooter
-						7091,	-- Shadowforge Ambusher
+						4845,	-- Shadowforge Ruffian
+						4844,	-- Shadowforge Surveyor
 					},
-				}),
-				i(4612, {	-- Black Drake's Heart
-					["questID"] = 706,	-- Fiery Blaze Enchantments
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						2726,	-- Scorched Guardian
-						2725,	-- Scalding Whelp
-					},
-				}),
-				i(4628, {	-- Bracers of Rock Binding
-					["questID"] = 712,	-- Study of the Elements: Rock
-					["cr"] = 2736,	-- Greater Rock Elemental
 				}),
 				i(2621, {	-- Cowl of Necromancy
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2740,	-- Shadowforge Darkweaver
 				}),
-				i(6166, {	-- Coyote Jawbone
-					["questID"] = 1419,	-- Coyote Thieves
-					["races"] = HORDE_ONLY,
+				i(10822, {	-- Dark Whelpling (PET!)
+					-- #if AFTER CATA
 					["crs"] = {
-						2727,	-- Crag Coyote
-						2729,	-- Elder Crag Coyote
-						2728,	-- Feral Crag Coyote
-						2730,	-- Rabid Crag Coyote
+						46916,	-- Nyxondra's Broodling
+						46914,	-- Raging Whelp
+						2725,	-- Scalding Whelp
 					},
-				}),
-				i(4519, {	-- Crumpled Scroll Fragment
-					["questID"] = 692,	-- The Lost Fragments
-					["cr"] = 2791,	-- Enraged Rock Elemental
-				}),
-				i(10822, {	-- Dark Whelpling
+					-- #else
 					["cr"] = 2725,	-- Scalding Whelp
+					-- #endif
 				}),
-				i(8009, {	-- Dentrium Power Stone
-					["questID"] = 2418,	-- Power Stones
-					["maps"] = { ULDAMAN },
+				i(9386, {	-- Excavator's Brand
 					["crs"] = {
-						4844,	-- Shadowforge Surveyor
-						4845,	-- Shadowforge Ruffian
 						4846,	-- Shadowforge Digger
-						4847,	-- Shadowforge Relic Hunter
-						4848,	-- Shadowforge Darkcaster
-						4849,	-- Shadowforge Archaeologist
-						7030,	-- Shadowforge Geologist
-						7290,	-- Shadowforge Sharpshooter
-						7091,	-- Shadowforge Ambusher
+						4845,	-- Shadowforge Ruffian
+						4844,	-- Shadowforge Surveyor
 					},
-				}),
-				i(4639, {	-- Enchanted Sea Kelp
-					["cr"] = 4363,	-- Mirefin Oracle
-				}),
-				i(5797, {	-- Indurium Flake
-					["questID"] = 1108,	-- Indurium
-					["crs"] = {
-						6733,	-- Stonevault Basher
-						2893,	-- Stonevault Bonesnapper
-						2892,	-- Stonevault Seer
-						2894,	-- Stonevault Shaman
-					},
-				}),
-				i(4627, {	-- Large Stone Slab
-					["questID"] = 711,	-- Study of the Elements: Rock
-					["cr"] = 92,	-- Rock Elemental
 				}),
 				i(1521, {	-- Lumbering Ogre Axe
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2719,	-- Dustbelcher Lord
 				}),
+				-- #if BEFORE 4.0.3
 				i(1993, {	-- Ogremind Ring
 					["cr"] = 2907,	-- Dustbelcher Mystic
 				}),
-				i(4616, {	-- Ryedol's Lucky Pick
-					["questID"] = 719,	-- A Dwarf and His Tools
-					["races"] = ALLIANCE_ONLY,
+				-- #endif
+				i(9406, {	-- Spirewind Fetter
 					["crs"] = {
-						2742,	-- Shadowforge Chanter
-						2744,	-- Shadowforge Commander
-						2740,	-- Shadowforge Darkweaver
-						2739,	-- Shadowforge Tunneler
-						2743,	-- Shadowforge Warrior
+						4846,	-- Shadowforge Digger
+						4845,	-- Shadowforge Ruffian
+						4844,	-- Shadowforge Surveyor
 					},
 				}),
-				i(4630, {	-- Scrap Metal
-					["questID"] = 733,	-- Scrounging
-					["races"] = ALLIANCE_ONLY,
+				i(9384, {	-- Stonevault Shiv
 					["crs"] = {
-						2715,	-- Dustbelcher Brute
-						2719,	-- Dustbelcher Lord
-						2717,	-- Dustbelcher Mauler
-						2907,	-- Dustbelcher Mystic
-						2701,	-- Dustbelcher Ogre
-						2720,	-- Dustbelcher Ogre Mage
-						2718,	-- Dustbelcher Shaman
-						2906,	-- Dustbelcher Warrior
-						2716,	-- Dustbelcher Wyrmhunter
+						4846,	-- Shadowforge Digger
+						4845,	-- Shadowforge Ruffian
+						4844,	-- Shadowforge Surveyor
 					},
 				}),
-				{
-					["itemID"] = 4640,	-- Sign of the Earth
-					["allianceQuestID"] = 732,	-- Tremors of the Earth
-					["hordeQuestID"] = 782,	-- Broken Alliances
-					["cr"] = 2944,	-- Boss Tho'grun
-				},
-				i(4520, {	-- Singed Scroll Fragment
-					["questID"] = 692,	-- The Lost Fragments
-					["cr"] = 2791,	-- Enraged Rock Elemental
-				}),
-				i(4626, {	-- Small Stone Shard
-					["questID"] = 710,	-- Study of the Elements: Rock
-					["cr"] = 2735,	-- Lesser Rock Elemental
+				i(9391, {	-- The Shoveler
+					["crs"] = {
+						4846,	-- Shadowforge Digger
+						4845,	-- Shadowforge Ruffian
+						4844,	-- Shadowforge Surveyor
+					},
 				}),
 				i(2624, {	-- Thinking Cap
 					["cr"] = 2718,	-- Dustbelcher Shaman
 				}),
-				i(4518, {	-- Torn Scroll Fragment
-					["questID"] = 692,	-- The Lost Fragments
-					["cr"] = 2791,	-- Enraged Rock Elemental
+				i(9428, {	-- Unearthed Bands
+					["crs"] = {
+						4846,	-- Shadowforge Digger
+						4845,	-- Shadowforge Ruffian
+						4844,	-- Shadowforge Surveyor
+					},
 				}),
 			}),
 		},

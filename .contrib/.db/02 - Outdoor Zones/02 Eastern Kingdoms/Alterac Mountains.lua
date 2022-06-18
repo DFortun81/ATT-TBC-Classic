@@ -511,9 +511,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						2250,	-- Mountain Yeti
 					},
 				}),
+				-- #if BEFORE 4.0.3
 				i(1993, {	-- Ogremind Ring
 					["cr"] = 2255,	-- Crushridge Mage
 				}),
+				-- #endif
 				i(5775, {	-- Pattern: Black Silk Pack
 					["cr"] = 2242,	-- Syndicate Spy
 				}),

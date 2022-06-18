@@ -71,6 +71,7 @@
 
 -- Eastern Kingdoms
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\0 - Metadata.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Ironforge.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Silvermoon City.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Blackrock Mountain.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Blasted Lands.lua

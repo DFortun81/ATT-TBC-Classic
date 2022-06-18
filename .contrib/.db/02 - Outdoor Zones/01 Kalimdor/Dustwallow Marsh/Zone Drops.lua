@@ -36,6 +36,9 @@ _.Zones =
 				i(10822, {	-- Dark Whelpling
 					["cr"] = 4324,	-- Searing Whelp
 				}),
+				i(4639, {	-- Enchanted Sea Kelp
+					["cr"] = 4363,	-- Mirefin Oracle
+				}),
 				i(5883, {	-- Forked Mudrock Tongue
 					["races"] = ALLIANCE_ONLY,
 					["crs"] = {
