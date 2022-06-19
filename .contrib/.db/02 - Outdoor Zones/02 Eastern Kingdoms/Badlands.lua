@@ -153,6 +153,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(719, {	-- A Dwarf and His Tools
 					["qg"] = 2910,	-- Prospector Ryedol <Explorers' League>
 					["coord"] = { 53.4, 43.2, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 					["groups"] = {
@@ -166,61 +167,137 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								2743,	-- Shadowforge Warrior
 							},
 						}),
-						i(4978),	-- Ryedol's Hammer
+						i(4978, {	-- Ryedol's Hammer
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
-				q(720, {	-- A Sign of Hope
+				q(27823, {	-- A Dwarf's Got Needs
+					["qg"] = 2860,	-- Sigrun Ironhew
+					["coord"] = { 49.4, 37.0, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(720, {	-- A Sign of Hope (1/2)
 					["provider"] = { "o", 2868 },	-- Crumpled Map
-					["coord"] = { 53.0, 33.9, BADLANDS },
+					["coord"] = { 53.0, 34.1, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 				}),
-				q(721, {	-- A Sign of Hope
-					["sourceQuest"] = 720,	-- A Sign of Hope
+				q(721, {	-- A Sign of Hope (2/2)
 					["qg"] = 2910,	-- Prospector Ryedol <Explorers' League>
+					["sourceQuest"] = 720,	-- A Sign of Hope (1/2)
 					["coord"] = { 53.4, 43.4, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 				}),
-				{
-					["questID"] = 722,	-- Amulet of Secrets
-					["sourceQuest"] = 721,	-- A Sign of Hope
+				q(27764, {	-- A Strange Request
+					["qg"] = 46652,	-- Dolph Blastus
+					["sourceQuest"] = 27774,	-- Easily Swayed
+					["coord"] = { 65.0, 38.3, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(63159, {	-- Parcel Bearer's Breastplate
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63158, {	-- Boots of Delivery
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63157, {	-- Lethlor Armbands
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63156, {	-- Alluring Leggings
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63205, {	-- Safety Goggles
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(27792, {	-- All's Fair in Love, War, and Archaeology
+					["qg"] = 46760,	-- Lead Prospector Durdin
+					["sourceQuest"] = 27791,	-- Dustwind Dig
+					["coord"] = { 49.2, 36.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(63186, {	-- Upstart's Breastplate
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63185, {	-- Counterfeit Chainmail
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63184, {	-- Excavation Bracers
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63183, {	-- Hooligan's Pantaloons
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(27891, {	-- Amakkar, Jack of All Trades
+					["qgs"] = { 47011, 47021 },	-- Amakkar (stationary and follower)
+					["sourceQuest"] = 27890,	-- The Bad Dogs
+					["coord"] = { 18.8, 42.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(722, {	-- Amulet of Secrets
 					["qg"] = 2909,	-- Hammertoe Grez
+					["sourceQuest"] = 721,	-- A Sign of Hope (2/2)
 					["coord"] = { 37.94, 10.53, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { ULDAMAN, LOCH_MODAN },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 					["groups"] = {
-						{
-							["itemID"] = 4635,	-- Hammertoe's Amulet
-							["questID"] = 722,	-- Amulet of Secrets
-							["qg"] = 2932,	-- Magregan Deepshadow
+						objective(1, {	-- 0/1 Hammertoe's Amulet
+							["provider"] = { "i", 4635 },	-- Hammertoe's Amulet
 							["coord"] = { 38.0, 92.6, LOCH_MODAN },
-							["races"] = ALLIANCE_ONLY,
-						},
+							["cr"] = 2932,	-- Magregan Deepshadow
+						}),
 					},
-				},
-				{
-					["questID"] = 762,	-- An Ambassador of Evil
-					["sourceQuest"] = 726,	-- Passing Word of a Threat
+				}),
+				q(762, {	-- An Ambassador of Evil
 					["qg"] = 2916,	-- Historian Karnik
-					["cost"] = {
-						{ "i", 4621, 1 },	-- Ambassador Infernus' Bracer
-					},
+					["sourceQuest"] = 726,	-- Passing Word of a Threat (2/2)
 					["coord"] = { 77.5, 11.8, IRONFORGE },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 					["groups"] = {
-						{
-							["itemID"] = 4621,	-- Ambassador Infernus' Bracer
-							["questID"] = 762,	-- An Ambassador of Evil
-							["qg"] = 2745,	-- Ambassador Infernus
+						objective(1, {	-- 0/1 Ambassador Infernus' Bracer
+							["provider"] = { "i", 4621 },	-- Ambassador Infernus' Bracer
 							["coord"] = { 42.1, 28.9, BADLANDS },
-							["races"] = ALLIANCE_ONLY,
-						},
-						i(4987),	-- Dwarf Captain's Sword
+							["qg"] = 2745,	-- Ambassador Infernus
+						}),
+						i(4987, {	-- Dwarf Captain's Sword
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
-				},
+				}),
+				q(27793, {	-- Ancient Protectors (A)
+					["qg"] = 46760,	-- Lead Prospector Durdin
+					["sourceQuests"] = {
+						27709,	-- The Sentinel's Game
+						27693,	-- The Warden's Game
+					},
+					["coord"] = { 49.2, 36.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27887, {	-- Ancient Protectors (H)
+					["qg"] = 46757,	-- High Examiner Tae'thelan Bloodwatcher
+					["sourceQuests"] = {
+						27886,	-- The Sentinel's Game
+						27885,	-- The Warden's Game
+					},
+					["coord"] = { 52.0, 51.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
 				q(2258, {	-- Badlands Reagent Run
 					["qg"] = 6868,	-- Jarkal Mossmeld
 					["coord"] = { 2.6, 46, BADLANDS },
@@ -260,20 +337,58 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(2203, {	-- Badlands Reagent Run II
+					["qg"] = 6868,	-- Jarkal Mossmeld
+					["sourceQuest"] = 2202,	-- Uldaman Reagent Run
+					["coord"] = { 2.6, 46, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["requireSkill"] = ALCHEMY,
+					["races"] = HORDE_ONLY,
+					["lvl"] = 40,
+					["groups"] = {
+						objective(1, {	-- 0/3 Vessel of Dragon's Blood
+							["provider"] = { "i", 7867 },	-- Vessel of Dragon's Blood
+							["cost"] = { { "i", 7866, 1 } },	-- Empty Thaumaturgy Vessel
+							["cr"] = 2726,	-- Scorched Guardian
+						}),
+						i(7870, {	-- Thaumaturgy Vessel Lockbox
+							i(7866),	-- Empty Thaumaturgy Vessel
+						}),
+						recipe(11452, {	-- Restorative Potion
+							["requireSkill"] = ALCHEMY,
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(27834, {	-- Baelog, the Glass Cannon
+					["qgs"] = { 46853, 46856 },	-- Baelog
+					["sourceQuest"] = 27827,	-- The Swift, the Fierce, and the Stout
+					["coord"] = { 20.6, 56.1, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(703, {	-- Barbecued Buzzard Wings
 					["qg"] = 2817,	-- Rigglefuzz
 					["coord"] = { 42.39, 52.93, BADLANDS },
-					["cost"] = {
-						{ "i", 3404, 4 },	-- Buzzard Wing
-					},
+					["timeline"] = { "removed 4.0.3" },
+					["cost"] = { { "i", 3404, 4 } },	-- Buzzard Wing
 					["lvl"] = 33,
 					["groups"] = {
 						i(4457),	-- Barbecued Buzzard Wing
-						i(4609),	-- Recipe: Barbecued Buzzard Wing
+						i(4609),	-- Recipe: Barbecued Buzzard Wing (available from a vendor still)
 					},
 				}),
-				q(782, {	-- Broken Alliances
+				q(27881, {	-- Bloodwatcher Point
+					["qg"] = 46664,	-- Dr. Hieronymus Blam
+					["sourceQuest"] = 27789,	-- Troggish Troubles
+					["coord"] = { 46.8, 56.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(782, {	-- Broken Alliances (1/2)
 					["qg"] = 1068,	-- Gorn
+					["coord"] = { 2.8, 45.8, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 40,
 					["groups"] = {
@@ -283,29 +398,47 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				q(793, {	-- Broken Alliances
+				q(793, {	-- Broken Alliances (2/2)
 					["qg"] = 1068,	-- Gorn
-					["sourceQuest"] = 782,	-- Broken Alliances
+					["sourceQuest"] = 782,	-- Broken Alliances (1/2)
+					["coord"] = { 2.8, 45.8, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4615, 1 },	-- Blacklash's Bindings
-						{ "i", 4645, 1 },	-- Chains of Hematus
-					},
 					["lvl"] = 40,
 					["groups"] = {
-						i(11193),	-- Blazewind Breastplate
-						i(11194),	-- Prismscale Hauberk
-						i(11195),	-- Warforged Chestplate
-						i(11196),	-- Mindburst Medallion
+						objective(1, {	-- 0/1 Blacklash's Bindings
+							["provider"] = { "i", 4615 },	-- Blacklash's Bindings
+							["cr"] = 2757,	-- Blacklash
+						}),
+						objective(2, {	-- 0/1 Chains of Hematus
+							["provider"] = { "i", 4645 },	-- Chains of Hematus
+							["cr"] = 2759,	-- Hematus
+						}),
+						i(11193, {	-- Blazewind Breastplate
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(11196, {	-- Mindburst Medallion
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(11194, {	-- Prismscale Hauberk
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(11195, {	-- Warforged Chestplate
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(713, {	-- Coolant Heads Prevail
 					["qg"] = 2921,	-- Lotwil Veriatus
 					["coord"] = { 26.0, 44.9, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["cost"] = { { "i", 3829, 1 } },	-- Frost Oil
 					["lvl"] = 35,
 				}),
 				q(1419, {	-- Coyote Thieves
 					["qg"] = 5394,	-- Neeka Bloodscar
+					["coord"] = { 6.4, 47, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -320,14 +453,55 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(27930, {	-- Devastation
+					["sourceQuests"] = { 27858, 27898 },	-- Rheastrasza's Gift (A, H)
+					["description"] = "If you abandon this quest, leave the area then return to the cave.",
+					["coord"] = { 15.9, 33.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				q(27927, {	-- Down to the Scar
+					["allianceQuestData"] = {
+						["qg"] = 46930,	-- Victoria Dolen (A)
+						["coord"] = { 20.8, 55.7, BADLANDS },
+					},
+					["hordeQuestData"] = {
+						["qg"] = 46660,	-- Aidan Summerwind (H)
+						["coord"] = { 18.4, 41.5, BADLANDS },
+					},
+					["timeline"] = { "added 4.0.3.13277" },
+					["isBreadcrumb"] = true,
+				}),
 				q(3821, {	-- Dreadmaul Rock
 					["qg"] = 9082,	-- Thal'trak Proudtusk
 					["coord"] = { 3.4, 48, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 48,
 				}),
+				q(27791, {	-- Dustwind Dig
+					["qg"] = 46664,	-- Dr. Hieronymus Blam
+					["sourceQuest"] = 27789,	-- Troggish Troubles
+					["coord"] = { 46.8, 56.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27774, {	-- Easily Swayed
+					["qg"] = 46652,	-- Dolph Blastus
+					["sourceQuest"] = 27763,	-- To Fuselight Proper
+					["coord"] = { 65.0, 38.3, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				q(27828, {	-- Eric, the Utility Dwarf
+					["qgs"] = { 46852, 46855 },	-- Eric "The Swift"
+					["sourceQuest"] = 27827,	-- The Swift, the Fierce, and the Stout
+					["coord"] = { 20.5, 56.0, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(706, {	-- Fiery Blaze Enchantments
 					["qg"] = 2860,	-- Sigrun Ironhew
+					["coord"] = { 53.8, 43.4, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 40,
 					["groups"] = {
@@ -338,7 +512,29 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								2725,	-- Scalding Whelp
 							},
 						}),
-						i(5421),	-- Fiery Blaze Enchantment
+						i(5421, {	-- Fiery Blaze Enchantment
+							-- #if BEFORE 4.0.3
+							["description"] = "Save this for an heirloom weapon in Wrath!",
+							-- #endif
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(27765, {	-- First Sample: Wild Eggs
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27764,	-- A Strange Request
+					["coord"] = { 66.3, 55.4, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				q(1559, {	-- Flash Bomb Recipe
+					["qg"] = 2817,	-- Rigglefuzz
+					["sourceQuest"] = 705,	-- Pearl Diving
+					["coord"] = { 42.39, 52.93, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["requireSkill"] = ENGINEERING,
+					["lvl"] = 30,
+					["groups"] = {
+						i(6672),	-- Schematic: Flash Bomb
 					},
 				}),
 				q(737, {	-- Forbidden Knowledge
@@ -358,23 +554,103 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						["sourceQuest"] = 736,	-- The Star, the Hand and the Heart [H]
 						["coord"] = { 53.7, 54.5, UNDERCITY },
 					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 30,
 					["groups"] = {
-						i(4984),	-- Skull of Impending Doom
+						i(4984, {	-- Skull of Impending Doom
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
+				}),
+				q(27878, {	-- Forcible Acquisition
+					["qg"] = 46758,	-- Aoren Sunglow
+					["coord"] = { 52.1, 51.5, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(63173, {	-- Ironhew Cloak
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63172, {	-- Angor Pauldrons
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63171, {	-- Dustwind Vest
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63170, {	-- Dust Bowl Shield
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63169, {	-- Sunglow Cowl
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(27893, {	-- Gargal, the Behemoth
+					["qgs"] = { 47013, 47022 },	-- Gargal
+					["sourceQuest"] = 27890,	-- The Bad Dogs
+					["coord"] = { 18.9, 42.8, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
 				}),
 				q(714, {	-- Gyro... What?
 					["qg"] = 2921,	-- Lotwil Veriatus
+					["sourceQuest"] = 713,	-- Coolant Heads Prevail
 					["coord"] = { 26.0, 44.9, BADLANDS },
-					["cost"] = {
-						{ "i", 4389, 1 },	-- Gyrochronatom
-					},
+					["timeline"] = { "removed 4.0.3" },
+					["cost"] = { { "i", 4389, 1 } },	-- Gyrochronatom
 					["lvl"] = 35,
+				}),
+				q(27833, {	-- Half-Ton Holdouts
+					["qg"] = 46972,	-- Terrance Storm
+					["coord"] = { 20.8, 57.3, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(63199, {	-- Storm's Bow
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63198, {	-- Half-Ton Pauldrons
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63197, {	-- Dustbelcher Boots
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63196, {	-- Holdout Gloves
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63195, {	-- Cloak of Passion
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(27880, {	-- Half-Ton Holdouts
+					["qg"] = 1068,	-- Gorn
+					["coord"] = { 17.6, 43.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(63204, {	-- Bow of Kargath
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63203, {	-- Half-Ton Pauldrons
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63202, {	-- Dustbelcher Boots
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63201, {	-- Holdout Gloves
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63200, {	-- Gorn's Discarded Cloak
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
 				}),
 				q(1108, {	-- Indurium
 					["qg"] = 4618,	-- Martek the Exiled
 					["sourceQuest"] = 1106,	-- Martek the Exiled
 					["coord"] = { 42.22, 52.69, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 28,
 					["groups"] = {
 						objective(1, {	-- 0/10 Indurium Flake
@@ -388,82 +664,181 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(27826, {	-- Into the Dragon's Mouth
+					["qg"] = 46664,	-- Dr. Hieronymus Blam
+					["sourceQuest"] = 27794,	-- Return to Blam
+					["coord"] = { 46.8, 56.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27776, {	-- It's Goat Time, Baby
+					["qg"] = 46653,	-- Garyanne Fleezlebop
+					["sourceQuest"] = 27775,	-- When the Going Gets Tough, Cheat
+					["coord"] = { 64.2, 38.1, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				q(27882, {	-- It's Not About History, It's About Power
+					["qg"] = 46757,	-- High Examiner Tae'thelan Bloodwatcher
+					["sourceQuest"] = 27881,	-- Bloodwatcher Point
+					["coord"] = { 52.0, 51.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(63190, {	-- Upstart's Breastplate
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63189, {	-- Counterfeit Chainmail
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63188, {	-- Excavation Bracers
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63187, {	-- Hooligan's Pantaloons
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(27892, {	-- Jurrix the Striker
+					["qgs"] = { 47018, 47024 },	-- Jurrix Whitemane
+					["sourceQuest"] = 27890,	-- The Bad Dogs
+					["coord"] = { 18.8, 42.7, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27770, {	-- Lifting the Veil
+					["qg"] = 46654,	-- Rhea
+					["sourceQuests"] = {
+						27765,	-- First Sample: Wild Eggs
+						27766,	-- Second Sample: Whelps
+					},
+					["coord"] = { 66.3, 55.4, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
 				q(715, {	-- Liquid Stone
 					["qg"] = 2920,	-- Lucien Tosselwrench
+					["sourceQuests"] = {
+						714,	-- Gyro... What?
+						712,	-- Study of the Elements: Rock (3/3)
+					},
 					["coord"] = { 25.8, 44.2, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["cost"] = {
 						{ "i", 929, 1 },	-- Healing Potion
 						{ "i", 3823, 1 },	-- Lesser Invisibility Potion
 					},
 					["lvl"] = 35,
 					["groups"] = {
-						i(4624),	-- Recipe: Lesser Stoneshield Potion
-						i(4623),	-- Lesser Stoneshield Potion
+						i(4624, {	-- Recipe: Lesser Stoneshield Potion
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(4623, {	-- Lesser Stoneshield Potion
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(718, {	-- Mirages
-					["lvl"] = 35,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 2860,	-- Sigrun Ironhew
 					["coord"] = { 53.8, 43.3, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 35,
 				}),
 				q(739, {	-- Murdaloc
 					["provider"] = { "o", 2875 },	-- Battered Dwarven Skeleton
 					["sourceQuest"] = 738,	-- Find Agmond
 					["coord"] = { 50.89, 62.4, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
-						i(4983),	-- Rock Pulverizer
+						objective(1, {	-- 0/1 Murdaloc slain
+							["provider"] = { "n", 2945 },	-- Murdaloc
+						}),
+						objective(2, {	-- 0/12 Stonevault Bonesnapper slain
+							["provider"] = { "n", 2893 },	-- Stonevault Bonesnapper
+						}),
+						i(4983, {	-- Rock Pulverizer
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
+				}),
+				q(27889, {	-- New Kargath
+					["qg"] = 46664,	-- Dr. Hieronymus Blam
+					["sourceQuest"] = 27888,	-- Return to Blam
+					["coord"] = { 46.8, 56.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
 				}),
 				q(1137, {	-- News for Fizzle
 					["qg"] = 4618,	-- Martek the Exiled
 					["sourceQuest"] = 1108,	-- Indurium
 					["coord"] = { 42.22, 52.69, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { THOUSAND_NEEDLES },
 					["lvl"] = 28,
 					["groups"] = {
-						i(6729),	-- Fizzle's Zippy Lighter
-						i(6732),	-- Gnomish Mechanic's Gloves
+						i(6729, {	-- Fizzle's Zippy Lighter
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(6732, {	-- Gnomish Mechanic's Gloves
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
-				q(725, {	-- Passing Word of a Threat
-					["qg"] = 2916,	-- Historian Karnik
-					["sourceQuest"] = 724,	-- Prospect of Faith
+				q(27835, {	-- Olaf, the Big Fella'
+					["qgs"] = { 46854, 46857 },	-- Olaf
+					["sourceQuest"] = 27827,	-- The Swift, the Fierce, and the Stout
+					["coord"] = { 20.5, 56.3, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(725, {	-- Passing Word of a Threat (1/2)
+					["providers"] = {
+						{ "n", 2916 },	-- Historian Karnik
+						{ "i", 4622 },	-- Sealed Note to Advisor Belgrum
+					},
+					["sourceQuest"] = 724,	-- Prospect of Faith (2/2)
 					["coord"] = { 77.5, 11.8, IRONFORGE },
-					["cost"] = { { "i", 4622, 1 } },	-- Sealed Note to Advisor Belgrum
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 				}),
-				q(726, {	-- Passing Word of a Threat
-					["sourceQuest"] = 725,	-- Passing Word of a Threat
+				q(726, {	-- Passing Word of a Threat (2/2)
 					["qg"] = 2918,	-- Advisor Belgrum
+					["sourceQuest"] = 725,	-- Passing Word of a Threat (1/2)
 					["coord"] = { 77.3, 9.7, IRONFORGE },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 				}),
 				q(705, {	-- Pearl Diving
 					["qg"] = 2817,	-- Rigglefuzz
 					["coord"] = { 42.39, 52.93, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { STRANGLETHORN_VALE },
-					["cost"] = {
-						{ "i", 4611, 9 },	-- Blue Pearl
-					},
+					["cost"] = { { "i", 4611, 9 } },	-- Blue Pearl
 					["lvl"] = 30,
 					["groups"] = {
-						i(4086),	-- Flash Rifle
-						i(5248),	-- Flash Wand
+						i(4086, {	-- Flash Rifle
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(5248, {	-- Flash Wand
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						-- #if BEFORE 4.0.3
 						i(4852),	-- Flash Bomb
+						-- #endif
 					},
 				}),
 				q(2418, {	-- Power Stones
 					["qg"] = 2817,	-- Rigglefuzz
 					["coord"] = { 42.39, 52.93, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { ULDAMAN },
 					["lvl"] = 30,
 					["groups"] = {
 						objective(1, {	-- 0/8 Dentrium Power Stone
+							["provider"] = { "i", 8009 },	-- Dentrium Power Stone
 							["crs"] = {
 								4844,	-- Shadowforge Surveyor
 								4845,	-- Shadowforge Ruffian
@@ -477,6 +852,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						objective(2, {	-- 0/8 An'Alleum Power Stone
+							["provider"] = { "i", 8052 },	-- An'Alleum Power Stone
 							["crs"] = {
 								4844,	-- Shadowforge Surveyor
 								4845,	-- Shadowforge Ruffian
@@ -489,72 +865,143 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								7091,	-- Shadowforge Ambusher
 							},
 						}),
-						i(9522),	-- Energized Stone Circle
-						i(10358),	-- Duracin Bracers
-						i(10359),	-- Everlast Boots
+						i(9522, {	-- Energized Stone Circle
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(10358, {	-- Duracin Bracers
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(10359, {	-- Everlast Boots
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
-				q(723, {	-- Prospect of Faith
+				q(723, {	-- Prospect of Faith (1/2)
+					["providers"] = {
+						{ "n", 2909 },	-- Hammertoe Grez
+						{ "i", 4635 },	-- Hammertoe's Amulet
+					},
 					["sourceQuest"] = 722,	-- Amulet of Secrets
-					["qg"] = 2909,	-- Hammertoe Grez
 					["coord"] = { 37.94, 10.53, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 				}),
-				q(724, {	-- Prospect of Faith
-					["sourceQuest"] = 723,	-- Prospect of Faith
-					["qg"] = 2909,	-- Prospector Ryedol
+				q(724, {	-- Prospect of Faith (2/2)
+					["providers"] = {
+						{ "n", 2910 },	-- Prospector Ryedol
+						{ "i", 4635 },	-- Hammertoe's Amulet
+					},
+					["sourceQuest"] = 723,	-- Prospect of Faith (1/2)
 					["coord"] = { 53.4, 43.2, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 				}),
-				{
-					["questID"] = 1360,	-- Reclaimed Treasures
+				q(1360, {	-- Reclaimed Treasures
 					["qg"] = 6294,	-- Krom Stoutarm
 					["coord"] = { 74.2, 9.4, IRONFORGE },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { LOCH_MODAN },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 33,
 					["groups"] = {
-						{
-							["itemID"] = 8027,	-- Krom Stoutarm's Treasure
-							["questID"] = 1360,	-- Reclaimed Treasures
-							["provider"] = { "o", 124389 },	-- Krom Stoutarm's Chest
+						objective(1, {	-- 0/1 Krom Stoutarm's Treasure
+							["provider"] = { "i", 8027 },	-- Krom Stoutarm's Treasure
 							["coord"] = { 35.2, 97.4, LOCH_MODAN },
-						},
+						}),
 					},
-				},
-				{
-					["questID"] = 2342,	-- Reclaimed Treasures
+				}),
+				q(2342, {	-- Reclaimed Treasures
 					["qg"] = 5651,	-- Patrick Garrett
 					["coord"] = { 62.3, 48.6, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { LOCH_MODAN },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 33,
 					["groups"] = {
-						{
-							["itemID"] = 8026,	-- Garrett Family Treasure
-							["questID"] = 2342,	-- Reclaimed Treasures
-							["provider"] = { "o", 124388 },	-- Garrett Family Chest
+						objective(1, {	-- 0/1 Garrett Family Treasure
+							["provider"] = { "i", 8026 },	-- Garrett Family Treasure
 							["coord"] = { 33.9, 93.0, LOCH_MODAN },
-						},
+						}),
 					},
-				},
+				}),
 				q(1420, {	-- Report to Helgrum
-					["qg"] = 5394,	-- Neeka Bloodscar
+					["providers"] = {
+						{ "n", 5394 },	-- Neeka Bloodscar
+						{ "i", 6167 },	-- Neeka's Report
+					},
 					["sourceQuest"] = 1418,	-- Neeka Bloodscar
 					["coord"] = { 6.5, 47.2, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { SWAMP_OF_SORROWS },
-					["cost"] = {
-						{ "i", 6167, 1 },	-- Neeka's Report
-					},
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
+				}),
+				q(27794, {	-- Return to Blam (A)
+					["provider"] = { "o", 206374 },	-- Trove of the Watchers
+					["sourceQuest"] = 27912,	-- The Titans' Trove
+					["coord"] = { 50.2, 53.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(63176, {	-- Well Cushioned Boots
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63175, {	-- Hieronymus' Belt
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63174, {	-- Watcher's Spear
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(157008, {	-- Blam-Hatchet
+							["timeline"] = { "added 7.3.5.25744" },
+						}),
+					},
+				}),
+				q(27888, {	-- Return to Blam (H)
+					["provider"] = { "o", 206374 },	-- Trove of the Watchers
+					["sourceQuest"] = 27913,	-- The Titans' Trove
+					["coord"] = { 50.2, 53.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(63179, {	-- Well Cushioned Boots
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63178, {	-- Hieronymus' Belt
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63177, {	-- Watcher's Spear
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(27769, {	-- Rhea Revealed
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27771,	-- Third Sample: Implanted Eggs
+					["coord"] = { 66.3, 55.4, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				q(27858, {	-- Rheastrasza's Gift (A)
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27832,	-- The Hidden Clutch
+					["coord"] = { 15.9, 33.3, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27898, {	-- Rheastrasza's Gift (H)
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27897,	-- The Hidden Clutch
+					["coord"] = { 15.9, 33.3, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
 				}),
 				q(733, {	-- Scrounging
 					["qg"] = 2860,	-- Sigrun Ironhew
 					["sourceQuest"] = 718,	-- Mirages
 					["coord"] = { 53.8, 43.3, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 35,
 					["groups"] = {
@@ -572,26 +1019,32 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								2716,	-- Dustbelcher Wyrmhunter
 							},
 						}),
-						i(4652),	-- Salbac Shield
-						i(4653),	-- Ironheel Boots
+						i(4652, {	-- Salbac Shield
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(4653, {	-- Ironheel Boots
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				{
 					["provider"] = { "o", 2933 },	-- Seal of the Earth
-					["allianceQuestData"] = q(779),	-- Seal of the Earth [A]
-					["hordeQuestData"] = q(795),	-- Seal of the Earth [H]
+					["allianceQuestData"] = q(779, {	-- Seal of the Earth [A]
+						["altQuests"] =	{ 717 },	-- Tremors of the Earth
+					}),
+					["hordeQuestData"] = q(795, {	-- Seal of the Earth [H]
+						["altQuests"] =	{ 793 },	-- Broken Alliances
+					}),
+					["timeline"] = { "removed 4.0.3" },
+					["repeatable"] = true,
+					["lvl"] = 40,
+					-- #if BEFORE 4.0.3
 					["description"] = "This quest is repeatable but can only be completed while \"Broken Alliances\" (H) or \"Tremors of the Earth\" (A) is in your quest log.",
-					["altQuests"] =	{
-						793,	-- Broken Alliances
-						717,	-- Tremors of the Earth
-					},
 					["cost"] = {
 						{ "i", 4843, 1 },	-- Amethyst Runestone
 						{ "i", 4845, 1 },	-- Diamond Runestone
 						{ "i", 4844, 1 },	-- Opal Runestone
 					},
-					["repeatable"] = true,
-					["lvl"] = 40,
 					["groups"] = {
 						{
 							["itemID"] = 4843,	-- Amethyst Runestone
@@ -616,63 +1069,52 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							["cr"] = 2759,	-- Hematus
 						},
 					},
+					-- #endif
 				},
+				q(27766, {	-- Second Sample: Whelps
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27764,	-- A Strange Request
+					["coord"] = { 66.3, 55.4, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
 				q(709, {	-- Solution to Doom
 					["qg"] = 2785,	-- Theldurin the Lost
 					["coord"] = { 51.4, 76.9, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4631,	-- Tablet of Ryun'eh
-							["questID"] = 709,	-- Solution to Doom
-							["provider"] = { "o", 126260 },	-- Ancient Chest
+						objective(1, {	-- 0/1 Tablet of Ryun'eh
+							["providers"] = {
+								{ "i", 4631 },	-- Tablet of Ryun'eh
+								{ "o", 126260 },	-- Ancient Chest
+							},
 							["coord"] = { 39.3, 18.8, BADLANDS },
-						},
-						i(4746),	-- Doomsayer's Robe
+						}),
+						i(4746, {	-- Doomsayer's Robe
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(716, {	-- Stone Is Better than Cloth
 					["qg"] = 2920,	-- Lucien Tosselwrench
 					["sourceQuests"] = {
 						714,	-- Gyro... What?
-						712,	-- Study of the Elements: Rock
+						712,	-- Study of the Elements: Rock (3/3)
 					},
 					["coord"] = { 25.8, 44.4, BADLANDS },
-					["cost"] = {
-						{ "i", 2868, 1 },	-- Patterned Bronze Bracers
-					},
+					["timeline"] = { "removed 4.0.3" },
+					["cost"] = { { "i", 2868, 1 } },	-- Patterned Bronze Bracers
 					["lvl"] = 35,
 					["groups"] = {
-						i(4979),	-- Enchanted Stonecloth Bracers
-					},
-				}),
-				q(712, {	-- Study of the Elements: Rock
-					["qg"] = 2921,	-- Lotwil Veriatus
-					["sourceQuest"] = 711,	-- Study of the Elements: Rock
-					["coord"] = { 25.8, 45, BADLANDS },
-					["lvl"] = 35,
-					["groups"] = {
-						objective(1, {	-- 0/5 Bracers of Rock Binding
-							["provider"] = { "i", 4628 },	-- Bracers of Rock Binding
-							["cr"] = 2736,	-- Greater Rock Elemental
+						i(4979, {	-- Enchanted Stonecloth Bracers
+							["timeline"] = { "removed 4.0.3" },
 						}),
 					},
 				}),
-				q(711, {	-- Study of the Elements: Rock
-					["qg"] = 2921,	-- Lotwil Veriatus
-					["sourceQuest"] = 710,	-- Study of the Elements: Rock
-					["coord"] = { 25.8, 45, BADLANDS },
-					["lvl"] = 35,
-					["groups"] = {
-						objective(1, {	-- 0/3 Large Stone Slab
-							["provider"] = { "i", 4627 },	-- Large Stone Slab
-							["cr"] = 92,	-- Rock Elemental
-						}),
-					},
-				}),
-				q(710, {	-- Study of the Elements: Rock
+				q(710, {	-- Study of the Elements: Rock (1/3)
 					["qg"] = 2921,	-- Lotwil Veriatus
 					["coord"] = { 25.8, 45, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 35,
 					["groups"] = {
 						objective(1, {	-- 0/10 Small Stone Shard
@@ -681,16 +1123,140 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				un(NEVER_IMPLEMENTED, q(708, {	-- The Black Box
-					["provider"] = { "i", 4613 },	-- Corroded Black Box
+				q(711, {	-- Study of the Elements: Rock (2/3)
+					["qg"] = 2921,	-- Lotwil Veriatus
+					["sourceQuest"] = 710,	-- Study of the Elements: Rock (1/3)
+					["coord"] = { 25.8, 45, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["lvl"] = 35,
+					["groups"] = {
+						objective(1, {	-- 0/3 Large Stone Slab
+							["provider"] = { "i", 4627 },	-- Large Stone Slab
+							["cr"] = 92,	-- Rock Elemental
+						}),
+					},
+				}),
+				q(712, {	-- Study of the Elements: Rock (3/3)
+					["qg"] = 2921,	-- Lotwil Veriatus
+					["sourceQuest"] = 711,	-- Study of the Elements: Rock (2/3)
+					["coord"] = { 25.8, 45, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["lvl"] = 35,
+					["groups"] = {
+						objective(1, {	-- 0/5 Bracers of Rock Binding
+							["provider"] = { "i", 4628 },	-- Bracers of Rock Binding
+							["cr"] = 2736,	-- Greater Rock Elemental
+						}),
+					},
+				}),
+				q(27825, {	-- Survival of the Fattest
+					["qg"] = 46930,	-- Victoria Delen
+					["coord"] = { 20.8, 55.7, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
 					["races"] = ALLIANCE_ONLY,
-					["cr"] = 2931,	-- Zaricotl
-					["lvl"] = 30,
-				})),
+				}),
+				q(27879, {	-- Survival of the Fattest
+					["qg"] = 46660,	-- Aidan Summerwind
+					["coord"] = { 18.4, 41.5, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27890, {	-- The Bad Dogs
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27889,	-- New Kargath
+					["coord"] = { 18.1, 42.5, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27713, {	-- The Day that Deathwing Came
+					["qg"] = 2785,	-- Theldurin the Lost
+					["sourceQuest"] = 27927,	-- Down to the Scar
+					["coord"] = { 26.2, 62.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				q(27714, {	-- The Day that Deathwing Came: The Real Story
+					["qg"] = 2920,	-- Lucien Tosselwrench
+					["sourceQuest"] = 27713,	-- The Day that Deathwing Came
+					["coord"] = { 26.2, 62.5, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				q(27715, {	-- The Day that Deathwing Came: What Really Happened
+					["qg"] = 4618,	-- Martek the Exiled
+					["sourceQuest"] = 27714,	-- The Day that Deathwing Came: The Real Story
+					["coord"] = { 26.1, 62.4, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(63193, {	-- Theldurin's Fist
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63192, {  -- Tosselwrench's Shrinker
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63191, {	-- Martek's Knife
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(156961, {	-- Martek's Stick of Truthiness
+							["timeline"] = { "added 7.3.5.25716" },
+						}),
+						i(156962, {	-- Genuine Deathwing Fang
+							["timeline"] = { "added 7.3.5.25716" },
+						}),
+					},
+				}),
+				q(27859, {	-- The Egg Lives On
+					["qg"] = 46664,	-- Dr. Hieronymus Blam
+					["sourceQuest"] = 27930,	-- Devastation
+					["coord"] = { 18.0, 30.5, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(63194, {	-- Rhea's Last Egg
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(27824, {	-- The Good Stuff
+					["qg"] = 2860,	-- Sigrun Ironhew
+					["sourceQuest"] = 27823,	-- A Dwarf's Got Needs
+					["coord"] = { 49.4, 36.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(63168, {	-- Ironhew Cloak
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63167, {	-- Angor Pauldrons
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63166, {	-- Walloper's Chestpiece
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63165, {	-- Dust Bowl Shield
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63164, {	-- Dustwind Cowl
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(27832, {	-- The Hidden Clutch (A)
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27831,	-- The Sorrow and the Fury
+					["coord"] = { 21.1, 57.7, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27897, {	-- The Hidden Clutch (H)
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27896,	-- The Sorrow and the Fury
+					["coord"] = { 18.1, 42.5, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
 				q(692, {	-- The Lost Fragments
 					["qg"] = 2785,	-- Theldurin the Lost
 					["sourceQuest"] = 687,	-- Theldurin the Lost
 					["coord"] = { 51.4, 76.9, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 30,
 					["groups"] = {
 						objective(1, {	-- 0/1 Torn Scroll Fragment
@@ -706,6 +1272,54 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							["cr"] = 2791,	-- Enraged Rock Elemental
 						}),
 					},
+				}),
+				q(27877, {	-- The Morons' League
+					["qg"] = 46759,	-- Lidia Sunglow
+					["coord"] = { 52.2, 51.6, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27709, {	-- The Sentinel's Game (A)
+					["provider"] = { "o", 206336 },	-- Marble Slab
+					["sourceQuest"] = 27797,	-- The Sentinel's Pawn
+					["coord"] = { 47.9, 50.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27886, {	-- The Sentinel's Game (H)
+					["provider"] = { "o", 206336 },	-- Marble Slab
+					["sourceQuest"] = 27884,	-- The Sentinel's Pawn
+					["coord"] = { 47.9, 50.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27797, {	-- The Sentinel's Pawn (A)
+					["qg"] = 46760,	-- Lead Prospector Durdin
+					["sourceQuest"] = 27792,	-- All's Fair in Love, War, and Archaeology
+					["coord"] = { 49.2, 36.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27884, {	-- The Sentinel's Pawn (H)
+					["qg"] = 46757,	-- High Examiner Tae'thelan Bloodwatcher
+					["sourceQuest"] = 27882,	-- It's Not About History, It's About Power
+					["coord"] = { 52.0, 51.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27831, {	-- The Sorrow and the Fury (A)
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27830,	-- Their Hunt Continues
+					["coord"] = { 21.1, 57.7, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27896, {	-- The Sorrow and the Fury (H)
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27895,	-- Their Hunt Continues
+					["coord"] = { 18.1, 42.5, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
 				}),
 				{	-- The Star, the Hand and the Heart
 					["allianceQuestData"] = q(735, {	-- The Star, the Hand and the Heart [A]
@@ -724,6 +1338,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						["sourceQuest"] = 728,	-- To the Undercity for Yagyin's Digest
 						["coord"] = { 53.7, 54.5, UNDERCITY },
 					}),
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { ALTERAC_MOUNTAINS, DUSTWALLOW_MARSH, STRANGLETHORN_VALE },
 					["lvl"] = 30,
 					["groups"] = {
@@ -733,7 +1348,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							["cr"] = 2417,	-- Grel'borg the Miser
 						}),
 						objective(2, {	-- 0/1 Hand of Dagun
-							["itemID"] = 4641,	-- Hand of Dagun
+							["provider"] = { "i", 4641 },	-- Hand of Dagun
 							["coord"] = { 60.4, 12.2, DUSTWALLOW_MARSH },
 							["cost"] = { { "i", 4639, 1 } },	-- Enchanted Sea Kelp
 							["cr"] = 2937,	-- Dagun the Ravenous
@@ -745,73 +1360,216 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				},
-				q(777, {	-- This Is Going to Be Hard
-					["qg"] = 2920,	-- Lucien Tosselwrench
-					["sourceQuest"] = 734,	-- This Is Going to Be Hard
+				q(27827, {	-- The Swift, the Fierce, and the Stout
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27826,	-- Into the Dragon's Mouth
+					["coord"] = { 21.1, 57.7, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27912, {	-- The Titans' Trove (A)
+					["qg"] = 46760,	-- Lead Prospector Durdin
+					["sourceQuest"] = 27793,	-- Ancient Protectors
+					["coord"] = { 49.2, 36.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27913, {	-- The Titans' Trove (H)
+					["qg"] = 46757,	-- High Examiner Tae'thelan Bloodwatcher
+					["sourceQuest"] = 27887,	-- Ancient Protectors
+					["coord"] = { 52.0, 51.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27772, {	-- The Venerable Doctor Blam
+					["qg"] = 46655,	-- Rheastrasza
+					["sourceQuest"] = 27769,	-- Rhea Revealed
+					["coord"] = { 66.4, 55.5, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				q(27693, {	-- The Warden's Game (A)
+					["provider"] = { "o", 206335 },	-- Stone Slab
+					["sourceQuest"] = 27796,	-- The Warden's Pawn
+					["coord"] = { 50.2, 54.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27885, {	-- The Warden's Game (H)
+					["provider"] = { "o", 206335 },	-- Stone Slab
+					["sourceQuest"] = 27883,	-- The Warden's Pawn
+					["coord"] = { 50.2, 54.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27796, {	-- The Warden's Pawn (A)
+					["qg"] = 46760,	-- Lead Prospector Durdin
+					["sourceQuest"] = 27792,	-- All's Fair in Love, War, and Archaeology
+					["coord"] = { 49.2, 36.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27883, {	-- The Warden's Pawn (H)
+					["qg"] = 46757,	-- High Examiner Tae'thelan Bloodwatcher
+					["sourceQuest"] = 27882,	-- It's Not About History, It's About Power
+					["coord"] = { 52.0, 51.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27829, {	-- The Wrath of a Dragonflight (A)
+					["providers"] = {
+						{ "n", 46856 },	-- Baelog
+						{ "n", 46855 },	-- Eric "The Swift"
+						{ "n", 46857 },	-- Olaf
+					},
+					["sourceQuests"] = {
+						27834,	-- Baelog, the Glass Cannon
+						27828,	-- Eric, the Utility Dwarf
+						27835,	-- Olaf, the Big Fella
+					},
+					["coords"] = {
+						{ 20.6, 56.1, BADLANDS },
+						{ 20.5, 56.0, BADLANDS },
+						{ 20.5, 56.3, BADLANDS },
+					},
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27894, {	-- The Wrath of a Dragonflight (H)
+					["providers"] = {
+						{ "n", 47021 },	-- Amakkar
+						{ "n", 47022 },	-- Gargal
+						{ "n", 47024 },	-- Jurrix Whitemane
+					},
+					["sourceQuests"] = {
+						27891,	-- Amakkar, Jack of All Trades
+						27893,	-- Gargal, the Behemoth
+						27892,	-- Jurrix the Striker
+					},
+					["coords"] = {
+						{ 18.8, 42.9, BADLANDS },
+						{ 18.9, 42.8, BADLANDS },
+						{ 18.8, 42.7, BADLANDS },
+					},
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27830, {	-- Their Hunt Continues (A)
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27829,	-- The Wrath of a Dragonflight
+					["coord"] = { 21.1, 57.7, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27895, {	-- Their Hunt Continues (H)
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27894,	-- The Wrath of a Dragonflight
+					["coord"] = { 18.1, 42.5, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(27771, {	-- Third Sample: Implanted Eggs
+					["qg"] = 46654,	-- Rhea
+					["sourceQuest"] = 27770,	-- Lifting the Veil
+					["coord"] = { 66.3, 55.4, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(63163, {	-- Strong Arm Mace
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63162, {	-- Coercive Pauldrons
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63161, {	-- Vest of Restraint
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63160, {	-- Boots of Duress
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(734, {	-- This Is Going to Be Hard (1/3)
+					["qg"] = 2921,	-- Lotwil Veriatus
+					["sourceQuests"] = {
+						714,	-- Gyro... What?
+						712,	-- Study of the Elements: Rock (3/3)
+					},
+					["coord"] = { 25.8, 45, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["lvl"] = 35,
+				}),
+				q(777, {	-- This Is Going to Be Hard (2/3)
+					["providers"] = {
+						{ "n", 2920 },	-- Lucien Tosselwrench
+						{ "i", 4846 },	-- Cog #5
+					},
+					["sourceQuest"] = 734,	-- This Is Going to Be Hard (1/3)
 					["coord"] = { 25.8, 44.4, BADLANDS },
-					["cost"] = {
-						{ "i", 4846, 1 },	-- Cog #5
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 35,
 				}),
-				q(734, {	-- This Is Going to Be Hard
+				q(778, {	-- This Is Going to Be Hard (3/3)
 					["qg"] = 2921,	-- Lotwil Veriatus
+					["sourceQuest"] = 777,	-- This Is Going to Be Hard (2/3)
 					["coord"] = { 25.8, 45, BADLANDS },
-					["lvl"] = 35,
-				}),
-				q(778, {	-- This Is Going to Be Hard
-					["qg"] = 2921,	-- Lotwil Veriatus
-					["sourceQuest"] = 777,	-- This Is Going to Be Hard
-					["coord"] = { 25.8, 45, BADLANDS },
-					["cost"] = {
-						{ "i", 4847, 1 }	-- Lotwil's Shackles of Elemental Binding
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 35,
 					["groups"] = {
-						{
-							["itemID"] = 4847,	-- Lotwil's Shackles of Elemental Binding
-							["questID"] = 778,	-- This Is Going to Be Hard
-							["cr"] = 2919,	-- Fam'retor Guardian
+						objective(1, {	-- 0/1 Lotwil's Shackles of Elemental Binding
+							["provider"] = { "i", 4847 },	-- Lotwil's Shackles of Elemental Binding
 							["coord"] = { 26.0, 46.6, BADLANDS },
-						},
-						i(2820),	-- Nifty Stopwatch
+							["cr"] = 2919,	-- Fam'retor Guardian
+						}),
+						i(2820, {	-- Nifty Stopwatch
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
+				q(27763, {	-- To Fuselight Proper
+					["qg"] = 46650,	-- Eddie Flofizzle
+					["sourceQuest"] = 27762,	-- Fuselight Ho!
+					["coord"] = { 92.6, 38.9, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["isBreadcrumb"] = true,	-- for "Easily Swayed"
+				}),
 				q(727, {	-- To Ironforge for Yagyin's Digest
-					["qg"] = 2785,	-- Theldurin the Lost
+					["providers"] = {
+						{ "n", 2785 },	-- Theldurin the Lost
+						{ "i", 4648 },	-- Sigil of the Hammer
+					},
 					["sourceQuest"] = 709,	-- Solution to Doom
 					["coord"] = { 51.4, 76.9, BADLANDS },
-					["cost"] = { { "i", 4648, 1 } },	-- Sigil of the Hammer
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
+				q(28512, {	-- To the Aid of the Thorium Brotherhood
+					["allianceQuestData"] = {
+						["qg"] = 46930,	-- Victoria Dolen (A)
+						["coord"] = { 20.8, 55.7, BADLANDS },
+					},
+					["hordeQuestData"] = {
+						["qg"] = 46660,	-- Aidan Summerwind (H)
+						["coord"] = { 18.4, 41.5, BADLANDS },
+					},
+					["timeline"] = { "added 4.0.3.13277" },
+					["isBreadcrumb"] = true,
+				}),
 				q(728, {	-- To the Undercity for Yagyin's Digest
+					["providers"] = {
+						{ "n", 2785 },	-- Theldurin the Lost
+						{ "i", 4648 },	-- Sigil of the Hammer
+					},
 					["sourceQuest"] = 709,	-- Solution to Doom
-					["qg"] = 2785,	-- Theldurin the Lost
 					["coord"] = { 51.4, 76.9, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 				}),
-				q(717, {	-- Tremors of the Earth
-					["qg"] = 2888,	-- Garek
-					["sourceQuest"] = 732,	-- Tremors of the Earth
-					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4615, 1 },	-- Blacklash's Bindings
-						{ "i", 4645, 1 },	-- Chains of Hematus
-					},
-					["lvl"] = 40,
-					["groups"] = {
-						
-						i(11193),	-- Blazewind Breastplate
-						i(11194),	-- Prismscale Hauberk
-						i(11195),	-- Warforged Chestplate
-						i(11196),	-- Mindburst Medallion
-					},
-				}),
-				q(732, {	-- Tremors of the Earth
+				q(732, {	-- Tremors of the Earth (1/2)
 					["qg"] = 2888,	-- Garek
 					["sourceQuest"] = 718,	-- Mirages
+					["coord"] = { 61.8, 54.2, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 40,
 					["groups"] = {
@@ -821,15 +1579,105 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				q(2202, {	-- Uldaman Reagent Run
-					["sourceQuest"] = 2258,	-- Badlands Reagent Run
-					["qg"] = 6868,	-- Jarkal Mossmeld
-					["cost"] = {
-						{ "i", 8047, 12 },	-- Magenta Fungus Cap
+				q(717, {	-- Tremors of the Earth (2/2)
+					["qg"] = 2888,	-- Garek
+					["sourceQuest"] = 732,	-- Tremors of the Earth (1/2)
+					["coord"] = { 61.8, 54.2, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 40,
+					["groups"] = {
+						objective(1, {	-- 0/1 Blacklash's Bindings
+							["provider"] = { "i", 4615 },	-- Blacklash's Bindings
+							["cr"] = 2757,	-- Blacklash
+						}),
+						objective(2, {	-- 0/1 Chains of Hematus
+							["provider"] = { "i", 4645 },	-- Chains of Hematus
+							["cr"] = 2759,	-- Hematus
+						}),
+						i(11193, {	-- Blazewind Breastplate
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(11194, {	-- Prismscale Hauberk
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(11195, {	-- Warforged Chestplate
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(11196, {	-- Mindburst Medallion
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
+				}),
+				q(27789, {	-- Troggish Troubles
+					["qg"] = 46664,	-- Dr. Hieronymus Blam
+					["sourceQuest"] = 27772,	-- The Venerable Doctor Blam
+					["coord"] = { 46.8, 56.2, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(63182, {	-- Anti-Trogg Shield
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63181, {	-- Shrug of Disappointment
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63180, {	-- Blam Blam Gun
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
+				q(2202, {	-- Uldaman Reagent Run
+					["qg"] = 6868,	-- Jarkal Mossmeld
+					["sourceQuest"] = 2258,	-- Badlands Reagent Run
 					["coord"] = { 2.6, 46, BADLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { ULDAMAN },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 40,
+					["groups"] = {
+						objective(1, {	-- 0/12 Magenta Fungus Cap
+							["provider"] = { "i", 8047 },	-- Magenta Fungus Cap
+						}),
+					},
+				}),
+				applyclassicphase(TBC_PHASE_ONE, q(9439, {	-- Unclaimed Baggage
+					["qg"] = 17097,	-- Advisor Sarophas
+					["coord"] = { 5.8, 48, BADLANDS },
+					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 36,
+					["groups"] = {
+						objective(1, {	-- 0/1 Advisor's Pack
+							["provider"] = { "i", 23658 },	-- Advisor's Pack
+							["coord"] = { 41.0, 29.2, BADLANDS },
+						}),
+						objective(2, {	-- 0/1 Advisor's Rapier
+							["provider"] = { "i", 23660 },	-- Advisor's Rapier
+							["coord"] = { 41.7, 26.8, BADLANDS },
+						}),
+					},
+				})),
+				q(27775, {	-- When the Going Gets Tough, Cheat
+					["qg"] = 46653,	-- Garyanne Fleezlebop
+					["coord"] = { 64.2, 38.1, BADLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(63155, {   -- Goat Horn Band
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63154, {	-- Fuselight Chainmail
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63153, {	-- Goat Hide Boots
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63152, {	-- Goat Skin Mask
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(63151, {	-- Wooly Goat Punchers
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
 				}),
 			}),
 			n(RARES, {
