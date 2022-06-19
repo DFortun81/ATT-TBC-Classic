@@ -492,13 +492,18 @@ _.Zones =
 					["sourceQuest"] = 4783,	-- Components for the Enchanted Gold Bloodrobe (4/5)
 					["coord"] = { 62.4, 35.4, THE_BARRENS },
 					["maps"] = { ARATHI_HIGHLANDS },
+					["cost"] = { { "i", 6265, 1 } },	-- Soul Shard
 					["classes"] = { WARLOCK },
-					["cost"] = {
-						{ "i", 12293, 1 },	-- Fine Gold Thread
-						{ "i", 6991, 2 },	-- Smoldering Coal
-						{ "i", 6265, 1 },	-- Soul Shard
-					},
 					["lvl"] = 31,
+					["groups"] = {
+						objective(1, {	-- 0/1 Fine Gold Thread
+							["provider"] = { "i", 12293 },	-- Fine Gold Thread
+						}),
+						objective(2, {	-- 0/2 Smoldering Coal
+							["provider"] = { "i", 6991 },	-- Smoldering Coal
+							["cr"] = 2760,	-- Burning Exile
+						}),
+					},
 				}),
 				q(899, {	-- Consumed by Hatred
 					["qg"] = 3432,	-- Mankrik

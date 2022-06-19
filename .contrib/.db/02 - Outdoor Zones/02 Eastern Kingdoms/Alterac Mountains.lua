@@ -115,17 +115,24 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				q(1712, {	-- Cyclonian
-					["qg"] = 6176,	-- Bath'rah the Windwatcher
+					["providers"] = {
+						{ "n", 6176 },	-- Bath'rah the Windwatcher
+						{ "i", 6929 },	-- Bath'rah's Parchment
+					},
 					["sourceQuest"] = 1791,	-- The Windwatcher
 					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
-					["classes"] = { WARRIOR },
+					["maps"] = { ARATHI_HIGHLANDS, STRANGLETHORN_VALE },
 					["cost"] = {
-						{ "i", 6929, 1 },	-- Bath'rah's Parchment
 						{ "i", 3357, 8 },	-- Liferoot
-						{ "i", 3901, 30 },	-- Bloodscalp Tusk
 						{ "i", 6851, 1 },	-- Essence of the Exile
 					},
+					["classes"] = { WARRIOR },
 					["lvl"] = 30,
+					["groups"] = {
+						objective(2, {	-- 0/30 Bloodscalp Tusk
+							["provider"] = { "i", 3901 },	-- Bloodscalp Tusk
+						}),
+					},
 				}),
 				q(537, {	-- Dark Council
 					["qg"] = 2276,	-- Magistrate Henry Maleb
@@ -172,16 +179,14 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 6176,	-- Bath'rah the Windwatcher
 					["sourceQuest"] = 1791,	-- The Windwatcher
 					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
-					["maps"] = { ARATHI_HIGHLANDS },
-					["classes"] = { WARRIOR },
-					["altQuests"] = {
-						1712,	-- Cyclonian
-					},
 					["cost"] = {
 						{ "i", 4479, 8 },	-- Burning Charm
 						{ "i", 4481, 8 },	-- Cresting Charm
 						{ "i", 4480, 8 },	-- Thundering Charm
 					},
+					["maps"] = { ARATHI_HIGHLANDS },
+					["classes"] = { WARRIOR },
+					["repeatable"] = true,
 					["lvl"] = 30,
 					["groups"] = {
 						i(6851),	-- Essence of the Exile

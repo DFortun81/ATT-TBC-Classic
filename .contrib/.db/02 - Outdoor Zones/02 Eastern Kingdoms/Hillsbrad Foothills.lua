@@ -414,6 +414,12 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ "i", 3721, 1 },	-- Farren's Report
 					},
 				}),
+				applyclassicphase(TBC_PHASE_ONE, q(9425, {	-- Report to Tarren Mill
+					["qg"] = 16287,	-- Ambassador Sunsorrow
+					["coord"] = { 57.6, 90.8, UNDERCITY },
+					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
+					["races"] = { BLOODELF },
+				})),
 				q(542, {	-- Return to Milton
 					["qg"] = 2277,	-- Loremaster Dibbs
 					["sourceQuest"] = 540,	-- Preserving Knowledge

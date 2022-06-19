@@ -497,7 +497,6 @@ root("NeverImplemented", {
 	
 	-- Dagger
 	i(24071),	-- Bland Dagger
-	i(5742),	-- Gemstone Dagger
 	i(2664),	-- Spinner Fang
 	i(20317),	-- 63 Green Rogue Dagger
 	i(20279),	-- 90 Epic Rogue Dagger
@@ -618,7 +617,6 @@ root("NeverImplemented", {
 		i(5010),	-- Inscribed Gold Ring
 		i(7497),	-- Ivory Band
 		i(7547),	-- Onyx Ring
-		i(5743),	-- Prismstone Ring
 		i(5008),	-- Quicksilver Ring
 		i(7466),	-- Vermilion Band
 	}),

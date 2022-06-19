@@ -3,9 +3,48 @@
 ---------------------------------------------------
 root("Zones", m(EASTERN_KINGDOMS, {
 	m(ARATHI_HIGHLANDS, {
-		["lore"] = "The Arathi Highlands are located in southeastern Lordaeron, east of Hillsbrad Foothills and south of the Hinterlands. It is a flat but craggy region that has traditionally been the home of the humans of Arathor, who gave the region its name. The main hubs of activity are now Refuge Pointe and Hammerfall, which houses bases for Alliance and Horde, respectively. The large city of Stromgarde lies in ruins to the southwest, and pockets of Syndicate resistance dot the land. The Boulderfist Orges also infest Arathor, and prove to be a constant threat to the Alliance, Horde, and Syndicate factions vying for supremacy.\n\nThe Syndicate, Boulderfist ogres and the beleaguered human defenders of Stromgarde battle for supremacy in this gray, dismal realm. Prince Galen Trollbane leads the human defenders, and his mighty city of Stromgarde is a ruined battleground where the three factions wage guerrilla war. The Trollbane family’s holdings include several ancient human artifacts, and a group called the Caretakers protects and preserves the most important pieces. To the south is the Thandol Span, a massive dwarven construction that bridges the canal between Lordaeron and Khaz Modan",
+		["lore"] = "The Arathi Highlands are located in southeastern Lordaeron, east of Hillsbrad Foothills and south of the Hinterlands. It is a flat but craggy region that has traditionally been the home of the humans of Arathor, who gave the region its name. The main hubs of activity are now Refuge Pointe and Hammerfall, which houses bases for Alliance and Horde, respectively. The large city of Stromgarde lies in ruins to the southwest, and pockets of Syndicate resistance dot the land. The Boulderfist Orges also infest Arathor, and prove to be a constant threat to the Alliance, Horde, and Syndicate factions vying for supremacy.",
+		-- #if AFTER WRATH
+		["icon"] = "Interface\\Icons\\achievement_zone_arathihighlands_01",
+		-- #endif
 		["groups"] = {
 			n(ACHIEVEMENTS, {
+				ach(4896, {	-- Arathi Highlands Quests
+					["timeline"] = { "added 4.0.3" },
+					["groups"] = {
+						crit(1, {	-- Faldir's Cove
+							["sourceQuest"] = 26628,	-- Death From Below
+						}),
+						crit(2, {	-- Refuge Pointe (A)
+							["races"] = ALLIANCE_ONLY,
+							["sourceQuests"] = {
+								26038,	-- Attack on the Tower
+								26117,	-- For Southshore
+								26095,	-- Stromgarde Badges
+							},
+						}),
+						crit(2, {	-- Galen's Fall (H)
+							["races"] = HORDE_ONLY,
+							["sourceQuests"] = {
+								26081,	-- Alina's Reward
+								26029,	-- The Real Threat
+								26025,	-- The Traitor Orc (TODO: verify if needed)
+								26428,	-- To Steal From Thieves (TODO: verify if needed)
+							},
+						}),
+						crit(3, {	-- Myzrael's Tale (A)
+							["races"] = ALLIANCE_ONLY,
+							["sourceQuest"] = 26049,	-- The Princess Unleashed (A)
+						}),
+						crit(3, {	-- Hammerfall (H)
+							["races"] = HORDE_ONLY,
+							["sourceQuests"] = {
+								26108,	-- Guile of the Raptor
+								26912,	-- The Princess Unleashed (H)
+							},
+						}),
+					},
+				}),
 				removeclassicphase(ach(761, {	-- Explore Arathi Highlands
 					-- #if BEFORE WRATH
 					["description"] = "Explore Arathi Highlands, revealing the covered areas of the world map.",
@@ -14,6 +53,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					-- #endif
 				})),
 			}),
+			-- #if AFTER MOP
+			petbattle(filter(BATTLE_PETS, {
+				p(443, {	-- Grasslands Cottontail
+					["crs"] = { 61704 },	-- Grasslands Cottontail
+				}),
+				p(386, {	-- Prairie Dog
+					["crs"] = { 61141 },	-- Prairie Dog
+				}),
+				p(417, {	-- Rat
+					["crs"] = { 61366 },	-- Rat
+				}),
+				p(419, {	-- Small Frog
+					["crs"] = { 61071 },	-- Small Frog
+				}),
+				p(445, {	-- Tiny Twister
+					["crs"] = { 61703 },	-- Tiny Twister
+				}),
+			})),
+			-- #endif
 			-- #if ANYCLASSIC
 			n(EXPLORATION, {
 				exploration(1858, "245:245:232:145"),	-- Boulder'gor
@@ -45,14 +103,41 @@ root("Zones", m(EASTERN_KINGDOMS, {
 			}),
 			-- #endif
 			n(FLIGHT_PATHS, {
+				fp(601, {	-- Galen's Fall, Arathi
+					["cr"] = 43104,	-- Rhoda Bowers <Bat Handler>
+					["coord"] = { 13.4, 34.8, ARATHI_HIGHLANDS },
+					["races"] = HORDE_ONLY,
+				}),
 				fp(17, {	-- Hammerfall, Arathi
+					-- #if AFTER BFA
+					["crs"] = {
+						2851,	-- Urda <Wind Rider Master>
+						144069,	-- Urda <Wind Rider Master>
+					},
+					-- #else
 					["cr"] = 2851,	-- Urda <Wind Rider Master>
+					-- #endif
+					-- #if AFTER CATA
+					["coord"] = { 68.2, 33.4, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 73.0, 32.6, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 				}),
 				fp(16, {	-- Refuge Pointe, Arathi
+					-- #if AFTER BFA
+					["crs"] = {
+						2835,	-- Cedrik Prose <Gryphon Master>
+						144055,	-- Cedrik Prose <Gryphon Master>
+					},
+					-- #else
 					["cr"] = 2835,	-- Cedrik Prose <Gryphon Master>
+					-- #endif
+					-- #if AFTER CATA
+					["coord"] = { 39.6, 47.0, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 45.8, 46.2, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 				}),
 			}),
@@ -166,10 +251,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2706,	-- Tor'gan
 					["coord"] = { 74.6, 36.4, ARATHI_HIGHLANDS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4495, 10 },	-- Bloodstone Amulet
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/10 Bloodstone Amulet
+							["provider"] = { "i", 4495 },	-- Bloodstone Amulet
+							["crs"] = {
+								2586,	-- Syndicate Highwayman
+								2589,	-- Syndicate Mercenary
+								2587,	-- Syndicate Pathstalker
+							},
+						}),
+					},
 				}),
 				q(673, {	-- Foul Magics
 					["qg"] = 2706,	-- Tor'gan
@@ -204,10 +296,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(701, {	-- Guile of the Raptor
 					["qg"] = 2706,	-- Tor'gan
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4513, 12 },	-- Raptor Heart
-					},
 					["lvl"] = 29,
+					["groups"] = {
+						objective(1, {	-- 0/12 Raptor Heart
+							["provider"] = { "i", 4513 },	-- Raptor Heart
+							["cr"] = 2561,	-- Highland Fleshstalker
+						}),
+					},
 				}),
 				q(655, {	-- Hammerfall
 					["lvl"] = 29,
@@ -322,30 +417,46 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(672, {	-- Raising Spirits
 					["qg"] = 2706,	-- Tor'gan
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4512, 10 },	-- Highland Raptor Eye
-					},
 					["lvl"] = 29,
+					["groups"] = {
+						objective(1, {	-- 0/10 Highland Raptor Eye
+							["provider"] = { "i", 4512 },	-- Highland Raptor Eye
+							["crs"] = {
+								2559,	-- Highland Strider
+								2560,	-- Highland Thrasher
+							},
+						}),
+					},
 				}),
 				q(643, {	-- Sigil of Arathor
 					["qg"] = 2703,	-- Zengu
 					["sourceQuest"] = 641,	-- Sigil of Thoradin
 					["coord"] = { 73.8, 33.8, ARATHI_HIGHLANDS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4458, 1 },	-- Sigil of Arathor
-					},
 					["lvl"] = 32,
+					["groups"] = {
+						objective(1, {	-- 0/1 Sigil of Arathor
+							["provider"] = { "i", 4458 },	-- Sigil of Arathor
+							["cr"] = 2612,	-- Lieutenant Valorcall
+						}),
+					},
 				}),
 				q(639, {	-- Sigil of Strom
 					["qg"] = 2703,	-- Zengu
 					["sourceQuest"] = 638,	-- Trollbane
 					["coord"] = { 73.8, 33.8, ARATHI_HIGHLANDS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4440, 1 },	-- Sigil of Strom
-					},
 					["lvl"] = 32,
+					["groups"] = {
+						objective(1, {	-- Sigil of Strom
+							["provider"] = { "i", 4440 },	-- Sigil of Strom
+							["crs"] = {
+								2590,	-- Syndicate Conjuror
+								2591,	-- Syndicate Magus
+								2588,	-- Syndicate Prowler
+							},
+						}),
+					},
 				}),
 				q(641, {	-- Sigil of Thoradin
 					["qg"] = 2706,	-- Tor'gan
@@ -362,10 +473,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["sourceQuest"] = 643,	-- Sigil of Arathor
 					["coord"] = { 73.8, 33.8, ARATHI_HIGHLANDS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4466, 1 },	-- Sigil of Trollbane
-					},
 					["lvl"] = 32,
+					["groups"] = {
+						objective(1, {	-- 0/1 Sigil of Trollbane
+							["provider"] = { "i", 4466 },	-- Sigil of Trollbane
+							["cr"] = 2607,	-- Prince Galen Trollbane
+						}),
+					},
 				}),
 				q(651, {	-- Stones of Binding
 					["provider"] = { "o", 2701 },	-- Iridescent Shards
@@ -401,11 +515,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2700,	-- Captain Nials
 					["coord"] = { 45.9, 47.5, ARATHI_HIGHLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4506, 15 },	-- Stromgarde Badge
-					},
 					["lvl"] = 30,
 					["groups"] = {
+						objective(1, {	-- 0/15 Stromgarde Badge
+							["provider"] = { "i", 4506 },	-- Stromgarde Badge
+							["crs"] = {
+								2590,	-- Syndicate Conjuror
+								2591,	-- Syndicate Magus
+								2588,	-- Syndicate Prowler
+							},
+						}),
 						i(4741),	-- Stromgarde Cavalry Leggings
 					},
 				}),
@@ -486,17 +605,31 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2703,	-- Zengu
 					["sourceQuest"] = 639,	-- Sigil of Strom
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4450, 11 },	-- Sigil Fragment
-					},
 					["lvl"] = 32,
+					["groups"] = {
+						objective(1, {	-- 0/11 Sigil Fragment
+							["provider"] = { "i", 4450 },	-- Sigil Fragment
+							["crs"] = {
+								2584,	-- Stromgarde Defender
+								2583,	-- Stromgarde Troll Hunter
+								2585,	-- Stromgarde Vindicator
+							},
+						}),
+					},
 				}),
 				q(642, {	-- The Princess Trapped
 					["provider"] = { "o", 138492 },	-- Shards of Myzrael
-					["cost"] = {
-						{ "i", 4435, 12 },	-- Mote of Myzrael
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/12 Mote of Myzrael
+							["provider"] = { "i", 4435 },	-- Mote of Myzrael
+							["crs"] = {
+								2574,	-- Drywhisker Digger
+								2572,	-- Drywhisker Kobold
+								2573,	-- Drywhisker Surveyor
+							},
+						}),
+					},
 				}),
 				q(680, {	-- The Real Threat
 					["races"] = HORDE_ONLY,
@@ -536,10 +669,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["sourceQuest"] = 693,	-- Wand over Fist
 					["coord"] = { 46.6, 47.0, ARATHI_HIGHLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4527, 1 },	-- Azure Agate
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/1 Azure Agate
+							["provider"] = { "i", 4527 },	-- Azure Agate
+							["cr"] = 2570,	-- Boulderfist Shaman
+						}),
+					},
 				}),
 				q(6622, {	-- Triage
 					["qg"] = 12920,	-- Doctor Gregory Victor
@@ -623,39 +759,105 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2788,	-- Apprentice Kryten
 					["coord"] = { 46.2, 47.8, ARATHI_HIGHLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4503, 10 },	-- Witherbark Tusk
-						{ "i", 4522, 4 },	-- Witherbark Medicine Pouch
-						{ "i", 5040, 1 },	-- Shadow Hunter Knife
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/10 Witherbark Tusk
+							["provider"] = { "i", 4503 },	-- Witherbark Tusk
+							["crs"] = {
+								2554,	-- Witherbark Axe Thrower
+								2558,	-- Witherbark Berserker
+								2556,	-- Witherbark Headhunter
+								2557,	-- Witherbark Shadow Hunter
+								2553,	-- Witherbark Shadowcaster
+								2552,	-- Witherbark Troll
+								2555,	-- Witherbark Witch Doctor
+								2605,	-- Zalas Witherbark <Warband Leader>
+							},
+						}),
+						objective(2, {	-- 0/4 Witherbark Medicine Pouch
+							["provider"] = { "i", 4522 },	-- Witherbark Medicine Pouch
+							["cr"] = 2555,	-- Witherbark Witch Doctor
+						}),
+						objective(3, {	-- 0/1 Shadow Hunter Knife
+							["provider"] = { "i", 5040 },	-- Shadow Hunter Knife
+							["cr"] = 2557,	-- Witherbark Shadow Hunter
+						}),
+					},
 				}),
 			}),
 			n(RARES, {
+				n(50891, {	-- Boros
+					["coord"] = { 48.4, 35.6, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 5.2.0.16650" },
+				}),
+				n(50337, {	-- Cackle
+					["coord"] = { 21.6, 88.6, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
 				n(2598, {	-- Darbel Montrose <Shadow Council Warlock>
+					-- #if AFTER CATA
+					["coord"] = { 19.6, 64.2, ARATHI_HIGHLANDS },
+					-- #else
 					["coords"] = {
 						{ 29.8, 60.2, ARATHI_HIGHLANDS },
 						{ 27.0, 65.2, ARATHI_HIGHLANDS },
 						{ 27.8, 66.4, ARATHI_HIGHLANDS },
 					},
+					-- #endif
 				}),
 				n(2601, {	-- Foulbelly
+					-- #if AFTER CATA
+					["coord"] = { 15.2, 68.2, ARATHI_HIGHLANDS },
+					-- #else
 					["coords"] = {
 						{ 19.4, 64.0, ARATHI_HIGHLANDS },
 						{ 20.0, 66.6, ARATHI_HIGHLANDS },
 						{ 21.6, 65.4, ARATHI_HIGHLANDS },
 					},
+					-- #endif
+				}),
+				n(2609, {	-- Geomancer Flintdagger
+					-- #if AFTER CATA
+					["coord"] = { 79.6, 29.6, ARATHI_HIGHLANDS },
+					-- #else
+					["coord"] = { 84.6, 28.6, ARATHI_HIGHLANDS },
+					-- #endif
+					["groups"] = {
+						i(5742, {	-- Gemstone Dagger
+							["timeline"] = { "created 1.11.1", "added 3.0.1", "removed 4.0.3" },
+						}),	
+						i(5743, {	-- Prismstone Ring
+							["timeline"] = { "created 1.11.1", "added 3.0.1", "removed 4.0.3" },
+						}),
+					},
+				}),
+				n(51067, {	-- Glint
+					["coord"] = { 30.6, 61.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 5.2.0.16591" },
 				}),
 				n(2603, {	-- Kovork
+					-- #if AFTER CATA
+					["coord"] = { 24.6, 44.8, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 31.6, 45.8, ARATHI_HIGHLANDS },
+					-- #endif
 					["groups"] = {
-						i(5256),	-- Kovork's Rattle
+						i(5256, {	-- Kovork's Rattle
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				n(2604, {	-- Molok the Crusher
+					-- #if AFTER CATA
+					["coord"] = { 48.0, 76.2, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 54.6, 79.0, ARATHI_HIGHLANDS },
+					-- #endif
 				}),
 				n(2606, {	-- Nimar the Slayer <Warband Leader>
+					-- #if AFTER CATA
+					["coord"] = { 68.6, 66.7, ARATHI_HIGHLANDS },
+					-- #else
 					["coords"] = {
 						{ 66.0, 60.2, ARATHI_HIGHLANDS },
 						{ 72.8, 64.8, ARATHI_HIGHLANDS },
@@ -664,39 +866,94 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 62.4, 73.4, ARATHI_HIGHLANDS },
 						{ 64.8, 74.6, ARATHI_HIGHLANDS },
 					},
+					-- #endif
 					["groups"] = {
-						i(5257),	-- Dark Hooded Cape
-						i(2622),	-- Nimar's Tribal Headdress
+						i(5257, {	-- Dark Hooded Cape
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(2622, {	-- Nimar's Tribal Headdress
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				n(2779, {	-- Prince Nazjak
+					-- #if AFTER CATA
+					["coords"] = {
+						{ 14.2, 86.1, ARATHI_HIGHLANDS },
+						{ 16.8, 91.6, ARATHI_HIGHLANDS },
+						{ 14.2, 92.8, ARATHI_HIGHLANDS }
+					},
+					-- #else
 					["coords"] = {
 						{ 21.6, 82.8, ARATHI_HIGHLANDS },
 						{ 23.6, 83.8, ARATHI_HIGHLANDS },
 						{ 19.8, 88.8, ARATHI_HIGHLANDS },
 						{ 23.6, 89.4, ARATHI_HIGHLANDS },
 					},
+					-- #endif
 					["groups"] = {
-						i(1404),	-- Tidal Charm
+						i(1404, {	-- Tidal Charm
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
+				n(51063, {	-- Phalanax
+					["coord"] = { 48.2, 81.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
+				n(50804, {	-- Ripwing
+					["coord"] = { 36.5, 62.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
 				n(2602, {	-- Ruul Onestone
+					-- #if AFTER CATA
+					["coord"] = { 19.6, 30.6, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 18.2, 68.6, ARATHI_HIGHLANDS },
+					-- #endif
+				}),
+				n(50865, {	-- Saurix
+					["coord"] = { 42.2, 35.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 5.1.0.16309" },
 				}),
 				n(2600, {	-- Singer
+					-- #if AFTER CATA
+					["coord"] = { 27.4, 27.8, ARATHI_HIGHLANDS },
+					-- #else
 					["coords"] = {
 						{ 31.4, 26.6, ARATHI_HIGHLANDS },
 						{ 33.6, 27.8, ARATHI_HIGHLANDS },
 						{ 31.8, 31.8, ARATHI_HIGHLANDS },
 						{ 34.8, 31.4, ARATHI_HIGHLANDS },
 					},
+					-- #endif
 					["groups"] = {
-						i(5180),	-- Necklace of Harmony
-						i(5181),	-- Vibrant Silk Cape
+						i(5180, {	-- Necklace of Harmony
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(5181, {	-- Vibrant Silk Cape
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
+				n(51040, {	-- Snuffles
+					["coord"] = { 26.2, 27.6, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
+				n(50940, {	-- Swee
+					["coord"] = { 56.4, 56.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 5.2.0.16650" },
+				}),
 				n(2605, {	-- Zalas Witherbark <Warband Leader>
+					-- #if AFTER CATA
+					["coord"] = { 62.8, 81.0, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 69.2, 79.6, ARATHI_HIGHLANDS },
+					-- #endif
+				}),
+				n(50770, {	-- Zorn
+					["coord"] = { 22.0, 14.0, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 5.2.0.16650" },
 				}),
 			}),
 			n(VENDORS, {
@@ -788,33 +1045,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(ZONE_DROPS, {
-				i(4527, {	-- Azure Agate
-					["questID"] = 694,	-- Trelane's Defenses
-					["cr"] = 2570,	-- Boulderfist Shaman
-					["races"] = ALLIANCE_ONLY,
-				}),
-				i(4495, {	-- Bloodstone Amulet
-					["questID"] = 671,	-- Foul Magics
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2586,	-- Syndicate Highwayman
-						2589,	-- Syndicate Mercenary
-						2587,	-- Syndicate Pathstalker
-					},
-				}),
-				i(7272, {	-- Bolt Charged Bramble
-					["coord"] = { 52, 51, ARATHI_HIGHLANDS },
-					["classes"] = { MAGE },
-					["cost"] = {
-						{ "i", 7273, 10 },	-- Witherbark Totem Stick
-					},
-				}),
 				i(4479, {	-- Burning Charm
-					["questID"] = 1714,	-- Essence of the Exile
-					["classes"] = { WARRIOR },
-					["altQuests"] = {
-						1712,	-- Cyclonian
-					},
 					["crs"] = {
 						2760,	-- Burning Exile
 						2574,	-- Drywhisker Digger
@@ -824,13 +1055,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				i(5624, {	-- Circlet of the Order
 					["cr"] = 2584,	-- Stromgarde Defender
+					["timeline"] = { "removed 4.0.3" },
 				}),
 				i(4481, {	-- Cresting Charm
-					["questID"] = 1714,	-- Essence of the Exile
-					["classes"] = { WARRIOR },
-					["altQuests"] = {
-						1712,	-- Cyclonian
-					},
 					["crs"] = {
 						2761,	-- Cresting Exile
 						2574,	-- Drywhisker Digger
@@ -838,12 +1065,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						2573,	-- Drywhisker Surveyor
 					},
 				}),
-				i(11166, {	-- Formula: Enchant Gloves - Skinning
+				i(11166, {	-- Formula: Enchant Gloves - Skinning (RECIPE!)
 					["crs"] = {
+						-- #if BEFORE 4.0.3
 						2606,	-- Nimar the Slayer <Warband Leader>
+						-- #endif
 						2558,	-- Witherbark Berserker
 						2556,	-- Witherbark Headhunter
 						2557,	-- Witherbark Shadow Hunter
+						-- #if BEFORE 4.0.3
+						2605,	-- Zalas Witherbark <Warband Leader>
+						-- #endif
 					},
 				}),
 				i(3341, {	-- Gauntlets of Ogre Strength
@@ -851,14 +1083,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						2564,	-- Boulderfist Enforcer
 						2562,	-- Boulderfist Ogre
 					},
-				}),
-				i(4512, {	-- Highland Raptor Eye
-					["questID"] = 672,	-- Raising Spirits
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2559,	-- Highland Strider
-						2560,	-- Highland Thrasher
-					},
+					["timeline"] = { "removed 4.0.3" },
 				}),
 				i(2623, {	-- Holy Diadem
 					["crs"] = {
@@ -866,125 +1091,33 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						2780,	-- Caretaker Nevlin
 						2781,	-- Caretaker Weston
 					},
-				}),
-				i(4435, {	-- Mote of Myzrael
-					["questID"] = 642,	-- The Princess Trapped
-					["crs"] = {
-						2574,	-- Drywhisker Digger
-						2572,	-- Drywhisker Kobold
-						2573,	-- Drywhisker Surveyor
-					},
+					["timeline"] = { "removed 4.0.3" },
 				}),
 				i(1993, {	-- Ogremind Ring
 					["crs"] = {
-						2570,	-- Boulderfist Shaman
 						2567,	-- Boulderfist Magus
+						2570,	-- Boulderfist Shaman
 					},
 				}),
-				i(4513, {	-- Raptor Heart
-					["questID"] = 701,	-- Guile of the Raptor
-					["races"] = HORDE_ONLY,
-					["cr"] = 2561,	-- Highland Fleshstalker
-				}),
 				i(1297, {	-- Robes of the Shadowcaster
+					-- #if AFTER CATA
+					["cr"] = 2553,	-- Witherbark Shadowcaster
+					-- #else
 					["crs"] = {
 						2553,	-- Witherbark Shadowcaster
 						2577,	-- Dark Iron Shadowcaster
 					},
-				}),
-				i(5040, {	-- Shadow Hunter Knife
-					["questID"] = 691,	-- Worth Its Weight in Gold
-					["cr"] = 2557,	-- Witherbark Shadow Hunter
-					["races"] = ALLIANCE_ONLY,
-				}),
-				i(4458, {	-- Sigil of Arathor
-					["questID"] = 643,	-- Sigil of Arathor
-					["races"] = HORDE_ONLY,
-					["cr"] = 2612,	-- Lieutenant Valorcall
-				}),
-				i(4450, {	-- Sigil Fragment
-					["questID"] = 640,	-- The Broken Sigil
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2584,	-- Stromgarde Defender
-						2583,	-- Stromgarde Troll Hunter
-						2585,	-- Stromgarde Vindicator
-					},
-				}),
-				i(4440, {	-- Sigil of Strom
-					["questID"] = 639,	-- Sigil of Strom
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2590,	-- Syndicate Conjuror
-						2591,	-- Syndicate Magus
-						2588,	-- Syndicate Prowler
-					},
-				}),
-				i(4466, {	-- Sigil of Trollbane
-					["questID"] = 644,	-- Sigil of Trollbane
-					["races"] = HORDE_ONLY,
-					["cr"] = 2607,	-- Prince Galen Trollbane
+					-- #endif
 				}),
 				i(3345, {	-- Silk Wizard Hat
 					["cr"] = 2591,	-- Syndicate Magus
 				}),
-				i(6991, {	-- Smoldering Coal
-					["questID"] = 4784,	-- Components for the Enchanted Gold Bloodrobe
-					["cr"] = 2760,	-- Burning Exile
-					["classes"] = { WARLOCK },
-				}),
-				i(4506, {	-- Stromgarde Badge
-					["questID"] = 682,	-- Stromgarde Badges
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						2590,	-- Syndicate Conjuror
-						2591,	-- Syndicate Magus
-						2588,	-- Syndicate Prowler
-					},
-				}),
 				i(4480, {	-- Thundering Charm
-					["questID"] = 1714,	-- Essence of the Exile
-					["classes"] = { WARRIOR },
-					["altQuests"] = {
-						1712,	-- Cyclonian
-					},
 					["crs"] = {
 						2762,	-- Thundering Exile
 						2574,	-- Drywhisker Digger
 						2572,	-- Drywhisker Kobold
 						2573,	-- Drywhisker Surveyor
-					},
-				}),
-				i(4522, {	-- Witherbark Medicine Pouch
-					["questID"] = 691,	-- Worth Its Weight in Gold
-					["cr"] = 2555,	-- Witherbark Witch Doctor
-					["races"] = ALLIANCE_ONLY,
-				}),
-				i(7273, {	-- Witherbark Totem Stick
-					["classes"] = { MAGE },
-					["crs"] = {
-						2554,	-- Witherbark Axe Thrower
-						2558,	-- Witherbark Berserker
-						2556,	-- Witherbark Headhunter
-						2557,	-- Witherbark Shadow Hunter
-						2553,	-- Witherbark Shadowcaster
-						2552,	-- Witherbark Troll
-						2555,	-- Witherbark Witch Doctor
-						2605,	-- Zalas Witherbark <Warband Leader>
-					},
-				}),
-				i(4503, {	-- Witherbark Tusk
-					["questID"] = 691,	-- Worth Its Weight in Gold
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						2554,	-- Witherbark Axe Thrower
-						2558,	-- Witherbark Berserker
-						2556,	-- Witherbark Headhunter
-						2557,	-- Witherbark Shadow Hunter
-						2553,	-- Witherbark Shadowcaster
-						2552,	-- Witherbark Troll
-						2555,	-- Witherbark Witch Doctor
-						2605,	-- Zalas Witherbark <Warband Leader>
 					},
 				}),
 			}),

@@ -650,6 +650,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 32,
 				}),
+				q(4785, {	-- Fine Gold Thread
+					["qg"] = 2670,	-- Xizk Goodstitch <Tailoring Supplies>
+					["coord"] = { 28.6, 76.8, STRANGLETHORN_VALE },
+					["classes"] = { WARLOCK },
+					["repeatable"] = true,
+					["lvl"] = 31,
+					["groups"] = {
+						i(12293),	-- Fine Gold Thread
+					},
+				}),
 				q(1127, {	-- Fool's Stout
 					["qg"] = 2498,	-- Crank Fizzlebub
 					["coord"] = { 27.1, 77.2, STRANGLETHORN_VALE },
