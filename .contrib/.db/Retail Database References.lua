@@ -68,6 +68,14 @@
 -- #IMPORT: 01 - Dungeons Raids\\3 - Wrath of the Lich King\\9 The Ruby Sanctum.lua
 
 -- Outdoor Zones
+-- Kalimdor
+-- #IMPORT: 02 - Outdoor Zones\\01 Kalimdor\\0 - Metadata.lua
+-- #IMPORT: 02 - Outdoor Zones\\01 Kalimdor\\03 The Exodar\\The Exodar.lua
+-- #IMPORT: 02 - Outdoor Zones\\01 Kalimdor\\Azuremyst Isle\\Azuremyst Isle.lua
+-- #IMPORT: 02 - Outdoor Zones\\01 Kalimdor\\Bloodmyst Isle\\Bloodmyst Isle.lua
+root("Zones", m(KALIMDOR, {
+	["OnUpdate"] = [[function(t) table.sort(t.g, function (a, b) return string.lower(a.isRaid and (" " .. a.text) or a.text) < string.lower(b.isRaid and (" " .. b.text) or b.text) end)  end]],
+}));
 
 -- Eastern Kingdoms
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\0 - Metadata.lua
@@ -106,6 +114,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 -- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Shadowmoon Valley.lua
 -- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Terokkar Forest.lua
 -- #IMPORT: 02 - Outdoor Zones\\03 Outland\\Zangarmarsh.lua
+
+-- Northrend
+-- TODO
 
 -- Holidays
 -- #IMPORT: 21 - Holidays\\07 - Brewfest\\Brewfest.lua

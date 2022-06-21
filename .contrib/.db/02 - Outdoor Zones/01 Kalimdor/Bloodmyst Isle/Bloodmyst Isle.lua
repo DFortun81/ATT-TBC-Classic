@@ -1,1 +1,0 @@
--- #IMPORT: 02 - Outdoor Zones\\01 Kalimdor\\Bloodmyst Isle\\Bloodmyst Isle.lua
