@@ -39,6 +39,20 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 33,
 				})),
+				q(6625, {	-- Alliance Trauma
+					["qg"] = 5150,	-- Nissa Firestone
+					["coord"] = { 54.8, 58.6, IRONFORGE },
+					-- #if AFTER BFA
+					["description"] = "Needs a minimum of 225 skill in Tailoring.",
+					["requireSkill"] = TAILORING,
+					-- #else
+					["description"] = "Needs a minimum of 225 skill in First Aid.",
+					["requireSkill"] = FIRST_AID,
+					-- #endif
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(35, 10, 35),
+				}),
 				q(1168, {	-- Army of the Black Dragon
 					["qg"] = 4502,	-- Tharg
 					["coord"] = { 37.2, 31.4, DUSTWALLOW_MARSH },
@@ -1416,6 +1430,36 @@ _.Zones =
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 32,
 				})),
+				q(6624, {	-- Triage (A)
+					["qg"] = 12939,	-- Doctor Gustaf VanHowzen
+					["sourceQuest"] = 6625,	-- Alliance Trauma
+					["coord"] = { 67.7, 48.9, DUSTWALLOW_MARSH },
+					["races"] = ALLIANCE_ONLY,
+					-- #if AFTER BFA
+					["description"] = "Needs a minimum of 225 skill in Tailoring.",
+					["requireSkill"] = TAILORING,
+					-- #else
+					["description"] = "Needs a minimum of 225 skill in First Aid.",
+					["requireSkill"] = FIRST_AID,
+					-- #endif
+					["lvl"] = lvlsquish(35, 15, 35),
+					["groups"] = {
+						objective(1, {	-- 0/15 Patients Saved
+							["provider"] = { "i", 16991 },	-- Triage Bandage
+							["crs"] = {
+								12936,	-- Badly Injured Alliance Soldier
+								12937,	-- Critically Injured Alliance Soldier
+								12938,	-- Injured Alliance Soldier
+							},
+						}),
+						-- #if BEFORE 3.1.0
+						recipe(10846, { ["rank"] = 4 }),	-- First Aid (Artisan)
+						-- #endif
+						i(49193, {	-- Alliance Trauma Certification
+							["timeline"] = { "added 3.2.0.10192" },
+						}),
+					},
+				}),
 				applyclassicphase(TBC_PHASE_ONE, q(9437, {	-- Twilight of the Dawn Runner
 					["qg"] = 17095,	-- Balandar Brightstar
 					["coord"] = { 35.9, 31.7, DUSTWALLOW_MARSH },

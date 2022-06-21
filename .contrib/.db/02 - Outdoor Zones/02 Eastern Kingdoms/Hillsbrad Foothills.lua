@@ -552,14 +552,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(4430),	-- Ethereal Talisman
 					},
 				}),
-				q(676, {	-- The Hammer May Fall
-					["qg"] = 2770,	-- Tallow
-					["coord"] = { 61.86, 19.58, HILLSBRAD_FOOTHILLS },
-					["maps"] = { ARATHI_HIGHLANDS },
-					["isBreadcrumb"] = true,
-					["races"] = HORDE_ONLY,
-					["lvl"] = 30,
-				}),
 				q(498, {	-- The Rescue
 					["qg"] = 2229,	-- Krusk
 					["coord"] = { 63.24, 20.68, HILLSBRAD_FOOTHILLS },

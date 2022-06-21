@@ -142,10 +142,41 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(QUESTS, {
+				q(26081, {	-- Alina's Reward
+					["qg"] = 41944,	-- Galen Trollbane
+					["sourceQuest"] = 26033,	-- Trol'kalar
+					["coord"] = { 12.9, 36.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(59194, {	-- Sandals of Satisfaction
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59195, {	-- Bracers of Sensations
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59196, {	-- Alina's Gloves
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59197, {	-- Lordaeron-Made Breastplate
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131479, {	-- Cuffs of Feeling
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(131480, {	-- Grips of the Forsaken
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
+				}),
 				q(695, {	-- An Apprentice's Enchantment
-					["qg"] = 2788,	-- Apprentice Kryten
+					["providers"] = {
+						{ "n", 2788 },	-- Apprentice Kryten
+						{ "i", 4529 },	-- Enchanted Agate
+					},
 					["sourceQuest"] = 694,	-- Trelane's Defenses
 					["coord"] = { 46.2, 47.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -153,103 +184,311 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2789,	-- Skuerto
 					["sourceQuest"] = 695,	-- An Apprentice's Enchantment
 					["coord"] = { 46.65, 47.0, ARATHI_HIGHLANDS },
-					["cost"] = {
-						{ "i", 4532, 1 },	-- Trelane's Ember Agate
-						{ "i", 4531, 1 },	-- Trelane's Orb
-						{ "i", 4530, 1 },	-- Trelane's Phylactery
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4532,	-- Trelane's Ember Agate
-							["questID"] = 696,	-- Attack on the Tower
-							["coord"] = { 18.0, 67.9, ARATHI_HIGHLANDS },
-						},
-						{
-							["itemID"] = 4531,	-- Trelane's Orb
-							["questID"] = 696,	-- Attack on the Tower
-							["coord"] = { 18.1, 69.1, ARATHI_HIGHLANDS },
-						},
-						{
-							["itemID"] = 4530,	-- Trelane's Phylactery
-							["questID"] = 696,	-- Attack on the Tower
+						objective(1, {	-- 0/1 Trelane's Phylactery
+							["provider"] = { "i", 4530 },	-- Trelane's Phylactery
 							["coord"] = { 18.2, 68.2, ARATHI_HIGHLANDS },
-						},
+						}),
+						objective(2, {	-- 0/1 Trelane's Orb
+							["provider"] = { "i", 4531 },	-- Trelane's Orb
+							["coord"] = { 18.1, 69.1, ARATHI_HIGHLANDS },
+						}),
+						objective(3, {	-- 0/1 Trelane's Ember Agate
+							["provider"] = { "i", 4532 },	-- Trelane's Ember Agate
+							["coord"] = { 18.0, 67.9, ARATHI_HIGHLANDS },
+						}),
+					},
+				}),
+				q(26038, {	-- Attack on the Tower
+					["qg"] = 41983,	-- Apprentice Kryten
+					["sourceQuest"] = 26037,	-- Trelane's Defenses
+					["coord"] = { 13.0, 69.2, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(59159, {	-- Highland Mace
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59160, {	-- Trelane's Leggings
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59161, {	-- Belt of Refuge
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59162, {	-- Lightstep Boots
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59163, {	-- Craig's Steel
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131470, {	-- Refuge Cinch
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 					},
 				}),
 				q(652, {	-- Breaking the Keystone
 					["provider"] = { "o", 2702 },	-- Stone of Inner Binding
 					["sourceQuest"] = 651,	-- Stones of Binding
-					["cost"] = {
-						{ "i", 4469, 1 },	-- Rod of Order
-					},
+					["coord"] = { 36.2, 57.5, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4469,	-- Rod of Order
-							["questID"] = 652,	-- Breaking the Keystone
+						objective(1, {	-- 0/1 Rod of Order
+							["provider"] = { "i", 4469 },	-- Rod of Order
 							["cr"] = 2611,	-- Fozruk
-						},
+						}),
 					},
 				}),
-				q(677, {	-- Call to Arms
+				q(26042, {	-- Breaking the Keystone
+					["provider"] = { "o", 2702 },	-- Stone of Inner Binding
+					["sourceQuest"] = 26041,	-- Stones of Binding
+					["coord"] = { 30.0, 59.0, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				q(677, {	-- Call to Arms (1/3)
 					["qg"] = 2771,	-- Drum Fel
 					["sourceQuest"] = 676,	-- The Hammer May Fall
 					["coord"] = { 74.24, 33.91, ARATHI_HIGHLANDS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 30,
-				}),
-				q(678, {	-- Call to Arms
-					["qg"] = 2771,	-- Drum Fel
-					["sourceQuest"] = 677,	-- Call to Arms
-					["coord"] = { 74.24, 33.91, ARATHI_HIGHLANDS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 30,
-				}),
-				q(679, {	-- Call to Arms
-					["qg"] = 2771,	-- Drum Fel
-					["sourceQuest"] = 678,	-- Call to Arms
-					["coord"] = { 74.24, 33.91, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
-						i(9520),	-- Silent Hunter
-						i(9521),	-- Skullsplitter
+						objective(1, {	-- 0/10 Witherbark Axe Thrower slain
+							["provider"] = { "n", 2554 },	-- Witherbark Axe Thrower
+						}),
+						objective(2, {	-- 0/10 Witherbark Headhunter slain
+							["provider"] = { "n", 2556 },	-- Witherbark Headhunter
+						}),
+						objective(3, {	-- 0/8 Witherbark Witch Doctor slain
+							["provider"] = { "n", 2555 },	-- Witherbark Witch Doctor
+						}),
 					},
+				}),
+				q(678, {	-- Call to Arms (2/3)
+					["qg"] = 2771,	-- Drum Fel
+					["sourceQuest"] = 677,	-- Call to Arms (1/3)
+					["coord"] = { 74.24, 33.91, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/10 Boulderfist Brute slain
+							["provider"] = { "n", 2566 },	-- Boulderfist Brute
+						}),
+						objective(2, {	-- 0/4 Boulderfist Magus slain
+							["provider"] = { "n", 2567 },	-- Boulderfist Magus
+						}),
+					},
+				}),
+				q(679, {	-- Call to Arms (3/3)
+					["qg"] = 2771,	-- Drum Fel
+					["sourceQuest"] = 678,	-- Call to Arms (2/3)
+					["coord"] = { 74.24, 33.91, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/15 Boulderfist Shaman slain
+							["provider"] = { "n", 2570 },	-- Boulderfist Shaman
+						}),
+						objective(2, {	-- 0/10 Boulderfist Lord slain
+							["provider"] = { "n", 2571 },	-- Boulderfist Lord
+						}),
+						i(9520, {	-- Silent Hunter
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(9521, {	-- Skullsplitter
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26027, {	-- Call to Arms
+					["qg"] = 41966,	-- Deathstalker Maudria
+					["sourceQuest"] = 26053,	-- Clearing the Highlands
+					["coord"] = { 13.3, 33.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(59178, {	-- Ramshackle Bracers
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59179, {	-- Extra Credit Boots
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59180, {	-- Lurking Belt
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59181, {	-- Belt of Gutted Rain
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131467, {	-- Gold Star Boots
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(131468, {	-- Chain of Ogre Ruin
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
+				}),
+				q(26053, {	-- Clearing the Highlands
+					["qg"] = 41966,	-- Deathstalker Maudria
+					["coord"] = { 13.3, 34.3, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(26429, {	-- Crush the Witherbark
+					["qg"] = 2771,	-- Drum Fel
+					["sourceQuest"] = 26912,	-- The Princess Unleashed (TODO: verify. Didn't see this until after killing Myzrael)
+					["coord"] = { 69.0, 34.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
 				}),
 				q(635, {	-- Crystal in the Mountains
 					["provider"] = { "i", 4614 },  -- Pendant of Myzrael
 					["description"] = "If you miss out on picking up the necklace first, you can still complete this quest even after finishing the rest of the chain.",
+					["timeline"] = { "removed 4.0.3" },
+					["isYearly"] = true,
 					["lvl"] = 30,
 				}),
 				q(667, {	-- Death From Below
 					["qg"] = 2610,	-- Shakes O'Breen <Blackwater Raiders>
 					["sourceQuest"] = 670,	-- Sunken Treasure (5/5)
 					["coord"] = { 32.2, 81.6, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 35,
 					["groups"] = {
-						i(4550),	-- Coldwater Ring
-						i(4549),	-- Seafire Band
+						i(4550, {	-- Coldwater Ring
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(4549, {	-- Seafire Band
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26628, {	-- Death From Below
+					["qg"] = 2610,	-- Shakes O'Breen
+					["sourceQuest"] = 26052,	-- Speak to Shakes
+					["coord"] = { 25.9, 83.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(59212, {	-- O'Breen's Dress Robes
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59213, {	-- Faldir's Leggings
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59214, {	-- Armguards of the Good Captain
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59215, {	-- Legguards of the Promising Hero
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131565, {	-- Seafarer's Chain Leggings
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(131566, {	-- The Good Captain's Bindings
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 					},
 				}),
 				q(662, {	-- Deep Sea Salvage
-					["lvl"] = 35,
 					["qg"] = 2767,	-- First Mate Nilzlix
+					["sourceQuest"] = 663,	-- Land Ho!
+					["coord"] = { 32.6, 81.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["lvl"] = 35,
 					["groups"] = {
-						i(4511),	-- Black Water Hammer
+						objective(1, {	-- 0/1 Maiden's Folly Charts
+							["provider"] = { "i", 4487 },	-- Maiden's Folly Charts
+							["coord"] = { 23.0, 84.5, ARATHI_HIGHLANDS },
+						}),
+						objective(2, {	-- 0/1 Maiden's Folly Log
+							["provider"] = { "i", 4489 },	-- Maiden's Folly Log
+							["coord"] = { 23.5, 85.1, ARATHI_HIGHLANDS },
+						}),
+						objective(3, {	-- 0/1 Spirit of Silverpine Charts
+							["provider"] = { "i", 4488 },	-- Spirit of Silverpine Charts
+							["coord"] = { 20.5, 85.5, ARATHI_HIGHLANDS },
+						}),
+						objective(4, {	-- 0/1 Spirit of Silverpine Log
+							["provider"] = { "i", 4490 },	-- Spirit of Silverpine Log
+							["coord"] = { 20.7, 85.1, ARATHI_HIGHLANDS },
+						}),
+						i(4511, {	-- Black Water Hammer
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(664, {	-- Drowned Sorrows
-					["lvl"] = 35,
 					["qg"] = 2769,	-- Captain Steelgut
+					["coord"] = { 33.8, 80.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["lvl"] = 35,
 					["groups"] = {
-						i(4509),	-- Seawolf Gloves
+						objective(1, {	-- 0/10 Daggerspine Raider
+							["provider"] = { "n", 2595 },	-- Daggerspine Raider
+						}),
+						objective(2, {	-- 0/3 Daggerspine Sorceress
+							["provider"] = { "n", 2596 },	-- Daggerspine Sorceress
+						}),
+						i(4509, {	-- Seawolf Gloves
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
-				q(671, {	-- Foul Magics
+				q(26055, {	-- Drowned Sorrows
+					["qg"] = 2769,	-- Captain Steelgut
+					["coord"] = { 27.7, 83.2, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(59205, {	-- Folly's Spar
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59206, {	-- Steelgut Vest
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59207, {	-- Maiden's Tattered Sail
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131475, {	-- Steelgut's Undermail
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
+				}),
+				q(26022, {	-- First Blood
+					["qg"] = 41949,	-- Dark Ranger Alina
+					["sourceQuest"] = 28572,	-- Warchief's Command: Arathi Highlands!
+					["coord"] = { 13.3, 35.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(26117, {	-- For Southshore
+					["qg"] = 2712,	-- Quae
+					["sourceQuest"] = 26116,	-- Kinelory Strikes
+					["coord"] = { 54.8, 55.3, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(59168, {	-- Stromgarde Surcoat
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59169, {	-- Stromgarde Leggings
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59170, {	-- Stromgarde Bracers
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131487, {	-- Stromgarde Greaves
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
+				}),
+				q(671, {	-- Foul Magics (1/2)
 					["qg"] = 2706,	-- Tor'gan
 					["coord"] = { 74.6, 36.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -263,38 +502,37 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				q(673, {	-- Foul Magics
+				q(673, {	-- Foul Magics (2/2)
 					["qg"] = 2706,	-- Tor'gan
-					["sourceQuest"] = 671,	-- Foul Magics
+					["sourceQuest"] = 671,	-- Foul Magics (1/2)
 					["coord"] = { 74.6, 36.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 35,
 					["groups"] = {
-						{
-							["itemID"] = 4510,	-- Befouled Bloodstone Orb
-							["questID"] = 673,	-- Foul Magics
-							["cr"] = 2783,	-- Marez Cowl
+						objective(1, {	-- 0/1 Befouled Bloodstone Orb
+							["provider"] = { "i", 4510 },	-- Befouled Bloodstone Orb
 							["coord"] = { 29.0, 64.0, ARATHI_HIGHLANDS },
-						},
-						i(4543),	-- White Drakeskin Cap
-						i(4545),	-- Radiant Silver Bracers
+							["cr"] = 2783,	-- Marez Cowl
+						}),
+						i(4543, {	-- White Drakeskin Cap
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(4545, {	-- Radiant Silver Bracers
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
-				q(847, {	-- Guile of the Raptor
-					["lvl"] = 29,
-					["races"] = HORDE_ONLY,
-					["qg"] = 2792,	-- Gor'mul
-					["groups"] = {
-						i(4546),	-- Call of the Raptor
-					},
+				q(26050, {	-- Goggle Boggle
+					["qg"] = 2768,	-- Professor Phizzlethorpe
+					["coord"] = { 27.5, 83.0, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
 				}),
-				q(702, {	-- Guile of the Raptor
-					["lvl"] = 29,
-					["races"] = HORDE_ONLY,
+				q(701, {	-- Guile of the Raptor (1/3)
 					["qg"] = 2706,	-- Tor'gan
-				}),
-				q(701, {	-- Guile of the Raptor
-					["qg"] = 2706,	-- Tor'gan
+					["sourceQuest"] = 675,	-- Raising Spirits (3/3)
+					["coord"] = { 74.6, 36.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
 					["groups"] = {
@@ -304,14 +542,79 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				q(655, {	-- Hammerfall
-					["lvl"] = 29,
+				q(702, {	-- Guile of the Raptor (2/3)
+					["providers"] = {
+						{ "n", 2706 },	-- Tor'gan
+						{ "i", 4528 },	-- Tor'gan's Orb
+					},
+					["sourceQuest"] = 701,	-- Guile of the Raptor (1/3)
+					["coord"] = { 74.6, 36.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
+					["lvl"] = 29,
+				}),
+				q(847, {	-- Guile of the Raptor (3/3)
 					["qg"] = 2792,	-- Gor'mul
+					["sourceQuest"] = 702,	-- Guile of the Raptor (2/3)
+					["coord"] = { 72.6, 34, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 29,
+					["groups"] = {
+						i(4546, {	-- Call of the Raptor
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26108, {	-- Guile of the Raptor
+					["qg"] = 42130,	-- Gor'mul
+					["sourceQuest"] = 26107,	-- Raising Spirits
+					["coord"] = { 67.7, 34.7, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(59203, {	-- Hammerfall Gloves
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59204, {	-- Hammerfall Mace
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131485, {	-- Hammerfaul Gauntlets
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(156947, {	-- Hammerfall Cudgel
+							["timeline"] = { "added 7.3.5.25692" },
+						}),
+						i(156960, {	-- Hammerfall Gavel
+							["timeline"] = { "added 7.3.5.25692" },
+						}),
+					},
+				}),
+				q(655, {	-- Hammerfall
+					["qg"] = 2792,	-- Gor'mul
+					["coord"] = { 72.6, 34, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 29,
+				}),
+				q(26084, {	-- Hammerfall
+					["qg"] = 41949,	-- Dark Ranger Alina
+					["sourceQuest"] = 26081,	-- Alina's Reward
+					["coord"] = { 13.3, 35.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(26083, {	-- Hello Lolo
+					["qg"] = 42088,	-- Goutgut
+					["sourceQuest"] = 26081,	-- Alina's Reward
+					["coord"] = { 12.8, 34.0, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
 				}),
 				q(659, {	-- Hints of a New Plague? (1/5)
 					["qg"] = 2711,	-- Phin Odelic
 					["coord"] = { 50.3, 59.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -319,6 +622,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2712,	-- Quae
 					["sourceQuest"] = 659,	-- Hints of a New Plague? (1/5)
 					["coord"] = { 60.2, 53.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
@@ -334,12 +638,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2712,	-- Quae
 					["sourceQuest"] = 658,	-- Hints of a New Plague? (2/5)
 					["coord"] = { 60.2, 53.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
 				q(660, {	-- Hints of a New Plague? (4/5)
 					["qg"] = 2713,	-- Kinelory
 					["sourceQuest"] = 657,	-- Hints of a New Plague? (3/5)
+					["coord"] = { 60.2, 53.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -347,75 +654,157 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2712,	-- Quae
 					["sourceQuest"] = 660,	-- Hints of a New Plague? (4/5)
 					["coord"] = { 60.2, 53.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
-						i(15455),	-- Dustfall Robes
-						i(15456),	-- Lightstep Leggings
+						i(15455, {	-- Dustfall Robes
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15456, {	-- Lightstep Leggings
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
+				}),
+				q(6623, {	-- Horde Trauma
+					-- #if AFTER CATA
+					["qg"] = 45540,	-- Krenk Choplimb
+					["coord"] = { 36.9, 87.5, ORGRIMMAR },
+					-- #else
+					["qg"] = 3373,	-- Arnok
+					["coord"] = { 34.0, 84.6, ORGRIMMAR },
+					-- #endif
+					-- #if AFTER BFA
+					["description"] = "Needs a minimum of 225 skill in Tailoring.",
+					["requireSkill"] = TAILORING,
+					-- #else
+					["description"] = "Needs a minimum of 225 skill in First Aid.",
+					["requireSkill"] = FIRST_AID,
+					-- #endif
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(35, 10, 35),
+				}),
+				q(26110, {	-- Just Like Old Times
+					["qg"] = 2712,	-- Quae
+					["sourceQuest"] = 26113,	-- Quae and Kinelory
+					["coord"] = { 54.8, 55.3, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26116, {	-- Kinelory Strikes
+					["qg"] = 2713,	-- Kinelory
+					["sourceQuest"] = 26114,	-- Quae Trusts You
+					["coord"] = { 54.8, 55.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(663, {	-- Land Ho!
-					["lvl"] = 35,
 					["qg"] = 2766,	-- Lolo the Lookout
+					["coord"] = { 31.6, 82.6, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["lvl"] = 35,
 				}),
 				q(647, {	-- MacKreel's Moonshine
-					["qg"] = 2696,	-- Foggy MacKreel
+					["providers"] = {
+						{ "n", 2696 },	-- Foggy MacKreel
+						{ "i", 4441 },	-- MacKreel's Moonshine
+					},
 					["coord"] = { 43.2, 92.6, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4441, 1 },	-- MacKreel's Moonshine
-					},
 					["lvl"] = 28,
 				}),
-				q(690, {	-- Malin's Request
+				q(690, {	-- Malin's Request (1/2)
 					["qg"] = 2708,	-- Archmage Malin
 					["coord"] = { 39.8, 81.2, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 30,
 				}),
-				q(697, {	-- Malin's Request
-					["qg"] = 2789,	-- Skuerto
+				q(697, {	-- Malin's Request (2/2)
+					["providers"] = {
+						{ "n", 2789 },	-- Skuerto
+						{ "i", 4533 },	-- Sealed Letter to Archmage Malin
+					},
 					["sourceQuest"] = 696,	-- Attack on the Tower
 					["coord"] = { 46.6, 47, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4533, 1 },	-- Sealed Letter to Archmage Malin
-					},
 					["lvl"] = 30,
 					["groups"] = {
-						i(4975),	-- Vigilant Buckler
-						i(15104),	-- Wingborne Boots
+						i(4975, {	-- Vigilant Buckler
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(15104, {	-- Wingborne Boots
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
-				{
+				{	-- Myzrael's Allies [A & H]
 					["provider"] = { "o", 2688 },	-- Keystone
 					["allianceQuestData"] = q(653),	-- Myzrael's Allies [A]
 					["hordeQuestData"] = q(688),	-- Myzrael's Allies [H]
 					["sourceQuest"] = 652,	-- Breaking the Keystone
 					["coord"] = { 36.1, 57.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+				},
+				{	-- Myzrael's Tale [A & H]
+					["provider"] = { "o", 2702 },	-- Stone of Inner Binding
+					["allianceQuestData"] = q(26346),	-- Myzrael's Tale [A]
+					["hordeQuestData"] = q(26911),	-- Myzrael's Tale [H]
+					["sourceQuest"] = 26042,	-- Breaking the Keystone
+					["coord"] = { 30.0, 58.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["isBreadcrumb"] = true,
 				},
 				q(681, {	-- Northfold Manor
-					["lvl"] = 30,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 2700,	-- Captain Nials
 					["coord"] = { 45.9, 47.5, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/10 Syndicate Highwayman slain
+							["provider"] = { "n", 2586 },	-- Syndicate Highwayman
+						}),
+						objective(2, {	-- 0/6 Syndicate Mercenary slain
+							["provider"] = { "n", 2589 },	-- Syndicate Mercenary
+						}),
+					},
 				}),
-				q(674, {	-- Raising Spirits
-					["lvl"] = 29,
-					["races"] = HORDE_ONLY,
+				q(26093, {	-- Northfold Manor
+					["qg"] = 2700,	-- Captain Nials
+					["sourceQuests"] = {
+						28573,	-- Hero's Call: Arathi Highlands!
+						26139,	-- Into Arathi
+					},
+					["coord"] = { 39.9, 48.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26113, {	-- Quae and Kinelory
+					["qg"] = 2608,	-- Commander Amaren
+					["coord"] = { 39.6, 47.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26114, {	-- Quae Trusts You
+					["qg"] = 2712,	-- Quae
+					["sourceQuest"] = 26110,	-- Just Like Old Times
+					["coord"] = { 54.8, 55.3, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(672, {	-- Raising Spirits (1/3)
 					["qg"] = 2706,	-- Tor'gan
-				}),
-				q(675, {	-- Raising Spirits
-					["lvl"] = 29,
-					["races"] = HORDE_ONLY,
-					["qg"] = 2792,	-- Gor'mul
-				}),
-				q(672, {	-- Raising Spirits
-					["qg"] = 2706,	-- Tor'gan
+					["sourceQuest"] = 655,	-- Hammerfall
+					["coord"] = { 74.6, 36.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
 					["groups"] = {
@@ -428,10 +817,49 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(674, {	-- Raising Spirits (2/3)
+					["providers"] = {
+						{ "n", 2706 },	-- Tor'gan
+						{ "i", 4526 },	-- Raptor Talon Amulet
+					},
+					["sourceQuest"] = 672,	-- Raising Spirits (1/3)
+					["coord"] = { 74.6, 36.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 29,
+				}),
+				q(675, {	-- Raising Spirits (3/3)
+					["qg"] = 2792,	-- Gor'mul
+					["sourceQuest"] = 674,	-- Raising Spirits (2/3)
+					["coord"] = { 72.6, 34, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 29,
+				}),
+				q(26107, {	-- Raising Spirits
+					["qg"] = 42130,	-- Gor'mul
+					["coord"] = { 67.7, 34.7, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(26430, {	-- Revantusk Village
+					["qg"] = 2771,	-- Drum Fel
+					["coord"] = { 69.0, 34.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+				}),
+				q(26336, {	-- Shakes O'Breen
+					["qg"] = 2789,	-- Skuerto
+					["coord"] = { 40.3, 49.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(643, {	-- Sigil of Arathor
 					["qg"] = 2703,	-- Zengu
 					["sourceQuest"] = 641,	-- Sigil of Thoradin
 					["coord"] = { 73.8, 33.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 32,
 					["groups"] = {
@@ -441,14 +869,22 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(26032, {	-- Sigil of Arathor
+					["qg"] = 41944,	-- Galen Trollbane
+					["sourceQuest"] = 26031,	-- Sigil of Thoradin
+					["coord"] = { 12.9, 36.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
 				q(639, {	-- Sigil of Strom
 					["qg"] = 2703,	-- Zengu
 					["sourceQuest"] = 638,	-- Trollbane
 					["coord"] = { 73.8, 33.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 32,
 					["groups"] = {
-						objective(1, {	-- Sigil of Strom
+						objective(1, {	-- 0/1 Sigil of Strom
 							["provider"] = { "i", 4440 },	-- Sigil of Strom
 							["crs"] = {
 								2590,	-- Syndicate Conjuror
@@ -458,20 +894,36 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(26030, {	-- Sigil of Strom
+					["qg"] = 41944,	-- Galen Trollbane
+					["sourceQuest"] = 26023,	-- The Forsaken Trollbane
+					["coord"] = { 12.9, 36.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
 				q(641, {	-- Sigil of Thoradin
-					["qg"] = 2706,	-- Tor'gan
+					["providers"] = {
+						{ "n", 2706 },	-- Tor'gan
+						{ "i", 4453 },	-- Sigil of Thoradin
+					},
 					["sourceQuest"] = 640,	-- The Broken Sigil
 					["coord"] = { 74.6, 36.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4453, 1 },	-- Sigil of Thoradin
-					},
 					["lvl"] = 32,
+				}),
+				q(26031, {	-- Sigil of Thoradin
+					["qg"] = 41944,	-- Galen Trollbane
+					["sourceQuest"] = 26030,	-- Sigil of Strom
+					["coord"] = { 12.9, 36.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
 				}),
 				q(644, {	-- Sigil of Trollbane
 					["qg"] = 2703,	-- Zengu
 					["sourceQuest"] = 643,	-- Sigil of Arathor
 					["coord"] = { 73.8, 33.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 32,
 					["groups"] = {
@@ -481,39 +933,53 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(26052, {	-- Speak to Shakes
+					["qg"] = 2774,	-- Doctor Draxlegauge
+					["sourceQuest"] = 26051,	-- Sunken Treasure
+					["coord"] = { 27.5, 82.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
 				q(651, {	-- Stones of Binding
 					["provider"] = { "o", 2701 },	-- Iridescent Shards
 					["sourceQuest"] = 642,	-- The Princess Trapped
-					["cost"] = {
-						{ "i", 4483, 1 },	-- Burning Key
-						{ "i", 4484, 1 },	-- Cresting Key
-						{ "i", 4485, 1 },	-- Thundering Key
-					},
+					["coord"] = { 84.3, 30.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4483,	-- Burning Key
-							["questID"] = 651,	-- Stones of Binding
-							["provider"] = { "o", 2689 },	-- Stone of West Binding
+						objective(1, {	-- 0/1 Burning Key
+							["providers"] = {
+								{ "i", 4483 },	-- Burning Key
+								{ "o", 2689 },	-- Stone of West Binding
+							},
 							["coord"] = { 25.5, 30.2, ARATHI_HIGHLANDS },
-						},
-						{
-							["itemID"] = 4484,	-- Cresting Key
-							["questID"] = 651,	-- Stones of Binding
-							["provider"] = { "o", 2691 },	-- Stone of East Binding
+						}),
+						objective(2, {	-- 0/1 Cresting Key
+							["providers"] = {
+								{ "i", 4484 },	-- Cresting Key
+								{ "o", 2691 },	-- Stone of East Binding
+							},
 							["coord"] = { 66.7, 29.8, ARATHI_HIGHLANDS },
-						},
-						{
-							["itemID"] = 4485,	-- Thundering Key
-							["questID"] = 651,	-- Stones of Binding
-							["provider"] = { "o", 2690 },	-- Stone of Outer Binding
+						}),
+						objective(3, {	-- 0/1 Thundering Key
+							["providers"] = {
+								{ "i", 4485 },	-- Thundering Key
+								{ "o", 2690 },	-- Stone of Outer Binding
+							},
 							["coord"] = { 52.1, 50.7, ARATHI_HIGHLANDS },
-						},
+						}),
 					},
+				}),
+				q(26041, {	-- Stones of Binding
+					["provider"] = { "o", 2701 },	-- Iridescent Shards
+					["sourceQuest"] = 26039,	-- The Princess Trapped
+					["coord"] = { 79.8, 31.6, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
 				}),
 				q(682, {	-- Stromgarde Badges
 					["qg"] = 2700,	-- Captain Nials
+					["sourceQuest"] = 681,	-- Northfold Manor
 					["coord"] = { 45.9, 47.5, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -525,13 +991,45 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								2588,	-- Syndicate Prowler
 							},
 						}),
-						i(4741),	-- Stromgarde Cavalry Leggings
+						i(4741, {	-- Stromgarde Cavalry Leggings
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26095, {	-- Stromgarde Badges
+					["qg"] = 2700,	-- Captain Nials
+					["sourceQuest"] = 26093,	-- Northfold Manner
+					["coord"] = { 39.9, 48.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(59190, {	-- Slippers of Sorrowful Tidings
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59191, {	-- Yellow Ribbon Armbands
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59192, {	-- Griefstricken Gloves
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59193, {	-- Heartsick Breastplate
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131481, {	-- Bindings of Longing
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(131482, {	-- Grips of the Weary
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 					},
 				}),
 				q(637, {	-- Sully Balloo's Letter
-					["provider"] = { "i", 4433 },	-- Waterlogged Envelope
-					["cost"] = { { "i", 4432, 1 } },	-- Sully Balloo's Letter
+					["providers"] = {
+						{ "i", 4433 },	-- Waterlogged Envelope
+						{ "i", 4432 },	-- Sully Balloo's Letter
+					},
 					["coord"] = { 44.3, 92.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 25,
 				}),
@@ -539,71 +1037,101 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2785,	-- Theldurin the Lost
 					["sourceQuest"] = 692,	-- The Lost Fragments
 					["coord"] = { 51.4, 76.8, BADLANDS },
-					["cost"] = {
-						{ "i", 4472, 1 },	-- Scroll of Myzrael
-						{ "i", 4473, 1 },	-- Eldritch Shackles
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4473,	-- Eldritch Shackles
-							["questID"] = 656,	-- Summoning the Princess
-							["cr"] = 2755,	-- Myzrael
+						objective(1, {	-- 0/1 Eldritch Shackles
+							["provider"] = { "i", 4473 },	-- Eldritch Shackles
 							["coord"] = { 62.6, 34.6, ARATHI_HIGHLANDS },
-						},
-						i(4743),	-- Pulsating Crystalline Shard
+							["cost"] = { { "i", 4472, 1 } },	-- Scroll of Myzrael
+							["cr"] = 2755,	-- Myzrael
+						}),
+						i(4743, {	-- Pulsating Crystalline Shard
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(665, {	-- Sunken Treasure (1/5)
 					["qg"] = 2768,	-- Professor Phizzlethorpe
 					["coord"] = { 33.8, 80.6, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 35,
 				}),
 				q(666, {	-- Sunken Treasure (2/5)
 					["qg"] = 2774,	-- Doctor Draxlegauge
 					["sourceQuest"] = 665,	-- Sunken Treasure (1/5)
 					["coord"] = { 33.8, 80.4, ARATHI_HIGHLANDS },
-					["cost"] = {
-						{ "i", 4491, 1 },	-- Goggles of Gem Hunting
-						{ "i", 4492, 10 },	-- Elven Gem
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 35,
 					["groups"] = {
-						i(4547),	-- Gnomish Zapper
-						i(4548),	-- Servomechanic Sledgehammer
+						objective(1, {	-- 0/10 Elven Gem
+							["provider"] = { "i", 4492 },	-- Elven Gem
+							["cost"] = { { "i", 4491, 1 } },	-- Goggles of Gem Hunting
+						}),
+						i(4547, {	-- Gnomish Zapper
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(4548, {	-- Servomechanic Sledgehammer
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(668, {	-- Sunken Treasure (3/5)
-					["qg"] = 2774,	-- Doctor Draxlegauge
+					["providers"] = {
+						{ "n", 2774 },	-- Doctor Draxlegauge
+						{ "i", 4493 },	-- Elven Gems
+					},
 					["sourceQuest"] = 666,	-- Sunken Treasure (2/5)
 					["coord"] = { 33.8, 80.4, ARATHI_HIGHLANDS },
-					["cost"] = {
-						{ "i", 4493, 1 },	-- Elven Gems
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 35,
 				}),
 				q(669, {	-- Sunken Treasure (4/5)
-					["qg"] = 2610,	-- Shakes O'Breen
+					["providers"] = {
+						{ "n", 2610 },	-- Shakes O'Breen
+						{ "i", 4502 },	-- Sample Elven Gem
+					},
 					["sourceQuest"] = 668,	-- Sunken Treasure (3/5)
 					["coord"] = { 32.2, 81.4, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { STRANGLETHORN_VALE },
-					["cost"] = {
-						{ "i", 4502, 1 },	-- Sample Elven Gem
-					},
 					["lvl"] = 35,
 				}),
 				q(670, {	-- Sunken Treasure (5/5)
-					["qg"] = 2487,	-- Fleet Master Seahorn <Blackwater Raiders>
+					["providers"] = {
+						{ "n", 2487 },	-- Fleet Master Seahorn <Blackwater Raiders>
+						{ "i", 4494 },	-- Seahorn's Sealed Letter
+					},
 					["sourceQuest"] = 669,	-- Sunken Treasure (4/5)
 					["coord"] = { 27.2, 77.0, STRANGLETHORN_VALE },
-					["cost"] = {
-						{ "i", 4494, 1 },	-- Seahorn's Sealed Letter
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 35,
+				}),
+				q(26051, {	-- Sunken Treasure
+					["qg"] = 2774,	-- Doctor Draxlegauge
+					["sourceQuest"] = 26050,	-- Goggle Boggle
+					["coord"] = { 27.5, 82.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(59199, {	-- Bottom Waders
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59200, {	-- Decalcified Elven Spear
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131474, {	-- Chain Weighted Shoes
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(156948, {	-- Waterlogged Elven Spear
+							["timeline"] = { "added 7.3.5.25692" },
+						}),
+					},
 				}),
 				q(640, {	-- The Broken Sigil
 					["qg"] = 2703,	-- Zengu
 					["sourceQuest"] = 639,	-- Sigil of Strom
+					["coord"] = { 73.8, 33.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 32,
 					["groups"] = {
@@ -617,8 +1145,32 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(26023, {	-- The Forsaken Trollbane
+					["qg"] = 41949,	-- Dark Ranger Alina
+					["sourceQuest"] = 26022,	-- First Blood
+					["coord"] = { 13.3, 35.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(676, {	-- The Hammer May Fall
+					["qg"] = 2770,	-- Tallow
+					["coord"] = { 61.86, 19.58, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/8 Boulderfist Ogre slain
+							["provider"] = { "n", 2562 },	-- Boulderfist Ogre
+						}),
+						objective(2, {	-- 0/10 Boulderfist Enforcer slain
+							["provider"] = { "n", 2564 },	-- Boulderfist Enforcer
+						}),
+					},
+				}),
 				q(642, {	-- The Princess Trapped
 					["provider"] = { "o", 138492 },	-- Shards of Myzrael
+					["coord"] = { 62.5, 33.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["lvl"] = 30,
 					["groups"] = {
 						objective(1, {	-- 0/12 Mote of Myzrael
@@ -631,43 +1183,167 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				q(680, {	-- The Real Threat
-					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 4551, 1 },	-- Or'Kalar's Head
+				q(26039, {	-- The Princess Trapped
+					["provider"] = { "o", 138492 },	-- Shards of Myzrael
+					["sourceQuests"] = { 26341, 26909 },	-- The Stone Shards (A/H versions)
+					["coord"] = { 57.2, 34.5, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+				}),
+				{	-- The Princess Unleashed [A & H]
+					["allianceQuestData"] = q(26049, {	-- The Princess Unleashed [A]
+						["qg"] = 2789,	-- Skuerto
+						["sourceQuest"] = 26346,	-- Myzrael's Tale
+						["coord"] = { 40.3, 49.1, ARATHI_HIGHLANDS },
+					}),
+					["hordeQuestData"] = q(26912, {	-- The Princess Unleashed [H]
+						["qg"] = 2787,	-- Zaruk
+						["sourceQuest"] = 26911,	-- Myzrael's Tale
+						["coord"] = { 69.6, 36.5, ARATHI_HIGHLANDS },
+					}),
+					["timeline"] = { "added 4.0.3.13277" },
+					["groups"] = {
+						i(59208, {	-- Wrap of Open Menace
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59209, {	-- Eldritch Gloves
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59210, {	-- Earthbound Mantle
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59211, {	-- Shackling Gloves
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131473, {	-- Mantle of the Bound
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 					},
+				},
+				q(680, {	-- The Real Threat
+					["qg"] = 2772,	-- Korin Fel
+					["coord"] = { 74.0, 33.2, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4551,	-- Or'Kalar's Head
-							["questID"] = 680,	-- The Real Threat
-							["cr"] = 2773,	-- Or'Kalar
+						objective(1, {	-- 0/1 Or'Kalar's Head
+							["provider"] = { "i", 4551 },	-- Or'Kalar's Head
 							["coord"] = { 20.8, 65.6, ARATHI_HIGHLANDS },
-						},
-						i(4976),	-- Mistspray Kilt
-						i(4977),	-- Sword of Hammerfall
+							["cr"] = 2773,	-- Or'Kalar
+						}),
+						i(4976, {	-- Mistspray Kilt
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(4977, {	-- Sword of Hammerfall
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26029, {	-- The Real Threat
+					["qg"] = 41966,	-- Deathstalker Maudria
+					["sourceQuest"] = 26027,	-- Call to Arms
+					["coord"] = { 13.3, 33.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(59186, {	-- Skullslasher
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59187, {	-- Silent Huntress
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59188, {	-- Belt of Affront
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59189, {	-- Mistspray Vest
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131469, {	-- Seabreeze Hauberk
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
+				}),
+				q(26341, {	-- The Stone Shards
+					["qg"] = 2789,	-- Skuerto
+					["coord"] = { 40.3, 49.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+				}),
+				q(26909, {	-- The Stone Shards
+					["qg"] = 2787,	-- Zaruk
+					["coord"] = { 69.6, 36.5, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+				}),
+				q(26025, {	-- The Traitor Orc
+					["qg"] = 41949,	-- Dark Ranger Alina
+					["sourceQuest"] = 26022,	-- First Blood
+					["coord"] = { 13.3, 35.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(59171, {	-- Bloodstone-Studded Cloak
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59172, {	-- Drakeskin Leggings
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59173, {	-- Radiant Silver Armguards
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131466, {	-- Highland Chain Greaves
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 					},
 				}),
 				q(687, {	-- Theldurin the Lost
-					["qgs"] = {
-						2786,	-- Gerrig Bonegrip
-						2787,	-- Zaruk
+					["allianceQuestData"] = {
+						["qg"] = 2786,	-- Gerrig Bonegrip
+						["sourceQuest"] = 653,	-- Myzrael's Allies [A]
+						["coord"] = { 50.6, 6.2, IRONFORGE },
 					},
-					["sourceQuests"] = {
-						653,	-- Myzrael's Allies
-						688,	-- Myzrael's Allies
+					["hordeQuestData"] = {
+						["qg"] = 2787,	-- Zaruk
+						["sourceQuest"] = 688,	-- Myzrael's Allies [H]
+						["coord"] = { 74.4, 35.6, ARATHI_HIGHLANDS },
 					},
-					["coords"] = {
-						{ 74.4, 35.6, ARATHI_HIGHLANDS },
-						{ 50.6, 6.2, IRONFORGE },
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { BADLANDS },
 					["lvl"] = 30,
+				}),
+				q(26428, {	-- To Steal From Thieves
+					["qg"] = 4486,	-- Genavie Callow
+					["coord"] = { 13.7, 33.9, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(59158, {	-- Craig's Steel
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59164, {	-- Grim Mace
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59165, {	-- Genavie's Leggings
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59166, {	-- Adulterous Belt
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59167, {	-- Treads of Unforgotten Pain
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131528, {	-- Cheater's Cinch
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
 				}),
 				q(694, {	-- Trelane's Defenses
 					["qg"] = 2789,	-- Skuerto
 					["sourceQuest"] = 693,	-- Wand over Fist
 					["coord"] = { 46.6, 47.0, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -677,87 +1353,202 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				q(6622, {	-- Triage
+				q(26037, {	-- Trelane's Defenses
+					["qg"] = 2789,	-- Skuerto
+					["sourceQuest"] = 26036,	-- Wand Over Fist
+					["coord"] = { 40.3, 49.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(6622, {	-- Triage (H)
 					["qg"] = 12920,	-- Doctor Gregory Victor
-					["coord"] = { 73.40, 36.89, ARATHI_HIGHLANDS },
+					["sourceQuest"] = 6623,	-- Horde Trauma
+					-- #if AFTER CATA
+					["coord"] = { 73.4, 36.8, ARATHI_HIGHLANDS },
+					-- #else
+					["coord"] = { 68.5, 37.8, ARATHI_HIGHLANDS },
+					-- #endif
+					-- #if AFTER BFA
+					["description"] = "Needs a minimum of 225 skill in Tailoring.",
+					["requireSkill"] = TAILORING,
+					-- #else
+					["description"] = "Needs a minimum of 225 skill in First Aid.",
 					["requireSkill"] = FIRST_AID,
+					-- #endif
 					["races"] = HORDE_ONLY,
-					["lvl"] = 35,
-				}),
-				q(645, {	-- Trol'kalar
-					["lvl"] = 32,
-					["races"] = HORDE_ONLY,
-				}),
-				q(646, {	-- Trol'kalar
-					["lvl"] = 32,
-					["races"] = HORDE_ONLY,
+					["lvl"] = lvlsquish(35, 15, 35),
 					["groups"] = {
-						i(4508),	-- Blood-tinged Armor
-						i(4507),	-- Pit Fighter's Shield
+						objective(1, {	-- 0/15 Patients Saved!
+							["provider"] = { "i", 16991 },	-- Triage Bandage
+							["crs"] = {
+								12923,	-- Injured Soldier
+								12924,	-- Badly Injured Soldier
+								12925,	-- Critically Injured Soldier
+							},
+						}),
+						-- #if BEFORE 3.1.0
+						recipe(10846, { ["rank"] = 4 }),	-- First Aid (Artisan)
+						-- #endif
+						i(49192, {	-- Horde Trauma Certification
+							["timeline"] = { "added 3.2.0.10192" },
+						}),
 					},
+				}),
+				q(645, {	-- Trol'kalar (1/2)
+					["providers"] = {
+						{ "n", 2703 },	-- Zengu
+						{ "i", 4467 },	-- Sigil of Ignaeus
+					},
+					["sourceQuest"] = 644,	-- Sigil of Trollbane
+					["coord"] = { 73.8, 33.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 32,
+				}),
+				q(646, {	-- Trol'kalar (2/2)
+					["providers"] = {
+						{ "n", 2703 },	-- Trollbane's Tomb
+						{ "i", 4468 },	-- Sheathed Trol'kalar
+					},
+					["sourceQuest"] = 645,	-- Trol'kalar (1/2)
+					["coord"] = { 28.9, 59.6, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 32,
+					["groups"] = {
+						i(4508, {	-- Blood-tinged Armor
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(4507, {	-- Pit Fighter's Shield
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26033, {	-- Trol'kalar
+					["qg"] = 41944,	-- Galen Trollbane
+					["sourceQuest"] = 26032,	-- Sigil of Arathor
+					["coord"] = { 12.9, 36.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
 				}),
 				q(693, {	-- Wand over Fist
 					["qg"] = 2789,	-- Skuerto
 					["sourceQuest"] = 691,	-- Worth Its Weight in Gold
 					["coord"] = { 46.6, 47.0, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4525,	-- Trelane's Wand of Invocation
-							["questID"] = 693,	-- Wand over Fist
-							["cr"] = 2793,	-- Kor'gresh Coldrage
+						objective(1, {	-- 0/1 Trelane's Wand of Invocation
+							["provider"] = { "i", 4525 },	-- Trelane's Wand of Invocation
 							["coord"] = { 54.6, 81.6, ARATHI_HIGHLANDS },
-						},
+							["cr"] = 2793,	-- Kor'gresh Coldrage
+						}),
 					},
+				}),
+				q(26036, {	-- Wand over Fist
+					["qg"] = 2789,	-- Skuerto
+					["sourceQuest"] = 26035,	-- Worth Its Weight in Gold
+					["coord"] = { 40.3, 49.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(684, {	-- Wanted! Marez Cowl
 					["provider"] = { "o", 2713 },	-- Wanted Board
 					["coord"] = { 46.0, 47.7, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4515, 1 },	-- Marez's Head
-					},
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4515,	-- Marez's Head
-							["questID"] = 684,	-- Wanted! Marez Cowl
-							["cr"] = 2783,	-- Marez Cowl
+						objective(1, {	-- 0/1 Marez's Head
+							["provider"] = { "i", 4515 },	-- Marez's Head
 							["coord"] = { 29.0, 64.0, ARATHI_HIGHLANDS },
-						},
-						i(4744),	-- Arcane Runed Bracers
+							["cr"] = 2783,	-- Marez Cowl
+						}),
+						i(4744, {	-- Arcane Runed Bracers
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26024, {	-- Wanted! Marez Cowl
+					["provider"] = { "o", 2713 },	-- Wanted Board
+					["coord"] = { 40.1, 49.0, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(59182, {	-- Syndicate Dagger
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59183, {	-- Silenced Rifle
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59184, {	-- Demon-Trafficker's Belt
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59185, {	-- Vest of Dark Rumors
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131465, {	-- Hauberk of Dire Tidings
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 					},
 				}),
 				q(685, {	-- Wanted! Otto and Falconcrest
 					["provider"] = { "o", 2713 },	-- Wanted Board
 					["coord"] = { 46.0, 47.7, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 4517, 1 },	-- Falconcrest's Head
-						{ "i", 4516, 1 },	-- Otto's Head
-					},
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 4517,	-- Falconcrest's Head
-							["questID"] = 685,	-- Wanted! Otto and Falconcrest
-							["cr"] = 2597,	-- Lord Falconcrest <Syndicate Leader>
+						objective(1, {	-- 0/1 Otto's Head
+							["provider"] = { "i", 4516 },	-- Otto's Head
 							["coord"] = { 26.0, 65.6, ARATHI_HIGHLANDS },
-						},
-						{
-							["itemID"] = 4516,	-- Otto's Head
-							["questID"] = 685,	-- Wanted! Otto and Falconcrest
 							["cr"] = 2599,	-- Otto <Bodyguard>
+						}),
+						objective(2, {	-- 0/1 Falconcrest's Head
+							["provider"] = { "i", 4517 },	-- Falconcrest's Head
 							["coord"] = { 26.0, 65.6, ARATHI_HIGHLANDS },
-						},
-						i(5247),	-- Rod of Sorrow
-						i(4745),	-- War Rider Bracers
+							["cr"] = 2597,	-- Lord Falconcrest <Syndicate Leader>
+						}),
+						i(5247, {	-- Rod of Sorrow
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(4745, {	-- War Rider Bracers
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(26079, {	-- Wanted! Otto and Falconcrest
+					["provider"] = { "o", 2713 },	-- Wanted Board
+					["coord"] = { 40.1, 49.0, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(59174, {	-- Dustfall Bracers
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59175, {	-- Sandals of Sorrow
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59176, {	-- War Rider Belt
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(59177, {	-- Captain Nials' Belt
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131477, {	-- Boots of the Refuge Captain
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(131478, {	-- Battle Rider Belt
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
 					},
 				}),
 				q(691, {	-- Worth Its Weight in Gold
 					["qg"] = 2788,	-- Apprentice Kryten
+					["sourceQuest"] = 690,	-- Malin's Request (1/2)
 					["coord"] = { 46.2, 47.8, ARATHI_HIGHLANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -783,6 +1574,12 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							["cr"] = 2557,	-- Witherbark Shadow Hunter
 						}),
 					},
+				}),
+				q(26035, {	-- Worth Its Weight in Gold
+					["qg"] = 2789,	-- Skuerto
+					["coord"] = { 40.3, 49.1, ARATHI_HIGHLANDS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 			}),
 			n(RARES, {
@@ -958,12 +1755,51 @@ root("Zones", m(EASTERN_KINGDOMS, {
 			}),
 			n(VENDORS, {
 				n(2816, {	-- Androd Fadran <Leatherworking Supplies>
+					-- #if AFTER CATA
+					["coord"] = { 39.2, 48.2, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 45.1, 46.8, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(13288),	-- Pattern: Raptor Hide Belt
+						i(13288, {	-- Pattern: Raptor Hide Belt
+							["isLimited"] = true,
+						}),
 					},
 				}),
+				-- #if AFTER 4.0.3
+				n(3180, {	-- Dark Iron Entrepreneur <Speciality Goods>
+					["coord"] = { 42.6, 90.6, ARATHI_HIGHLANDS },
+					["groups"] = {
+						i(11150),	-- Formula: Enchant Gloves - Mining (RECIPE!)
+						i(4824, {	-- Blurred Axe
+							["isLimited"] = true,
+						}),
+						i(4825, {	-- Callous Axe
+							["isLimited"] = true,
+						}),
+						i(4826, {	-- Marauder Axe
+							["isLimited"] = true,
+						}),
+						i(4835, {	-- Elite Shoulders
+							["isLimited"] = true,
+						}),
+						i(4833, {	-- Glorious Shoulders
+							["isLimited"] = true,
+						}),
+						i(4832, {	-- Mystic Sarong
+							["isLimited"] = true,
+						}),
+						i(4830, {	-- Saber Leggings
+							["isLimited"] = true,
+						}),
+						i(4831, {	-- Stalking Pants
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				-- #endif
+				-- #if BEFORE 3.1.0.9767
 				n(2805, {	-- Deneb Walker <Scrolls & Potions>
 					["coord"] = { 27.0, 58.8, ARATHI_HIGHLANDS },
 					["races"] = ALLIANCE_ONLY,
@@ -973,15 +1809,26 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(16113),	-- Manual: Mageweave Bandage
 					},
 				}),
+				-- #endif
 				n(2812, {	-- Drovnar Strongbrew <Alchemy Supplies>
+					-- #if AFTER CATA
+					["coord"] = { 40.6, 48.2, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 46.4, 47.0, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(6056),	-- Recipe: Frost Protection Potion
+						i(6056, {	-- Recipe: Frost Protection Potion
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(2810, {	-- Hammon Karwn <Superior Tradesman>
+					-- #if AFTER CATA
+					["coord"] = { 40.4, 48.8, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 46.5, 47.4, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						-- #if AFTER TBC
@@ -989,26 +1836,44 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							["isLimited"] = true,
 						}),
 						-- #endif
-						i(5973),	-- Pattern: Barbaric Leggings
+						i(5973, {	-- Pattern: Barbaric Leggings
+							["isLimited"] = true,
+						}),
 						i(12228),	-- Recipe: Roast Raptor
 					},
 				}),
 				n(1471, {	-- Jannos Ironwill <Superior Macecrafter>
+					-- #if AFTER CATA
+					["coord"] = { 40.8, 48.0, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 46.0, 47.7, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(10858),	-- Plans: Solid Iron Maul
+						i(10858, {	-- Plans: Solid Iron Maul
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(6574, {	-- Jun'ha <Tailoring Supplies>
+					-- #if AFTER CATA
+					["coord"] = { 67.8, 37.4, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 72.8, 36.6, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(7089),	-- Pattern: Azure Silk Cloak
+						i(7089, {	-- Pattern: Azure Silk Cloak
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(2821, {	-- Keena <Trade Goods>
+					-- #if AFTER CATA
+					["coord"] = { 69.2, 33.6, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 74.0, 32.6, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						-- #if AFTER TBC
@@ -1016,31 +1881,51 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							["isLimited"] = true,
 						}),
 						-- #endif
+						i(11163, {	-- Formula: Enchant Bracer - Lesser Dodge / CLASSIC: Formula: Enchant Bracer - Lesser Deflection (RECIPE!)
+							["timeline"] = { "removed 4.1.0" },	-- Learned by trainer
+						}),
+						i(5973, {	-- Pattern: Barbaric Leggings
+							["isLimited"] = true,
+						}),
 						i(3682),	-- Recipe: Curiously Tasty Omelet
-						i(5973),	-- Pattern: Barbaric Leggings
-						i(11163),	-- Formula: Enchant Bracer - Lesser Deflection
 						i(12228),	-- Recipe: Roast Raptor
 					},
 				}),
 				n(9555, {	-- Mu'uta <Bowyer>
+					-- #if AFTER CATA
+					["coord"] = { 67.6, 34.2, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 72.6, 33.6, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(11305),	-- Dense Shortbow
+						i(11305, {	-- Dense Shortbow
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(2814, {	-- Narj Deepslice <Butcher>
+					-- #if AFTER CATA
+					["coord"] = { 39.6, 48.8, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 45.6, 47.6, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(4609),	-- Recipe: Barbecued Buzzard Wing
 					},
 				}),
 				n(2819, {	-- Tunkk <Leatherworking Supplies>
+					-- #if AFTER CATA
+					["coord"] = { 70.0, 35.4, ARATHI_HIGHLANDS },
+					-- #else
 					["coord"] = { 74.8, 34.6, ARATHI_HIGHLANDS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(13287),	-- Pattern: Raptor Hide Harness
+						i(13287, {	-- Pattern: Raptor Hide Harness
+							["isLimited"] = true,
+						}),
 					},
 				}),
 			}),
@@ -1055,6 +1940,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				i(5624, {	-- Circlet of the Order
 					["cr"] = 2584,	-- Stromgarde Defender
+					-- #if BEFORE 4.0.3
+					["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+					-- #endif
 					["timeline"] = { "removed 4.0.3" },
 				}),
 				i(4481, {	-- Cresting Charm
@@ -1091,6 +1979,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						2780,	-- Caretaker Nevlin
 						2781,	-- Caretaker Weston
 					},
+					-- #if BEFORE 4.0.3
+					["description"] = "This item is only naturally accessible to Horde players due to the allegiance of the mobs that drop this item. If you were to sell this item on the Neutral AH you might be able to fetch a pretty penny to collectors.",
+					-- #endif
 					["timeline"] = { "removed 4.0.3" },
 				}),
 				i(1993, {	-- Ogremind Ring
