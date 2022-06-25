@@ -449,19 +449,15 @@ root("Zones", m(KALIMDOR, {
 					["sourceQuest"] = 1534,	-- Call of Water (6/9)
 					["coord"] = { 65.8, 43.8, THE_BARRENS },
 					["maps"] = { SILVERPINE_FOREST },
-					["cost"] = {
-						{ "i", 7812, 1 },	-- Corrupt Manifestation's Bracers
-					},
 					["classes"] = { SHAMAN },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 20,
 					["groups"] = {
-						i(7811, {	-- Remaining Drops of Purest Water
+						objective(1, {	-- 0/1 Corrupt Manifestation's Bracers
+							["provider"] = { "i", 7812 },	-- Corrupt Manifestation's Bracers
 							["coord"] = { 38.8, 44.3, SILVERPINE_FOREST },
+							["cost"] = { { "i", 7811, 1 } },	-- Remaining Drops of Purest Water
 							["cr"] = 5894,	-- Corrupt Minor Manifestation of Water
-							["groups"] = {
-								i(7812),	-- Corrupt Manifestation's Bracers
-							},
 						}),
 					},
 				}),
@@ -2244,7 +2240,9 @@ root("Zones", m(KALIMDOR, {
 					["coord"] = { 51.0, 29.0, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(11304),	-- Fine Longbow
+						i(11304, {	-- Fine Longbow
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(3492, {	-- Vexspindle <Cloth & Leather Armor Merchant>

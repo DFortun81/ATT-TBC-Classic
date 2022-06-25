@@ -788,12 +788,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 60.4, 26.0, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(4818),	-- Executioner's Sword
-						i(4817),	-- Blessed Claymore
+						i(4817, {	-- Blessed Claymore
+							["isLimited"] = true,
+						}),
 						i(4824),	-- Blurred Axe
-						i(4825),	-- Callous Axe
-						i(4826),	-- Marauder Axe
 						i(12247),	-- Broad Bladed Knife
+						i(4825),	-- Callous Axe
+						i(4818, {	-- Executioner's Sword
+							["isLimited"] = true,
+						}),
+						i(4826),	-- Marauder Axe
 						i(12249),	-- Merciless Axe
 					},
 				}),

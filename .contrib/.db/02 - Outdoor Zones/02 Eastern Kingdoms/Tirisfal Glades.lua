@@ -347,12 +347,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						},
 					},
 				}),
-				q(1885, {	-- Mennet Carkad
-					["qg"] = 2130,	-- Marion Call
-					["races"] = { UNDEAD },
-					["classes"] = { ROGUE },
-					["lvl"] = 10,
-				}),
 				q(380, {	-- Night Web's Hollow
 					["qg"] = 1570,	-- Executor Arren
 					["sourceQuest"] = 376,	-- The Damned
@@ -533,40 +527,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(2173),	-- Old Leather Belt
 					},
 				}),
-				q(1886, {	-- The Deathstalkers (1/4)
-					["qg"] = 6467,	-- Mennet Carkad
-					["sourceQuest"] = 1885,	-- Mennet Carkad
-					["races"] = { UNDEAD },
-					["classes"] = { ROGUE },
-					["lvl"] = 10,
-				}),
-				q(1898, {	-- The Deathstalkers (2/4)
-					["qg"] = 6467,	-- Mennet Carkad
-					["sourceQuest"] = 1886,	-- The Deathstalkers (1/4)
-					["races"] = { UNDEAD },
-					["classes"] = { ROGUE },
-					["lvl"] = 10,
-				}),
-				q(1899, {	-- The Deathstalkers (3/4)
-					["qg"] = 6522,	-- Andron Gant
-					["sourceQuest"] = 1898,	-- The Deathstalkers (2/4)
-					["races"] = { UNDEAD },
-					["classes"] = { ROGUE },
-					["lvl"] = 10,
-				}),
-				q(1978, {	-- The Deathstalkers (4/4)
-					["qg"] = 6467,	-- Mennet Carkad
-					["sourceQuest"] = 1899,	-- The Deathstalkers (3/4)
-					["timeline"] = { "removed 4.0.3" },
-					["races"] = { UNDEAD },
-					["classes"] = { ROGUE },
-					["lvl"] = 10,
-					["groups"] = {
-						i(7298, {	-- Blade of Cunning
-							["timeline"] = { "removed 4.0.3" },
-						}),
-					},
-				}),
+				
 				q(410, {	-- The Dormant Shade
 					["provider"] = { "o", 1557 },	-- Lillith's Dinner Table
 					["races"] = HORDE_ONLY,
@@ -696,6 +657,20 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(3267),	-- Forsaken Shortsword
 						i(5779),	-- Forsaken Bastard Sword
 					},
+				}),
+				q(9601, {	-- To The Bulwark
+					["qgs"] = {
+						16681,	-- Champion Bachi <Paladin Trainer>
+						20406,	-- Champion Cyssa Dawnrose <Paladin Trainer>
+					},
+					["coords"] = {
+						{ 92.0, 37.6, SILVERMOON_CITY },
+						{ 57.8, 90.8, UNDERCITY },
+					},
+					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
+					["classes"] = { PALADIN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 50,
 				}),
 				q(1819, {	-- Ulag the Cleaver
 					["qg"] = 1496,	-- Deathguard Dillinger

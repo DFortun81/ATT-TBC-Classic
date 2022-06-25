@@ -1748,8 +1748,12 @@ root("Zones", m(KALIMDOR, {
 					["coord"] = { 67.4, 47.8, DUSTWALLOW_MARSH, },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(4817),	-- Blessed Claymore
-						i(4818),	-- Executioner's Sword
+						i(4817, {	-- Blessed Claymore
+							["isLimited"] = true,
+						}),
+						i(4818, {	-- Executioner's Sword
+							["isLimited"] = true,
+						}),
 						i(4824),	-- Blurred Axe
 						i(4825),	-- Callous Axe
 						i(4826),	-- Marauder Axe

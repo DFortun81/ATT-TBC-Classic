@@ -414,10 +414,7 @@ root("Zones", m(KALIMDOR, {
 				}),
 				q(1963, {	-- The Shattered Hand (1/2)
 					["qg"] = 6446,	-- Therzok
-					["sourceQuests"] = {
-						1885,	-- Mennet Carkad
-						1859,	-- Therzok
-					},
+					["sourceQuest"] = 1859,	-- Therzok
 					["coord"] = { 42.74, 53.52, ORGRIMMAR },
 					["races"] = { ORC, TROLL },
 					["classes"] = { ROGUE },

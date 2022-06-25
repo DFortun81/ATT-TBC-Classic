@@ -599,7 +599,9 @@ root("Zones", m(KALIMDOR, {
 					["coord"] = { 45.2, 59.2, STONETALON_MOUNTAINS },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(11304),	-- Fine Longbow
+						i(11304, {	-- Fine Longbow
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(4083, {	-- Jeeda <Apprentice Witch Doctor>
@@ -634,7 +636,9 @@ root("Zones", m(KALIMDOR, {
 					["coord"] = { 58.2, 51.6, STONETALON_MOUNTAINS },
 					["groups"] = {
 						i(4817),	-- Orb of Power
-						i(4818),	-- Executioner's Sword
+						i(4818, {	-- Executioner's Sword
+							["isLimited"] = true,
+						}),
 						i(4836),	-- Fireproof Orb
 						i(4837),	-- Strength of Will
 						i(4838),	-- Orb of Power

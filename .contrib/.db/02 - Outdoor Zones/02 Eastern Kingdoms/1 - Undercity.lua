@@ -235,14 +235,28 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 4568,	-- Anastasia Hartwell <Mage Trainer>
 					["sourceQuest"] = 1960,	-- Investigate the Alchemist Shop
 					["coord"] = { 85.0, 10.2, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { SILVERPINE_FOREST },
+					["cost"] = { { "i", 2589, 10 } },	-- Linen Cloth
 					["races"] = HORDE_ONLY,
 					["classes"] = { MAGE },
-					["cost"] = {
-						{ "i", 7293, 6 },	-- Dalaran Mana Gem
-						{ "i", 2589, 10 },	-- Linen Cloth
-					},
 					["lvl"] = 15,
+					["groups"] = {
+						objective(2, {	-- 0/6 Dalaran Mana Gem
+							["provider"] = { "i", 7293 },	-- Dalaran Mana Gem
+							["crs"] = {
+								1867,	-- Dalaran Apprentice
+								3577,	-- Dalaran Brewmaster
+								1915,	-- Dalaran Conjuror
+								1914,	-- Dalaran Mage
+								3578,	-- Dalaran Miner
+								1912,	-- Dalaran Protector
+								1913,	-- Dalaran Warder
+								1888,	-- Dalaran Watcher
+								1889,	-- Dalaran Wizard
+							},
+						}),
+					},
 				}),
 				q(1476, {	-- Hearts of the Pure
 					["qg"] = 5693,	-- Godrick Farsan
@@ -251,6 +265,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						1472,	-- Devourer of Souls (Undercity)
 					},
 					["coord"] = { 85, 14.8, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { SILVERPINE_FOREST, WETLANDS },
 					["classes"] = { WARLOCK },
 					["races"] = { ORC, UNDEAD },
@@ -337,6 +352,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(15702),	-- Chemist's Ring
 						i(15703),	-- Chemist's Smock
 					},
+				}),
+				q(1885, {	-- Mennet Carkad
+					["qg"] = 2130,	-- Marion Call
+					["coord"] = { 61.6, 52, TIRISFAL_GLADES },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = { UNDEAD },
+					["classes"] = { ROGUE },
+					["isBreadcrumb"] = true,
+					["lvl"] = 10,
 				}),
 				q(6322, {	-- Michael Garrett
 					["qg"] = 4556,	-- Gordon Wendham
@@ -464,11 +488,14 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 11049,	-- Rhiannon Davis <Expert Tailor>
 					["sourceQuest"] = 1961,	-- Gathering Materials
 					["coord"] = { 70.2, 30.2, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["classes"] = { MAGE },
 					["lvl"] = 15,
 					["groups"] = {
-						i(7510),	-- Lesser Spellfire Robes
+						i(7510, {	-- Lesser Spellfire Robes
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(4661, {	-- Testing for Corruption - Felwood
@@ -556,6 +583,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 5675,	-- Carendin Halgar
 					["sourceQuest"] = 1476,	-- Hearts of the Pure
 					["coord"] = { 85, 25.6, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { WARLOCK },
 					["races"] = HORDE_ONLY,
 					["cr"] = 5677,	-- Summoned Succubus
@@ -594,6 +622,72 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = HORDE_ONLY,
 					["lvl"] = 54,
 				}),
+				q(1886, {	-- The Deathstalkers (1/4)
+					["qg"] = 6467,	-- Mennet Carkad
+					["sourceQuest"] = 1885,	-- Mennet Carkad
+					["coord"] = { 83.2, 69, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { SILVERPINE_FOREST },
+					["races"] = { UNDEAD },
+					["classes"] = { ROGUE },
+					["lvl"] = 10,
+					["groups"] = {
+						objective(1, {	-- 0/1 Astor's Letter of Introduction
+							["provider"] = { "i", 7231 },	-- Astor's Letter of Introduction
+							["coords"] = {
+								{ 67.4, 5.6, SILVERPINE_FOREST },
+								{ 53.6, 19.5, SILVERPINE_FOREST },
+								{ 51.0, 36.2, SILVERPINE_FOREST },
+								{ 46.4, 41.4, SILVERPINE_FOREST },
+							},
+							["cr"] = 6497,	-- Astor Hadren
+						}),
+					},
+				}),
+				q(1898, {	-- The Deathstalkers (2/4)
+					["providers"] = {
+						{ "n", 6467 },	-- Mennet Carkad
+						{ "i", 7231 },	-- Astor's Letter of Introduction
+					},
+					["sourceQuest"] = 1886,	-- The Deathstalkers (1/4)
+					["coord"] = { 83.2, 69, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = { UNDEAD },
+					["classes"] = { ROGUE },
+					["lvl"] = 10,
+				}),
+				q(1899, {	-- The Deathstalkers (3/4)
+					["qg"] = 6522,	-- Andron Gant
+					["sourceQuest"] = 1898,	-- The Deathstalkers (2/4)
+					["coord"] = { 54.6, 75.6, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = { UNDEAD },
+					["classes"] = { ROGUE },
+					["lvl"] = 10,
+					["groups"] = {
+						objective(1, {	-- 0/1 Andron's Ledger
+							["provider"] = { "i", 7294 },	-- Andron's Ledger
+							["coord"] = { 55.3, 76.7, UNDERCITY },
+						}),
+					},
+				}),
+				q(1978, {	-- The Deathstalkers (4/4)
+					["providers"] = {
+						{ "n", 6467 },	-- Mennet Carkad
+						{ "i", 7294 },	-- Andron's Ledger
+					},
+					["sourceQuest"] = 1899,	-- The Deathstalkers (3/4)
+					["coord"] = { 83.2, 69, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = { UNDEAD },
+					["classes"] = { ROGUE },
+					["lvl"] = 10,
+					["groups"] = {
+						i(7298, {	-- Blade of Cunning
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
 				q(1164, {	-- To Steal From Thieves
 					["qg"] = 4486,	-- Genavie Callow
 					["coord"] = { 64.8, 49.6, UNDERCITY },
@@ -627,20 +721,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(4443),	-- Grim Pauldrons
 						i(2032),	-- Gallan Cuffs
 					},
-				}),
-				q(9601, {	-- To The Bulwark
-					["qgs"] = {
-						16681,	-- Champion Bachi <Paladin Trainer>
-						20406,	-- Champion Cyssa Dawnrose <Paladin Trainer>
-					},
-					["coords"] = {
-						{ 92.0, 37.6, SILVERMOON_CITY },
-						{ 57.8, 90.8, UNDERCITY },
-					},
-					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
-					["classes"] = { PALADIN },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 50,
 				}),
 				q(1999, {	-- Tools of the Trade
 					["qg"] = 6467,	-- Mennet Carkad

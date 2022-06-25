@@ -681,7 +681,9 @@ root("Zones", m(KALIMDOR, {
 					["coord"] = { 45.0, 50.6, THOUSAND_NEEDLES },
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(11304),	-- Fine Longbow
+						i(11304, {	-- Fine Longbow
+							["isLimited"] = true,
+						}),
 						i(11305),	-- Dense Shortbow
 					},
 				}),

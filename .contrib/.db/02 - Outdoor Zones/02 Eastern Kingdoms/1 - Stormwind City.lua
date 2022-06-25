@@ -421,20 +421,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 5497,	-- Jennea Cannon <Mage Trainer>
 					["sourceQuest"] = 1920,	-- Investigate the Blue Recluse
 					["coord"] = { 38.6, 79.6, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { LOCH_MODAN },
+					["cost"] = { { "i", 2589, 10 } },	-- Linen Cloth
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
-					["cost"] = {
-						{ "i", 2589, 10 },	-- Linen Cloth
-						{ "i", 7249, 6 },	-- Charged Rift Gem
-					},
 					["lvl"] = 15,
 					["groups"] = {
-						{
-							["itemID"] = 7249,	-- Charged Rift Gem
-							["questID"] = 1921,	-- Gathering Materials
+						objective(2, {	-- 0/6 Charged Rift Gem
+							["provider"] = { "i", 7249 },	-- Charged Rift Gem
 							["coord"] = { 35, 27, LOCH_MODAN },
-						},
+						}),
 					},
 				}),
 				q(5048, {	-- Good Natured Emma
@@ -570,11 +567,14 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 1309,	-- Wynne Larson <Robe Merchant>
 					["sourceQuest"] = 1921,	-- Gathering Materials
 					["coord"] = { 41.8, 76.4, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
 					["lvl"] = 15,
 					["groups"] = {
-						i(7509),	-- Manaweave Robe
+						i(7509, {	-- Manaweave Robe
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(1666, {	-- Marshal Haggard
