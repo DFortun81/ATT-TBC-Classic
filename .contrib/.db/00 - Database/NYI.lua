@@ -410,7 +410,9 @@ root("NeverImplemented", {
 		i(12616),	-- Savage Mail Boots
 		i(12617),	-- Savage Mail Shoulders
 		i(12615),	-- Savage Mail Tunic
+		-- #if BEFORE CATA
 		i(12258),	-- Serpent Clasp Belt
+		-- #endif
 		i(16157),	-- Test Arcane Res Feet Mail
 		i(16164),	-- Test Arcane Res Hands Mail
 		i(16159),	-- Test Arcane Res Head Mail

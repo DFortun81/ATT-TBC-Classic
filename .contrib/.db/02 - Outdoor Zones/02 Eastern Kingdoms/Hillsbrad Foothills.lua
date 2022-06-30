@@ -594,10 +594,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 61.4, 19.2, HILLSBRAD_FOOTHILLS },
 					["maps"] = { THE_HINTERLANDS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 9322, 1 },	-- Undamaged Venom Sac
-					},
 					["lvl"] = 40,
+					["groups"] = {
+						objective(1, {	-- 0/1 Undamaged Venom Sac
+							["provider"] = { "i", 9322 },	-- Undamaged Venom Sac
+							["cr"] = 2686,	-- Witherbark Broodguard
+						}),
+					},
 				}),
 				q(2938, {	-- Venom to the Undercity
 					["qg"] = 2216,	-- Apothecary Lydon <Royal Apothecary Society>
@@ -955,6 +958,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						14275,	-- Tamra Stormpike
 					},
 				}),
+				-- #if BEFORE CATA
+				i(4589, {	-- Long Elegant Feather
+					["crs"] = {
+						2474,	-- Kurdros
+						2347,	-- Wild Gryphon
+						2473,	-- Granistad
+					},
+				}),
+				-- #endif
 				i(3496, {	-- Mountain Lion Blood
 					["questID"] = 501,	-- Elixir of Pain
 					["races"] = HORDE_ONLY,

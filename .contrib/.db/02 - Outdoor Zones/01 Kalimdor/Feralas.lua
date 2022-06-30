@@ -186,13 +186,14 @@ root("Zones", m(KALIMDOR, {
 					["lvl"] = 39,
 				}),
 				q(3841, {	-- An Orphan Looking For a Home
-					["qg"] = 7956,	-- Kindal Moonweaver
+					["providers"] = {
+						{ "n", 7956 },	-- Kindal Moonweaver
+						{ "i", 11102 },	-- Unhatched Sprite Darter Egg
+					},
 					["sourceQuest"] = 2972,	-- Doling Justice (2/2)
 					["coord"] = { 65.8, 45.6, FERALAS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 11102, 1 },	-- Unhatched Sprite Darter Egg
-					},
 					["lvl"] = 38,
 				}),
 				q(4127, {	-- Boat Wreckage
@@ -456,13 +457,49 @@ root("Zones", m(KALIMDOR, {
 					["coord"] = { 74.4, 43.4, FERALAS },
 					["maps"] = { THE_HINTERLANDS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 9589, 6 },	-- Encrusted Minerals
-						{ "i", 9592, 40 },	-- Metallic Fragments
-						{ "i", 9591, 20 },	-- Resilient Sinew
-						{ "i", 9590, 2 },	-- Splintered Log
-					},
 					["lvl"] = 40,
+					["groups"] = {
+						objective(1, {	-- 0/2 Splintered Log
+							["provider"] = { "i", 9590 },	-- Splintered Log
+							["cr"] = 7584,	-- Wandering Forest Walker
+						}),
+						objective(2, {	-- 0/6 Encrusted Minerals
+							["provider"] = { "i", 9589 },	-- Encrusted Minerals
+							["crs"] = {
+								7997,	-- Captured Sprite Darter
+								5358,	-- Cliff Giant
+								5357,	-- Land Walker
+								5278,	-- Sprite Darter
+								5276,	-- Sprite Dragon
+							},
+						}),
+						objective(3, {	-- 0/20 Resilient Sinew
+							["provider"] = { "i", 9591 },	-- Resilient Sinew
+							["crs"] = {
+								7808,	-- Marauding Owlbeast
+								2928,	-- Primitive Owlbeast
+								2929,	-- Savage Owlbeast
+								2927,	-- Vicious Owlbeast
+							},
+						}),
+						objective(4, {	-- 0/40 Metallic Fragments
+							["provider"] = { "i", 9592 },	-- Metallic Fragments
+							["crs"] = {
+								5347,	-- Antilus the Soarer
+								5358,	-- Cliff Giant
+								5300,	-- Frayfeather Hippogryph
+								5306,	-- Frayfeather Patriarch
+								5305,	-- Frayfeather Skystormer
+								5304,	-- Frayfeather Stagwing
+								5357,	-- Land Walker
+								7584,	-- Wandering Forest Walker
+								7808,	-- Marauding Owlbeast
+								2928,	-- Primitive Owlbeast
+								2929,	-- Savage Owlbeast
+								2927,	-- Vicious Owlbeast
+							},
+						}),
+					},
 				}),
 				q(7738, {	-- Perfect Yeti Hide
 					["provider"] = { "i", 18972 },	-- Perfect Yeti Hide
@@ -1120,17 +1157,6 @@ root("Zones", m(KALIMDOR, {
 						12803,	-- Lord Lakmaeran
 					},
 				}),
-				i(9589, {	-- Encrusted Minerals
-					["questID"] = 3128,	-- Natural Materials
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						7997,	-- Captured Sprite Darter
-						5358,	-- Cliff Giant
-						5357,	-- Land Walker
-						5278,	-- Sprite Darter
-						5276,	-- Sprite Dragon
-					},
-				}),
 				i(11242, {	-- Evoroot
 					["questID"] = 3909,	-- The Videre Elixir
 					["coord"] = { 44, 11, FERALAS },
@@ -1142,14 +1168,6 @@ root("Zones", m(KALIMDOR, {
 						7726,	-- Grimtotem Naturalist
 						7725,	-- Grimtotem Raider
 						7727,	-- Grimtotem Shaman
-					},
-				}),
-				i(6259, {	-- Groddoc Liver
-					["questID"] = 1452,	-- Rhapsody's Kalimdor Kocktail
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						5260,	-- Groddoc Ape
-						5262,	-- Groddoc Thunderer
 					},
 				}),
 				i(9247, {	-- Hatecrest Naga Scale
@@ -1175,30 +1193,11 @@ root("Zones", m(KALIMDOR, {
 						5278,	-- Sprite Darter
 					},
 				}),
-				i(6258, {	-- Ironfur Liver
-					["questID"] = 1452,	-- Rhapsody's Kalimdor Kocktail
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						5272,	-- Grizzled Ironfur Bear
-						5268,	-- Ironfur Bear
-						5274,	-- Ironfur Patriarch
-						5352,	-- Old Grizzlegut
-					},
+				-- #if BEFORE CATA
+				i(4589, {	-- Long Elegant Feather
+					["cr"] = 5300,	-- Frayfeather Hippogryph
 				}),
-				i(9592, {	-- Metallic Fragments
-					["questID"] = 3128,	-- Natural Materials
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						5347,	-- Antilus the Soarer
-						5358,	-- Cliff Giant
-						5300,	-- Frayfeather Hippogryph
-						5306,	-- Frayfeather Patriarch
-						5305,	-- Frayfeather Skystormer
-						5304,	-- Frayfeather Stagwing
-						5357,	-- Land Walker
-						7584,	-- Wandering Forest Walker
-					},
-				}),
+				-- #endif
 				i(18969, {	-- Pristine Yeti Hide
 					["crs"] = {
 						5297,	-- Elder Rage Scar
@@ -1227,11 +1226,26 @@ root("Zones", m(KALIMDOR, {
 						5304,	-- Frayfeather Stagwing
 					},
 				}),
-				i(9590, {	-- Splintered Log
-					["questID"] = 3128,	-- Natural Materials
-					["cr"] = 7584,	-- Wandering Forest Walker
-					["races"] = HORDE_ONLY,
+				-- #if AFTER 3.1.0
+				i(11474, {	-- Sprite Darter Egg (PET!)
+					-- #if AFTER CATA
+					["crs"] = {
+						5300,	-- Frayfeather Hippogryph
+						5304,	-- Frayfeather Stagwing
+						39949,	-- Grimtotem Marauder
+						11440,	-- Gordok Enforcer
+						39384,	-- Noxious Whelp
+						5278,	-- Sprite Darter
+						5249,	-- Woodpaw Mogrel
+						5246,	-- Zukk'ash Worker
+					},
+					-- #else
+					["description"] = "This pet only drops from the Darters for Horde players. Alliance players will need to complete 'Becoming a Parent' that is completed in the Hinterlands.",
+					["sourceQuest"] = 4298,	-- Becoming a Parent
+					["cr"] = 5278,	-- Sprite Darter
+					-- #endif
 				}),
+				-- #endif
 				i(8973, {	-- Thick Yeti Hide
 					["allianceQuestID"] = 2821,	-- The Mark of Quality
 					["hordeQuestID"] = 2822,	-- The Mark of Quality

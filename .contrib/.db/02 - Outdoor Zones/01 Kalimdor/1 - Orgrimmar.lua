@@ -346,19 +346,6 @@ root("Zones", m(KALIMDOR, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 15,
 				}),
-				q(649, {	-- Ripple Recovery
-					["qg"] = 6986,	-- Dran Droffers
-					["coord"] = { 59.4, 36.8, ORGRIMMAR },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 42,
-				}),
-				q(650, {	-- Ripple Recovery
-					["qg"] = 6987,	-- Malton Droffers
-					["sourceQuest"] = 649,	-- Ripple Recovery
-					["coord"] = { 59.4, 36.8, ORGRIMMAR },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 42,
-				}),
 				q(1943, {	-- Speak with Deino
 					["qg"] = 4568,	-- Anastasia Hartwell <Mage Trainer>
 					["coord"] = { 85, 10.2, UNDERCITY },

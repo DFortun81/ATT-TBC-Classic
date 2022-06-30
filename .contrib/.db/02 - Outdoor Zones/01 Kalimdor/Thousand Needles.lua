@@ -58,10 +58,9 @@ root("Zones", m(KALIMDOR, {
 					["qg"] = 9238,	-- Quentin
 					["sourceQuest"] = 3841,	-- An Orphan Looking For a Home
 					["coord"] = { 78.4, 74.7, THOUSAND_NEEDLES },
+					["timeline"] = { "removed 4.0.3" },
+					["cost"] = { { "i", 3825, 2 } },	-- Elixir of Fortitude
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3825, 2 },	-- Elixir of Fortitude
-					},
 					["lvl"] = 38,
 				}),
 				q(4821, {	-- Alien Egg
@@ -510,14 +509,15 @@ root("Zones", m(KALIMDOR, {
 					["lvl"] = 29,
 				}),
 				q(3843, {	-- The Newest Member of the Family
-					["qg"] = 9238,	-- Quentin
+					["providers"] = {
+						{ "n", 9238 },	-- Quentin
+						{ "i", 11471 },	-- Fragile Sprite Darter Egg
+					},
 					["sourceQuest"] = 3842,	-- A Short Incubation
 					["coord"] = { 78.4, 74.7, THOUSAND_NEEDLES },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { THE_HINTERLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 11471, 1 },	-- Fragile Sprite Darter Egg
-					},
 					["lvl"] = 38,
 				}),
 				q(1115, {	-- The Rumormonger

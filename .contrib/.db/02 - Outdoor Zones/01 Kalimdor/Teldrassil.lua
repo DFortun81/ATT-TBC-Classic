@@ -263,10 +263,13 @@ root("Zones", m(KALIMDOR, {
 					["coord"] = { 55.5, 92.1, TELDRASSIL },
 					["maps"] = { THE_HINTERLANDS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 10819, 15 },	-- Wildkin Feather
-					},
 					["lvl"] = 42,
+					["groups"] = {
+						objective(1, {	-- 0/15 Wildkin Feather
+							["provider"] = { "i", 10819 },	-- Wildkin Feather
+							["description"] = "Scattered on the ground around the Hinterlands.",
+						}),
+					},
 				}),
 				q(2940, {	-- Feralas: A History
 					["provider"] = { "o", 142958 },	-- Feralas: A History

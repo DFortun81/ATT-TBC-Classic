@@ -674,24 +674,26 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 32.2, 27.8, STRANGLETHORN_VALE },
 					["maps"] = { THE_HINTERLANDS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 9319, 1 },	-- Nimboya's Laden Pike
-					},
 					["lvl"] = 35,
 					["groups"] = {
-						{
-							["itemID"] = 15002,	-- Nimboya's Pike
+						objective(1, {	-- Place the grim message.
+							["provider"] = { "i", 9319 },	-- Nimboya's Laden Pike
+							["coord"] = { 32, 58, THE_HINTERLANDS },
 							["cost"] = {
-								{ "i", 9320, 20 },	-- Witherbark Skull
+								{ "i", 15002, 1 },	-- Nimboya's Pike
+								{ "i", 9320, 20 },	-- Witherbark Skull x20
 							},
-							["groups"] = {
-								{
-									["itemID"] = 9319,	-- Nimboya's Laden Pike
-									["questID"] = 2932,	-- Grim Message
-									["coord"] = { 32, 58, THE_HINTERLANDS },
-								},
+						}),
+						i(9320, {	-- Witherbark Skull
+							["crs"] = {
+								2654,	-- Witherbark Caller
+								2651,	-- Witherbark Hideskinner
+								2653,	-- Witherbark Sadist
+								2649,	-- Witherbark Scalper
+								2652,	-- Witherbark Venomblood
+								2650,	-- Witherbark Zealot
 							},
-						},
+						}),
 					},
 				}),
 				q(582, {	-- Headhunting
@@ -1557,7 +1559,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				n(2845, {	-- Fargon Mortalak <Superior Armorer>
 					["coord"] = { 29.0, 75.0, STRANGLETHORN_VALE },
 					["groups"] = {
-						i(12257),	-- Heavy Notched Belt
+						i(12257, {	-- Heavy Notched Belt
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(2848, {	-- Glyx Brewright <Alchemy Supplies>

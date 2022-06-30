@@ -2769,6 +2769,7 @@ root("WorldDrops", tier(CLASSIC_TIER, {
 			i(13518),	-- Recipe: Flask of Petrification
 			i(13493),	-- Recipe: Greater Arcane Elixir
 			i(13490),	-- Recipe: Greater Stoneshield Potion
+			i(9295),	-- Recipe: Invisibility Potion
 			i(3395),	-- Recipe: Limited Invulnerability Potion
 			i(9293),	-- Recipe: Magic Resistance Potion
 			i(3831),	-- Recipe: Mighty Troll's Blood Potion

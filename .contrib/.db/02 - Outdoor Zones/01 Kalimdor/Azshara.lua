@@ -650,6 +650,12 @@ root("Zones", m(KALIMDOR, {
 					["classes"] = { PRIEST },
 					["cr"] = 8761,	-- Mosshoof Courser
 				}),
+				
+				-- #if BEFORE CATA
+				i(4589, {	-- Long Elegant Feather
+					["cr"] = 6375,	-- Thunderhead Hippogryph
+				}),
+				-- #endif
 				i(15763, {	-- Pattern: Blue Dragonscale Shoulders
 					["cr"] = 6146,	-- Cliff Breaker
 				}),
