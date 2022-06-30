@@ -99,6 +99,7 @@ root("Zones", m(KALIMDOR, {
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Searing Gorge.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Silverpine Forest.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Swamp of Sorrows.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\The Hinterlands.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Westfall.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Wetlands.lua
 root("Zones", m(EASTERN_KINGDOMS, {

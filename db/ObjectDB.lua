@@ -106,6 +106,7 @@ _.ObjectNames = {
 	[141979] = "Ancient Treasure",
 	[142088] = "Tablet of Will",
 	[142122] = "Wanted Poster",
+	[142127] = "Rin'ji's Secret",
 	[142151] = "Sealed Barrel",
 	[142179] = "Solarsal Gazebo",
 	[142185] = "Flame of Byltan",
