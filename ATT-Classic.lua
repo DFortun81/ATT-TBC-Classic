@@ -641,6 +641,12 @@ local function GetProgressTextForTooltip(data)
 		return GetCompletionText(data.saved);
 	end
 end
+local function GetAddedWithPatchString(awp)
+	if awp then
+		awp = tonumber(awp);
+		return "This gets added in patch " .. math.floor(awp / 10000) .. "." .. (math.floor(awp / 100) % 10) .. "." .. (awp % 10);
+	end
+end
 local function GetRemovedWithPatchString(rwp)
 	if rwp then
 		rwp = tonumber(rwp);
@@ -2151,6 +2157,10 @@ local function GetCachedSearchResults(search, method, paramA, paramB, ...)
 		
 		if group.rwp then
 			tinsert(info, 1, { left = GetRemovedWithPatchString(group.rwp), wrap = true, color = "FFFFAAAA" });
+		end
+		
+		if group.awp then
+			tinsert(info, 1, { left = GetAddedWithPatchString(group.awp), wrap = true, color = "FFAAFFAA" });
 		end
 		
 		if group.isLimited then
@@ -9602,6 +9612,20 @@ local function RowOnEnter(self)
 					end
 				end
 				if not found then GameTooltip:AddLine(reference.description, 0.4, 0.8, 1, 1); end
+			end
+			if reference.awp then
+				local found = false;
+				local awp = GetAddedWithPatchString(reference.awp);
+				for i=1,GameTooltip:NumLines() do
+					if _G["GameTooltipTextLeft"..i]:GetText() == awp then
+						found = true;
+						break;
+					end
+				end
+				if not found then
+					local a,r,g,b = HexToARGB("FFAAFFAA");
+					GameTooltip:AddLine(awp, r / 255, g / 255, b / 255, 1);
+				end
 			end
 			if reference.rwp then
 				local found = false;
