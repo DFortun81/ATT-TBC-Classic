@@ -216,7 +216,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 50,
 					["groups"] = {
-						i(12844),	-- Argent Dawn Valor Token
+						i(12844, {	-- Argent Dawn Valor Token
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				applyclassicphase(PHASE_SIX, q(9142, {	-- Craftsman's Writ
@@ -810,7 +812,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 50,
 					["groups"] = {
-						i(12844),	-- Argent Dawn Valor Token
+						i(12844, {	-- Argent Dawn Valor Token
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(5513, {	-- Mantles of the Dawn
@@ -858,7 +862,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 50,
 					["groups"] = {
-						i(12844),	-- Argent Dawn Valor Token
+						i(12844, {	-- Argent Dawn Valor Token
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(6146, {	-- Nathanos' Ruse
@@ -1068,6 +1074,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 10667,	-- Chromie
 					["sourceQuest"] = 5941,	-- Return to Chromie
 					["coord"] = { 39.4, 66.8, WESTERN_PLAGUELANDS },
+					["timeline"] = { "removed 4.0.3" },
 					["cost"] = {
 						{ "i", 15209, 1 },	-- Relic Bundle
 					},
@@ -1463,7 +1470,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				i(12938, {	-- Blood of Heroes
 					["description"] = "This item can be found sporatically on the ground in the Plaguelands.",
-					["cr"] = 10996,	-- Fallen Hero
 					["coords"] = {
 						-- Plaguewood
 						{ 34.5, 25.8, EASTERN_PLAGUELANDS },
@@ -1583,6 +1589,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				i(16222, {	-- Formula: Enchant Shield - Superior Spirit
 					["cr"] = 9447,	-- Scarlet Warder
 				}),
+				-- #if AFTER TBC
+				i(16252, {	-- Formula: Enchant Weapon - Crusader
+					["cr"] = 9451,	-- Scarlet Archmage
+				}),
+				-- #endif
 				i(18512, {	-- Larval Acid
 					["crs"] = {
 						8605,	-- Carrion Devourer

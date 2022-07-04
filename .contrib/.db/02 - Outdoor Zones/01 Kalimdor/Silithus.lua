@@ -1790,6 +1790,20 @@ root("Zones", m(KALIMDOR, {
 						applyclassicphase(PHASE_FOUR, i(20507)),	-- Pattern: Spitfire Gauntlets
 					},
 				}),
+				n(15174,  {	-- Calandrath <Innkeeper>
+					-- #if AFTER CATA
+					["coord"] = { 55.4, 36.6, SILITHUS },
+					-- #else
+					["coord"] = { 51.8, 39.0, SILITHUS },
+					-- #endif
+					-- #if AFTER 4.0.3
+					["groups"] = {
+						i(13496, {	-- Recipe: Greater Nature Protection Potion
+							["isLimited"] = true,
+						}),
+					},
+					-- #endif
+				}),
 				n(15419, {	-- Kania <Enchanting Supplies>
 					["coord"] = { 52.0, 39.7, SILITHUS },
 					["groups"] = {
