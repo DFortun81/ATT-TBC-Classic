@@ -258,6 +258,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(1478, {	-- Halgar's Summons
+					["qg"] = 5724,	-- Ageron Kargal
+					["coord"] = { 61.6, 52.6, TIRISFAL_GLADES },
+					["altQuests"] = { 1506 },	-- Gan'rul's Summons
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = { ORC, UNDEAD },
+					["classes"] = { WARLOCK },
+					["lvl"] = 10,
+				}),
 				q(1476, {	-- Hearts of the Pure
 					["qg"] = 5693,	-- Godrick Farsan
 					["sourceQuests"] = {

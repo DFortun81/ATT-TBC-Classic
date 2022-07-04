@@ -892,6 +892,7 @@ app.L = {
 		[DUNGEON_FLOOR_TANARIS18] = 75,	-- Caverns of Time
 		[C_Map.GetAreaInfo(132)] = 427,	-- Coldridge Valley
 		["Deadmines"] = 291,
+		[C_Map.GetAreaInfo(154)] = 465,	-- Deathknell
 		["Dire Maul"] = 234,
 		["Deeprun Tram"] = 499,
 		["Gnomeregan"] = 226,

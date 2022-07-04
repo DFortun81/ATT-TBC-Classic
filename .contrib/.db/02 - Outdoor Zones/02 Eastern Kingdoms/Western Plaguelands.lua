@@ -446,6 +446,38 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["lvl"] = 50,
 				}),
+				q(26933, {	-- Foes Before Hoes
+					["qg"] = 11055,	-- Shadow Priestess Vandis
+					["sourceQuest"] = 26931,	-- Foxes and Hounds
+					["coord"] = { 83.3, 69.8, TIRISFAL_GLADES },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 35,
+				}),
+				q(26931, {	-- Foxes and Hounds
+					["qg"] = 11055,	-- Shadow Priestess Vandis
+					["coord"] = { 83.3, 69.8, TIRISFAL_GLADES },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 35,
+					["groups"] = {
+						i(62161, {	-- Bullmastiff Vest
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(62163, {	-- Fox Hunter's Rifle
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(62162, {	-- Territorial Helm
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+						i(131622, {	-- Whitetail Fox Tunic
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+						i(62160, {	-- Vandis' Band
+							["timeline"] = { "added 4.0.3.13277" },
+						}),
+					},
+				}),
 				q(5227, {	-- Gahrron's Withering Cauldron
 					["provider"] = { "o", 176392 },	-- Scourge Cauldron
 					["sourceQuests"] = {
@@ -541,6 +573,14 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(12844),	-- Argent Dawn Valor Token
 					},
 				}),
+				q(26934, {	-- Latent Disease
+					["qg"] = 11057,	-- Apothecary Dithers
+					["sourceQuest"] = 26930,	-- After the Crusade
+					["coord"] = { 83.2, 69.2, TIRISFAL_GLADES },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 35,
+				}),
 				q(5142, {	-- Little Pamela
 					["qg"] = 10927,	-- Marlene Redpath
 					["coord"] = { 49.2, 78.4, WESTERN_PLAGUELANDS },
@@ -581,6 +621,18 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(13474),	-- Farmer Dalson's Shotgun
 						i(13475),	-- Dalson Family Wedding Ring
 					},
+				}),
+				q(26936, {	-- Lower the Boom
+					["qg"] = 10837,	-- High Executor Derrington
+					["sourceQuests"] = {
+						26930,	-- After the Crusade
+						26933,	-- Foes Before Hoes
+						26978,	-- Who Needs Cauldrons?
+					},
+					["coord"] = { 83.3, 69.0, TIRISFAL_GLADES },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 35,
 				}),
 				q(5507, {	-- Mantles of the Dawn
 					["qg"] = 10857,	-- Argent Quartermaster Lightspark <The Argent Dawn>
@@ -656,6 +708,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["provider"] = { "o", 175926 },	-- Mrs. Dalson's Diary
 					["coord"] = { 47.8, 50.7, WESTERN_PLAGUELANDS },
 					["lvl"] = 52,
+				}),
+				q(10590, {	-- Prove Your Hatred
+					["qg"] = 17099,	-- Mehlar Dawnblade
+					["sourceQuest"] = 9601,	-- To The Bulwark
+					["coord"] = { 83.2, 71.2, TIRISFAL_GLADES },
+					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
+					["cost"] = { { "i", 12840, 20 } },	-- Minion's Scourgestone
+					["maps"] = { UNDERCITY },
+					["classes"] = { PALADIN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 50,
 				}),
 				q(5217, {	-- Return to Chillwind Camp
 					["provider"] = { "o", 176361 },	-- Scourge Cauldron
@@ -754,6 +817,14 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ "i", 12807, 1 },	-- Scourge Banner
 					},
 					["lvl"] = 50,
+				}),
+				q(26979, {	-- Strange New Faces
+					["qg"] = 10837,	-- High Executor Derrington
+					["sourceQuest"] = 26936,	-- Lower the Boom
+					["coord"] = { 83.3, 69.0, TIRISFAL_GLADES },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 35,
 				}),
 				q(5219, {	-- Target: Dalson's Tears
 					["qg"] = 11053,	-- High Priestess MacDonnell
@@ -956,6 +1027,20 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 53.6, 64.6, WESTERN_PLAGUELANDS },
 					["lvl"] = 51,
 				}),
+				q(9601, {	-- To The Bulwark
+					["qgs"] = {
+						16681,	-- Champion Bachi <Paladin Trainer>
+						20406,	-- Champion Cyssa Dawnrose <Paladin Trainer>
+					},
+					["coords"] = {
+						{ 92.0, 37.6, SILVERMOON_CITY },
+						{ 57.8, 90.8, UNDERCITY },
+					},
+					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
+					["classes"] = { PALADIN },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 50,
+				}),
 				applyclassicphase(TBC_PHASE_ONE, q(9446, {	-- Tomb of the Lightbringer
 					["qg"] = 17238,	-- Anchorite Truuen
 					["sourceQuest"] = 9474,	-- The Mark of the Lightbringer
@@ -1004,6 +1089,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 11610,	-- Kirsta Deepshadow
 					["sourceQuest"] = 6023,	-- Unfinished Business
 					["coord"] = { 52, 28, WESTERN_PLAGUELANDS },
+					["lvl"] = 50,
+				}),
+				q(10592, {	-- Wisdom of the Banshee Queen
+					["providers"] = {
+						{ "n", 17099 },	-- Mehlar Dawnblade
+						{ "i", 30700 },	-- Scourgestone Fragments
+					},
+					["sourceQuest"] = 10590,	-- Prove Your Hatred
+					["coord"] = { 83.2, 71.2, TIRISFAL_GLADES },
+					["timeline"] = { "added 2.0.1", "removed 4.0.3" },
+					["maps"] = { UNDERCITY },
+					["classes"] = { PALADIN },
+					["races"] = HORDE_ONLY,
 					["lvl"] = 50,
 				}),
 				q(5224, {	-- Writhing Haunt Cauldron
@@ -1127,14 +1225,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				n(10857, {	-- Argent Quartermaster Lightspark <The Argent Dawn>
 					["coord"] = { 42.8, 83.7, WESTERN_PLAGUELANDS },
 					["groups"] = {
-						{
-							["itemID"] = 22014,	-- Hallowed Brazier
+						i(22014, {	-- Hallowed Brazier
+							["timeline"] = { "removed 4.0.3" },
 							["minReputation"] = { 529, HONORED },	-- Argent Dawn
-							["cost"] = {
-								{ "g", 1500000 },	-- 150g
-							},
-						},
+							["cost"] = { { "g", 1500000 } },	-- 150g
+						}),
 						i(18182, {	-- Chromatic Mantle of the Dawn
+							["description"] = "You must have first completed 'Chromatic Mantle of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5517,	-- Chromatic Mantle of the Dawn
 								5521,	-- Chromatic Mantle of the Dawn
@@ -1142,6 +1239,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18171, {	-- Arcane Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
@@ -1149,6 +1247,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18169, {	-- Flame Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
@@ -1156,6 +1255,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18170, {	-- Frost Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
@@ -1163,6 +1263,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18172, {	-- Nature Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
@@ -1170,14 +1271,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18173, {	-- Shadow Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
 								5513,	-- Mantles of the Dawn
 							},
 						}),
-						i(19447), 	-- Formula: Enchant Bracer - Healing
-						i(19446),	-- Formula: Enchant Bracer - Mana Regeneration
+						i(19447), 	-- Formula: Enchant Bracer - Healing Power (RECIPE!)
+						i(19446), 	-- Formula: Enchant Bracer - Argent Versatility / CLASSIC: Formula: Enchant Bracer - Mana Regeneration (RECIPE!)
 						i(19442), 	-- Formula: Powerful Anti-Venom
 						i(19216), 	-- Pattern: Argent Boots
 						i(19217), 	-- Pattern: Argent Shoulders

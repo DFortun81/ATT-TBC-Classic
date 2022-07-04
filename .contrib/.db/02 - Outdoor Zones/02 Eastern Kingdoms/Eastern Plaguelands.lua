@@ -1387,14 +1387,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				n(11536, {	-- Quartermaster Miranda Breechlock <The Argent Dawn>
 					["coord"] = { 81.6, 60.0, EASTERN_PLAGUELANDS },
 					["groups"] = {
-						{
-							["itemID"] = 22014,	-- Hallowed Brazier
+						i(22014, {	-- Hallowed Brazier
+							["timeline"] = { "removed 4.0.3" },
 							["minReputation"] = { 529, HONORED },	-- Argent Dawn
-							["cost"] = {
-								{ "g", 1500000 },	-- 150g
-							},
-						},
+							["cost"] = { { "g", 1500000 } },	-- 150g
+						}),
 						i(18182, {	-- Chromatic Mantle of the Dawn
+							["description"] = "You must have first completed 'Chromatic Mantle of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5517,	-- Chromatic Mantle of the Dawn
 								5521,	-- Chromatic Mantle of the Dawn
@@ -1402,6 +1401,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18171, {	-- Arcane Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
@@ -1409,6 +1409,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18169, {	-- Flame Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
@@ -1416,6 +1417,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18170, {	-- Frost Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
@@ -1423,6 +1425,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18172, {	-- Nature Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
@@ -1430,14 +1433,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 						i(18173, {	-- Shadow Mantle of the Dawn
+							["description"] = "You must have first completed 'Mantles of the Dawn' in order to purchase this.",
 							["sourceQuests"] = {
 								5504,	-- Mantles of the Dawn
 								5507,	-- Mantles of the Dawn
 								5513,	-- Mantles of the Dawn
 							},
 						}),
-						i(19447), 	-- Formula: Enchant Bracer - Healing
-						i(19446), 	-- Formula: Enchant Bracer - Mana Regeneration
+						i(19447), 	-- Formula: Enchant Bracer - Healing Power (RECIPE!)
+						i(19446), 	-- Formula: Enchant Bracer - Argent Versatility / CLASSIC: Formula: Enchant Bracer - Mana Regeneration (RECIPE!)
 						i(19442), 	-- Formula: Powerful Anti-Venom
 						i(19216), 	-- Pattern: Argent Boots
 						i(19217), 	-- Pattern: Argent Shoulders
