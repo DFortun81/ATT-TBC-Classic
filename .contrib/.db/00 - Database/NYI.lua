@@ -609,7 +609,6 @@ root("NeverImplemented", {
 		i(20445),	-- Test Defense Ring +120
 		i(20446),	-- Test Defense Ring +80
 		i(16067),	-- Test Fire Res Ring
-		i(16999),	-- Royal Seal of Alexis
 		i(17000),	-- Band of the Wraith
 		i(4988),	-- Burning Obsidian Band
 		i(17108),	-- Mark of Deflection
