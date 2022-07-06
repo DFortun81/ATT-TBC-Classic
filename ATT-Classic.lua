@@ -7565,6 +7565,23 @@ app.CreateQuestWithFactionData = function(t)
 		otherQuestData.r = Enum.FlightPathFaction.Horde;
 	end
 	
+	-- Move over the quest data's groups.
+	if questData.g then
+		if not t.g then
+			t.g = questData.g;
+		else
+			for _,o in ipairs(questData.g) do
+				tinsert(t.g, 1, o);
+			end
+		end
+		rawset(questData, "g", nil);
+	end
+	if otherQuestData.g then
+		for _,o in ipairs(otherQuestData.g) do
+			o.parent = otherQuestData;
+		end
+	end
+	
 	-- Apply this quest's current data into the other faction's quest. (this is for tooltip caching and source quest resolution)
 	--for key,value in pairs(t) do otherQuestData[key] = value; end
 	setmetatable(otherQuestData, { __index = t });
