@@ -2531,6 +2531,9 @@ root("WorldDrops", tier(CLASSIC_TIER, {
 		i(1714),	-- Necklace of Calisea
 		i(12035),	-- Obsidian Pendant
 		i(12032),	-- Onyx Choker
+		i(4614, {	-- Pendant of Myzrael
+			["timeline"] = { "removed 4.0.3" },
+		}),
 		i(12048),	-- Prismatic Pendant
 		i(12026),	-- Quicksilver Pendant
 		i(13087),	-- River Pride Choker
