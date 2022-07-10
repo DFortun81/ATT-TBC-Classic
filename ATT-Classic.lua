@@ -4126,6 +4126,92 @@ end,
 		end
 	end
 end,
+["LOREMASTER_KALIMDOR_OnUpdate"] = function(t, ...)
+	return app.CommonAchievementHandlers.LOREMASTER_CONTINENT_OnUpdate(t, 1414, ...);
+end,
+["LOREMASTER_EASTERNKINGDOMS_OnUpdate"] = function(t, ...)
+	return app.CommonAchievementHandlers.LOREMASTER_CONTINENT_OnUpdate(t, 1415, ...);
+end,
+["LOREMASTER_CONTINENT_OnUpdate"] = function(t, mapID, ...)
+	if t.collectible and t.parent then
+		local quests = t.quests;
+		if not quests then
+			-- Grab the Continent
+			local results = SearchForField("mapID", mapID);
+			if not results or #results < 1 then return nil; end
+			
+			-- Grab all of the quests on that continent.
+			quests = {};
+			local dungeon_header = {text=GROUP_FINDER,icon = app.asset("Category_D&R"),description = "These are dungeon quests that involve the associated maps for the continent. They may or may not count towards the loremaster achievement. Just get it done and don't be lazy or complain to me.\n\n - Crieve"};
+			local zones_header = {text=BUG_CATEGORY2,icon = app.asset("Category_Zones"),description = "These are outdoor quests that involve the associated maps for the continent."};
+			local response = app:BuildSearchResponseForField(results[1].g, "questID");
+			if response then
+				-- Get the quests list from the zone itself.
+				zones_header.g = response;
+				app:BuildFlatSearchResponseForField(response, "questID", quests);
+				
+				-- Get a list of all of the mapIDs in this structure.
+				response = {};
+				app:BuildFlatSearchResponseForField(zones_header.g, "mapID", response);
+				if #response > 0 then
+					local mapIDs = {};
+					for i,o in ipairs(response) do
+						if o.mapID and not mapIDs[o.mapID] then
+							mapIDs[o.mapID] = true;
+						end
+						if o.maps then
+							for j,id in ipairs(o.maps) do
+								if not mapIDs[id] then
+									mapIDs[id] = true;
+								end
+							end
+						end
+					end
+					response = app:BuildSearchFilteredResponse(app.Categories.Instances, function(group)
+						if group.questID and not group.repeatable then
+							if group.coords then
+								for i,coord in ipairs(group.coords) do
+									if coord[3] and mapIDs[coord[3]] then
+										return true;
+									end
+								end
+							end
+							if group.maps then
+								for i,id in ipairs(group.maps) do
+									if mapIDs[id] then
+										return true;
+									end
+								end
+							end
+							return false;
+						end
+					end);
+					if response then
+						dungeon_header.g = response;
+						app:BuildFlatSearchResponseForField(response, "questID", quests);
+					end
+				end
+			end
+			
+			-- Store the Outdoor Zones and Dungeon structures.
+			t.structures = { dungeon_header, zones_header };
+			
+			-- If additional questIDs were manually included, let's do some extra work.
+			local extraQuestIDs = { ... };
+			if #extraQuestIDs > 0 then
+				-- Clone the list to prevent dirtying the quest list in the zone.
+				quests = RawCloneArray(quests);
+				for i,questID in ipairs(extraQuestIDs) do
+					local results = SearchForField("questID", questID);
+					if results and #results > 0 then
+						tinsert(quests, 1, results[1]);
+					end
+				end
+			end
+		end
+		return app.CommonAchievementHandlers.LOREMASTER_EXPLICIT_OnUpdate(t, quests);
+	end
+end,
 ["LOREMASTER_OnUpdate"] = function(t, ...)
 	if t.collectible and t.parent then
 		local quests = t.quests;
@@ -4182,6 +4268,14 @@ end,
 	if button == "RightButton" then
 		local t = row.ref;
 		local clone = app.CreateMiniListForGroup(app.CreateAchievement(t[t.key], t.quests)).data;
+		clone.description = t.description;
+		return true;
+	end
+end,
+["LOREMASTER_CONTINENT_OnClick"] = function(row, button)
+	if button == "RightButton" then
+		local t = row.ref;
+		local clone = app.CreateMiniListForGroup(app.CreateAchievement(t[t.key], t.structures)).data;
 		clone.description = t.description;
 		return true;
 	end
@@ -11246,6 +11340,58 @@ function app:GetWindow(suffix, parent, onUpdate)
 		window:Update(true);
 	end
 	return window;
+end
+function app:BuildFlatSearchFilteredResponse(groups, filter, t)
+	if groups then
+		for i,group in ipairs(groups) do
+			if filter(group) then
+				tinsert(t, CloneData(group));
+			elseif group.g then
+				app:BuildFlatSearchFilteredResponse(group.g, filter, t);
+			end
+		end
+	end
+end
+function app:BuildFlatSearchResponse(groups, field, value, t)
+	if groups then
+		for i,group in ipairs(groups) do
+			local v = group[field];
+			if v and (v == value or (field == "requireSkill" and app.SpellIDToSkillID[app.SpecializationSpellIDs[v] or 0] == value)) then
+				tinsert(t, CloneData(group));
+			elseif group.g then
+				app:BuildFlatSearchResponse(group.g, field, value, t);
+			end
+		end
+	end
+end
+function app:BuildFlatSearchResponseForField(groups, field, t)
+	if groups then
+		for i,group in ipairs(groups) do
+			if group[field] then
+				tinsert(t, CloneData(group));
+			elseif group.g then
+				app:BuildFlatSearchResponseForField(group.g, field, t);
+			end
+		end
+	end
+end
+function app:BuildSearchFilteredResponse(groups, filter)
+	if groups then
+		local t;
+		for i,group in ipairs(groups) do
+			if filter(group) then
+				if not t then t = {}; end
+				tinsert(t, CloneData(group));
+			elseif group.g then
+				local response = app:BuildSearchFilteredResponse(group.g, filter);
+				if response then
+					if not t then t = {}; end
+					tinsert(t, setmetatable({g=response}, { __index = group }));
+				end
+			end
+		end
+		return t;
+	end
 end
 function app:BuildSearchResponse(groups, field, value)
 	if groups then

@@ -596,6 +596,48 @@ root("Achievements", {
 		-- Wooly Mammoth, located in Dalaran.
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_QUESTS, {
+		achcat(ACHIEVEMENT_CATEGORY_EASTERN_KINGDOMS_QUESTS, {	-- Pre-Cata, this is CLASSIC.
+			removeclassicphase(ach(1676, {	-- Loremaster of Eastern Kingdoms
+				-- #if BEFORE WRATH
+				["description"] = "Complete 700 quests in Eastern Kingdoms.",
+				["OnClick"] = [[_.CommonAchievementHandlers.LOREMASTER_CONTINENT_OnClick]],
+				["OnTooltip"] = [[_.CommonAchievementHandlers.LOREMASTER_OnTooltip]],
+				["OnUpdate"] = [[_.CommonAchievementHandlers.LOREMASTER_EASTERNKINGDOMS_OnUpdate]],
+				["rank"] = 700,
+				-- #endif
+				["races"] = ALLIANCE_ONLY,
+			})),
+			removeclassicphase(ach(1677, {	-- Loremaster of Eastern Kingdoms
+				-- #if BEFORE WRATH
+				["description"] = "Complete 550 quests in Eastern Kingdoms.",
+				["OnClick"] = [[_.CommonAchievementHandlers.LOREMASTER_CONTINENT_OnClick]],
+				["OnTooltip"] = [[_.CommonAchievementHandlers.LOREMASTER_OnTooltip]],
+				["OnUpdate"] = [[_.CommonAchievementHandlers.LOREMASTER_EASTERNKINGDOMS_OnUpdate]],
+				["rank"] = 550,
+				-- #endif
+				["races"] = HORDE_ONLY,
+			})),
+			removeclassicphase(ach(1678, {	-- Loremaster of Kalimdor
+				-- #if BEFORE WRATH
+				["description"] = "Complete 700 quests in Kalimdor.",
+				["OnClick"] = [[_.CommonAchievementHandlers.LOREMASTER_CONTINENT_OnClick]],
+				["OnTooltip"] = [[_.CommonAchievementHandlers.LOREMASTER_OnTooltip]],
+				["OnUpdate"] = [[_.CommonAchievementHandlers.LOREMASTER_KALIMDOR_OnUpdate]],
+				["rank"] = 700,
+				-- #endif
+				["races"] = ALLIANCE_ONLY,
+			})),
+			removeclassicphase(ach(1680, {	-- Loremaster of Kalimdor
+				-- #if BEFORE WRATH
+				["description"] = "Complete 685 quests in Kalimdor.",
+				["OnClick"] = [[_.CommonAchievementHandlers.LOREMASTER_CONTINENT_OnClick]],
+				["OnTooltip"] = [[_.CommonAchievementHandlers.LOREMASTER_OnTooltip]],
+				["OnUpdate"] = [[_.CommonAchievementHandlers.LOREMASTER_KALIMDOR_OnUpdate]],
+				["rank"] = 685,
+				-- #endif
+				["races"] = HORDE_ONLY,
+			})),
+		}),
 		-- #if AFTER 2.0.1
 		achcat(ACHIEVEMENT_CATEGORY_OUTLAND_QUESTS, {
 			ach(1262, applyclassicphase(TBC_PHASE_ONE, {	-- Loremaster of Outland
@@ -604,6 +646,8 @@ root("Achievements", {
 				["OnClick"] = [[_.CommonAchievementHandlers.META_OnClick]],
 				["OnTooltip"] = [[_.CommonAchievementHandlers.META_OnTooltip]],
 				["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_OnUpdate(t, 1194, 1190, 1192, 1193, 1195, 1191, 1189); end]],
+				-- #else
+				["sym"] = { {"select","achievementID", 1194, 1190, 1192, 1193, 1195, 1191, 1189 } },
 				-- #endif
 				["races"] = ALLIANCE_ONLY,
 			})),
@@ -613,11 +657,56 @@ root("Achievements", {
 				["OnClick"] = [[_.CommonAchievementHandlers.META_OnClick]],
 				["OnTooltip"] = [[_.CommonAchievementHandlers.META_OnTooltip]],
 				["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_OnUpdate(t, 1194, 1190, 1273, 1193, 1195, 1272, 1271); end]],
+				-- #else
+				["sym"] = { {"select","achievementID", 1194, 1190, 1273, 1193, 1195, 1272, 1271 } },
 				-- #endif
 				["races"] = HORDE_ONLY,
 			})),
 		}),
 		-- #endif
+		ach(973),	-- 5 Daily Quests Complete
+		ach(974),	-- 50 Daily Quests Complete
+		ach(975),	-- 200 Daily Quests Complete
+		ach(976),	-- 500 Daily Quests Complete
+		ach(977),	-- 1000 Daily Quests Complete
+		
+		
+		ach(503),	-- 50 Quests Completed
+		ach(504),	-- 100 Quests Completed
+		ach(505),	-- 250 Quests Completed
+		ach(506),	-- 500 Quests Completed
+		ach(507),	-- 1000 Quests Completed
+		ach(508),	-- 1500 Quests Completed
+		ach(32),	-- 2000 Quests Completed
+		ach(978, applyclassicphase(WRATH_PHASE_ONE, {	-- 3000 Quests Completed
+			title(81),	-- The Seeker
+		})),
+		
+		ach(31),	-- A Simple Re-Quest
+		ach(1182),	-- The Bread Winner
+		
+		ach(941, applyclassicphase(WRATH_PHASE_ONE, {	-- Hemet Nesingwary: The Collected Quests
+			-- #if BEFORE WRATH
+			["description"] = "Complete the Green Hills of Stranglethorn, Hills Like White Elekk and Snows of Northrend achievements.",
+			["OnClick"] = [[_.CommonAchievementHandlers.META_OnClick]],
+			["OnTooltip"] = [[_.CommonAchievementHandlers.META_OnTooltip]],
+			["OnUpdate"] = [[function(t) return _.CommonAchievementHandlers.META_OnUpdate(t, 939, 938, 940); end]],
+			-- #else
+			["sym"] = {
+				{"select","achievementID",
+					939,	-- Hills Like White Elekk
+					938,	-- The Snows of Northrend
+					940,	-- The Green Hills of Stranglethorn
+				},
+			},
+			-- #endif
+		})),
+		ach(1576, applyclassicphase(WRATH_PHASE_ONE, {	-- Of Blood and Anguish
+			["sourceQuests"] = {
+				9977,	-- The Ring of Blood: The Final Challenge
+				12948,	-- The Champion of Anguish
+			},
+		})),
 	}),
 	achcat(ACHIEVEMENT_CATEGORY_EXPLORATION, {
 		-- #if AFTER 2.0.1

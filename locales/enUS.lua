@@ -377,6 +377,10 @@ app.L = {
 		[1272] = { 14862, "Terror of Terokkar", app.asset("achievement_zone_terrokar") },
 		[1273] = { 14862, "Nagrand Slam", app.asset("achievement_zone_nagrand_01") },
 		[1274] = { 14862, "Loremaster of Outland", app.asset("achievement_zone_outland_01") },
+		[1676] = { 14861, "Loremaster of Eastern Kindoms", app.asset("achievement_zone_easternkingdoms_01") },
+		[1677] = { 14861, "Loremaster of Eastern Kindoms", app.asset("achievement_zone_easternkingdoms_01") },
+		[1678] = { 14861, "Loremaster of Kalimdor", app.asset("achievement_zone_kalimdor_01") },
+		[1680] = { 14861, "Loremaster of Kalimdor", app.asset("achievement_zone_kalimdor_01") },
 		
 		-- Exploration
 		[42] = { 97, "Explore Eastern Kingdoms", app.asset("achievement_zone_easternkingdoms_01") },
