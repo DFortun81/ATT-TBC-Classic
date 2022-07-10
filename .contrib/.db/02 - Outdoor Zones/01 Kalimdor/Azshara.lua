@@ -618,14 +618,6 @@ root("Zones", m(KALIMDOR, {
 					["classes"] = { MAGE },
 					["cr"] = 6195,	-- Spitelash Siren
 				}),
-				i(20023, {	-- Encoded Fragment
-					["questID"] = 8235,	-- Encoded Fragments
-					["classes"] = { ROGUE },
-					["crs"] = {
-						8766,	-- Forest Ooze
-						8660,	-- The Evalcharr
-					},
-				}),
 				i(16219, {	-- Formula: Enchant Gloves - Greater Agility
 					["cr"] = 6201,	-- Legashi Rogue
 				}),

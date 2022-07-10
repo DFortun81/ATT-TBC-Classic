@@ -68,26 +68,36 @@ root("Zones", m(EASTERN_KINGDOMS, {
 			}),
 			n(QUESTS, {
 				q(8233, {	-- A Simple Request
-					["qgs"] = {
-						5165,	-- Hulfdan Blackbeard <Rogue Trainer>
-						3328,	-- Ormok <Rogue Trainer>
-						4163,	-- Syurna <Rogue Trainer>
-						918,	-- Osborne the Night Man <Rogue Trainer>
-						4583,	-- Miles Dexter <Rogue Trainer>
+					["allianceQuestData"] = {
+						["qgs"] = {
+							4163,	-- Syurna <Rogue Trainer>
+							5165,	-- Hulfdan Blackbeard <Rogue Trainer>
+							918,	-- Osborne the Night Man <Rogue Trainer>
+						},
+						["coords"] = {
+							{ 36.8, 21.8, DARNASSUS },	-- Syurna <Rogue Trainer>
+							{ 51.6, 14.6, IRONFORGE },	-- Hulfdan Blackbeard <Rogue Trainer>
+							{ 74.6, 52.8, STORMWIND_CITY },	-- Osborne the Night Man <Rogue Trainer>
+						},
 					},
-					["coords"] = {
-						{ 36.8, 21.8, DARNASSUS },	-- Syurna <Rogue Trainer>
-						{ 51.6, 14.6, IRONFORGE },	-- Hulfdan Blackbeard <Rogue Trainer>
-						{ 44.0, 54.6, ORGRIMMAR },	-- Ormok <Rogue Trainer>
-						{ 74.6, 52.8, STORMWIND_CITY },	-- Osborne the Night Man <Rogue Trainer>
-						{ 85.0, 75.2, UNDERCITY },	-- Miles Dexter <Rogue Trainer>
+					["hordeQuestData"] = {
+						["qgs"] = {
+							3328,	-- Ormok <Rogue Trainer>
+							4583,	-- Miles Dexter <Rogue Trainer>
+						},
+						["coords"] = {
+							{ 44.0, 54.6, ORGRIMMAR },	-- Ormok <Rogue Trainer>
+							{ 85.0, 75.2, UNDERCITY },	-- Miles Dexter <Rogue Trainer>
+						},
 					},
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { ROGUE },
 					["lvl"] = 50,
 				}),
 				q(522, {	-- Assassin's Contract
 					["provider"] = { "i", 3668 },	-- Assassin's Contract
 					["coord"] = { 50.8, 58.8, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2434,	-- Shadowy Assassin
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
@@ -96,12 +106,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2276,	-- Magistrate Henry Maleb
 					["sourceQuest"] = 522,	-- Assassin's Contract
 					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {
+							["provider"] = { "i", 3626 },	-- Head of Baron Vardus
+							["coord"] = { 56.0, 26.2, ALTERAC_MOUNTAINS },
+							["cr"] = 2306,	-- Baron Vardus
+						}),
+					},
 				}),
 				q(500, {	-- Crushridge Bounty
 					["qg"] = 2263,	-- Marshal Redpath
 					["coord"] = { 49.6, 58.6, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -121,12 +140,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				q(504, {	-- Crushridge Warmongers
 					["qg"] = 2263,	-- Marshal Redpath
+					["sourceQuest"] = 500,	-- Crushridge Bounty
 					["coord"] = { 49.6, 58.6, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
-						i(5249),	-- Burning Sliver
-						i(3763),	-- Lunar Buckler
+						objective(1, {	-- 0/15 Crushridge Warmonger
+							["provider"] = { "n", 2287 },	-- Crushridge Warmonger
+						}),
+						i(5249, {	-- Burning Sliver
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(3763, {	-- Lunar Buckler
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(1712, {	-- Cyclonian
@@ -136,16 +164,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["sourceQuest"] = 1791,	-- The Windwatcher
 					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { ARATHI_HIGHLANDS, STRANGLETHORN_VALE },
-					["cost"] = {
-						{ "i", 3357, 8 },	-- Liferoot
-						{ "i", 6851, 1 },	-- Essence of the Exile
-					},
+					["cost"] = { { "i", 3357, 8 } },	-- Liferoot
 					["classes"] = { WARRIOR },
 					["lvl"] = 30,
 					["groups"] = {
 						objective(2, {	-- 0/30 Bloodscalp Tusk
 							["provider"] = { "i", 3901 },	-- Bloodscalp Tusk
+						}),
+						objective(3, {	-- 0/1 Essence of the Exile
+							["provider"] = { "i", 6851 },	-- Essence of the Exile
 						}),
 					},
 				}),
@@ -153,40 +182,47 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2276,	-- Magistrate Henry Maleb
 					["sourceQuest"] = 525,	-- Further Mysteries
 					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
-					["cost"] = {
-						{ "i", 3672, 1 },	-- Head of Nagaz
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 3672,	-- Head of Nagaz
-							["questID"] = 537,	-- Dark Council
-							["cr"] = 2320,	-- Nagaz
+						objective(1, {	-- 0/4 Argus Shadow Mage slain
+							["provider"] = { "n", 2318 },	-- Argus Shadow Mage
+						}),
+						objective(2, {	-- 0/1 Head of Nagaz
+							["provider"] = { "n", 3672 },	-- Head of Nagaz
 							["coord"] = { 39.6, 15.8, ALTERAC_MOUNTAINS },
-						},
+							["cr"] = 2320,	-- Nagaz
+						}),
 					},
 				}),
 				q(8235, {	-- Encoded Fragments
 					["qg"] = 8379,	-- Archmage Xylem
 					["sourceQuest"] = 8234,	-- Sealed Azure Bag
 					["coord"] = { 29.6, 40.6, AZSHARA },
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { ROGUE },
-					["cost"] = {
-						{ "i", 20023, 10 },	-- Encoded Fragment
-					},
 					["lvl"] = 50,
+					["groups"] = {
+						objective(1, {	-- 0/10 Encoded Fragment
+							["provider"] = { "i", 20023 },	-- Encoded Fragment
+							["crs"] = {
+								8766,	-- Forest Ooze
+								8660,	-- The Evalcharr
+							},
+						}),
+					},
 				}),
 				q(511, {	-- Encrypted Letter
 					["providers"] = {
 						{ "o", 1738 },	-- Syndicate Documents
+						{ "o", 1739 },	-- Syndicate Documents
 						{ "o", 1740 },	-- Syndicate Documents
+						{ "i", 3521 },	-- Cleverly Encrypted Letter
 					},
 					["coord"] = { 58.3, 68.0, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
-					["cost"] = {
-						{ "i", 3521, 1 },	-- Cleverly Encrypted Letter
-					},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -194,49 +230,59 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 6176,	-- Bath'rah the Windwatcher
 					["sourceQuest"] = 1791,	-- The Windwatcher
 					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { ARATHI_HIGHLANDS },
 					["cost"] = {
 						{ "i", 4479, 8 },	-- Burning Charm
 						{ "i", 4481, 8 },	-- Cresting Charm
 						{ "i", 4480, 8 },	-- Thundering Charm
 					},
-					["maps"] = { ARATHI_HIGHLANDS },
 					["classes"] = { WARRIOR },
 					["repeatable"] = true,
 					["lvl"] = 30,
 					["groups"] = {
-						i(6851),	-- Essence of the Exile
+						i(6851, {	-- Essence of the Exile
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(510, {	-- Foreboding Plans
 					["providers"] = {
 						{ "o", 1738 },	-- Syndicate Documents
+						{ "o", 1739 },	-- Syndicate Documents
 						{ "o", 1740 },	-- Syndicate Documents
+						{ "i", 3718 },	-- Foreboding Plans
 					},
 					["coord"] = { 58.3, 68.0, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
-					["cost"] = {
-						{ "i", 3718, 1 },	-- Foreboding Plans
-					},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 26,
 				}),
 				q(525, {	-- Further Mysteries
-					["qg"] = 1356,	-- Prospector Stormpike
+					["providers"] = {
+						{ "n", 1356 },	-- Prospector Stormpike
+						{ "i", 3518 },	-- Decrypted Letter
+					},
 					["sourceQuest"] = 514,	-- Letter to Stormpike
 					["coord"] = { 74.4, 12, IRONFORGE },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
 				q(8249, {	-- Junkboxes Needed
+					-- #if AFTER 4.3.0
+					["qg"] = 7323,	-- Winstone Wolfe <The Wolf>
+					["coord"] = { 71.4, 45.0, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["qg"] = 6707,	-- Fahrad <Grand Master Rogue>
 					["coord"] = { 84.4, 80.3, ALTERAC_MOUNTAINS },
+					-- #endif
 					["maxReputation"] = { 349, EXALTED },	-- Ravenholdt, Exalted.
-					["cost"] = {
-						{ "i", 16885, 5 },	-- Heavy Junkbox
-					},
+					["cost"] = { { "i", 16885, 5 } },	-- Heavy Junkbox
 					["repeatable"] = true,
-					["lvl"] = 50,
+					["lvl"] = lvlsquish(50, 50, 20),
 					["groups"] = {
 						i(20086, {	-- Dusksteel Throwing Knife [Classic] / Broken Dusksteel Throwing Knife [TBC]
 							["timeline"] = {
@@ -244,16 +290,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								"removed 2.0.1.5678"
 							},
 						}),
-						applyclassicphase(TBC_PHASE_ONE, i(25878)),	-- Dusksteel Throwing Knife [TBC]
+						applyclassicphase(TBC_PHASE_ONE, i(25878, {	-- Dusksteel Throwing Knife [TBC]
+							["timeline"] = { "removed 5.0.4" },
+						})),
 					},
 				}),
 				q(514, {	-- Letter to Stormpike
-					["qg"] = 2277,	-- Loremaster Dibbs
+					["providers"] = {
+						{ "n", 2277 },	-- Loremaster Dibbs
+						{ "i", 3521 },	-- Cleverly Encrypted Letter
+					},
 					["sourceQuest"] = 511,	-- Encrypted Letter
 					["coord"] = { 50.4, 57, HILLSBRAD_FOOTHILLS },
-					["cost"] = {
-						{ "i", 3521, 1 },	-- Cleverly Encrypted Letter
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -261,6 +310,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2276,	-- Magistrate Henry Maleb
 					["sourceQuest"] = 510,	-- Foreboding Plans
 					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 26,
 					["groups"] = {
@@ -282,19 +332,77 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 6768,	-- Lord Jorach Ravenholdt <Lord of the Assassin's League>
 					["sourceQuest"] = 8233,	-- A Simple Request
 					["coord"] = { 86.0, 79.0, ALTERAC_MOUNTAINS },
-					["cost"] = {
-						{ "i", 19775, 1 },	-- Sealed Azure Bag
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { AZSHARA },
 					["classes"] = { ROGUE },
 					["lvl"] = 50,
 					["groups"] = {
-						{
-							["itemID"] = 19775,	-- Sealed Azure Bag
-							["questID"] = 8234,	-- Sealed Azure Bag
-							["cr"] = 6188,	-- Timbermaw Shaman
+						objective(1, {	-- 0/1 Sealed Azure Bag
+							["provider"] = { "i", 19775 },	-- Sealed Azure Bag
 							["coord"] = { 43.5, 25.4, AZSHARA },
-						},
+							["cr"] = 6188,	-- Timbermaw Shaman
+						}),
+					},
+				}),
+				q(8412, {	-- Spirit Totem
+					["qg"] = 6176,	-- Bath'rah the Windwatcher
+					["sourceQuest"] = 8410,	-- Elemental Mastery
+					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { WESTERN_PLAGUELANDS },
+					["races"] = HORDE_ONLY,
+					["classes"] = { SHAMAN },
+					["lvl"] = 50,
+					["groups"] = {
+						objective(1, {	-- 0/8 Bloodshot Spider Eye
+							["provider"] = { "i", 20610 },	-- Bloodshot Spider Eye
+							["crs"] = {
+								1821,	-- Carrion Lurker
+								1809,	-- Carrion Vulture
+								1824,	-- Plague Lurker
+								1822,	-- Venom Mist Lurker
+							},
+						}),
+						objective(2, {	-- 0/8 Thick Black Claw
+							["provider"] = { "i", 20611 },	-- Thick Black Claw
+							["crs"] = {
+								1809,	-- Carrion Vulture
+								1815,	-- Diseased Black Bear
+								1816,	-- Diseased Grizzly
+							},
+						}),
+					},
+				}),
+				q(554, {	-- Stormpike's Deciphering
+					["providers"] = {
+						{ "n", 2277 },	-- Loremaster Dibbs
+						{ "i", 3706 },	-- Ensorcelled Parchment
+					},
+					["sourceQuest"] = 551,	-- The Ensorcelled Parchment
+					["coord"] = { 50.4, 57.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 28,
+				}),
+				q(505, {	-- Syndicate Assassins
+					["qg"] = 2276,	-- Magistrate Henry Maleb
+					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 26,
+					["groups"] = {
+						objective(1, {	-- 0/12 Syndicate Footpad slain
+							["provider"] = { "n", 2240 },	-- Syndicate Footpad
+						}),
+						objective(2, {	-- 0/8 Syndicate Thief slain
+							["provider"] = { "n", 2241 },	-- Syndicate Thief
+						}),
+						i(3758, {	-- Crusader Belt
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(3759, {	-- Insulated Sage Gloves
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(6701, {	-- Syndicate Emblems
@@ -302,41 +410,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["sourceQuest"] = 6681,	-- The Manor, Ravenholdt
 					["coord"] = { 85.2, 79.4, ALTERAC_MOUNTAINS },
 					["maxReputation"] = { 349, FRIENDLY },	-- Ravenholdt, Friendly.
-					["cost"] = {
-						{ "i", 17124, 1 },	-- Syndicate Emblem
-					},
+					["cost"] = { { "i", 17124, 1 } },	-- Syndicate Emblem
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { ROGUE },
 					["repeatable"] = true,
 					["lvl"] = 24,
-				}),
-				q(8412, {	-- Spirit Totem
-					["qg"] = 6176,	-- Bath'rah the Windwatcher
-					["sourceQuest"] = 8410,	-- Elemental Mastery
-					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
-					["cost"] = {
-						{ "i", 20610, 8 },	-- Bloodshot Spider Eye
-						{ "i", 20611, 8 },	-- Thick Black Claw
-					},
-					["races"] = HORDE_ONLY,
-					["classes"] = { SHAMAN },
-					["lvl"] = 50,
-				}),
-				q(554, {	-- Stormpike's Deciphering
-					["qg"] = 2277,	-- Loremaster Dibbs
-					["sourceQuest"] = 551,	-- The Ensorcelled Parchment
-					["coord"] = { 50.4, 57.0, HILLSBRAD_FOOTHILLS },
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = 28,
-				}),
-				q(505, {	-- Syndicate Assassins
-					["qg"] = 2276,	-- Magistrate Henry Maleb
-					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = 26,
-					["groups"] = {
-						i(3758),	-- Crusader Belt
-						i(3759),	-- Insulated Sage Gloves
-					},
 				}),
 				q(551, {	-- The Ensorcelled Parchment
 					["providers"] = {
@@ -344,58 +422,68 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ "o", 1765 },	-- Worn Wooden Chest
 					},
 					["coord"] = { 39.2, 14.8, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
 				q(6681, {	-- The Manor, Ravenholdt
-					["provider"] = { "i", 17126 },
-					["classes"] = { ROGUE },
-					["description"] = "Speak with a Rogue Trainer and use select the chat option to receive the item that gives you this quest.\n\nDO NOT OPEN THE CHEST",
-					["cost"] = {
-						{ "i", 17125, 1 },	-- Seal of Ravenholdt
+					["providers"] = {
+						{ "i", 17125 },	-- Seal of Ravenholdt
+						{ "i", 17126 },	-- Seal of Ravenholdt
 					},
+					["description"] = "Speak with a Rogue Trainer and use select the chat option to receive the item that gives you this quest.\n\nDO NOT OPEN THE CHEST",
+					["timeline"] = { "removed 4.0.3" },
+					["classes"] = { ROGUE },
 					["lvl"] = 24,
 				}),
 				q(1713, {	-- The Summoning
 					["qg"] = 6176,	-- Bath'rah the Windwatcher
 					["sourceQuest"] = 1712,	-- Cyclonian
 					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { WARRIOR },
-					["cost"] = {
-						{ "i", 6894, 1 },	-- Whirlwind Heart
-					},
 					["lvl"] = 30,
 					["groups"] = {
-						{
-							["itemID"] = 6894,	-- Whirlwind Heart
-							["questID"] = 1713,	-- The Summoning
-							["cr"] = 6239,	-- Cyclonian
+						objective(1, {	-- 0/1 Whirlwind Heart
+							["provider"] = { "i", 6894 },	-- Whirlwind Heart
 							["coord"] = { 80.6, 62.6, ALTERAC_MOUNTAINS },
-						},
+							["cr"] = 6239,	-- Cyclonian
+						}),
 					},
 				}),
 				q(535, {	-- Valik
 					["qg"] = 2333,	-- Henchman Valik
-					["coord"] = { 57.15, 69.50, ALTERAC_MOUNTAINS},
+					["coord"] = { 57.15, 69.50, ALTERAC_MOUNTAINS },
 					["cost"] = { { "i", 3703, 1 } },	-- Southshore Stout
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2440,	-- Drunken Footpad
 					["races"] = HORDE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 29,
 					["groups"] = {
-						i(3601),	-- Syndicate Missive
+						i(3601, {	-- Syndicate Missive
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(1792, {	-- Whirlwind Weapon
 					["qg"] = 6176,	-- Bath'rah the Windwatcher
 					["sourceQuest"] = 1713,	-- The Summoning
+					["coord"] = { 80.5, 66.9, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { WARRIOR },
 					["lvl"] = 30,
 					["groups"] = {
-						i(6975),	-- Whirlwind Axe
-						i(6977),	-- Whirlwind Sword
-						i(6976),	-- Whirlwind Warhammer
+						i(6975, {	-- Whirlwind Axe
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(6977, {	-- Whirlwind Sword
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(6976, {	-- Whirlwind Warhammer
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 			}),
