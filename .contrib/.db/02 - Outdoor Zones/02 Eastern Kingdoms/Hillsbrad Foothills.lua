@@ -56,10 +56,20 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ "i", 2997, 1 },	-- Bolt of Woolen Cloth
 						{ "i", 2321, 1 },	-- Fine Thread
 						{ "i", 3719, 1 },	-- Hillman's Cloak
-						{ "i", 3720, 10 },	-- Yeti Fur
 					},
 					["lvl"] = 29,
 					["groups"] = {
+						objective(4, {	-- 0/10 Yeti Fur
+							["provider"] = { "i", 3720 },	-- Yeti Fur
+							["crs"] = {
+								4504,	-- Frostmaw
+								2251,	-- Giant Yeti
+								2250,	-- Mountain Yeti
+								2452,	-- Skhowl
+								2248,	-- Cave Yeti
+								2249,	-- Ferocious Yeti
+							},
+						}),
 						i(2805),	-- Yeti Fur Cloak
 					},
 				}),
@@ -314,18 +324,26 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				q(552, {	-- Helcular's Revenge
+				q(552, {	-- Helcular's Revenge (1/2)
 					["qg"] = 2429,	-- Novice Thaivand
 					["coord"] = { 63.87, 19.66, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 3708, 1 },	-- Helcular's Rod
-					},
 					["lvl"] = 29,
+					["groups"] = {
+						objective(1, {	-- 0/1 Helcular's Rod
+							["provider"] = { "i", 3708 },	-- Helcular's Rod
+							["crs"] = {
+								2248,	-- Cave Yeti
+								2249,	-- Ferocious Yeti
+								2251,	-- Giant Yeti
+								2250,	-- Mountain Yeti
+							},
+						}),
+					},
 				}),
-				q(553, {	-- Helcular's Revenge
+				q(553, {	-- Helcular's Revenge (2/2)
 					["qg"] = 2429,	-- Novice Thaivand
-					["sourceQuest"] = 552,	-- Helcular's Revenge
+					["sourceQuest"] = 552,	-- Helcular's Revenge (1/2)
 					["coord"] = { 63.87, 19.66, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
@@ -356,6 +374,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 63.24, 20.68, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
+					["groups"] = {
+						objective(1, {	-- 0/1 Syndicate Missive
+							["provider"] = { "i", 3601 },	-- Syndicate Missive
+							["crs"] = {
+								2240,	-- Syndicate Footpad
+								2241,	-- Syndicate Thief
+							},
+						}),
+					},
 				}),
 				q(507, {	-- Lord Aliden Perenolde
 					["qg"] = 2229,	-- Krusk
@@ -381,11 +408,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["sourceQuest"] = 538,	-- Southshore
 					["coord"] = { 50.6, 57.1, HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3658, 5 },	-- Recovered Tome
-						{ "i", 3659, 1 },	-- Worn Leather Book
-					},
 					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/5 Recovered Tome
+							["provider"] = { "i", 3658 },	-- Recovered Tome
+							["crs"] = {
+								2253,	-- Crushridge Brute
+								2256,	-- Crushridge Enforcer
+								2255,	-- Crushridge Mage
+								2254,	-- Crushridge Mauler
+								2252,	-- Crushridge Ogre
+								2416,	-- Crushridge Plunderer
+								2287,	-- Crushridge Warmonger
+							},
+						}),
+						objective(2, {	-- Worn Leather Book
+							["provider"] = { "i", 3659 },	-- Worn Leather Book
+							["cr"] = 2421,	-- Muckrake
+						}),
+					},
 				}),
 				q(544, {	-- Prison Break In
 					["qg"] = 2410,	-- Magus Wordeen Voidglare
@@ -449,10 +490,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2437,	-- Keeper Bel'varil
 					["coord"] = { 61.50, 20.91, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 3714, 10 },	-- Worn Stone Token
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/10 Worn Stone Token
+							["provider"] = { "i", 3714 },	-- Worn Stone Token
+							["crs"] = {
+								2271,	-- Dalaran Shield Guard
+								2358,	-- Dalaran Summoner
+								2272,	-- Dalaran Theurgist
+								2628,	-- Dalaran Worker
+								2415,	-- Warden Belamoore
+							},
+						}),
+					},
 				}),
 				q(562, {	-- Stormwind Ho!
 					["qg"] = 2228,	-- Lieutenant Farren Orinelle
@@ -843,6 +893,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cr"] = 2434,	-- Shadowy Assassin
 					["races"] = ALLIANCE_ONLY,
 				}),
+				-- #if AFTER CATA
+				i(3711, {	-- Belamoore's Research Journal
+					["timeline"] = { "removed 4.0.3" },
+					["cr"] = 2415,	-- Warden Belamoore
+				}),
+				i(8491),	-- Cat Carrier (Black Tabby)
+				i(1280, {	-- Cloaked Hood
+					["timeline"] = { "removed 4.0.3" },
+					["cr"] = 2246,	-- Syndicate Assassin
+				}),
+				-- #endif
 				i(3477, {	-- Creeper Ichor
 					["questID"] = 496,	-- Elixir of Suffering
 					["races"] = HORDE_ONLY,
@@ -865,19 +926,23 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(3204, {	-- Deepwood Bracers
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2372,	-- Mudsnout Gnoll
 				}),
 				i(3336, {	-- Flesh Piercer
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						2370,	-- Daggerspine Screamer
 						2368,	-- Daggerspine Shorestalker
 					},
 				}),
-				i(11152, {	-- Formula: Enchant Gloves - Fishing
+				i(11152, {	-- Formula: Enchant Gloves - Fishing (RECIPE!)
 					["crs"] = {
 						14276,	-- Scargil
 						2375,	-- Torn Fin Coastrunner
+						-- #if BEFORE CATA
 						2374,	-- Torn Fin Muckdweller
+						-- #endif
 						2376,	-- Torn Fin Oracle
 						2377,	-- Torn Fin Tidehunter
 					},
@@ -893,17 +958,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(3429, {	-- Guardsman Belt
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						2427,	-- Jailor Eston
 						2428,	-- Jailor Marlgen
-					},
-				}),
-				i(3708, {	-- Helcular's Rod
-					["questID"] = 552,	-- Helcular's Revenge
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2248,	-- Cave Yeti
-						2249,	-- Ferocious Yeti
 					},
 				}),
 				i(3692, {	-- Hillsbrad Human Skull
@@ -937,15 +995,18 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(3053, {	-- Humbert's Chestpiece
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						2344,	-- Dun Garok Mountaineer
 						14275,	-- Tamra Stormpike
 					},
 				}),
 				i(4724, {	-- Humbert's Helm
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2345,	-- Dun Garok Rifleman
 				}),
 				i(4723, {	-- Humbert's Pants
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2346,	-- Dun Garok Priest
 				}),
 				i(3693, {	-- Humbert's Sword
@@ -990,12 +1051,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(5775, {	-- Pattern: Black Silk Pack
-					["cr"] = 2434,	-- Shadowy Assassin
+					["timeline"] = { "removed 4.0.3" },
+					["crs"] = {
+						-- #if AFTER CATA
+						2242,	-- Syndicate Spy (Alterac Mountains)
+						-- #endif
+						2434,	-- Shadowy Assassin
+					},
 				}),
+				-- #if BEFORE CATA
 				i(5772, {	-- Pattern: Red Woolen Bag
 					["cr"] = 2264,	-- Hillsbrad Tailor
 				}),
+				-- #endif
 				i(1485, {	-- Pitchfork
+					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						2403,	-- Farmer Getz
 						2451,	-- Farmer Kalaba
@@ -1015,6 +1085,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						7075,	-- Writhing Mage
 					},
 				})),
+				-- #if AFTER CATA
+				i(3745, {	-- Rune of Opening
+					["timeline"] = { "removed 4.0.3" },
+					["cr"] = 2358,	-- Dalaran Summoner
+				}),
+				i(1602, {	-- Sickle Axe
+					["timeline"] = { "removed 4.0.3" },
+					["cr"] = 2287,	-- Crushridge Warmonger
+				}),
+				i(5245, {	-- Summoner's Wand
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["cr"] = 2358,	-- Dalaran Summoner
+				}),
+				-- #endif
 				i(3510, {	-- Torn Fin Eye
 					["questID"] = 515,	-- Elixir of Agony
 					["races"] = HORDE_ONLY,
@@ -1030,14 +1115,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["questID"] = 1066,	-- Blood of Innocents
 					["races"] = HORDE_ONLY,
 					["cr"] = 2244,	-- Syndicate Shadow Mage
-				}),
-				i(3720, {	-- Yeti Fur
-					["questID"] = 565,	-- Bartolo's Yeti Fur Cloak
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						2248,	-- Cave Yeti
-						2249,	-- Ferocious Yeti
-					},
 				}),
 			}),
 		},

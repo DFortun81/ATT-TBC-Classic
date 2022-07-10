@@ -1,6 +1,8 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+-- #if BEFORE CATA
+-- This whole subzone used to be its own standalone zone and was merged with Hillsbrad with the Cataclysm.
 local OnTooltipForRavenholdt = [[function(t)
 	local reputation = t.reputation;
 	if reputation < 42000 then
@@ -99,10 +101,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2263,	-- Marshal Redpath
 					["coord"] = { 49.6, 58.6, HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 2843, 9 },	-- Dirty Knucklebones
-					},
 					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/9 Dirty Knucklebones
+							["provider"] = { "i", 2843 },	-- Dirty Knucklebones
+							["crs"] = {
+								2253,	-- Crushridge Brute
+								2256,	-- Crushridge Enforcer
+								2255,	-- Crushridge Mage
+								2254,	-- Crushridge Mauler
+								2252,	-- Crushridge Ogre
+								2416,	-- Crushridge Plunderer
+								2287,	-- Crushridge Warmonger
+							},
+						}),
+					},
 				}),
 				q(504, {	-- Crushridge Warmongers
 					["qg"] = 2263,	-- Marshal Redpath
@@ -246,12 +259,22 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2276,	-- Magistrate Henry Maleb
 					["sourceQuest"] = 510,	-- Foreboding Plans
 					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
-					["maps"] = { ALTERAC_MOUNTAINS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3505, 7 },	-- Alterac Signet Ring
-					},
 					["lvl"] = 26,
+					["groups"] = {
+						objective(1, {	-- 0/7 Alterac Signet Ring
+							["provider"] = { "i", 3505 },	-- Alterac Signet Ring
+							["crs"] = {
+								14221,	-- Gravis Slipknot
+								2246,	-- Syndicate Assassin
+								2247,	-- Syndicate Enforcer
+								2245,	-- Syndicate Saboteur
+								2243,	-- Syndicate Sentry
+								2242,	-- Syndicate Spy
+								2319,	-- Syndicate Wizard
+							},
+						}),
+					},
 				}),
 				q(8234, {	-- Sealed Azure Bag
 					["qg"] = 6768,	-- Lord Jorach Ravenholdt <Lord of the Assassin's League>
@@ -353,9 +376,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(535, {	-- Valik
 					["qg"] = 2333,	-- Henchman Valik
 					["coord"] = { 57.15, 69.50, ALTERAC_MOUNTAINS},
-					["cost"] = {
-						{ "i", 3703, 1 },	-- Southshore Stout
-					},
+					["cost"] = { { "i", 3703, 1 } },	-- Southshore Stout
 					["cr"] = 2440,	-- Drunken Footpad
 					["isBreadcrumb"] = true,
 					["races"] = HORDE_ONLY,
@@ -465,20 +486,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(ZONE_DROPS, {
-				i(3505, {	-- Alterac Signet Ring
-					["questID"] = 512,	-- Noble Deaths
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						14221,	-- Gravis Slipknot
-						2246,	-- Syndicate Assassin
-						2247,	-- Syndicate Enforcer
-						2245,	-- Syndicate Saboteur
-						2243,	-- Syndicate Sentry
-						2242,	-- Syndicate Spy
-						2319,	-- Syndicate Wizard
-					},
-				}),
 				i(3711, {	-- Belamoore's Research Journal
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2415,	-- Warden Belamoore
 				}),
 				i(8491, {	-- Cat Carrier (Black Tabby)
@@ -490,31 +499,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(1280, {	-- Cloaked Hood
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2246,	-- Syndicate Assassin
-				}),
-				i(2843, {	-- Dirty Knucklebones
-					["questID"] = 500,	-- Crushridge Bounty
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						2253,	-- Crushridge Brute
-						2256,	-- Crushridge Enforcer
-						2255,	-- Crushridge Mage
-						2254,	-- Crushridge Mauler
-						2252,	-- Crushridge Ogre
-						2416,	-- Crushridge Plunderer
-						2287,	-- Crushridge Warmonger
-					},
 				}),
 				i(11206, {	-- Formula: Enchant Cloak - Lesser Agility
 					["cr"] = 2246,	-- Syndicate Assassin
-				}),
-				i(3708, {	-- Helcular's Rod
-					["questID"] = 552,	-- Helcular's Revenge
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2251,	-- Giant Yeti
-						2250,	-- Mountain Yeti
-					},
 				}),
 				-- #if BEFORE 4.0.3
 				i(1993, {	-- Ogremind Ring
@@ -522,65 +511,24 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 				-- #endif
 				i(5775, {	-- Pattern: Black Silk Pack
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2242,	-- Syndicate Spy
 				}),
-				i(3658, {	-- Recovered Tome
-					["questID"] = 540,	-- Preserving Knowledge
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						2253,	-- Crushridge Brute
-						2256,	-- Crushridge Enforcer
-						2255,	-- Crushridge Mage
-						2254,	-- Crushridge Mauler
-						2252,	-- Crushridge Ogre
-						2416,	-- Crushridge Plunderer
-						2287,	-- Crushridge Warmonger
-					},
-				}),
 				i(3745, {	-- Rune of Opening
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2358,	-- Dalaran Summoner
 				}),
 				i(1602, {	-- Sickle Axe
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2287,	-- Crushridge Warmonger
 				}),
-				i(3601, {	-- Syndicate Missive
-					["questID"] = 533,	-- Infiltration
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2240,	-- Syndicate Footpad
-						2241,	-- Syndicate Thief
-					},
-				}),
 				i(5245, {	-- Summoner's Wand
-					["cr"] = 2358,	-- Dalaran Summoner
-				}),
-				i(3659, {	-- Worn Leather Book
-					["questID"] = 540,	-- Preserving Knowledge
-					["cr"] = 2421,	-- Muckrake
-					["races"] = ALLIANCE_ONLY,
-				}),
-				i(3714, {	-- Worn Stone Token
-					["questID"] = 556,	-- Stone Tokens
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2271,	-- Dalaran Shield Guard
-						2358,	-- Dalaran Summoner
-						2272,	-- Dalaran Theurgist
-						2628,	-- Dalaran Worker
-						2415,	-- Warden Belamoore
-					},
-				}),
-				i(3720, {	-- Yeti Fur
-					["questID"] = 565,	-- Bartolo's Yeti Fur Cloak
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						4504,	-- Frostmaw
-						2251,	-- Giant Yeti
-						2250,	-- Mountain Yeti
-						2452,	-- Skhowl
-					},
+					["cr"] = 2358,	-- Dalaran Summoner
 				}),
 			}),
 		},
 	}),
 }));
+-- #endif
