@@ -1491,16 +1491,24 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				n(2541, {	-- Lord Sakrasis
 					["coord"] = { 28.6, 62.2, STRANGLETHORN_VALE },
 					["groups"] = {
-						i(5028),	-- Lord Sakrasis' Scepter
-						i(5029),	-- Talisman of the Naga Lord
+						i(5028, {	-- Lord Sakrasis' Scepter
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(5029, {	-- Talisman of the Naga Lord
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
+				-- #if BEFORE CATA
 				n(723, {	-- Mosh'Ogg Butcher
 					["coord"] = { 51.0, 31.8, STRANGLETHORN_VALE },
 					["groups"] = {
-						i(1680),	-- Headchopper
+						i(1680, {	-- Headchopper
+							["timeline"] = { "removed 4.0.3", "added 7.3.5" },
+						}),
 					},
 				}),
+				-- #endif
 				n(14490, {	-- Rippa
 					["coords"] = {
 						{ 24.2, 58.0, STRANGLETHORN_VALE },
@@ -1520,8 +1528,12 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				n(1552, {	-- Scale Belly
 					["coord"] = { 44.0, 48.2, STRANGLETHORN_VALE },
 					["groups"] = {
-						i(1604),	-- Chromatic Sword
-						i(4478),	-- Iridescent Scale Leggings
+						i(1604, {	-- Chromatic Sword
+							["timeline"] = { "removed 4.0.3", "added 7.3.5" },
+						}),
+						i(4478, {	-- Iridescent Scale Leggings
+							["timeline"] = { "removed 4.0.3", "added 7.3.5" },
+						}),
 					},
 				}),
 				n(14492, {	-- Verifonix <The Surveyor>
@@ -1708,6 +1720,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cr"] = 1907,	-- Naga Explorer
 				}),
 				i(1998, {  -- Bloodscalp Channeling Staff
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 697,	-- Bloodscalp Shaman
 				}),
 				i(1519, {	-- Bloodscalp Ear
@@ -1750,9 +1763,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(5079, {  -- Cold Basilisk Eye
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 690,	-- Cold Eye Basilisk
 				}),
 				i(1703, {	-- Crystal Basilisk Spine
+					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 689,	-- Crystal Spine Basilisk
 				}),
 				i(3897, {  -- Dizzy's Eye
@@ -1776,6 +1791,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(1677, {  -- Drake-scale Vest
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 680,	-- Mosh'Ogg Lord
 				}),
 				i(4105, {  -- Elder Crocolisk Skin
@@ -1793,6 +1809,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(1659, {  -- Engineering Gloves
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 677,	-- Venture Co. Tinkerer
 				}),
 				i(2955, {  -- First Mate Hat
@@ -1810,15 +1827,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cr"] = 674,	-- Venture Co. Strip Miner
 				}),
 				i(1991, {  -- Goblin Power Shovel
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 1094,	-- Venture Co. Miner
 				}),
 				i(1986, {  -- Gutrender
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 709,	-- Mosh'Ogg Warmonger
 				}),
+				-- #if AFTER CATA
+				i(1680, {	-- Headchopper
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
+					["cr"] = 723,	-- Mosh'Ogg Butcher
+				}),
+				-- #endif
 				i(1522, {  -- Headhunting Spear
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 671,	-- Bloodscalp Headhunter
 				}),
 				i(1523, {  -- Huge Stone Club
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 597,	-- Bloodscalp Berserker
 				}),
 				i(2633, {  -- Jungle Remedy
@@ -1836,6 +1863,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = HORDE_ONLY,
 				}),
 				i(1679, {  -- Korg Bat
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 1142,	-- Mosh'Ogg Brute
 				}),
 				i(4053, {  -- Large River Crocolisk Skin
@@ -1864,6 +1892,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cr"] = 1557,	-- Elder Mistvale Gorilla
 				}),
 				i(5755, {  -- Onyx Shredder Plate
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 4260,	-- Venture Co. Shredder
 				}),
 				i(8494, {  -- Parrot Cage (Hyacinth Macaw)
@@ -1883,6 +1912,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cr"] = 938,	-- Kurzen Commando
 				}),
 				i(1997, {  -- Pressed Felt Robe
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 701,	-- Bloodscalp Mystic
 				}),
 				i(3839, {  -- Pristine Tigress Fang
@@ -1957,6 +1987,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(1624, {  -- Skullsplitter Helm
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["crs"] = {
 						783,	-- Skullsplitter Berserker
 						781,	-- Skullsplitter Headhunter
@@ -1987,6 +2018,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(1664, {  -- Spellforce Rod
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 676,	-- Venture Co. Surveyor
 				}),
 				i(3916, {  -- Split Bone Necklace
@@ -2013,6 +2045,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				i(1996, {  -- Voodoo Band
+					["timeline"] = { "removed 4.0.3", "added 7.3.5" },
 					["cr"] = 660,	-- Bloodscalp Witch Doctor
 				}),
 				i(3923, {  -- Water Elemental Bracers
