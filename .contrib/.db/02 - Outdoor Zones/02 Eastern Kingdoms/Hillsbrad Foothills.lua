@@ -1,9 +1,38 @@
 ---------------------------------------------------
 --          Z O N E S        M O D U L E         --
 ---------------------------------------------------
+-- #if AFTER CATA
+local OnTooltipForRavenholdt = [[function(t)
+	local reputation = t.reputation;
+	if reputation < 42000 then
+		local isHuman = _.RaceIndex == 1;
+		if reputation < 20999 then
+			GameTooltip:AddLine("Reminder: Do NOT turn in Heavy Lockboxes until max Honored!", 1, 0.5, 0.5);
+			local repPerKill = isHuman and 5.5 or 5;
+			local x, n = math.ceil((20999 - reputation) / repPerKill), math.ceil(20999 / repPerKill);
+			GameTooltip:AddDoubleLine("Kill Arathi Syndicate", (n - x) .. " / " .. n .. " (" .. x .. ")", 1, 1, 1);
+		else
+			GameTooltip:AddLine("Protip: Bring a stack of Repair Bots with you.", 0.5, 1, 0.5);
+			local repPerTurnIn = isHuman and 82.5 or 75;
+			local x, n = math.ceil((42000 - reputation) / repPerTurnIn), math.ceil(21000 / repPerTurnIn);
+			GameTooltip:AddDoubleLine("Turn in Heavy Junkboxes.", ((n - x) * 5) .. " / " .. (n * 5) .. " (" .. (x * 5) .. ")", 1, 1, 1);
+		end
+	end
+end]];
+-- #endif
 root("Zones", m(EASTERN_KINGDOMS, {
 	m(HILLSBRAD_FOOTHILLS, {
+		-- #if AFTER CATA
+		["lore"] = "Hillsbrad Foothills was radically changed in Cataclysm. Formerly a grassy zone with World PvP between the Alliance town of Southshore and the Horde town of Tarren Mill, the Forsaken have taken over the zone after the Shattering. Southshore is destroyed due to plague experiments, and toxic waste covers much of the zone. This zone has also been merged with Alterac Mountains, a snowy plateau populated by ogres and surrounded by the Syndicate.",
+		-- #else
 		["lore"] = "The Hillsbrad Foothills (sometimes referred to as simply Hillsbrad) is a mid-level zone most suitable for players around level 25. Located in the Southern end of the North Island of (Eastern Kingdoms), the hills are home to the towns of Southshore and Hillsbrad Fields (Alliance), and Tarren Mill (Horde). Some notable locations, such as Durnholde Keep and Azurelode Mine can also be found here. Since this area lies outside of Thoradin's Wall, it is considered as a crossroads between Alliance and Horde players, which makes combat between the two factions likely.\n\nHillsbrad is relatively safe and stable. Its hills are green and pastoral, its meadows fertile and its soil rich. Humans loyal to the Alliance control Hillsbrad from the town of Southshore, though the Syndicate, murlocs and Forsaken threaten their serenity.",
+		-- #endif
+		-- #if AFTER WRATH
+		["icon"] = "Interface\\Icons\\achievement_zone_hillsbradfoothills",
+		-- #endif
+		-- #if NOT ANYCLASSIC
+		["maps"] = { 623 },	-- Tarren Mill vs Southshore [TODO: Move this somewhere else]
+		-- #endif
 		["groups"] = {
 			n(ACHIEVEMENTS, {
 				removeclassicphase(ach(772, {	-- Explore Hillsbrad Foothills
@@ -13,7 +42,75 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["OnUpdate"] = [[_.CommonAchievementHandlers.EXPLORATION_OnUpdate]],
 					-- #endif
 				})),
+				ach(4895, {	-- Hillsbrad Foothills Quests
+					["timeline"] = { "added 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						crit(1, {	-- The Sludge Fields
+							["sourceQuest"] = 28237,	-- A Blight Upon the Land
+						}),
+						crit(2, {	-- Stormpike
+							["sourceQuest"] = 28616,	-- Stormpike Apocalypse
+						}),
+						crit(3, {	-- Eastpoint Tower
+							["sourceQuests"] = {
+								28634,	-- Extinction
+								28636,	-- Silent of the Dwarves
+								28647,	-- The Durnholde Challenge: D-1000
+							},
+						}),
+						crit(4, {	-- Azurelode Mine
+							["sourceQuests"] = {
+								28146,	-- Coastal Delicacies!
+								28156,	-- Deep Mine Rescue
+								28138,	-- Human Infestation
+								-- 28154,	-- Muckgill's Flipper or Something... (TODO: verify if needed)
+								28144,	-- Thieving Little Monsters!
+							},
+						}),
+					},
+				}),
 			}),
+			-- #if AFTER MOP
+			petbattle(filter(BATTLE_PETS, {
+				p(646, {	-- Chicken
+					["crs"] = { 62664 },	-- Chicken
+				}),
+				p(648, {	-- Huge Toad
+					["crs"] = { 61368 },	-- Huge Toad
+				}),
+				p(453, {	-- Infested Bear Cub
+					["crs"] = { 61758 },	-- Infested Bear Cub
+				}),
+				p(1159, {	-- Lofty Libram
+					["crs"] = { 68806 },	-- Lofty Libram
+				}),
+				p(450, {	-- Maggot
+					["crs"] = { 61753 },	-- Maggot
+				}),
+				p(378, {	-- Rabbit
+					["crs"] = { 61080 },	-- Rabbit
+				}),
+				p(417, {	-- Rat
+					["crs"] = { 61366 },	-- Rat
+				}),
+				p(452, {	-- Red-Tailed Chipmunk
+					["crs"] = { 61757 },	-- Red-Tailed Chipmunk
+				}),
+				p(640, {	-- Snowshoe Hare
+					["crs"] = { 61755 },	-- Snowshoe Hare
+				}),
+				p(412, {	-- Spider
+					["crs"] = { 61327 },	--- Spider
+				}),
+				p(379, {	-- Squirrel
+					["crs"] = { 61081 },	-- Squirrel
+				}),
+				p(420, {	-- Toad
+					["crs"] = { 61369 },	-- Toad
+				}),
+			})),
+			-- #endif
 			-- #if ANYCLASSIC
 			n(EXPLORATION, explorationBatch({
 				["125:100:109:482"] = 896,	-- Purgation Isle
@@ -35,15 +132,54 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				]]--
 			})),
 			-- #endif
+			-- #if AFTER CATA
+			n(FACTIONS, {
+				faction(349, {	-- Ravenholdt
+					["icon"] = "Interface\\Icons\\Ability_Rogue_Eviscerate",
+					["OnTooltip"] = OnTooltipForRavenholdt,
+				}),
+			}),
+			-- #endif
 			n(FLIGHT_PATHS, {
+				fp(669, {	-- Eastpoint Tower, Hillsbrad
+					["cr"] = 47661,	-- Darren Longfellow <Bat Handler>
+					["coord"] = { 59.6, 63.2, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
+				}),
+				fp(667, {	-- Ruins of Southshore, Hillsbrad
+					["cr"] = 47644,	-- Darla Harris <Bat Handler>
+					["coord"] = { 49.0, 66.2, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+					["races"] = HORDE_ONLY,
+				}),
+				fp(668, {	-- Southpoint Gate, Hillsbrad
+					["cr"] = 47655,	-- Pamela Stutzka <Bat Handler>
+					["coord"] = { 29.0, 64.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+					["races"] = HORDE_ONLY,
+				}),
+				-- #if BEFORE 4.0.3
 				fp(14, {	-- Southshore, Hillsbrad
 					["cr"] = 2432,	-- Darla Harris <Gryphon Master>
 					["coord"] = { 49.4, 52.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
+				}),
+				-- #endif
+				fp(670, {	-- Strahnbrad, Alterac Mountains
+					["cr"] = 47665,	-- Phillip Harding <Bat Handler>
+					["coord"] = { 58.2, 26.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.3.13277" },
+					["races"] = HORDE_ONLY,
 				}),
 				fp(13, {	-- Tarren Mill, Hillsbrad
 					["cr"] = 2389,	-- Zarise <Bat Handler>
+					-- #if AFTER CATA
+					["coord"] = { 56.0, 46.0, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coord"] = { 60.2, 18.6, HILLSBRAD_FOOTHILLS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 				}),
 			}),
@@ -51,6 +187,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(565, {	-- Bartolo's Yeti Fur Cloak
 					["qg"] = 2438,	-- Bartolo Ginsetti
 					["coord"] = { 49.4, 55.5, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 2997, 1 },	-- Bolt of Woolen Cloth
@@ -70,7 +207,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 								2249,	-- Ferocious Yeti
 							},
 						}),
-						i(2805),	-- Yeti Fur Cloak
+						i(2805, {	-- Yeti Fur Cloak
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(527, {	-- Battle of Hillsbrad
@@ -83,8 +222,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2215,	-- High Executor Darthalia
 					["sourceQuest"] = 527,	-- Battle of Hillsbrad
 					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
-					["lvl"] = 19,
 					["races"] = HORDE_ONLY,
+					["lvl"] = 19,
 				}),
 				q(529, {	-- Battle of Hillsbrad
 					["qg"] = 2215,	-- High Executor Darthalia
@@ -134,6 +273,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
 				}),
+				q(1066, {	-- Blood of Innocents
+					["qg"] = 2216,	-- Apothecary Lydon
+					["sourceQuest"] = 1065,	-- Journey to Tarren Mill
+					["coord"] = { 61.4, 19.2, HILLSBRAD_FOOTHILLS },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 13,
+					["groups"] = {
+						objective(1, {	-- 0/5 Vial of Innocent Blood
+							["provider"] = { "i", 5620 },	-- Vial of Innocent Blood
+							["cr"] = 2244,	-- Syndicate Shadow Mage
+						}),
+					},
+				}),
 				q(557, {	-- Bracers of Binding
 					["qg"] = 2437,	-- Keeper Bel'varil
 					["sourceQuest"] = 556,	-- Stone Tokens
@@ -142,16 +294,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 30,
 				}),
 				q(564, {	-- Costly Menace
-					["lvl"] = 30,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 2382,	-- Darren Malvew
+					["coord"] = { 52.4, 56.0, HILLSBRAD_FOOTHILLS },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 30,
 					["groups"] = {
 						i(3753),	-- Shepherd's Girdle
 						i(3754),	-- Shepherd's Gloves
 						i(3736),	-- Recipe: Tasty Lion Steak
 						i(3728),	-- Tasty Lion Steak
 					},
-					["coord"] = { 52.4, 56.0, HILLSBRAD_FOOTHILLS },
 				}),
 				q(545, {	-- Dalaran Patrols
 					["qg"] = 2410,	-- Magus Wordeen Voidglare
@@ -163,8 +315,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(567, {	-- Dangerous!
 					["provider"] = { "o", 2008 },	-- Dangerous!
 					["coord"] = { 62.56, 19.69, HILLSBRAD_FOOTHILLS },
-					["lvl"] = 19,
 					["races"] = HORDE_ONLY,
+					["lvl"] = 19,
 					["groups"] = {
 						i(3742),	-- Bow of Plunder
 						i(3743),	-- Sentry Buckler
@@ -173,10 +325,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				q(536, {	-- Down the Coast
-					["lvl"] = 25,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 2228,	-- Lieutenant Farren Orinelle
 					["coord"] = { 51.4, 58.4, HILLSBRAD_FOOTHILLS },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 25,
 				}),
 				q(509, {	-- Elixir of Agony
 					["qg"] = 2216,	-- Apothecary Lydon
@@ -204,19 +356,37 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 24,
 				}),
 				q(515, {	-- Elixir of Agony
-					["qg"] = 2055,	-- Master Apothecary Faranell
+					["providers"] = {
+						{ "n", 2055 },	-- Master Apothecary Faranell
+						{ "i", 3508 },	-- Mudsnout Mixture
+					},
 					["sourceQuest"] = 513,	-- Elixir of Agony
 					["coord"] = { 48.89, 69.21, UNDERCITY },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
-					["cost"] = {
-						{ "i", 3508, 1 },	-- Mudsnout Mixture
-						{ "i", 3388, 1 },	-- Strong Troll's Blood Potion
-						{ "i", 3509, 5 },	-- Daggerspine Scale
-						{ "i", 3510, 5 },	-- Torn Fin Eye
-					},
+					["cost"] = { { "i", 3388, 1 } },	-- Strong Troll's Blood Potion
 					["races"] = HORDE_ONLY,
 					["lvl"] = 24,
 					["groups"] = {
+						objective(2, {	-- 0/5 Daggerspine Scale
+							["provider"] = { "i", 3509 },	-- Daggerspine Scale
+							["crs"] = {
+								2370,	-- Daggerspine Screamer
+								2369,	-- Daggerspine Shorehunter
+								2368,	-- Daggerspine Shorestalker
+								2371,	-- Daggerspine Siren
+								14277,	-- Lady Zephris
+							},
+						}),
+						objective(3, {	-- 0/5 Torn Fin Eye
+							["provider"] = { "i", 3510 },	-- Torn Fin Eye
+							["crs"] = {
+								14276,	-- Scargil
+								2375,	-- Torn Fin Coastrunner
+								2374,	-- Torn Fin Muckdweller
+								2376,	-- Torn Fin Oracle
+								2377,	-- Torn Fin Tidehunter
+							},
+						}),
 						i(3749),	-- High Apothecary Cloak
 						i(3747),	-- Meditative Sash
 					},
@@ -250,11 +420,17 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["sourceQuest"] = 499,	-- Elixir of Suffering
 					["coord"] = { 61.45, 19.05, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 3496, 10 },	-- Mountain Lion Blood
-					},
 					["lvl"] = 21,
 					["groups"] = {
+						objective(1, {	-- 0/10 Mountain Lion Blood
+							["provider"] = { "i", 3496 },	-- Mountain Lion Blood
+							["crs"] = {
+								2385,	-- Feral Mountain Lion
+								2407,	-- Hulking Mountain Lion
+								2406,	-- Mountain Lion
+								2384,	-- Starving Mountain Lion
+							},
+						}),
 						i(2230),	-- Gloves of Brawn
 						i(3741),	-- Stomping Boots
 						i(6482),	-- Firewalker Boots
@@ -272,11 +448,27 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2216,	-- Apothecary Lydon
 					["coord"] = { 61.45, 19.05, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 3476, 10 },	-- Gray Bear Tongue
-						{ "i", 3477, 1 },	-- Creeper Ichor
-					},
 					["lvl"] = 19,
+					["groups"] = {
+						objective(1, {	-- 0/10 Creeper Ichor
+							["provider"] = { "i", 3476 },	-- Gray Bear Tongue
+							["crs"] = {
+								14280,	-- Big Samras
+								2356,	-- Elder Gray Bear
+								2351,	-- Gray Bear
+								2354,	-- Vicious Gray Bear
+							},
+						}),
+						objective(2, {	-- 0/1 Creeper Ichor
+							["provider"] = { "i", 3477 },	-- Creeper Ichor
+							["crs"] = {
+								14279,	-- Creepthess
+								2348,	-- Elder Moss Creeper
+								2350,	-- Forest Moss Creeper
+								2349,	-- Giant Moss Creeper
+							},
+						}),
+					},
 				}),
 				q(499, {	-- Elixir of Suffering
 					["qg"] = 2216,	-- Apothecary Lydon
@@ -285,28 +477,38 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = HORDE_ONLY,
 					["lvl"] = 19,
 				}),
-				q(560, {	-- Farren's Proof (2)
-					["lvl"] = 25,
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 2228,	-- Lieutenant Farren Orinelle
-					["sourceQuest"] = 559,	-- Farren's Proof (1)
-					["coord"] = { 51.4, 58.4, HILLSBRAD_FOOTHILLS },
-				}),
-				q(561, {	-- Farren's Proof (3)
-					["lvl"] = 25,
-					["races"] = ALLIANCE_ONLY,
-					["qg"] = 2263,	-- Marshal Redpath
-					["sourceQuest"] = 560,	-- Farren's Proof (2)
-					["coord"] = { 49.5, 58.6, HILLSBRAD_FOOTHILLS },
-				}),
-				q(559, {	-- Farren's Proof (1)
+				q(559, {	-- Farren's Proof (1/3)
 					["qg"] = 2228,	-- Lieutenant Farren Orinelle
 					["sourceQuest"] = 536,	-- Down the Coast
 					["coord"] = { 51.4, 58.4, HILLSBRAD_FOOTHILLS },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 3716, 10 },	-- Murloc Head
+					["lvl"] = 25,
+					["groups"] = {
+						objective(1, {	-- 0/10 Murloc Head
+							["provider"] = { "i", 3716 },	-- Murloc Head
+							["description"] = "Running joke is that since all adventurers take from the Murlocs is their heads, that's why the drop rate is so low - bunch of headless murlocs running around.",
+							["crs"] = {
+								14276,	-- Scargil
+								2375,	-- Torn Fin Coastrunner
+								2374,	-- Torn Fin Muckdweller
+								2376,	-- Torn Fin Oracle
+								2377,	-- Torn Fin Tidehunter
+							},
+						}),
 					},
+				}),
+				q(560, {	-- Farren's Proof (2/3)
+					["qg"] = 2228,	-- Lieutenant Farren Orinelle
+					["sourceQuest"] = 559,	-- Farren's Proof (1/3)
+					["coord"] = { 51.4, 58.4, HILLSBRAD_FOOTHILLS },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 25,
+				}),
+				q(561, {	-- Farren's Proof (3/3)
+					["qg"] = 2263,	-- Marshal Redpath
+					["sourceQuest"] = 560,	-- Farren's Proof (2/3)
+					["coord"] = { 49.5, 58.6, HILLSBRAD_FOOTHILLS },
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 25,
 				}),
 				q(503, {	-- Gol'dir
@@ -349,21 +551,27 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 29,
 				}),
 				q(2480, {	-- Hinott's Assistance
-					["lvl"] = 20,
 					["qg"] = 2391,	-- Serge Hinott
+					["sourceQuest"] = 2479,	-- Hinott's Assistance
 					["races"] = { ORC, UNDEAD, TROLL },
 					["classes"] = { ROGUE },
-					["sourceQuest"] = 2479,	-- Hinott's Assistance
+					["lvl"] = 20,
 				}),
 				q(547, {	-- Humbert's Sword
 					["qg"] = 2419,	-- Deathguard Humbert
 					["coord"] = { 62.74, 20.21, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 3693, 1 },	-- Humbert's Sword
-					},
 					["lvl"] = 26,
 					["groups"] = {
+						objective(1, {	-- 0/1 Humbert's Sword
+							["provider"] = { "i", 3693 },	-- Humbert's Sword
+							["crs"] = {
+								2344,	-- Dun Garok Mountaineer
+								2346,	-- Dun Garok Priest
+								2345,	-- Dun Garok Rifleman
+								14275,	-- Tamra Stormpike
+							},
+						}),
 						i(3750),	-- Ribbed Breastplate
 						i(3751),	-- Mercenary Leggings
 					},
@@ -383,6 +591,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 							},
 						}),
 					},
+				}),
+				q(1065, {	-- Journey to Tarren Mill
+					["providers"] = {
+						{ "n", 3419 },	-- Apothecary Zamah
+						{ "i", 5628 },	-- Zamah's Note
+					},
+					["sourceQuest"] = 1064,	-- Forsaken Aid
+					["coord"] = { 22.85, 20.90, THUNDER_BLUFF },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 13,
 				}),
 				q(507, {	-- Lord Aliden Perenolde
 					["qg"] = 2229,	-- Krusk
@@ -446,14 +664,14 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				q(563, {	-- Reassignment
-					["lvl"] = 25,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 2228,	-- Lieutenant Farren Orinelle
 					["sourceQuest"] = 562,	-- Stormwind Ho!
 					["coord"] = { 51.4, 58.4, HILLSBRAD_FOOTHILLS },
 					["cost"] = {
 						{ "i", 3721, 1 },	-- Farren's Report
 					},
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 25,
 				}),
 				applyclassicphase(TBC_PHASE_ONE, q(9425, {	-- Report to Tarren Mill
 					["qg"] = 16287,	-- Ambassador Sunsorrow
@@ -468,21 +686,57 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 20,
 				}),
+				q(1067, {	-- Return to Thunder Bluff
+					["providers"] = {
+						{ "n", 2216 },	-- Apothecary Lydon
+						{ "n", 5588 },	-- Lydon's Toxin
+					},
+					["sourceQuest"] = 1066,	-- Blood of Innocents
+					["coord"] = { 61.4, 19.2, HILLSBRAD_FOOTHILLS },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 13,
+				}),
 				q(538, {	-- Southshore
 					["qg"] = 1440,	-- Milton Sheaf <Librarian>
-					["races"] = ALLIANCE_ONLY,
-					["coord"] = { 74.2, 7.5, STORMWIND_CITY },
 					["sourceQuest"] = 337,	-- An Old History Book
+					["coord"] = { 74.2, 7.5, STORMWIND_CITY },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(546, {	-- Souvenirs of Death
 					["qg"] = 2418,	-- Deathguard Samsa
 					["coord"] = { 62.12, 19.72, HILLSBRAD_FOOTHILLS },
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 3692, 30 },	-- Hillsbrad Human Skull
-					},
 					["lvl"] = 20,
 					["groups"] = {
+						objective(1, {	-- 0/30 Hillsbrad Human Skull
+							["provider"] = { "i", 3692 },	-- Hillsbrad Human Skull
+							["crs"] = {
+								2404,	-- Blacksmith Verringtan
+								2449,	-- Citizen Wilkes
+								2448,	-- Clerk Horrace Whitesteed
+								2403,	-- Farmer Getz
+								2451,	-- Farmer Kalaba
+								232,	-- Farmer Ray
+								2305,	-- Foreman Bonds
+								2265,	-- Hillsbrad Apprentice Blacksmith
+								2387,	-- Hillsbrad Councilman
+								2266,	-- Hillsbrad Farmer
+								2360,	-- Hillsbrad Farmhand
+								2268,	-- Hillsbrad Footman
+								2503,	-- Hillsbrad Foreman
+								2269,	-- Hillsbrad Miner
+								2267,	-- Hillsbrad Peasant
+								2270,	-- Hillsbrad Sentry
+								2264,	-- Hillsbrad Tailor
+								2427,	-- Jailor Eston
+								2428,	-- Jailor Marlgen
+								2335,	-- Magistrate Burnside
+								2450,	-- Miner Hackett
+								2260,	-- Syndicate Rogue
+								2244,	-- Syndicate Shadow Mage
+								2261,	-- Syndicate Watchman
+							},
+						}),
 						i(3739),	-- Skull Ring
 					},
 				}),
@@ -691,26 +945,86 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(RARES, {
-				n(14280, {  -- Big Samras
+				n(50335, {	-- Alitus
+					["coord"] = { 46.8, 66.8, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.2.0.16650" },
+				}),
+				-- #if AFTER CATA
+				n(14222, {	-- Araga (Alterac Mountains)
+					["coord"] = { 44.2, 54.0, HILLSBRAD_FOOTHILLS },
+				}),
+				-- #endif
+				n(14280, {	-- Big Samras
+					-- #if AFTER CATA
+					["coord"] = { 63.6, 52.6, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coords"] = {
 						{ 72.6, 29.0, HILLSBRAD_FOOTHILLS },
 						{ 75.8, 31.6, HILLSBRAD_FOOTHILLS },
 						{ 86.6, 39.6, HILLSBRAD_FOOTHILLS },
 						{ 85.0, 47.6, HILLSBRAD_FOOTHILLS },
 					},
+					-- #endif
 				}),
-				n(2304, {  -- Captain Ironhill
-					["coord"] = { 73.2, 80.8, HILLSBRAD_FOOTHILLS },
+				n(50955, {	-- Carcinak
+					["coord"] = { 46.8, 76.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.2.0.16408" },
 				}),
-				n(14279, {  -- Creepthess
+				n(51022, {	-- Chordix
+					["coord"] = { 56.8, 54.8, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
+				-- #if AFTER CATA
+				n(14223, {	-- Cranky Benj (Alterac Mountains)
+					["coords"] = {
+						{ 68.4, 30.6, HILLSBRAD_FOOTHILLS },
+						{ 65.8, 36.4, HILLSBRAD_FOOTHILLS },
+						{ 63.0, 40.8, HILLSBRAD_FOOTHILLS },
+						{ 61.6, 48.0, HILLSBRAD_FOOTHILLS },
+						{ 60.8, 54.0, HILLSBRAD_FOOTHILLS },
+						{ 58.4, 59.6, HILLSBRAD_FOOTHILLS },
+						{ 56.6, 61.6, HILLSBRAD_FOOTHILLS },
+					},
+				}),
+				-- #endif
+				n(50967, {	-- Craw the Ravager
+					["coord"] = { 51.8, 87.2, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
+				n(14279, {	-- Creepthess
+					-- #if AFTER CATA
+					["coord"] = { 43.8, 74.4, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coords"] = {
 						{ 25.8, 54.6, HILLSBRAD_FOOTHILLS },
 						{ 28.4, 63.4, HILLSBRAD_FOOTHILLS },
 						{ 35.2, 60.4, HILLSBRAD_FOOTHILLS },
 						{ 39.2, 51.6, HILLSBRAD_FOOTHILLS },
 					},
+					-- #endif
 				}),
-				n(14277, {  -- Lady Zephris
+				n(50858, {	-- Dustwing
+					["coord"] = { 28.6, 84.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.1.0.16309" },
+				}),
+				-- #if AFTER CATA
+				n(14221, {	-- Gravis Slipknot (Alterac Mountains)
+					["coord"] = { 56.6, 23.6, HILLSBRAD_FOOTHILLS },
+				}),
+				-- #endif
+				n(47010, {	-- Indigos
+					["coord"] = { 31.6, 40.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+				}),
+				-- #if AFTER CATA
+				n(14281, {	-- Jimmy the Bleeder (Alterac Mountains)
+					["coord"] = { 49.8, 50.6, HILLSBRAD_FOOTHILLS },
+				}),
+				-- #endif
+				n(14277, {	-- Lady Zephris
+					-- #if AFTER CATA
+					["coord"] = { 54.6, 76.6, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coords"] = {
 						{ 58.2, 70.4, HILLSBRAD_FOOTHILLS },
 						{ 60.6, 75.2, HILLSBRAD_FOOTHILLS },
@@ -718,74 +1032,195 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 65.8, 80.2, HILLSBRAD_FOOTHILLS },
 						{ 67.8, 87.6, HILLSBRAD_FOOTHILLS },
 					},
+					-- #endif
 				}),
-				n(14278, {  -- Ro'Bark
+				n(50929, {	-- Little Bjorn
+					["coord"] = { 35.0, 78.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.2.0.16408" },
+				}),
+				-- #if AFTER CATA
+				n(2453, {	-- Lo'Grosh (Alterac Mountains)
+					["coord"] = { 49.4, 18.4, HILLSBRAD_FOOTHILLS },
+					["groups"] = {
+						i(6327),	-- The Pacifier
+						i(4810),	-- Boulder Pads
+						i(1678),	-- Black Ogre Kickers
+					},
+				}),
+				-- #endif
+				n(51076, {	-- Lopex
+					["coord"] = { 68.8, 56.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.2.0.16650" },
+				}),
+				-- #if AFTER CATA
+				n(2258, {	-- Maggarrak [CATA+] / Stone Fury (Alterac Mountains)
+					["coord"] = { 60.2, 28.8, HILLSBRAD_FOOTHILLS },
+				}),
+				-- #endif
+				n(50765, {	-- Miasmiss
+					["coord"] = { 37.0, 68.2, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.1.0.16231" },
+				}),
+				n(14278, {	-- Ro'Bark
+					-- #if AFTER CATA
+					["coord"] = { 58.4, 75.6, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coords"] = {
 						{ 61.8, 60.6, HILLSBRAD_FOOTHILLS },
 						{ 66.2, 58.8, HILLSBRAD_FOOTHILLS },
 						{ 66.2, 64.8, HILLSBRAD_FOOTHILLS },
 						{ 63.2, 63.4, HILLSBRAD_FOOTHILLS },
 					},
+					-- #endif
 				}),
-				n(14276, {  -- Scargil
+				n(14276, {	-- Scargil
+					-- #if AFTER CATA
+					["coord"] = { 32.6, 79.8, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coords"] = {
 						{ 23.6, 64.4, HILLSBRAD_FOOTHILLS },
 						{ 26.0, 65.4, HILLSBRAD_FOOTHILLS },
 						{ 26.2, 73.0, HILLSBRAD_FOOTHILLS },
 						{ 31.4, 72.2, HILLSBRAD_FOOTHILLS },
 					},
+					-- #endif
 				}),
-				n(14275, {  -- Tamra Stormpike
-					["races"] = HORDE_ONLY,
+				-- #if AFTER CATA
+				n(2452, {	-- Skhowl (Alterac Mountains)
+					["coord"] = { 43.6, 38.8, HILLSBRAD_FOOTHILLS },
+					["groups"] = {
+						i(3011),	-- Feathered Headdress
+						i(6331),	-- Howling Blade
+					},
+				}),
+				-- #endif
+				n(14275, {	-- Tamra Stormpike
+					-- #if AFTER CATA
+					["coord"] = { 63.2, 85.8, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coords"] = {
 						{ 65.0, 66.2, HILLSBRAD_FOOTHILLS },
 						{ 68.6, 77.8, HILLSBRAD_FOOTHILLS },
 						{ 71.2, 75.4, HILLSBRAD_FOOTHILLS },
 						{ 73.6, 81.0, HILLSBRAD_FOOTHILLS },
 					},
+					-- #endif
+					["races"] = HORDE_ONLY,
+				}),
+				n(50818, {	-- The Dark Prowler
+					["coord"] = { 33.0, 55.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.2.0.16650" },
+				}),
+				n(51057, {	-- Weevil
+					["coord"] = { 45.6, 53.8, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.2.0.16650" },
+				}),
+				n(50770, {	-- Zorn
+					["coord"] = { 77.0, 60.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 5.2.0.16650" },
 				}),
 			}),
 			n(VENDORS, {
+				-- #if AFTER CATA
+				n(2480, {	-- Bro'kin <Alchemy Supplies> (Alterac Mountains)
+					["coord"] = { 44.0, 21.8, HILLSBRAD_FOOTHILLS },
+					["groups"] = {
+						i(14634, {	-- Recipe: Frost Oil
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				-- #endif
 				n(2393, {	-- Christoph Jeffcoat <Tradesman>
+					-- #if AFTER CATA
+					["coord"] = { 57.5, 47.8, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coord"] = { 62.2, 19.0, HILLSBRAD_FOOTHILLS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						i(20971, {	-- Design: Heavy Iron Knuckles
+							["timeline"] = { "removed 4.0.3" },	-- Learned by trainer
 							["isLimited"] = true,
 						}),
-						i(5788),	-- Pattern: Thick Murloc Armor
-						i(6054),	-- Recipe: Shadow Protection Potion
+						i(5788, {	-- Pattern: Thick Murloc Armor
+							["isLimited"] = true,
+						}),
+						i(6054, {	-- Recipe: Shadow Protection Potion
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(2397, {	-- Derak Nightfall <Cook>
+					-- #if AFTER CATA
+					["coord"] = { 57.6, 45.2, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coord"] = { 63.0, 19.6, HILLSBRAD_FOOTHILLS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						i(6330),	-- Recipe: Bristle Whisker Catfish
-						i(21099),	-- Recipe: Smoked Sagefish
 						i(21219),	-- Recipe: Sagefish Delight
+						i(21099),	-- Recipe: Smoked Sagefish
 					},
 				}),
 				n(2698, {	-- George Candarte <Leatherworking Supplies>
+					-- #if AFTER CATA
+					["coord"] = { 76.6, 58.6, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coord"] = { 92.0, 38.6, HILLSBRAD_FOOTHILLS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(7613),	-- Pattern: Green Leather Armor
+						i(7613, {	-- Pattern: Green Leather Armor
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				n(47712, {	-- Harland Waldek <Weaponsmith>
+					["coord"] = { 28.8, 64.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(4817, {	-- Blessed Claymore
+							["isLimited"] = true,
+						}),
+						i(4818, {	-- Executioner's Sword
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(3536, {	-- Kris Legace <Freewheeling Tradeswoman>
+					-- #if AFTER CATA
+					["coord"] = { 68.8, 58.8, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coord"] = { 80.0, 39.0, HILLSBRAD_FOOTHILLS },
+					-- #endif
 					["groups"] = {
-						i(4794),	-- Wolf Bracers
-						i(4795),	-- Bear Bracers
-						i(4796),	-- Owl Bracers
-						i(4830),	-- Saber Leggings
-						i(4831),	-- Stalking Pants
-						i(4832),	-- Mystic Sarong
+						i(4795, {	-- Bear Bracers
+							["isLimited"] = true,
+						}),
+						i(4832, {	-- Mystic Sarong
+							["isLimited"] = true,
+						}),
+						i(4796, {	-- Owl Bracers
+							["isLimited"] = true,
+						}),
+						i(4830, {	-- Saber Leggings
+							["isLimited"] = true,
+						}),
+						i(4831, {	-- Stalking Pants
+							["isLimited"] = true,
+						}),
+						i(4794, {	-- Wolf Bracers
+							["isLimited"] = true,
+						}),
 					},
 				}),
+				-- #if BEFORE 4.0.3
 				n(2383, {	-- Lindea Rabonne <Tackle and Bait>
 					["coord"] = { 50.6, 61.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(6330),	-- Recipe: Bristle Whisker Catfish
@@ -793,16 +1228,27 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(17062),	-- Recipe: Mithril Head Trout
 					},
 				}),
+				-- #endif
 				n(2394, {	-- Mallen Swain <Tailoring Supplies>
+					-- #if AFTER CATA
+					["coord"] = { 58.0, 47.8, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coord"] = { 62.0, 21.0, HILLSBRAD_FOOTHILLS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
-						i(6274),	-- Pattern: Blue Overalls
-						i(6401),	-- Pattern: Dark Silk Shirt
+						i(6274, {	-- Pattern: Blue Overalls
+							["isLimited"] = true,
+						}),
+						i(6401, {	-- Pattern: Dark Silk Shirt
+							["isLimited"] = true,
+						}),
 					},
 				}),
+				-- #if BEFORE 4.0.3
 				n(2357, {	-- Merideth Carlson <Horse Breeder>
 					["coord"] = { 52.2, 55.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(2414),	-- Pinto Bridle
@@ -813,86 +1259,188 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(18778),	-- Swift White Steed
 					},
 				}),
+				-- #endif
 				n(2381, {	-- Micha Yance <Trade Goods>
 					["coord"] = { 49.0, 55.2, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
 						i(20973, {	-- Design: Blazing Citrine Ring
+							["timeline"] = { "removed 4.0.3" },	-- Learned by trainer
 							["isLimited"] = true,
 						}),
 						i(20971, {	-- Design: Heavy Iron Knuckles
+							["timeline"] = { "removed 4.0.3" },	-- Learned by trainer
 							["isLimited"] = true,
 						}),
-						i(11163),	-- Formula: Enchant Bracer - Lesser Deflection
-						i(4355),	-- Pattern: Icy Cloak
-						i(5788),	-- Pattern: Thick Murloc Armor
+						i(11163, {	-- Formula: Enchant Bracer - Lesser Dodge / CLASSIC: Formula: Enchant Bracer - Lesser Deflection (RECIPE!)
+							["timeline"] = { "removed 4.1.0" },	-- Learned by trainer
+							["isLimited"] = true,
+						}),
+						-- #if BEFORE 4.0.3
+						i(4355, {	-- Pattern: Icy Cloak
+							["isLimited"] = true,
+						}),
+						i(5788, {	-- Pattern: Thick Murloc Armor
+							["isLimited"] = true,
+						}),
 						i(21219),	-- Recipe: Sagefish Deligh
 						i(21099),	-- Recipe: Smoked Sagefish
+						-- #endif
 					},
 				}),
 				n(2380, {	-- Nandar Branson <Alchemy Supplies>
 					["coord"] = { 50.9, 57.1, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(6055),	-- Recipe: Fire Protection Potion
+						i(6055, {	-- Recipe: Fire Protection Potion
+							-- #if BEFORE 4.0.3
+							["description"] = "This item can be sold on the Neutral Auction House to Alliance Alchemists for a... nominal fee.\n\nOnly naturally accessible to Horde players.",
+							-- #else
+							["description"] = "WARNING: This item will be made unavailable, but still learnable, by Alliance players. If you are Alliance, you may want to buy this now.",
+							-- #endif
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(3539, {	-- Ott <Weaponsmith>
+					-- #if AFTER CATA
+					["coord"] = { 57.6, 47.6, HILLSBRAD_FOOTHILLS },
+					-- #else
 					["coord"] = { 60.4, 26.0, HILLSBRAD_FOOTHILLS },
+					-- #endif
 					["races"] = HORDE_ONLY,
 					["groups"] = {
 						i(4817, {	-- Blessed Claymore
 							["isLimited"] = true,
 						}),
-						i(4824),	-- Blurred Axe
-						i(12247),	-- Broad Bladed Knife
-						i(4825),	-- Callous Axe
+						i(4824, {	-- Blurred Axe
+							["isLimited"] = true,
+						}),
+						i(12247, {	-- Broad Bladed Knife
+							["isLimited"] = true,
+						}),
+						i(4825, {	-- Callous Axe
+							["isLimited"] = true,
+						}),
 						i(4818, {	-- Executioner's Sword
 							["isLimited"] = true,
 						}),
-						i(4826),	-- Marauder Axe
-						i(12249),	-- Merciless Axe
+						i(4826, {	-- Marauder Axe
+							["isLimited"] = true,
+						}),
+						i(12249, {	-- Merciless Axe
+							["isLimited"] = true,
+						}),
 					},
 				}),
+				-- #if AFTER CATA
+				n(2684, {	-- Rizz Loosebolt <Engineering Supplies> (Alterac Mountains)
+					["timeline"] = { "removed 4.0.3" },
+					["groups"] = {
+						i(13308, {	-- Schematic: Ice Deflector
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				-- #endif
+				-- #if BEFORE CATA
 				n(3543, {	-- Robert Aebischer <Superior Armorsmith>
 					["coord"] = { 51.2, 57.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["groups"] = {
-						i(4797),	-- Fiery Cloak
-						i(4798),	-- Heavy Runed Cloak
-						i(4799),	-- Antiquated Cloak
-						i(4800),	-- Mighty Chain Pants
-						i(4816),	-- Legionnaire's Leggings
-						i(4833),	-- Glorious Shoulders
-						i(4835),	-- Elite Shoulders
+						i(4797, {	-- Fiery Cloak
+							["isLimited"] = true,
+						}),
+						i(4798, {	-- Heavy Runed Cloak
+							["isLimited"] = true,
+						}),
+						i(4799, {	-- Antiquated Cloak
+							["isLimited"] = true,
+						}),
+						i(4800, {	-- Mighty Chain Pants
+							["isLimited"] = true,
+						}),
+						i(4816, {	-- Legionnaire's Leggings
+							["isLimited"] = true,
+						}),
+						i(4833, {	-- Glorious Shoulders
+							["isLimited"] = true,
+						}),
+						i(4835, {	-- Elite Shoulders
+							["isLimited"] = true,
+						}),
 					},
 				}),
+				-- #endif
+				-- #if AFTER CATA
+				n(6779, {	-- Smudge Thunderwood <Poison Supplies> (Alterac Mountains)
+					["coord"] = { 71.0, 45.8, HILLSBRAD_FOOTHILLS },
+					["classes"] = { ROGUE },
+					["groups"] = {
+						i(18160),	-- Recipe: Thistle Tea
+					},
+				}),
+				n(6777, {	-- Zan Shivsproket <Speciality Engineer> (Alterac Mountains)
+					["coord"] = { 71.2, 45.3, HILLSBRAD_FOOTHILLS },
+					["groups"] = {
+						i(7742, {	-- Schematic: Gnomish Cloaking Device
+							["isLimited"] = true,
+						}),
+					},
+				}),
+				-- #endif
 				n(3537, {	-- Zixil <Merchant Supreme>
+					-- #if AFTER CATA
+					["coords"] = {
+						{ 49.4, 66.6, HILLSBRAD_FOOTHILLS },
+						{ 56.0, 46.4, HILLSBRAD_FOOTHILLS },
+						{ 51.8, 55.6, HILLSBRAD_FOOTHILLS },
+					},
+					-- #else
 					["coords"] = {
 						{ 60.8, 19.8, HILLSBRAD_FOOTHILLS },
 						{ 55.6, 34.6, HILLSBRAD_FOOTHILLS },
 						{ 50.4, 50.8, HILLSBRAD_FOOTHILLS },
 					},
+					-- #endif
 					["groups"] = {
-						i(4827),	-- Wizard's Belt
-						i(4828),	-- Nightwind Belt
-						i(4829),	-- Dreamer's Belt
-						i(4836),	-- Fireproof Orb
-						i(4837),	-- Strength of Will
-						i(4838),	-- Orb of Power
-						i(5772),	-- Pattern: Red Woolen Bag
-						i(6377),	-- Formula: Enchant Boots - Minor Agility
-						i(7362),	-- Pattern: Earthen Leather Shoulders
-						i(7561),	-- Schematic: Goblin Jumper Cables
+						i(4829, {	-- Dreamer's Belt
+							["isLimited"] = true,
+						}),
+						i(4836, {	-- Fireproof Orb
+							["isLimited"] = true,
+						}),
+						i(6377, {	-- Formula: Enchant Boots - Minor Agility (RECIPE!)
+							["isLimited"] = true,
+						}),
+						i(4828, {	-- Nightwind Belt
+							["isLimited"] = true,
+						}),
+						i(4838, {	-- Orb of Power
+							["isLimited"] = true,
+						}),
+						i(7362, {	-- Pattern: Earthen Leather Shoulders
+							["isLimited"] = true,
+						}),
+						i(5772, {	-- Pattern: Red Woolen Bag
+							["isLimited"] = true,
+						}),
+						i(7561, {	-- Schematic: Goblin Jumper Cables
+							["isLimited"] = true,
+						}),
+						i(4837, {	-- Strength of Will
+							["isLimited"] = true,
+						}),
+						i(4827, {	-- Wizard's Belt
+							["isLimited"] = true,
+						}),
 					},
 				}),
 			}),
 			n(ZONE_DROPS, {
-				i(3668, {	-- Assassin's Contract
-					["questID"] = 522,	-- Assassin's Contract
-					["cr"] = 2434,	-- Shadowy Assassin
-					["races"] = ALLIANCE_ONLY,
-				}),
 				-- #if AFTER CATA
 				i(3711, {	-- Belamoore's Research Journal
 					["timeline"] = { "removed 4.0.3" },
@@ -904,27 +1452,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cr"] = 2246,	-- Syndicate Assassin
 				}),
 				-- #endif
-				i(3477, {	-- Creeper Ichor
-					["questID"] = 496,	-- Elixir of Suffering
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						14279,	-- Creepthess
-						2348,	-- Elder Moss Creeper
-						2350,	-- Forest Moss Creeper
-						2349,	-- Giant Moss Creeper
-					},
-				}),
-				i(3509, {	-- Daggerspine Scale
-					["questID"] = 515,	-- Elixir of Agony
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2370,	-- Daggerspine Screamer
-						2369,	-- Daggerspine Shorehunter
-						2368,	-- Daggerspine Shorestalker
-						2371,	-- Daggerspine Siren
-						14277,	-- Lady Zephris
-					},
-				}),
 				i(3204, {	-- Deepwood Bracers
 					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2372,	-- Mudsnout Gnoll
@@ -947,51 +1474,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						2377,	-- Torn Fin Tidehunter
 					},
 				}),
-				i(3476, {	-- Gray Bear Tongue
-					["questID"] = 496,	-- Elixir of Suffering
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						14280,	-- Big Samras
-						2356,	-- Elder Gray Bear
-						2351,	-- Gray Bear
-						2354,	-- Vicious Gray Bear
-					},
-				}),
 				i(3429, {	-- Guardsman Belt
 					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
 						2427,	-- Jailor Eston
 						2428,	-- Jailor Marlgen
-					},
-				}),
-				i(3692, {	-- Hillsbrad Human Skull
-					["questID"] = 546,	-- Souvenirs of Death
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2404,	-- Blacksmith Verringtan
-						2449,	-- Citizen Wilkes
-						2448,	-- Clerk Horrace Whitesteed
-						2403,	-- Farmer Getz
-						2451,	-- Farmer Kalaba
-						232,	-- Farmer Ray
-						2305,	-- Foreman Bonds
-						2265,	-- Hillsbrad Apprentice Blacksmith
-						2387,	-- Hillsbrad Councilman
-						2266,	-- Hillsbrad Farmer
-						2360,	-- Hillsbrad Farmhand
-						2268,	-- Hillsbrad Footman
-						2503,	-- Hillsbrad Foreman
-						2269,	-- Hillsbrad Miner
-						2267,	-- Hillsbrad Peasant
-						2270,	-- Hillsbrad Sentry
-						2264,	-- Hillsbrad Tailor
-						2427,	-- Jailor Eston
-						2428,	-- Jailor Marlgen
-						2335,	-- Magistrate Burnside
-						2450,	-- Miner Hackett
-						2260,	-- Syndicate Rogue
-						2244,	-- Syndicate Shadow Mage
-						2261,	-- Syndicate Watchman
 					},
 				}),
 				i(3053, {	-- Humbert's Chestpiece
@@ -1009,16 +1496,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["timeline"] = { "removed 4.0.3" },
 					["cr"] = 2346,	-- Dun Garok Priest
 				}),
-				i(3693, {	-- Humbert's Sword
-					["questID"] = 547,	-- Humbert's Sword
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2344,	-- Dun Garok Mountaineer
-						2346,	-- Dun Garok Priest
-						2345,	-- Dun Garok Rifleman
-						14275,	-- Tamra Stormpike
-					},
-				}),
 				-- #if BEFORE CATA
 				i(4589, {	-- Long Elegant Feather
 					["crs"] = {
@@ -1028,28 +1505,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 				}),
 				-- #endif
-				i(3496, {	-- Mountain Lion Blood
-					["questID"] = 501,	-- Elixir of Pain
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						2385,	-- Feral Mountain Lion
-						2407,	-- Hulking Mountain Lion
-						2406,	-- Mountain Lion
-						2384,	-- Starving Mountain Lion
-					},
-				}),
-				i(3716, {	-- Murloc Head
-					["questID"] = 559,	-- Farren's Proof
-					["description"] = "Running joke is that since all adventurers take from the Murlocs is their heads, that's why the drop rate is so low - bunch of headless murlocs running around.",
-					["races"] = ALLIANCE_ONLY,
-					["crs"] = {
-						14276,	-- Scargil
-						2375,	-- Torn Fin Coastrunner
-						2374,	-- Torn Fin Muckdweller
-						2376,	-- Torn Fin Oracle
-						2377,	-- Torn Fin Tidehunter
-					},
-				}),
 				i(5775, {	-- Pattern: Black Silk Pack
 					["timeline"] = { "removed 4.0.3" },
 					["crs"] = {
@@ -1078,13 +1533,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cr"] = 2373,	-- Mudsnout Shaman
 				}),
 				-- #endif
-				applyclassicphase(PHASE_FIVE, i(22229, {	-- Soul Ashes of the Banished
-					["crs"] = {
-						7071,	-- Cursed Paladin
-						7072,	-- Cursed Justicar
-						7075,	-- Writhing Mage
-					},
-				})),
 				-- #if AFTER CATA
 				i(3745, {	-- Rune of Opening
 					["timeline"] = { "removed 4.0.3" },
@@ -1100,22 +1548,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["cr"] = 2358,	-- Dalaran Summoner
 				}),
 				-- #endif
-				i(3510, {	-- Torn Fin Eye
-					["questID"] = 515,	-- Elixir of Agony
-					["races"] = HORDE_ONLY,
-					["crs"] = {
-						14276,	-- Scargil
-						2375,	-- Torn Fin Coastrunner
-						2374,	-- Torn Fin Muckdweller
-						2376,	-- Torn Fin Oracle
-						2377,	-- Torn Fin Tidehunter
-					},
-				}),
-				i(5620, {	-- Vial of Innocent Blood
-					["questID"] = 1066,	-- Blood of Innocents
-					["races"] = HORDE_ONLY,
-					["cr"] = 2244,	-- Syndicate Shadow Mage
-				}),
 			}),
 		},
 	}),

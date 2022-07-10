@@ -81,15 +81,6 @@ root("Zones", m(KALIMDOR, {
 					["races"] = HORDE_ONLY,
 					["lvl"] = 47,
 				}),
-				q(1066, {	-- Blood of Innocents
-					["qg"] = 2216,	-- Apothecary Lydon
-					["coord"] = { 61.4, 19.2, HILLSBRAD_FOOTHILLS },
-					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 5620, 5 },	-- Vial of Innocent Blood
-					},
-					["lvl"] = 13,
-				}),
 				q(1845, {	-- Brutal Helm
 					["qg"] = 6410,	-- Orm Stonehoof
 					["sourceQuest"] = 1844,	-- Chimaeric Horn
@@ -115,10 +106,10 @@ root("Zones", m(KALIMDOR, {
 				}),
 				q(1064, {	-- Forsaken Aid
 					["qg"] = 4046,	-- Magatha Grimtotem
+					["sourceQuest"] = 1063,	-- The Elder Crone
 					["coord"] = { 69.85, 30.91, THUNDER_BLUFF },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 13,
-					["sourceQuest"] = 1063,	-- The Elder Crone
 				}),
 				q(1136, {	-- Frostmaw
 					["qg"] = 3441,	-- Melor Stonehoof
@@ -143,13 +134,6 @@ root("Zones", m(KALIMDOR, {
 						i(5936),	-- Animal Skin Belt
 						i(4962),	-- Double-layered Gloves
 					},
-				}),
-				q(1065, {	-- Journey to Tarren Mill
-					["qg"] = 3419,	-- Apothecary Zamah
-					["coord"] = { 22.85, 20.90, THUNDER_BLUFF },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 13,
-					["sourceQuest"] = 1064,	-- Forsaken Aid
 				}),
 				q(1130, {	-- Melor Sends Word
 					["lvl"] = 20,
@@ -199,11 +183,6 @@ root("Zones", m(KALIMDOR, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 15,
 				}),
-				q(1067, {	-- Return to Thunder Bluff
-					["lvl"] = 13,
-					["races"] = HORDE_ONLY,
-					["qg"] = 2216,	-- Apothecary Lydon
-				}),
 				q(860, {	-- Sergra Darkthorn
 					["qg"] = 3441,	-- Melor Stonehoof
 					["sourceQuest"] = 861,	-- The Hunter's Way
@@ -231,8 +210,15 @@ root("Zones", m(KALIMDOR, {
 					["qg"] = 3419,	-- Apothecary Zamah
 					["sourceQuest"] = 1067,	-- Return to Thunder Bluff
 					["coord"] = { 22.85, 20.90, THUNDER_BLUFF },
+					["maps"] = { STONETALON_MOUNTAINS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 13,
+					["groups"] = {
+						objective(1, {	-- Place the Toxic Fogger
+							["provider"] = { "i", 5638 },	-- Toxic Fogger
+							["coord"] = { 66, 45, STONETALON_MOUNTAINS },
+						}),
+					},
 				}),
 				q(1195, {	-- The Sacred Flame
 					["qg"] = 4721,	-- Zangen Stonehoof

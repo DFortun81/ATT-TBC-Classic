@@ -31,6 +31,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["OnClick"] = [[_.CommonAchievementHandlers.EXPLORATION_OnClick]],
 					["OnUpdate"] = [[_.CommonAchievementHandlers.EXPLORATION_OnUpdate]],
 					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 				})),
 			}),
 			-- #if ANYCLASSIC
@@ -87,6 +88,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(522, {	-- Assassin's Contract
 					["provider"] = { "i", 3668 },	-- Assassin's Contract
 					["coord"] = { 50.8, 58.8, HILLSBRAD_FOOTHILLS },
+					["cr"] = 2434,	-- Shadowy Assassin
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
@@ -151,10 +153,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2276,	-- Magistrate Henry Maleb
 					["sourceQuest"] = 525,	-- Further Mysteries
 					["coord"] = { 48.2, 59.4, HILLSBRAD_FOOTHILLS },
-					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 3672, 1 },	-- Head of Nagaz
 					},
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
 						{
@@ -182,10 +184,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["coord"] = { 58.3, 68.0, ALTERAC_MOUNTAINS },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
-					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 3521, 1 },	-- Cleverly Encrypted Letter
 					},
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
 				q(1714, {	-- Essence of the Exile
@@ -212,10 +214,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["coord"] = { 58.3, 68.0, ALTERAC_MOUNTAINS },
 					["maps"] = { HILLSBRAD_FOOTHILLS },
-					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 3718, 1 },	-- Foreboding Plans
 					},
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 26,
 				}),
 				q(525, {	-- Further Mysteries
@@ -230,10 +232,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 6707,	-- Fahrad <Grand Master Rogue>
 					["coord"] = { 84.4, 80.3, ALTERAC_MOUNTAINS },
 					["maxReputation"] = { 349, EXALTED },	-- Ravenholdt, Exalted.
-					["repeatable"] = true,
 					["cost"] = {
 						{ "i", 16885, 5 },	-- Heavy Junkbox
 					},
+					["repeatable"] = true,
 					["lvl"] = 50,
 					["groups"] = {
 						i(20086, {	-- Dusksteel Throwing Knife [Classic] / Broken Dusksteel Throwing Knife [TBC]
@@ -249,10 +251,10 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 2277,	-- Loremaster Dibbs
 					["sourceQuest"] = 511,	-- Encrypted Letter
 					["coord"] = { 50.4, 57, HILLSBRAD_FOOTHILLS },
-					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 3521, 1 },	-- Cleverly Encrypted Letter
 					},
+					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 				}),
 				q(512, {	-- Noble Deaths
@@ -280,11 +282,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 6768,	-- Lord Jorach Ravenholdt <Lord of the Assassin's League>
 					["sourceQuest"] = 8233,	-- A Simple Request
 					["coord"] = { 86.0, 79.0, ALTERAC_MOUNTAINS },
-					["maps"] = { AZSHARA },
-					["classes"] = { ROGUE },
 					["cost"] = {
 						{ "i", 19775, 1 },	-- Sealed Azure Bag
 					},
+					["maps"] = { AZSHARA },
+					["classes"] = { ROGUE },
 					["lvl"] = 50,
 					["groups"] = {
 						{
@@ -300,24 +302,24 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["sourceQuest"] = 6681,	-- The Manor, Ravenholdt
 					["coord"] = { 85.2, 79.4, ALTERAC_MOUNTAINS },
 					["maxReputation"] = { 349, FRIENDLY },	-- Ravenholdt, Friendly.
-					["classes"] = { ROGUE },
-					["repeatable"] = true,
 					["cost"] = {
 						{ "i", 17124, 1 },	-- Syndicate Emblem
 					},
+					["classes"] = { ROGUE },
+					["repeatable"] = true,
 					["lvl"] = 24,
 				}),
 				q(8412, {	-- Spirit Totem
 					["qg"] = 6176,	-- Bath'rah the Windwatcher
-					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
-					["races"] = HORDE_ONLY,
-					["classes"] = { SHAMAN },
 					["sourceQuest"] = 8410,	-- Elemental Mastery
-					["lvl"] = 50,
+					["coord"] = { 80.4, 66.8, ALTERAC_MOUNTAINS },
 					["cost"] = {
 						{ "i", 20610, 8 },	-- Bloodshot Spider Eye
 						{ "i", 20611, 8 },	-- Thick Black Claw
 					},
+					["races"] = HORDE_ONLY,
+					["classes"] = { SHAMAN },
+					["lvl"] = 50,
 				}),
 				q(554, {	-- Stormpike's Deciphering
 					["qg"] = 2277,	-- Loremaster Dibbs
@@ -378,8 +380,8 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 57.15, 69.50, ALTERAC_MOUNTAINS},
 					["cost"] = { { "i", 3703, 1 } },	-- Southshore Stout
 					["cr"] = 2440,	-- Drunken Footpad
-					["isBreadcrumb"] = true,
 					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
 					["lvl"] = 29,
 					["groups"] = {
 						i(3601),	-- Syndicate Missive
@@ -427,14 +429,15 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 52.6, 46.2, ALTERAC_MOUNTAINS },
 					},
 					["groups"] = {
+						i(6327),	-- The Pacifier
 						i(4810),	-- Boulder Pads
 						i(1678),	-- Black Ogre Kickers
-						i(6327),	-- The Pacifier
 					},
 				}),
 				n(2447, {	-- Narillasanz
 					["description"] = "Patrols around the entire zone, but can usually be found along the river to the east.\n\nThis particular rare was used in the original World of Warcraft game packaging facing off against heroes wielding Teebu's Blazing Longsword.",
 					["coord"] = { 79.2, 47.0, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 				}),
 				n(2452, {	-- Skhowl
 					["coords"] = {
@@ -448,7 +451,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						i(6331),	-- Howling Blade
 					},
 				}),
-				n(2258, {	-- Stone Fury
+				n(2258, {	-- Stone Fury / Maggarrak [CATA+]
 					["coords"] = {
 						{ 61.8, 37.8, ALTERAC_MOUNTAINS },
 						{ 66.6, 47.2, ALTERAC_MOUNTAINS },
@@ -462,13 +465,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				n(2480, {	-- Bro'kin <Alchemy Supplies>
 					["coord"] = { 38.0, 38.0, ALTERAC_MOUNTAINS },
 					["groups"] = {
-						i(14634),	-- Recipe: Frost Oil
+						i(14634, {	-- Recipe: Frost Oil
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(2684, {	-- Rizz Loosebolt <Engineering Supplies>
 					["coord"] = { 47.3, 35.2, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["groups"] = {
-						i(13308),	-- Schematic: Ice Deflector
+						i(13308, {	-- Schematic: Ice Deflector
+							["timeline"] = { "removed 4.0.3" },
+							["isLimited"] = true,
+						}),
 					},
 				}),
 				n(6779, {	-- Smudge Thunderwood <Poison Vendor>
@@ -481,7 +490,9 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				n(6777, {	-- Zan Shivsproket <Speciality Engineer>
 					["coord"] = { 86.0, 80.0, ALTERAC_MOUNTAINS },
 					["groups"] = {
-						i(7742),	-- Schematic: Gnomish Cloaking Device
+						i(7742, {	-- Schematic: Gnomish Cloaking Device
+							["isLimited"] = true,
+						}),
 					},
 				}),
 			}),
