@@ -184,6 +184,46 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				}),
 			}),
 			n(QUESTS, {
+				q(28345, {	-- *Gurgle* HELP! *Gurgle*
+					["qg"] = 48218,	-- Kingslayer Orkus
+					["sourceQuests"] = {
+						28096,	-- Welcome to the Machine
+						28344,	-- Can You Smell What the Lok'tar is Cooking?
+					},
+					["coord"] = { 49.5, 74.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28237, {	-- A Blight Upon the Land
+					["qg"] = 48020,	-- Master Apothecary Lydon
+					["sourceQuest"] = 28235,	-- Burnside Must Fall
+					["coord"] = { 36.5, 58.0, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+					["races"] = HORDE_ONLY,
+					["groups"] = {
+						i(65675, {	-- Stillwater's Dagger
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(65697, {	-- Stillwater's Cloak
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(65715, {	-- Stillwater's Signet
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+					},
+				}),
+				q(28495, {	-- A Fighting Chance
+					["qg"] = 17092,	-- Advisor Duskingdawn
+					["coord"] = { 56.7, 47.4, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28635, {	-- A Haunting in Hillsbrad
+					["qg"] = 49243,	-- Captain Jekyll
+					["coord"] = { 59.9, 63.3, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+					["races"] = HORDE_ONLY,
+				}),
 				-- #if AFTER CATA
 				q(8233, {	-- A Simple Request (Alterac Mountains)
 					["allianceQuestData"] = {
@@ -212,6 +252,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["classes"] = { ROGUE },
 					["lvl"] = 50,
 				}),
+				-- #endif
+				q(28587, {	-- Aid of the Frostwolf
+					["qg"] = 48545,	-- High Warlord Cromush
+					["sourceQuest"] = 28400,	-- Heroes of the Horde!
+					["coord"] = { 57.0, 46.2, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+					["races"] = HORDE_ONLY,
+				}),
+				q(28329, {	-- Angry Scrubbing Bubbles
+					["qg"] = 48319,	-- Angry Blight Slime
+					["coord"] = { 48.8, 71.2, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
+					["races"] = HORDE_ONLY,
+				}),
+				-- #if AFTER CATA
 				q(522, {	-- Assassin's Contract (Alterac Mountains)
 					["provider"] = { "i", 3668 },	-- Assassin's Contract
 					["coord"] = { 50.8, 58.8, HILLSBRAD_FOOTHILLS },
@@ -257,64 +312,161 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				q(527, {	-- Battle of Hillsbrad
-					["qg"] = 2215,	-- High Executor Darthalia
-					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 19,
+				q(28733, {	-- Basic Botany
+					["qg"] = 49687,	-- Brazie the Botanist
+					["coord"] = { 33.5, 49.3, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "added 4.0.1.12984" },
 				}),
-				q(528, {	-- Battle of Hillsbrad
-					["qg"] = 2215,	-- High Executor Darthalia
-					["sourceQuest"] = 527,	-- Battle of Hillsbrad
-					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 19,
-				}),
-				q(529, {	-- Battle of Hillsbrad
-					["qg"] = 2215,	-- High Executor Darthalia
-					["sourceQuest"] = 528,	-- Battle of Hillsbrad
-					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 19,
-				}),
-				q(532, {	-- Battle of Hillsbrad
-					["qg"] = 2215,	-- High Executor Darthalia
-					["sourceQuest"] = 529,	-- Battle of Hillsbrad
-					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 19,
-				}),
-				q(539, {	-- Battle of Hillsbrad
-					["qg"] = 2215,	-- High Executor Darthalia
-					["sourceQuest"] = 532,	-- Battle of Hillsbrad
-					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 19,
-				}),
-				q(541, {	-- Battle of Hillsbrad
-					["qg"] = 2215,	-- High Executor Darthalia
-					["sourceQuest"] = 539,	-- Battle of Hillsbrad
-					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
-					["races"] = HORDE_ONLY,
-					["lvl"] = 19,
-				}),
-				q(550, {	-- Battle of Hillsbrad
+				q(527, {	-- Battle of Hillsbrad (1/7)
 					["qg"] = 2215,	-- High Executor Darthalia
 					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
-					["sourceQuest"] = 541,	-- Battle of Hillsbrad
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 19,
 					["groups"] = {
-						i(6282),	-- Sacred Burial Trousers
-						i(3761),	-- Deadskull Shield
-						i(3822),	-- Runic Darkblade
-						i(3760),	-- Band of the Undercity
+						objective(1, {	-- 0/6 Hillsbrad Farmer slain
+							["provider"] = { "n", 2266 },	-- Hillsbrad Farmer
+						}),
+						objective(2, {	-- 0/6 Hillsbrad Farmhand slain
+							["provider"] = { "n", 2360 },	-- Hillsbrad Farmhand
+						}),
+						objective(3, {	-- 0/1 Farmer Ray slain
+							["provider"] = { "n", 232 },	-- Farmer Ray
+						}),
+						objective(4, {	-- 0/1 Farmer Getz slain
+							["provider"] = { "n", 2403 },	-- Farmer Getz
+						}),
+					},
+				}),
+				q(528, {	-- Battle of Hillsbrad (2/7)
+					["qg"] = 2215,	-- High Executor Darthalia
+					["sourceQuest"] = 527,	-- Battle of Hillsbrad (1/7)
+					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 19,
+					["groups"] = {
+						objective(1, {	-- 0/15 Hillsbrad Peasant slain
+							["provider"] = { "n", 2267 },	-- Hillsbrad Peasant
+						}),
+					},
+				}),
+				q(529, {	-- Battle of Hillsbrad (3/7)
+					["qg"] = 2215,	-- High Executor Darthalia
+					["sourceQuest"] = 528,	-- Battle of Hillsbrad (2/7)
+					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 19,
+					["groups"] = {
+						objective(1, {	-- 0/1 Blacksmith Verringtan slain
+							["provider"] = { "n", 2404 },	-- Blacksmith Verringtan
+						}),
+						objective(2, {	-- 0/4 Hillsbrad Apprentice Blacksmith slain
+							["provider"] = { "n", 2265 },	-- Hillsbrad Apprentice Blacksmith
+						}),
+						objective(3, {	-- 0/1 Shipment of Iron
+							["provider"] = { "i", 3564 },	-- Shipment of Iron
+							["coord"] = { 32.1, 45.4, HILLSBRAD_FOOTHILLS },
+						}),
+					},
+				}),
+				q(532, {	-- Battle of Hillsbrad (4/7)
+					["qg"] = 2215,	-- High Executor Darthalia
+					["sourceQuest"] = 529,	-- Battle of Hillsbrad (3/7)
+					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 19,
+					["groups"] = {
+						objective(1, {	-- 0/1 Magistrate Burnside slain
+							["provider"] = { "n", 2335 },	-- Magistrate Burnside
+							["coord"] = { 29.6, 41.8, HILLSBRAD_FOOTHILLS },
+						}),
+						objective(2, {	-- 0/5 Hillsbrad Councilman slain
+							["provider"] = { "n", 2387 },	-- Hillsbrad Councilman
+						}),
+						objective(3, {	-- Hillsbrad Proclamation destroyed
+							["provider"] = { "o", 1761 },	-- Hillsbrad Proclamation
+							["coord"] = { 29.7, 41.8, HILLSBRAD_FOOTHILLS },
+						}),
+						objective(4, {	-- 0/1 Hillsbrad Town Registry
+							["provider"] = { "i", 3657 },	-- Hillsbrad Town Registry
+							["coord"] = { 29.6, 41.6, HILLSBRAD_FOOTHILLS },
+						}),
+					},
+				}),
+				q(539, {	-- Battle of Hillsbrad (5/7)
+					["qg"] = 2215,	-- High Executor Darthalia
+					["sourceQuest"] = 532,	-- Battle of Hillsbrad (4/7)
+					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 19,
+					["groups"] = {
+						objective(1, {	-- 0/1 Foreman Bonds slain
+							["provider"] = { "n", 2305 },	-- Foreman Bonds
+							["coord"] = { 31.0, 56.2, HILLSBRAD_FOOTHILLS },
+						}),
+						objective(2, {	-- 0/10 Hillsbrad Miner slain
+							["provider"] = { "n", 2269 },	-- Hillsbrad Miner
+						}),
+					},
+				}),
+				q(541, {	-- Battle of Hillsbrad (6/7)
+					["qg"] = 2215,	-- High Executor Darthalia
+					["sourceQuest"] = 539,	-- Battle of Hillsbrad (5/7)
+					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 19,
+					["groups"] = {
+						objective(1, {	-- 0/10 Dun Garok Mountaineer slain
+							["provider"] = { "n", 2344 },	-- Dun Garok Mountaineer
+						}),
+						objective(2, {	-- 0/8 Dun Garok Rifleman slain
+							["provider"] = { "n", 2345 },	-- Dun Garok Rifleman
+						}),
+						objective(3, {	-- 0/4 Dun Garok Priest slain
+							["provider"] = { "n", 2346 },	-- Dun Garok Priest
+						}),
+						objective(4, {	-- 0/1 Captain Ironhill slain
+							["provider"] = { "n", 2304 },	-- Captain Ironhill
+							["coord"] = { 72.6, 80.0, HILLSBRAD_FOOTHILLS },
+						}),
+					},
+				}),
+				q(550, {	-- Battle of Hillsbrad (7/7)
+					["providers"] = {
+						{ "n", 2215 },	-- High Executor Darthalia
+						{ "i", 3701 },	-- Darthalia's Sealed Commendation
+					},
+					["sourceQuest"] = 541,	-- Battle of Hillsbrad (6/7)
+					["coord"] = { 62.32, 20.33, HILLSBRAD_FOOTHILLS },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { UNDERCITY },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 19,
+					["groups"] = {
+						i(3761, {	-- Deadskull Shield
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(3822, {	-- Runic Darkblade
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(6282, {	-- Sacred Burial Trousers
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(3760, {	-- Band of the Undercity
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(506, {	-- Blackmoore's Legacy
 					["qg"] = 2316,	-- Gol'dir
 					["sourceQuest"] = 503,	-- Gol'dir
 					["coord"] = { 59.96, 43.74, ALTERAC_MOUNTAINS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 29,
 				}),

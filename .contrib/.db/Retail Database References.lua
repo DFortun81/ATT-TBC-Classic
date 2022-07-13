@@ -1,3 +1,5 @@
+-- #IMPORT: ..\\_profession.lua
+
 -- Dungeons & Raids
 -- Classic
 -- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\0.5 Tier 0.5 Sets.lua
@@ -81,6 +83,7 @@ root("Zones", m(KALIMDOR, {
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\0 - Metadata.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Ironforge.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Silvermoon City.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Alterac Mountains.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Arathi Highlands.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Badlands.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Blackrock Mountain.lua
