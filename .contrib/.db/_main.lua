@@ -1658,7 +1658,7 @@ faction = function(id, t)								-- Create a FACTION Object
 	return struct("factionID", id, t);
 end
 e = function(id, t)										-- Create an ENCOUNTER Object
-	-- #if BEFORE WRATH
+	-- #if BEFORE CATA
 	-- Not yet supported in classic.
 	if t then
 		if t.groups or t.g then
