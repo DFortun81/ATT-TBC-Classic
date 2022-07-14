@@ -166,10 +166,12 @@ local INSANE_IN_THE_MEMBRANE_OnUpdate = [[function(t)
 				return true;
 			end
 		end
+		-- #if BEFORE WRATH
 		t.SetAchievementCollected(t.achievementID, t.ratchet.standing == 8 and t.gadgetzan.standing == 8
 			and t.everlook.standing == 8 and t.bb.standing == 8 and t.dmf.standing == 8
 			and t.ravenholdt.standing == 8 and t.shendralar.standing == 8
 			and t.bloodsail.standing >= 6);
+		-- #endif
 	end
 end]];
 local INSANE_IN_THE_MEMBRANE_OnTooltip = [[function(t)
