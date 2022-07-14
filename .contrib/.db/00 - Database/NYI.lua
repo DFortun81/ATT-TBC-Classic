@@ -50,6 +50,28 @@ root("NeverImplemented", {
 		fp(211),	-- Quest - Sunwell Daily - Ship Bombing - Start
 		fp(212),	-- Quest - Sunwell Daily - Ship Bombing - End
 		-- #endif
+		-- #if AFTER WRATH
+		fp(285),	-- Quest - Wintergarde -> Stars' Rest (Start)
+		fp(394),	-- CC Prologue - GT - Battle Flight - Start
+		fp(287),	-- Quest - Valgarde -> Westguard Keep Start
+		fp(36),	-- Generic, World Target 001
+		fp(404),	-- Durotar - ET - CC Prologue Spy Frog Start
+		fp(210),	-- Quest - Sunwell Daily - Dead Scar Bombing - End
+		fp(405),	-- Durotar - ET - CC Prologue Spy Frog End
+		fp(168),	-- Filming
+		fp(172),	-- Ogri'La
+		fp(180),	-- Quest - Dustwallow - Alcaz Survey Start
+		fp(170),	-- Quest - Netherwing Ledge - Mine Cart Ride - South - End
+		fp(438),	-- Durotar - ET - CC Prologue Troll Taxi Bat Start
+		fp(292),	-- Flavor - Stormwind Harbor  - Start
+		fp(392),	-- CC Prologue - GT - Quest - Vent Horizon - Start
+		fp(173),	-- Quest - Yarzill Flight Start
+		fp(439),	-- Durotar - ET - CC Prologue Troll Recruit End
+		fp(181),	-- Quest - Dustwallow - Alcaz Survey End
+		fp(393),	-- CC Prologue - GT - Quest - Vent Horizon - End
+		fp(318),	-- Ebon Hold - Death's Breach -> Acherus Start
+		fp(316),	-- Ebon Hold - Acherus -> Death's Breach Start
+		-- #endif
 	}),
 	q(63769),	-- Holiday Reset Yearly Quest
 	q(7069),	-- "<UNUSED>" quest
