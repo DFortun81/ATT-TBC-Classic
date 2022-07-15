@@ -497,7 +497,7 @@ root("Zones", m(KALIMDOR, {
 						{ 56.6, 19.4, AZSHARA },
 					},
 				}),
-				n(14464, { 	-- Avalanchion
+				n(14464, {	-- Avalanchion
 					["description"] = "This is only available during an Elemental Invasion.",
 					["coords"] = {
 						{ 72.6, 20.0, AZSHARA },
@@ -506,9 +506,14 @@ root("Zones", m(KALIMDOR, {
 						{ 77.0, 24.2, AZSHARA },
 						{ 80.0, 24.2, AZSHARA },
 					},
+					["timeline"] = { "removed 4.0.3" },
 					["groups"] = {
-						i(18673),	-- Avalanchion's Stony Hide
-						i(18674),	-- Hardened Stone Band
+						i(18673, {	-- Avalanchion's Stony Hide
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(18674, {	-- Hardened Stone Band
+							["timeline"] = { "removed 4.0.3" },
+						}),
 						applyclassicphase(PHASE_THREE, i(19268)),	-- Ace of Elementals
 					},
 				}),
