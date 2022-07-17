@@ -7898,7 +7898,7 @@ local questFields = {
 		return app.CollectibleQuests and ((not t.repeatable and not t.isBreadcrumb) or C_QuestLog.IsOnQuest(t.questID));
 	end,
 	["collected"] = function(t)
-		return IsQuestFlaggedCompletedForObject(t);
+		return not C_QuestLog.IsOnQuest(t.questID) and IsQuestFlaggedCompletedForObject(t);
 	end,
 	["trackable"] = function(t)
 		return true;
@@ -7933,6 +7933,9 @@ local questFields = {
 		return app.CollectibleQuests and ((not t.repeatable and not t.isBreadcrumb) or C_QuestLog.IsOnQuest(t.questID) or (t.maxReputation and (app.CollectibleReputations or not t.repeatable)));
 	end,
 	["collectedAsReputation"] = function(t)
+		if C_QuestLog.IsOnQuest(t.questID) then
+			return false;
+		end
 		if t.maxReputation then
 			if app.AccountWideReputations then
 				local faction = SearchForField("factionID", t.maxReputation[1]);
@@ -8096,13 +8099,13 @@ local fields = {
 		if not t.questID then
 			return false;
 		end
-		return C_QuestLog.IsOnQuest(t.questID);
+		return app.CollectibleQuests and C_QuestLog.IsOnQuest(t.questID);
 	end,
 	["trackable"] = function(t)
 		if not t.questID then
 			return false;
 		end
-		return C_QuestLog.IsOnQuest(t.questID);
+		return app.CollectibleQuests and C_QuestLog.IsOnQuest(t.questID);
 	end,
 	["collected"] = function(t)
 		-- If the parent is collected, return immediately.
