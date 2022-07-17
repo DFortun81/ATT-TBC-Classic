@@ -7851,6 +7851,7 @@ local questFields = {
 		return "questID";
 	end,
 	["text"] = function(t)
+		if t.repeatable then return "|cff0070DD" .. t.name .. "|r"; end
 		return t.name;
 	end,
 	["name"] = function(t)
@@ -8098,7 +8099,10 @@ local fields = {
 		return C_QuestLog.IsOnQuest(t.questID);
 	end,
 	["trackable"] = function(t)
-		return true;
+		if not t.questID then
+			return false;
+		end
+		return C_QuestLog.IsOnQuest(t.questID);
 	end,
 	["collected"] = function(t)
 		-- If the parent is collected, return immediately.
