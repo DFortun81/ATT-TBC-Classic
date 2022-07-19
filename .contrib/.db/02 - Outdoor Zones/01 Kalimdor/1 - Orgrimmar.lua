@@ -143,21 +143,11 @@ root("Zones", m(KALIMDOR, {
 					["repeatable"] = true,
 					["lvl"] = 50,
 				}),
-				q(936, {	-- Assisting Arch Druid Runetotem (Orgrimmar)
-					["qg"] = 6929,	-- Innkeeper Gryshka
-					["altQuests"] = {
-						3762,	-- Assisting Arch Druid Runetotem (Thunder Bluff)
-						3784, 	-- Assisting Arch Druid Runetotem (Undercity)
-					},
-					["isBreadcrumb"] = true,
-					["races"] = HORDE_ONLY,
-					["lvl"] = 47,
-				}),
 				q(1508, {	-- Blind Cazul
 					["qg"] = 5909,	-- Cazul
 					["sourceQuests"] = {
-						1507,	-- Devourer of Souls (Orgrimmar)
-						1472,	-- Devourer of Souls (Undercity)
+						1507,	-- Devourer of Souls [Orgrimmar]
+						1472,	-- Devourer of Souls [Undercity]
 					},
 					["coord"] = { 47.2, 46.6, ORGRIMMAR },
 					["races"] = { ORC, UNDEAD },
@@ -192,26 +182,21 @@ root("Zones", m(KALIMDOR, {
 					["classes"] = { PRIEST },
 					["lvl"] = 50,
 				}),
-				q(1501, {	-- Creature of the Void
+				q(1501, {	-- Creature of the Void [Orgrimmar]
 					["qg"] = 5875,	-- Gan'rul Bloodeye
 					["sourceQuest"] = 1506,	-- Gan'rul's Summons
+					["altQuests"] = { 1473 },	-- Creature of the Void [Undercity]
 					["coord"] = { 48.2, 45.6, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { DUROTAR },
 					["races"] = { ORC, TROLL, UNDEAD },
 					["classes"] = { WARLOCK },
-					["altQuests"] = {
-						1473,	-- Creature of the Void
-					},
-					["cost"] = {
-						{ "i", 6535, 1 },	-- Tablet of Verga
-					},
 					["lvl"] = 10,
 					["groups"] = {
-						{
-							["itemID"] = 6535,	-- Tablet of Verga
-							["questID"] = 1501,	-- Creature of the Void
+						objective(1, {	-- 0/1 Tablet of Verga
+							["provider"] = { "i", 6535 },	-- Tablet of Verga
 							["coord"] = { 51.6, 9.7, DUROTAR },
-						},
+						}),
 					},
 				}),
 				q(2458, {	-- Deep Cover
@@ -221,14 +206,12 @@ root("Zones", m(KALIMDOR, {
 					["classes"] = { ROGUE },
 					["sourceQuest"] = 2460,	-- The Shattered Salute
 				}),
-				q(1507, {	-- Devourer of Souls
+				q(1507, {	-- Devourer of Souls [Orgrimmar]
 					["qg"] = 5875,	-- Dan'rul Bloodeye
+					["altQuests"] = { 1472 },	-- Devourer of Souls [Undercity]
 					["races"] = { ORC, UNDEAD },
 					["classes"] = { WARLOCK },
 					["isBreadcrumb"] = true,
-					["altQuests"] = {
-						1472,	-- Devourer of Souls (Undercity)
-					},
 					["lvl"] = 20,
 				}),
 				q(8410, {	-- Elemental Mastery
@@ -244,6 +227,14 @@ root("Zones", m(KALIMDOR, {
 						{ "i", 7070, 1 },	-- Elemental Water
 					},
 				}),
+				q(2378, {	-- Find the Shattered Hand
+					["qg"] = 6467,	-- Mennet Carkad
+					["coord"] = { 83.2, 69, UNDERCITY },
+					["races"] = { ORC, UNDEAD, TROLL },
+					["classes"] = { ROGUE },
+					["isBreadcrumb"] = true,
+					["lvl"] = 16,
+				}),
 				q(7491, {	-- For All To See
 					["lvl"] = 60,
 					["races"] = HORDE_ONLY,
@@ -253,30 +244,40 @@ root("Zones", m(KALIMDOR, {
 						i(18404),	-- Onyxia Tooth Pendant
 					},
 				}),
-				q(5652, {	-- Hex of Weakness
+				q(5652, {	-- Hex of Weakness [Orgrimmar]
 					["qgs"] = {
-						3706,	-- Tai'jin <Priest Trainer>
-						4606,	-- Aelthalyste
 						6018,	-- Ur'kyo <Priest Trainer>
+						3706,	-- Tai'jin <Priest Trainer>
+						11407,	-- Var'jun
+						3044,	-- Miles Welsh <Priest Trainer>
+						4606,	-- Aelthalyste <Priest Trainer>
 					},
 					["coords"] = {
-						{ 54.2, 42.8, DUROTAR },
-						{ 49.01, 18.32, UNDERCITY },
 						{ 35.6, 87.6, ORGRIMMAR },
+						{ 54.2, 42.8, DUROTAR },
+						{ 47.0, 58.8, MULGORE },
+						{ 26.0, 15.8, THUNDER_BLUFF },
+						{ 49.01, 18.32, UNDERCITY },
 					},
 					["altQuests"] = {
 						5653,	-- Hex of Weakness (NYI)
-						5654,	-- Hex of Weakness (Durotar, unused)
-						5655,	-- Hex of Weakness (Durotar)
-						5656,	-- Hex of Weakness (Undercity)
-						5657,	-- Hex of Weakness (Orgrimmar, unused)
+						5654,	-- Hex of Weakness [Durotar]
+						5655,	-- Hex of Weakness [Mulgore]
+						5656,	-- Hex of Weakness [Thunder Bluff]
+						5657,	-- Hex of Weakness [Undercity]
 					},
+					["timeline"] = { "removed 3.0.2" },
 					["classes"] = { PRIEST },
 					["races"] = { TROLL },
 					["lvl"] = 10,
+					-- #if BEFORE 3.0.2
 					["groups"] = {
-						recipe(9035),	-- Hex of Weakness
+						{
+							["recipeID"] = 9035,	-- Hex of Weakness (Rank 1)
+							["rank"] = 1,
+						},
 					},
+					-- #endif
 				}),
 				q(5726, {	-- Hidden Enemies (1/5)
 					["qg"] = 4949,	-- Thrall <Warchief>
@@ -325,6 +326,16 @@ root("Zones", m(KALIMDOR, {
 					},
 					["lvl"] = 15,
 				}),
+				-- #if ANYCLASSIC
+				q(65601, {	-- Love Hurts
+					["qg"] = 5909,	-- Cazul
+					["coord"] = { 47.2, 46.6, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
+					["classes"] = { WARLOCK },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+				}),
+				-- #endif
 				q(4494, {	-- March of the Silithid
 					["lvl"] = 50,
 					["races"] = HORDE_ONLY,
@@ -337,14 +348,6 @@ root("Zones", m(KALIMDOR, {
 					["classes"] = { WARLOCK },
 					["races"] = { ORC, UNDEAD },
 					["lvl"] = 20,
-				}),
-				q(1959, {	-- Report to Anastasia
-					["qg"] = 7311,	-- Uthel'nay <Mage Trainer>
-					["coord"] = { 39.0, 86.0, ORGRIMMAR },
-					["races"] = HORDE_ONLY,
-					["classes"] = { MAGE },
-					["isBreadcrumb"] = true,
-					["lvl"] = 15,
 				}),
 				q(1943, {	-- Speak with Deino
 					["qg"] = 4568,	-- Anastasia Hartwell <Mage Trainer>
@@ -363,40 +366,69 @@ root("Zones", m(KALIMDOR, {
 					},
 					["lvl"] = 20,
 				}),
-				q(1513, {	-- The Binding (Succubus)
+				-- #if ANYCLASSIC
+				q(65604, {	-- The Binding (Incubus) [Orgrimmar]
 					["qg"] = 5875,	-- Gan'rul Bloodeye
-					["sourceQuest"] = 1512,	-- Love's Gift
+					["sourceQuest"] = 65610,	-- Wish You Were Here
+					["altQuests"] = { 65597 },	-- The Binding (Incubus) [Undercity]
+					["coord"] = { 48.2, 45.6, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
 					["classes"] = { WARLOCK },
 					["races"] = HORDE_ONLY,
-					["cr"] = 5677,	-- Summoned Succubus
-					["cost"] = {
-						{ "i", 6626, 1 },	-- Dogran's Pendant
-					},
-					["altQuests"] = {
-						1474,	-- The Binding (Succubus) [Undercity]
-					},
 					["lvl"] = 20,
 					["groups"] = {
-						recipe(712),	-- Summon Succubus
-						i(22243),	-- Small Soul Pouch
+						objective(1, {	-- 0/1 Summoned Incubus slain
+							["provider"] = { "n", 185335 },	-- Summoned Incubus
+							["cost"] = { { "i", 190187, 1 } },	-- Withered Scarf
+						}),
+						-- #if BEFORE 4.0.3
+						recipe(713),	-- Summon Incubus
+						-- #endif
+						i(22243, {	-- Small Soul Pouch
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
-				q(1504, {	-- The Binding (Voidwalker)
+				-- #endif
+				q(1513, {	-- The Binding (Succubus) [Orgrimmar]
 					["qg"] = 5875,	-- Gan'rul Bloodeye
-					["sourceQuest"] = 1501,	-- Creature of the Void
+					["sourceQuest"] = 1512,	-- Love's Gift
+					["altQuests"] = { 1474 },	-- The Binding (Succubus) [Undercity]
 					["coord"] = { 48.2, 45.6, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
+					["classes"] = { WARLOCK },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/1 Summoned Succubus slain
+							["provider"] = { "n", 5677 },	-- Summoned Succubus
+							["cost"] = { { "i", 6626, 1 } },	-- Dogran's Pendant
+						}),
+						-- #if BEFORE 4.0.3
+						recipe(712),	-- Summon Succubus
+						-- #endif
+						i(22243, {	-- Small Soul Pouch
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				q(1504, {	-- The Binding (Voidwalker) [Orgrimmar]
+					["qg"] = 5875,	-- Gan'rul Bloodeye
+					["sourceQuest"] = 1501,	-- Creature of the Void [Orgrimmar]
+					["altQuests"] = { 1471 },	-- The Binding (Voidwalker) [Undercity]
+					["coord"] = { 48.2, 45.6, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { ORC, TROLL, UNDEAD },
 					["classes"] = { WARLOCK },
-					["cr"] = 5676,	-- Summoned Voidwalker
-					["altQuests"] = {
-						1471,	-- The Binding (Voidwalker) [Undercity]
-					},
-					["cost"] = {
-						{ "i", 7464, 1 },	-- Glyphs of Summoning
-					},
 					["lvl"] = 10,
 					["groups"] = {
+						objective(1, {	-- 0/1 Summoned Voidwalker slain
+							["provider"] = { "n", 5676 },	-- Summoned Voidwalker
+							["cost"] = { { "i", 7464, 1 } },	-- Glyphs of Summoning
+						}),
+						-- #if BEFORE 4.0.3
 						recipe(697),	-- Summon Voidwalker
+						-- #endif
 					},
 				}),
 				q(1963, {	-- The Shattered Hand (1/2)
@@ -488,6 +520,28 @@ root("Zones", m(KALIMDOR, {
 						},
 					},
 				}),
+				-- #if ANYCLASSIC
+				q(65610, {	-- Wish You Were Here
+					["qg"] = 3363,	-- Magar <Tailoring Trainer>
+					["sourceQuest"] = 65601,	-- Love Hurts
+					["coord"] = { 63.6, 50.0, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { ASHENVALE },
+					["classes"] = { WARLOCK },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/1 Withered Scarf
+							["provider"] = { "i", 190232 },	-- Withered Scarf
+							["crs"] = {
+								3782,	-- Shadethicket Stone Mover
+								3784,	-- Shadethicket Bark Ripper
+								3931,	-- Shadethicket Oracle
+							},
+						}),
+					},
+				}),
+				-- #endif
 				q(7660, {	-- Wolf Swapping - Arctic Wolf
 					["qg"] = 3362,	-- Ogunaro Wolfrunner
 					-- #if AFTER CATA

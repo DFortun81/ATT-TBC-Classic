@@ -394,7 +394,7 @@ root("Zones", m(KALIMDOR, {
 						i(18536),	-- Milli's Lexicon
 					},
 				}),
-				q(1015, {	-- The New Frontier
+				q(1015, {	-- The New Frontier [Stormwind City]
 					["qg"] = 2198,	-- Crier Goodman
 					["coord"] = { 54.8, 62.6, STORMWIND_CITY },
 					["races"] = ALLIANCE_ONLY,
@@ -404,7 +404,7 @@ root("Zones", m(KALIMDOR, {
 					},
 					["lvl"] = 54,
 				}),
-				q(1019, {	-- The New Frontier
+				q(1019, {	-- The New Frontier [Ironforge]
 					["qg"] = 10877,	-- Courier Hammerfall
 					["coord"] = { 31.6, 67, IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
@@ -414,7 +414,7 @@ root("Zones", m(KALIMDOR, {
 					},
 					["lvl"] = 54,
 				}),
-				q(1047, {	-- The New Frontier
+				q(1047, {	-- The New Frontier (1/2) [Darnassus]
 					["qg"] = 10878,	-- Herald Moonstalker
 					["coord"] = { 36.4, 39.8, DARNASSUS },
 					["races"] = ALLIANCE_ONLY,
@@ -424,18 +424,18 @@ root("Zones", m(KALIMDOR, {
 					},
 					["lvl"] = 54,
 				}),
-				q(6761, {	-- The New Frontier
+				q(6761, {	-- The New Frontier (2/2) [Darnassus]
 					["qg"] = 3516,	-- Arch Druid Fandral Staghelm
 					["coord"] = { 34.8, 8.8, DARNASSUS },
 					["sourceQuests"] = {
 						1015,	-- The New Frontier [Stormwind City]
 						1019,   -- The New Frontier [Ironforge]
-						1047,   -- The New Frontier [Darnassus]
+						1047,   -- The New Frontier (1/2) [Darnassus]
 					},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 54,
 				}),
-				q(1000, {	-- The New Frontier
+				q(1000, {	-- The New Frontier [Thunder Bluff]
 					["qg"] = 10881,	-- Bluff Runner Windstrider
 					["coord"] = { 41.4, 54.2, THUNDER_BLUFF },
 					["sourceQuests"] = {
@@ -445,7 +445,7 @@ root("Zones", m(KALIMDOR, {
 					["races"] = HORDE_ONLY,
 					["lvl"] = 54,
 				}),
-				q(1004, {	-- The New Frontier
+				q(1004, {	-- The New Frontier [Undercity]
 					["qg"] = 10879,	-- Harbinger Balthazad
 					["coord"] = { 68.8, 48.4, UNDERCITY },
 					["sourceQuests"] = {
@@ -455,7 +455,7 @@ root("Zones", m(KALIMDOR, {
 					["races"] = HORDE_ONLY,
 					["lvl"] = 54,
 				}),
-				q(1018, {	-- The New Frontier
+				q(1018, {	-- The New Frontier [Orgrimmar]
 					["qg"] = 10880,	-- Warcaller Gorlach
 					["coord"] = { 46.6, 64.6, ORGRIMMAR },
 					["sourceQuests"] = {

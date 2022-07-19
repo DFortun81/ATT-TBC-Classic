@@ -44,24 +44,28 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(7794, {	-- A Donation of Mageweave
 					["qg"] = 14722,	-- Clavicus Knavingham <Alliance Cloth Quartermaster>
 					["cost"] = { { "i", 4338, 60 } },	-- Mageweave Cloth
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 40,
 				}),
 				q(7795, {	-- A Donation of Runecloth
 					["qg"] = 14722,	-- Clavicus Knavingham <Alliance Cloth Quartermaster>
 					["cost"] = { { "i", 14047, 60 } },	-- Runecloth
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 50,
 				}),
 				q(7793, {	-- A Donation of Silk
 					["qg"] = 14722,	-- Clavicus Knavingham <Alliance Cloth Quartermaster>
 					["cost"] = { { "i", 4306, 60 } },	-- Silk Cloth
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 26,
 				}),
 				q(7791, {	-- A Donation of Wool
 					["qg"] = 14722,	-- Clavicus Knavingham <Alliance Cloth Quartermaster>
 					["cost"] = { { "i", 2592, 60 } },	-- Wool Cloth
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 12,
 				}),
@@ -152,6 +156,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 53.9, 81.7, STORMWIND_CITY },
 					["cost"] = { { "i", 14047, 20 } }, 	-- Runecloth
 					["maxReputation"] = { 72, EXALTED },	-- Stormwind, Exalted.
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
 					["lvl"] = 50,
@@ -169,6 +174,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						5678,	-- Arcane Feedback (NYI?)
 						5677,	-- Arcane Feedback (Ironforge)
 					},
+					["timeline"] = { "removed 3.0.2" },
 					["races"] = { HUMAN },
 					["classes"] = { PRIEST },
 					["lvl"] = 20,
@@ -328,7 +334,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						},
 					},
 				}),
-				q(1716, {	-- Devourer of Souls
+				q(1716, {	-- Devourer of Souls [Stormwind City]
 					["qg"] = 6122,	-- Gakin the Darkbinder
 					["sourceQuest"] = 1717,	-- Gakin's Summons
 					["coord"] = { 25.4, 78.6, STORMWIND_CITY },
@@ -782,35 +788,66 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 7766,	-- Tyrion
 					["sourceQuest"] = 2746,	-- Items of Some Consequence
 				}),
-				q(1739, {	-- The Binding (Succubus)
+				-- #if ANYCLASSIC
+				q(65603, {	-- The Binding (Incubus) [Stormwind City]
+					["qg"] = 6122,	-- Gakin the Darkbinder
+					["sourceQuest"] = 65602,	-- What Is Love?
+					["coord"] = { 25.4, 78.4, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["classes"] = { WARLOCK },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/1 Summoned Incubus slain
+							["provider"] = { "n", 185335 },	-- Summoned Incubus
+							["cost"] = { { "i", 190186, 1 } },	-- Wooden Figurine
+						}),
+						-- #if BEFORE 4.0.3
+						recipe(713),	-- Summon Incubus
+						-- #endif
+						i(22243, {	-- Small Soul Pouch
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
+				}),
+				-- #endif
+				q(1739, {	-- The Binding (Succubus) [Stormwind City]
 					["qg"] = 6122,	-- Gakin the Darkbinder
 					["sourceQuest"] = 1738,	-- Heartswood
 					["coord"] = { 25.4, 78.4, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { WARLOCK },
-					["cr"] = 5677,	-- Summoned Succubus
-					["cost"] = {
-						{ "i", 6913, 1 },	-- Heartswood Core
-					},
 					["lvl"] = 20,
 					["groups"] = {
+						objective(1, {	-- 0/1 Summoned Succubus slain
+							["provider"] = { "n", 5677 },	-- Summoned Succubus
+							["cost"] = { { "i", 6913, 1 } },	-- Heartswood Core
+						}),
+						-- #if BEFORE 4.0.3
 						recipe(712),	-- Summon Succubus
-						i(22243),	-- Small Soul Pouch
+						-- #endif
+						i(22243, {	-- Small Soul Pouch
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
-				q(1689, {	-- The Binding (Voidwalker)
+				q(1689, {	-- The Binding (Voidwalker) [Stormwind City]
 					["qg"] = 6122,	-- Gakin the Darkbinder
 					["sourceQuest"] = 1688,	-- Surena Caledon
 					["coord"] = { 25.4, 78.4, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { WARLOCK },
-					["cr"] = 5676,	-- Summoned Voidwalker
-					["cost"] = {
-						{ "i", 6928, 1 },	-- Bloodstone Choker
-					},
 					["lvl"] = 10,
 					["groups"] = {
+						objective(1, {	-- 0/1 Summoned Voidwalker slain
+							["provider"] = { "n", 5676 },	-- Summoned Voidwalker
+							["cost"] = { { "i", 6928, 1 } },	-- Bloodstone Choker
+						}),
+						-- #if BEFORE 4.0.3
 						recipe(697),	-- Summon Voidwalker
+						-- #endif
 					},
 				}),
 				q(392, {	-- The Curious Visitor
@@ -1255,6 +1292,23 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						},
 					},
 				}),
+				-- #if ANYCLASSIC
+				q(65602, {	-- What Is Love?
+					["qg"] = 6122,	-- Gakin the Darkbinder
+					["coord"] = { 25.4, 78.4, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { ASHENVALE },
+					["classes"] = { WARLOCK },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/1 Wooden Figurine
+							["provider"] = { "i", 190309 },	-- Wooden Figurine
+							["coord"] = { 26, 22, ASHENVALE },
+						}),
+					},
+				}),
+				-- #endif
 				q(332, {	-- Wine Shop Advert
 					["qg"] = 1432,	-- Renato Gallina
 					["sourceQuest"] = 61,	-- Shipment to Stormwind

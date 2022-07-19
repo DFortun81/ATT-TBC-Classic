@@ -71,14 +71,28 @@ root("Zones", m(KALIMDOR, {
 					["repeatable"] = true,
 					["lvl"] = 50,
 				}),
-				q(3762, {	-- Assisting Arch Druid Runetotem (Thunder Bluff)
-					["qg"] = 6746,	-- Innkeeper Pala
-					["altQuests"] = {
-						936,	-- Assisting Arch Druid Runetotem (Orgrimmar)
-						3784, 	-- Assisting Arch Druid Runetotem (Undercity)
-					},
-					["isBreadcrumb"] = true,
+				q(936, {	-- Assisting Arch Druid Runetotem [Orgrimmar]
+					["qg"] = 6929,	-- Innkeeper Gryshka
+					["coord"] = { 54.2, 68.4, ORGRIMMAR },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 47,
+				}),
+				q(3762, {	-- Assisting Arch Druid Runetotem [Thunder Bluff]
+					["qg"] = 6746,	-- Innkeeper Pala
+					["coord"] = { 45.8, 64.4, THUNDER_BLUFF },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
+					["lvl"] = 47,
+				}),
+				q(3784, {	-- Assisting Arch Druid Runetotem [Undercity]
+					["qg"] = 6741,	-- Innkeeper Norman
+					["coord"] = { 67.6, 38.2, UNDERCITY },
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = HORDE_ONLY,
+					["isBreadcrumb"] = true,
 					["lvl"] = 47,
 				}),
 				q(1845, {	-- Brutal Helm
@@ -175,14 +189,6 @@ root("Zones", m(KALIMDOR, {
 						i(4967),	-- Tribal Warrior's Shield
 					},
 				}),
-				q(1959, {	-- Report to Anastasia
-					["qg"] = 3049,	-- Thurston Xane <Mage Trainer>
-					["coord"] = { 25, 20.6, THUNDER_BLUFF },
-					["races"] = HORDE_ONLY,
-					["classes"] = { MAGE },
-					["isBreadcrumb"] = true,
-					["lvl"] = 15,
-				}),
 				q(860, {	-- Sergra Darkthorn
 					["qg"] = 3441,	-- Melor Stonehoof
 					["sourceQuest"] = 861,	-- The Hunter's Way
@@ -255,9 +261,14 @@ root("Zones", m(KALIMDOR, {
 					},
 				}),
 				q(3761, {	-- Un'Goro Soil
-					["lvl"] = 47,
-					["races"] = HORDE_ONLY,
 					["qg"] = 5769,	-- Arch Druid Hamuul Runetotem
+					["sourceQuests"] = {
+						936,	-- Assisting Arch Druid Runetotem [Orgrimmar]
+						3762, 	-- Assisting Arch Druid Runetotem [Thunder Bluff]
+						3784,	-- Assisting Arch Druid Runetotem [Undercity]
+					},
+					["races"] = HORDE_ONLY,
+					["lvl"] = 47,
 				}),
 				q(264, {	-- Until Death Do Us Part
 					["coord"] = { 28.19, 25.31, THUNDER_BLUFF },

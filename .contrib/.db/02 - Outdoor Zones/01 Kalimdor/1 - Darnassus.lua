@@ -356,10 +356,18 @@ root("Zones", m(KALIMDOR, {
 					["lvl"] = 14,
 				}),
 				q(3764, {	-- Un'Goro Soil
-					["lvl"] = 47,
-					["races"] = ALLIANCE_ONLY,
 					["qg"] = 3516,	-- Arch Druid Fandral Staghelm
+					["sourceQuests"] = {
+						3763,	-- Assisting Arch Druid Staghelm [Darnassus]
+						3790,	-- Assisting Arch Druid Staghelm [Ironforge]
+						3789,	-- Assisting Arch Druid Staghelm [Stormwind City]
+						-- #if AFTER TBC
+						10520,	-- Assisting Arch Druid Staghelm [The Exodar]
+						-- #endif
+					},
 					["coord"] = { 35.2, 9.0, DARNASSUS },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 47,
 				}),
 				q(1038, {	-- Velinde's Effects
 					["qg"] = 8026,	-- Thyn'tel Bladeweaver

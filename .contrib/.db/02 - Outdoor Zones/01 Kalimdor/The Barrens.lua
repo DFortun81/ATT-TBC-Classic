@@ -807,7 +807,7 @@ root("Zones", m(KALIMDOR, {
 				}),
 				q(1738, {	-- Heartswood
 					["qg"] = 6244,	-- Takar the Seer
-					["sourceQuest"] = 1716,	-- Devourer of Souls
+					["sourceQuest"] = 1716,	-- Devourer of Souls [Stormwind City]
 					["coord"] = { 49.2, 57.0, THE_BARRENS },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { WARLOCK },
@@ -1729,6 +1729,39 @@ root("Zones", m(KALIMDOR, {
 					["races"] = { ORC, UNDEAD },
 					["classes"] = { WARLOCK },
 					["lvl"] = 30,
+				}),
+				q(1803, {	-- Tome of the Cabal (2/3 Horde)
+					["qg"] = 6293,	-- Jorah Annison
+					["sourceQuest"] = 1801,	-- Tome of the Cabal (1/3 Horde)
+					["coord"] = { 76.6, 36.8, UNDERCITY },
+					["races"] = { ORC, UNDEAD },
+					["classes"] = { WARLOCK },
+					["cost"] = {
+						{ "i", 6931, 1 },	-- Moldy Tome
+						{ "i", 6997, 1 },	-- Tattered Manuscript
+					},
+					["lvl"] = 30,
+				}),
+				q(1805, {	-- Tome of the Cabal (3/3 Horde)
+					["providers"] = {
+						{ "n", 6293 },	-- Jorah Annison
+						{ "i", 7006 },	-- Reconstructed Tome
+					},
+					["sourceQuest"] = 1803,	-- Tome of the Cabal (2/3 Horde)
+					["coord"] = { 76.6, 36.8, UNDERCITY },
+					["maps"] = { WETLANDS },
+					["races"] = { ORC, UNDEAD },
+					["classes"] = { WARLOCK },
+					["lvl"] = 30,
+					["groups"] = {
+						objective(1, {	-- 0/3 Rod of Channeling
+							["provider"] = { "i", 6930 },	-- Rod of Channeling
+							["crs"] = {
+								1057,	-- Dragonmaw Bonewarder
+								1038,	-- Dragonmaw Shadowwarder
+							},
+						}),
+					},
 				}),
 				q(1824, {	-- Trial at the Field of Giants
 					["qg"] = 6394,	-- Ruga Ragetotem

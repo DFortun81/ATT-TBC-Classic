@@ -506,11 +506,11 @@ root("Zones", m(KALIMDOR, {
 					["lvl"] = 40,
 				}),
 				q(379, {	-- Slake That Thirst
+					["qg"] = 7407,	-- Chief Engineer Bilgewhizzle <Gadgetzan Water Co.>
 					["sourceQuest"] = 243,	-- Into the Field
+					["coord"] = { 52.4, 28.4, TANARIS },
+					["cost"] = { { "i", 8483, 5 } },	-- Wastewander Water Pouch
 					["races"] = HORDE_ONLY,
-					["cost"] = {
-						{ "i", 8483, 5 },	-- Wastewander Water Pouch
-					},
 					["lvl"] = 38,
 					["groups"] = {
 						i(8524),	-- Model 4711-FTZ Power Source
