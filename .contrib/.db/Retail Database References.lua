@@ -83,6 +83,7 @@ root("Zones", m(KALIMDOR, {
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\0 - Metadata.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Ironforge.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Silvermoon City.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\1 - Undercity.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Alterac Mountains.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Arathi Highlands.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Badlands.lua
