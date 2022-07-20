@@ -161,7 +161,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["repeatable"] = true,
 					["lvl"] = 50,
 				}),
-				q(5676, {	-- Arcane Feedback
+				q(5676, {	-- Arcane Feedback [Stormwind City]
 					["qgs"] = {
 						11406,	-- High Priest Rohan <Priest Trainer>
 						376,	-- High Priestess Laurena <Priest Trainer>
@@ -171,19 +171,21 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 38.8, 26.6, STORMWIND_CITY },
 					},
 					["altQuests"] = {
-						5678,	-- Arcane Feedback (NYI?)
-						5677,	-- Arcane Feedback (Ironforge)
+						5678,	-- Arcane Feedback [Darnassus, NYI?]
+						5677,	-- Arcane Feedback [Ironforge]
 					},
 					["timeline"] = { "removed 3.0.2" },
 					["races"] = { HUMAN },
 					["classes"] = { PRIEST },
 					["lvl"] = 20,
+					-- #if BEFORE 3.0.2
 					["groups"] = {
 						{
 							["recipeID"] = 13896,	-- Feedback (Rank 1)
 							["rank"] = 1,
 						},
 					},
+					-- #endif
 				}),
 				q(1942, {	-- Astral Knot Garment
 					["qg"] = 1309,	-- Wynne Larson <Robe Merchant>
