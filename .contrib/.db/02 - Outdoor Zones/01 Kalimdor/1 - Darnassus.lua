@@ -281,6 +281,46 @@ root("Zones", m(KALIMDOR, {
 						i(6973),	-- Fire hardened Leggings
 					},
 				}),
+				q(5627, {	-- Stars of Elune / Returning Home [Darnassus]
+					["qgs"] = {
+						11401,	-- Priestess Alathea <Priest Trainer>
+						3600,	-- Laurna Morninglight <Priest Trainer>
+						1226,	-- Maxan Anvol <Priest Trainer>
+						377,	-- Priestess Josetta <Priest Trainer>
+						5142,	-- Braenna Flintcrag <Priest Trainer>
+						5489,	-- Brother Joshua <Priest Trainer>
+						11397,	-- Nara Meideros <Priest Trainer>
+					},
+					["coords"] = {
+						{ 39.2, 81, DARNASSUS },
+						{ 55.6, 56.8, DARNASSUS },
+						{ 47.2, 52.2, DUN_MOROGH },
+						{ 43.4, 65.6, ELWYNN_FOREST },
+						{ 24.6, 9.2, IRONFORGE },
+						{ 38.6, 26.8, STORMWIND_CITY },
+						{ 20.8, 50.2, STORMWIND_CITY },
+					},
+					["altQuests"] = {
+						5629,	-- Returning Home [Teldrassil]
+						5630,	-- Returning Home [Dun Morogh]
+						5628,	-- Returning Home [Elwynn Forest]
+						5633,	-- Returning Home [Ironforge]
+						5631,	-- Returning Home [Stormwind City]
+						5632,	-- Returning Home [Stormwind City]
+					},
+					["timeline"] = { "removed 3.0.2" },
+					["classes"] = { PRIEST },
+					["races"] = { UNDEAD },
+					["lvl"] = 10,
+					-- #if BEFORE 3.0.2
+					["groups"] = {
+						{
+							["recipeID"] = 10797,	-- Starshards (Rank 1)
+							["rank"] = 1,
+						},
+					},
+					-- #endif
+				}),
 				q(2518, {	-- Tears of the Moon
 					["qg"] = 7313,	-- Priestess A'moora
 					["sourceQuest"] = 2519,	-- The Temple of the Moon
