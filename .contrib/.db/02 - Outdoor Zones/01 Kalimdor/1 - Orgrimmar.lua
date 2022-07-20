@@ -349,6 +349,34 @@ root("Zones", m(KALIMDOR, {
 					["races"] = { ORC, UNDEAD },
 					["lvl"] = 20,
 				}),
+				q(5680, {	-- Shadowguard [Undercity]
+					["qgs"] = {
+						6018,	-- Ur'kyo <Priest Trainer>
+						4606,	-- Aelthalyste
+						3044,	-- Miles Welsh <Priest Trainer>
+					},
+					["coords"] = {
+						{ 35.6, 87.6, ORGRIMMAR },
+						{ 49.01, 18.32, UNDERCITY },
+						{ 26.0, 15.8, THUNDER_BLUFF },
+					},
+					["altQuests"] = {
+						5643,	-- Shadowguard [Undercity]
+						5642,	-- Shadowguard [Thunder Bluff]
+					},
+					["timeline"] = { "removed 3.0.2" },
+					["classes"] = { PRIEST },
+					["races"] = { UNDEAD },
+					["lvl"] = 20,
+					-- #if BEFORE 3.0.2
+					["groups"] = {
+						{
+							["recipeID"] = 18137,	-- Shadowguard (Rank 1)
+							["rank"] = 1,
+						},
+					},
+					-- #endif
+				}),
 				q(1943, {	-- Speak with Deino
 					["qg"] = 4568,	-- Anastasia Hartwell <Mage Trainer>
 					["coord"] = { 85, 10.2, UNDERCITY },

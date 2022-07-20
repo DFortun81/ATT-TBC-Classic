@@ -155,6 +155,35 @@ root("Zones", m(KALIMDOR, {
 						}),
 					},
 				}),
+				q(5672, {	-- Elune's Grace [Darnassus]
+					["qgs"] = {
+						11401,	-- Priestess Alathea <Priest Trainer>
+						11406,	-- High Priest Rohan <Priest Trainer>
+						376,	-- High Priestess Laurena <Priest Trainer>
+					},
+					["coords"] = {
+						{ 39.2, 81, DARNASSUS },
+						{ 25, 8.2, IRONFORGE },
+						{ 38.8, 26.6, STORMWIND_CITY },
+					},
+					["altQuests"] = {
+						5674,	-- Elune's Grace [Teldrassil, NYI]
+						5675,	-- Elune's Grace [Ironforge]
+						5673,	-- Elune's Grace [Stormwind City]
+					},
+					["timeline"] = { "removed 3.0.2" },
+					["classes"] = { PRIEST },
+					["races"] = { UNDEAD },
+					["lvl"] = 20,
+					-- #if BEFORE 3.0.2
+					["groups"] = {
+						{
+							["recipeID"] = 2651,	-- Elune's Grace (Rank 1)
+							["rank"] = 1,
+						},
+					},
+					-- #endif
+				}),
 				q(2260, {	-- Erion's Behest
 					["qg"] = 4214,	-- Erion Shadewhisper
 					["sourceQuest"] = 2259,	-- Erion Shadewhisper
