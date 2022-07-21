@@ -98,6 +98,7 @@ root("Zones", m(KALIMDOR, {
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Elwynn Forest.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Eversong Woods.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Ghostlands.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Hillsbrad Foothills.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Isle of Quel'Danas.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Loch Modan.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Redridge Mountains.lua

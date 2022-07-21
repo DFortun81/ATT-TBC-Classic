@@ -307,12 +307,12 @@ root("Zones", m(KALIMDOR, {
 						}),
 					},
 				}),
-				q(2479, {	-- Hinott's Assistance
-					["lvl"] = 20,
+				q(2479, {	-- Hinott's Assistance (1/2)
 					["qg"] = 3401,	-- Shenthul
+					["sourceQuest"] = 2478,	-- Mission: Possible But Not Probable
 					["races"] = { ORC, UNDEAD, TROLL },
 					["classes"] = { ROGUE },
-					["sourceQuest"] = 2478,	-- Mission: Possible But Not Probable
+					["lvl"] = 20,
 				}),
 				q(1945, {	-- Laughing Sisters
 					["qg"] = 5885,	-- Deino <Mage Trainer>
