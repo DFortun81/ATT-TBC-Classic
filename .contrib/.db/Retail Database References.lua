@@ -101,10 +101,12 @@ root("Zones", m(KALIMDOR, {
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Hillsbrad Foothills.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Isle of Quel'Danas.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Loch Modan.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Northern Stranglethorn.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Redridge Mountains.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Searing Gorge.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Silverpine Forest.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Swamp of Sorrows.lua
+-- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\The Cape of Stranglethorn.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\The Hinterlands.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Tirisfal Glades.lua
 -- #IMPORT: 02 - Outdoor Zones\\02 Eastern Kingdoms\\Western Plaguelands.lua

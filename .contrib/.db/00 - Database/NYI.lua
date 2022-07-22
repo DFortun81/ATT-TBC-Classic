@@ -753,7 +753,6 @@ root("NeverImplemented", {
 	i(5255),	-- Quilboar Tomahawk
 	
 	-- One Handed Sword
-	i(4116),	-- Olmann Sewar
 	i(9380),	-- Jang'thraze the Protector
 	i(17802),	-- Thunderfury, Blessed Blade of the Windseeker DEPRECATED
 	i(18584),	-- Warglaive of Azzinoth (Left)

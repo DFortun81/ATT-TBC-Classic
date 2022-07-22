@@ -105,10 +105,19 @@ root("Zones", m(KALIMDOR, {
 					["sourceQuest"] = 1105,	-- Hardened Shells
 					["coord"] = { 78.1, 77.1, THOUSAND_NEEDLES },
 					["maps"] = { STRANGLETHORN_VALE },
-					["cost"] = {
-						{ "i", 5796, 10 },	-- Encrusted Tail Fin
-					},
 					["lvl"] = 28,
+					["groups"] = {
+						objective(1, {	-- 0/10 Encrusted Tail Fin
+							["provider"] = { "i", 5796 },	-- Encrusted Tail Fin
+							["crs"] = {
+								877,	-- Saltscale Forager
+								879,	-- Saltscale Hunter
+								873,	-- Saltscale Oracle
+								875,	-- Saltscale Tide Lord
+								871,	-- Saltscale Warrior
+							},
+						}),
+					},
 				}),
 				q(5361, {	-- Family Tree
 					["qg"] = 10537,	-- Cliffwatcher Longhorn

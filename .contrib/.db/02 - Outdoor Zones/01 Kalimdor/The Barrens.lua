@@ -571,6 +571,13 @@ root("Zones", m(KALIMDOR, {
 					},
 					["lvl"] = 31,
 				}),
+				q(4782, { 	-- Components for the Enchanted Gold Bloodrobe (3/5)
+					["qg"] = 2670,	-- Xizk Goodstitch
+					["sourceQuest"] = 4781,	-- Components for the Enchanted Gold Bloodrobe (2/5)
+					["coord"] = { 28.6, 76.8, STRANGLETHORN_VALE },
+					["classes"] = { WARLOCK },
+					["lvl"] = 31,
+				}),
 				q(4783, {	-- Components for the Enchanted Gold Bloodrobe (4/5)
 					["qg"] = 6266,	-- Menara Voidrender
 					["sourceQuest"] = 4782,	-- Components for the Enchanted Gold Bloodrobe (3/5)
@@ -700,6 +707,19 @@ root("Zones", m(KALIMDOR, {
 					["coord"] = { 44.86, 59.13, THE_BARRENS },
 					["races"] = HORDE_ONLY,
 					["lvl"] = 10,
+				}),
+				q(4785, {	-- Fine Gold Thread
+					["qg"] = 2670,	-- Xizk Goodstitch <Tailoring Supplies>
+					["coord"] = { 28.6, 76.8, STRANGLETHORN_VALE },
+					["timeline"] = { "removed 4.0.3" },
+					["classes"] = { WARLOCK },
+					["repeatable"] = true,
+					["lvl"] = 31,
+					["groups"] = {
+						i(12293, {	-- Fine Gold Thread
+							["timeline"] = { "removed 4.0.3" },
+						}),
+					},
 				}),
 				q(1464, {	-- Fire Sapta
 					["qg"] = 5900,	-- Telf Joolam

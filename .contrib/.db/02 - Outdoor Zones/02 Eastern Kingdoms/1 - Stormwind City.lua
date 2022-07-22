@@ -238,12 +238,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						-- #endif
 					},
 				}),
-				q(389, {	-- Bazil Thredd
-					["qg"] = 1646,	-- Baros Alexston
-					["sourceQuest"] = 373,	-- The Unsent Letter
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = 16,
-				}),
 				q(1640, {	-- Beat Bartleby
 					["lvl"] = 10,
 					["races"] = ALLIANCE_ONLY,

@@ -1037,6 +1037,17 @@ root("Zones", m(KALIMDOR, {
 					["races"] = HORDE_ONLY,
 					["lvl"] = 35,
 				})),
+				q(7541, {	-- Service to the Horde
+					["qg"] = 4047,	-- Zor Lonetree
+					["sourceQuest"] = 1262,	-- Report to Zor
+					["coord"] = { 39, 38, ORGRIMMAR },
+					["races"] = HORDE_ONLY,
+					["lvl"] = 30,
+					["groups"] = {
+						i(18585),	-- Band of Allegiance
+						i(18586),	-- Lonetree's Circle
+					},
+				}),
 				applyclassicphase(TBC_PHASE_ONE, q(11186, {	-- Signs of Treachery?
 					["provider"] = { "i", 33115 },	-- Sealed Letter
 					["races"] = HORDE_ONLY,

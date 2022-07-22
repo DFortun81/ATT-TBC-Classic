@@ -104,33 +104,6 @@ profession(BLACKSMITHING, {
 				i(10418),	-- Glimmering Mithril Insignia
 			},
 		}),
-		q(2765, {	-- Expert Blacksmith!
-			["qg"] = 7802,	-- Galvan the Ancient
-			["sourceQuests"] = {
-				2761,	-- Smelt On, Smelt Off
-				2763,	-- The Art of the Imbue
-				2762,	-- The Great Silver Deceiver
-			},
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["lvl"] = 40,
-			["groups"] = {
-				i(8703,	{	-- Signet of Expertise
-					i(8708),	-- Hammer of Expertise
-				}),
-			},
-		}),
-		q(2764, {	-- Galvan's Finest Pupil
-			["qg"] = 7802,	-- Galvan the Ancient
-			["sourceQuests"] = {
-				2761,	-- Smelt On, Smelt Off
-				2763,	-- The Art of the Imbue
-				2762,	-- The Great Silver Deceiver
-			},
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["lvl"] = 40,
-		}),
 		q(2754, {	-- Horns of Frenzy
 			["qg"] = 7790,	-- Orokk Omosh
 			["sourceQuest"] = 2753,	-- Trampled Under Foot
@@ -297,20 +270,6 @@ profession(BLACKSMITHING, {
 				}),
 			},
 		}),
-		q(2761, {	-- Smelt On, Smelt Off
-			["qg"] = 7802,	-- Galvan the Ancient
-			["sourceQuest"] = 2760,	-- The Mithril Order
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["cost"] = {
-				{ "i", 3575, 40 },	-- Iron Bar
-				{ "i", 3860, 40 },	-- Mithril Bar
-			},
-			["lvl"] = 40,
-			["groups"] = {
-				i(7983),	-- Plans: Ornate Mithril Pants
-			},
-		}),
 		q(5306, {	-- Snakestone of the Shadow Huntress
 			["qg"] = 11192,	-- Kilram
 			-- #if BEFORE TBC
@@ -396,34 +355,6 @@ profession(BLACKSMITHING, {
 			},
 			["lvl"] = 40,
 		}),
-		q(2763, {	-- The Art of the Imbue
-			["qg"] = 7802,	-- Galvan the Ancient
-			["sourceQuest"] = 2760,	-- The Mithril Order
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["cost"] = {
-				{ "i", 3860, 40 },	-- Iron Bar
-				{ "i", 3864, 4 },	-- Citrine
-			},
-			["lvl"] = 40,
-			["groups"] = {
-				i(7985),	-- Plans: Ornate Mithril Shoulder
-			},
-		}),
-		q(2762, {	-- The Great Silver Deceiver
-			["qg"] = 7802,	-- Galvan the Ancient
-			["sourceQuest"] = 2760,	-- The Mithril Order
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 50.6, 20.4, STRANGLETHORN_VALE },
-			["cost"] = {
-				{ "i", 3860, 40 },	-- Iron Bar
-				{ "i", 6037, 5 },	-- Truesilver Bar
-			},
-			["lvl"] = 40,
-			["groups"] = {
-				i(7984),	-- Plans: Ornate Mithril Gloves
-			},
-		}),
 		q(2773, {	-- The Mithril Kid
 			["qg"] = 7804,	-- Trenton Lighthammer
 			["sourceQuest"] = 2760,	-- The Mithril Order
@@ -437,19 +368,6 @@ profession(BLACKSMITHING, {
 			["groups"] = {
 				recipe(9972),	-- Ornate Mithril Breastplate
 			},
-		}),
-		q(2760, {	-- The Mithril Order
-			["qg"] = 7794,	-- McGavan
-			["sourceQuests"] = {
-				2757,	-- Booty Bay or Bust!
-				2759,	-- In Search of Galvan
-			},
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 28.8, 75.4, STRANGLETHORN_VALE },
-			["cost"] = {
-				{ "i", 8686, 1 },	-- Mithril Pendant
-			},
-			["lvl"] = 40,
 		}),
 		q(2756, {	-- The Old Ways
 			["qg"] = 7792,	-- Aturk the Anvil
