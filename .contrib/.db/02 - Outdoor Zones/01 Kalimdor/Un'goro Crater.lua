@@ -84,7 +84,7 @@ root("Zones", m(KALIMDOR, {
 						i(11919),	-- Cragplate Greaves
 					},
 				}),
-				q(9052, {	-- Bloodpetal Poison
+				applyclassicphase(PHASE_FOUR, q(9052, {	-- Bloodpetal Poison
 					["qg"] = 9619,	-- Torwa Pathfinder
 					["sourceQuest"] = 9063,  -- Torwa Pathfinder
 					["coord"] = { 71.6, 76.0, UNGORO_CRATER },
@@ -94,7 +94,7 @@ root("Zones", m(KALIMDOR, {
 						{ "i", 22435, 8 },	-- Gorishi Sting
 					},
 					["lvl"] = 50,
-				}),
+				})),
 				q(4144, {	-- Bloodpetal Sprouts
 					["qg"] = 9119,	-- Muigin
 					["sourceQuest"] = 4143,	-- Haze of Evil
@@ -440,7 +440,7 @@ root("Zones", m(KALIMDOR, {
 						}),
 					},
 				})),
-				q(9063, {	-- Torwa Pathfinder
+				applyclassicphase(PHASE_FOUR, q(9063, {	-- Torwa Pathfinder
 					["qgs"] = {
 						4218,	-- Denatharion <Druid Trainer>
 						12042,	-- Loganaar <Druid Trainer>
@@ -453,14 +453,14 @@ root("Zones", m(KALIMDOR, {
 					},
 					["classes"] = { DRUID },
 					["lvl"] = 50,
-				}),
-				q(9051, {	-- Toxic Test
+				})),
+				applyclassicphase(PHASE_FOUR, q(9051, {	-- Toxic Test
 					["qg"] = 9619,	-- Torwa Pathfinder
 					["coord"] = { 71.6, 76.0, UNGORO_CRATER },
 					["sourceQuest"] = 9052,  -- Bloodpetal Poison
 					["classes"] = { DRUID },
 					["lvl"] = 50,
-				}),
+				})),
 				q(4502, {	-- Volcanic Activity
 					["qg"] = 8496,	-- Liv Rizzlefix
 					["lvl"] = 49,

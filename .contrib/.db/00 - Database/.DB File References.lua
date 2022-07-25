@@ -21,3 +21,5 @@
 -- #IMPORT: 00 - Item Database\Specializations.lua
 -- #IMPORT: 00 - Item Database\Uncollectable.lua
 -- #IMPORT: 00 - Item Database\UnobtainableItems.lua
+
+-- #IMPORT: ..\\_profession.lua

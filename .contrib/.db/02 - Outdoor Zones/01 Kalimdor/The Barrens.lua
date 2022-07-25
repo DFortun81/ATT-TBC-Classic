@@ -1319,7 +1319,11 @@ root("Zones", m(KALIMDOR, {
 				}),
 				q(1798, {	-- Seeking Strahad (Stormwind)
 					["qg"] = 6122,	-- Gakin the Darkbinder
+					-- #if AFTER WRATH
+					["coord"] = { 39.2, 85.2, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 25.4, 78.4, STORMWIND_CITY },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { WARLOCK },
 					["isBreadcrumb"] = true,

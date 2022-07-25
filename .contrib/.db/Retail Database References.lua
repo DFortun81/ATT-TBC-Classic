@@ -1,5 +1,3 @@
--- #IMPORT: ..\\_profession.lua
-
 -- Dungeons & Raids
 -- Classic
 -- #IMPORT: 01 - Dungeons Raids\\1 - Classic\\0.5 Tier 0.5 Sets.lua

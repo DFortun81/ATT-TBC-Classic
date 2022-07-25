@@ -175,13 +175,6 @@ root("Zones", m(KALIMDOR, {
 						i(11872),	-- Eschewal Greaves
 					},
 				}),
-				q(8254, {	-- Cenarion Aid
-					["qg"] = 6018,	-- Ur'kyo <Priest Trainer>
-					["coord"] = { 35.6, 87.6, ORGRIMMAR },
-					["races"] = HORDE_ONLY,
-					["classes"] = { PRIEST },
-					["lvl"] = 50,
-				}),
 				q(1501, {	-- Creature of the Void [Orgrimmar]
 					["qg"] = 5875,	-- Gan'rul Bloodeye
 					["sourceQuest"] = 1506,	-- Gan'rul's Summons
@@ -214,7 +207,7 @@ root("Zones", m(KALIMDOR, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 20,
 				}),
-				q(8410, {	-- Elemental Mastery
+				applyclassicphase(PHASE_FOUR, q(8410, {	-- Elemental Mastery
 					["qg"] = 5892,	-- Searn Firewarder
 					["coord"] = { 38.0, 37.8, ORGRIMMAR },
 					["races"] = HORDE_ONLY,
@@ -226,7 +219,7 @@ root("Zones", m(KALIMDOR, {
 						{ "i", 7069, 1 },	-- Elemental Air
 						{ "i", 7070, 1 },	-- Elemental Water
 					},
-				}),
+				})),
 				q(2378, {	-- Find the Shattered Hand
 					["qg"] = 6467,	-- Mennet Carkad
 					["coord"] = { 83.2, 69, UNDERCITY },

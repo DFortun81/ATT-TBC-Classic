@@ -915,7 +915,7 @@ BAGS = 113;
 RECIPES = 200;
 
 -- Professions
---PROFESSIONS = -38;
+PROFESSIONS = -38;
 DISCOVERY = -37;
 ALCHEMY = 171;
 ARCHAEOLOGY = 794;
@@ -1827,7 +1827,7 @@ mount = function(id, t)									-- Create a MOUNT Object, which is just a spellI
 end
 npc = function(id, t)									-- Create an NPC Object (negative indicates that it is custom)
 	if not id then
-		--error("NPC ID Missing");
+		--error("NPC ID Missing!");
 		if t then
 			return unpack(t);
 		else

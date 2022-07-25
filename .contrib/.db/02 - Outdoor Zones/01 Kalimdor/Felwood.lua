@@ -104,7 +104,7 @@ root("Zones", m(KALIMDOR, {
 					},
 					["lvl"] = 49,
 				}),
-				q(8419, {	-- An Imp's Request
+				applyclassicphase(PHASE_FOUR, q(8419, {	-- An Imp's Request
 					["qgs"] = {
 						3326,	-- Zevrost <Warlock Trainer>
 						5172,	-- Briarthorn <Warlock Trainer>
@@ -124,7 +124,7 @@ root("Zones", m(KALIMDOR, {
 						{ "i", 14256, 1 },	-- Felcloth
 					},
 					["lvl"] = 50,
-				}),
+				})),
 				q(4261, {	-- Ancient Spirit
 					["qg"] = 9598,	-- Arei
 					["sourceQuest"] = 4442,	-- Purified!
@@ -1163,7 +1163,7 @@ root("Zones", m(KALIMDOR, {
 						i(21326),	-- Defender of the Timbermaw
 					},
 				}),
-				q(8421, {	-- The Wrong Stuff
+				applyclassicphase(PHASE_FOUR, q(8421, {	-- The Wrong Stuff
 					["qg"] = 14470,	-- Impsy <Niby's Minion>
 					["sourceQuests"] = {
 						8419,	-- An Imp's Request
@@ -1176,7 +1176,7 @@ root("Zones", m(KALIMDOR, {
 						{ "i", 20614, 1 },	-- Bloodvenom Essence
 					},
 					["lvl"] = 50,
-				}),
+				})),
 				q(8460, {	-- Timbermaw Ally
 					["qg"] = 11554,	-- Grazle
 					["altQuests"] = { 6131 },	-- Timbermaw Ally (old version, deprecated)

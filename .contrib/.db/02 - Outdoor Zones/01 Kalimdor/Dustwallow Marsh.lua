@@ -360,7 +360,11 @@ root("Zones", m(KALIMDOR, {
 						1222,	-- Stinky's Escape
 					},
 					["description"] = "Don't forget to loot all the food and drinks off the tables.",
+					-- #if AFTER WRATH
+					["coord"] = { 51.8, 93.7, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 41.4, 89.2, STORMWIND_CITY },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 30,
 					["groups"] = {
@@ -705,7 +709,11 @@ root("Zones", m(KALIMDOR, {
 				})),
 				q(1260, {	-- Morgan Stern
 					["qg"] = 1141,	-- Angus Stern
+					-- #if AFTER WRATH
+					["coord"] = { 51.8, 93.7, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 41.4, 89.2, STORMWIND_CITY },
+					-- #endif
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
 					["lvl"] = 33,

@@ -169,6 +169,19 @@ root("Zones", m(KALIMDOR, {
 					["coord"] = { 60.8, 66.4, AZSHARA },
 					["lvl"] = 45,
 				}),
+				applyclassicphase(PHASE_FOUR, q(8254, {	-- Cenarion Aid
+					["allianceQuestData"] = {
+						["qg"] = 5489,	-- Brother Joshua <Priest Trainer>
+						["coord"] = { 38.8, 26.4, STORMWIND_CITY },
+					},
+					["hordeQuestData"] = {
+						["qg"] = 6018,	-- Ur'kyo <Priest Trainer>
+						["coord"] = { 35.6, 87.6, ORGRIMMAR },
+					},
+					["timeline"] = { "removed 4.0.3" },
+					["classes"] = { PRIEST },
+					["lvl"] = 50,
+				})),
 				q(8153, {	-- Courser Antlers
 					["qg"] = 8405,	-- Ogtinc
 					["sourceQuest"] = 8151,	-- The Hunter's Charm
@@ -281,7 +294,7 @@ root("Zones", m(KALIMDOR, {
 					},
 					["lvl"] = 45,
 				}),
-				q(8250, {	-- Magecraft
+				applyclassicphase(PHASE_FOUR, q(8250, {	-- Magecraft
 					["qgs"] = {
 						7312,	-- Dink <Mage Trainer> [IRONFORGE]
 						7311,	-- Uthel'nay <Mage Trainer> [ORGRIMMAR]
@@ -299,8 +312,8 @@ root("Zones", m(KALIMDOR, {
 					["classes"] = { MAGE },
 					["isBreadcrumb"] = true,
 					["lvl"] = 50,
-				}),
-				q(8251, {	-- Magic Dust
+				})),
+				applyclassicphase(PHASE_FOUR, q(8251, {	-- Magic Dust
 					["qg"] = 8379,	-- Archmage Xylem
 					["sourceQuest"] = 8250,	-- Magecraft
 					["coord"] = { 29.6, 40.6, AZSHARA },
@@ -309,14 +322,14 @@ root("Zones", m(KALIMDOR, {
 						{ "i", 20028, 10 },	-- Glittering Dust
 					},
 					["lvl"] = 50,
-				}),
+				})),
 				q(3503, {	-- Meeting with the Master
 					["qg"] = 8395,	-- Sanath Lim-yo
 					["coord"] = { 28.0, 50.0, AZSHARA },
 					["repeatable"] = true,
 					["lvl"] = 45,
 				}),
-				q(8255, {	-- Of Coursers We Know
+				applyclassicphase(PHASE_FOUR, q(8255, {	-- Of Coursers We Know
 					["qg"] = 8405,	-- Ogtinc
 					["sourceQuest"] = 8254,	-- Cenarion Aid
 					["coord"] = { 42.2, 42.6, AZSHARA },
@@ -325,7 +338,7 @@ root("Zones", m(KALIMDOR, {
 						{ "i", 20027, 4 },	-- Healthy Courser Gland
 					},
 					["lvl"] = 50,
-				}),
+				})),
 				q(3421, {	-- Return Trip
 					["qg"] = 8399,	-- Nyrill <Xylem's Apprentice>
 					["coord"] = { 26.4, 46.2, AZSHARA },
@@ -377,7 +390,7 @@ root("Zones", m(KALIMDOR, {
 					["classes"] = { HUNTER },
 					["lvl"] = 50,
 				}),
-				q(8256, {	-- The Ichor of Undeath
+				applyclassicphase(PHASE_FOUR, q(8256, {	-- The Ichor of Undeath
 					["qg"] = 8405,	-- Ogtinc
 					["sourceQuest"] = 8255,	-- Of Coursers We Know
 					["coord"] = { 42.2, 42.6, AZSHARA },
@@ -386,7 +399,7 @@ root("Zones", m(KALIMDOR, {
 						{ "i", 7972, 1 },	-- Ichor of Undeath
 					},
 					["lvl"] = 50,
-				}),
+				})),
 				q(3509, {	-- The Name of the Beast
 					["qg"] = 7783,	-- Loramus Thalipedes
 					["sourceQuest"] = 3508,	-- Breaking the Ward
@@ -435,7 +448,7 @@ root("Zones", m(KALIMDOR, {
 					},
 					["lvl"] = 45,
 				}),
-				q(8252, {	-- The Siren's Coral
+				applyclassicphase(PHASE_FOUR, q(8252, {	-- The Siren's Coral
 					["qg"] = 8379,	-- Archmage Xylem
 					["sourceQuest"] = 8251,	-- Magic Dust
 					["coord"] = { 29.6, 40.6, AZSHARA },
@@ -444,7 +457,7 @@ root("Zones", m(KALIMDOR, {
 						{ "i", 20029, 6 },	-- Enchanted Coral
 					},
 					["lvl"] = 50,
-				}),
+				})),
 				q(3565, {	-- Xylem's Payment to Jediga
 					["qg"] = 8379,	-- Archmage Xylem
 					["sourceQuest"] = 3561,	-- Delivery to Archmage Xylem
@@ -642,11 +655,11 @@ root("Zones", m(KALIMDOR, {
 						6198,	-- Blood Elf Surveyor
 					},
 				}),
-				i(20027, {	-- Healthy Courser Gland
+				applyclassicphase(PHASE_FOUR, i(20027, {	-- Healthy Courser Gland
 					["questID"] = 8255,	-- Of Coursers We Know
 					["classes"] = { PRIEST },
 					["cr"] = 8761,	-- Mosshoof Courser
-				}),
+				})),
 				
 				-- #if BEFORE CATA
 				i(4589, {	-- Long Elegant Feather

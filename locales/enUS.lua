@@ -600,6 +600,7 @@ app.L = {
 		[-30] = "Interface\\FriendsFrame\\PlusManz-Alliance",								-- Alliance
 		[-31] = "Interface\\FriendsFrame\\PlusManz-Horde", 									-- Horde
 		[-32] = "Interface\\Icons\\inv_sword_48",											-- Honor Titles
+		[-38] = app.asset("Category_Professions"),											-- Professions
 		[-47] = app.asset("Holiday_Lunar"),													-- Lunar Festival
 		[-50] = app.asset("Holiday_love"),													-- Love is in the Air
 		[-51] = app.asset("Holiday_noblegarden"),											-- Noblegarden
@@ -720,6 +721,7 @@ app.L = {
 		[-31] = FACTION_HORDE, 													-- Horde
 		[-32] = "Honor Titles",													-- Honor Titles
 		[-37] = BATTLE_PET_SOURCE_11,											-- Discovery
+		[-38] = TRADE_SKILLS,													-- Professions
 -- World Events
 		[-47] = "Lunar Festival",												-- Lunar Festival
 		[-50] = "Love is in the Air",											-- Love is in the Air
