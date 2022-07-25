@@ -567,11 +567,20 @@ root("Zones", m(KALIMDOR, {
 					["qg"] = 3936,	-- Shandris Feathermoon <General of the Sentinel Army>
 					["sourceQuest"] = 4266,	-- A Hero's Welcome
 					["coord"] = { 30.3, 46.2, FERALAS },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["cost"] = {
 						{ "i", 11466, 1 },	-- Raschal's Report
 					},
 					["lvl"] = 40,
+					["groups"] = {
+						i(34416, {	-- Gloves of the Dune
+							["timeline"] = { "added 2.3.0.7382", "removed 4.0.3" },
+						}),
+						i(34417, {	-- Marauder's Handwraps
+							["timeline"] = { "added 2.3.0.7382", "removed 4.0.3" },
+						}),
+					},
 				}),
 				q(7731, {	-- Stinglasher
 					["qg"] = 7875,	-- Hadoken Swiftstrider
