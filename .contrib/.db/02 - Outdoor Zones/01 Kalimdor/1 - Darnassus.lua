@@ -310,6 +310,19 @@ root("Zones", m(KALIMDOR, {
 						i(6973),	-- Fire hardened Leggings
 					},
 				}),
+				q(1710, {	-- Sunscorched Shells
+					["qg"] = 6142,	-- Mathiel
+					["sourceQuest"] = 1703,	-- Mathiel
+					["maps"] = { THOUSAND_NEEDLES },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { WARRIOR },
+					["lvl"] = 20,
+					["groups"] = {
+						objective(1, {	-- 0/20 Sunscorched Shell
+							["provider"] = { "i", 6849 },	-- Sunscorched Shell
+						}),
+					},
+				}),
 				q(5627, {	-- Stars of Elune / Returning Home [Darnassus]
 					["qgs"] = {
 						11401,	-- Priestess Alathea <Priest Trainer>

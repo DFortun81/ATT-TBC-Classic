@@ -45,14 +45,14 @@ profession(BLACKSMITHING, {
 			},
 		}),
 		q(2757, {	-- Booty Bay or Bust!
-			["qg"] = 7793,	-- Ox
+			["providers"] = {
+				{ "n", 7793 },	-- Ox
+				{ "i", 8663 },	-- Mithril Insignia
+			},
 			["sourceQuest"] = 2756,	-- The Old Ways
 			["requireSkill"] = BLACKSMITHING,
 			["coord"] = { 80.4, 23.2, ORGRIMMAR },
 			["races"] = HORDE_ONLY,
-			["cost"] = {
-				{ "i", 8663, 1 },	-- Mithril Insignia
-			},
 			["lvl"] = 40,
 		}),
 		{
@@ -229,17 +229,6 @@ profession(BLACKSMITHING, {
 				i(12687),	-- Plans: Imperial Plate Shoulders
 			},
 		}),
-		q(2759, {	-- In Search of Galvan
-			["qg"] = 7798,	-- Hank the Hammer
-			["sourceQuest"] = 2758,	-- The Origins of Smithing
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 56, 16, STORMWIND_CITY },
-			["races"] = ALLIANCE_ONLY,
-			["cost"] = {
-				{ "i", 8663, 1 },	-- Mithril Insignia
-			},
-			["lvl"] = 40,
-		}),
 		q(2755, {	-- Joys of Omosh
 			["qg"] = 7790,	-- Orokk Omosh
 			["sourceQuest"] = 2754,	-- Horns of Frenzy
@@ -383,21 +372,7 @@ profession(BLACKSMITHING, {
 				recipe(9957),	-- Orcish War Leggings
 			},
 		}),
-		q(2758, {	-- The Origins of Smithing
-			["qg"] = 7798,	-- Hank the Hammer
-			["requireSkill"] = BLACKSMITHING,
-			["coord"] = { 56, 16, STORMWIND_CITY },
-			["races"] = ALLIANCE_ONLY,
-			["cost"] = {
-				{ "i", 6040, 6 },	-- Golden Scale Bracers
-			},
-			["lvl"] = 40,
-			["groups"] = {
-				i(9367, {	-- Plans: Golden Scale Gauntlets
-					["description"] = "This item can be sold on the Neutral Auction House to Horde Blacksmiths for a... nominal fee.\n\nOnly naturally accessible to Alliance Blacksmiths.",
-				}),
-			},
-		}),
+		
 		q(5284, {	-- The Way of the Weaponsmith (A)
 			["qg"] = 11146,	-- Ironus Coldsteel
 			["requireSkill"] = BLACKSMITHING,
