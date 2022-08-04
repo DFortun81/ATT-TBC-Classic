@@ -497,6 +497,7 @@ settings.UpdateMode = function(self)
 		app.AccountWideQuests = true;
 		app.AccountWideRecipes = true;
 		app.AccountWideReputations = true;
+		app.AccountWideRWP = true;
 		app.AccountWideTitles = true;
 		app.AccountWideToys = true;
 
