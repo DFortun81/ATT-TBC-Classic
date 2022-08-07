@@ -986,6 +986,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["isDaily"] = true,
 				}),
+				-- #if AFTER SHADOWLANDS
+				q(27271, {	-- Frazzle's Request [SL+] / Journey to the Wizard's Sanctum
+					["qgs"] = {
+						16749,	-- Edirah
+						50690,	-- Tarelvir
+						5146,	-- Nittlebur Sparkfizzle
+					},
+					["coords"] = {
+						{ 47.2, 61.8, THE_EXODAR },	-- Edirah
+						{ 37.6, 80.0, DARNASSUS },	-- Tarelvir
+						{ 26.2, 6.2, IRONFORGE },	-- Nittlebur Sparkfizzle
+					},
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { MAGE },
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(20, 20, 8),
+				}),
+				-- #endif
 				q(1782, {	-- Furen's Armor
 					["qg"] = 5413,	-- Furen Longbeard
 					["sourceQuest"] = 1701,	-- Fire Hardened Mail
@@ -1026,7 +1045,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(1921, {	-- Gathering Materials
 					["qg"] = 5497,	-- Jennea Cannon <Mage Trainer>
 					["sourceQuest"] = 1920,	-- Investigate the Blue Recluse
+					-- #if AFTER WRATH
+					["coord"] = { 49.5, 85.8, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 38.6, 79.6, STORMWIND_CITY },
+					-- #endif
 					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { LOCH_MODAN },
 					["cost"] = { { "i", 2589, 10 } },	-- Linen Cloth
@@ -1161,6 +1184,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						{ 38.6, 79.6, STORMWIND_CITY },
 						-- #endif
 					},
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
 					["isBreadcrumb"] = true,
@@ -1264,6 +1288,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(32675, {	-- I Believe You Can Fly
+					["description"] = "This quest is automatically offered to Alliance players upon reaching the specified level.",
+					["timeline"] = { "added 5.2.0" },
+					["races"] = ALLIANCE_ONLY,
+					["DisablePartySync"] = true,
+					["isBreadcrumb"] = true,
+					["lockCriteria"] = { 1,
+						"spellID", 34090,	-- Expert Riding
+						"spellID", 34091,	-- Artisan Riding
+						"spellID", 90265,	-- Master Riding
+					},
+					["lvl"] = lvlsquish(60, 60, 30),
+				}),
 				q(44120, {	-- Illidari Allies
 					["qg"] = 100973,	-- Anduin Wrynn
 					["sourceQuest"] = 40593,	-- Demons Among Us
@@ -1310,39 +1347,68 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 16,
 				}),
-				q(2746, {	-- Items of Some Consequence
-					["qg"] = 7766,	-- Tyrion
-					["sourceQuest"] = 2745,	-- Infiltrating the Castle
-					["timeline"] = { "removed 4.0.3" },
-					["cost"] = {
-						{ "i", 4306, 3 },	-- Silk Cloth
-						{ "i", 8683, 2 },	-- Clara's Fresh Apple
-					},
-					["races"] = ALLIANCE_ONLY,
-					["lvl"] = 16,
-				}),
 				q(1920, {	-- Investigate the Blue Recluse
 					["qg"] = 5497,	-- Jennea Cannon <Mage Trainer>
 					["sourceQuest"] = 1919,	-- Report to Jennea
+					-- #if AFTER WRATH
+					["coord"] = { 49.5, 85.8, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 38.6, 79.6, STORMWIND_CITY },
-					["cost"] = {
-						{ "i", 7308, 1 },	-- Cantation of Manifestation
-						{ "i", 7292, 3 },	-- Filled Containment Coffer
-					},
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
 					["lvl"] = 15,
 					["groups"] = {
-						{
-							["itemID"] = 7247,	-- Chest of Containment Coffers
-							["coord"] = { 39.4, 83.3, STORMWIND_CITY },
-							["groups"] = {
-								{
-									["itemID"] = 7292,	-- Filled Containment Coffer
-									["questID"] = 1920,	-- Investigate the Blue Recluse
-								},
+						objective(1, {	-- 0/3 Filled Containment Coffer
+							["provider"] = { "i", 7292 },	-- Filled Containment Coffer
+							-- #if AFTER WRATH
+							["coord"] = { 51.0, 95.0, STORMWIND_CITY },
+							-- #else
+							["coord"] = { 39.4, 86, STORMWIND_CITY },
+							-- #endif
+							["cost"] = {
+								{ "i", 7247, 1 },	-- Chest of Containment Coffers
+								{ "i", 7308, 1 },	-- Cantation of Manifestation
 							},
-						},
+							["cr"] = 6492,	-- Rift Spawn
+						}),
+						objective(2, {	-- 0/1 Chest of Containment Coffers
+							["provider"] = { "i", 7247 },	-- Chest of Containment Coffers
+							-- #if AFTER WRATH
+							["coord"] = { 49.6, 85.4, STORMWIND_CITY },
+							-- #else
+							["coord"] = { 38.7, 79.1, STORMWIND_CITY },
+							-- #endif
+						}),
+						objective(3, {	-- 0/1 Cantation of Manifestation
+							["provider"] = { "i", 7308 },	-- Cantation of Manifestation
+							-- #if AFTER WRATH
+							["coord"] = { 49.6, 85.4, STORMWIND_CITY },
+							-- #else
+							["coord"] = { 38.7, 79.1, STORMWIND_CITY },
+							-- #endif
+						}),
+					},
+				}),
+				q(2746, {	-- Items of Some Consequence
+					["qg"] = 7766,	-- Tyrion
+					["sourceQuest"] = 2745,	-- Infiltrating the Castle
+					-- #if AFTER WRATH
+					["coord"] = { 73.2, 35.7, STORMWIND_CITY },
+					-- #else
+					["coord"] = { 69.2, 14.6, STORMWIND_CITY },
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { ELWYNN_FOREST },
+					["cost"] = { { "i", 4306, 3 } },	-- Silk Cloth
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 16,
+					["groups"] = {
+						objective(2, {	-- 0/2 Clara's Fresh Apple
+							["provider"] = { "i", 8683 },	-- Clara's Fresh Apple
+							["coord"] = { 34, 57.2, ELWYNN_FOREST },
+						}),
 					},
 				}),
 				q(30987, {	-- Joining the Alliance
@@ -1351,6 +1417,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["timeline"] = { "added 5.0.4" },
 					["races"] = { PANDAREN_NEUTRAL },
 				}),
+				-- #if BEFORE SHADOWLANDS
+				q(27271, {	-- Journey to the Wizard's Sanctum / Frazzle's Request [SL+]
+					["qgs"] = {
+						16749,	-- Edirah
+						50690,	-- Tarelvir
+						5146,	-- Nittlebur Sparkfizzle
+					},
+					["coords"] = {
+						{ 47.2, 61.8, THE_EXODAR },	-- Edirah
+						{ 37.6, 80.0, DARNASSUS },	-- Tarelvir
+						{ 26.2, 6.2, IRONFORGE },	-- Nittlebur Sparkfizzle
+					},
+					["timeline"] = { "added 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { MAGE },
+					["isBreadcrumb"] = true,
+					["lvl"] = lvlsquish(20, 20, 8),
+				}),
+				-- #endif
 				q(1704, {	-- Klockmort Spannerspan
 					["providers"] = {
 						{ "n", 5413 },	-- Furen Longbeard
@@ -1368,6 +1453,63 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 20,
 				}),
+				q(32665, {	-- Learn To Ride
+					["description"] = "This quest is automatically granted to Pandaren upon reaching the specified level.",
+					["timeline"] = { "added 5.2.0" },
+					["races"] = { PANDAREN_ALLIANCE },
+					["DisablePartySync"] = true,
+					["isBreadcrumb"] = true,
+					["lockCriteria"] = { 1,
+						"spellID", 33388,	-- Apprentice Riding
+						"spellID", 33391,	-- Journeyman Riding
+						"spellID", 34090,	-- Expert Riding
+						"spellID", 34091,	-- Artisan Riding
+						"spellID", 90265,	-- Master Riding
+					},
+					["lvl"] = lvlsquish(20, 20, 10),
+				}),
+				q(60971, {	-- Legion: Onward to Adventure in the Broken Isles
+					["qg"] = 167032,	-- Chromie <Emissary of the Bronze Dragonflight>
+					["coord"] = { 56.2, 17.3, STORMWIND_CITY },
+					["timeline"] = { "added 9.0.1" },
+					["lockCriteria"] = { 1, "lvl", 50 },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+				}),
+				q(58909, {	-- License to Ride
+					["qg"] = 163007,	-- Curly
+					["sourceQuest"] = 58908,	-- Finding Your Way (A)
+					["customCollect"] = "NPE",	-- New Player Experience
+					["coord"] = { 77.3, 67.0, STORMWIND_CITY },
+					["timeline"] = { "added 9.0.1.36228" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						-- Crieve NOTE: The reward from this quest appears to be race specific, might not be a bad idea to utilize a smart SYMLINK at some point. (logic for switching content based on race is not yet a thing)
+						-- Reins of the Striped Nightsaber (Night Elves)
+						i(2411),	-- Black Stallion (MOUNT!)
+					},
+				}),
+				q(32470, {	-- Light Camera Action
+					["qg"] = 16908,	-- Arielle Snapflash
+					["coord"] = { 61.2, 22.8, STORMWIND_CITY },
+					["timeline"] = { "added 7.3.5" },
+					["cost"] = { { "i", 4406, 1 } },	-- Standard Scope
+					["collectible"] = false,
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						objective(1, {	-- 0/1 Iron Box
+							["provider"] = { "i", 155856 },	-- Iron Box
+							["coord"] = { 68.1, 66.9, STORMWIND_CITY },
+						}),
+						objective(3, {	-- 0/1 Russet Belt
+							["provider"] = { "i", 3593 },	-- Russet Belt
+							["coord"] = { 53.2, 81.8, STORMWIND_CITY },
+						}),
+						i(122637, {	-- S.E.L.F.I.E. Camera
+							["timeline"] = { "added 6.1.0.19508" },
+						}),
+					},
+				}),
 				q(350, {	-- Look to an Old Friend
 					["qg"] = 332,	-- Master Mathias Shaw <Leader of SI:7>
 					["sourceQuest"] = 393,	-- Shadow of the Past
@@ -1380,19 +1522,40 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 16,
 				}),
+				q(38206, {	-- Making the Rounds
+					["qg"] = 96644,	-- Sky Admiral Rogers
+					["sourceQuest"] = 38035,	-- A Royal Summons
+					["coord"] = { 18.8, 42.6, STORMWIND_CITY },
+					["timeline"] = { "added 7.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(1941, {	-- Manaweave Robe
 					["qg"] = 1309,	-- Wynne Larson <Robe Merchant>
 					["sourceQuest"] = 1921,	-- Gathering Materials
+					-- #if AFTER WRATH
+					["coord"] = { 51.8, 83.5, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 41.8, 76.4, STORMWIND_CITY },
+					-- #endif
 					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
 					["lvl"] = 15,
 					["groups"] = {
 						i(7509, {	-- Manaweave Robe
-							["timeline"] = { "removed 4.0.3" },
+							-- #if AFTER 4.0.3
+							["description"] = "This item is still available in the Ghostlands for Blood Elf Mages, originally only available to the Alliance in Stormwind.",
+							-- #endif
+							["timeline"] = { "removed 4.0.3" },	-- Item is still available in the Ghostlands for Horde, but removed from this source.
 						}),
 					},
+				}),
+				q(65047, {	-- Mark of the Nightwing Raven
+					["qg"] = 44395,	-- Celestine of the Harvest
+					["coord"] = { 57.6, 24.8, STORMWIND_CITY },
+					["name"] = "Mark of the Nightwing Raven",	-- TODO: What is this?
+					["timeline"] = { "added 9.1.5" },
+					["classes"] = { DRUID },
 				}),
 				q(1666, {	-- Marshal Haggard
 					["qg"] = 6089,	-- Harry Burlguard
@@ -1406,6 +1569,18 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["classes"] = { WARRIOR },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 10,
+				}),
+				q(2360, {	-- Mathias and the Defias
+					["qg"] = 332,	-- Master Mathias Shaw <Leader of SI:7>
+					-- #if AFTER WRATH
+					["coord"] = { 78.3, 70.7, STORMWIND_CITY },
+					-- #else
+					["coord"] = { 75.8, 59.8, STORMWIND_CITY },
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { ROGUE },
+					["lvl"] = 20,
 				}),
 				q(1703, {	-- Mathiel
 					["providers"] = {
@@ -1424,20 +1599,13 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["isBreadcrumb"] = true,
 					["lvl"] = 20,
 				}),
-				q(2360, {	-- Mathias and the Defias
-					["qg"] = 332,	-- Master Mathias Shaw <Leader of SI:7>
-					-- #if AFTER WRATH
-					["coord"] = { 78.3, 70.7, STORMWIND_CITY },
-					-- #else
-					["coord"] = { 75.8, 59.8, STORMWIND_CITY },
-					-- #endif
-					["races"] = ALLIANCE_ONLY,
-					["classes"] = { ROGUE },
-					["lvl"] = 20,
-				}),
 				q(1363, {	-- Mazen's Behest (1/2)
 					["qg"] = 338,	-- Mazen Mac'Nadir
+					-- #if AFTER WRATH
+					["coord"] = { 51.8, 74.3, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 41.4, 64.2, STORMWIND_CITY },
+					-- #endif
 					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 37,
@@ -1445,7 +1613,11 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(1364, {	-- Mazen's Behest (2/2)
 					["qg"] = 5386,	-- Acolyte Dellis
 					["sourceQuest"] = 1363,	-- Mazen's Behest (1/2)
+					-- #if AFTER WRATH
+					["coord"] = { 51.4, 73.8, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 40.8, 64, STORMWIND_CITY },
+					-- #endif
 					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { SWAMP_OF_SORROWS },
 					["races"] = ALLIANCE_ONLY,
@@ -1473,19 +1645,99 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 5497,	-- Jennea Cannon <Mage Trainer>
 					["sourceQuest"] = 1860,	-- Speak with Jennea
 					["altQuests"] = { 1880 },	-- Mage-tastic Gizmonitor
-					["coord"] = { 38.6, 79.4, STORMWIND_CITY },
-					["cost"] = {
-						{ "i", 7207, 1 },	-- Jennea's Flask
-						{ "i", 7206, 1 },	-- Mirror Lake Water Sample
-					},
+					-- #if AFTER WRATH
+					["coord"] = { 49.5, 85.8, STORMWIND_CITY },
+					-- #else
+					["coord"] = { 38.6, 79.6, STORMWIND_CITY },
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["maps"] = { ELWYNN_FOREST },
 					["classes"] = { MAGE },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 10,
 					["groups"] = {
-						i(7508),	-- Ley Orb
-						i(9513),	-- Ley Staff
+						objective(1, {	-- 0/1 Mirror Lake Water Sample
+							["provider"] = { "i", 7206 },	-- Mirror Lake Water Sample
+							["cost"] = { { "i", 7207, 1 } },	-- Jennea's Flask
+							["coord"] = { 28, 62, ELWYNN_FOREST },
+						}),
+						i(7508, {	-- Ley Orb
+							-- #if AFTER 4.0.3
+							["description"] = "This item is still available in Eversong Woods for Horde Mages.",
+							-- #endif
+							["timeline"] = { "removed 4.0.3" },	-- Item is still available in the Eversong Woods for Horde, but removed from this source.
+						}),
+						i(9513, {	-- Ley Staff
+							-- #if AFTER 4.0.3
+							["description"] = "This item is still available in Eversong Woods for Horde Mages.",
+							-- #endif
+							["timeline"] = { "removed 4.0.3" },	-- Item is still available in the Eversong Woods for Horde, but removed from this source.
+						}),
 					},
+				}),
+				q(66390, {	-- Missing Merchandise
+					["qg"] = 188342,	-- Onnesa
+					["coord"] = { 51.5, 70.4, STORMWIND_CITY },
+					["timeline"] = { "added 9.2.5" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27038, {	-- Missing Parts
+					["qg"] = 44749,	-- Supply Sergeant Graves
+					["sourceQuest"] = 26975,	-- Rallying the Fleet
+					["coord"] = { 33.2, 39.4, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(63927, {	-- Machine-Linker Girdle
+							["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+						}),
+						i(63926, {	-- Reconstructing Hauberk
+							["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+						}),
+						i(63925, {	-- Scavenger Bracers
+							["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+						}),
+					},
+				}),
+				q(60965, {	-- Mists of Pandaria: Onward to Adventure in Pandaria
+					["qg"] = 167032,	-- Chromie <Emissary of the Bronze Dragonflight>
+					["coord"] = { 56.2, 17.3, STORMWIND_CITY },
+					["lockCriteria"] = { 1, "lvl", 50 },
+					["timeline"] = { "added 9.0.1" },
+					["races"] = ALLIANCE_ONLY,
+					["repeatable"] = true,
+				}),
+				q(60125, {	-- Mists of Pandaria: To Pandaria!
+					["qg"] = 167032,	-- Chromie <Emissary of the Bronze Dragonflight>
+					["coord"] = { 56.3, 17.3, STORMWIND_CITY },
+					["lockCriteria"] = { 1, "lvl", 50 },
+					["timeline"] = { "added 7.3.5" },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+				}),
+				q(26960, {	-- My Son, the Prince
+					["qg"] = 29611,	-- King Varian Wrynn <King of Stormwind>
+					["coord"] = { 85.8, 31.7, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(25105, {	-- Nibbler! No!
+					["qg"] = 50480,	-- Isabel Jones
+					["coord"] = { 63.8, 61.2, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277" },
+					["requireSkill"] = JEWELCRAFTING,
+					["races"] = ALLIANCE_ONLY,
+					["isDaily"] = true,
+					["groups"] = JEWELCRAFTING_AWARD_GROUPS,
+				}),
+				q(25155, {	-- Ogrezonians in the Mood
+					["qg"] = 50480,	-- Isabel Jones
+					["coord"] = { 63.8, 61.2, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277" },
+					["requireSkill"] = JEWELCRAFTING,
+					["races"] = ALLIANCE_ONLY,
+					["isDaily"] = true,
+					["groups"] = JEWELCRAFTING_AWARD_GROUPS,
 				}),
 				q(6187, {	-- Order Must Be Restored
 					-- #if AFTER WRATH
@@ -1515,14 +1767,48 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
-				q(334, {	-- Package for Thurman
-					["qg"] = 1428,	-- Rema Schneider
-					["sourceQuest"] = 333,	-- Harlan Needs a Resupply
-					["coord"] = { 49.5, 55.3, STORMWIND_CITY },
-					["cost"] = {
-						{ "i", 2760, 1 },	-- Thurman's Sewing Kit
-					},
+				q(26192, {	-- Orphans Like Cookies Too!
+					["qg"] = 42288,	-- Robby Flay
+					["coord"] = { 50.6, 71.6, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277" },
+					["requireSkill"] = COOKING,
 					["races"] = ALLIANCE_ONLY,
+					["isDaily"] = true,
+					["groups"] = COOKING_AWARD_GROUPS,
+				}),
+				q(334, {	-- Package for Thurman
+					["providers"] = {
+						{ "n", 1428 },	-- Rema Schneider
+						{ "i", 2760 },	-- Thurman's Sewing Kit
+					},
+					["sourceQuest"] = 333,	-- Harlan Needs a Resupply
+					-- #if AFTER LEGION
+					["coord"] = { 58.0, 67.2, STORMWIND_CITY },
+					-- #elseif AFTER WRATH
+					["coord"] = { 58.1, 67.5, STORMWIND_CITY },
+					-- #else
+					["coord"] = { 49.5, 55.3, STORMWIND_CITY },
+					-- #endif
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27044, {	-- Peasant Problems
+					["qg"] = 44293,	-- Anduin Wrynn <Prince of Stormwind>
+					["sourceQuests"] = {
+						26975,	-- Rallying the Fleet
+						26997,	-- The Usual Suspects
+					},
+					["coord"] = { 85.7, 31.6, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26153, {	-- Penny's Pumpkin Pancakes
+					["qg"] = 42288,	-- Robby Flay
+					["coord"] = { 50.6, 71.6, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277" },
+					["requireSkill"] = COOKING,
+					["races"] = ALLIANCE_ONLY,
+					["isDaily"] = true,
+					["groups"] = COOKING_AWARD_GROUPS,
 				}),
 				q(1940, {	-- Pristine Spider Silk
 					["qg"] = 5694,	-- High Sorcerer Andromath
@@ -1546,6 +1832,19 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						}),
 					},
 				}),
+				q(40661, {	-- Protect the Home Front
+					["qg"] = 101004,	-- Elerion Bladedancer
+					["coord"] = { 40.4, 77.8, STORMWIND_CITY },
+					["timeline"] = { "added 7.0.3.21796", "removed 7.0.5" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26975, {	-- Rallying the Fleet
+					["qg"] = 29611,	-- King Varian Wrynn <King of Stormwind>
+					["sourceQuest"] = 26960,	-- My Son, the Prince
+					["coord"] = { 85.8, 31.7, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+					["races"] = ALLIANCE_ONLY,
+				}),
 				q(2281, {	-- Redridge Rendezvous
 					["qg"] = 6946,	-- Renzik "The Shiv"
 					["sourceQuests"] = {
@@ -1554,6 +1853,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						2300,	-- SI:7(Elwynn Forest)
 					},
 					["coord"] = { 75.9, 60.3, STORMWIND_CITY },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { ROGUE },
 					["lvl"] = 16,
@@ -1561,10 +1861,25 @@ root("Zones", m(EASTERN_KINGDOMS, {
 				q(1919, {	-- Report to Jennea
 					["qg"] = 7312,	-- Dink <Mage Trainer>
 					["coord"] = { 26.8, 8.6, IRONFORGE },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { MAGE },
 					["isBreadcrumb"] = true,
 					["lvl"] = 15,
+				}),
+				q(58498, {	-- Return of the Warrior King
+					["qg"] = 154532,	-- Magni Bronzebeard <The Speaker>
+					["sourceQuest"] = 58496,	-- An Unwelcome Advisor
+					["coord"] = { 85.2, 32.5, STORMWIND_CITY },
+					["timeline"] = { "added 8.3.0.33062" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(26396, {	-- Return to Argus
+					["qg"] = 352,	-- Dungar Longdrink
+					["sourceQuest"] = 26395,	-- Dungar Longdrink
+					["coord"] = { 71.0, 72.6, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3" },
+					["races"] = { HUMAN },
 				}),
 				q(6285, {	-- Return to Lewis
 					["providers"] = {
@@ -1581,8 +1896,28 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = { HUMAN },
 					["lvl"] = 10,
 				}),
+				q(26442, {	-- Rock Lobster
+					["qg"] = 5494,	-- Catherine Leland
+					["coord"] = { 55.0, 69.6, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.1.12984" },
+					["requireSkill"] = FISHING,
+					["races"] = ALLIANCE_ONLY,
+					["isDaily"] = true,
+					["groups"] = FISHING_AWARD_GROUPS,
+				}),
+				q(44471, {	-- Second Sight
+					["qg"] = 102585,	-- Jace Darkweaver
+					["sourceQuest"] = 39691,	-- The Call of War
+					["coord"] = { 84.4, 33.6, STORMWIND_CITY },
+					["timeline"] = { "added 7.0.3.21796" },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { DEMONHUNTER },
+				}),
 				q(393, {	-- Shadow of the Past
-					["qg"] = 1646,	-- Baros Alexston <City Architect>
+					["providers"] = {
+						{ "n", 1646 },	-- Baros Alexston <City Architect>
+						{ "i", 8687 },	-- Sealed Description of Thredd's Visitor
+					},
 					["sourceQuest"] = 392,	-- The Curious Visitor
 					-- #if AFTER WRATH
 					["coord"] = { 57.7, 47.9, STORMWIND_CITY },
@@ -1590,9 +1925,6 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 49, 30.2, STORMWIND_CITY },
 					-- #endif
 					["timeline"] = { "removed 4.0.3" },
-					["cost"] = {
-						{ "i", 8687, 1},	-- Sealed Description of Thredd's Visitor
-					},
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 16,
 				}),
@@ -1605,10 +1937,16 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["coord"] = { 75.8, 59.8, STORMWIND_CITY },
 					-- #endif
 					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { ELWYNN_FOREST },
 					["races"] = ALLIANCE_ONLY,
 					["classes"] = { ROGUE },
 					["lvl"] = 10,
 					["groups"] = {
+						objective(1, {	-- 0/1 Defias Shipping Schedule
+							["provider"] = { "i", 7675 },	-- Defias Shipping Schedule
+							["coord"] = { 48.2, 87.6, ELWYNN_FOREST },
+							["cr"] = 6846,	-- Defias Dockmaster
+						}),
 						i(7298, {	-- Blade of Cunning
 							["timeline"] = { "removed 4.0.3" },
 						}),
@@ -1626,30 +1964,43 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["lvl"] = 20,
 				}),
 				q(353, {	-- Stormpike's Delivery
-					["qg"] = 1416,	-- Grimand Elmore
+					["providers"] = {
+						{ "n", 1416 },	-- Grimand Elmore
+						{ "i", 2806 },	-- Package for Stormpike
+					},
 					["sourceQuest"] = 1097,	-- Elmore's Task
 					-- #if AFTER WRATH
 					["coord"] = { 59.7, 33.8, STORMWIND_CITY },
 					-- #else
 					["coord"] = { 51.6, 12.2, STORMWIND_CITY },
 					-- #endif
-					["cost"] = {
-						{ "i", 2806, 1 },	-- Package for Stormpike
-					},
 					["races"] = ALLIANCE_ONLY,
 				}),
 				q(579, {	-- Stormwind Library
 					["qg"] = 2504,	-- Donyal Tovald <Librarian>
+					-- #if AFTER WRATH
+					["coord"] = { 84.6, 24.2, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 71.6, 7.6, STORMWIND_CITY },
-					["cost"] = {
-						{ "i", 3898, 1 },	-- Library Scrip
-					},
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
+					["cost"] = { { "i", 3898, 1 } },	-- Library Scrip
 					["races"] = ALLIANCE_ONLY,
 					["repeatable"] = true,
 					["groups"] = {
-						i(3899),	-- Legends of the Gurubashi, Volume 3
-						i(2154),	-- The Story of Morgan Ladimore
+						i(3899, {	-- Legends of the Gurubashi, Volume 3
+							["timeline"] = { "removed 4.0.3" },
+						}),
+						i(2154, {	-- The Story of Morgan Ladimore
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
+				}),
+				q(50371, {	-- Summons to Stormwind
+					["qg"] = 132255,	-- Master Mathias Shaw
+					["coord"] = { 39.0, 62.6, STORMWIND_CITY },
+					["timeline"] = { "added 7.3.5", "removed 8.0.1" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(1688, {	-- Surena Caledon
 					["qg"] = 6122,	-- Gakin the Darkbinder
@@ -1659,28 +2010,81 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					-- #else
 					["coord"] = { 25.4, 78.4, STORMWIND_CITY },
 					-- #endif
-					["cost"] = {
-						{ "i", 6810, 1 },	 -- Surena's Choker
-					},
+					["timeline"] = { "removed 4.0.3" },
+					["maps"] = { ELWYNN_FOREST },
 					["races"] = { HUMAN, GNOME },
 					["classes"] = { WARLOCK },
-					["maps"] = { ELWYNN_FOREST },
 					["lvl"] = 10,
 					["groups"] = {
-						{
-							["itemID"] = 6810,	-- Surena's Choker
-							["questID"] = 1688,	-- Surena Caledon
-							["cr"] = 881,	-- Surena Caledon
+						objective(1, {	-- Surena's Choker
+							["provider"] = { "i", 6810 },	-- Surena's Choker
 							["coord"] = { 71.0, 80.6, ELWYNN_FOREST },
-						},
+							["cr"] = 881,	-- Surena Caledon
+						}),
 					},
+				}),
+				q(30988, {	-- The Alliance Way
+					["qg"] = 61796,	-- King Varian Wrynn
+					["sourceQuest"] = 30987,	-- Joining the Alliance
+					["coord"] = { 82.6, 28.2, STORMWIND_CITY },
+					["timeline"] = { "added 5.0.4", "removed 7.0.3" },
+					["races"] = { PANDAREN_ALLIANCE },
 				}),
 				q(434, {	-- The Attack!
 					["qg"] = 7766,	-- Tyrion
 					["sourceQuest"] = 2746,	-- Items of Some Consequence
+					-- #if AFTER WRATH
+					["coord"] = { 73.2, 35.7, STORMWIND_CITY },
+					-- #else
+					["coord"] = { 69.2, 14.6, STORMWIND_CITY },
+					-- #endif
 					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 16,
+					["groups"] = {
+						objective(1, {	-- 0/1 Lord Gregor Lescovar slain
+							["provider"] = { "n", 1754 },	-- Lord Gregor Lescovar
+						}),
+						objective(2, {	-- 0/1 Marzon the Silent Blade slain
+							["provider"] = { "n", 1755 },	-- Marzon the Silent Blade
+						}),
+					},
+				}),
+				q(42740, {	-- The Battle for Broken Shore
+					-- CRIEVE NOTE: Perhaps move this and related quests/things to the World Events section?
+					-- Also find the right mapID for the scenario.
+					["qg"] = 108916,	-- Knight Dameron
+					["sourceQuest"] = 42782,	-- To Be Prepared
+				--	["altQuests"] = { 43806 },	-- Scenario Skip (A)
+					["coord"] = { 19.0, 26.1, STORMWIND_CITY },
+					["timeline"] = { "added 7.0.3" },
+					["classes"] = exclude({ DEMONHUNTER }, ALL_CLASSES),
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(138767),	-- Stormwind Vanguard Battle Mace
+						i(138772),	-- Stormwind Vanguard Bonegrinder
+						i(138770),	-- Stormwind Vanguard Dagger
+						i(138771),	-- Stormwind Vanguard Longbow
+						i(138765),	-- Stormwind Vanguard Mageblade
+						i(138769),	-- Stormwind Vanguard Polearm
+						i(138768),	-- Stormwind Vanguard Quickblade
+						i(136586),	-- Stormwind Vanguard Splitter
+						i(138766),	-- Stormwind Vanguard Stave
+						i(138764),	-- Stormwind Vanguard Waraxe
+						i(139389, {	-- Charred Locket
+							["description"] = "In order to get this you must do the scenario 'Battle for Broken Shore' and on Stage 6 search for a pile of ash titled 'Ashes of a Fallen Crusader' to retrieve the item.  You will then go to 85, 67 in Elywnn Forest located at the Eastvale Logging Camp.  From there you will go to the bedroom on the second floor to talk to Alaina.  After talking to her leave (log or swap zones) and then come back to her to retrieve the item.",
+							["groups"] = {
+								i(139391),	-- Alaina's Bonnet
+							},
+						}),
+					},
+				}),
+				q(51795, {	-- The Battle for Lordaeron
+					["qg"] = 144095,	-- Master Mathias Shaw
+					["sourceQuest"] = 53370,	-- Hour of Reckoning
+					["coord"] = { 22.4, 32.6, STORMWIND_CITY },
+					["timeline"] = { "added 8.0.1" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				-- #if ANYCLASSIC
 				q(65603, {	-- The Binding (Incubus) [Stormwind City]
@@ -1756,22 +2160,49 @@ root("Zones", m(EASTERN_KINGDOMS, {
 						-- #endif
 					},
 				}),
+				q(29439, {	-- The Call of the World-Shaman
+					["qg"] = 45226,	-- Naraat the Earthspeaker
+					["coord"] = { 74.4, 18.8, STORMWIND_CITY },
+					["timeline"] = { "added 4.2.0" },
+					["races"] = ALLIANCE_ONLY,
+					["isBreadcrumb"] = true,
+				}),
+				q(39691, {	-- The Call of War
+					["qg"] = 97296,	-- Archmage Khadgar
+					["coord"] = { 72.4, 47.2, STORMWIND_CITY },
+					["timeline"] = { "added 7.0.3.21796" },
+					["races"] = ALLIANCE_ONLY,
+					["classes"] = { DEMONHUNTER },
+				}),
 				q(392, {	-- The Curious Visitor
-					["qg"] = 1719,	-- Warden Thelwater
-					["sourceQuest"] = 391,	-- The Stockage Riots
-					["timeline"] = { "removed 4.0.3" },
-					["cost"] = {
-						{ "i", 8687, 1},	-- Sealed Description of Thredd's Visitor
+					["providers"] = {
+						{ "n", 1719 },	-- Warden Thelwater
+						{ "i", 8687 },	-- Sealed Description of Thredd's Visitor
 					},
+					["sourceQuest"] = 391,	-- The Stockage Riots
+					-- #if AFTER WRATH
+					["coord"] = { 51.5, 69.3, STORMWIND_CITY },
+					-- #else
+					["coord"] = { 41.2, 58, STORMWIND_CITY },
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 16,
 				}),
-				q(3765, {  -- The Corruption Abroad
-					["qg"] = 4984,  -- Argos Nightwhisper
-					["coord"] = { 21.6, 55.6, STORMWIND_CITY },
+				q(28826, {	-- The Eye of the Storm
+					["qg"] = 45226,	-- Naraat the Earthspeaker
+					["sourceQuest"] = 28825,	-- A Personal Summons
+					["coord"] = { 74.4, 18.8, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.1.12984" },
 					["races"] = ALLIANCE_ONLY,
 					["isBreadcrumb"] = true,
-					["lvl"] = 20,
+				}),
+				q(40517, {	-- The Fallen Lion
+					["qg"] = 100395,	-- Genn Greymane
+					["sourceQuest"] = 42740,	-- The Battle for Broken Shore (QuestID 43806 - Scenario Skip)
+					["coord"] = { 19.8, 34.9, STORMWIND_CITY },
+					["timeline"] = { "added 7.0.3" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(6182, {	-- The First and the Last
 					-- #if AFTER WRATH
@@ -1797,43 +2228,77 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 16,
 				}),
+				q(26183, {	-- The King's Cider
+					["qg"] = 42288,	-- Robby Flay
+					["coord"] = { 50.6, 71.6, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277" },
+					["requireSkill"] = COOKING,
+					["races"] = ALLIANCE_ONLY,
+					["isDaily"] = true,
+					["groups"] = COOKING_AWARD_GROUPS,
+				}),
+				q(25157, {	-- The Latest Fashion!
+					["qg"] = 50480,	-- Isabel Jones
+					["coord"] = { 63.8, 61.2, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277" },
+					["requireSkill"] = JEWELCRAFTING,
+					["races"] = ALLIANCE_ONLY,
+					["isDaily"] = true,
+					["groups"] = JEWELCRAFTING_AWARD_GROUPS,
+				}),
 				q(1274, {	-- The Missing Diplomat (1/17)
 					["qg"] = 4982,	-- Thomas <Altar Boy>
+					-- #if AFTER WRATH
+					["coord"] = { 49.6, 44.5, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 39.8, 28.3, STORMWIND_CITY },
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
 				q(1241, {	-- The Missing Diplomat (2/17)
-					["qg"] = 4960,	-- Bishop DeLavey
-					["sourceQuest"] = 1274,	-- The Missing Diplomat (1/17)
-					["coord"] = { 78.4, 25.4, STORMWIND_CITY },
-					["cost"] = {
-						{ "i", 5948, 1 },	-- Letter to Jorgen
+					["providers"] = {
+						{ "n", 4960 },	-- Bishop DeLavey
+						{ "i", 5948 },	-- Letter to Jorgen
 					},
+					["sourceQuest"] = 1274,	-- The Missing Diplomat (1/17)
+					-- #if AFTER WRATH
+					["coord"] = { 80.3, 44.1, STORMWIND_CITY },
+					-- #else
+					["coord"] = { 78.4, 25.4, STORMWIND_CITY },
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
 				q(1242, {	-- The Missing Diplomat (3/17)
-					["qg"] = 4959,	-- Jorgen
-					["sourceQuest"] = 1241,	-- The Missing Diplomat (2/17)
-					["coord"] = { 73.2, 78.6, STORMWIND_CITY },
-					["cost"] = {
-						{ "i", 5946, 1 },	-- Sealed Note to Elling
+					["providers"] = {
+						{ "n", 4959 },	-- Jorgen
+						{ "i", 5946 },	-- Sealed Note to Elling
 					},
+					["sourceQuest"] = 1241,	-- The Missing Diplomat (2/17)
+					-- #if AFTER WRATH
+					["coord"] = { 76.3, 85.1, STORMWIND_CITY },
+					-- #else
+					["coord"] = { 73.2, 78.6, STORMWIND_CITY },
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
 				q(1243, {	-- The Missing Diplomat (4/17)
-					["qg"] = 482,	-- Elling Trias <Master of Cheese>
+					["providers"] = {
+						{ "n", 482 },	-- Elling Trias <Master of Cheese>
+						{ "i", 5960 },	-- Sealed Note to Watcher Backus
+					},
 					["sourceQuest"] = 1242,	-- The Missing Diplomat (3/17)
 					-- #if AFTER WRATH
 					["coord"] = { 66.0, 74.1, STORMWIND_CITY },
 					-- #else
 					["coord"] = { 60.0, 64.3, STORMWIND_CITY },
 					-- #endif
-					["cost"] = {
-						{ "i", 5960, 1 },	-- Sealed Note to Watcher Backus
-					},
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
@@ -1841,6 +2306,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 840,	-- Watcher Backus
 					["sourceQuest"] = 1243,	-- The Missing Diplomat (4/17)
 					["coord"] = { 73.21, 38.81, DUSKWOOD },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 					["groups"] = {
@@ -1857,6 +2323,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					},
 					["sourceQuest"] = 1244,	-- The Missing Diplomat (5/17)
 					["coord"] = { 73.21, 38.81, DUSKWOOD },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
@@ -1868,6 +2335,7 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					-- #else
 					["coord"] = { 60.0, 64.3, STORMWIND_CITY },
 					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
@@ -1875,14 +2343,24 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					["qg"] = 4961,	-- Dashel Stonefist
 					["sourceQuest"] = 1246,	-- The Missing Diplomat (7/17)
 					["description"] = "Dashel Stonefist will spawn 2 level 26 adds to fight alongside him.",
+					-- #if AFTER WRATH
+					["coord"] = { 74.3, 59.2, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 70.5, 44.9, STORMWIND_CITY },
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
 				q(1247, {	-- The Missing Diplomat (9/17)
 					["qg"] = 4961,	-- Dashel Stonefist
 					["sourceQuest"] = 1447,	-- The Missing Diplomat (8/17)
+					-- #if AFTER WRATH
+					["coord"] = { 74.3, 59.2, STORMWIND_CITY },
+					-- #else
 					["coord"] = { 70.5, 44.9, STORMWIND_CITY },
+					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
@@ -1894,8 +2372,31 @@ root("Zones", m(EASTERN_KINGDOMS, {
 					-- #else
 					["coord"] = { 60.0, 64.3, STORMWIND_CITY },
 					-- #endif
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
+				}),
+				q(46728, {	-- The Nation of Kul Tiras
+					["qg"] = 120756,	-- Anduin Wyrnn
+					["sourceQuest"] = 46727,	-- Tides of War
+					["coord"] = { 85.0, 32.4, STORMWIND_CITY },
+					["timeline"] = { "added 8.0.1" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(59641, {	-- The Nation of Kul Tiras
+					["qg"] = 165395,	-- Anduin Wrynn
+					["sourceQuest"] = 58983,	-- Tides of War
+					["customCollect"] = "NPE",	-- New Player Experience
+					["coord"] = { 85.8, 31.6, STORMWIND_CITY },
+					["timeline"] = { "added 9.0.1.36228" },
+					["races"] = ALLIANCE_ONLY,
+				}),
+				q(27072, {	-- The Old Barracks
+					["qg"] = 50049,	-- Jack Bauden <SI:7 Agent>
+					["sourceQuest"] = 28807,	-- Expert Opinion
+					["coord"] = { 81.2, 63.2, STORMWIND_CITY },
+					["timeline"] = { "added 4.0.3.13277", "removed 7.0.3" },
+					["races"] = ALLIANCE_ONLY,
 				}),
 				q(2758, {	-- The Origins of Smithing
 					["qg"] = 7798,	-- Hank the Hammer

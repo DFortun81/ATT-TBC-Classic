@@ -736,12 +736,12 @@ root("Holidays", bubbleDown({ ["u"] = DARKMOON_FAIRE },
 					},
 				}),
 				q(7905, {	-- The Darkmoon Faire
-					["qg"] = 14842,	-- Melnan Darkstone <Darkmoon Faire Barker>
+					["providers"] = {
+						{ "n", 14842 },	-- Melnan Darkstone <Darkmoon Faire Barker>
+						{ "i", 19338 },	-- Free Ticket Voucher
+					},
 					["coord"] = { 29.2, 68.4, IRONFORGE },
 					["races"] = ALLIANCE_ONLY,
-					["cost"] = {
-						{ "i", 19338, 1 },	-- Free Ticket Voucher
-					},
 					["lvl"] = 6,
 					["groups"] = {
 						i(19182),	-- Darkmoon Faire Prize Ticket

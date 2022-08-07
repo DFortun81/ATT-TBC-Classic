@@ -982,18 +982,33 @@ root("Zones", m(KALIMDOR, {
 						i(33259),	-- Crimson Barbut
 					},
 				})),
-				applyclassicphase(TBC_PHASE_ONE, q(11223, {	-- Return to Jaina
+				q(11223, {	-- Return to Jaina
 					["qg"] = 1748,	-- Highlord Bolvar Fordragon
 					["sourceQuest"] = 11222,	-- Warn Bolvar!
 					["coord"] = { 78.2, 18.1, STORMWIND_CITY },
+					["timeline"] = { "added 2.0.1", "removed 3.0.2" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 33,
 					["groups"] = {
-						i(33269),	-- Bejeweled Dagger
-						i(33252),	-- Gleaming Scale Breastplate
-						i(33250),	-- Archer's Wristguard
+						i(33269, {	-- Bejeweled Dagger
+							["timeline"] = { "added 2.0.1", "removed 3.0.2" },
+						}),
+						i(33252, {	-- Gleaming Scale Breastplate
+							["timeline"] = { "added 2.0.1", "removed 3.0.2" },
+						}),
+						i(33250, {	-- Archer's Wristguard
+							["timeline"] = { "added 2.0.1", "removed 3.0.2" },	-- Moved to "Survey Alcaz Island" with Cata
+						}),
 					},
-				})),
+				}),
+				q(27241, {	-- Return to Jaina
+					["qg"] = 1750,	-- Grand Admiral Jes-Tereth
+					["sourceQuest"] = 27240,	-- Proof of Treachery
+					["coord"] = { 85.6, 32.9, STORMWIND_CITY },
+					["timeline"] = { "added 3.0.2" },
+					["races"] = ALLIANCE_ONLY,
+					["lvl"] = 33,
+				}),
 				q(1953, {	-- Return to the Marsh
 					["qgs"] = {
 						5885,	-- Deino <Mage Trainer>
@@ -1104,13 +1119,32 @@ root("Zones", m(KALIMDOR, {
 						i(3825),	-- Elixir of Fortitude
 					},
 				}),
-				applyclassicphase(TBC_PHASE_ONE, q(11142, {	-- Survey Alcaz Island
+				q(11142, {	-- Survey Alcaz Island
 					["qg"] = 4968,	-- Lady Jaina Proudmoore <Ruler of Theramore>
 					["sourceQuest"] = 11141,	-- Jaina Must Know
 					["coord"] = { 66.3, 49.0, DUSTWALLOW_MARSH },
+					["timeline"] = { "added 2.0.1", "removed 4.0.3.13287" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 33,
-				})),
+				}),
+				q(27239, {	-- Survey Alcaz Island
+					["qg"] = 4968,	-- Lady Jaina Proudmoore
+					["sourceQuest"] = 27238,	-- Jaina Must Know
+					["coord"] = { 66.3, 49.0, DUSTWALLOW_MARSH },
+					["timeline"] = { "added 4.0.3.13287" },
+					["races"] = ALLIANCE_ONLY,
+					["groups"] = {
+						i(57851, {	-- Swamp Gas Gauntlets
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(33250, {	-- Archer's Wristguard
+							["timeline"] = { "added 4.0.3.13287" },
+						}),
+						i(131253, {	-- Archer's Chain Bracer
+							["timeline"] = { "added 7.0.3.22248" },
+						}),
+					},
+				}),
 				q(1268, {	-- Suspicious Hoofprints
 					["providers"] = {
 						{ "o", 21015 },	-- Hoofprints
@@ -1371,6 +1405,7 @@ root("Zones", m(KALIMDOR, {
 					["qg"] = 4964,	-- Commander Samaul
 					["sourceQuest"] = 1264,	-- The Missing Diplomat (13/17)
 					["coord"] = { 68.0, 48.6, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
@@ -1378,6 +1413,7 @@ root("Zones", m(KALIMDOR, {
 					["qg"] = 4967,	-- Archmage Tervosh
 					["sourceQuest"] = 1265,	-- The Missing Diplomat (14/17)
 					["coord"] = { 66.4, 49.3, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
@@ -1385,6 +1421,7 @@ root("Zones", m(KALIMDOR, {
 					["qg"] = 4966,	-- Private Hendel
 					["sourceQuest"] = 1266,	-- The Missing Diplomat (15/17)
 					["coord"] = { 45.2, 24.6, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 				}),
@@ -1392,10 +1429,13 @@ root("Zones", m(KALIMDOR, {
 					["qg"] = 4968,	-- Lady Jaina Proudmoore
 					["sourceQuest"] = 1324,	-- The Missing Diplomat (16/17)
 					["coord"] = { 45.2, 24.2, DUSTWALLOW_MARSH },
+					["timeline"] = { "removed 4.0.3" },
 					["races"] = ALLIANCE_ONLY,
 					["lvl"] = 28,
 					["groups"] = {
-						i(6757),	-- Jaina's Signet Ring
+						i(6757, {	-- Jaina's Signet Ring
+							["timeline"] = { "removed 4.0.3" },
+						}),
 					},
 				}),
 				q(1219, {	-- The Orc Report
